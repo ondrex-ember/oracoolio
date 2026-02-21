@@ -764,7 +764,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     box-shadow: -1px 2px 5px rgba(0,0,0,0.5);
     display: block;
     overflow: hidden;
-    font-size: clamp(0.5rem, 1.1vw, 1.1rem);
+    font-size: clamp(0.6rem, 1.3vw, 1.8rem);
     font-weight: bold;
     font-family: 'Georgia', serif;
     box-sizing: border-box;
@@ -781,7 +781,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
 /* ── Rohy karet ── */
 .card-corner {
     position: absolute;
-    font-size: clamp(0.45rem, 1vw, 1rem);
+    font-size: clamp(0.75rem, 1.2vw, 1.6rem);
     line-height: 1.1;
     font-weight: bold;
 }
@@ -916,7 +916,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
 
 /* ── Desktop — větší karty, více prostoru ── */
 @media screen and (min-width: 900px) {
-    .card-corner { font-size: 0.95rem; }
+    .card-corner { font-size: 1.95rem; }
 
     .solitaire-grid { gap: 10px; }
 
@@ -966,3 +966,4 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     border-color: #fca311;
     box-shadow: none;
 }
+
