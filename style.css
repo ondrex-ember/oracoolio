@@ -1,0 +1,643 @@
+﻿/* Základní reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Patkové písmo působí víc knižně a mysticky */
+    background-color: #1a1a2e; /* Temně modré pozadí */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+header h1 {
+    color: #e94560; /* Červeno-růžový akcent */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #8f8f8f;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #0f3460;
+    color: white;
+    border: 2px solid #e94560;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e94560;
+    box-shadow: 0 0 15px rgba(233, 69, 96, 0.5);
+}
+
+/* Skrývání elementů v HTML */
+.hidden {
+    display: none !important;
+}
+
+#loading {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #fca311; /* Zlatá barva pro načítání */
+    font-style: italic;
+}
+
+#tarot-board {
+    margin-top: 40px;
+    background: #16213e;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* TADY ŘEŠÍME 3D OTÁČENÍ KARET */
+.perspective {
+    perspective: 1000px; /* Dodává 3D hloubku */
+    width: 220px;
+    height: 380px;
+    margin: 0 auto 30px auto;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Plynulá animace s malým zhoupnutím nakonec */
+    transform-style: preserve-3d; /* Důležité pro 3D efekt */
+}
+
+/* Třída pro spuštění otočení z JS */
+.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Skryje odvrácenou stranu karty */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.card-front {
+    transform: rotateY(180deg); /* Lícová strana je zrcadlově obrácená, dokud se karta neotočí */
+}
+
+.card-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Náš starý dobrý trik na pixely */
+    border-radius: 12px;
+    border: 2px solid #1a1a2e;
+}
+
+/* Fyzické otočení lícové strany, pokud karta padne obráceně */
+.reversed-card {
+    transform: rotateZ(180deg);
+}
+/* Třída, kterou přidáme v JS, když karta padne obráceně */
+.reversed-card {
+    transform: rotate(180deg);
+}
+
+.card-info {
+    text-align: center;
+}
+
+#card-title {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.position-info {
+    color: #e94560;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.keywords {
+    font-style: italic;
+    color: #fca311;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.meaning-section {
+    text-align: left;
+    background-color: #1a1a2e;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #fca311;
+}
+
+.meaning-section h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#card-meaning {
+    line-height: 1.6;
+    color: #c0c0c0;
+}
+/* --- ROZVRŽENÍ VÝKLADU NA 3 KARTY --- */
+.spread-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Na malých displejích skočí karty pod sebe */
+    margin-bottom: 30px;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.position-title {
+    color: #fca311;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Zmenšíme trochu karty, aby se tři vešly vedle sebe */
+.perspective {
+    width: 160px;
+    height: 276px;
+    margin: 0;
+}
+
+/* Styly pro textové bloky výkladu */
+.reading-block {
+    text-align: left;
+    background-color: #1a1a2e;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #e94560;
+    margin-bottom: 20px;
+}
+
+.reading-block h4 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.reading-block .meta-info {
+    color: #fca311;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.reading-block p {
+    line-height: 1.6;
+    color: #c0c0c0;
+}
+
+/* --- AI VĚŠTEC --- */
+.ai-reading {
+    background-color: rgba(233, 69, 96, 0.1);
+    border: 1px solid #e94560;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(233, 69, 96, 0.2);
+}
+
+.ai-reading h3 {
+    color: #e94560;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#ai-text-content {
+    color: #fca311;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Blikající kurzor pro efekt psacího stroje */
+.cursor-blink {
+    border-right: 2px solid #e94560;
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Přidejte toto na úplný konec style.css: */
+
+/* --- ORACOOLIO ROZCESTNÍK (Nové styly) --- */
+.main-title {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, #e94560, #fca311);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.menu-item {
+    background: #16213e;
+    border: 2px solid #2a395e;
+    padding: 30px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    border-color: #e94560;
+    box-shadow: 0 15px 30px rgba(233, 69, 96, 0.2);
+}
+
+.menu-item .menu-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px rgba(252, 163, 17, 0.3));
+}
+
+.menu-item h2 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    color: #8f8f8f;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Vzhled zamčených her */
+.locked {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: grayscale(80%);
+}
+.locked:hover {
+    transform: none;
+    border-color: #2a395e;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Tlačítko zpět */
+.back-btn {
+    background: transparent;
+    color: #8f8f8f;
+    border: 1px solid #8f8f8f;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+}
+.back-btn:hover {
+    background: #2a395e;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: none;
+}
+
+/* Zlatý odznáček pro I-ťing */
+.status-badge {
+    background: rgba(252, 163, 17, 0.1);
+    color: #fca311;
+    border: 1px solid #fca311;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+/* --- MINCE A HÁZENÍ --- */
+.coins-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    perspective: 800px; /* 3D hloubka pro házení */
+}
+
+.coin {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.1s;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));
+}
+
+.coin img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Magická animace vyhození do vzduchu (využijeme rotaci na všech osách) */
+.tossing {
+    animation: tossAnimation 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes tossAnimation {
+    0% { transform: translateY(0) rotateX(0) rotateY(0) scale(1); }
+    50% { transform: translateY(-150px) rotateX(1080deg) rotateY(720deg) scale(1.2); }
+    100% { transform: translateY(0) rotateX(2160deg) rotateY(1440deg) scale(1); }
+}
+
+/* Přestylování tlačítka pro I-Ťing, ať víc ladí k bronzu */
+#toss-btn {
+    background-color: #3a2e24;
+    border-color: #d4b483;
+    color: #d4b483;
+}
+#toss-btn:hover {
+    background-color: #d4b483;
+    color: #1a1612;
+    box-shadow: 0 0 15px rgba(212, 180, 131, 0.5);
+}
+
+/* ==========================================
+   VIZUÁL I-ŤING: OPRAVA SVITKU A BAREV
+   ========================================== */
+
+/* 1. Hlavní kontejner svitku */
+#iching-section {
+    background-image: url('assets/iching_bg.jpg');
+    /* 100% 100% zajistí, že bambusy budou vždy přesně nahoře a dole, nehledě na velikost */
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 850px; /* Aby měl svitek vždy důstojnou velikost */
+    border-radius: 15px;
+    
+    /* KLÍČOVÉ: Tímto natlačíme obsah jen na ten světlý papír!
+       160px seshora (pod horní bambus)
+       50px ze stran (aby to nešlo do dřeva)
+       120px zespodu (nad spodní bambus) */
+    padding: 160px 50px 120px 50px; 
+    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Všechno hezky zarovná na střed */
+}
+
+/* 2. Nadpisy (Krásný tmavý inkoust na světlém papíře) */
+#iching-section header {
+    text-align: center;
+}
+
+#iching-section header h1 {
+    color: #1a110a !important; /* Temně hnědo-černá */
+    font-size: 3rem;
+    margin-bottom: 5px;
+    font-weight: 900;
+    text-shadow: none; /* Odstraníme stíny pro efekt zaschlého inkoustu */
+}
+
+#iching-section .subtitle {
+    color: #4a3322 !important; /* Čitelnější hnědá */
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* 3. Prostor pro stavbu hexagramu */
+#hexagram-builder {
+    display: flex;
+    flex-direction: column-reverse; /* Skládá čáry odspodu nahoru */
+    align-items: center;
+    gap: 12px;
+    margin: 10px auto 30px auto;
+    width: 180px;
+    min-height: 180px;
+}
+
+/* 4. Samotné čáry (Ebenově černá s lehkým stínem do papíru) */
+.hex-line {
+    width: 100%;
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1 !important;
+}
+
+.line-segment {
+    height: 100%;
+    background: #181410; /* Barva černé tuše */
+    border-radius: 3px;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.3); /* Jemný stín rozpitý na papíře */
+}
+
+.yang-line .line-segment { width: 100%; }
+.yin-line .line-segment { width: 44%; }
+
+/* 5. Výkladový text (vycentrovaný, zúžený a bez rušivých rámečků) */
+#iching-reading-container {
+    background: transparent; 
+    border: none;
+    box-shadow: none;
+    margin: 0 auto;
+    max-width: 450px; /* Omezí šířku textu, aby se dobře četl */
+    text-align: center;
+}
+
+#iching-reading-container h3 {
+    color: #8e2b20; /* Tradiční pečetní čínská červená pro Hlas Oracoolia */
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#iching-text-content h4 {
+    color: #1a110a;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+    border-bottom: 2px solid #8e2b20; /* Malá červená linka jako ozdoba */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#iching-text-content p {
+    color: #2b1b10; /* Čitelný text */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* 6. Sladíme i tlačítko s červenou pečetí */
+#toss-btn {
+    background-color: #8e2b20;
+    color: #fff;
+    border: 2px solid #4a1510;
+    margin-bottom: 20px;
+}
+#toss-btn:hover {
+    background-color: #a83427;
+    box-shadow: 0 4px 15px rgba(142, 43, 32, 0.5);
+}
+
+/* ==========================================
+   SOLITAIRE 4.0: NEPRŮSTŘELNÁ MŘÍŽKA
+   ========================================== */
+
+#solitaire-section {
+    background-image: url('assets/solitaire_bg.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#solitaire-section header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#solitaire-section header h1, #solitaire-section header p {
+    text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+}
+
+#solitaire-app {
+    width: 100%;
+    max-width: 950px; /* Ideální šířka pro zobrazení na PC */
+    margin: 0 auto;
+}
+
+/* TAJNÁ ZBRAŇ: Sjednocená mřížka pro horní i dolní řadu */
+.solitaire-grid {
+    display: grid;
+    /* Tento kód donutí mřížku udělat 7 NAPROSTO STEJNÝCH sloupců, ať se děje cokoliv */
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px; /* Mezera mezi kartami */
+    width: 100%;
+    margin-bottom: 25px; /* Mezera mezi horní a dolní řadou */
+}
+
+/* Prázdné místo mezi balíčkem a cílovými hromádkami */
+.spacer-slot {
+    width: 100%;
+    pointer-events: none;
+}
+
+/* Sloty (chlupaté obrysy) na stole */
+.card-slot {
+    width: 100%;
+    aspect-ratio: 1 / 1.45; /* Udržuje naprosto přesný poměr stran karet */
+    border: 2px dashed rgba(212, 175, 55, 0.4);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative; /* Nutné, aby se reálné karty usadily do něj */
+}
+
+/* Reálné hrací karty */
+.solitaire-card {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Usadí se přesně na okraje svého slotu */
+    top: 0; left: 0;
+    border-radius: 6px;
+    background-color: #fdfbf7;
+    box-shadow: -2px 2px 6px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px;
+    
+    /* Dynamický text, který se nezvětší do nesmyslu */
+    font-size: clamp(1rem, 1.5vw, 1.4rem); 
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    box-sizing: border-box;
+    cursor: grab;
+    border: 1px solid #dcd1c4;
+}
+
+/* Barvy a rub */
+.card-red { color: #b22222; }
+.card-black { color: #1a1612; }
+
+.card-hidden {
+    background-image: url('assets/solitaire_back.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #8f794b;
+    cursor: default;
+}
+
+/* Detekce mobilu */
+#landscape-warning { display: none; text-align: center; padding: 40px; background: rgba(0,0,0,0.8); border-radius: 15px; margin-top: 50px; }
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    #solitaire-app { display: none !important; }
+    #landscape-warning { display: block; }
+}
+
+
+
+#f-hearts::after { content: "♥"; color: rgba(178, 34, 34, 0.2); font-size: 3rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+#f-diamonds::after { content: "♦"; color: rgba(178, 34, 34, 0.2); font-size: 3rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+#f-clubs::after { content: "♣"; color: rgba(26, 22, 18, 0.2); font-size: 3rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+#f-spades::after { content: "♠"; color: rgba(26, 22, 18, 0.2); font-size: 3rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+/* Aby opravdová karta vždy překryla vodoznak */
+.solitaire-card {
+    z-index: 10; 
+}
