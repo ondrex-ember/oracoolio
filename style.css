@@ -764,7 +764,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     box-shadow: -1px 2px 5px rgba(0,0,0,0.5);
     display: block;
     overflow: hidden;
-    font-size: clamp(0.5rem, 1.1vw, 1.1rem);
+    font-size: clamp(0.5rem, 1.1vw, 1.6rem);
     font-weight: bold;
     font-family: 'Georgia', serif;
     box-sizing: border-box;
@@ -916,9 +916,10 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
 
 /* ── Desktop — větší karty, více prostoru ── */
 @media screen and (min-width: 900px) {
-    .card-corner { font-size: 0.95rem; }
+    .card-corner { font-size: 1.2rem; }
 
     .solitaire-grid { gap: 10px; }
 
     #solitaire-app { padding: 12px 16px; }
 }
+
