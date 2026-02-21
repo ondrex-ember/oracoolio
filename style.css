@@ -764,7 +764,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     box-shadow: -1px 2px 5px rgba(0,0,0,0.5);
     display: block;
     overflow: hidden;
-    font-size: clamp(0.5rem, 1.1vw, 1.6rem);
+    font-size: clamp(0.5rem, 1.1vw, 1.1rem);
     font-weight: bold;
     font-family: 'Georgia', serif;
     box-sizing: border-box;
@@ -916,10 +916,53 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
 
 /* ── Desktop — větší karty, více prostoru ── */
 @media screen and (min-width: 900px) {
-    .card-corner { font-size: 1.2rem; }
+    .card-corner { font-size: 0.95rem; }
 
     .solitaire-grid { gap: 10px; }
 
     #solitaire-app { padding: 12px 16px; }
 }
 
+/* ==========================================
+   OPRAVY BACK BUTTONŮ
+   ========================================== */
+
+/* I-ŤING: back button nad scrollem, správné barvy */
+#iching-section > .back-btn {
+    position: fixed;        /* fixed = vždy viditelné, mimo flow svitku */
+    top: 15px;
+    left: 15px;
+    z-index: 9999;
+    background: rgba(26, 17, 10, 0.85);
+    color: #d4b483;
+    border-color: #d4b483;
+    backdrop-filter: blur(4px);
+    padding: 7px 14px;
+    font-size: 0.85rem;
+}
+#iching-section > .back-btn:hover {
+    background: #d4b483;
+    color: #1a110a;
+    box-shadow: 0 0 12px rgba(212,180,131,0.4);
+}
+
+/* SOLITAIRE: back button vždy klikatelný, nad vším */
+#solitaire-section > .back-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+    color: #e0e0e0;
+    border-color: rgba(212,175,55,0.6);
+    backdrop-filter: blur(4px);
+    padding: 7px 14px;
+    font-size: 0.85rem;
+    pointer-events: all;    /* explicitně povolíme klikání */
+}
+#solitaire-section > .back-btn:hover {
+    background: rgba(212,175,55,0.2);
+    color: #fca311;
+    border-color: #fca311;
+    box-shadow: none;
+}
