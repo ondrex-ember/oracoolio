@@ -1,6 +1,3 @@
-﻿// ==========================================
-// 1. NAVIGACE ORACOOLIO (Rozcestník)
-// ==========================================
 
 // ==========================================
 // 1. NAVIGACE ORACOOLIO (Rozcestník)
@@ -391,9 +388,16 @@ function renderSolitaire() {
     // 2. Vykreslíme dolní kaskády (Tableau)
     for (let i = 0; i < 7; i++) {
         const pileDiv = document.getElementById(`t${i + 1}`);
+        // Zjistíme šířku slotu pro výpočet offsetu (karta má poměr 1:1.45)
+        const slotWidth = pileDiv.offsetWidth || 80;
+        const cardHeight = slotWidth * 1.45;
+        // Offset: odhalíme ~22% výšky karty pro každou překrytou kartu
+        const cascade = Math.max(18, cardHeight * 0.22);
+
         solState.tableau[i].forEach((card, index) => {
             const cardEl = createCardElement(card);
-            cardEl.style.top = `${index * 25}px`; // kaskáda dolů
+            cardEl.style.top = `${index * cascade}px`;
+            cardEl.style.zIndex = 10 + index;
             
             // Kartě zapíšeme "GPS souřadnice", kde přesně leží
             if (card.isFaceUp) {
@@ -428,9 +432,26 @@ function renderSolitaire() {
     if (solState.waste.length > 0) {
         const topWasteCard = solState.waste[solState.waste.length - 1];
         const cardEl = createCardElement(topWasteCard);
-        cardEl.dataset.source = 'waste'; // Souřadnice: Jsem z odkládací hromádky
+        cardEl.dataset.source = 'waste';
         wasteDiv.appendChild(cardEl);
     }
+
+    // 6. Dynamická výška tableau slotů (aby kaskáda nepřetekla mimo viditelnou oblast)
+    setTimeout(() => {
+        for (let i = 0; i < 7; i++) {
+            const pileDiv = document.getElementById(`t${i + 1}`);
+            const cards = solState.tableau[i];
+            if (cards.length === 0) {
+                pileDiv.style.paddingBottom = '';
+                continue;
+            }
+            const slotWidth = pileDiv.offsetWidth || 80;
+            const cardHeight = slotWidth * 1.45;
+            const cascade = Math.max(18, cardHeight * 0.22);
+            const totalHeight = (cards.length - 1) * cascade + cardHeight;
+            pileDiv.style.paddingBottom = totalHeight + 'px';
+        }
+    }, 0);
 }
 
 // Pomocná funkce na výrobu HTML jedné karty
@@ -439,8 +460,8 @@ function createCardElement(card) {
     if (card.isFaceUp) {
         el.className = `solitaire-card card-${card.color}`;
         el.innerHTML = `
-            <div>${card.rank} ${card.symbol}</div>
-            <div style="text-align: right; transform: rotate(180deg);">${card.rank} ${card.symbol}</div>
+            <span class="card-corner card-corner-tl">${card.rank}<br>${card.symbol}</span>
+            <span class="card-corner card-corner-br">${card.rank}<br>${card.symbol}</span>
         `;
         el.draggable = true;
         
