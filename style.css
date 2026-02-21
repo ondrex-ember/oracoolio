@@ -647,15 +647,34 @@ button:hover {
 }
 
 /* ==========================================
-   SOLITAIRE 5.0: PLNĚ RESPONZIVNÍ ENGINE
+   SOLITAIRE 6.0: FULLSCREEN RESPONSIVE ENGINE
+   Fixuje: PC desktop (500px container bug),
+           portrait mobile (nový layout),
+           landscape mobile (kompaktní)
    ========================================== */
 
+/* ── FIX #1: DESKTOP — vymaníme solitaire z 500px app-container ──
+   CSS :has() je podporován ve všech moderních prohlížečích od 2023.
+   Když je solitaire aktivní, rozšíříme container na full width.      */
+body:has(#solitaire-section:not(.hidden)) {
+    padding: 0;
+    align-items: stretch;
+}
+body:has(#solitaire-section:not(.hidden)) .app-container {
+    max-width: 100vw;
+    width: 100vw;
+    margin-top: 0;
+    text-align: left;
+}
+
+/* ── Základní sekce ── */
 #solitaire-section {
     background-image: url('assets/solitaire_bg.jpg');
     background-size: cover;
     background-position: center top;
-    background-attachment: scroll; /* fixed způsobuje glitche na iOS - použijeme scroll */
+    background-attachment: scroll;
     min-height: 100vh;
+    width: 100%;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -666,18 +685,19 @@ button:hover {
 
 #solitaire-section header {
     text-align: center;
-    padding: 15px 20px 10px;
+    padding: 12px 20px 8px;
     width: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, transparent 100%);
+    position: relative; /* pro back-btn */
 }
 
 #solitaire-section header h1 {
-    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    font-size: clamp(1.2rem, 3vw, 2rem);
     color: #e0e0e0;
 }
 
 #solitaire-section header p {
-    font-size: clamp(0.75rem, 2vw, 0.95rem);
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
     color: #8f8f8f;
 }
 
@@ -686,22 +706,22 @@ button:hover {
     text-shadow: 0 2px 5px rgba(0,0,0,0.9);
 }
 
+/* ── Herní plocha ── */
 #solitaire-app {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: clamp(6px, 1.5vw, 16px);
-    /* Klíčové: necháme sekci růst s obsahem */
+    padding: clamp(5px, 1.2vw, 14px);
     flex: 1;
 }
 
-/* ── Horní řada (balíček + foundations) ── */
+/* ── Gridy (horní řada + tableau) ── */
 .solitaire-grid {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: clamp(4px, 1.2vw, 12px);
+    gap: clamp(3px, 1vw, 10px);
     width: 100%;
-    margin-bottom: clamp(6px, 1.5vw, 18px);
+    margin-bottom: clamp(4px, 1vw, 14px);
     align-items: start;
 }
 
@@ -710,7 +730,7 @@ button:hover {
     pointer-events: none;
 }
 
-/* Sloty — zlatý dashed obrys */
+/* ── Card slots ── */
 .card-slot {
     width: 100%;
     aspect-ratio: 1 / 1.45;
@@ -720,41 +740,31 @@ button:hover {
     position: relative;
 }
 
-/* ── Tableau (dolní kaskády) ── */
+/* ── Tableau kaskády ── */
 .tableau-pile {
-    /* Tableau sloty musí být dostatečně vysoké pro překrývající se karty.
-       Výška = výška 1 karty + offset pro každou překrytou kartu.
-       Řešíme přes padding-bottom trik + overflow visible */
     aspect-ratio: unset !important;
-    /* min výška = 1 karta */
-    min-height: clamp(80px, 15vw, 160px);
-    /* Sloty jsou relativně pozicované — karty absolutně uvnitř */
+    min-height: clamp(60px, 12vw, 160px);
     position: relative;
-    /* overflow: visible dovolí kartám přesahovat slot dolů */
     overflow: visible;
-    /* Dynamická výška se řídí obsahem přes padding na posledním child elementu */
-    padding-bottom: clamp(80px, 15vw, 160px);
+    padding-bottom: clamp(60px, 12vw, 160px);
     border: 2px dashed rgba(212, 175, 55, 0.4);
     background: rgba(0, 0, 0, 0.25);
     border-radius: 6px;
 }
 
-/* Reálné hrací karty */
+/* ── Hrací karty ── */
 .solitaire-card {
-    /* Šířka = šířka slotu (100%) */
     width: 100%;
-    /* Výška = poměr stran karty */
     height: 0;
-    padding-bottom: 145%; /* = aspect-ratio 1:1.45 přes padding trik */
+    padding-bottom: 145%;
     position: absolute;
     top: 0; left: 0;
     border-radius: 5px;
     background-color: #fdfbf7;
     box-shadow: -1px 2px 5px rgba(0,0,0,0.5);
-    /* Flex layout pro obsah uvnitř */
     display: block;
     overflow: hidden;
-    font-size: clamp(0.6rem, 1.3vw, 1.2rem);
+    font-size: clamp(0.5rem, 1.1vw, 1.1rem);
     font-weight: bold;
     font-family: 'Georgia', serif;
     box-sizing: border-box;
@@ -768,18 +778,18 @@ button:hover {
     box-shadow: -1px 3px 10px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,175,55,0.4);
 }
 
-/* Rank + symbol uvnitř karty — absolutně pozicované */
+/* ── Rohy karet ── */
 .card-corner {
     position: absolute;
-    font-size: clamp(0.55rem, 1.2vw, 1.1rem);
+    font-size: clamp(0.45rem, 1vw, 1rem);
     line-height: 1.1;
     font-weight: bold;
 }
-.card-corner-tl { top: clamp(3px, 0.8vw, 8px); left: clamp(3px, 0.8vw, 8px); }
-.card-corner-br { bottom: clamp(3px, 0.8vw, 8px); right: clamp(3px, 0.8vw, 8px); transform: rotate(180deg); }
+.card-corner-tl { top: clamp(2px, 0.6vw, 7px); left: clamp(2px, 0.6vw, 7px); }
+.card-corner-br { bottom: clamp(2px, 0.6vw, 7px); right: clamp(2px, 0.6vw, 7px); transform: rotate(180deg); }
 
-/* Barvy a rub */
-.card-red { color: #b22222; }
+/* ── Barvy karet ── */
+.card-red   { color: #b22222; }
 .card-black { color: #1a1612; }
 
 .card-hidden {
@@ -788,45 +798,127 @@ button:hover {
     background-position: center;
     border: 2px solid #8f794b;
     cursor: default;
-    /* Skryjeme padding-bottom fallback */
     height: 100%;
     padding-bottom: 0;
 }
 
-/* Foundation watermarks */
-#f-hearts::after  { content: "♥"; color: rgba(178,34,34,0.2);  font-size: clamp(1.5rem,3vw,3rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
-#f-diamonds::after{ content: "♦"; color: rgba(178,34,34,0.2);  font-size: clamp(1.5rem,3vw,3rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
-#f-clubs::after   { content: "♣"; color: rgba(26,22,18,0.2);   font-size: clamp(1.5rem,3vw,3rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
-#f-spades::after  { content: "♠"; color: rgba(26,22,18,0.2);   font-size: clamp(1.5rem,3vw,3rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+/* ── Foundation watermarky ── */
+#f-hearts::after  { content: "♥"; color: rgba(178,34,34,0.2);  font-size: clamp(1.2rem,2.5vw,2.8rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+#f-diamonds::after{ content: "♦"; color: rgba(178,34,34,0.2);  font-size: clamp(1.2rem,2.5vw,2.8rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+#f-clubs::after   { content: "♣"; color: rgba(26,22,18,0.2);   font-size: clamp(1.2rem,2.5vw,2.8rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+#f-spades::after  { content: "♠"; color: rgba(26,22,18,0.2);   font-size: clamp(1.2rem,2.5vw,2.8rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 
-/* ── MOBILNÍ LANDSCAPE WARNING ── */
-#landscape-warning {
-    display: none;
-    text-align: center;
-    padding: 40px 20px;
-    background: rgba(0,0,0,0.85);
-    border-radius: 15px;
-    margin: 30px 20px;
-}
+/* ── FIX #2: PORTRAIT MOBILE — vlastní layout místo warningového bloku ──
+   Místo "rotate device" zobrazíme hru v kompaktním portrait módu.
+   7 sloupců se vejde i na 360px telefon při gap 2px.                    */
 
-/* Na mobilech v portrait — zobraz warning, skryj hru */
+#landscape-warning { display: none !important; } /* Navždy skryt */
+
+/* Portrait phones (max 600px šířky) */
 @media screen and (max-width: 600px) and (orientation: portrait) {
-    #solitaire-app     { display: none !important; }
-    #landscape-warning { display: block; }
-}
 
-/* Na landscape tabletech a větším — hraj normálně */
-@media screen and (orientation: landscape) and (max-height: 500px) {
-    /* Velmi nízké landscape (telefon nastranato) — kompaktnější header */
     #solitaire-section header {
-        padding: 8px 20px 5px;
+        padding: 8px 10px 5px;
     }
-    #solitaire-section header h1 { font-size: 1.1rem; }
-    #solitaire-section header p  { display: none; }
-    #solitaire-app { padding: 4px; }
+    #solitaire-section header h1 { font-size: 1rem; }
+    #solitaire-section header p  { font-size: 0.65rem; margin-bottom: 0; }
+
+    #solitaire-app {
+        padding: 4px 3px;
+        display: block;
+    }
+
+    /* Tight grid pro portrait */
+    .solitaire-grid {
+        gap: 2px;
+        margin-bottom: 3px;
+    }
+
+    /* Karty na portrait mobilu — malé ale čitelné */
+    .solitaire-card {
+        font-size: 0.45rem;
+        border-radius: 3px;
+    }
+
+    .card-corner {
+        font-size: 0.4rem;
+        line-height: 1;
+    }
+    .card-corner-tl { top: 2px; left: 2px; }
+    .card-corner-br { bottom: 2px; right: 2px; }
+
+    /* Tableau min výška musí být menší */
+    .tableau-pile {
+        min-height: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* Card slot border tenčí */
+    .card-slot {
+        border-width: 1px;
+        border-radius: 3px;
+    }
+
+    /* Foundation watermark menší */
+    #f-hearts::after, #f-diamonds::after,
+    #f-clubs::after,  #f-spades::after {
+        font-size: 1rem;
+    }
+
+    /* Back-button na portrait nevyčnívá mimo hru */
+    #solitaire-section .back-btn {
+        position: relative;
+        top: auto; left: auto;
+        display: inline-block;
+        margin: 4px 0 4px 4px;
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
 }
 
-/* Karty na větších obrazovkách */
+/* ── FIX #3: LANDSCAPE MOBILE (telefon nastranato, výška < 500px) ── */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+
+    #solitaire-section header {
+        padding: 5px 20px 3px;
+    }
+    #solitaire-section header h1 { font-size: 0.95rem; }
+    #solitaire-section header p  { display: none; }
+
+    #solitaire-app { padding: 3px; }
+
+    .solitaire-grid {
+        gap: 3px;
+        margin-bottom: 3px;
+    }
+
+    .solitaire-card {
+        font-size: 0.5rem;
+    }
+
+    .card-corner {
+        font-size: 0.45rem;
+    }
+    .card-corner-tl { top: 2px; left: 2px; }
+    .card-corner-br { bottom: 2px; right: 2px; }
+
+    .tableau-pile {
+        min-height: 45px;
+        padding-bottom: 45px;
+    }
+
+    #solitaire-section .back-btn {
+        top: 5px; left: 5px;
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+}
+
+/* ── Desktop — větší karty, více prostoru ── */
 @media screen and (min-width: 900px) {
-    .card-corner { font-size: 1rem; }
+    .card-corner { font-size: 0.95rem; }
+
+    .solitaire-grid { gap: 10px; }
+
+    #solitaire-app { padding: 12px 16px; }
 }
