@@ -781,7 +781,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
 /* ── Rohy karet ── */
 .card-corner {
     position: absolute;
-    font-size: clamp(0.95rem, 1.6vw, 1.9rem);
+    font-size: clamp(1rem, 2vw, 1.9rem);
     line-height: 1.1;
     font-weight: bold;
 }
@@ -803,10 +803,10 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
 }
 
 /* ── Foundation watermarky ── */
-#f-hearts::after  { content: "♥"; color: rgba(178,34,34,0.2);  font-size: clamp(1.2rem,2.5vw,2.8rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
-#f-diamonds::after{ content: "♦"; color: rgba(178,34,34,0.2);  font-size: clamp(1.2rem,2.5vw,2.8rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
-#f-clubs::after   { content: "♣"; color: rgba(26,22,18,0.2);   font-size: clamp(1.2rem,2.5vw,2.8rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
-#f-spades::after  { content: "♠"; color: rgba(26,22,18,0.2);   font-size: clamp(1.2rem,2.5vw,2.8rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+#f-hearts::after  { content: "♥"; color: rgba(178,34,34,0.2);  font-size: clamp(1.5rem,3vw,3rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+#f-diamonds::after{ content: "♦"; color: rgba(178,34,34,0.2);  font-size: clamp(1.5rem,3vw,3rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+#f-clubs::after   { content: "♣"; color: rgba(26,22,18,0.2);   font-size: clamp(1.5rem,3vw,3rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+#f-spades::after  { content: "♠"; color: rgba(26,22,18,0.2);   font-size: clamp(1.5rem,3vw,3rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 
 /* ── FIX #2: PORTRAIT MOBILE — vlastní layout místo warningového bloku ──
    Místo "rotate device" zobrazíme hru v kompaktním portrait módu.
