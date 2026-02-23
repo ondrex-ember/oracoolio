@@ -611,3 +611,14 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     border-color: #fca311;
     box-shadow: none;
 }
+/* ==========================================
+   LÁZEŇSKÝ MÓD: VÝBĚR KARTY DOTYKEM
+   ========================================== */
+.selected-card {
+    box-shadow: 0 0 20px 5px rgba(252, 163, 17, 0.8) !important; /* Magická zlatá záře */
+    transform: translateY(-8px) !important; /* Karta mírně povyskočí */
+    border: 2px solid #fca311 !important;
+    z-index: 100 !important; /* Aby vyskočila nad ostatní karty */
+    transition: all 0.2s ease;
+}
+
