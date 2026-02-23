@@ -448,10 +448,11 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     border-radius: 6px;
 }
 
-/* OPRAVA: Odstraněn hack padding-bottom: 145% a nahrazen čistým height: 100% */
+/* OPRAVA TVARU: Karta si teď svůj poměr stran diktuje sama! */
 .solitaire-card {
     width: 100%;
-    height: 100%; 
+    height: auto; /* Změněno z 100%, aby výšku určoval aspect-ratio */
+    aspect-ratio: 1 / 1.45; /* Magický poměr stran klasické karty */
     position: absolute;
     top: 0; left: 0;
     border-radius: 5px;
@@ -463,10 +464,10 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     font-weight: bold;
     font-family: 'Georgia', serif;
     box-sizing: border-box;
-    cursor: grab;
+    cursor: pointer; /* Změněno z grab, protože teď na karty hlavně ťukáme */
     border: 1px solid #dcd1c4;
     z-index: 10;
-    transition: box-shadow 0.15s ease;
+    transition: box-shadow 0.15s ease, transform 0.2s ease;
 }
 
 .solitaire-card:hover:not(.card-hidden) {
@@ -621,4 +622,5 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     z-index: 100 !important; /* Aby vyskočila nad ostatní karty */
     transition: all 0.2s ease;
 }
+
 
