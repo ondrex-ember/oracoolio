@@ -764,7 +764,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     box-shadow: -1px 2px 5px rgba(0,0,0,0.5);
     display: block;
     overflow: hidden;
-    font-size: clamp(0.6rem, 1.3vw, 1.8rem);
+    font-size: clamp(0.8rem, 1.6vw, 2rem);
     font-weight: bold;
     font-family: 'Georgia', serif;
     box-sizing: border-box;
@@ -966,4 +966,5 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     border-color: #fca311;
     box-shadow: none;
 }
+
 
