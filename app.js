@@ -383,23 +383,20 @@ function renderSolitaire() {
         slot.innerHTML = '';
         slot.ondragover = (e) => e.preventDefault();
         slot.ondrop = handleDrop;
+        
+        // NOVÉ: Zabráníme konfliktu s lízacím balíčkem a přidáme ťukání!
+        if (slot.id !== 'stock-pile') {
+            slot.onclick = handleTap; 
+        }
     });
 
     // 2. Vykreslíme dolní kaskády (Tableau)
     for (let i = 0; i < 7; i++) {
         const pileDiv = document.getElementById(`t${i + 1}`);
-        // Zjistíme šířku slotu pro výpočet offsetu (karta má poměr 1:1.45)
-        const slotWidth = pileDiv.offsetWidth || 80;
-        const cardHeight = slotWidth * 1.45;
-        // Offset: odhalíme ~22% výšky karty pro každou překrytou kartu
-        const cascade = Math.max(18, cardHeight * 0.22);
-
         solState.tableau[i].forEach((card, index) => {
             const cardEl = createCardElement(card);
-            cardEl.style.top = `${index * cascade}px`;
-            cardEl.style.zIndex = 10 + index;
+            cardEl.style.top = `${index * 25}px`; 
             
-            // Kartě zapíšeme "GPS souřadnice", kde přesně leží
             if (card.isFaceUp) {
                 cardEl.dataset.source = 'tableau';
                 cardEl.dataset.pileIndex = i;
@@ -414,7 +411,7 @@ function renderSolitaire() {
         const fDiv = document.getElementById(`f-${suit}`);
         solState.foundations[suit].forEach(card => {
             const cardEl = createCardElement(card);
-            cardEl.style.top = '0px'; // Nahoře se karty neposouvají, překrývají se
+            cardEl.style.top = '0px'; 
             fDiv.appendChild(cardEl);
         });
     });
@@ -432,28 +429,52 @@ function renderSolitaire() {
     if (solState.waste.length > 0) {
         const topWasteCard = solState.waste[solState.waste.length - 1];
         const cardEl = createCardElement(topWasteCard);
-        cardEl.dataset.source = 'waste';
+        cardEl.dataset.source = 'waste'; 
         wasteDiv.appendChild(cardEl);
     }
-
-    // 6. Dynamická výška tableau slotů (aby kaskáda nepřetekla mimo viditelnou oblast)
-    setTimeout(() => {
-        for (let i = 0; i < 7; i++) {
-            const pileDiv = document.getElementById(`t${i + 1}`);
-            const cards = solState.tableau[i];
-            if (cards.length === 0) {
-                pileDiv.style.paddingBottom = '';
-                continue;
-            }
-            const slotWidth = pileDiv.offsetWidth || 80;
-            const cardHeight = slotWidth * 1.45;
-            const cascade = Math.max(18, cardHeight * 0.22);
-            const totalHeight = (cards.length - 1) * cascade + cardHeight;
-            pileDiv.style.paddingBottom = totalHeight + 'px';
-        }
-    }, 0);
+    
+    // Vždy po vykreslení nového stolu zrušíme případný výběr karty
+    clearSelection();
 }
 
+// --- NOVÉ: LOGIKA DOTYKOVÉHO OVLÁDÁNÍ (TAP-TO-MOVE) ---
+let selectedCardEl = null;
+
+function handleTap(e) {
+    const targetSlot = this.closest('.card-slot');
+    const clickedCard = e.target.closest('.solitaire-card');
+
+    if (!selectedCardEl) {
+        // 1. FÁZE: VÝBĚR KARTY (Musí být otočená lícem)
+        if (clickedCard && !clickedCard.classList.contains('card-hidden')) {
+            selectedCardEl = clickedCard;
+            selectedCardEl.classList.add('selected-card'); // Rozsvítí se
+        }
+    } else {
+        // 2. FÁZE: PŘESUN NEBO ZRUŠENÍ VÝBĚRU
+        if (clickedCard === selectedCardEl) {
+            // Hráč ťuknul znovu na tu samou kartu -> Zrušíme výběr
+            clearSelection();
+            return;
+        }
+
+        // Programátorský trik: Nasimulujeme, že kartu někdo táhnul myší
+        // a pošleme ji přímo do našeho už hotového hlídače pravidel!
+        draggedCardEl = selectedCardEl;
+        handleDrop.call(targetSlot, { preventDefault: () => {} });
+        
+        // Pokud pravidla tah zakážou, stůl se nepřekreslí a musíme zhasnout kartu
+        clearSelection();
+    }
+}
+
+function clearSelection() {
+    if (selectedCardEl) {
+        selectedCardEl.classList.remove('selected-card');
+        selectedCardEl = null;
+        draggedCardEl = null;
+    }
+}
 // Pomocná funkce na výrobu HTML jedné karty
 function createCardElement(card) {
     const el = document.createElement('div');
@@ -656,3 +677,4 @@ function handleDrop(e) {
         renderSolitaire();
     }
 }
+
