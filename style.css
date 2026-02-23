@@ -801,6 +801,21 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     height: 100%;
     padding-bottom: 0;
 }
+/* ==========================================
+   PASIÁNS: ZVĚTŠENÍ PÍSMA A SYMBOLŮ PRO MOBILY
+   ========================================== */
+@media screen and (max-width: 950px), screen and (max-height: 500px) {
+    .solitaire-card {
+        /* Výrazně zvětšíme písmo a přebijeme staré pravidlo pomocí !important */
+        font-size: clamp(1.3rem, 4vw, 1.8rem) !important; 
+        
+        /* Zmenšíme vnitřní okraje karty, aby mělo velké písmo víc místa a neutíkalo ven */
+        padding: 3px 6px !important; 
+        
+        /* Mírně zmenšíme mezery mezi řádky, aby do sebe horní a dolní symbol nenarazily */
+        line-height: 1.1 !important; 
+    }
+}
 
 /* ── Foundation watermarky ── */
 #f-hearts::after  { content: "♥"; color: rgba(178,34,34,0.2);  font-size: clamp(1.5rem,3vw,3rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
@@ -966,6 +981,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     border-color: #fca311;
     box-shadow: none;
 }
+
 
 
 
