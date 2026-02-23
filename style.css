@@ -781,7 +781,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
 /* ── Rohy karet ── */
 .card-corner {
     position: absolute;
-    font-size: clamp(0.75rem, 1.2vw, 1.6rem);
+    font-size: clamp(0.95rem, 1.6vw, 1.9rem);
     line-height: 1.1;
     font-weight: bold;
 }
@@ -966,5 +966,6 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     border-color: #fca311;
     box-shadow: none;
 }
+
 
 
