@@ -654,14 +654,19 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
 
 /* ── Full-width override ── */
 body:has(#karolky-section:not(.hidden)) {
+    display: block;   /* Zruší flex centrování, které posouvá sekci doprava */
     padding: 0;
-    align-items: stretch;
 }
 body:has(#karolky-section:not(.hidden)) .app-container {
-    max-width: 100vw;
+    display: none;    /* Schová prázdný app-container, který bral místo */
+}
+/* Karolky sekce musí vyplnit celou obrazovku */
+body:has(#karolky-section:not(.hidden)) #karolky-section {
+    position: fixed;
+    inset: 0;
     width: 100vw;
-    margin-top: 0;
-    text-align: left;
+    height: 100vh;
+    z-index: 100;
 }
 
 #karolky-section {
@@ -679,10 +684,10 @@ body:has(#karolky-section:not(.hidden)) .app-container {
     position: relative;
 }
 
-/* Tmavý fell-cloth overlay pod obrazkem */
+/* Tmavý felt-cloth overlay pod obrázkem */
 #karolky-section::before {
     content: '';
-    position: fixed;
+    position: absolute;
     inset: 0;
     background: radial-gradient(ellipse at 50% 0%, rgba(20,50,30,0.55) 0%, rgba(5,10,8,0.7) 100%);
     pointer-events: none;
