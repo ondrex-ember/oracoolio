@@ -3,7 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oracoolio - Tvé mystické centrum</title>
+
+    <!-- ══════════════════════════════════════════
+         ZÁKLADNÍ SEO
+         ══════════════════════════════════════════ -->
+
+    <title>Oracoolio – Tarot, I-Ching a Pasiáns zdarma | Osobní věštění online</title>
+
+    <!-- Primární description — zobrazí se pod titulkem ve výsledcích Google.
+         Ideální délka 140–160 znaků, obsahuje hlavní klíčová slova. -->
+    <meta name="description" content="Oracoolio je útulné místo pro osobní věštecké služby zdarma. Vyberte si výklad Tarotu, I-Ching nebo Pasiáns a nechte si odpovědět na své životní otázky.">
+
+    <!-- Robots — povolíme indexaci i sledování odkazů -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Kanonická URL — zabrání duplicitám při různých cestách (www vs. bez www atd.)
+         Upravte na svou skutečnou produkční adresu! -->
+    <link rel="canonical" href="https://ondrex-ember.github.io/oracoolio/">
+
+    <!-- Klíčová slova (Google je ignoruje, ale Bing a Seznam je stále čtou) -->
+    <meta name="keywords" content="tarot zdarma, výklad tarotu online, pasians, i-ching, i-čing, kniha proměn, pasiáns, karetní věštění, věštění online, tarotové karty, osobní věštění, orákulum">
+
+    <!-- Autor -->
+    <meta name="author" content="Oracoolio">
+
+    <!-- Jazyk a teritorium pro Seznam a lokální SEO -->
+    <meta name="language" content="cs">
+    <meta name="geo.region" content="CZ">
+
+    <!-- ══════════════════════════════════════════
+         OPEN GRAPH (Facebook, LinkedIn, WhatsApp…)
+         Ovlivňuje, jak odkaz vypadá při sdílení.
+         ══════════════════════════════════════════ -->
+
+    <meta property="og:type"        content="website">
+    <meta property="og:locale"      content="cs_CZ">
+    <meta property="og:site_name"   content="Oracoolio">
+    <meta property="og:title"       content="Oracoolio – Tarot, I-Ching a Pasiáns zdarma">
+    <meta property="og:description" content="Útulné místo pro osobní věštecké služby zdarma. Výklad Tarotu, I-Ching nebo Karolky Pasiáns — odpovědi na vaše životní otázky.">
+    <meta property="og:url"         content="https://ondrex-ember.github.io/oracoolio/">
+    <!-- Doporučená velikost OG obrázku: 1200×630 px.
+         Vytvořte assets/og-image.jpg s náhledem rozcestníku. -->
+    <meta property="og:image"       content="https://ondrex-ember.github.io/oracoolio/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"   content="Oracoolio – mystické věštění online">
+
+    <!-- ══════════════════════════════════════════
+         TWITTER CARD (X.com)
+         ══════════════════════════════════════════ -->
+
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Oracoolio – Tarot, I-Ching a Pasiáns zdarma">
+    <meta name="twitter:description" content="Osobní věštecké služby zdarma online. Tarot, I-Ching, Pasiáns.">
+    <meta name="twitter:image"       content="https://ondrex-ember.github.io/oracoolio/assets/og-image.jpg">
+
+    <!-- ══════════════════════════════════════════
+         STRUCTURED DATA — JSON-LD (Schema.org)
+         Google toto čte přímo a může zobrazit
+         rich snippets ve výsledcích vyhledávání.
+         ══════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Oracoolio",
+        "url": "https://ondrex-ember.github.io/oracoolio/",
+        "description": "Útulné místo pro osobní věštecké služby zdarma. Výklad Tarotu, I-Ching a Karolky Pasiáns online.",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CZK"
+        },
+        "inLanguage": "cs",
+        "keywords": "tarot, i-ching, pasiáns, věštění, orákulum",
+        "featureList": [
+            "Výklad Tarotu ze 3 karet s AI věštcem",
+            "I-Ching – Kniha proměn s házením mincí",
+            "Karolky Pasiáns – Double Klondike"
+        ]
+    }
+    </script>
+
+    <!-- ══════════════════════════════════════════
+         FAVICON (základní sada — doplňte dle potřeby)
+         ══════════════════════════════════════════ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+    <link rel="apple-touch-icon"      sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Theme color pro Chrome na Androidu (záhlaví prohlížeče) -->
+    <meta name="theme-color" content="#1a1a2e">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,6 +126,13 @@
                     <div class="status-badge" id="iching-status">Dnes zbývá: 1 konzultace</div>
                 </div>
 
+                <div class="menu-item locked">
+                    <div class="menu-icon">🎴</div>
+                    <h2>Biedermeier Tarot</h2>
+                    <p>Historický cikánský výklad. Brzy k dispozici.</p>
+                    <div class="status-badge" style="border-color:#555;color:#555;">Připravujeme</div>
+                </div>
+
                 <!-- PŮVODNÍ Karolky / Klondike — zachován beze změny -->
                 <div class="menu-item" onclick="showApp('solitaire')">
                     <div class="menu-icon">♠️</div>
@@ -46,13 +146,6 @@
                     <h2>Karolky II</h2>
                     <p>Double Klondike — 104 karet, 3 kola. Největší zkouška osudu.</p>
                     <div class="status-badge status-badge-new">✦ Nové</div>
-                </div>
-
-                <div class="menu-item locked">
-                    <div class="menu-icon">🎴</div>
-                    <h2>Biedermeier Tarot</h2>
-                    <p>Historický cikánský výklad. Brzy k dispozici.</p>
-                    <div class="status-badge" style="border-color:#555;color:#555;">Připravujeme</div>
                 </div>
 
             </div>
