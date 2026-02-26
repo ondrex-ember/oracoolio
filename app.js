@@ -1,37 +1,41 @@
-
 // ==========================================
 // 1. NAVIGACE ORACOOLIO (Rozcestník)
 // ==========================================
 
 function showApp(appId) {
-    // 1. Skryjeme všechno
+    const appContainer = document.querySelector('.app-container');
+
+    // Skryjeme všechno
     document.getElementById('dashboard').classList.add('hidden');
     document.getElementById('tarot-section').classList.add('hidden');
     document.getElementById('iching-section').classList.add('hidden');
     document.getElementById('solitaire-section').classList.add('hidden');
     document.getElementById('karolky-section').classList.add('hidden');
 
-    // 2. Zobrazíme to, co uživatel vybral
-    if (appId === 'tarot') {
-        document.getElementById('tarot-section').classList.remove('hidden');
-    } else if (appId === 'iching') {
-        document.getElementById('iching-section').classList.remove('hidden');
-    } else if (appId === 'solitaire') {
-        document.getElementById('solitaire-section').classList.remove('hidden');
-        // ROVNOU SPUSTÍME ROZDÁVÁNÍ KARET (původní Klondike)
-        if (typeof initSolitaire === 'function') {
-            initSolitaire();
-        }
-    } else if (appId === 'karolky') {
+    if (appId === 'karolky') {
+        // Karolky II potřebuje celou obrazovku — schovej app-container úplně
+        appContainer.style.display = 'none';
         document.getElementById('karolky-section').classList.remove('hidden');
-        // Spustíme nový Double Klondike engine
-        if (typeof kpNewGame === 'function') {
-            kpNewGame();
+        if (typeof kpNewGame === 'function') kpNewGame();
+    } else {
+        // Všechny ostatní sekce žijí uvnitř app-containeru
+        appContainer.style.display = '';
+        if (appId === 'tarot') {
+            document.getElementById('tarot-section').classList.remove('hidden');
+        } else if (appId === 'iching') {
+            document.getElementById('iching-section').classList.remove('hidden');
+        } else if (appId === 'solitaire') {
+            document.getElementById('solitaire-section').classList.remove('hidden');
+            if (typeof initSolitaire === 'function') initSolitaire();
         }
     }
 }
 
 function backToDashboard() {
+    const appContainer = document.querySelector('.app-container');
+    // Vždy obnov app-container (mohl být schovaný kvůli Karolky II)
+    appContainer.style.display = '';
+
     document.getElementById('tarot-section').classList.add('hidden');
     document.getElementById('iching-section').classList.add('hidden');
     document.getElementById('solitaire-section').classList.add('hidden');
