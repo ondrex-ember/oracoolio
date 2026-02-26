@@ -652,36 +652,27 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
    Přebije .app-container přes body:has().
    ========================================== */
 
-/* ── Full-width override ── */
-body:has(#karolky-section:not(.hidden)) {
-    display: block;   /* Zruší flex centrování, které posouvá sekci doprava */
-    padding: 0;
-}
-body:has(#karolky-section:not(.hidden)) .app-container {
-    display: none;    /* Schová prázdný app-container, který bral místo */
-}
-/* Karolky sekce musí vyplnit celou obrazovku */
-body:has(#karolky-section:not(.hidden)) #karolky-section {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-}
+/* ── Full-width override ──
+   app-container se skrývá přes JS (showApp/backToDashboard),
+   takže body:has() override není potřeba.
+   Karolky sekce je position:fixed, takže vyplní celou obrazovku. */
 
 #karolky-section {
     background-image: url('assets/solitaire_bg.jpg');
     background-size: cover;
     background-position: center top;
     background-attachment: scroll;
-    min-height: 100vh;
-    width: 100%;
+    /* KLÍČOVÉ: fixed + inset:0 zaručí celou obrazovku bez ohledu na body flex */
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
+    z-index: 500;
 }
 
 /* Tmavý felt-cloth overlay pod obrázkem */
