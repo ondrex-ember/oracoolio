@@ -1063,11 +1063,11 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
    ========================================== */
 
 #oracoolio-footer {
-    /* Patička je vidět pouze na dashboardu, jiné sekce jsou fullscreen */
+    /* Uvnitř #dashboard → přirozeně pod menu-gridem */
     width: 100%;
-    padding: 28px 20px 20px;
+    padding: 28px 0 10px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
     border-top: 1px solid rgba(233, 69, 96, 0.1);
 }
 
@@ -1170,10 +1170,5 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     text-shadow: 0 0 8px rgba(233, 69, 96, 0.6);
 }
 
-/* Patička není vidět v fullscreen hrách */
-body:has(#solitaire-section:not(.hidden)) #oracoolio-footer,
-body:has(#karolky-section:not(.hidden)) #oracoolio-footer,
-body:has(#iching-section:not(.hidden)) #oracoolio-footer,
-body:has(#tarot-section:not(.hidden)) #oracoolio-footer {
-    display: none;
-}
+/* Patička není vidět v fullscreen hrách —
+   je uvnitř #dashboard, takže se skryje automaticky s ním */
