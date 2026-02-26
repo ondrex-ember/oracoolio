@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracoolio - Tvé mystické centrum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- ==========================================
+             DASHBOARD / ROZCESTNÍK (5 dlaždic)
+             ========================================== -->
+        <div id="dashboard" class="dashboard-active">
+            <header>
+                <h1 class="main-title">Oracoolio</h1>
+                <p class="subtitle">Zvolte svou cestu poznání</p>
+            </header>
+            
+            <div class="menu-grid">
+
+                <div class="menu-item" onclick="showApp('tarot')">
+                    <div class="menu-icon">🔮</div>
+                    <h2>Klasický Tarot</h2>
+                    <p>Výklad ze 3 karet. Zrcadlo vaší minulosti, přítomnosti a budoucnosti.</p>
+                </div>
+
+                <div class="menu-item" onclick="showApp('iching')">
+                    <div class="menu-icon">☯️</div>
+                    <h2>I-Ťing</h2>
+                    <p>Kniha proměn. Hod mincemi a soulad s vesmírem.</p>
+                    <div class="status-badge" id="iching-status">Dnes zbývá: 1 konzultace</div>
+                </div>
+
+                <div class="menu-item locked">
+                    <div class="menu-icon">🎴</div>
+                    <h2>Biedermeier Tarot</h2>
+                    <p>Historický cikánský výklad. Brzy k dispozici.</p>
+                    <div class="status-badge" style="border-color:#555;color:#555;">Připravujeme</div>
+                </div>
+
+                <!-- PŮVODNÍ Karolky / Klondike — zachován beze změny -->
+                <div class="menu-item" onclick="showApp('solitaire')">
+                    <div class="menu-icon">♠️</div>
+                    <h2>Karolky Pasiáns</h2>
+                    <p>Uspořádejte chaos v řád a získejte vhled.</p>
+                </div>
+
+                <!-- NOVÝ Double Klondike -->
+                <div class="menu-item menu-item-featured" onclick="showApp('karolky')">
+                    <div class="menu-icon">🃏</div>
+                    <h2>Karolky II</h2>
+                    <p>Double Klondike — 104 karet, 3 kola. Největší zkouška osudu.</p>
+                    <div class="status-badge status-badge-new">✦ Nové</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==========================================
+             KLASICKÝ TAROT — beze změny
+             ========================================== -->
+        <main id="tarot-section" class="hidden">
+            <button class="back-btn" onclick="backToDashboard()">← Zpět do Oracoolia</button>
+            <header>
+                <h1>Klasický Tarot</h1>
+                <p class="subtitle">Zeptejte se karet na svou cestu</p>
+                <button id="draw-btn">Vytáhnout 3 karty</button>
+            </header>
+            
+            <div id="loading" class="hidden">Karty se míchají...</div>
+            
+            <div id="tarot-board" class="hidden">
+                <div class="spread-container">
+                    <div class="card-wrapper">
+                        <h3 class="position-title">Minulost</h3>
+                        <div class="card-display perspective" id="card1-container">
+                            <div class="card-inner" id="card1-inner">
+                                <div class="card-face card-back"><img src="assets/card_back.jpg" alt="Rub karty"></div>
+                                <div class="card-face card-front"><img id="card1-img" src="" alt="Minulost"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <h3 class="position-title">Přítomnost</h3>
+                        <div class="card-display perspective" id="card2-container">
+                            <div class="card-inner" id="card2-inner">
+                                <div class="card-face card-back"><img src="assets/card_back.jpg" alt="Rub karty"></div>
+                                <div class="card-face card-front"><img id="card2-img" src="" alt="Přítomnost"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <h3 class="position-title">Budoucnost</h3>
+                        <div class="card-display perspective" id="card3-container">
+                            <div class="card-inner" id="card3-inner">
+                                <div class="card-face card-back"><img src="assets/card_back.jpg" alt="Rub karty"></div>
+                                <div class="card-face card-front"><img id="card3-img" src="" alt="Budoucnost"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-info hidden" id="reading-text"></div>
+
+                <div id="ai-reading-container" class="ai-reading hidden">
+                    <h3>✨ Hlas Oracoolia ✨</h3>
+                    <p id="ai-text-content"></p>
+                </div>
+            </div>
+        </main>
+
+        <!-- ==========================================
+             I-ŤING — beze změny
+             ========================================== -->
+        <main id="iching-section" class="hidden">
+            <button class="back-btn" onclick="backToDashboard()">← Zpět do Oracoolia</button>
+            
+            <div id="iching-app">
+                <header>
+                    <h1>I-Ťing: Kniha proměn</h1>
+                    <p class="subtitle" id="iching-instruction">Soustřeď se na svou otázku a hoď mincemi (Hod 1 z 6)</p>
+                </header>
+
+                <div class="iching-divider"></div>
+
+                <div id="hexagram-builder"></div>
+
+                <div class="coins-container">
+                    <div class="coin" id="coin1"><img src="assets/coin_yang.png" alt="Mince"></div>
+                    <div class="coin" id="coin2"><img src="assets/coin_yang.png" alt="Mince"></div>
+                    <div class="coin" id="coin3"><img src="assets/coin_yang.png" alt="Mince"></div>
+                </div>
+
+                <button id="toss-btn" onclick="tossCoins()">Hodit mincemi</button>
+                
+                <div id="iching-reading-container" class="ai-reading hidden">
+                    <div id="iching-text-content"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ==========================================
+             PŮVODNÍ KAROLKY PASIÁNS (Klondike) — beze změny
+             ========================================== -->
+        <main id="solitaire-section" class="hidden">
+            <button class="back-btn" onclick="backToDashboard()">← Zpět do Oracoolia</button>
+            <header>
+                <h1 style="color: #e0e0e0;">Karolky Pasiáns</h1>
+                <p class="subtitle" style="color: #8f8f8f;">Rozpleťte karty osudu. Výhra vám odemkne zprávu z hvězd.</p>
+            </header>
+            
+            <div id="landscape-warning">
+                <div class="warning-content">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🔄</div>
+                    <h2 style="color: #d4b483; margin-bottom: 10px;">Otočte zařízení</h2>
+                    <p style="color: #e0e0e0;">Pasiáns vyžaduje prostor. Prosím, otočte svůj telefon na šířku.</p>
+                </div>
+            </div>
+            
+            <div id="solitaire-app">
+                <div id="solitaire-board">
+                    <div class="solitaire-grid">
+                        <div class="card-slot" id="stock-pile">
+                            <div class="solitaire-card card-hidden"></div>
+                        </div>
+                        <div class="card-slot" id="waste-pile"></div>
+                        <div class="spacer-slot"></div>
+                        <div class="card-slot foundation" id="f-hearts"></div>
+                        <div class="card-slot foundation" id="f-diamonds"></div>
+                        <div class="card-slot foundation" id="f-clubs"></div>
+                        <div class="card-slot foundation" id="f-spades"></div>
+                    </div>
+                    <div class="solitaire-grid tableau">
+                        <div class="card-slot tableau-pile" id="t1"></div>
+                        <div class="card-slot tableau-pile" id="t2"></div>
+                        <div class="card-slot tableau-pile" id="t3"></div>
+                        <div class="card-slot tableau-pile" id="t4"></div>
+                        <div class="card-slot tableau-pile" id="t5"></div>
+                        <div class="card-slot tableau-pile" id="t6"></div>
+                        <div class="card-slot tableau-pile" id="t7"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div><!-- /.app-container -->
+
+    <!-- ==========================================
+         NOVÁ KAROLKY II (Double Klondike)
+         Musí být MIMO .app-container, protože potřebuje
+         celou šířku obrazovky — stejný pattern jako #solitaire-section.
+         ========================================== -->
+    <main id="karolky-section" class="hidden">
+
+        <button class="back-btn" onclick="backToDashboard()">← Zpět do Oracoolia</button>
+
+        <!-- Horní lišta s názvem, HUD a tlačítkem nová hra -->
+        <header id="kp-header">
+            <h1>Karolky II — Double Klondike</h1>
+            <div id="kp-hud">
+                <span class="kp-pill">Kolo <span id="kp-pass">1</span>/3</span>
+                <span class="kp-pill">Po <span id="kp-draw">3</span></span>
+                <div id="kp-dots">
+                    <div class="kp-dot kp-dot-active" id="kp-d1"></div>
+                    <div class="kp-dot" id="kp-d2"></div>
+                    <div class="kp-dot" id="kp-d3"></div>
+                </div>
+                <span class="kp-pill">Stoh: <span id="kp-stock-cnt">0</span></span>
+                <button class="kp-new-btn" onclick="kpNewGame()">✦ Nová hra</button>
+            </div>
+        </header>
+
+        <!-- Info bar — zobrazí se při tap-výběru karty -->
+        <div id="kp-infobar" class="kp-infobar-hidden">
+            <div class="kp-info-left">
+                <span id="kp-info-txt"></span>
+                <span id="kp-info-sub"></span>
+            </div>
+            <div class="kp-info-right">
+                <span class="kp-info-hint">Klepněte na cíl</span>
+                <button class="kp-cancel-btn" onclick="kpClearSel()">✕ Zrušit</button>
+            </div>
+        </div>
+
+        <!-- Herní plocha -->
+        <div id="kp-game">
+
+            <!-- TOP ROW: stock | waste | spacer | 8 foundations (11 sloupců) -->
+            <div class="kp-grid kp-grid-11">
+                <div class="kp-slot kp-stock-slot" id="kp-stock" onclick="kpClickStock()">
+                    <span id="kp-recycle"></span>
+                </div>
+                <div class="kp-slot" id="kp-waste"></div>
+                <div class="kp-spacer"></div>
+                <div class="kp-slot kp-foundation" id="kp-f0" data-suit="hearts"   data-color="red"   data-sym="♥"></div>
+                <div class="kp-slot kp-foundation" id="kp-f1" data-suit="hearts"   data-color="red"   data-sym="♥"></div>
+                <div class="kp-slot kp-foundation" id="kp-f2" data-suit="diamonds" data-color="red"   data-sym="♦"></div>
+                <div class="kp-slot kp-foundation" id="kp-f3" data-suit="diamonds" data-color="red"   data-sym="♦"></div>
+                <div class="kp-slot kp-foundation" id="kp-f4" data-suit="clubs"    data-color="black" data-sym="♣"></div>
+                <div class="kp-slot kp-foundation" id="kp-f5" data-suit="clubs"    data-color="black" data-sym="♣"></div>
+                <div class="kp-slot kp-foundation" id="kp-f6" data-suit="spades"   data-color="black" data-sym="♠"></div>
+                <div class="kp-slot kp-foundation" id="kp-f7" data-suit="spades"   data-color="black" data-sym="♠"></div>
+            </div>
+
+            <!-- TABLEAU ROW: 8 sloupců -->
+            <div class="kp-grid kp-grid-8">
+                <div class="kp-slot kp-tab" id="kp-t0"></div>
+                <div class="kp-slot kp-tab" id="kp-t1"></div>
+                <div class="kp-slot kp-tab" id="kp-t2"></div>
+                <div class="kp-slot kp-tab" id="kp-t3"></div>
+                <div class="kp-slot kp-tab" id="kp-t4"></div>
+                <div class="kp-slot kp-tab" id="kp-t5"></div>
+                <div class="kp-slot kp-tab" id="kp-t6"></div>
+                <div class="kp-slot kp-tab" id="kp-t7"></div>
+            </div>
+
+        </div><!-- /#kp-game -->
+
+        <!-- Win / Lose overlay -->
+        <div id="kp-overlay">
+            <div id="kp-overlay-box">
+                <div id="kp-ov-icon"></div>
+                <h2 id="kp-ov-title"></h2>
+                <p id="kp-ov-msg"></p>
+                <button class="kp-obtn kp-obtn-gold" onclick="kpNewGame();kpCloseOverlay()">✦ Nová hra</button>
+                <button class="kp-obtn kp-obtn-ghost" onclick="kpCloseOverlay()">Zavřít</button>
+            </div>
+        </div>
+
+    </main><!-- /#karolky-section -->
+
+    <script src="iching-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
