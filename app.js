@@ -11,6 +11,7 @@ function showApp(appId) {
     document.getElementById('iching-section').classList.add('hidden');
     document.getElementById('solitaire-section').classList.add('hidden');
     document.getElementById('karolky-section').classList.add('hidden');
+    document.getElementById('numero-section').classList.add('hidden');
 
     if (appId === 'karolky') {
         // Karolky II potřebuje celou obrazovku — schovej app-container úplně
@@ -27,6 +28,15 @@ function showApp(appId) {
         } else if (appId === 'solitaire') {
             document.getElementById('solitaire-section').classList.remove('hidden');
             if (typeof initSolitaire === 'function') initSolitaire();
+        } else if (appId === 'numero') {
+            document.getElementById('numero-section').classList.remove('hidden');
+            // Activate numero CSS
+            document.getElementById('numero-styles').removeAttribute('media');
+            // Init sky canvas if not yet rendered
+            if (typeof window._numeroSkyInit === 'undefined') {
+                window._numeroSkyInit = true;
+            }
+            window.dispatchEvent(new Event('resize'));
         }
     }
 }
@@ -40,6 +50,10 @@ function backToDashboard() {
     document.getElementById('iching-section').classList.add('hidden');
     document.getElementById('solitaire-section').classList.add('hidden');
     document.getElementById('karolky-section').classList.add('hidden');
+    document.getElementById('numero-section').classList.add('hidden');
+    // Deactivate numero CSS to avoid style leakage
+    const ns = document.getElementById('numero-styles');
+    if (ns) ns.setAttribute('media', 'not all');
     document.getElementById('dashboard').classList.remove('hidden');
 }
 
