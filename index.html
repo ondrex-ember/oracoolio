@@ -94,6 +94,512 @@
     <meta name="theme-color" content="#1a1a2e">
 
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+    <style id="numero-styles" media="not all">
+:root {
+            --bg: #09090f;
+            --surface: #0f0f1a;
+            --surface2: #141425;
+            --gold: #c9a84c;
+            --gold-dim: #8a6f2e;
+            --gold-glow: rgba(201,168,76,0.15);
+            --text: #ddd8cc;
+            --text-muted: #7a7468;
+            --text-dim: #4a4640;
+            --border: rgba(201,168,76,0.18);
+            --border-subtle: rgba(255,255,255,0.06);
+            --missing: #3a3830;
+            --karmic: #6b1a1a;
+            --star-color: rgba(201,168,76,0.6);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+            padding: 30px 20px 60px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Hvězdné pozadí — canvas */
+        #sky-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container { max-width: 780px; width: 100%; position: relative; z-index: 1; }
+
+        /* Hlavní nadpis */
+        .page-title {
+            text-align: center;
+            padding: 40px 0 35px;
+        }
+        .page-title h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 400;
+            color: var(--gold);
+            letter-spacing: 0.12em;
+            margin-bottom: 6px;
+        }
+        .page-title .subtitle {
+            font-family: 'Crimson Pro', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+        .title-divider {
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+            margin: 16px auto 0;
+        }
+
+        /* Karty / panely */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px 30px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%; transform: translateX(-50%);
+            width: 60%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+        }
+
+        /* Formulář */
+        .form-section-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: var(--gold-dim);
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .form-section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .form-group { margin-bottom: 18px; }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+        }
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 11px 14px;
+            background: var(--surface2);
+            border: 1px solid var(--border-subtle);
+            border-bottom-color: var(--border);
+            color: var(--text);
+            border-radius: 6px;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus, input[type="date"]:focus {
+            outline: none;
+            border-color: var(--gold-dim);
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5) sepia(1) saturate(2); }
+
+        .settings-box {
+            background: var(--surface2);
+            padding: 16px 18px;
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+            margin-top: 8px;
+        }
+        .settings-box strong {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            color: var(--gold-dim);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .settings-box label {
+            font-weight: normal;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-right: 20px;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        input[type="radio"] { accent-color: var(--gold); }
+
+        button {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold-dim);
+            padding: 13px 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 22px;
+            transition: background 0.2s, border-color 0.2s;
+            text-transform: uppercase;
+        }
+        button:hover { background: var(--gold-glow); border-color: var(--gold); }
+
+        .partner-section {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 22px;
+            margin-top: 22px;
+        }
+
+        /* Výsledky */
+        #results { display: none; }
+
+        .result-section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.22em;
+            color: var(--gold-dim);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .result-section-title::before, .result-section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .result-item {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .result-item:last-child { border: none; margin-bottom: 0; padding-bottom: 0; }
+
+        .result-item-flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .result-item-content { flex: 1; }
+
+        .big-number {
+            font-family: 'Cinzel', serif;
+            font-size: 3.8rem;
+            font-weight: 600;
+            color: var(--gold);
+            min-width: 72px;
+            text-align: center;
+            line-height: 1;
+            padding-top: 4px;
+            opacity: 0.9;
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            margin-bottom: 4px;
+        }
+        h4 { font-family: 'Cinzel', serif; font-weight: 400; color: var(--text); font-size: 0.85rem; letter-spacing: 0.06em; }
+        h5 { font-family: 'Cinzel', serif; font-weight: 400; color: var(--gold-dim); font-size: 0.8rem; letter-spacing: 0.08em; }
+
+        .karmic-badge {
+            background: var(--karmic);
+            color: #e07070;
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.1em;
+            padding: 2px 8px;
+            border-radius: 3px;
+            vertical-align: middle;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+        .missing-title { color: var(--text-dim); }
+
+        /* Pinnacle karty */
+        .pinnacles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .pinnacle-card {
+            background: var(--surface2);
+            border: 1px solid var(--border-subtle);
+            border-top: 2px solid var(--gold-dim);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            position: relative;
+        }
+        .pinnacle-age {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: block;
+            letter-spacing: 0.06em;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .pinnacle-number {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin: 10px 0 6px;
+            line-height: 1;
+        }
+        .pinnacle-title { font-size: 0.85rem; color: var(--text); margin-bottom: 8px; font-family: 'Cinzel', serif; font-weight: 400; font-size: 0.75rem; letter-spacing: 0.06em; }
+        .pinnacle-desc { font-size: 0.85rem; color: var(--text-muted); text-align: left; font-style: italic; line-height: 1.5; }
+
+        /* TODAY WIDGET — kosmický hrdina */
+        .today-widget {
+            position: relative;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            margin-bottom: 28px;
+            background: var(--surface2);
+        }
+        .today-widget-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            position: relative;
+            z-index: 1;
+        }
+        .today-mandala {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px; height: 280px;
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .today-left {
+            flex: 1;
+            min-width: 220px;
+            padding: 28px 28px 28px;
+            border-right: 1px solid var(--border-subtle);
+        }
+        .today-right {
+            flex: 0 0 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 28px 24px;
+            text-align: center;
+            position: relative;
+        }
+        @media (max-width: 600px) {
+            .today-left { border-right: none; border-bottom: 1px solid var(--border-subtle); min-width: 100%; }
+            .today-right { flex: 0 0 auto; width: 100%; }
+        }
+        .today-day-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.25em;
+            color: var(--gold-dim);
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .today-vibrace-num {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .today-vibrace-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .today-vibrace-desc {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .today-month-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.15em;
+            color: var(--gold-dim);
+            text-transform: uppercase;
+            margin-top: 14px;
+            padding: 5px 12px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .moon-symbol {
+            font-size: 4.5rem;
+            line-height: 1;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .moon-name {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .moon-desc { font-size: 0.8rem; color: var(--text-muted); font-style: italic; max-width: 140px; line-height: 1.5; }
+
+        /* Mřížka — vizuální grid 3x3 */
+        .num-grid-visual {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin: 16px 0 24px;
+            max-width: 280px;
+        }
+        .num-grid-cell {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+            background: var(--surface2);
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.05em;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .num-grid-cell.missing {
+            color: var(--text-dim);
+            border-color: var(--text-dim);
+            background: transparent;
+            opacity: 0.4;
+        }
+        .num-grid-cell.present {
+            border-color: var(--gold-dim);
+            background: rgba(201,168,76,0.07);
+        }
+        .num-grid-cell.strong {
+            border-color: var(--gold);
+            background: rgba(201,168,76,0.14);
+            color: var(--gold);
+        }
+        .num-grid-label {
+            position: absolute;
+            bottom: 3px; right: 5px;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            font-family: 'Crimson Pro', serif;
+            font-weight: 400;
+        }
+
+        /* Grid number boxes — detail */
+        .grid-number-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 14px;
+            background: var(--surface2);
+            padding: 14px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+        }
+        .grid-number-icon {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gold);
+            border: 1px solid var(--gold-dim);
+            padding: 8px 10px;
+            border-radius: 6px;
+            min-width: 44px;
+            text-align: center;
+            line-height: 1.2;
+            flex-shrink: 0;
+            background: rgba(201,168,76,0.06);
+        }
+        .grid-number-icon.missing {
+            color: var(--text-dim);
+            border-color: var(--text-dim);
+            background: transparent;
+        }
+
+        /* Roviny */
+        .gridline-item {
+            background: var(--surface2);
+            border: 1px solid var(--border-subtle);
+            border-left: 2px solid var(--gold-dim);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin-bottom: 10px;
+        }
+
+        /* Synastrie */
+        .synastry-block {
+            background: rgba(201,168,76,0.04);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 26px 28px;
+            margin-top: 36px;
+        }
+        .synastry-block h3 { font-size: 1rem; }
+
+        /* Číslo zralosti - zelená varianta */
+        .maturity-card {
+            border-top: 2px solid #3d6b3d !important;
+        }
+        .maturity-num { color: #6ab06a !important; }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -138,6 +644,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="status-badge status-badge-new">✦ Nové</div>
                 </div>
 
+
+                <div class="menu-item menu-item-featured" onclick="showApp('numero')">
+                    <div class="menu-icon">✦</div>
+                    <h2>Numero</h2>
+                    <p>Kompletní numerologický rozbor vaší duše. Datum, jméno, mřížka, cykly.</p>
+                    <div class="status-badge status-badge-new">✦ Nové</div>
+                </div>
                 <div class="menu-item locked">
                     <div class="menu-icon">🎴</div>
                     <h2>Biedermeier Tarot</h2>
@@ -309,6 +822,1620 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </main>
 
+
+        <!-- ==========================================
+             NUMERO — Numerologický rozbor
+             ========================================== -->
+        <main id="numero-section" class="hidden">
+            <button class="back-btn" onclick="backToDashboard()">← Zpět do Oracoolia</button>
+<canvas id="sky-canvas"></canvas>
+<div class="container">
+    <div class="page-title">
+        <h1>Oracoolio Numero</h1>
+        <p class="subtitle">Kompletní numerologický rozbor vaší duše</p>
+        <div class="title-divider"></div>
+    </div>
+
+    <div class="card">
+        <div class="form-section-label">Vaše identita</div>
+        <form id="numForm">
+            <div class="form-group">
+                <label for="fullName">Celé jméno</label>
+                <input type="text" id="fullName" value="Aurelie Nováková" required>
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Datum narození</label>
+                <input type="date" id="birthDate" value="1990-10-28" required>
+            </div>
+
+            <div class="partner-section">
+                <div class="form-section-label" style="margin-top: 4px;">Partnerská shoda <span style="color: var(--text-dim); font-size: 0.6rem; font-family: 'Crimson Pro', serif; text-transform: none; letter-spacing: 0; font-style: italic; font-weight: 300;">(volitelné)</span></div>
+                <div class="form-group">
+                    <label for="partnerName">Jméno partnera</label>
+                    <input type="text" id="partnerName" placeholder="Např. Petr Novák">
+                </div>
+                <div class="form-group">
+                    <label for="partnerDate">Datum narození partnera</label>
+                    <input type="date" id="partnerDate">
+                </div>
+            </div>
+
+            <div class="settings-box">
+                <strong>Metoda životního čísla</strong>
+                <label><input type="radio" name="lifePathMethod" value="linear" id="lpLin" checked> Lineární</label>
+                <label><input type="radio" name="lifePathMethod" value="pythagorean" id="lpPyt"> Pythagorejská</label>
+                <br><br>
+                <strong>Systém jména</strong>
+                <label><input type="radio" name="nameMethod" value="pythagorean" id="namePyt" checked> Pythagorejská (1–9)</label>
+                <label><input type="radio" name="nameMethod" value="chaldean" id="nameChal"> Chaldejská (1–8)</label>
+            </div>
+            <button type="submit">✦ Odhalit rozbor ✦</button>
+        </form>
+    </div>
+
+    <div id="results">
+        <div id="outputArea"></div>
+    </div>
+</div>
+
+<script>
+// =========================================================
+// LUNÁRNÍ ENGINE (Z tvého kalendáře)
+// =========================================================
+const CAL_MOON_SYNODIC = 29.53058770576;
+const CAL_MOON_EPOCH   = new Date('2000-01-06T18:14:00Z').getTime();
+const CAL_MOON_PHASES  = [
+  { max: 0.0625, name: 'Novoluní',        icon: '🌑' },
+  { max: 0.1875, name: 'Dorůstající srpek', icon: '🌒' },
+  { max: 0.3125, name: 'První čtvrť',   icon: '🌓' },
+  { max: 0.4375, name: 'Dorůstající měsíc',  icon: '🌔' },
+  { max: 0.5625, name: 'Úplněk',       icon: '🌕' },
+  { max: 0.6875, name: 'Couvající měsíc',  icon: '🌖' },
+  { max: 0.8125, name: 'Poslední čtvrť',    icon: '🌗' },
+  { max: 0.9375, name: 'Ubývající srpek', icon: '🌘' },
+  { max: 1.0001, name: 'Novoluní',        icon: '🌑' }
+];
+
+function getMoonPhase() {
+  const diff  = (new Date().getTime() - CAL_MOON_EPOCH) / 86400000;
+  const phase = ((diff % CAL_MOON_SYNODIC) + CAL_MOON_SYNODIC) % CAL_MOON_SYNODIC / CAL_MOON_SYNODIC;
+  return CAL_MOON_PHASES.find(x => phase <= x.max);
+}
+
+// =========================================================
+// 1. DATABÁZE TEXTŮ
+// =========================================================
+const numerologyTexts = {
+    general: { "text_missing": "Text se připravuje." },
+    birthDay: {
+        "1": { title: "Nezávislost", content: "Lidé narození 1. dne v měsíci jsou silní, nezávislí a originální. Chtějí si věci dělat po svém." },
+        "2": { title: "Družnost", content: "Milují společnost a partnerství. Jsou diplomatičtí a empatičtí." },
+        "3": { title: "Společenskost", content: "Talent pro vyjadřování, kreativita a neustálý optimismus." },
+        "4": { title: "Pracovitost", content: "Praktičtí, houževnatí, staví na pevných základech." },
+        "5": { title: "Vnímavost", content: "Potřebují změnu, pohyb a svobodu. Mají rádi dobrodružství." },
+        "6": { title: "Harmonie", content: "Orientovaní na rodinu, vztahy a krásu kolem sebe." },
+        "7": { title: "Zkušenost", content: "Potřebují si vše ověřit v praxi. Hluboce myslící a tajemní." },
+        "8": { title: "Rovnováha", content: "Silný smysl pro moc, peníze, ale i spravedlnost." },
+        "9": { title: "Analýza", content: "Hlubocí myslitelé hledající pravdu, často orientovaní na pomoc lidstvu." },
+        "10": { title: "Síla", content: "Spojení nezávislosti (1) a obrovského potenciálu. Vůdčí typy." },
+        "11": { title: "Citlivost", content: "Mistrovské číslo. Extrémní intuice a hluboké vnitřní prožívání." },
+        "12": { title: "Všestrannost", content: "Kombinuje vůdcovství a spolupráci do kreativního celku." },
+        "13": { title: "Zranitelnost", content: "Karmické číslo. Často těžší start, vyžaduje se trpělivost a tvrdá práce." },
+        "14": { title: "Cílevědomost", content: "Karmické číslo svobody. Výzva balancovat mezi zodpovědností a změnami." },
+        "15": { title: "Odvaha", content: "Magnetická osobnost. Spojuje touhu po svobodě s láskou k rodině." },
+        "16": { title: "Přímočarost", content: "Karmické číslo. Vede k bourání starých struktur a budování nových, pravdivějších." },
+        "17": { title: "Zdatnost", content: "Skvělí v byznysu a organizaci, kombinují nezávislost s moudrostí." },
+        "18": { title: "Zodpovědnost", content: "Široký rozhled, často pomáhají ostatním. Mají v sobě bojovníka (Mars)." },
+        "19": { title: "Karmická průbojnost", content: "Karmické číslo. Téma dávání a braní, učení se zdravé nezávislosti." },
+        "20": { title: "Intuice", content: "Zesílená citlivost dvojky. Velmi snadno nasávají nálady okolí." },
+        "21": { title: "Pochopení", content: "Skvělí řečníci a společníci, mají dar slova a komunikace." },
+        "22": { title: "Vytrvalost", content: "Mistrovské číslo. Velký potenciál pro budování věcí s celosvětovým dopadem." },
+        "23": { title: "Samostatnost", content: "Rychle myslící, svobodomyslní lidé s potřebou vzrušení." },
+        "24": { title: "Přívětivost", content: "Rodinný typ se silným smyslem pro péči a bezpečí blízkých." },
+        "25": { title: "Nenáročnost", content: "Hledají hluboké pravdy. Mají vynikající intuici a rádi cestují." },
+        "26": { title: "Průbojnost", content: "Velká fyzická i psychická síla. Tah na branku v kariéře." },
+        "27": { title: "Svědomitost", content: "Filantropové, kteří chtějí učit nebo pomáhat. Skrývají velkou moudrost." },
+        "28": { title: "Rozporuplnost", content: "Jemní, ale umí nečekaně vybuchnout. Jsou průkopníky s velkými ideály." },
+        "29": { title: "Citlivost a vize", content: "Den 29 nese napětí mistrovské jedenáctky (2+9=11). Obrovská intuice, vnitřní síla a vizionářství jdou ruku v ruce s extrémní citlivostí a sklony k úzkosti. Tito lidé mají přirozený dar pro inspiraci ostatních, ale musí se naučit uzemnit svou přecitlivělost." },
+        "30": { title: "Radost a komunikace", content: "Dynamická trojka posílená nulou získává na hloubce a intenzitě. Výjimeční řečníci, umělci a společníci s vrozeným charismatem. Svět vnímají jako hřiště plné příležitostí a svou radostí dokážou strhnout celé své okolí." },
+        "31": { title: "Tvůrčí praktičnost", content: "Spojení tří (kreativita) a jedné (vůle) dává vznik výjimečně praktickým tvůrcům. Jsou schopni dotáhnout i ty nejodvážnější nápady do reálného světa. Na rozdíl od ostatních trojkařů mají silný smysl pro disciplínu a systém." }
+    },
+    lifePath: {
+        "1": { title: "Nezávislost a vůdcovství", content: "Jsi průkopník. Máš silnou vůli, jsi ambiciózní a rád se spoléháš sám na sebe." },
+        "2": { title: "Spolupráce a citlivost", content: "Jsi rozený diplomat. Hledáš harmonii, umíš naslouchat a jsi velmi empatický." },
+        "3": { title: "Komunikace a kreativita", content: "Jsi společenský a optimistický člověk s talentem pro vyjadřování." },
+        "4": { title: "Stabilita a pracovitost", content: "Jsi praktický a spolehlivý budovatel. Tvojí slabinou může být přílišná konzervativnost." },
+        "5": { title: "Svoboda a změna", content: "Miluješ dobrodružství a nesnášíš rutinu. Jsi dynamický a adaptabilní." },
+        "6": { title: "Rodina a harmonie", content: "Jsi obětavý a ochranitelský. Rodina je pro tebe vším, jsi pečující duše." },
+        "7": { title: "Duchovno a analýza", content: "Dáváš přednost duševní práci. Hledáš hlubší smysl života. Potřebuješ svůj prostor." },
+        "8": { title: "Úspěch a rovnováha", content: "Máš silný tah na branku ve světě financí a kariéry. Jsi výborný organizátor." },
+        "9": { title: "Altruismus a humanismus", content: "Máš hluboké sociální cítění. Jsi idealista, který chce pomáhat světu." },
+        "11": { title: "Mistrovská intuice (11)", content: "Máš obrovský duchovní potenciál a intuici. Můžeš být inspirací, ale čelíš vnitřnímu napětí." },
+        "22": { title: "Mistrovský budovatel (22)", content: "Dokážeš proměnit i ty nejodvážnější sny v realitu. Máš obrovskou sílu." },
+        "33": { title: "Mistrovský učitel (33)", content: "Nejvyšší duchovní vibrace. Naprostá obětavost a služba lidstvu." }
+    },
+    personalYear: {
+        "1": { title: "Nové začátky", content: "Ideální rok pro start nových projektů. Zasaď semínka své budoucnosti." },
+        "2": { title: "Spolupráce a trpělivost", content: "Rok vhodný pro budování vztahů a naslouchání. Věci mohou jít pomaleji." },
+        "3": { title: "Kreativita a radost", content: "Společenský rok plný zábavy, sebevyjádření a nových kontaktů." },
+        "4": { title: "Práce a budování", content: "Rok tvrdé dřiny, vytváření systémů a upevňování základů." },
+        "5": { title: "Změny a svoboda", content: "Nečekané události, cestování, bourání starých struktur. Očekávej nečekané." },
+        "6": { title: "Rodina a domov", content: "Pozornost se stáčí na domov, rodinu, svatby nebo péči o blízké." },
+        "7": { title: "Duchovno a samota", content: "Klidný rok pro sebereflexi, studium a vnitřní očistu. Není vhodný pro tlak na byznys." },
+        "8": { title: "Peníze a kariéra", content: "Karmická sklizeň. Rok úspěchu, povýšení a finančního růstu." },
+        "9": { title: "Zakončení a úklid", content: "Uzavírání kapitol, odpouštění a příprava na nový devítiletý cyklus." },
+        "11": { title: "Duchovní probuzení", content: "Výjimečný rok mimořádně silné intuice a vnitřního růstu. Přicházejí synchronicity, neočekávaná setkání a momenty hlubokého poznání. Není to rok pro povrchní aktivity — tvůj vnitřní hlas mluví nahlas a ty mu musíš naslouchat. Stinnou stránkou je nervové napětí a přecitlivělost. Pečuj o své duševní zdraví a neboj se zpomalit." },
+        "22": { title: "Rok velkého budování", content: "Toto je jeden z nejvýznamnějších roků v celém tvém devítiletém cyklu. Energie mistrovské dvaadvacítky ti dává výjimečnou příležitost realizovat velké sny a vybudovat něco skutečně trvalého. Nápady, které měly doposud jen podobu vizí, nyní mohou dostat konkrétní podobu. Vyžaduje to ale disciplínu, jasný plán a ochotu pracovat tvrdě. Nepromarni tuto vzácnou vlnu." }
+    },
+    personalDay: {
+        "1": { title: "Akce a start", content: "Dnes je den pro nové začátky. Převezmi iniciativu a udělej důležitá rozhodnutí. Nečekej na ostatní." },
+        "2": { title: "Spolupráce a klid", content: "Energie dneška přeje diplomacii. Nespěchej, naslouchej druhým a buď opatrný na své emoce." },
+        "3": { title: "Radost a komunikace", content: "Den ideální pro zábavu, setkávání s přáteli a kreativní tvorbu. Běž ven a usmívej se." },
+        "4": { title: "Povinnosti a řád", content: "Dnes se nic neudělá samo. Je to den tvrdé práce, úklidu a dotahování restů. Drž se rutiny." },
+        "5": { title: "Pohyb a změna", content: "Očekávej neočekávané! Dnes naruší tvé plány překvapení. Buď flexibilní a zkus něco úplně nového." },
+        "6": { title: "Rodina a péče", content: "Těžištěm dneška je domov a tvoji blízcí. Urovnej spory, uvař dobrou večeři a odpočívej." },
+        "7": { title: "Přemýšlení a samota", content: "Zpomal. Dnes není dobrý den na těžká byznys rozhodnutí. Zůstaň chvíli sám a poslouchej svou intuici." },
+        "8": { title: "Peníze a moc", content: "Den pro velké obchody. Dnes máš tah na branku, řeš úřední věci, finance a nenech se odradit." },
+        "9": { title: "Dokončování a karma", content: "Zavři za sebou staré dveře. Vyhoď nepotřebné věci, odpusť staré křivdy. Nic nového dnes nezačínej!" }
+    },
+    nameSoul: {
+        "1": { title: "Touha po vedení", content: "Vnitřně toužíš být respektován jako samostatná vůdčí osobnost." },
+        "2": { title: "Touha po spojení", content: "Hluboko uvnitř toužíš po dokonalé a harmonické lásce a partnerství." },
+        "3": { title: "Touha po radosti", content: "Chceš se bavit, tvořit a šířit optimismus do svého okolí." },
+        "4": { title: "Touha po jistotě", content: "Tvým nejhlubším přáním je mít pevný bod, řád a materiální bezpečí." },
+        "5": { title: "Touha po volnosti", content: "Uvnitř tvé duše je divoký nomád, který nechce být ničím svazován." },
+        "6": { title: "Touha po rodině", content: "Tvým snem je vytvořit láskyplný a krásný domov pro tvé blízké." },
+        "7": { title: "Touha po pravdě", content: "Chceš poznat tajemství vesmíru a nalézt klid daleko od hlučného davu." },
+        "8": { title: "Touha po moci", content: "Hluboko uvnitř chceš budovat impérium a mít kontrolu nad svým osudem." },
+        "9": { title: "Touha po službě", content: "Tvá duše touží po spravedlnosti a nápravě křivd ve světě." },
+        "11": { title: "Touha po osvícení (11)", content: "Tvá duše je stará a velmi citlivá. Hluboko uvnitř toužíš přinášet lidem světlo, inspiraci a duchovní poznání. Nejde ti o moc, ale o pravdu." },
+        "22": { title: "Touha po tvoření (22)", content: "V nitru jsi vizionář a mistr budovatel. Tvá duše nechce jen snít, ale touží zanechat po sobě ve světě hmatatelný, obrovský odkaz pro další generace." }
+    },
+    namePersonality: {
+        "1": { title: "Vnímán jako: Vůdce", content: "Navenek působíš velmi sebejistě, nezávisle a občas možná až příliš dominantně." },
+        "2": { title: "Vnímán jako: Přítel", content: "Lidé tě na první pohled vnímají jako klidného, přátelského a nekonfliktního člověka." },
+        "3": { title: "Vnímán jako: Bavič", content: "Působíš šarmantně a vtipně, všude kam přijdeš, přinášíš s sebou dobrou náladu." },
+        "4": { title: "Vnímán jako: Dříč", content: "Okolí tě vidí jako praktického, solidního a pracovitého člověka, na kterého je spolehnutí." },
+        "5": { title: "Vnímán jako: Rebel", content: "Vyzařuje z tebe dynamika, sex-appeal a nevyzpytatelnost." },
+        "6": { title: "Vnímán jako: Pečovatel", content: "Vypadáš jako zodpovědný člověk s dobrým vkusem, u kterého každý najde radu a útěchu." },
+        "7": { title: "Vnímán jako: Myslitel", content: "Působíš trochu odtažitě, tajemně a velmi inteligentně. Lidé k tobě cítí respekt." },
+        "8": { title: "Vnímán jako: Šéf", content: "Vyzařuješ autoritu, sebevědomí a materiální úspěch. Působíš silně." },
+        "9": { title: "Vnímán jako: Filantrop", content: "Lidé v tobě vidí chápavého, štědrého a velkorysého člověka se širokým rozhledem." },
+        "11": { title: "Vnímán jako: Vizionář (11)", content: "Lidé z tebe cítí obrovské charisma a jakési nadpozemské vyzařování. Působíš jako inspirativní, vysoce inteligentní, ale občas trochu neuchopitelný a přecitlivělý člověk." },
+        "22": { title: "Vnímán jako: Kapacita (22)", content: "Na první pohled působíš jako absolutní expert a nezpochybnitelná autorita. Okolí z tebe cítí sílu a věří, že dokážeš vyřešit i ty nejtěžší úkoly." }
+    },
+    nameDestiny: {
+        "1": { title: "Průbojnost a vize", content: "Tvé jméno tě předurčuje k tomu být lídrem a stát si za svým." },
+        "2": { title: "Diplomacie a takt", content: "Vibrace jména tě vede k hledání kompromisů a propojování lidí." },
+        "3": { title: "Kreativita a šarm", content: "Tvé jméno přitahuje pozornost a nese vibraci radosti." },
+        "4": { title: "Řád a vytrvalost", content: "Jméno rezonuje s pevnou půdou pod nohama a stabilitou." },
+        "5": { title: "Pohyb a nezávislost", content: "Vibrace přináší do života cestování a touhu zkoušet nové věci." },
+        "6": { title: "Láska a péče", content: "Tvé jméno nese obrovský ochranitelský potenciál a bezpečí." },
+        "7": { title: "Mystická hloubka", content: "Jméno tě obklopuje aurou tajemství a vede k analytickému myšlení." },
+        "8": { title: "Síla a hojnost", content: "Tvé jméno je jako magnet na úspěch. Vyzařuje autoritu." },
+        "9": { title: "Velkorysost a ideály", content: "Vibrace tvého jména přesahuje tvé vlastní ego. Jsi rádcem." },
+        "11": { title: "Inspirace (11)", content: "Předurčuje tě k tomu být duchovním majákem pro ostatní." },
+        "22": { title: "Velké dílo (22)", content: "Máš jméno člověka, který po sobě zanechá hmatatelný odkaz." }
+    },
+    maturity: {
+        "1": { title: "Vlastní cesta", content: "Ve zralém věku objevíš svou skutečnou nezávislost a postavíš se plně na vlastní nohy." },
+        "2": { title: "Harmonie", content: "Tvá moudrost tě povede k vytváření hlubokých spojení a harmonie s ostatními." },
+        "3": { title: "Radost", content: "Cílem tvého zrání je najít lehkost bytí a sdílet radost skrze tvořivost." },
+        "4": { title: "Budovatel", content: "Tvým cílem je vybudovat trvalé hodnoty, ať už v rodině, nebo v práci." },
+        "5": { title: "Svoboda", content: "Ve zralém věku se osvobodíš od pout a tvůj život bude plný cestování a změn." },
+        "6": { title: "Láska a péče", content: "Tvým životním naplněním bude péče o druhé a vytvoření bezpečného domova." },
+        "7": { title: "Moudrost", content: "Dospěješ k hlubokému duchovnímu pochopení a staneš se pro mnohé moudrým rádcem." },
+        "8": { title: "Hojnost", content: "Ve zralém věku tě čeká sklizeň plodů tvé práce, moc a materiální stabilita." },
+        "9": { title: "Odpouštění", content: "Dosáhneš nadhledu a tvým cílem bude pomáhat světu s hlubokou tolerancí." },
+        "11": { title: "Inspirátor (11)", content: "Staneš se duchovním světlem pro své okolí s mimořádně probuzenou intuicí." },
+        "22": { title: "Mistrovské dílo (22)", content: "Ve druhé půli života vytvoříš něco velkolepého, co tě daleko přežije." }
+    },
+    karmicLessons: {
+        "1": { title: "Lekce 1: Průbojnost a ego", content: "V tomto životě se učíš sebevědomí. Musíš se naučit říkat zdravé NE, nestát neustále v koutě a postavit se pevně za svými vlastními názory." },
+        "2": { title: "Lekce 2: Takt a diplomacie", content: "Tvá duše se učí diplomacii a trpělivosti. Tvým úkolem je naučit se naslouchat druhým bez okamžitého posuzování a vytvářet kolem sebe kompromis místo hádek." },
+        "3": { title: "Lekce 3: Sebevyjádření a radost", content: "Tvou velkou lekcí je překonat plachost a vnitřní cenzuru. Učíš se nebrat život tak smrtelně vážně, uvolnit svou kreativitu a dovolit si být občas spontánní a hravý." },
+        "4": { title: "Lekce 4: Řád a systém", content: "Musíš se naučit osobní disciplíně a dotahování rozdělaných projektů do konce. Bez nalezení vnitřního řádu tě čeká v praktickém životě a financích chaos." },
+        "5": { title: "Lekce 5: Změna a adaptabilita", content: "Tvou lekcí je flexibilita. Učíš se nebát se zdravě zariskovat a opouštět staré nefunkční jistoty. Svět je plný změn a ty se jim nesmíš bránit zuby nehty." },
+        "6": { title: "Lekce 6: Zodpovědnost a vztahy", content: "Tvojí životní zkouškou jsou rodinné a partnerské vztahy. Učíš se nevyhýbat citovým závazkům vůči svým nejbližším a přijmout odpovědnost za lidi, kteří tě milují." },
+        "7": { title: "Lekce 7: Víra a hloubka", content: "Tvá duše se učí naslouchat svému vnitřnímu hlasu. Tvým úkolem je přestat se spoléhat jen na čistou logiku a najít hlubší, duchovní hodnoty přesahující materiální svět." },
+        "8": { title: "Lekce 8: Peníze a moc", content: "Musíš najít zdravý vztah k materiálním hodnotám. Naučit se peníze nejen vydělat, ale také se jimi nenechat zotročit. Učíš se balancovat mezi tvrdým byznysem a laskavostí." },
+        "9": { title: "Lekce 9: Soucit a odpuštění", content: "Tvá nejtěžší lekce spočívá v naučení se bezpodmínečné lásce. Musíš se zbavit předsudků, naučit se odpouštět staré křivdy a otevřít srdce toleranci vůči celému světu." }
+    },
+    synastry: {
+        "1": { title: "Dynamický vztah plný akce", content: "Váš vztah je nabitý obrovskou dynamikou a neustálou energií. Jste jako dva silní vůdci, kteří společně dokážou prorazit jakoukoliv životní překážku a dosáhnout velkých cílů. Máte společný tah na branku. Největší výzvou pro toto spojení je ale neustálý skrytý boj o moc a dominanci. Oba máte silné ego. Musíte se naučit dělat kompromisy, nebrat odlišný názor partnera jako osobní útok a umět občas ustoupit." },
+        "2": { title: "Spřízněné duše a hluboká empatie", content: "Tohle je klasické spojení dvou spřízněných duší. Váš vztah je založený na neuvěřitelné empatii, citlivosti a vzájemném porozumění – velmi často víte přesně, co si ten druhý myslí nebo cítí, aniž by musel padnout jediné slovo. Tvoříte pro sebe bezpečný a klidný přístav. Na co si ale musíte dát velký pozor, je přílišná citová závislost jednoho na druhém a sklony k přecitlivělosti, kdy i neškodnou poznámku můžete nafouknout do velkého problému." },
+        "3": { title: "Radostný a inspirativní svazek", content: "Nudit se spolu rozhodně nebudete! Váš svazek je plný smíchu, nekonečných rozhovorů, společenských událostí a touhy cestovat. Jeden druhého neustále myšlenkově inspirujete a probouzíte v sobě obrovskou kreativitu. Jste skvělí parťáci. Nevýhodou tohoto vztahu je ale občasná absence pevné půdy pod nohama. Můžete mít problém s udržením disciplíny (ať už jde o finance nebo plnění povinností) a v těžkých krizích vám může chybět praktická uzemněnost." },
+        "4": { title: "Pevný hrad a absolutní stabilita", content: "Společně tvoříte naprosto nedobytný hrad. Váš vztah je od počátku postaven na absolutní důvěře, loajalitě, stabilitě a společném budování velmi pevných životních základů. Jste pro sebe tou největší možnou oporou v dobách, kdy se nedaří. Výzvou tohoto pevného spojení je ovšem riziko, že váš život časem sklouzne do ubíjející šedé rutiny a seznamu každodenních povinností. Nesmíte zapomínat do vztahu cíleně vnášet spontánnost a romantiku." },
+        "5": { title: "Dobrodružství a nespoutaná vášeň", content: "Připravte se na jízdu na horské dráze. Váš vztah je plný vášně, dobrodružství, neustálých změn a nečekaných zvratů. Stereotyp a rutina jsou pro vás sprostá slova, k životu potřebujete neustále nové a silné podněty. Toto nespoutané spojení je nesmírně vzrušující, ale vyžaduje od obou stran obrovskou dávku tolerance. Musíte si vzájemně ponechat dostatek osobní svobody, jinak hrozí dramatické výbuchy žárlivosti a pocit udušení." },
+        "6": { title: "Teplo domova a vzájemná péče", content: "Toto spojení představuje archetyp ideální rodiny. Spojuje vás hluboká, pečující láska a silná touha vytvořit maximálně harmonický a krásný domov. Jeden pro druhého byste dýchali a jste ochotni se pro rodinu a partnera plně obětovat. Tvoříte idylu. Skrytým nebezpečím tohoto úzce propojeného vztahu je ale 'ponorková nemoc' a tendence se navzájem dusit přehnanou péčí a kontrolou. Učte se občas nechat partnerovi prostor volně se nadechnout." },
+        "7": { title: "Duchovní pouto a intelektuální souznění", content: "Váš vztah má hluboký filozofický a duchovní přesah. Spíše než o povrchní zábavu a večírky vám jde o společné hledání smyslu života a pravdy. Často spolu dokážete vést dlouhé a obohacující intelektuální debaty. Jste zkrátka dvě silné a nezávislé duše, které se rozhodly jít kus cesty spolu. Největší výzvou pro vás bude občasná citová odtažitost a uzavřenost do vlastního světa. Nezapomínejte dávat své city najevo i fyzicky a teple." },
+        "8": { title: "Mocenský pár s tahem na branku", content: "Tvoříte takzvaný 'Mocenský pár' (Power couple). Dohromady máte naprosto ohromující potenciál pro budování společného byznysu, dosahování vysokých kariérních cílů a získávání materiální hojnosti. Vaše spojená, cílevědomá energie přitahuje úspěch jako magnet. Zásadním rizikem ale je, že můžete po čase začít brát váš vztah spíše jako dobře fungující firmu a zapomenete na obyčejnou lásku a něhu. Práce by nikdy neměla stát nad vašimi společnými city." },
+        "9": { title: "Ideální spojení plné altruismu", content: "Spojení dvou velkých idealistů. Váš vztah je založen na obrovské, dospělé toleranci, skutečném hlubokém přátelství a ochotě si nezištně pomáhat. Velmi často se společně podílíte na pomoci druhým lidem, rodině, nebo věnujete svou spojenou energii nějakým vyšším cílům. Výzvou je pro vás udržet si zdravé hranice, abyste při záchraně celého světa kolem vás nezapomněli zachraňovat, opečovávat a hýčkat také sami sebe a svůj vlastní vztah." },
+        "11": { title: "Duchovní zrcadlo", content: "Toto je jedno z nejvzácnějších a nejintenzivnějších spojení vůbec — nesete mezi sebou vibraci mistrovské jedenáctky. Jeden druhého fungujete jako dokonalé zrcadlo: vidíte v partnerovi jak to nejlepší ze sebe, tak i to, na čem musíte ještě pracovat. Vztah je nabitý intuitivní rezonancí — velmi často víte, co si partner myslí nebo cítí dřív, než to vůbec řekne. Toto pouto má obrovský duchovní a transformační potenciál. Stinnou stránkou je ale přecitlivělost a emoční přetížení — obě strany musí vědomě pracovat na tom, aby vztah nebyl pouhou bouří vzájemných projekcí a nerealistických očekávání." },
+        "22": { title: "Architekti společného snu", content: "Vibrace dvacet dvojky ve vašem vztahu znamená jediné: máte dohromady potenciál vybudovat něco skutečně trvalého a velkého — ať už jde o rodinu, firmu, nebo společné dílo, které přežije vás oba. Toto je spojení dvou mistrů budovatelů. Vaše energie je ohromující a okolí to cítí — jste pár, který inspiruje. Zásadní výzvou je ale enormní tlak, který na sebe vzájemně kladete. Obě strany mají vysoké nároky — na sebe i na partnera. Musíte se vědomě učit zastavit, odpočinout si a vychutnat si cestu samotnou, nejen výsledek." }
+    },
+    pinnacles: {
+        "1": { title: "Nezávislost a akce", content: "Doba učení se samostatnosti, prosazení vlastního ega a odvahy." },
+        "2": { title: "Spolupráce a vztahy", content: "Fáze zaměřená na vztahy, diplomacii a budování harmonie." },
+        "3": { title: "Kreativita a rozvoj", content: "Období sociálních kontaktů, studia a tvůrčího vyjádření." },
+        "4": { title: "Budování a práce", content: "Tvrdá práce a vytváření pevných základů pro budoucnost." },
+        "5": { title: "Změna a svoboda", content: "Fáze nečekaných zvratů, cestování a osobní svobody." },
+        "6": { title: "Rodina a domov", content: "Zaměření na domov, rodinu a komunitu. Péče o nejbližší." },
+        "7": { title: "Zastavení a duchovno", content: "Fáze hledání vnitřní pravdy, studia a izolace." },
+        "8": { title: "Sklizeň a finance", content: "Čas postoupit v kariéře a převzít moc. Finanční stabilita." },
+        "9": { title: "Završení cyklu", content: "Konec jednoho velkého cyklu. Doba loučení a přípravy na nové věci." },
+        "11": { title: "Duchovní rozvoj (11)", content: "Silné období pro osobní růst. Může přinést slávu nebo nervové vypětí." },
+        "22": { title: "Mistrovství (22)", content: "Období, kdy můžeš vybudovat projekty s obrovským dopadem." }
+    },
+    gridLines: {
+        "full_159": { title: "Rovina odhodlání (1-5-9)", content: "Máš vrozenou podnikavost a aktivitu. Jsi houževnatý." },
+        "full_357": { title: "Rovina pochopení (3-5-7)", content: "Vyznačuješ se obrovskou empatií a myšlenkovou bystrostí." },
+        "full_147": { title: "Rovina praktičnosti (1-4-7)", content: "Mimořádná zručnost. Stojíš pevně nohama na zemi." },
+        "full_258": { title: "Rovina emocí (2-5-8)", content: "Máš silný a bohatý emoční svět, magnetické charisma a přirozenou autoritu. Intuice a tah na branku jdou u tebe ruku v ruce." },
+        "full_369": { title: "Rovina myšlení (3-6-9)", content: "Brilantní intelekt, analytická mysl a vynikající paměť." },
+        "full_123": { title: "Rovina komunikace (1-2-3)", content: "Jsi výjimečný komunikátor. Spojuješ v sobě sebevědomí, empatii a kreativitu — umíš oslovit kohokoliv a přirozeně přitahuješ lidi svým výrazem a šarmem." },
+        "full_456": { title: "Rovina vůle (4-5-6)", content: "Disponuješ mimořádnou vůlí a vytrvalostí. Jednou vytyčený cíl nevzdáváš — dokážeš dotáhnout cokoliv do konce, i kdyby mělo celé okolí být proti tobě." },
+        "full_789": { title: "Rovina akce (7-8-9)", content: "Člověk činu s hlubokým smyslem pro spravedlnost. Spojuješ duchovní hloubku, logiku a praktickou sílu — tvé výsledky jsou vidět a zanechávají trvalý otisk." },
+        "empty_456": { title: "Rovina zklamání (4-5-6 prázdná)", content: "Tato prázdná linie ukazuje na nedorozumění a nutnost učit se trpělivosti." },
+        "empty_258": { title: "Rovina vášně (2-5-8 prázdná)", content: "Ukazuje na potíže s nalezením vnitřního emocionálního středu." }
+    },
+    gridNumbers: {
+        "1": { title: "Ego a komunikace", missing: "Absence jedničky ukazuje na výzvu v oblasti sebevědomí.", "1x": "Máš problém vyjádřit své pocity slovy.", "2x": "Ideální rovnováha v komunikaci a zdravé sebevědomí.", "3x_plus": "Mentální přetlak, potřeba slovního ventilu." },
+        "2": { title: "Intuice a empatie", missing: "Chybí ti radar na nálady druhých. Uč se taktu.", "1x": "Slušná a vyvážená intuice, dobrý odhad na lidi.", "2x": "Vysoce nadprůměrná intuice, hraničící s přecitlivělostí.", "3x_plus": "Extrémní citlivost, sklon k nasávání problémů celého světa." },
+        "3": { title: "Postřeh a představivost", missing: "Spoléháš na logiku a rutinu, chybí spontánnost.", "1x": "Vynikající duševní čilost a bleskový úsudek.", "2x": "Silný intelekt, bujná představivost.", "3x_plus": "Hyperaktivní mysl a roztěkanost do mnoha projektů." },
+        "4": { title: "Praktičnost a řád", missing: "Chybí ukotvení v materiálním světě. Létáš v oblacích.", "1x": "Jsi systematický a organizovaný.", "2x": "Sklony k workoholismu. Uč se relaxovat.", "3x_plus": "Extrémní fixace na detaily a neústupnost." },
+        "5": { title: "Vášeň a svoboda", missing: "Chybí odvaha ke změnám. Zůstáváš v nevyhovující jistotě.", "1x": "Máš skvělé nápady a nebojíš se je uskutečnit.", "2x": "Obrovská energie a touha po osobní svobodě.", "3x_plus": "Sopka energie. Pravidla pro tebe neexistují." },
+        "6": { title: "Harmonie a estetika", missing: "Chybí porozumění pro harmonii, hádáš se místo kompromisů.", "1x": "Velký smysl pro rodinu, domov a estetiku.", "2x": "Silný smysl pro dokonalost a ochranitelství.", "3x_plus": "Utopická touha po dokonalé rodině, sklon k sebeobětování." },
+        "7": { title: "Duchovno a karma", missing: "Spoléháš na hmatatelné a logické věci.", "1x": "Vše chceš zažít na vlastní kůži. Rád lidem pomáháš.", "2x": "Složité karmické zkoušky. Hluboké emoce.", "3x_plus": "Jsi stará duše. Procházíš náročným životem." },
+        "8": { title: "Logika a moc", missing: "Chybí chladná logika. Vrháš se do situací bez plánu.", "1x": "Vynikající smysl pro detail a materiálno.", "2x": "Obrovská touha po úspěchu a kontrole.", "3x_plus": "Extrém v touze po dominanci. Životní lekcí je pokora." },
+        "9": { title: "Analýza a pravda", missing: "Chybí schopnost vidět věci v širších souvislostech.", "1x": "Potřebuješ všemu přijít na kloub.", "2x": "Problém věci prožívat, vše musíš rozpitvat.", "3x_plus": "Vysoké utopické ideály. Časté zklamání z nedokonalosti světa." }
+    }
+};
+
+// Pomocná funkce pro bezpečné tahání textů
+const getSafeData = (category, key) => {
+    if(numerologyTexts[category] && numerologyTexts[category][key]) return numerologyTexts[category][key];
+    return { title: "Detail se připravuje", content: "Výklad pro toto číslo bude brzy doplněn do databáze." };
+};
+
+// =========================================================
+// 2. PARSER LOGIKA (Mozek Oracoolia)
+// =========================================================
+class NumerologyParser {
+    constructor(dateStr, nameStr) {
+        this.dateParts = dateStr.split('-'); 
+        this.year = this.dateParts[0]; this.month = this.dateParts[1]; this.day = this.dateParts[2];
+        this.cleanName = nameStr.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().replace(/[^A-Z]/g, '');
+    }
+
+    getBirthDay() {
+        return parseInt(this.day, 10);
+    }
+
+    reduceWithDetails(numberStr) {
+        let current = numberStr.toString();
+        let isKarmic = false; let karmicNumber = null; let isMaster = false;
+        while (current.length > 1) {
+            let sum = 0;
+            for (let char of current) sum += parseInt(char, 10);
+            if ([13, 14, 16, 19].includes(sum)) { isKarmic = true; karmicNumber = sum; }
+            if (sum === 11 || sum === 22 || sum === 33) { isMaster = true; current = sum.toString(); break; }
+            current = sum.toString();
+        }
+        return { finalNumber: parseInt(current, 10), isKarmic: isKarmic, karmicValue: karmicNumber, isMaster: isMaster };
+    }
+
+    getLifePath(method) {
+        if (method === 'linear') {
+            return this.reduceWithDetails(this.day + this.month + this.year);
+        } else {
+            const rDay = this.reduceWithDetails(this.day).finalNumber;
+            const rMonth = this.reduceWithDetails(this.month).finalNumber;
+            const rYear = this.reduceWithDetails(this.year).finalNumber;
+            return this.reduceWithDetails((rDay + rMonth + rYear).toString());
+        }
+    }
+
+    getPersonalYear() {
+        const currentYear = new Date().getFullYear();
+        const str = this.day + this.month + currentYear.toString();
+        return this.reduceWithDetails(str).finalNumber;
+    }
+
+    getDailyVibrations() {
+        const py = this.getPersonalYear();
+        const now = new Date();
+        const curMonth = now.getMonth() + 1;
+        const curDay = now.getDate();
+
+        let pm = this.reduceWithDetails(py + curMonth).finalNumber;
+        let pd = this.reduceWithDetails(pm + curDay).finalNumber;
+
+        return { personalMonth: pm, personalDay: pd };
+    }
+
+    getAdvancedNameNumbers(method) {
+        let soulSum = 0; let personalitySum = 0; let destinySum = 0;
+        const vowels = method === 'pythagorean' ? ['A', 'E', 'I', 'O', 'U', 'Y'] : ['A', 'E', 'I', 'O', 'U'];
+        
+        const pytTable = { A:1,J:1,S:1, B:2,K:2,T:2, C:3,L:3,U:3, D:4,M:4,V:4, E:5,N:5,W:5, F:6,O:6,X:6, G:7,P:7,Y:7, H:8,Q:8,Z:8, I:9,R:9 };
+        const chalTable = { A:1,I:1,J:1,Q:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5,X:5, U:6,V:6,W:6, O:7,Z:7, F:8,P:8 };
+        const table = method === 'pythagorean' ? pytTable : chalTable;
+
+        for (let char of this.cleanName) {
+            const val = table[char] || 0;
+            destinySum += val;
+            if (vowels.includes(char)) {
+                soulSum += val;
+            } else {
+                personalitySum += val;
+            }
+        }
+
+        return {
+            soul: this.reduceWithDetails(soulSum),
+            personality: this.reduceWithDetails(personalitySum),
+            destiny: this.reduceWithDetails(destinySum)
+        };
+    }
+
+    // NOVÉ: Karmické lekce (chybějící čísla ve jméně)
+    getMissingNameNumbers(method) {
+        const table = method === 'pythagorean' 
+            ? { A:1,J:1,S:1, B:2,K:2,T:2, C:3,L:3,U:3, D:4,M:4,V:4, E:5,N:5,W:5, F:6,O:6,X:6, G:7,P:7,Y:7, H:8,Q:8,Z:8, I:9,R:9 }
+            : { A:1,I:1,J:1,Q:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5,X:5, U:6,V:6,W:6, O:7,Z:7, F:8,P:8 };
+        let present = new Set();
+        for (let char of this.cleanName) if(table[char]) present.add(table[char]);
+        
+        let missing = [];
+        let maxNum = method === 'pythagorean' ? 9 : 8; // Chaldejská končí u 8
+        for(let i=1; i<=maxNum; i++) if(!present.has(i)) missing.push(i);
+        return missing;
+    }
+
+    getGridCounts() {
+        const dateStr = (this.day + this.month + this.year).replace(/0/g, '');
+        const counts = { "1":0, "2":0, "3":0, "4":0, "5":0, "6":0, "7":0, "8":0, "9":0 };
+        for (let char of dateStr) counts[char]++;
+        return counts;
+    }
+
+    getGridLines() {
+        const c = this.getGridCounts();
+        const lines = [];
+        // Diagonály
+        if (c['1']>0 && c['5']>0 && c['9']>0) lines.push("full_159");
+        if (c['3']>0 && c['5']>0 && c['7']>0) lines.push("full_357");
+        // Sloupce
+        if (c['1']>0 && c['4']>0 && c['7']>0) lines.push("full_147");
+        if (c['2']>0 && c['5']>0 && c['8']>0) lines.push("full_258");
+        if (c['3']>0 && c['6']>0 && c['9']>0) lines.push("full_369");
+        // Řady
+        if (c['1']>0 && c['2']>0 && c['3']>0) lines.push("full_123");
+        if (c['4']>0 && c['5']>0 && c['6']>0) lines.push("full_456");
+        if (c['7']>0 && c['8']>0 && c['9']>0) lines.push("full_789");
+        // Prázdné roviny
+        if (c['4']===0 && c['5']===0 && c['6']===0) lines.push("empty_456");
+        if (c['2']===0 && c['5']===0 && c['8']===0) lines.push("empty_258");
+        return lines;
+    }
+
+    getPinnacles(lifePathNumber) {
+        const rDay = this.reduceWithDetails(this.day).finalNumber;
+        const rMonth = this.reduceWithDetails(this.month).finalNumber;
+        const rYear = this.reduceWithDetails(this.year).finalNumber;
+
+        const pin1 = this.reduceWithDetails(rMonth + rDay); 
+        const pin2 = this.reduceWithDetails(rDay + rYear);   
+        const pin3 = this.reduceWithDetails(pin1.finalNumber + pin2.finalNumber); 
+        const pin4 = this.reduceWithDetails(rMonth + rYear); 
+
+        let ageReducer = lifePathNumber;
+        while (ageReducer > 9) {
+             let sum = 0; let str = ageReducer.toString();
+             for (let char of str) sum += parseInt(char, 10);
+             ageReducer = sum;
+        }
+
+        const age1 = 36 - ageReducer; 
+        const age2 = age1 + 9;            
+        const age3 = age2 + 9;            
+
+        return [
+            { id: 1, val: pin1, age: `0 – ${age1} let` },
+            { id: 2, val: pin2, age: `${age1 + 1} – ${age2} let` },
+            { id: 3, val: pin3, age: `${age2 + 1} – ${age3} let` },
+            { id: 4, val: pin4, age: `Od ${age3 + 1} let` }
+        ];
+    }
+}
+
+// =========================================================
+// 3. RENDER LOGIKA A AUTO-UPDATE
+// =========================================================
+function calculateAndRender() {
+    const name = document.getElementById('fullName').value;
+    const date = document.getElementById('birthDate').value;
+    if(!date) return;
+
+    // Hodnoty Osoby 1
+    const lpMethod = document.querySelector('input[name="lifePathMethod"]:checked').value;
+    const nameMethod = document.querySelector('input[name="nameMethod"]:checked').value;
+
+    const parser = new NumerologyParser(date, name);
+    const birthDay = parser.getBirthDay();
+    const lifePath = parser.getLifePath(lpMethod);
+    const dailyVibes = parser.getDailyVibrations();
+    const advName = parser.getAdvancedNameNumbers(nameMethod);
+    const gridCounts = parser.getGridCounts();
+    const gridLines = parser.getGridLines();
+    const pinnacles = parser.getPinnacles(lifePath.finalNumber); 
+    const moon = getMoonPhase(); 
+
+    // NOVÉ: Číslo zralosti a Karmické lekce ze jména
+    const maturity = parser.reduceWithDetails(lifePath.finalNumber + advName.destiny.finalNumber).finalNumber;
+    const missingNameNums = parser.getMissingNameNumbers(nameMethod);
+
+    let html = '';
+
+    // --- MANDALA SVG pro today widget ---
+    const mandalaSvg = `<svg class="today-mandala" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="140" cy="140" r="130" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="140" cy="140" r="100" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="140" cy="140" r="70" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="140" cy="140" r="40" stroke="#c9a84c" stroke-width="0.5"/>
+        <g transform="translate(140,140)">
+            ${[0,30,60,90,120,150,180,210,240,270,300,330].map(a => {
+                const r = Math.PI * a / 180;
+                return `<line x1="0" y1="0" x2="${Math.cos(r)*130}" y2="${Math.sin(r)*130}" stroke="#c9a84c" stroke-width="0.4"/>`;
+            }).join('')}
+            ${[0,45,90,135,180,225,270,315].map(a => {
+                const r = Math.PI * a / 180;
+                const x1 = Math.cos(r)*70; const y1 = Math.sin(r)*70;
+                const x2 = Math.cos(r+Math.PI/4)*70; const y2 = Math.sin(r+Math.PI/4)*70;
+                return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#c9a84c" stroke-width="0.4"/>`;
+            }).join('')}
+        </g>
+        <polygon points="140,15 165,72 225,72 178,108 196,165 140,130 84,165 102,108 55,72 115,72" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+    </svg>`;
+
+    // --- WIDGET DNEŠNÍ ENERGIE ---
+    const pdData = getSafeData("personalDay", dailyVibes.personalDay);
+    const today = new Date();
+    const dateString = today.toLocaleDateString('cs-CZ', { weekday: 'long', day: 'numeric', month: 'long' });
+
+    html += `
+        <div class="today-widget">
+            ${mandalaSvg}
+            <div class="today-widget-inner">
+                <div class="today-left">
+                    <div class="today-day-label">${dateString}</div>
+                    <div class="today-vibrace-num">${dailyVibes.personalDay}</div>
+                    <div class="today-vibrace-title">${pdData.title}</div>
+                    <div class="today-vibrace-desc">${pdData.content}</div>
+                    <div class="today-month-badge">Osobní měsíc · ${dailyVibes.personalMonth}</div>
+                </div>
+                <div class="today-right">
+                    <span class="moon-symbol">${moon.icon}</span>
+                    <div class="moon-name">${moon.name}</div>
+                    <div class="moon-desc">Fáze měsíce doplňuje tvou numerologickou energii.</div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // --- KARTA: DEN NAROZENÍ + ŽIVOTNÍ ČÍSLO ---
+    const dayData = getSafeData("birthDay", birthDay);
+    const lpData = getSafeData("lifePath", lifePath.finalNumber);
+    let karmicLabel = lifePath.isKarmic ? `<span class="karmic-badge">Karmický dluh ${lifePath.karmicValue}</span>` : '';
+
+    html += `<div class="card">
+        <div class="result-section-title">Základ vaší existence</div>
+        <div class="result-item-flex">
+            <div class="big-number">${birthDay}</div>
+            <div class="result-item-content">
+                <h3>Den narození</h3>
+                <p style="margin:4px 0 10px; color:var(--text-muted); font-size:0.85rem; letter-spacing:0.04em;">${dayData.title}</p>
+                <p style="color:var(--text); font-style:italic; font-size:0.95rem;">${dayData.content}</p>
+            </div>
+        </div>
+        <div class="result-item-flex" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="big-number">${lifePath.finalNumber}</div>
+            <div class="result-item-content">
+                <h3>Životní číslo ${karmicLabel}</h3>
+                <p style="margin:4px 0 10px; color:var(--text-muted); font-size:0.85rem; letter-spacing:0.04em;">${lpData.title}</p>
+                <p style="color:var(--text); font-style:italic; font-size:0.95rem;">${lpData.content}</p>
+            </div>
+        </div>
+    </div>`;
+
+    // --- KARTA: NUMEROLOGIE JMÉNA ---
+    const soulData = getSafeData("nameSoul", advName.soul.finalNumber);
+    const persData = getSafeData("namePersonality", advName.personality.finalNumber);
+    const destData = getSafeData("nameDestiny", advName.destiny.finalNumber);
+    const matData = getSafeData("maturity", maturity);
+
+    html += `<div class="card">
+        <div class="result-section-title">Vibrace vašeho jména</div>
+        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:18px;">Samohlásky nesou vnitřní touhu · souhlásky tvarují vnější obraz · celé jméno ukazuje osud.</p>
+        <div class="pinnacles-grid">
+            <div class="pinnacle-card">
+                <span class="pinnacle-age">Číslo duše · Samohlásky</span>
+                <div class="pinnacle-number">${advName.soul.finalNumber}</div>
+                <div class="pinnacle-title">${soulData.title}</div>
+                <div class="pinnacle-desc">${soulData.content}</div>
+            </div>
+            <div class="pinnacle-card">
+                <span class="pinnacle-age">Číslo osobnosti · Souhlásky</span>
+                <div class="pinnacle-number">${advName.personality.finalNumber}</div>
+                <div class="pinnacle-title">${persData.title}</div>
+                <div class="pinnacle-desc">${persData.content}</div>
+            </div>
+            <div class="pinnacle-card">
+                <span class="pinnacle-age">Číslo osudu · Celé jméno</span>
+                <div class="pinnacle-number">${advName.destiny.finalNumber}</div>
+                <div class="pinnacle-title">${destData.title}</div>
+                <div class="pinnacle-desc">${destData.content}</div>
+            </div>
+            <div class="pinnacle-card maturity-card" style="grid-column: 1 / -1;">
+                <span class="pinnacle-age">Číslo zralosti · Životní cíl</span>
+                <div class="pinnacle-number maturity-num">${maturity}</div>
+                <div class="pinnacle-title">${matData.title}</div>
+                <div class="pinnacle-desc">${matData.content}</div>
+            </div>
+        </div>
+    </div>`;
+
+    // --- KARTA: KARMICKÉ LEKCE ---
+    html += `<div class="card">
+        <div class="result-section-title">Karmické lekce</div>
+        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:16px;">Čísla chybějící v tvém jméně jsou vibrace, které jsi si přinesl(a) do tohoto života probudit.</p>`;
+    if(missingNameNums.length === 0) {
+        html += `<p style="color:#6ab06a; font-style:italic;">Tvé jméno je vzácně vyvážené — nechybí v něm žádná vibrace.</p>`;
+    } else {
+        missingNameNums.forEach(num => {
+            const klData = getSafeData("karmicLessons", num);
+            html += `<div style="border-left:2px solid var(--karmic); padding:10px 16px; margin-bottom:12px; border-radius:0 6px 6px 0; background:rgba(107,26,26,0.12);">
+                <p style="margin:0; color:var(--text); font-size:0.9rem;"><span style="color:#e07070; font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.1em;">${klData.title}</span><br><span style="font-style:italic; color:var(--text-muted);">${klData.content}</span></p>
+            </div>`;
+        });
+    }
+    html += `</div>`;
+
+    // --- KARTA: VIBRAČNÍ CYKLY ---
+    html += `<div class="card">
+        <div class="result-section-title">Vibrační cykly · Trojúhelníky</div>
+        <div class="pinnacles-grid">`;
+    pinnacles.forEach(pin => {
+        const pinData = getSafeData("pinnacles", pin.val.finalNumber);
+        html += `<div class="pinnacle-card">
+            <span class="pinnacle-age">${pin.age}</span>
+            <div class="pinnacle-number">${pin.val.finalNumber}</div>
+            <div class="pinnacle-title">${pinData.title}</div>
+            <div class="pinnacle-desc">${pinData.content}</div>
+        </div>`;
+    });
+    html += `</div></div>`;
+
+    // --- KARTA: NUMEROLOGICKÁ MŘÍŽKA ---
+    // Vizuální 3x3 grid
+    const gridOrder = [7,8,9,4,5,6,1,2,3]; // řazení mřížky: 7 vlevo nahoře
+    let gridVisualHtml = `<div class="num-grid-visual">`;
+    gridOrder.forEach(n => {
+        const count = gridCounts[n.toString()];
+        const cellClass = count === 0 ? 'missing' : count >= 3 ? 'strong' : 'present';
+        const display = count === 0 ? '—' : Array(count).fill(n).join('');
+        gridVisualHtml += `<div class="num-grid-cell ${cellClass}">${display}<span class="num-grid-label">${n}</span></div>`;
+    });
+    gridVisualHtml += `</div>`;
+
+    // Roviny
+    let rovinyHtml = '';
+    if (gridLines.length > 0) {
+        gridLines.forEach(lineKey => {
+            const lineData = getSafeData("gridLines", lineKey);
+            rovinyHtml += `<div class="gridline-item"><h5>${lineData.title}</h5><p style="margin-top:4px; color:var(--text-muted); font-style:italic; font-size:0.88rem;">${lineData.content}</p></div>`;
+        });
+    } else {
+        rovinyHtml = `<p style="color:var(--text-dim); font-style:italic; font-size:0.88rem;">V datu nebyly detekovány žádné plné ani prázdné roviny.</p>`;
+    }
+
+    html += `<div class="card">
+        <div class="result-section-title">Numerologická mřížka</div>
+        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:20px;">Každá číslice data narození zanechává stopu v energetické mřížce.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:flex-start; margin-bottom:24px;">
+            ${gridVisualHtml}
+            <div style="flex:1; min-width:180px;">${rovinyHtml}</div>
+        </div>
+        <div class="result-section-title" style="margin-top:8px;">Detail prvků</div>`;
+
+    for (let i = 1; i <= 9; i++) {
+        const count = gridCounts[i.toString()];
+        const textData = numerologyTexts.gridNumbers[i.toString()];
+        if (count === 0) {
+            html += `<div class="grid-number-box">
+                <div class="grid-number-icon missing">—<br><small style="font-size:0.6rem;font-family:'Crimson Pro',serif;">${i}</small></div>
+                <div>
+                    <h4 class="missing-title" style="margin-bottom:4px;">Chybějící vibrace ${i} · ${textData.title}</h4>
+                    <p style="color:var(--text-muted); font-style:italic; font-size:0.88rem; margin:0;">${textData.missing}</p>
+                </div>
+            </div>`;
+        } else {
+            let multiKey = count >= 3 ? "3x_plus" : count + "x";
+            const multiString = Array(count).fill(i).join('');
+            html += `<div class="grid-number-box">
+                <div class="grid-number-icon">${multiString}</div>
+                <div>
+                    <h4 style="margin-bottom:4px;">Číslo ${i} · ${textData.title}</h4>
+                    <p style="color:var(--text-muted); font-style:italic; font-size:0.88rem; margin:0;">${textData[multiKey]}</p>
+                </div>
+            </div>`;
+        }
+    }
+    html += `</div>`;
+
+    // --- PARTNERSKÁ SHODA ---
+    const pDate = document.getElementById('partnerDate').value;
+    const pName = document.getElementById('partnerName').value;
+
+    if (pDate) {
+        const partnerParser = new NumerologyParser(pDate, pName || "Partner");
+        const partnerLp = partnerParser.getLifePath(lpMethod).finalNumber;
+        const synastryNum = parser.reduceWithDetails(lifePath.finalNumber + partnerLp).finalNumber;
+        const synData = getSafeData("synastry", synastryNum);
+
+        const pCounts = partnerParser.getGridCounts();
+        const gridOrderSyn = [7,8,9,4,5,6,1,2,3];
+        let combinedGridHtml = `<div class="num-grid-visual" style="max-width:240px;">`;
+        gridOrderSyn.forEach(n => {
+            const sumC = gridCounts[n] + pCounts[n];
+            const cellClass = sumC === 0 ? 'missing' : sumC >= 4 ? 'strong' : 'present';
+            const display = sumC === 0 ? '—' : Array(sumC).fill(n).join('');
+            combinedGridHtml += `<div class="num-grid-cell ${cellClass}" style="font-size:0.9rem;">${display}<span class="num-grid-label">${n}</span></div>`;
+        });
+        combinedGridHtml += `</div>`;
+
+        html += `<div class="synastry-block">
+            <div class="result-section-title" style="margin-bottom:18px;">Partnerská synastrie</div>
+            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:20px;">
+                Tvé životní číslo <strong style="color:var(--gold);">${lifePath.finalNumber}</strong> · ${pName || 'Partner'} <strong style="color:var(--gold);">${partnerLp}</strong>
+            </p>
+            <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:14px;">
+                <span style="font-family:'Cinzel',serif; font-size:3rem; color:var(--gold); line-height:1;">${synastryNum}</span>
+                <div>
+                    <div style="font-family:'Cinzel',serif; font-size:0.85rem; color:var(--text); letter-spacing:0.08em;">${synData.title}</div>
+                    <div style="font-family:'Cinzel',serif; font-size:0.58rem; letter-spacing:0.15em; color:var(--gold-dim); text-transform:uppercase;">Vztahové číslo</div>
+                </div>
+            </div>
+            <p style="color:var(--text); font-style:italic; font-size:0.95rem; line-height:1.7; margin-bottom:24px;">${synData.content}</p>
+            <h4 style="margin-bottom:12px;">Společná mřížka</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem; font-style:italic; margin-bottom:14px;">Doplňujete svá prázdná místa navzájem?</p>
+            ${combinedGridHtml}
+        </div>`;
+    }
+
+    document.getElementById('outputArea').innerHTML = html;
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+document.getElementById('numForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    calculateAndRender();
+});
+
+const inputs = document.querySelectorAll('input[type=radio], input[type=date], input[type=text]');
+inputs.forEach(input => {
+    input.addEventListener('input', () => {
+        if (document.getElementById('results').style.display === 'block') {
+            calculateAndRender();
+        }
+    });
+});
+</script>
+
+<script>
+(function() {
+    const canvas = document.getElementById('sky-canvas');
+    const ctx = canvas.getContext('2d');
+    const GOLD = 'rgba(201,168,76,';
+    const WHITE = 'rgba(220,215,200,';
+
+    // Souhvězdí — relativní souřadnice [0..1] pro každou hvězdu a hrany
+    const constellations = [
+        {
+            name: 'Orion',
+            stars: [[0.08,0.12],[0.12,0.09],[0.16,0.12],[0.12,0.17],[0.09,0.22],[0.15,0.22],[0.10,0.27],[0.14,0.27]],
+            edges: [[0,1],[1,2],[1,3],[3,4],[3,5],[4,6],[5,7]]
+        },
+        {
+            name: 'Cassiopeia',
+            stars: [[0.72,0.06],[0.77,0.04],[0.82,0.07],[0.87,0.04],[0.92,0.07]],
+            edges: [[0,1],[1,2],[2,3],[3,4]]
+        },
+        {
+            name: 'Velký vůz',
+            stars: [[0.55,0.18],[0.61,0.16],[0.67,0.16],[0.73,0.18],[0.73,0.24],[0.67,0.28],[0.59,0.30]],
+            edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[3,6]]
+        },
+        {
+            name: 'Jižní kříž',
+            stars: [[0.85,0.55],[0.85,0.65],[0.80,0.60],[0.90,0.60]],
+            edges: [[0,1],[2,3]]
+        },
+        {
+            name: 'Lev',
+            stars: [[0.20,0.48],[0.24,0.44],[0.30,0.43],[0.35,0.46],[0.33,0.52],[0.26,0.54],[0.22,0.52]],
+            edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0]]
+        },
+        {
+            name: 'Škorpión',
+            stars: [[0.60,0.62],[0.64,0.60],[0.68,0.62],[0.70,0.66],[0.68,0.70],[0.65,0.74],[0.62,0.78],[0.60,0.74]],
+            edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
+        }
+    ];
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        draw();
+    }
+
+    function draw() {
+        const W = canvas.width, H = canvas.height;
+        ctx.clearRect(0, 0, W, H);
+
+        // Mlhovina — jemný nebeský pás
+        const nebula = ctx.createLinearGradient(0, 0, W, H * 0.5);
+        nebula.addColorStop(0, 'rgba(30,20,60,0)');
+        nebula.addColorStop(0.3, 'rgba(40,25,70,0.18)');
+        nebula.addColorStop(0.6, 'rgba(20,30,55,0.12)');
+        nebula.addColorStop(1, 'rgba(30,20,60,0)');
+        ctx.fillStyle = nebula;
+        ctx.fillRect(0, 0, W, H * 0.6);
+
+        // Náhodné hvězdy — seed pro konzistenci
+        const rng = (seed) => { let x = Math.sin(seed) * 10000; return x - Math.floor(x); };
+        for (let i = 0; i < 280; i++) {
+            const x = rng(i * 3.1) * W;
+            const y = rng(i * 7.3) * H;
+            const size = rng(i * 2.7) < 0.15 ? 1.5 : rng(i * 2.7) < 0.4 ? 1.0 : 0.6;
+            const isGold = rng(i * 5.9) < 0.25;
+            const alpha = 0.25 + rng(i * 4.1) * 0.6;
+            ctx.beginPath();
+            ctx.arc(x, y, size, 0, Math.PI * 2);
+            ctx.fillStyle = isGold ? GOLD + alpha + ')' : WHITE + alpha + ')';
+            ctx.fill();
+        }
+
+        // Jasné hvězdy s křížovým zábleskem
+        const brightStars = [
+            [0.05, 0.08, 2.2], [0.38, 0.03, 2.5], [0.71, 0.14, 2.0],
+            [0.93, 0.28, 2.3], [0.18, 0.38, 1.8], [0.52, 0.45, 2.1],
+            [0.84, 0.72, 2.4], [0.28, 0.80, 1.9], [0.65, 0.88, 2.2],
+        ];
+        brightStars.forEach(([rx, ry, r]) => {
+            const x = rx * W, y = ry * H;
+            ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.fillStyle = GOLD + '0.85)'; ctx.fill();
+            // záblesk
+            ctx.strokeStyle = GOLD + '0.3)'; ctx.lineWidth = 0.5;
+            ctx.beginPath(); ctx.moveTo(x - r*4, y); ctx.lineTo(x + r*4, y); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(x, y - r*4); ctx.lineTo(x, y + r*4); ctx.stroke();
+        });
+
+        // Souhvězdí
+        constellations.forEach(con => {
+            const pts = con.stars.map(([rx, ry]) => [rx * W, ry * H]);
+            // Spojovací linie
+            ctx.strokeStyle = GOLD + '0.18)';
+            ctx.lineWidth = 0.7;
+            ctx.setLineDash([3, 5]);
+            con.edges.forEach(([a, b]) => {
+                ctx.beginPath();
+                ctx.moveTo(pts[a][0], pts[a][1]);
+                ctx.lineTo(pts[b][0], pts[b][1]);
+                ctx.stroke();
+            });
+            ctx.setLineDash([]);
+            // Hvězdy souhvězdí
+            pts.forEach(([x, y], idx) => {
+                const r = idx === 0 ? 2.0 : 1.4;
+                ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+                ctx.fillStyle = GOLD + '0.75)'; ctx.fill();
+                // Jemný glow
+                const grd = ctx.createRadialGradient(x, y, 0, x, y, r * 5);
+                grd.addColorStop(0, GOLD + '0.12)');
+                grd.addColorStop(1, GOLD + '0)');
+                ctx.beginPath(); ctx.arc(x, y, r * 5, 0, Math.PI * 2);
+                ctx.fillStyle = grd; ctx.fill();
+            });
+        });
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+})();
+</script>
+            <script>
+// =========================================================
+// LUNÁRNÍ ENGINE (Z tvého kalendáře)
+// =========================================================
+const CAL_MOON_SYNODIC = 29.53058770576;
+const CAL_MOON_EPOCH   = new Date('2000-01-06T18:14:00Z').getTime();
+const CAL_MOON_PHASES  = [
+  { max: 0.0625, name: 'Novoluní',        icon: '🌑' },
+  { max: 0.1875, name: 'Dorůstající srpek', icon: '🌒' },
+  { max: 0.3125, name: 'První čtvrť',   icon: '🌓' },
+  { max: 0.4375, name: 'Dorůstající měsíc',  icon: '🌔' },
+  { max: 0.5625, name: 'Úplněk',       icon: '🌕' },
+  { max: 0.6875, name: 'Couvající měsíc',  icon: '🌖' },
+  { max: 0.8125, name: 'Poslední čtvrť',    icon: '🌗' },
+  { max: 0.9375, name: 'Ubývající srpek', icon: '🌘' },
+  { max: 1.0001, name: 'Novoluní',        icon: '🌑' }
+];
+
+function getMoonPhase() {
+  const diff  = (new Date().getTime() - CAL_MOON_EPOCH) / 86400000;
+  const phase = ((diff % CAL_MOON_SYNODIC) + CAL_MOON_SYNODIC) % CAL_MOON_SYNODIC / CAL_MOON_SYNODIC;
+  return CAL_MOON_PHASES.find(x => phase <= x.max);
+}
+
+// =========================================================
+// 1. DATABÁZE TEXTŮ
+// =========================================================
+const numerologyTexts = {
+    general: { "text_missing": "Text se připravuje." },
+    birthDay: {
+        "1": { title: "Nezávislost", content: "Lidé narození 1. dne v měsíci jsou silní, nezávislí a originální. Chtějí si věci dělat po svém." },
+        "2": { title: "Družnost", content: "Milují společnost a partnerství. Jsou diplomatičtí a empatičtí." },
+        "3": { title: "Společenskost", content: "Talent pro vyjadřování, kreativita a neustálý optimismus." },
+        "4": { title: "Pracovitost", content: "Praktičtí, houževnatí, staví na pevných základech." },
+        "5": { title: "Vnímavost", content: "Potřebují změnu, pohyb a svobodu. Mají rádi dobrodružství." },
+        "6": { title: "Harmonie", content: "Orientovaní na rodinu, vztahy a krásu kolem sebe." },
+        "7": { title: "Zkušenost", content: "Potřebují si vše ověřit v praxi. Hluboce myslící a tajemní." },
+        "8": { title: "Rovnováha", content: "Silný smysl pro moc, peníze, ale i spravedlnost." },
+        "9": { title: "Analýza", content: "Hlubocí myslitelé hledající pravdu, často orientovaní na pomoc lidstvu." },
+        "10": { title: "Síla", content: "Spojení nezávislosti (1) a obrovského potenciálu. Vůdčí typy." },
+        "11": { title: "Citlivost", content: "Mistrovské číslo. Extrémní intuice a hluboké vnitřní prožívání." },
+        "12": { title: "Všestrannost", content: "Kombinuje vůdcovství a spolupráci do kreativního celku." },
+        "13": { title: "Zranitelnost", content: "Karmické číslo. Často těžší start, vyžaduje se trpělivost a tvrdá práce." },
+        "14": { title: "Cílevědomost", content: "Karmické číslo svobody. Výzva balancovat mezi zodpovědností a změnami." },
+        "15": { title: "Odvaha", content: "Magnetická osobnost. Spojuje touhu po svobodě s láskou k rodině." },
+        "16": { title: "Přímočarost", content: "Karmické číslo. Vede k bourání starých struktur a budování nových, pravdivějších." },
+        "17": { title: "Zdatnost", content: "Skvělí v byznysu a organizaci, kombinují nezávislost s moudrostí." },
+        "18": { title: "Zodpovědnost", content: "Široký rozhled, často pomáhají ostatním. Mají v sobě bojovníka (Mars)." },
+        "19": { title: "Karmická průbojnost", content: "Karmické číslo. Téma dávání a braní, učení se zdravé nezávislosti." },
+        "20": { title: "Intuice", content: "Zesílená citlivost dvojky. Velmi snadno nasávají nálady okolí." },
+        "21": { title: "Pochopení", content: "Skvělí řečníci a společníci, mají dar slova a komunikace." },
+        "22": { title: "Vytrvalost", content: "Mistrovské číslo. Velký potenciál pro budování věcí s celosvětovým dopadem." },
+        "23": { title: "Samostatnost", content: "Rychle myslící, svobodomyslní lidé s potřebou vzrušení." },
+        "24": { title: "Přívětivost", content: "Rodinný typ se silným smyslem pro péči a bezpečí blízkých." },
+        "25": { title: "Nenáročnost", content: "Hledají hluboké pravdy. Mají vynikající intuici a rádi cestují." },
+        "26": { title: "Průbojnost", content: "Velká fyzická i psychická síla. Tah na branku v kariéře." },
+        "27": { title: "Svědomitost", content: "Filantropové, kteří chtějí učit nebo pomáhat. Skrývají velkou moudrost." },
+        "28": { title: "Rozporuplnost", content: "Jemní, ale umí nečekaně vybuchnout. Jsou průkopníky s velkými ideály." },
+        "29": { title: "Citlivost a vize", content: "Den 29 nese napětí mistrovské jedenáctky (2+9=11). Obrovská intuice, vnitřní síla a vizionářství jdou ruku v ruce s extrémní citlivostí a sklony k úzkosti. Tito lidé mají přirozený dar pro inspiraci ostatních, ale musí se naučit uzemnit svou přecitlivělost." },
+        "30": { title: "Radost a komunikace", content: "Dynamická trojka posílená nulou získává na hloubce a intenzitě. Výjimeční řečníci, umělci a společníci s vrozeným charismatem. Svět vnímají jako hřiště plné příležitostí a svou radostí dokážou strhnout celé své okolí." },
+        "31": { title: "Tvůrčí praktičnost", content: "Spojení tří (kreativita) a jedné (vůle) dává vznik výjimečně praktickým tvůrcům. Jsou schopni dotáhnout i ty nejodvážnější nápady do reálného světa. Na rozdíl od ostatních trojkařů mají silný smysl pro disciplínu a systém." }
+    },
+    lifePath: {
+        "1": { title: "Nezávislost a vůdcovství", content: "Jsi průkopník. Máš silnou vůli, jsi ambiciózní a rád se spoléháš sám na sebe." },
+        "2": { title: "Spolupráce a citlivost", content: "Jsi rozený diplomat. Hledáš harmonii, umíš naslouchat a jsi velmi empatický." },
+        "3": { title: "Komunikace a kreativita", content: "Jsi společenský a optimistický člověk s talentem pro vyjadřování." },
+        "4": { title: "Stabilita a pracovitost", content: "Jsi praktický a spolehlivý budovatel. Tvojí slabinou může být přílišná konzervativnost." },
+        "5": { title: "Svoboda a změna", content: "Miluješ dobrodružství a nesnášíš rutinu. Jsi dynamický a adaptabilní." },
+        "6": { title: "Rodina a harmonie", content: "Jsi obětavý a ochranitelský. Rodina je pro tebe vším, jsi pečující duše." },
+        "7": { title: "Duchovno a analýza", content: "Dáváš přednost duševní práci. Hledáš hlubší smysl života. Potřebuješ svůj prostor." },
+        "8": { title: "Úspěch a rovnováha", content: "Máš silný tah na branku ve světě financí a kariéry. Jsi výborný organizátor." },
+        "9": { title: "Altruismus a humanismus", content: "Máš hluboké sociální cítění. Jsi idealista, který chce pomáhat světu." },
+        "11": { title: "Mistrovská intuice (11)", content: "Máš obrovský duchovní potenciál a intuici. Můžeš být inspirací, ale čelíš vnitřnímu napětí." },
+        "22": { title: "Mistrovský budovatel (22)", content: "Dokážeš proměnit i ty nejodvážnější sny v realitu. Máš obrovskou sílu." },
+        "33": { title: "Mistrovský učitel (33)", content: "Nejvyšší duchovní vibrace. Naprostá obětavost a služba lidstvu." }
+    },
+    personalYear: {
+        "1": { title: "Nové začátky", content: "Ideální rok pro start nových projektů. Zasaď semínka své budoucnosti." },
+        "2": { title: "Spolupráce a trpělivost", content: "Rok vhodný pro budování vztahů a naslouchání. Věci mohou jít pomaleji." },
+        "3": { title: "Kreativita a radost", content: "Společenský rok plný zábavy, sebevyjádření a nových kontaktů." },
+        "4": { title: "Práce a budování", content: "Rok tvrdé dřiny, vytváření systémů a upevňování základů." },
+        "5": { title: "Změny a svoboda", content: "Nečekané události, cestování, bourání starých struktur. Očekávej nečekané." },
+        "6": { title: "Rodina a domov", content: "Pozornost se stáčí na domov, rodinu, svatby nebo péči o blízké." },
+        "7": { title: "Duchovno a samota", content: "Klidný rok pro sebereflexi, studium a vnitřní očistu. Není vhodný pro tlak na byznys." },
+        "8": { title: "Peníze a kariéra", content: "Karmická sklizeň. Rok úspěchu, povýšení a finančního růstu." },
+        "9": { title: "Zakončení a úklid", content: "Uzavírání kapitol, odpouštění a příprava na nový devítiletý cyklus." },
+        "11": { title: "Duchovní probuzení", content: "Výjimečný rok mimořádně silné intuice a vnitřního růstu. Přicházejí synchronicity, neočekávaná setkání a momenty hlubokého poznání. Není to rok pro povrchní aktivity — tvůj vnitřní hlas mluví nahlas a ty mu musíš naslouchat. Stinnou stránkou je nervové napětí a přecitlivělost. Pečuj o své duševní zdraví a neboj se zpomalit." },
+        "22": { title: "Rok velkého budování", content: "Toto je jeden z nejvýznamnějších roků v celém tvém devítiletém cyklu. Energie mistrovské dvaadvacítky ti dává výjimečnou příležitost realizovat velké sny a vybudovat něco skutečně trvalého. Nápady, které měly doposud jen podobu vizí, nyní mohou dostat konkrétní podobu. Vyžaduje to ale disciplínu, jasný plán a ochotu pracovat tvrdě. Nepromarni tuto vzácnou vlnu." }
+    },
+    personalDay: {
+        "1": { title: "Akce a start", content: "Dnes je den pro nové začátky. Převezmi iniciativu a udělej důležitá rozhodnutí. Nečekej na ostatní." },
+        "2": { title: "Spolupráce a klid", content: "Energie dneška přeje diplomacii. Nespěchej, naslouchej druhým a buď opatrný na své emoce." },
+        "3": { title: "Radost a komunikace", content: "Den ideální pro zábavu, setkávání s přáteli a kreativní tvorbu. Běž ven a usmívej se." },
+        "4": { title: "Povinnosti a řád", content: "Dnes se nic neudělá samo. Je to den tvrdé práce, úklidu a dotahování restů. Drž se rutiny." },
+        "5": { title: "Pohyb a změna", content: "Očekávej neočekávané! Dnes naruší tvé plány překvapení. Buď flexibilní a zkus něco úplně nového." },
+        "6": { title: "Rodina a péče", content: "Těžištěm dneška je domov a tvoji blízcí. Urovnej spory, uvař dobrou večeři a odpočívej." },
+        "7": { title: "Přemýšlení a samota", content: "Zpomal. Dnes není dobrý den na těžká byznys rozhodnutí. Zůstaň chvíli sám a poslouchej svou intuici." },
+        "8": { title: "Peníze a moc", content: "Den pro velké obchody. Dnes máš tah na branku, řeš úřední věci, finance a nenech se odradit." },
+        "9": { title: "Dokončování a karma", content: "Zavři za sebou staré dveře. Vyhoď nepotřebné věci, odpusť staré křivdy. Nic nového dnes nezačínej!" }
+    },
+    nameSoul: {
+        "1": { title: "Touha po vedení", content: "Vnitřně toužíš být respektován jako samostatná vůdčí osobnost." },
+        "2": { title: "Touha po spojení", content: "Hluboko uvnitř toužíš po dokonalé a harmonické lásce a partnerství." },
+        "3": { title: "Touha po radosti", content: "Chceš se bavit, tvořit a šířit optimismus do svého okolí." },
+        "4": { title: "Touha po jistotě", content: "Tvým nejhlubším přáním je mít pevný bod, řád a materiální bezpečí." },
+        "5": { title: "Touha po volnosti", content: "Uvnitř tvé duše je divoký nomád, který nechce být ničím svazován." },
+        "6": { title: "Touha po rodině", content: "Tvým snem je vytvořit láskyplný a krásný domov pro tvé blízké." },
+        "7": { title: "Touha po pravdě", content: "Chceš poznat tajemství vesmíru a nalézt klid daleko od hlučného davu." },
+        "8": { title: "Touha po moci", content: "Hluboko uvnitř chceš budovat impérium a mít kontrolu nad svým osudem." },
+        "9": { title: "Touha po službě", content: "Tvá duše touží po spravedlnosti a nápravě křivd ve světě." },
+        "11": { title: "Touha po osvícení (11)", content: "Tvá duše je stará a velmi citlivá. Hluboko uvnitř toužíš přinášet lidem světlo, inspiraci a duchovní poznání. Nejde ti o moc, ale o pravdu." },
+        "22": { title: "Touha po tvoření (22)", content: "V nitru jsi vizionář a mistr budovatel. Tvá duše nechce jen snít, ale touží zanechat po sobě ve světě hmatatelný, obrovský odkaz pro další generace." }
+    },
+    namePersonality: {
+        "1": { title: "Vnímán jako: Vůdce", content: "Navenek působíš velmi sebejistě, nezávisle a občas možná až příliš dominantně." },
+        "2": { title: "Vnímán jako: Přítel", content: "Lidé tě na první pohled vnímají jako klidného, přátelského a nekonfliktního člověka." },
+        "3": { title: "Vnímán jako: Bavič", content: "Působíš šarmantně a vtipně, všude kam přijdeš, přinášíš s sebou dobrou náladu." },
+        "4": { title: "Vnímán jako: Dříč", content: "Okolí tě vidí jako praktického, solidního a pracovitého člověka, na kterého je spolehnutí." },
+        "5": { title: "Vnímán jako: Rebel", content: "Vyzařuje z tebe dynamika, sex-appeal a nevyzpytatelnost." },
+        "6": { title: "Vnímán jako: Pečovatel", content: "Vypadáš jako zodpovědný člověk s dobrým vkusem, u kterého každý najde radu a útěchu." },
+        "7": { title: "Vnímán jako: Myslitel", content: "Působíš trochu odtažitě, tajemně a velmi inteligentně. Lidé k tobě cítí respekt." },
+        "8": { title: "Vnímán jako: Šéf", content: "Vyzařuješ autoritu, sebevědomí a materiální úspěch. Působíš silně." },
+        "9": { title: "Vnímán jako: Filantrop", content: "Lidé v tobě vidí chápavého, štědrého a velkorysého člověka se širokým rozhledem." },
+        "11": { title: "Vnímán jako: Vizionář (11)", content: "Lidé z tebe cítí obrovské charisma a jakési nadpozemské vyzařování. Působíš jako inspirativní, vysoce inteligentní, ale občas trochu neuchopitelný a přecitlivělý člověk." },
+        "22": { title: "Vnímán jako: Kapacita (22)", content: "Na první pohled působíš jako absolutní expert a nezpochybnitelná autorita. Okolí z tebe cítí sílu a věří, že dokážeš vyřešit i ty nejtěžší úkoly." }
+    },
+    nameDestiny: {
+        "1": { title: "Průbojnost a vize", content: "Tvé jméno tě předurčuje k tomu být lídrem a stát si za svým." },
+        "2": { title: "Diplomacie a takt", content: "Vibrace jména tě vede k hledání kompromisů a propojování lidí." },
+        "3": { title: "Kreativita a šarm", content: "Tvé jméno přitahuje pozornost a nese vibraci radosti." },
+        "4": { title: "Řád a vytrvalost", content: "Jméno rezonuje s pevnou půdou pod nohama a stabilitou." },
+        "5": { title: "Pohyb a nezávislost", content: "Vibrace přináší do života cestování a touhu zkoušet nové věci." },
+        "6": { title: "Láska a péče", content: "Tvé jméno nese obrovský ochranitelský potenciál a bezpečí." },
+        "7": { title: "Mystická hloubka", content: "Jméno tě obklopuje aurou tajemství a vede k analytickému myšlení." },
+        "8": { title: "Síla a hojnost", content: "Tvé jméno je jako magnet na úspěch. Vyzařuje autoritu." },
+        "9": { title: "Velkorysost a ideály", content: "Vibrace tvého jména přesahuje tvé vlastní ego. Jsi rádcem." },
+        "11": { title: "Inspirace (11)", content: "Předurčuje tě k tomu být duchovním majákem pro ostatní." },
+        "22": { title: "Velké dílo (22)", content: "Máš jméno člověka, který po sobě zanechá hmatatelný odkaz." }
+    },
+    maturity: {
+        "1": { title: "Vlastní cesta", content: "Ve zralém věku objevíš svou skutečnou nezávislost a postavíš se plně na vlastní nohy." },
+        "2": { title: "Harmonie", content: "Tvá moudrost tě povede k vytváření hlubokých spojení a harmonie s ostatními." },
+        "3": { title: "Radost", content: "Cílem tvého zrání je najít lehkost bytí a sdílet radost skrze tvořivost." },
+        "4": { title: "Budovatel", content: "Tvým cílem je vybudovat trvalé hodnoty, ať už v rodině, nebo v práci." },
+        "5": { title: "Svoboda", content: "Ve zralém věku se osvobodíš od pout a tvůj život bude plný cestování a změn." },
+        "6": { title: "Láska a péče", content: "Tvým životním naplněním bude péče o druhé a vytvoření bezpečného domova." },
+        "7": { title: "Moudrost", content: "Dospěješ k hlubokému duchovnímu pochopení a staneš se pro mnohé moudrým rádcem." },
+        "8": { title: "Hojnost", content: "Ve zralém věku tě čeká sklizeň plodů tvé práce, moc a materiální stabilita." },
+        "9": { title: "Odpouštění", content: "Dosáhneš nadhledu a tvým cílem bude pomáhat světu s hlubokou tolerancí." },
+        "11": { title: "Inspirátor (11)", content: "Staneš se duchovním světlem pro své okolí s mimořádně probuzenou intuicí." },
+        "22": { title: "Mistrovské dílo (22)", content: "Ve druhé půli života vytvoříš něco velkolepého, co tě daleko přežije." }
+    },
+    karmicLessons: {
+        "1": { title: "Lekce 1: Průbojnost a ego", content: "V tomto životě se učíš sebevědomí. Musíš se naučit říkat zdravé NE, nestát neustále v koutě a postavit se pevně za svými vlastními názory." },
+        "2": { title: "Lekce 2: Takt a diplomacie", content: "Tvá duše se učí diplomacii a trpělivosti. Tvým úkolem je naučit se naslouchat druhým bez okamžitého posuzování a vytvářet kolem sebe kompromis místo hádek." },
+        "3": { title: "Lekce 3: Sebevyjádření a radost", content: "Tvou velkou lekcí je překonat plachost a vnitřní cenzuru. Učíš se nebrat život tak smrtelně vážně, uvolnit svou kreativitu a dovolit si být občas spontánní a hravý." },
+        "4": { title: "Lekce 4: Řád a systém", content: "Musíš se naučit osobní disciplíně a dotahování rozdělaných projektů do konce. Bez nalezení vnitřního řádu tě čeká v praktickém životě a financích chaos." },
+        "5": { title: "Lekce 5: Změna a adaptabilita", content: "Tvou lekcí je flexibilita. Učíš se nebát se zdravě zariskovat a opouštět staré nefunkční jistoty. Svět je plný změn a ty se jim nesmíš bránit zuby nehty." },
+        "6": { title: "Lekce 6: Zodpovědnost a vztahy", content: "Tvojí životní zkouškou jsou rodinné a partnerské vztahy. Učíš se nevyhýbat citovým závazkům vůči svým nejbližším a přijmout odpovědnost za lidi, kteří tě milují." },
+        "7": { title: "Lekce 7: Víra a hloubka", content: "Tvá duše se učí naslouchat svému vnitřnímu hlasu. Tvým úkolem je přestat se spoléhat jen na čistou logiku a najít hlubší, duchovní hodnoty přesahující materiální svět." },
+        "8": { title: "Lekce 8: Peníze a moc", content: "Musíš najít zdravý vztah k materiálním hodnotám. Naučit se peníze nejen vydělat, ale také se jimi nenechat zotročit. Učíš se balancovat mezi tvrdým byznysem a laskavostí." },
+        "9": { title: "Lekce 9: Soucit a odpuštění", content: "Tvá nejtěžší lekce spočívá v naučení se bezpodmínečné lásce. Musíš se zbavit předsudků, naučit se odpouštět staré křivdy a otevřít srdce toleranci vůči celému světu." }
+    },
+    synastry: {
+        "1": { title: "Dynamický vztah plný akce", content: "Váš vztah je nabitý obrovskou dynamikou a neustálou energií. Jste jako dva silní vůdci, kteří společně dokážou prorazit jakoukoliv životní překážku a dosáhnout velkých cílů. Máte společný tah na branku. Největší výzvou pro toto spojení je ale neustálý skrytý boj o moc a dominanci. Oba máte silné ego. Musíte se naučit dělat kompromisy, nebrat odlišný názor partnera jako osobní útok a umět občas ustoupit." },
+        "2": { title: "Spřízněné duše a hluboká empatie", content: "Tohle je klasické spojení dvou spřízněných duší. Váš vztah je založený na neuvěřitelné empatii, citlivosti a vzájemném porozumění – velmi často víte přesně, co si ten druhý myslí nebo cítí, aniž by musel padnout jediné slovo. Tvoříte pro sebe bezpečný a klidný přístav. Na co si ale musíte dát velký pozor, je přílišná citová závislost jednoho na druhém a sklony k přecitlivělosti, kdy i neškodnou poznámku můžete nafouknout do velkého problému." },
+        "3": { title: "Radostný a inspirativní svazek", content: "Nudit se spolu rozhodně nebudete! Váš svazek je plný smíchu, nekonečných rozhovorů, společenských událostí a touhy cestovat. Jeden druhého neustále myšlenkově inspirujete a probouzíte v sobě obrovskou kreativitu. Jste skvělí parťáci. Nevýhodou tohoto vztahu je ale občasná absence pevné půdy pod nohama. Můžete mít problém s udržením disciplíny (ať už jde o finance nebo plnění povinností) a v těžkých krizích vám může chybět praktická uzemněnost." },
+        "4": { title: "Pevný hrad a absolutní stabilita", content: "Společně tvoříte naprosto nedobytný hrad. Váš vztah je od počátku postaven na absolutní důvěře, loajalitě, stabilitě a společném budování velmi pevných životních základů. Jste pro sebe tou největší možnou oporou v dobách, kdy se nedaří. Výzvou tohoto pevného spojení je ovšem riziko, že váš život časem sklouzne do ubíjející šedé rutiny a seznamu každodenních povinností. Nesmíte zapomínat do vztahu cíleně vnášet spontánnost a romantiku." },
+        "5": { title: "Dobrodružství a nespoutaná vášeň", content: "Připravte se na jízdu na horské dráze. Váš vztah je plný vášně, dobrodružství, neustálých změn a nečekaných zvratů. Stereotyp a rutina jsou pro vás sprostá slova, k životu potřebujete neustále nové a silné podněty. Toto nespoutané spojení je nesmírně vzrušující, ale vyžaduje od obou stran obrovskou dávku tolerance. Musíte si vzájemně ponechat dostatek osobní svobody, jinak hrozí dramatické výbuchy žárlivosti a pocit udušení." },
+        "6": { title: "Teplo domova a vzájemná péče", content: "Toto spojení představuje archetyp ideální rodiny. Spojuje vás hluboká, pečující láska a silná touha vytvořit maximálně harmonický a krásný domov. Jeden pro druhého byste dýchali a jste ochotni se pro rodinu a partnera plně obětovat. Tvoříte idylu. Skrytým nebezpečím tohoto úzce propojeného vztahu je ale 'ponorková nemoc' a tendence se navzájem dusit přehnanou péčí a kontrolou. Učte se občas nechat partnerovi prostor volně se nadechnout." },
+        "7": { title: "Duchovní pouto a intelektuální souznění", content: "Váš vztah má hluboký filozofický a duchovní přesah. Spíše než o povrchní zábavu a večírky vám jde o společné hledání smyslu života a pravdy. Často spolu dokážete vést dlouhé a obohacující intelektuální debaty. Jste zkrátka dvě silné a nezávislé duše, které se rozhodly jít kus cesty spolu. Největší výzvou pro vás bude občasná citová odtažitost a uzavřenost do vlastního světa. Nezapomínejte dávat své city najevo i fyzicky a teple." },
+        "8": { title: "Mocenský pár s tahem na branku", content: "Tvoříte takzvaný 'Mocenský pár' (Power couple). Dohromady máte naprosto ohromující potenciál pro budování společného byznysu, dosahování vysokých kariérních cílů a získávání materiální hojnosti. Vaše spojená, cílevědomá energie přitahuje úspěch jako magnet. Zásadním rizikem ale je, že můžete po čase začít brát váš vztah spíše jako dobře fungující firmu a zapomenete na obyčejnou lásku a něhu. Práce by nikdy neměla stát nad vašimi společnými city." },
+        "9": { title: "Ideální spojení plné altruismu", content: "Spojení dvou velkých idealistů. Váš vztah je založen na obrovské, dospělé toleranci, skutečném hlubokém přátelství a ochotě si nezištně pomáhat. Velmi často se společně podílíte na pomoci druhým lidem, rodině, nebo věnujete svou spojenou energii nějakým vyšším cílům. Výzvou je pro vás udržet si zdravé hranice, abyste při záchraně celého světa kolem vás nezapomněli zachraňovat, opečovávat a hýčkat také sami sebe a svůj vlastní vztah." },
+        "11": { title: "Duchovní zrcadlo", content: "Toto je jedno z nejvzácnějších a nejintenzivnějších spojení vůbec — nesete mezi sebou vibraci mistrovské jedenáctky. Jeden druhého fungujete jako dokonalé zrcadlo: vidíte v partnerovi jak to nejlepší ze sebe, tak i to, na čem musíte ještě pracovat. Vztah je nabitý intuitivní rezonancí — velmi často víte, co si partner myslí nebo cítí dřív, než to vůbec řekne. Toto pouto má obrovský duchovní a transformační potenciál. Stinnou stránkou je ale přecitlivělost a emoční přetížení — obě strany musí vědomě pracovat na tom, aby vztah nebyl pouhou bouří vzájemných projekcí a nerealistických očekávání." },
+        "22": { title: "Architekti společného snu", content: "Vibrace dvacet dvojky ve vašem vztahu znamená jediné: máte dohromady potenciál vybudovat něco skutečně trvalého a velkého — ať už jde o rodinu, firmu, nebo společné dílo, které přežije vás oba. Toto je spojení dvou mistrů budovatelů. Vaše energie je ohromující a okolí to cítí — jste pár, který inspiruje. Zásadní výzvou je ale enormní tlak, který na sebe vzájemně kladete. Obě strany mají vysoké nároky — na sebe i na partnera. Musíte se vědomě učit zastavit, odpočinout si a vychutnat si cestu samotnou, nejen výsledek." }
+    },
+    pinnacles: {
+        "1": { title: "Nezávislost a akce", content: "Doba učení se samostatnosti, prosazení vlastního ega a odvahy." },
+        "2": { title: "Spolupráce a vztahy", content: "Fáze zaměřená na vztahy, diplomacii a budování harmonie." },
+        "3": { title: "Kreativita a rozvoj", content: "Období sociálních kontaktů, studia a tvůrčího vyjádření." },
+        "4": { title: "Budování a práce", content: "Tvrdá práce a vytváření pevných základů pro budoucnost." },
+        "5": { title: "Změna a svoboda", content: "Fáze nečekaných zvratů, cestování a osobní svobody." },
+        "6": { title: "Rodina a domov", content: "Zaměření na domov, rodinu a komunitu. Péče o nejbližší." },
+        "7": { title: "Zastavení a duchovno", content: "Fáze hledání vnitřní pravdy, studia a izolace." },
+        "8": { title: "Sklizeň a finance", content: "Čas postoupit v kariéře a převzít moc. Finanční stabilita." },
+        "9": { title: "Završení cyklu", content: "Konec jednoho velkého cyklu. Doba loučení a přípravy na nové věci." },
+        "11": { title: "Duchovní rozvoj (11)", content: "Silné období pro osobní růst. Může přinést slávu nebo nervové vypětí." },
+        "22": { title: "Mistrovství (22)", content: "Období, kdy můžeš vybudovat projekty s obrovským dopadem." }
+    },
+    gridLines: {
+        "full_159": { title: "Rovina odhodlání (1-5-9)", content: "Máš vrozenou podnikavost a aktivitu. Jsi houževnatý." },
+        "full_357": { title: "Rovina pochopení (3-5-7)", content: "Vyznačuješ se obrovskou empatií a myšlenkovou bystrostí." },
+        "full_147": { title: "Rovina praktičnosti (1-4-7)", content: "Mimořádná zručnost. Stojíš pevně nohama na zemi." },
+        "full_258": { title: "Rovina emocí (2-5-8)", content: "Máš silný a bohatý emoční svět, magnetické charisma a přirozenou autoritu. Intuice a tah na branku jdou u tebe ruku v ruce." },
+        "full_369": { title: "Rovina myšlení (3-6-9)", content: "Brilantní intelekt, analytická mysl a vynikající paměť." },
+        "full_123": { title: "Rovina komunikace (1-2-3)", content: "Jsi výjimečný komunikátor. Spojuješ v sobě sebevědomí, empatii a kreativitu — umíš oslovit kohokoliv a přirozeně přitahuješ lidi svým výrazem a šarmem." },
+        "full_456": { title: "Rovina vůle (4-5-6)", content: "Disponuješ mimořádnou vůlí a vytrvalostí. Jednou vytyčený cíl nevzdáváš — dokážeš dotáhnout cokoliv do konce, i kdyby mělo celé okolí být proti tobě." },
+        "full_789": { title: "Rovina akce (7-8-9)", content: "Člověk činu s hlubokým smyslem pro spravedlnost. Spojuješ duchovní hloubku, logiku a praktickou sílu — tvé výsledky jsou vidět a zanechávají trvalý otisk." },
+        "empty_456": { title: "Rovina zklamání (4-5-6 prázdná)", content: "Tato prázdná linie ukazuje na nedorozumění a nutnost učit se trpělivosti." },
+        "empty_258": { title: "Rovina vášně (2-5-8 prázdná)", content: "Ukazuje na potíže s nalezením vnitřního emocionálního středu." }
+    },
+    gridNumbers: {
+        "1": { title: "Ego a komunikace", missing: "Absence jedničky ukazuje na výzvu v oblasti sebevědomí.", "1x": "Máš problém vyjádřit své pocity slovy.", "2x": "Ideální rovnováha v komunikaci a zdravé sebevědomí.", "3x_plus": "Mentální přetlak, potřeba slovního ventilu." },
+        "2": { title: "Intuice a empatie", missing: "Chybí ti radar na nálady druhých. Uč se taktu.", "1x": "Slušná a vyvážená intuice, dobrý odhad na lidi.", "2x": "Vysoce nadprůměrná intuice, hraničící s přecitlivělostí.", "3x_plus": "Extrémní citlivost, sklon k nasávání problémů celého světa." },
+        "3": { title: "Postřeh a představivost", missing: "Spoléháš na logiku a rutinu, chybí spontánnost.", "1x": "Vynikající duševní čilost a bleskový úsudek.", "2x": "Silný intelekt, bujná představivost.", "3x_plus": "Hyperaktivní mysl a roztěkanost do mnoha projektů." },
+        "4": { title: "Praktičnost a řád", missing: "Chybí ukotvení v materiálním světě. Létáš v oblacích.", "1x": "Jsi systematický a organizovaný.", "2x": "Sklony k workoholismu. Uč se relaxovat.", "3x_plus": "Extrémní fixace na detaily a neústupnost." },
+        "5": { title: "Vášeň a svoboda", missing: "Chybí odvaha ke změnám. Zůstáváš v nevyhovující jistotě.", "1x": "Máš skvělé nápady a nebojíš se je uskutečnit.", "2x": "Obrovská energie a touha po osobní svobodě.", "3x_plus": "Sopka energie. Pravidla pro tebe neexistují." },
+        "6": { title: "Harmonie a estetika", missing: "Chybí porozumění pro harmonii, hádáš se místo kompromisů.", "1x": "Velký smysl pro rodinu, domov a estetiku.", "2x": "Silný smysl pro dokonalost a ochranitelství.", "3x_plus": "Utopická touha po dokonalé rodině, sklon k sebeobětování." },
+        "7": { title: "Duchovno a karma", missing: "Spoléháš na hmatatelné a logické věci.", "1x": "Vše chceš zažít na vlastní kůži. Rád lidem pomáháš.", "2x": "Složité karmické zkoušky. Hluboké emoce.", "3x_plus": "Jsi stará duše. Procházíš náročným životem." },
+        "8": { title: "Logika a moc", missing: "Chybí chladná logika. Vrháš se do situací bez plánu.", "1x": "Vynikající smysl pro detail a materiálno.", "2x": "Obrovská touha po úspěchu a kontrole.", "3x_plus": "Extrém v touze po dominanci. Životní lekcí je pokora." },
+        "9": { title: "Analýza a pravda", missing: "Chybí schopnost vidět věci v širších souvislostech.", "1x": "Potřebuješ všemu přijít na kloub.", "2x": "Problém věci prožívat, vše musíš rozpitvat.", "3x_plus": "Vysoké utopické ideály. Časté zklamání z nedokonalosti světa." }
+    }
+};
+
+// Pomocná funkce pro bezpečné tahání textů
+const getSafeData = (category, key) => {
+    if(numerologyTexts[category] && numerologyTexts[category][key]) return numerologyTexts[category][key];
+    return { title: "Detail se připravuje", content: "Výklad pro toto číslo bude brzy doplněn do databáze." };
+};
+
+// =========================================================
+// 2. PARSER LOGIKA (Mozek Oracoolia)
+// =========================================================
+class NumerologyParser {
+    constructor(dateStr, nameStr) {
+        this.dateParts = dateStr.split('-'); 
+        this.year = this.dateParts[0]; this.month = this.dateParts[1]; this.day = this.dateParts[2];
+        this.cleanName = nameStr.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().replace(/[^A-Z]/g, '');
+    }
+
+    getBirthDay() {
+        return parseInt(this.day, 10);
+    }
+
+    reduceWithDetails(numberStr) {
+        let current = numberStr.toString();
+        let isKarmic = false; let karmicNumber = null; let isMaster = false;
+        while (current.length > 1) {
+            let sum = 0;
+            for (let char of current) sum += parseInt(char, 10);
+            if ([13, 14, 16, 19].includes(sum)) { isKarmic = true; karmicNumber = sum; }
+            if (sum === 11 || sum === 22 || sum === 33) { isMaster = true; current = sum.toString(); break; }
+            current = sum.toString();
+        }
+        return { finalNumber: parseInt(current, 10), isKarmic: isKarmic, karmicValue: karmicNumber, isMaster: isMaster };
+    }
+
+    getLifePath(method) {
+        if (method === 'linear') {
+            return this.reduceWithDetails(this.day + this.month + this.year);
+        } else {
+            const rDay = this.reduceWithDetails(this.day).finalNumber;
+            const rMonth = this.reduceWithDetails(this.month).finalNumber;
+            const rYear = this.reduceWithDetails(this.year).finalNumber;
+            return this.reduceWithDetails((rDay + rMonth + rYear).toString());
+        }
+    }
+
+    getPersonalYear() {
+        const currentYear = new Date().getFullYear();
+        const str = this.day + this.month + currentYear.toString();
+        return this.reduceWithDetails(str).finalNumber;
+    }
+
+    getDailyVibrations() {
+        const py = this.getPersonalYear();
+        const now = new Date();
+        const curMonth = now.getMonth() + 1;
+        const curDay = now.getDate();
+
+        let pm = this.reduceWithDetails(py + curMonth).finalNumber;
+        let pd = this.reduceWithDetails(pm + curDay).finalNumber;
+
+        return { personalMonth: pm, personalDay: pd };
+    }
+
+    getAdvancedNameNumbers(method) {
+        let soulSum = 0; let personalitySum = 0; let destinySum = 0;
+        const vowels = method === 'pythagorean' ? ['A', 'E', 'I', 'O', 'U', 'Y'] : ['A', 'E', 'I', 'O', 'U'];
+        
+        const pytTable = { A:1,J:1,S:1, B:2,K:2,T:2, C:3,L:3,U:3, D:4,M:4,V:4, E:5,N:5,W:5, F:6,O:6,X:6, G:7,P:7,Y:7, H:8,Q:8,Z:8, I:9,R:9 };
+        const chalTable = { A:1,I:1,J:1,Q:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5,X:5, U:6,V:6,W:6, O:7,Z:7, F:8,P:8 };
+        const table = method === 'pythagorean' ? pytTable : chalTable;
+
+        for (let char of this.cleanName) {
+            const val = table[char] || 0;
+            destinySum += val;
+            if (vowels.includes(char)) {
+                soulSum += val;
+            } else {
+                personalitySum += val;
+            }
+        }
+
+        return {
+            soul: this.reduceWithDetails(soulSum),
+            personality: this.reduceWithDetails(personalitySum),
+            destiny: this.reduceWithDetails(destinySum)
+        };
+    }
+
+    // NOVÉ: Karmické lekce (chybějící čísla ve jméně)
+    getMissingNameNumbers(method) {
+        const table = method === 'pythagorean' 
+            ? { A:1,J:1,S:1, B:2,K:2,T:2, C:3,L:3,U:3, D:4,M:4,V:4, E:5,N:5,W:5, F:6,O:6,X:6, G:7,P:7,Y:7, H:8,Q:8,Z:8, I:9,R:9 }
+            : { A:1,I:1,J:1,Q:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5,X:5, U:6,V:6,W:6, O:7,Z:7, F:8,P:8 };
+        let present = new Set();
+        for (let char of this.cleanName) if(table[char]) present.add(table[char]);
+        
+        let missing = [];
+        let maxNum = method === 'pythagorean' ? 9 : 8; // Chaldejská končí u 8
+        for(let i=1; i<=maxNum; i++) if(!present.has(i)) missing.push(i);
+        return missing;
+    }
+
+    getGridCounts() {
+        const dateStr = (this.day + this.month + this.year).replace(/0/g, '');
+        const counts = { "1":0, "2":0, "3":0, "4":0, "5":0, "6":0, "7":0, "8":0, "9":0 };
+        for (let char of dateStr) counts[char]++;
+        return counts;
+    }
+
+    getGridLines() {
+        const c = this.getGridCounts();
+        const lines = [];
+        // Diagonály
+        if (c['1']>0 && c['5']>0 && c['9']>0) lines.push("full_159");
+        if (c['3']>0 && c['5']>0 && c['7']>0) lines.push("full_357");
+        // Sloupce
+        if (c['1']>0 && c['4']>0 && c['7']>0) lines.push("full_147");
+        if (c['2']>0 && c['5']>0 && c['8']>0) lines.push("full_258");
+        if (c['3']>0 && c['6']>0 && c['9']>0) lines.push("full_369");
+        // Řady
+        if (c['1']>0 && c['2']>0 && c['3']>0) lines.push("full_123");
+        if (c['4']>0 && c['5']>0 && c['6']>0) lines.push("full_456");
+        if (c['7']>0 && c['8']>0 && c['9']>0) lines.push("full_789");
+        // Prázdné roviny
+        if (c['4']===0 && c['5']===0 && c['6']===0) lines.push("empty_456");
+        if (c['2']===0 && c['5']===0 && c['8']===0) lines.push("empty_258");
+        return lines;
+    }
+
+    getPinnacles(lifePathNumber) {
+        const rDay = this.reduceWithDetails(this.day).finalNumber;
+        const rMonth = this.reduceWithDetails(this.month).finalNumber;
+        const rYear = this.reduceWithDetails(this.year).finalNumber;
+
+        const pin1 = this.reduceWithDetails(rMonth + rDay); 
+        const pin2 = this.reduceWithDetails(rDay + rYear);   
+        const pin3 = this.reduceWithDetails(pin1.finalNumber + pin2.finalNumber); 
+        const pin4 = this.reduceWithDetails(rMonth + rYear); 
+
+        let ageReducer = lifePathNumber;
+        while (ageReducer > 9) {
+             let sum = 0; let str = ageReducer.toString();
+             for (let char of str) sum += parseInt(char, 10);
+             ageReducer = sum;
+        }
+
+        const age1 = 36 - ageReducer; 
+        const age2 = age1 + 9;            
+        const age3 = age2 + 9;            
+
+        return [
+            { id: 1, val: pin1, age: `0 – ${age1} let` },
+            { id: 2, val: pin2, age: `${age1 + 1} – ${age2} let` },
+            { id: 3, val: pin3, age: `${age2 + 1} – ${age3} let` },
+            { id: 4, val: pin4, age: `Od ${age3 + 1} let` }
+        ];
+    }
+}
+
+// =========================================================
+// 3. RENDER LOGIKA A AUTO-UPDATE
+// =========================================================
+function calculateAndRender() {
+    const name = document.getElementById('fullName').value;
+    const date = document.getElementById('birthDate').value;
+    if(!date) return;
+
+    // Hodnoty Osoby 1
+    const lpMethod = document.querySelector('input[name="lifePathMethod"]:checked').value;
+    const nameMethod = document.querySelector('input[name="nameMethod"]:checked').value;
+
+    const parser = new NumerologyParser(date, name);
+    const birthDay = parser.getBirthDay();
+    const lifePath = parser.getLifePath(lpMethod);
+    const dailyVibes = parser.getDailyVibrations();
+    const advName = parser.getAdvancedNameNumbers(nameMethod);
+    const gridCounts = parser.getGridCounts();
+    const gridLines = parser.getGridLines();
+    const pinnacles = parser.getPinnacles(lifePath.finalNumber); 
+    const moon = getMoonPhase(); 
+
+    // NOVÉ: Číslo zralosti a Karmické lekce ze jména
+    const maturity = parser.reduceWithDetails(lifePath.finalNumber + advName.destiny.finalNumber).finalNumber;
+    const missingNameNums = parser.getMissingNameNumbers(nameMethod);
+
+    let html = '';
+
+    // --- MANDALA SVG pro today widget ---
+    const mandalaSvg = `<svg class="today-mandala" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="140" cy="140" r="130" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="140" cy="140" r="100" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="140" cy="140" r="70" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="140" cy="140" r="40" stroke="#c9a84c" stroke-width="0.5"/>
+        <g transform="translate(140,140)">
+            ${[0,30,60,90,120,150,180,210,240,270,300,330].map(a => {
+                const r = Math.PI * a / 180;
+                return `<line x1="0" y1="0" x2="${Math.cos(r)*130}" y2="${Math.sin(r)*130}" stroke="#c9a84c" stroke-width="0.4"/>`;
+            }).join('')}
+            ${[0,45,90,135,180,225,270,315].map(a => {
+                const r = Math.PI * a / 180;
+                const x1 = Math.cos(r)*70; const y1 = Math.sin(r)*70;
+                const x2 = Math.cos(r+Math.PI/4)*70; const y2 = Math.sin(r+Math.PI/4)*70;
+                return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#c9a84c" stroke-width="0.4"/>`;
+            }).join('')}
+        </g>
+        <polygon points="140,15 165,72 225,72 178,108 196,165 140,130 84,165 102,108 55,72 115,72" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+    </svg>`;
+
+    // --- WIDGET DNEŠNÍ ENERGIE ---
+    const pdData = getSafeData("personalDay", dailyVibes.personalDay);
+    const today = new Date();
+    const dateString = today.toLocaleDateString('cs-CZ', { weekday: 'long', day: 'numeric', month: 'long' });
+
+    html += `
+        <div class="today-widget">
+            ${mandalaSvg}
+            <div class="today-widget-inner">
+                <div class="today-left">
+                    <div class="today-day-label">${dateString}</div>
+                    <div class="today-vibrace-num">${dailyVibes.personalDay}</div>
+                    <div class="today-vibrace-title">${pdData.title}</div>
+                    <div class="today-vibrace-desc">${pdData.content}</div>
+                    <div class="today-month-badge">Osobní měsíc · ${dailyVibes.personalMonth}</div>
+                </div>
+                <div class="today-right">
+                    <span class="moon-symbol">${moon.icon}</span>
+                    <div class="moon-name">${moon.name}</div>
+                    <div class="moon-desc">Fáze měsíce doplňuje tvou numerologickou energii.</div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // --- KARTA: DEN NAROZENÍ + ŽIVOTNÍ ČÍSLO ---
+    const dayData = getSafeData("birthDay", birthDay);
+    const lpData = getSafeData("lifePath", lifePath.finalNumber);
+    let karmicLabel = lifePath.isKarmic ? `<span class="karmic-badge">Karmický dluh ${lifePath.karmicValue}</span>` : '';
+
+    html += `<div class="card">
+        <div class="result-section-title">Základ vaší existence</div>
+        <div class="result-item-flex">
+            <div class="big-number">${birthDay}</div>
+            <div class="result-item-content">
+                <h3>Den narození</h3>
+                <p style="margin:4px 0 10px; color:var(--text-muted); font-size:0.85rem; letter-spacing:0.04em;">${dayData.title}</p>
+                <p style="color:var(--text); font-style:italic; font-size:0.95rem;">${dayData.content}</p>
+            </div>
+        </div>
+        <div class="result-item-flex" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="big-number">${lifePath.finalNumber}</div>
+            <div class="result-item-content">
+                <h3>Životní číslo ${karmicLabel}</h3>
+                <p style="margin:4px 0 10px; color:var(--text-muted); font-size:0.85rem; letter-spacing:0.04em;">${lpData.title}</p>
+                <p style="color:var(--text); font-style:italic; font-size:0.95rem;">${lpData.content}</p>
+            </div>
+        </div>
+    </div>`;
+
+    // --- KARTA: NUMEROLOGIE JMÉNA ---
+    const soulData = getSafeData("nameSoul", advName.soul.finalNumber);
+    const persData = getSafeData("namePersonality", advName.personality.finalNumber);
+    const destData = getSafeData("nameDestiny", advName.destiny.finalNumber);
+    const matData = getSafeData("maturity", maturity);
+
+    html += `<div class="card">
+        <div class="result-section-title">Vibrace vašeho jména</div>
+        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:18px;">Samohlásky nesou vnitřní touhu · souhlásky tvarují vnější obraz · celé jméno ukazuje osud.</p>
+        <div class="pinnacles-grid">
+            <div class="pinnacle-card">
+                <span class="pinnacle-age">Číslo duše · Samohlásky</span>
+                <div class="pinnacle-number">${advName.soul.finalNumber}</div>
+                <div class="pinnacle-title">${soulData.title}</div>
+                <div class="pinnacle-desc">${soulData.content}</div>
+            </div>
+            <div class="pinnacle-card">
+                <span class="pinnacle-age">Číslo osobnosti · Souhlásky</span>
+                <div class="pinnacle-number">${advName.personality.finalNumber}</div>
+                <div class="pinnacle-title">${persData.title}</div>
+                <div class="pinnacle-desc">${persData.content}</div>
+            </div>
+            <div class="pinnacle-card">
+                <span class="pinnacle-age">Číslo osudu · Celé jméno</span>
+                <div class="pinnacle-number">${advName.destiny.finalNumber}</div>
+                <div class="pinnacle-title">${destData.title}</div>
+                <div class="pinnacle-desc">${destData.content}</div>
+            </div>
+            <div class="pinnacle-card maturity-card" style="grid-column: 1 / -1;">
+                <span class="pinnacle-age">Číslo zralosti · Životní cíl</span>
+                <div class="pinnacle-number maturity-num">${maturity}</div>
+                <div class="pinnacle-title">${matData.title}</div>
+                <div class="pinnacle-desc">${matData.content}</div>
+            </div>
+        </div>
+    </div>`;
+
+    // --- KARTA: KARMICKÉ LEKCE ---
+    html += `<div class="card">
+        <div class="result-section-title">Karmické lekce</div>
+        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:16px;">Čísla chybějící v tvém jméně jsou vibrace, které jsi si přinesl(a) do tohoto života probudit.</p>`;
+    if(missingNameNums.length === 0) {
+        html += `<p style="color:#6ab06a; font-style:italic;">Tvé jméno je vzácně vyvážené — nechybí v něm žádná vibrace.</p>`;
+    } else {
+        missingNameNums.forEach(num => {
+            const klData = getSafeData("karmicLessons", num);
+            html += `<div style="border-left:2px solid var(--karmic); padding:10px 16px; margin-bottom:12px; border-radius:0 6px 6px 0; background:rgba(107,26,26,0.12);">
+                <p style="margin:0; color:var(--text); font-size:0.9rem;"><span style="color:#e07070; font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.1em;">${klData.title}</span><br><span style="font-style:italic; color:var(--text-muted);">${klData.content}</span></p>
+            </div>`;
+        });
+    }
+    html += `</div>`;
+
+    // --- KARTA: VIBRAČNÍ CYKLY ---
+    html += `<div class="card">
+        <div class="result-section-title">Vibrační cykly · Trojúhelníky</div>
+        <div class="pinnacles-grid">`;
+    pinnacles.forEach(pin => {
+        const pinData = getSafeData("pinnacles", pin.val.finalNumber);
+        html += `<div class="pinnacle-card">
+            <span class="pinnacle-age">${pin.age}</span>
+            <div class="pinnacle-number">${pin.val.finalNumber}</div>
+            <div class="pinnacle-title">${pinData.title}</div>
+            <div class="pinnacle-desc">${pinData.content}</div>
+        </div>`;
+    });
+    html += `</div></div>`;
+
+    // --- KARTA: NUMEROLOGICKÁ MŘÍŽKA ---
+    // Vizuální 3x3 grid
+    const gridOrder = [7,8,9,4,5,6,1,2,3]; // řazení mřížky: 7 vlevo nahoře
+    let gridVisualHtml = `<div class="num-grid-visual">`;
+    gridOrder.forEach(n => {
+        const count = gridCounts[n.toString()];
+        const cellClass = count === 0 ? 'missing' : count >= 3 ? 'strong' : 'present';
+        const display = count === 0 ? '—' : Array(count).fill(n).join('');
+        gridVisualHtml += `<div class="num-grid-cell ${cellClass}">${display}<span class="num-grid-label">${n}</span></div>`;
+    });
+    gridVisualHtml += `</div>`;
+
+    // Roviny
+    let rovinyHtml = '';
+    if (gridLines.length > 0) {
+        gridLines.forEach(lineKey => {
+            const lineData = getSafeData("gridLines", lineKey);
+            rovinyHtml += `<div class="gridline-item"><h5>${lineData.title}</h5><p style="margin-top:4px; color:var(--text-muted); font-style:italic; font-size:0.88rem;">${lineData.content}</p></div>`;
+        });
+    } else {
+        rovinyHtml = `<p style="color:var(--text-dim); font-style:italic; font-size:0.88rem;">V datu nebyly detekovány žádné plné ani prázdné roviny.</p>`;
+    }
+
+    html += `<div class="card">
+        <div class="result-section-title">Numerologická mřížka</div>
+        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:20px;">Každá číslice data narození zanechává stopu v energetické mřížce.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:flex-start; margin-bottom:24px;">
+            ${gridVisualHtml}
+            <div style="flex:1; min-width:180px;">${rovinyHtml}</div>
+        </div>
+        <div class="result-section-title" style="margin-top:8px;">Detail prvků</div>`;
+
+    for (let i = 1; i <= 9; i++) {
+        const count = gridCounts[i.toString()];
+        const textData = numerologyTexts.gridNumbers[i.toString()];
+        if (count === 0) {
+            html += `<div class="grid-number-box">
+                <div class="grid-number-icon missing">—<br><small style="font-size:0.6rem;font-family:'Crimson Pro',serif;">${i}</small></div>
+                <div>
+                    <h4 class="missing-title" style="margin-bottom:4px;">Chybějící vibrace ${i} · ${textData.title}</h4>
+                    <p style="color:var(--text-muted); font-style:italic; font-size:0.88rem; margin:0;">${textData.missing}</p>
+                </div>
+            </div>`;
+        } else {
+            let multiKey = count >= 3 ? "3x_plus" : count + "x";
+            const multiString = Array(count).fill(i).join('');
+            html += `<div class="grid-number-box">
+                <div class="grid-number-icon">${multiString}</div>
+                <div>
+                    <h4 style="margin-bottom:4px;">Číslo ${i} · ${textData.title}</h4>
+                    <p style="color:var(--text-muted); font-style:italic; font-size:0.88rem; margin:0;">${textData[multiKey]}</p>
+                </div>
+            </div>`;
+        }
+    }
+    html += `</div>`;
+
+    // --- PARTNERSKÁ SHODA ---
+    const pDate = document.getElementById('partnerDate').value;
+    const pName = document.getElementById('partnerName').value;
+
+    if (pDate) {
+        const partnerParser = new NumerologyParser(pDate, pName || "Partner");
+        const partnerLp = partnerParser.getLifePath(lpMethod).finalNumber;
+        const synastryNum = parser.reduceWithDetails(lifePath.finalNumber + partnerLp).finalNumber;
+        const synData = getSafeData("synastry", synastryNum);
+
+        const pCounts = partnerParser.getGridCounts();
+        const gridOrderSyn = [7,8,9,4,5,6,1,2,3];
+        let combinedGridHtml = `<div class="num-grid-visual" style="max-width:240px;">`;
+        gridOrderSyn.forEach(n => {
+            const sumC = gridCounts[n] + pCounts[n];
+            const cellClass = sumC === 0 ? 'missing' : sumC >= 4 ? 'strong' : 'present';
+            const display = sumC === 0 ? '—' : Array(sumC).fill(n).join('');
+            combinedGridHtml += `<div class="num-grid-cell ${cellClass}" style="font-size:0.9rem;">${display}<span class="num-grid-label">${n}</span></div>`;
+        });
+        combinedGridHtml += `</div>`;
+
+        html += `<div class="synastry-block">
+            <div class="result-section-title" style="margin-bottom:18px;">Partnerská synastrie</div>
+            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:20px;">
+                Tvé životní číslo <strong style="color:var(--gold);">${lifePath.finalNumber}</strong> · ${pName || 'Partner'} <strong style="color:var(--gold);">${partnerLp}</strong>
+            </p>
+            <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:14px;">
+                <span style="font-family:'Cinzel',serif; font-size:3rem; color:var(--gold); line-height:1;">${synastryNum}</span>
+                <div>
+                    <div style="font-family:'Cinzel',serif; font-size:0.85rem; color:var(--text); letter-spacing:0.08em;">${synData.title}</div>
+                    <div style="font-family:'Cinzel',serif; font-size:0.58rem; letter-spacing:0.15em; color:var(--gold-dim); text-transform:uppercase;">Vztahové číslo</div>
+                </div>
+            </div>
+            <p style="color:var(--text); font-style:italic; font-size:0.95rem; line-height:1.7; margin-bottom:24px;">${synData.content}</p>
+            <h4 style="margin-bottom:12px;">Společná mřížka</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem; font-style:italic; margin-bottom:14px;">Doplňujete svá prázdná místa navzájem?</p>
+            ${combinedGridHtml}
+        </div>`;
+    }
+
+    document.getElementById('outputArea').innerHTML = html;
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+document.getElementById('numForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    calculateAndRender();
+});
+
+const inputs = document.querySelectorAll('input[type=radio], input[type=date], input[type=text]');
+inputs.forEach(input => {
+    input.addEventListener('input', () => {
+        if (document.getElementById('results').style.display === 'block') {
+            calculateAndRender();
+        }
+    });
+});
+            </script>
+            <script>
+(function() {
+    const canvas = document.getElementById('sky-canvas');
+    const ctx = canvas.getContext('2d');
+    const GOLD = 'rgba(201,168,76,';
+    const WHITE = 'rgba(220,215,200,';
+
+    // Souhvězdí — relativní souřadnice [0..1] pro každou hvězdu a hrany
+    const constellations = [
+        {
+            name: 'Orion',
+            stars: [[0.08,0.12],[0.12,0.09],[0.16,0.12],[0.12,0.17],[0.09,0.22],[0.15,0.22],[0.10,0.27],[0.14,0.27]],
+            edges: [[0,1],[1,2],[1,3],[3,4],[3,5],[4,6],[5,7]]
+        },
+        {
+            name: 'Cassiopeia',
+            stars: [[0.72,0.06],[0.77,0.04],[0.82,0.07],[0.87,0.04],[0.92,0.07]],
+            edges: [[0,1],[1,2],[2,3],[3,4]]
+        },
+        {
+            name: 'Velký vůz',
+            stars: [[0.55,0.18],[0.61,0.16],[0.67,0.16],[0.73,0.18],[0.73,0.24],[0.67,0.28],[0.59,0.30]],
+            edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[3,6]]
+        },
+        {
+            name: 'Jižní kříž',
+            stars: [[0.85,0.55],[0.85,0.65],[0.80,0.60],[0.90,0.60]],
+            edges: [[0,1],[2,3]]
+        },
+        {
+            name: 'Lev',
+            stars: [[0.20,0.48],[0.24,0.44],[0.30,0.43],[0.35,0.46],[0.33,0.52],[0.26,0.54],[0.22,0.52]],
+            edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0]]
+        },
+        {
+            name: 'Škorpión',
+            stars: [[0.60,0.62],[0.64,0.60],[0.68,0.62],[0.70,0.66],[0.68,0.70],[0.65,0.74],[0.62,0.78],[0.60,0.74]],
+            edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
+        }
+    ];
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        draw();
+    }
+
+    function draw() {
+        const W = canvas.width, H = canvas.height;
+        ctx.clearRect(0, 0, W, H);
+
+        // Mlhovina — jemný nebeský pás
+        const nebula = ctx.createLinearGradient(0, 0, W, H * 0.5);
+        nebula.addColorStop(0, 'rgba(30,20,60,0)');
+        nebula.addColorStop(0.3, 'rgba(40,25,70,0.18)');
+        nebula.addColorStop(0.6, 'rgba(20,30,55,0.12)');
+        nebula.addColorStop(1, 'rgba(30,20,60,0)');
+        ctx.fillStyle = nebula;
+        ctx.fillRect(0, 0, W, H * 0.6);
+
+        // Náhodné hvězdy — seed pro konzistenci
+        const rng = (seed) => { let x = Math.sin(seed) * 10000; return x - Math.floor(x); };
+        for (let i = 0; i < 280; i++) {
+            const x = rng(i * 3.1) * W;
+            const y = rng(i * 7.3) * H;
+            const size = rng(i * 2.7) < 0.15 ? 1.5 : rng(i * 2.7) < 0.4 ? 1.0 : 0.6;
+            const isGold = rng(i * 5.9) < 0.25;
+            const alpha = 0.25 + rng(i * 4.1) * 0.6;
+            ctx.beginPath();
+            ctx.arc(x, y, size, 0, Math.PI * 2);
+            ctx.fillStyle = isGold ? GOLD + alpha + ')' : WHITE + alpha + ')';
+            ctx.fill();
+        }
+
+        // Jasné hvězdy s křížovým zábleskem
+        const brightStars = [
+            [0.05, 0.08, 2.2], [0.38, 0.03, 2.5], [0.71, 0.14, 2.0],
+            [0.93, 0.28, 2.3], [0.18, 0.38, 1.8], [0.52, 0.45, 2.1],
+            [0.84, 0.72, 2.4], [0.28, 0.80, 1.9], [0.65, 0.88, 2.2],
+        ];
+        brightStars.forEach(([rx, ry, r]) => {
+            const x = rx * W, y = ry * H;
+            ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.fillStyle = GOLD + '0.85)'; ctx.fill();
+            // záblesk
+            ctx.strokeStyle = GOLD + '0.3)'; ctx.lineWidth = 0.5;
+            ctx.beginPath(); ctx.moveTo(x - r*4, y); ctx.lineTo(x + r*4, y); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(x, y - r*4); ctx.lineTo(x, y + r*4); ctx.stroke();
+        });
+
+        // Souhvězdí
+        constellations.forEach(con => {
+            const pts = con.stars.map(([rx, ry]) => [rx * W, ry * H]);
+            // Spojovací linie
+            ctx.strokeStyle = GOLD + '0.18)';
+            ctx.lineWidth = 0.7;
+            ctx.setLineDash([3, 5]);
+            con.edges.forEach(([a, b]) => {
+                ctx.beginPath();
+                ctx.moveTo(pts[a][0], pts[a][1]);
+                ctx.lineTo(pts[b][0], pts[b][1]);
+                ctx.stroke();
+            });
+            ctx.setLineDash([]);
+            // Hvězdy souhvězdí
+            pts.forEach(([x, y], idx) => {
+                const r = idx === 0 ? 2.0 : 1.4;
+                ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+                ctx.fillStyle = GOLD + '0.75)'; ctx.fill();
+                // Jemný glow
+                const grd = ctx.createRadialGradient(x, y, 0, x, y, r * 5);
+                grd.addColorStop(0, GOLD + '0.12)');
+                grd.addColorStop(1, GOLD + '0)');
+                ctx.beginPath(); ctx.arc(x, y, r * 5, 0, Math.PI * 2);
+                ctx.fillStyle = grd; ctx.fill();
+            });
+        });
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+})();
+            </script>
+        </main>
     </div><!-- /.app-container -->
 
     <!-- ==========================================
