@@ -35,7 +35,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="astrolog.css">
   <style>
-    html, body { margin: 0; padding: 0; background: #06060f; overflow-x: hidden; }
+    html, body { margin: 0; padding: 0; background: #06060f; overflow-x: hidden; width: 100%; }
+    #astrolog-root { width: 100%; min-height: 100vh; display: block; }
+    .astrolog-wrap {
+      max-width: 860px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 32px 48px 60px !important;
+    }
+    @media (max-width: 700px) {
+      .astrolog-wrap { padding: 20px 20px 60px !important; }
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2/astronomy.browser.min.js"></script>
   <script src="astrolog-db.js" defer></script>
