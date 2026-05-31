@@ -12,7 +12,6 @@ function showApp(appId) {
     document.getElementById('solitaire-section').classList.add('hidden');
     document.getElementById('karolky-section').classList.add('hidden');
     document.getElementById('numero-section').classList.add('hidden');
-    document.getElementById('astrolog-section').classList.add('hidden');
 
     if (appId === 'karolky') {
         // Karolky II potřebuje celou obrazovku — schovej app-container úplně
@@ -20,26 +19,8 @@ function showApp(appId) {
         document.getElementById('karolky-section').classList.remove('hidden');
         if (typeof kpNewGame === 'function') kpNewGame();
     } else if (appId === 'astrolog') {
-        // Astrolog taktéž potřebuje celou obrazovku
-        appContainer.style.display = 'none';
-        document.getElementById('astrolog-section').classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        // Activate astrolog CSS
-        document.getElementById('astrolog-styles').removeAttribute('media');
-        // Init — DOMContentLoaded v SPA kontextu neproběhne, voláme explicitně
-        if (typeof window._astrologCanvasInit === 'undefined') {
-            window._astrologCanvasInit = true;
-            if (typeof buildTimezoneSelect === 'function') buildTimezoneSelect();
-            if (typeof buildPlanetTable    === 'function') buildPlanetTable();
-            if (typeof buildAscendentSelect=== 'function') buildAscendentSelect();
-            if (typeof initCanvas          === 'function') initCanvas();
-            // Auto-detect timezone
-            try {
-                const tz  = Intl.DateTimeFormat().resolvedOptions().timeZone;
-                const sel = document.getElementById('birth-tz');
-                if (sel && [...sel.options].some(o => o.value === tz)) sel.value = tz;
-            } catch(e) {}
-        }
+        window.location.href = 'astrolog.html';
+        return;
     } else {
         // Všechny ostatní sekce žijí uvnitř app-containeru
         appContainer.style.display = '';
@@ -73,12 +54,9 @@ function backToDashboard() {
     document.getElementById('solitaire-section').classList.add('hidden');
     document.getElementById('karolky-section').classList.add('hidden');
     document.getElementById('numero-section').classList.add('hidden');
-    document.getElementById('astrolog-section').classList.add('hidden');
-    // Deactivate subapp CSS to avoid style leakage
+    // Deactivate numero CSS
     const ns = document.getElementById('numero-styles');
     if (ns) ns.setAttribute('media', 'not all');
-    const as = document.getElementById('astrolog-styles');
-    if (as) as.setAttribute('media', 'not all');
     document.body.style.overflow = '';
     document.getElementById('dashboard').classList.remove('hidden');
 }
