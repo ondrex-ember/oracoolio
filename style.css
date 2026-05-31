@@ -1185,6 +1185,32 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     filter: drop-shadow(0 0 4px rgba(233, 69, 96, 0.8));
 }
 
+/* ==========================================
+   ASTROLOG — full-viewport layout fix
+   ========================================== */
+#astrolog-section {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#astrolog-root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#astrolog-root .astrolog-wrap {
+    padding: 24px 48px 60px;
+}
+
+@media (max-width: 700px) {
+    #astrolog-root .astrolog-wrap {
+        padding: 16px 20px 60px;
+    }
+}
+
 .footer-author {
     color: rgba(255, 255, 255, 0.35);
     transition: color 0.3s, text-shadow 0.3s;
