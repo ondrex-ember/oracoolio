@@ -19,6 +19,17 @@ function showApp(appId) {
         appContainer.style.display = 'none';
         document.getElementById('karolky-section').classList.remove('hidden');
         if (typeof kpNewGame === 'function') kpNewGame();
+    } else if (appId === 'astrolog') {
+        // Astrolog taktéž potřebuje celou obrazovku
+        appContainer.style.display = 'none';
+        document.getElementById('astrolog-section').classList.remove('hidden');
+        // Activate astrolog CSS
+        document.getElementById('astrolog-styles').removeAttribute('media');
+        // Init starfield canvas if not yet started
+        if (typeof window._astrologCanvasInit === 'undefined') {
+            window._astrologCanvasInit = true;
+            if (typeof initCanvas === 'function') initCanvas();
+        }
     } else {
         // Všechny ostatní sekce žijí uvnitř app-containeru
         appContainer.style.display = '';
@@ -38,15 +49,6 @@ function showApp(appId) {
                 window._numeroSkyInit = true;
             }
             window.dispatchEvent(new Event('resize'));
-        } else if (appId === 'astrolog') {
-            document.getElementById('astrolog-section').classList.remove('hidden');
-            // Activate astrolog CSS
-            document.getElementById('astrolog-styles').removeAttribute('media');
-            // Init starfield canvas if not yet started
-            if (typeof window._astrologCanvasInit === 'undefined') {
-                window._astrologCanvasInit = true;
-                if (typeof initCanvas === 'function') initCanvas();
-            }
         }
     }
 }
