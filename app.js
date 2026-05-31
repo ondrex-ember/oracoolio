@@ -8,7 +8,6 @@ function showApp(appId) {
     // Skryjeme všechno
     document.getElementById('dashboard').classList.add('hidden');
     document.getElementById('tarot-section').classList.add('hidden');
-    document.getElementById('iching-section').classList.add('hidden');
     document.getElementById('solitaire-section').classList.add('hidden');
     document.getElementById('karolky-section').classList.add('hidden');
 
@@ -26,7 +25,8 @@ function showApp(appId) {
         if (appId === 'tarot') {
             document.getElementById('tarot-section').classList.remove('hidden');
         } else if (appId === 'iching') {
-            document.getElementById('iching-section').classList.remove('hidden');
+            window.location.href = 'iching.html';
+            return;
         } else if (appId === 'solitaire') {
             document.getElementById('solitaire-section').classList.remove('hidden');
             if (typeof initSolitaire === 'function') initSolitaire();
@@ -43,7 +43,6 @@ function backToDashboard() {
     appContainer.style.display = '';
 
     document.getElementById('tarot-section').classList.add('hidden');
-    document.getElementById('iching-section').classList.add('hidden');
     document.getElementById('solitaire-section').classList.add('hidden');
     document.getElementById('karolky-section').classList.add('hidden');
     document.body.style.overflow = '';
@@ -196,109 +195,6 @@ if (drawBtn) {
     drawBtn.addEventListener('click', drawCard);
 }
 loadCards();
-
-// ==========================================
-// 3. I-ŤING LOGIKA A MECHANIKA
-// ==========================================
-
-let hodCislo = 0;
-let hexagramVysledek = [];
-
-function tossCoins() {
-    if (hodCislo >= 6) return;
-
-    const btn = document.getElementById('toss-btn');
-    const instruction = document.getElementById('iching-instruction');
-    const coins = [document.getElementById('coin1'), document.getElementById('coin2'), document.getElementById('coin3')];
-    
-    btn.disabled = true;
-    
-    coins.forEach(coin => {
-        coin.classList.remove('tossing');
-        void coin.offsetWidth; 
-        coin.classList.add('tossing');
-    });
-
-    setTimeout(() => {
-        let hodnotaHodu = 0;
-        
-        coins.forEach(coin => {
-            const isYang = Math.random() > 0.5;
-            const img = coin.querySelector('img');
-            if (isYang) {
-                img.src = 'assets/coin_yang.png';
-                hodnotaHodu += 3;
-            } else {
-                img.src = 'assets/coin_yin.png';
-                hodnotaHodu += 2;
-            }
-        });
-
-        hexagramVysledek.push(hodnotaHodu);
-        hodCislo++;
-        pridejCaruHexagramu(hodnotaHodu);
-        
-        if (hodCislo < 6) {
-            instruction.innerText = `Soustřeď se na svou otázku a hoď mincemi (Hod ${hodCislo + 1} z 6)`;
-            btn.disabled = false;
-        } else {
-            instruction.innerText = "Hexagram je dokončen. Věštec čte v Knize proměn...";
-            btn.classList.add('hidden');
-            coins.forEach(c => c.classList.add('hidden'));
-            
-            const resultContainer = document.getElementById('iching-reading-container');
-            const resultTextEl = document.getElementById('iching-text-content');
-            
-            const binaryString = hexagramVysledek.map(hod => (hod === 7 || hod === 9) ? '1' : '0').join('');
-            const cisloHexagramu = ziskejCisloHexagramu(binaryString);
-            
-            resultContainer.classList.remove('hidden');
-            const dataHexagramu = ichingTexts[cisloHexagramu];
-            
-            if (dataHexagramu) {
-                resultTextEl.innerHTML = `
-                    <h4 style="color: #d4b483; font-size: 1.4rem; margin-bottom: 10px;">Hexagram ${cisloHexagramu}: ${dataHexagramu.nazev}</h4>
-                    <p style="margin-bottom: 15px;"><strong>Rozsudek:</strong> ${dataHexagramu.rozsudek}</p>
-                    <p style="color: #8f8f8f; font-style: italic;"><strong>Obraz:</strong> ${dataHexagramu.obraz}</p>
-                `;
-            } else {
-                resultTextEl.innerHTML = `<strong>Padl vám hexagram číslo ${cisloHexagramu}</strong>.<br><br><span style="color: #8f8f8f;"><em>(Výkladový text se připravuje...)</em></span>`;
-            }
-        }
-        
-    }, 800);
-}
-
-function pridejCaruHexagramu(hodnota) {
-    const builder = document.getElementById('hexagram-builder');
-    const div = document.createElement('div');
-    div.className = 'hex-line';
-    if (hodnota === 7 || hodnota === 9) {
-        div.classList.add('yang-line');
-        div.innerHTML = `<div class="line-segment"></div>`;
-    } else {
-        div.classList.add('yin-line');
-        div.innerHTML = `<div class="line-segment"></div><div class="line-segment"></div>`;
-    }
-    builder.appendChild(div);
-}
-
-function ziskejCisloHexagramu(binaryStr) {
-    const kingWenMap = {
-        "111111": 1,  "000000": 2,  "100010": 3,  "010001": 4,  "111010": 5,  "010111": 6,
-        "010000": 7,  "000010": 8,  "111011": 9,  "110111": 10, "111000": 11, "000111": 12,
-        "101111": 13, "111101": 14, "001000": 15, "000100": 16, "100110": 17, "011001": 18,
-        "110000": 19, "000011": 20, "100101": 21, "101001": 22, "000001": 23, "100000": 24,
-        "100111": 25, "111001": 26, "100001": 27, "011110": 28, "010010": 29, "101101": 30,
-        "001110": 31, "011100": 32, "001111": 33, "111100": 34, "000101": 35, "101000": 36,
-        "101011": 37, "110101": 38, "001010": 39, "010100": 40, "110001": 41, "100011": 42,
-        "111110": 43, "011111": 44, "000110": 45, "011000": 46, "010110": 47, "011010": 48,
-        "101110": 49, "011101": 50, "100100": 51, "001001": 52, "001011": 53, "110100": 54,
-        "101100": 55, "001101": 56, "011011": 57, "110110": 58, "010011": 59, "110010": 60,
-        "110011": 61, "001100": 62, "101010": 63, "010101": 64
-    };
-    return kingWenMap[binaryStr] || "Neznámý";
-}
 
 // ==========================================
 // 4. PŮVODNÍ VĚŠTECKÝ PASIÁNS (Klondike) — beze změny
