@@ -12,6 +12,7 @@ function showApp(appId) {
     document.getElementById('solitaire-section').classList.add('hidden');
     document.getElementById('karolky-section').classList.add('hidden');
     document.getElementById('numero-section').classList.add('hidden');
+    document.getElementById('astrolog-section').classList.add('hidden');
 
     if (appId === 'karolky') {
         // Karolky II potřebuje celou obrazovku — schovej app-container úplně
@@ -37,6 +38,15 @@ function showApp(appId) {
                 window._numeroSkyInit = true;
             }
             window.dispatchEvent(new Event('resize'));
+        } else if (appId === 'astrolog') {
+            document.getElementById('astrolog-section').classList.remove('hidden');
+            // Activate astrolog CSS
+            document.getElementById('astrolog-styles').removeAttribute('media');
+            // Init starfield canvas if not yet started
+            if (typeof window._astrologCanvasInit === 'undefined') {
+                window._astrologCanvasInit = true;
+                if (typeof initCanvas === 'function') initCanvas();
+            }
         }
     }
 }
@@ -51,9 +61,12 @@ function backToDashboard() {
     document.getElementById('solitaire-section').classList.add('hidden');
     document.getElementById('karolky-section').classList.add('hidden');
     document.getElementById('numero-section').classList.add('hidden');
-    // Deactivate numero CSS to avoid style leakage
+    document.getElementById('astrolog-section').classList.add('hidden');
+    // Deactivate subapp CSS to avoid style leakage
     const ns = document.getElementById('numero-styles');
     if (ns) ns.setAttribute('media', 'not all');
+    const as = document.getElementById('astrolog-styles');
+    if (as) as.setAttribute('media', 'not all');
     document.getElementById('dashboard').classList.remove('hidden');
 }
 
