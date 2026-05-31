@@ -157,7 +157,18 @@ function setLang(lang) {
   LANG = lang;
   document.getElementById('btn-lang-cs').classList.toggle('active', lang === 'cs');
   document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
-  // Re-render banner if chart data exists
+  // Update all static elements with data-cs / data-en attributes
+  document.querySelectorAll('[data-cs]').forEach(el => {
+    const key = lang === 'en' ? 'en' : 'cs';
+    if (el.dataset[key] !== undefined) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = el.dataset[key];
+      } else {
+        el.textContent = el.dataset[key];
+      }
+    }
+  });
+  // Re-render dynamic panels if chart data exists
   if (lastChartData) {
     showCalcBanner(lastChartData);
     renderDignityPanel(lastChartData);
