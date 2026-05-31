@@ -140,9 +140,10 @@
 <script src="numero.js" defer></script>
 <script>
 // ── Lokalizace ────────────────────────────────────────────
-let NUMERO_LANG = 'cs';
 function setLang(lang) {
-  NUMERO_LANG = lang;
+  if (typeof NUMERO_LANG !== 'undefined') NUMERO_LANG = lang;
+  document.documentElement.lang = lang;
+  document.title = lang === 'en' ? 'Numero — Numerological Reading | Oracoolio' : 'Numero — Numerologický rozbor | Oracoolio';
   document.getElementById('btn-lang-cs').style.color = lang === 'cs' ? 'rgba(201,168,76,1)' : 'rgba(201,168,76,0.3)';
   document.getElementById('btn-lang-cs').style.borderColor = lang === 'cs' ? 'rgba(201,168,76,0.8)' : 'rgba(201,168,76,0.2)';
   document.getElementById('btn-lang-en').style.color = lang === 'en' ? 'rgba(201,168,76,1)' : 'rgba(201,168,76,0.3)';
