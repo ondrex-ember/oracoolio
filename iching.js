@@ -43,6 +43,9 @@ function T(key, ...args) {
 
 function setLang(lang) {
   ICHING_LANG = lang;
+  // Fix page title and html lang
+  document.documentElement.lang = lang;
+  document.title = lang === 'en' ? 'I Ching — Book of Changes | Oracoolio' : 'I-Ťing — Kniha proměn | Oracoolio';
   document.getElementById('btn-lang-cs').classList.toggle('active', lang === 'cs');
   document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
   document.querySelectorAll('[data-cs]').forEach(el => {
@@ -158,14 +161,17 @@ function tossCoins() {
       resultContainer.classList.remove('hidden');
 
       if (dataHexagramu) {
+        const nazev    = ICHING_LANG === 'en' ? (dataHexagramu.nazev_en    || dataHexagramu.nazev)    : dataHexagramu.nazev;
+        const rozsudek = ICHING_LANG === 'en' ? (dataHexagramu.rozsudek_en || dataHexagramu.rozsudek) : dataHexagramu.rozsudek;
+        const obraz    = ICHING_LANG === 'en' ? (dataHexagramu.obraz_en    || dataHexagramu.obraz)    : dataHexagramu.obraz;
         resultTextEl.innerHTML = `
           <div class="hex-result-header">
             <span class="hex-number">${cisloHexagramu}</span>
-            <h4>${dataHexagramu.nazev}</h4>
+            <h4>${nazev}</h4>
           </div>
           <div class="hex-result-body">
-            <p><span class="hex-label">${T('reading')}</span> ${dataHexagramu.rozsudek}</p>
-            <p class="hex-image"><span class="hex-label">${T('image')}</span> <em>${dataHexagramu.obraz}</em></p>
+            <p><span class="hex-label">${T('reading')}</span> ${rozsudek}</p>
+            <p class="hex-image"><span class="hex-label">${T('image')}</span> <em>${obraz}</em></p>
           </div>
         `;
       } else {
