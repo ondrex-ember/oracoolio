@@ -1198,7 +1198,7 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     z-index: 10;
 }
 
-#astrolog-root button {
+#astrolog-root button:not(.lang-btn):not(.astrolog-btn):not(.astrolog-btn-primary):not(.astrolog-btn-secondary):not(.btn-search):not(.astrolog-back):not(.astrolog-back) {
     background: none;
     border: none;
     color: inherit;
@@ -1209,7 +1209,33 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
     box-shadow: none;
 }
 
-#astrolog-root button:hover {
+#astrolog-root button:not(.lang-btn):not(.astrolog-btn):not(.astrolog-btn-primary):not(.astrolog-btn-secondary):not(.btn-search):not(.astrolog-back):hover {
+    background: none;
+    box-shadow: none;
+}
+
+/* Lang buttons — specificita vyšší než globální button */
+#astrolog-root .lang-btn {
+    background: none;
+    border: 1px solid rgba(201,168,76,0.22);
+    color: #4a4640;
+    padding: 3px 8px;
+    font-size: 0.65rem;
+    font-weight: normal;
+    border-radius: 6px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+#astrolog-root .lang-btn.active {
+    border-color: #c9a84c;
+    color: #c9a84c;
+}
+#astrolog-root .lang-btn:hover:not(.active) {
+    color: #8a8278;
     background: none;
     box-shadow: none;
 }
