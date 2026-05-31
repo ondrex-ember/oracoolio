@@ -8,15 +8,15 @@
 const CAL_MOON_SYNODIC = 29.53058770576;
 const CAL_MOON_EPOCH   = new Date('2000-01-06T18:14:00Z').getTime();
 const CAL_MOON_PHASES  = [
-  { max: 0.0625, name: 'Novoluní',        icon: '🌑' },
-  { max: 0.1875, name: 'Dorůstající srpek', icon: '🌒' },
-  { max: 0.3125, name: 'První čtvrť',   icon: '🌓' },
-  { max: 0.4375, name: 'Dorůstající měsíc',  icon: '🌔' },
-  { max: 0.5625, name: 'Úplněk',       icon: '🌕' },
-  { max: 0.6875, name: 'Couvající měsíc',  icon: '🌖' },
-  { max: 0.8125, name: 'Poslední čtvrť',    icon: '🌗' },
-  { max: 0.9375, name: 'Ubývající srpek', icon: '🌘' },
-  { max: 1.0001, name: 'Novoluní',        icon: '🌑' }
+  { max: 0.0625, name: 'Novoluní', name_en: 'New Moon', icon: '🌑' },
+  { max: 0.1875, name: 'Dorůstající srpek', name_en: 'Waxing Crescent', icon: '🌒' },
+  { max: 0.3125, name: 'První čtvrť', name_en: 'First Quarter', icon: '🌓' },
+  { max: 0.4375, name: 'Dorůstající měsíc', name_en: 'Waxing Gibbous', icon: '🌔' },
+  { max: 0.5625, name: 'Úplněk', name_en: 'Full Moon', icon: '🌕' },
+  { max: 0.6875, name: 'Couvající měsíc', name_en: 'Waning Gibbous', icon: '🌖' },
+  { max: 0.8125, name: 'Poslední čtvrť', name_en: 'Last Quarter', icon: '🌗' },
+  { max: 0.9375, name: 'Ubývající srpek', name_en: 'Waning Crescent', icon: '🌘' },
+  { max: 1.0001, name: 'Novoluní', name_en: 'New Moon', icon: '🌑' }
 ];
 
 function getMoonPhase() {
@@ -375,10 +375,10 @@ class NumerologyParser {
         const age3 = age2 + 9;            
 
         return [
-            { id: 1, val: pin1, age: `0 – ${age1} let` },
-            { id: 2, val: pin2, age: `${age1 + 1} – ${age2} let` },
-            { id: 3, val: pin3, age: `${age2 + 1} – ${age3} let` },
-            { id: 4, val: pin4, age: `Od ${age3 + 1} let` }
+            { id: 1, val: pin1, age: `0 – ${age1} let`, age_en: `0 – ${age1} yrs` },
+            { id: 2, val: pin2, age: `${age1 + 1} – ${age2} let`, age_en: `${age1 + 1} – ${age2} yrs` },
+            { id: 3, val: pin3, age: `${age2 + 1} – ${age3} let`, age_en: `${age2 + 1} – ${age3} yrs` },
+            { id: 4, val: pin4, age: `Od ${age3 + 1} let`, age_en: `From ${age3 + 1} yrs` }
         ];
     }
 }
@@ -409,6 +409,7 @@ function calculateAndRender() {
     const maturity = parser.reduceWithDetails(lifePath.finalNumber + advName.destiny.finalNumber).finalNumber;
     const missingNameNums = parser.getMissingNameNumbers(nameMethod);
 
+    const lang = (typeof NUMERO_LANG !== 'undefined') ? NUMERO_LANG : 'cs';
     let html = '';
 
     // --- MANDALA SVG pro today widget ---
@@ -435,7 +436,7 @@ function calculateAndRender() {
     // --- WIDGET DNEŠNÍ ENERGIE ---
     const pdData = getSafeData("personalDay", dailyVibes.personalDay);
     const today = new Date();
-    const dateString = today.toLocaleDateString('cs-CZ', { weekday: 'long', day: 'numeric', month: 'long' });
+    const dateString = today.toLocaleDateString(lang === 'en' ? 'en-GB' : 'cs-CZ', { weekday: 'long', day: 'numeric', month: 'long' });
 
     html += `
         <div class="today-widget">
@@ -446,12 +447,12 @@ function calculateAndRender() {
                     <div class="today-vibrace-num">${dailyVibes.personalDay}</div>
                     <div class="today-vibrace-title">${pdData.title}</div>
                     <div class="today-vibrace-desc">${pdData.content}</div>
-                    <div class="today-month-badge">Osobní měsíc · ${dailyVibes.personalMonth}</div>
+                    <div class="today-month-badge">${lang === 'en' ? 'Personal month · ' : 'Osobní měsíc · '}${dailyVibes.personalMonth}</div>
                 </div>
                 <div class="today-right">
                     <span class="moon-symbol">${moon.icon}</span>
-                    <div class="moon-name">${moon.name}</div>
-                    <div class="moon-desc">Fáze měsíce doplňuje tvou numerologickou energii.</div>
+                    <div class="moon-name">${lang === 'en' && moon.name_en ? moon.name_en : moon.name}</div>
+                    <div class="moon-desc">${lang === 'en' ? 'Moon phase complements your numerological energy.' : 'Fáze měsíce doplňuje tvou numerologickou energii.'}</div>
                 </div>
             </div>
         </div>
@@ -460,14 +461,14 @@ function calculateAndRender() {
     // --- KARTA: DEN NAROZENÍ + ŽIVOTNÍ ČÍSLO ---
     const dayData = getSafeData("birthDay", birthDay);
     const lpData = getSafeData("lifePath", lifePath.finalNumber);
-    let karmicLabel = lifePath.isKarmic ? `<span class="karmic-badge">Karmický dluh ${lifePath.karmicValue}</span>` : '';
+    let karmicLabel = lifePath.isKarmic ? `<span class="karmic-badge">${lang === 'en' ? 'Karmic debt ' : 'Karmický dluh '}${lifePath.karmicValue}</span>` : '';
 
     html += `<div class="card">
-        <div class="result-section-title">Základ vaší existence</div>
+        <div class="result-section-title">${lang === 'en' ? 'Foundation of Your Existence' : 'Základ vaší existence'}</div>
         <div class="result-item-flex">
             <div class="big-number">${birthDay}</div>
             <div class="result-item-content">
-                <h3>Den narození</h3>
+                <h3>${lang === 'en' ? 'Day of Birth' : 'Den narození'}</h3>
                 <p style="margin:4px 0 10px; color:var(--text-muted); font-size:0.85rem; letter-spacing:0.04em;">${dayData.title}</p>
                 <p style="color:var(--text); font-style:italic; font-size:0.95rem;">${dayData.content}</p>
             </div>
@@ -475,7 +476,7 @@ function calculateAndRender() {
         <div class="result-item-flex" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
             <div class="big-number">${lifePath.finalNumber}</div>
             <div class="result-item-content">
-                <h3>Životní číslo ${karmicLabel}</h3>
+                <h3>${lang === 'en' ? 'Life Path Number' : 'Životní číslo'} ${karmicLabel}</h3>
                 <p style="margin:4px 0 10px; color:var(--text-muted); font-size:0.85rem; letter-spacing:0.04em;">${lpData.title}</p>
                 <p style="color:var(--text); font-style:italic; font-size:0.95rem;">${lpData.content}</p>
             </div>
@@ -489,29 +490,29 @@ function calculateAndRender() {
     const matData = getSafeData("maturity", maturity);
 
     html += `<div class="card">
-        <div class="result-section-title">Vibrace vašeho jména</div>
-        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:18px;">Samohlásky nesou vnitřní touhu · souhlásky tvarují vnější obraz · celé jméno ukazuje osud.</p>
+        <div class="result-section-title">${lang === 'en' ? 'Vibrations of Your Name' : 'Vibrace vašeho jména'}</div>
+        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:18px;">${lang === 'en' ? 'Vowels carry inner desire · consonants shape outer image · full name reveals destiny.' : 'Samohlásky nesou vnitřní touhu · souhlásky tvarují vnější obraz · celé jméno ukazuje osud.'}</p>
         <div class="pinnacles-grid">
             <div class="pinnacle-card">
-                <span class="pinnacle-age">Číslo duše · Samohlásky</span>
+                <span class="pinnacle-age">${lang === 'en' ? 'Soul Number · Vowels' : 'Číslo duše · Samohlásky'}</span>
                 <div class="pinnacle-number">${advName.soul.finalNumber}</div>
                 <div class="pinnacle-title">${soulData.title}</div>
                 <div class="pinnacle-desc">${soulData.content}</div>
             </div>
             <div class="pinnacle-card">
-                <span class="pinnacle-age">Číslo osobnosti · Souhlásky</span>
+                <span class="pinnacle-age">${lang === 'en' ? 'Personality Number · Consonants' : 'Číslo osobnosti · Souhlásky'}</span>
                 <div class="pinnacle-number">${advName.personality.finalNumber}</div>
                 <div class="pinnacle-title">${persData.title}</div>
                 <div class="pinnacle-desc">${persData.content}</div>
             </div>
             <div class="pinnacle-card">
-                <span class="pinnacle-age">Číslo osudu · Celé jméno</span>
+                <span class="pinnacle-age">${lang === 'en' ? 'Destiny Number · Full Name' : 'Číslo osudu · Celé jméno'}</span>
                 <div class="pinnacle-number">${advName.destiny.finalNumber}</div>
                 <div class="pinnacle-title">${destData.title}</div>
                 <div class="pinnacle-desc">${destData.content}</div>
             </div>
             <div class="pinnacle-card maturity-card" style="grid-column: 1 / -1;">
-                <span class="pinnacle-age">Číslo zralosti · Životní cíl</span>
+                <span class="pinnacle-age">${lang === 'en' ? 'Maturity Number · Life Goal' : 'Číslo zralosti · Životní cíl'}</span>
                 <div class="pinnacle-number maturity-num">${maturity}</div>
                 <div class="pinnacle-title">${matData.title}</div>
                 <div class="pinnacle-desc">${matData.content}</div>
@@ -521,8 +522,8 @@ function calculateAndRender() {
 
     // --- KARTA: KARMICKÉ LEKCE ---
     html += `<div class="card">
-        <div class="result-section-title">Karmické lekce</div>
-        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:16px;">Čísla chybějící v tvém jméně jsou vibrace, které jsi si přinesl(a) do tohoto života probudit.</p>`;
+        <div class="result-section-title">${lang === 'en' ? 'Karmic Lessons' : 'Karmické lekce'}</div>
+        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:16px;">${lang === 'en' ? 'Numbers missing from your name are vibrations you brought into this life to awaken.' : 'Čísla chybějící v tvém jméně jsou vibrace, které jsi si přinesl(a) do tohoto života probudit.'}</p>`;
     if(missingNameNums.length === 0) {
         html += `<p style="color:#6ab06a; font-style:italic;">Tvé jméno je vzácně vyvážené — nechybí v něm žádná vibrace.</p>`;
     } else {
@@ -537,12 +538,12 @@ function calculateAndRender() {
 
     // --- KARTA: VIBRAČNÍ CYKLY ---
     html += `<div class="card">
-        <div class="result-section-title">Vibrační cykly · Trojúhelníky</div>
+        <div class="result-section-title">${lang === 'en' ? 'Vibrational Cycles · Pinnacles' : 'Vibrační cykly · Trojúhelníky'}</div>
         <div class="pinnacles-grid">`;
     pinnacles.forEach(pin => {
         const pinData = getSafeData("pinnacles", pin.val.finalNumber);
         html += `<div class="pinnacle-card">
-            <span class="pinnacle-age">${pin.age}</span>
+            <span class="pinnacle-age">${lang === 'en' && pin.age_en ? pin.age_en : pin.age}</span>
             <div class="pinnacle-number">${pin.val.finalNumber}</div>
             <div class="pinnacle-title">${pinData.title}</div>
             <div class="pinnacle-desc">${pinData.content}</div>
@@ -574,13 +575,13 @@ function calculateAndRender() {
     }
 
     html += `<div class="card">
-        <div class="result-section-title">Numerologická mřížka</div>
-        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:20px;">Každá číslice data narození zanechává stopu v energetické mřížce.</p>
+        <div class="result-section-title">${lang === 'en' ? 'Numerological Grid' : 'Numerologická mřížka'}</div>
+        <p style="color:var(--text-muted); font-size:0.88rem; font-style:italic; margin-bottom:20px;">${lang === 'en' ? 'Each digit of the birth date leaves a mark in the energy grid.' : 'Každá číslice data narození zanechává stopu v energetické mřížce.'}</p>
         <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:flex-start; margin-bottom:24px;">
             ${gridVisualHtml}
             <div style="flex:1; min-width:180px;">${rovinyHtml}</div>
         </div>
-        <div class="result-section-title" style="margin-top:8px;">Detail prvků</div>`;
+        <div class="result-section-title" style="margin-top:8px;">${lang === 'en' ? 'Element Detail' : 'Detail prvků'}</div>`;
 
     for (let i = 1; i <= 9; i++) {
         const count = gridCounts[i.toString()];
@@ -636,20 +637,20 @@ function calculateAndRender() {
         combinedGridHtml += `</div>`;
 
         html += `<div class="synastry-block">
-            <div class="result-section-title" style="margin-bottom:18px;">Partnerská synastrie</div>
+            <div class="result-section-title" style="margin-bottom:18px;">${lang === 'en' ? 'Partner Synastry' : 'Partnerská synastrie'}</div>
             <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:20px;">
-                Tvé životní číslo <strong style="color:var(--gold);">${lifePath.finalNumber}</strong> · ${pName || 'Partner'} <strong style="color:var(--gold);">${partnerLp}</strong>
+                ${lang === 'en' ? 'Your Life Path' : 'Tvé životní číslo'} <strong style="color:var(--gold);">${lifePath.finalNumber}</strong> · ${pName || 'Partner'} <strong style="color:var(--gold);">${partnerLp}</strong>
             </p>
             <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:14px;">
                 <span style="font-family:'Cinzel',serif; font-size:3rem; color:var(--gold); line-height:1;">${synastryNum}</span>
                 <div>
-                    <div style="font-family:'Cinzel',serif; font-size:0.85rem; color:var(--text); letter-spacing:0.08em;">${synData.title}</div>
-                    <div style="font-family:'Cinzel',serif; font-size:0.58rem; letter-spacing:0.15em; color:var(--gold-dim); text-transform:uppercase;">Vztahové číslo</div>
+                    <div style="font-family:'Cinzel',serif; font-size:0.85rem; color:var(--text); letter-spacing:0.08em;">${lang === 'en' && synData.title_en ? synData.title_en : synData.title}</div>
+                    <div style="font-family:'Cinzel',serif; font-size:0.58rem; letter-spacing:0.15em; color:var(--gold-dim); text-transform:uppercase;">${lang === 'en' ? 'Relationship Number' : 'Vztahové číslo'}</div>
                 </div>
             </div>
-            <p style="color:var(--text); font-style:italic; font-size:0.95rem; line-height:1.7; margin-bottom:24px;">${synData.content}</p>
-            <h4 style="margin-bottom:12px;">Společná mřížka</h4>
-            <p style="color:var(--text-muted); font-size:0.85rem; font-style:italic; margin-bottom:14px;">Doplňujete svá prázdná místa navzájem?</p>
+            <p style="color:var(--text); font-style:italic; font-size:0.95rem; line-height:1.7; margin-bottom:24px;">${lang === 'en' && synData.content_en ? synData.content_en : synData.content}</p>
+            <h4 style="margin-bottom:12px;">${lang === 'en' ? 'Combined Grid' : 'Společná mřížka'}</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem; font-style:italic; margin-bottom:14px;">${lang === 'en' ? "Do you complement each other\u2019s missing vibrations?" : 'Doplňujete svá prázdná místa navzájem?'}</p>
             ${combinedGridHtml}
         </div>`;
     }
