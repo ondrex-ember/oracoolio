@@ -662,7 +662,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="status-badge status-badge-new">✦ Nové</div>
                 </div>
 
-                <div class="menu-item locked">
+                <div class="menu-item locked" style="grid-column: 2;">
                     <div class="menu-icon">🎴</div>
                     <h2>Biedermeier Tarot</h2>
                     <p>Historický cikánský výklad. Brzy k dispozici.</p>
@@ -2534,10 +2534,12 @@ inputs.forEach(input => {
     </main><!-- /#karolky-section -->
 
 
+    <script src="iching-data.js"></script>
+
     <!-- ==========================================
          ASTROLOG — Horoskop dle Dr. Jana Kefera
-         Stejný pattern jako #numero-section:
-         žije uvnitř .app-container, CSS scoped přes #astrolog-root
+         MIMO .app-container — potřebuje celou šířku,
+         stejný pattern jako #karolky-section
          ========================================== -->
     <main id="astrolog-section" class="hidden">
 <div id="astrolog-root">
@@ -2747,7 +2749,7 @@ inputs.forEach(input => {
 </div>
     </main><!-- /#astrolog-section -->
 
-    <script src="iching-data.js"></script>
+
     <script src="app.js"></script>
 </body>
 </html>
