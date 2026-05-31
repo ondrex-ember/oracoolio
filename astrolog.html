@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astrolog — Horoskop dle Dr. Jana Kefera | Oracoolio</title>
+  <meta name="description" content="Výklad horoskopu dle tradiční astrologie Dr. Jana Kefera. Planety, domy, temperament, arabské losy a osobní výklad zdarma.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://oracoolio.com/astrolog.html">
+  <meta name="author" content="ondrex">
+  <meta name="language" content="cs">
+  <meta name="geo.region" content="CZ">
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="cs_CZ">
+  <meta property="og:site_name"   content="Oracoolio">
+  <meta property="og:title"       content="Astrolog — Horoskop zdarma | Oracoolio">
+  <meta property="og:description" content="Výklad horoskopu dle tradiční astrologie Dr. Jana Kefera. Planety, domy, temperament a osobní výklad zdarma.">
+  <meta property="og:url"         content="https://oracoolio.com/astrolog.html">
+  <meta property="og:image"       content="https://oracoolio.com/assets/og-image.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Astrolog — Horoskop zdarma | Oracoolio">
+  <meta name="twitter:description" content="Výklad horoskopu dle tradiční astrologie Dr. Jana Kefera zdarma online.">
+  <meta name="twitter:image"       content="https://oracoolio.com/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Oracoolio Astrolog","url":"https://oracoolio.com/astrolog.html","description":"Výklad horoskopu dle tradiční astrologie Dr. Jana Kefera.","applicationCategory":"EntertainmentApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Oracoolio","url":"https://oracoolio.com/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"CZK"},"inLanguage":["cs","en"]}
+  </script>
+  <meta name="google-site-verification" content="HeChd4paxpWn6emGa3HjuQyFjuCw85kWsUwtk1IRobY">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW6CLRYTF3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW6CLRYTF3');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG6N9KV');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vp48p83k4t");</script>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#06060f">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="astrolog.css">
+  <script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2/astronomy.browser.min.js"></script>
+  <script src="astrolog-db.js" defer></script>
+  <script src="astrolog.js" defer></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="astrolog-root">
+  <canvas id="astrolog-canvas"></canvas>
+  <div class="astrolog-wrap">
+
+    <!-- HEADER -->
+    <header class="astrolog-header">
+      <a href="index.html" class="astrolog-back" data-cs="← Zpět" data-en="← Back">← Zpět</a>
+      <div class="astrolog-title-group">
+        <h1 class="astrolog-title">Astrolog</h1>
+        <p class="astrolog-subtitle" data-cs="Výklad horoskopu dle Dr. Jana Kefera" data-en="Horoscope reading by Dr. Jan Kefer">Výklad horoskopu dle Dr. Jana Kefera</p>
+      </div>
+      <svg class="astrolog-sigil" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#c9a84c" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+        <circle cx="24" cy="24" r="14" stroke="#c9a84c" stroke-width="0.8" opacity="0.4"/>
+        <circle cx="24" cy="24" r="3"  fill="#c9a84c" opacity="0.7"/>
+        <line x1="24" y1="2"  x2="24" y2="46" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/>
+        <line x1="2"  y1="24" x2="46" y2="24" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/>
+        <line x1="7"  y1="7"  x2="41" y2="41" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+        <line x1="41" y1="7"  x2="7"  y2="41" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+        <path d="M24 10 L28 20 L24 24 L20 20 Z" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.6"/>
+        <path d="M24 38 L20 28 L24 24 L28 28 Z" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.6"/>
+      </svg>
+      <div class="lang-switch">
+        <button class="lang-btn active" id="btn-lang-cs" onclick="setLang('cs')">CS</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+      </div>
+    </header>
+
+    <!-- STEPS -->
+    <div class="astrolog-steps">
+      <div class="astrolog-step active" id="step-ind-1"><span>I</span><span data-cs="Narozeniny" data-en="Birth data">Narozeniny</span></div>
+      <div class="astrolog-step"        id="step-ind-2"><span>II</span><span data-cs="Planety" data-en="Planets">Planety</span></div>
+      <div class="astrolog-step"        id="step-ind-3"><span>III</span><span data-cs="Témata" data-en="Topics">Témata</span></div>
+      <div class="astrolog-step"        id="step-ind-4"><span>IV</span><span data-cs="Výklad" data-en="Reading">Výklad</span></div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div id="step-1">
+      <p class="astrolog-section-title" data-cs="Datum a čas narození" data-en="Date and time of birth">Datum a čas narození</p>
+      <div class="birth-grid">
+        <div class="birth-field">
+          <label class="birth-label" data-cs="Datum narození" data-en="Date of birth">Datum narození</label>
+          <input type="date" id="birth-date" class="astrolog-input">
+        </div>
+        <div class="birth-field">
+          <label class="birth-label" data-cs="Čas narození" data-en="Time of birth">Čas narození</label>
+          <input type="time" id="birth-time" class="astrolog-input">
+          <span class="field-note" data-cs="Ovlivňuje Ascendent a domy" data-en="Affects Ascendant and houses">Ovlivňuje Ascendent a domy</span>
+        </div>
+      </div>
+      <div class="warn-box" data-cs="⚠ Ascendent se mění každé ~2 hodiny. Chyba > 10 min může posunout Ascendent do sousedního znamení a změnit celý systém domů." data-en="⚠ The Ascendant shifts every ~2 hours. An error > 10 min may move it to an adjacent sign and change the entire house system.">
+        ⚠ Ascendent se mění každé ~2 hodiny. Chyba &gt; 10 min může posunout Ascendent do sousedního znamení a změnit celý systém domů.
+      </div>
+      <p class="astrolog-section-title" data-cs="Místo narození" data-en="Place of birth">Místo narození</p>
+      <div class="birth-field">
+        <label class="birth-label" data-cs="Město" data-en="City">Město</label>
+        <div class="city-search-row">
+          <input type="text" id="birth-city" class="astrolog-input"
+            data-cs="Praha, Brno, Wien, London…" data-en="Prague, Brno, Vienna, London…"
+            placeholder="Praha, Brno, Wien, London…" autocomplete="off"
+            onkeydown="if(event.key==='Enter') searchCity()">
+          <button class="btn-search" id="city-search-btn" onclick="searchCity()" data-cs="Hledat" data-en="Search">Hledat</button>
+        </div>
+        <div class="city-result-wrap" id="city-result-wrap"></div>
+      </div>
+      <div class="birth-tip" data-cs="💡 Pokud se město nenachází, zkuste anglický název nebo přidat stát: „Liberec, CZ", „Vienna, Austria". Data z OpenStreetMap (Nominatim) — zdarma, bez registrace." data-en="💡 If the city is not found, try the English name or add the country: &quot;Liberec, CZ&quot;, &quot;Vienna, Austria&quot;. Data from OpenStreetMap (Nominatim) — free, no registration.">
+        💡 Pokud se město nenachází, zkuste anglický název nebo přidat stát: <em>„Liberec, CZ"</em>, <em>„Vienna, Austria"</em>. Data z OpenStreetMap (Nominatim) — zdarma, bez registrace.
+      </div>
+      <p class="astrolog-section-title" data-cs="Časové pásmo" data-en="Time zone">Časové pásmo</p>
+      <div class="birth-field">
+        <label class="birth-label" data-cs="Časová zóna při narození" data-en="Time zone at birth">Časová zóna při narození</label>
+        <select class="astrolog-select" id="birth-tz"></select>
+        <span class="field-note" data-cs="Pro historická data (před 1970) ověřte platnost letního času ručně." data-en="For historical data (before 1970) verify daylight saving time manually.">Pro historická data (před 1970) ověřte platnost letního času ručně.</span>
+      </div>
+      <div class="btn-row">
+        <button class="astrolog-btn astrolog-btn-primary" onclick="goToStep2()" data-cs="Vypočítat a pokračovat →" data-en="Calculate and continue →">Vypočítat a pokračovat →</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div id="step-2" style="display:none;">
+      <div id="calc-banner-wrap"></div>
+      <div id="wheel-container" class="wheel-wrap" style="display:none;">
+        <svg id="horoscope-wheel" viewBox="0 0 500 500"></svg>
+      </div>
+      <div class="house-sys-row">
+        <div class="house-sys-toggle">
+          <button id="btn-ws" class="house-btn active" onclick="switchHouseSys('whole-sign')">Whole Sign</button>
+          <button id="btn-pl" class="house-btn"        onclick="switchHouseSys('placidus')">Placidus</button>
+        </div>
+        <span class="house-sys-label" data-cs="Systém domů" data-en="House system">Systém domů</span>
+      </div>
+      <p class="astrolog-section-title" data-cs="Pozice planet v horoskopu" data-en="Planetary positions">Pozice planet v horoskopu</p>
+      <table class="planet-table">
+        <thead>
+          <tr>
+            <th data-cs="Planeta" data-en="Planet">Planeta</th>
+            <th data-cs="Znamení" data-en="Sign">Znamení</th>
+            <th data-cs="Dům" data-en="House">Dům</th>
+            <th title="Retrográdní">℞</th>
+            <th id="th-hodnost" data-cs="Hodnost" data-en="Dignity" title="Esenciální hodnost">Hodnost</th>
+          </tr>
+        </thead>
+        <tbody id="planet-tbody"></tbody>
+      </table>
+      <div class="ornament">✦ · · · ✦</div>
+      <p class="astrolog-section-title" data-cs="Ascendent (Vzestupné znamení)" data-en="Ascendant (Rising sign)">Ascendent (Vzestupné znamení)</p>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:14px 16px;">
+        <span style="font-size:1.3rem;">⬆</span>
+        <div style="flex:1;">
+          <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--gold-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;" data-cs="Ascendent" data-en="Ascendant">Ascendent</div>
+          <select class="astrolog-select" id="ascendent-select" style="max-width:240px;">
+            <option value="" data-cs="— vyberte znamení —" data-en="— select sign —">— vyberte znamení —</option>
+          </select>
+        </div>
+      </div>
+      <div id="dignity-panel" style="display:none;"></div>
+      <div id="lots-panel" style="display:none;"></div>
+      <div id="temperament-panel" style="display:none;"></div>
+      <div id="prediction-panel" style="display:none;"></div>
+      <div class="btn-row">
+        <button class="astrolog-btn astrolog-btn-secondary" onclick="goToStep(1)" data-cs="← Zpět" data-en="← Back">← Zpět</button>
+        <button class="astrolog-btn astrolog-btn-secondary" onclick="resetPlanets()" data-cs="Vymazat" data-en="Reset">Vymazat</button>
+        <button class="astrolog-btn astrolog-btn-primary"   onclick="goToStep(3)" data-cs="Pokračovat →" data-en="Continue →">Pokračovat →</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div id="step-3" style="display:none;">
+      <p class="astrolog-section-title" data-cs="Vyberte oblasti výkladu" data-en="Select reading topics">Vyberte oblasti výkladu</p>
+      <div class="category-grid">
+        <div class="category-card selected" data-kat="osobnost"  onclick="toggleKat(this)"><span class="category-icon">🌟</span><div class="category-name" data-cs="Osobnost"  data-en="Personality">Osobnost</div></div>
+        <div class="category-card selected" data-kat="zdravi"    onclick="toggleKat(this)"><span class="category-icon">♡</span><div class="category-name" data-cs="Zdraví"    data-en="Health">Zdraví</div></div>
+        <div class="category-card selected" data-kat="finance"   onclick="toggleKat(this)"><span class="category-icon">✦</span><div class="category-name" data-cs="Finance"   data-en="Finance">Finance</div></div>
+        <div class="category-card selected" data-kat="laska"     onclick="toggleKat(this)"><span class="category-icon">♀</span><div class="category-name" data-cs="Láska"     data-en="Love">Láska</div></div>
+        <div class="category-card selected" data-kat="povolani"  onclick="toggleKat(this)"><span class="category-icon">☿</span><div class="category-name" data-cs="Povolání"  data-en="Career">Povolání</div></div>
+        <div class="category-card selected" data-kat="cestovani" onclick="toggleKat(this)"><span class="category-icon">⛵</span><div class="category-name" data-cs="Cestování" data-en="Travel">Cestování</div></div>
+      </div>
+      <div style="font-size:0.85rem;color:var(--text-faint);font-style:italic;text-align:center;margin-bottom:20px;"
+           data-cs="Kliknutím označte nebo odznačte oblasti. Musí být vybrána alespoň jedna."
+           data-en="Click to select or deselect topics. At least one must be selected.">
+        Kliknutím označte nebo odznačte oblasti. Musí být vybrána alespoň jedna.
+      </div>
+      <div class="btn-row">
+        <button class="astrolog-btn astrolog-btn-secondary" onclick="goToStep(2)" data-cs="← Zpět" data-en="← Back">← Zpět</button>
+        <button class="astrolog-btn astrolog-btn-primary"   onclick="sestavitVyklad()" data-cs="Sestavit výklad ✦" data-en="Build reading ✦">Sestavit výklad ✦</button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div id="step-4" style="display:none;">
+      <div class="results-summary">
+        <div>
+          <div class="results-count">
+            <span data-cs="Nalezeno" data-en="Found">Nalezeno</span>
+            <strong id="result-count">0</strong>
+            <span data-cs="interpretací" data-en="interpretations">interpretací</span>
+          </div>
+          <div class="results-note" data-cs="Seřazeno podle relevance k vašemu horoskopu" data-en="Sorted by relevance to your horoscope">Seřazeno podle relevance k vašemu horoskopu</div>
+        </div>
+        <button class="astrolog-btn astrolog-btn-secondary" onclick="goToStep(2)" style="padding:8px 16px;" data-cs="Upravit data" data-en="Edit data">Upravit data</button>
+      </div>
+      <div id="results-container"></div>
+      <div class="ornament" style="margin-top:30px;">· · ✦ · ·</div>
+      <div style="text-align:center;margin-top:16px;">
+        <div style="font-size:0.8rem;color:var(--text-faint);font-style:italic;max-width:500px;margin:0 auto;line-height:1.6;"
+             data-cs="Výklad je orientační. Astrologie je umění syntézy — jednotlivé příznaky vždy posuzujte v celkovém kontextu horoskopu."
+             data-en="This reading is indicative. Astrology is the art of synthesis — always consider individual factors within the overall context of the horoscope.">
+          Výklad je orientační. Astrologie je umění syntézy — jednotlivé příznaky vždy posuzujte v celkovém kontextu horoskopu.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.astrolog-wrap -->
+</div><!-- /#astrolog-root -->
+
+</body>
+</html>
