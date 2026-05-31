@@ -1189,11 +1189,29 @@ body:has(#solitaire-section:not(.hidden)) .app-container {
    ASTROLOG — full-viewport layout fix
    ========================================== */
 #astrolog-section {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+#astrolog-root button {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#astrolog-root button:hover {
+    background: none;
+    box-shadow: none;
 }
 
 #astrolog-root {
