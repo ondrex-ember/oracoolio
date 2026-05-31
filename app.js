@@ -23,12 +23,22 @@ function showApp(appId) {
         // Astrolog taktéž potřebuje celou obrazovku
         appContainer.style.display = 'none';
         document.getElementById('astrolog-section').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
         // Activate astrolog CSS
         document.getElementById('astrolog-styles').removeAttribute('media');
-        // Init starfield canvas if not yet started
+        // Init — DOMContentLoaded v SPA kontextu neproběhne, voláme explicitně
         if (typeof window._astrologCanvasInit === 'undefined') {
             window._astrologCanvasInit = true;
-            if (typeof initCanvas === 'function') initCanvas();
+            if (typeof buildTimezoneSelect === 'function') buildTimezoneSelect();
+            if (typeof buildPlanetTable    === 'function') buildPlanetTable();
+            if (typeof buildAscendentSelect=== 'function') buildAscendentSelect();
+            if (typeof initCanvas          === 'function') initCanvas();
+            // Auto-detect timezone
+            try {
+                const tz  = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                const sel = document.getElementById('birth-tz');
+                if (sel && [...sel.options].some(o => o.value === tz)) sel.value = tz;
+            } catch(e) {}
         }
     } else {
         // Všechny ostatní sekce žijí uvnitř app-containeru
@@ -69,6 +79,7 @@ function backToDashboard() {
     if (ns) ns.setAttribute('media', 'not all');
     const as = document.getElementById('astrolog-styles');
     if (as) as.setAttribute('media', 'not all');
+    document.body.style.overflow = '';
     document.getElementById('dashboard').classList.remove('hidden');
 }
 
