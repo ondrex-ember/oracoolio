@@ -3,10 +3,34 @@
 
     <!-- Hlavní stránka / rozcestník -->
     <url>
-        <loc>https://oracoolio.com</loc>
-        <lastmod>2026-04-02</lastmod>
+        <loc>https://oracoolio.com/</loc>
+        <lastmod>2026-06-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+    </url>
+
+    <!-- I-Ching – Kniha proměn -->
+    <url>
+        <loc>https://oracoolio.com/iching.html</loc>
+        <lastmod>2026-06-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Numerologie -->
+    <url>
+        <loc>https://oracoolio.com/numero.html</loc>
+        <lastmod>2026-06-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Astrolog -->
+    <url>
+        <loc>https://oracoolio.com/astrolog.html</loc>
+        <lastmod>2026-06-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 
 </urlset>
