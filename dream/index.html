@@ -93,5 +93,37 @@
 <!-- Engine jako ES modul -->
 <script type="module" src="somnium.js"></script>
 
+<style>
+#oracoolio-footer{width:100%;padding:28px 0 10px;text-align:center;margin-top:40px;border-top:1px solid rgba(233,69,96,0.1);}
+.footer-links{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px;}
+.footer-sep{color:rgba(255,255,255,0.15);font-size:.9rem;user-select:none;}
+.footer-link{color:rgba(255,255,255,0.35);text-decoration:none;font-size:.9rem;font-family:Georgia,serif;letter-spacing:.5px;padding:4px 8px;border-radius:6px;transition:color .3s,text-shadow .3s,background .3s;}
+.footer-ember:hover{color:#ff6a1a;text-shadow:0 0 6px rgba(255,106,26,.9),0 0 14px rgba(255,80,0,.7);background:rgba(255,80,0,.07);}
+.footer-doupe:hover{color:#a855f7;text-shadow:0 0 6px rgba(168,85,247,.9),0 0 14px rgba(168,85,247,.6);background:rgba(168,85,247,.07);}
+.footer-beer:hover{color:#f59e0b;text-shadow:0 0 6px rgba(245,158,11,.9),0 0 14px rgba(245,158,11,.6);background:rgba(245,158,11,.07);}
+.footer-credit{color:rgba(255,255,255,0.2);font-size:.78rem;font-style:italic;letter-spacing:.5px;}
+.footer-heart{display:inline-block;transition:transform .3s,filter .3s;}
+.footer-credit:hover .footer-heart{transform:scale(1.4);filter:drop-shadow(0 0 4px rgba(233,69,96,.8));}
+</style>
+
+<footer id="oracoolio-footer">
+    <div class="footer-links">
+        <a href="https://ember-pa.cz" target="_blank" rel="noopener" class="footer-link footer-ember">🔥 Ember PA</a>
+        <span class="footer-sep">|</span>
+        <a href="https://myscriptorium.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">👾 Scriptorium</a>
+        <span class="footer-sep">|</span>
+        <a href="https://occultix.app" target="_blank" rel="noopener" class="footer-link footer-beer">⛧ Occultix</a>
+        <span class="footer-sep">|</span>
+        <a href="https://fractout.com" target="_blank" rel="noopener" class="footer-link footer-doupe">𖦹ׂ Fractout</a>
+        <span class="footer-sep">|</span>
+        <a href="https://newsandradio.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">📰 Jouza News&amp;Radio 📻</a>
+        <span class="footer-sep">|</span>
+        <a href="../about/" class="footer-link footer-doupe">ℹ O projektu</a>
+    </div>
+    <div class="footer-credit">
+        Vyvíjeno s <span class="footer-heart">❤️</span> v Novém Boru. By <a href="https://ember-pa.cz" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Ondrex</a>
+    </div>
+</footer>
+
 </body>
 </html>
