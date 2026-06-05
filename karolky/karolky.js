@@ -531,3 +531,9 @@ function kpOnDropTableau(e, targetCol) {
         kpRender();
     }
 }
+
+
+// ── Auto-init při načtení stránky ──
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof kpNewGame === 'function') kpNewGame();
+});
