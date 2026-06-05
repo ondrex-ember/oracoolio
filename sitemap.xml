@@ -1,36 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <!-- Hlavní stránka / rozcestník -->
-    <url>
-        <loc>https://oracoolio.com/</loc>
-        <lastmod>2026-06-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <!-- I-Ching – Kniha proměn -->
-    <url>
-        <loc>https://oracoolio.com/iching.html</loc>
-        <lastmod>2026-06-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Numerologie -->
-    <url>
-        <loc>https://oracoolio.com/numero.html</loc>
-        <lastmod>2026-06-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Astrolog -->
-    <url>
-        <loc>https://oracoolio.com/astrolog.html</loc>
-        <lastmod>2026-06-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
+  <url><loc>https://oracoolio.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://oracoolio.com/tarot/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oracoolio.com/iching/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oracoolio.com/numero/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oracoolio.com/astrolog/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oracoolio.com/karolky/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oracoolio.com/dream/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>
