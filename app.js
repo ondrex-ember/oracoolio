@@ -10,7 +10,6 @@ function showApp(appId) {
     if (appId === 'astrolog') { window.location.href = 'astrolog/'; return; }
     if (appId === 'karolky')  { window.location.href = 'karolky/';  return; }
     if (appId === 'dream')    { window.location.href = 'dream/';    return; }
-    if (appId === 'solitaire'){ window.location.href = 'karolky/';  return; }
 }
 
 function backToDashboard() {
