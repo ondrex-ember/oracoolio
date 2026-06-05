@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karolky — Double Klondike | Oracoolio</title>
+  <meta name="description" content="Karolky II — Double Klondike se 104 kartami a 3 koly. Největší zkouška osudu.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://oracoolio.com/karolky/">
+  <meta name="author" content="ondrex">
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="cs_CZ">
+  <meta property="og:site_name"   content="Oracoolio">
+  <meta property="og:title"       content="Karolky — Double Klondike | Oracoolio">
+  <meta property="og:description" content="Double Klondike — 104 karet, 3 kola. Největší zkouška osudu.">
+  <meta property="og:url"         content="https://oracoolio.com/karolky/">
+  <meta property="og:image"       content="https://oracoolio.com/assets/og-image.jpg">
+  <meta name="google-site-verification" content="HeChd4paxpWn6emGa3HjuQyFjuCw85kWsUwtk1IRobY">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW6CLRYTF3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW6CLRYTF3');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG6N9KV');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vp48p83k4t");</script>
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#09090f">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <main id="karolky-section" class="hidden">
+
+        <button class="back-btn" onclick="window.location.href='../index.html'">← Zpět do Oracoolia</button>
+
+        <!-- Horní lišta s názvem, HUD a tlačítkem nová hra -->
+        <header id="kp-header">
+            <h1>Karolky II — Double Klondike</h1>
+            <div id="kp-hud">
+                <span class="kp-pill">Kolo <span id="kp-pass">1</span>/3</span>
+                <span class="kp-pill">Po <span id="kp-draw">3</span></span>
+                <div id="kp-dots">
+                    <div class="kp-dot kp-dot-active" id="kp-d1"></div>
+                    <div class="kp-dot" id="kp-d2"></div>
+                    <div class="kp-dot" id="kp-d3"></div>
+                </div>
+                <span class="kp-pill">Stoh: <span id="kp-stock-cnt">0</span></span>
+                <button class="kp-new-btn" onclick="kpNewGame()">✦ Nová hra</button>
+            </div>
+        </header>
+
+        <!-- Info bar — zobrazí se při tap-výběru karty -->
+        <div id="kp-infobar" class="kp-infobar-hidden">
+            <div class="kp-info-left">
+                <span id="kp-info-txt"></span>
+                <span id="kp-info-sub"></span>
+            </div>
+            <div class="kp-info-right">
+                <span class="kp-info-hint">Klepněte na cíl</span>
+                <button class="kp-cancel-btn" onclick="kpClearSel()">✕ Zrušit</button>
+            </div>
+        </div>
+
+        <!-- Herní plocha -->
+        <div id="kp-game">
+
+            <!-- TOP ROW: stock | waste | spacer | 8 foundations (11 sloupců) -->
+            <div class="kp-grid kp-grid-11">
+                <div class="kp-slot kp-stock-slot" id="kp-stock" onclick="kpClickStock()">
+                    <span id="kp-recycle"></span>
+                </div>
+                <div class="kp-slot" id="kp-waste"></div>
+                <div class="kp-spacer"></div>
+                <div class="kp-slot kp-foundation" id="kp-f0" data-suit="hearts"   data-color="red"   data-sym="♥"></div>
+                <div class="kp-slot kp-foundation" id="kp-f1" data-suit="hearts"   data-color="red"   data-sym="♥"></div>
+                <div class="kp-slot kp-foundation" id="kp-f2" data-suit="diamonds" data-color="red"   data-sym="♦"></div>
+                <div class="kp-slot kp-foundation" id="kp-f3" data-suit="diamonds" data-color="red"   data-sym="♦"></div>
+                <div class="kp-slot kp-foundation" id="kp-f4" data-suit="clubs"    data-color="black" data-sym="♣"></div>
+                <div class="kp-slot kp-foundation" id="kp-f5" data-suit="clubs"    data-color="black" data-sym="♣"></div>
+                <div class="kp-slot kp-foundation" id="kp-f6" data-suit="spades"   data-color="black" data-sym="♠"></div>
+                <div class="kp-slot kp-foundation" id="kp-f7" data-suit="spades"   data-color="black" data-sym="♠"></div>
+            </div>
+
+            <!-- TABLEAU ROW: 8 sloupců -->
+            <div class="kp-grid kp-grid-8">
+                <div class="kp-slot kp-tab" id="kp-t0"></div>
+                <div class="kp-slot kp-tab" id="kp-t1"></div>
+                <div class="kp-slot kp-tab" id="kp-t2"></div>
+                <div class="kp-slot kp-tab" id="kp-t3"></div>
+                <div class="kp-slot kp-tab" id="kp-t4"></div>
+                <div class="kp-slot kp-tab" id="kp-t5"></div>
+                <div class="kp-slot kp-tab" id="kp-t6"></div>
+                <div class="kp-slot kp-tab" id="kp-t7"></div>
+            </div>
+
+        </div><!-- /#kp-game -->
+
+        <!-- Win / Lose overlay -->
+        <div id="kp-overlay">
+            <div id="kp-overlay-box">
+                <div id="kp-ov-icon"></div>
+                <h2 id="kp-ov-title"></h2>
+                <p id="kp-ov-msg"></p>
+                <button class="kp-obtn kp-obtn-gold" onclick="kpNewGame();kpCloseOverlay()">✦ Nová hra</button>
+                <button class="kp-obtn kp-obtn-ghost" onclick="kpCloseOverlay()">Zavřít</button>
+            </div>
+        </div>
+
+    </main><!-- /#karolky-section -->
+  <script src="karolky.js"></script>
+</body>
+</html>
