@@ -44,13 +44,13 @@
 /* ── Wrap ── */
 .astrolog-wrap {
   position:relative; z-index:1; max-width:860px;
-  margin:0 auto; padding:40px 28px 80px;
+  margin:0 auto; padding:24px 20px 60px;
 }
 
 /* ── Header ── */
 .astrolog-header {
   display:flex; align-items:center; gap:16px;
-  margin-bottom:52px; padding-bottom:28px;
+  margin-bottom:36px; padding-bottom:20px;
   border-bottom:1px solid var(--border);
 }
 .astrolog-back {
@@ -71,15 +71,15 @@
 /* ── Section headings ── */
 .astrolog-section-title {
   font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.18em;
-  text-transform:uppercase; color:var(--gold-dim); margin-bottom:32px;
+  text-transform:uppercase; color:var(--gold-dim); margin-bottom:16px;
   display:flex; align-items:center; gap:12px;
 }
 .astrolog-section-title::after { content:''; flex:1; height:1px; background:var(--border); }
 
 /* ── Steps ── */
-.astrolog-steps { display:flex; gap:12px; margin-bottom:44px; }
+.astrolog-steps { display:flex; gap:8px; margin-bottom:32px; }
 .astrolog-step {
-  flex:1; padding:14px 10px; border:1px solid var(--border);
+  flex:1; padding:10px 8px; border:1px solid var(--border);
   border-radius:var(--radius); background:var(--bg-card);
   font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.1em;
   text-transform:uppercase; color:var(--text-faint); text-align:center; transition:all 0.3s;
@@ -90,11 +90,11 @@
 
 /* ─── BIRTH FORM ─────────────────────────── */
 .birth-grid {
-  display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:28px;
+  display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;
 }
 @media(max-width:480px){ .birth-grid{ grid-template-columns:1fr; } }
 
-.birth-field { display:flex; flex-direction:column; gap:10px; margin-bottom:26px; }
+.birth-field { display:flex; flex-direction:column; gap:6px; margin-bottom:16px; }
 .birth-label {
   font-family:'Cinzel',serif; font-size:0.7rem;
   letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-dim);
@@ -103,7 +103,7 @@
   background:var(--bg-panel); border:1px solid var(--border);
   border-radius:var(--radius); color:var(--text);
   font-family:'Crimson Pro',serif; font-size:1rem;
-  padding:12px 16px; width:100%; outline:none;
+  padding:8px 12px; width:100%; outline:none;
   transition:border-color 0.2s; color-scheme:dark;
 }
 .astrolog-input:focus { border-color:var(--gold); }
@@ -121,7 +121,7 @@
   background:var(--bg-panel); border:1px solid var(--border); border-radius:var(--radius);
   color:var(--gold-dim); font-family:'Cinzel',serif; font-size:0.7rem;
   letter-spacing:0.1em; text-transform:uppercase;
-  padding:12px 20px; cursor:pointer; transition:all 0.2s; white-space:nowrap; flex-shrink:0;
+  padding:8px 16px; cursor:pointer; transition:all 0.2s; white-space:nowrap; flex-shrink:0;
 }
 .btn-search:hover:not(:disabled) { border-color:var(--gold); color:var(--gold); }
 .btn-search:disabled { opacity:0.5; cursor:wait; }
@@ -155,7 +155,7 @@
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23c9a84c' opacity='0.5'/%3E%3C/svg%3E");
   background-repeat:no-repeat;
 }
-.astrolog-select { font-size:0.95rem; padding:12px 32px 12px 16px; width:100%; background-position:right 12px center; }
+.astrolog-select { font-size:0.95rem; padding:8px 32px 8px 12px; width:100%; background-position:right 12px center; }
 .select-sm       { font-size:0.9rem;  padding:5px 26px 5px 8px;  width:100%; background-position:right 8px center; }
 .astrolog-select:focus, .select-sm:focus { border-color:var(--gold); }
 .astrolog-select option, .select-sm option { background:#111128; color:var(--text); }
@@ -164,19 +164,19 @@
 /* ── Boxes / notes ── */
 .warn-box {
   background:rgba(122,96,32,0.15); border:1px solid rgba(122,96,32,0.4);
-  border-radius:var(--radius); padding:14px 18px;
-  font-size:0.85rem; color:var(--warn-light); line-height:1.5; margin-bottom:24px;
+  border-radius:var(--radius); padding:10px 14px;
+  font-size:0.83rem; color:var(--warn-light); line-height:1.5; margin-bottom:16px;
 }
 .birth-tip {
   background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.15);
-  border-radius:8px; padding:16px 20px;
-  font-size:0.87rem; color:var(--text-dim); line-height:1.7; margin-bottom:28px;
+  border-radius:8px; padding:12px 16px;
+  font-size:0.85rem; color:var(--text-dim); line-height:1.6; margin-bottom:20px;
 }
 
 /* ─── CALC BANNER (Sprint B) ─────────────── */
 .calc-banner {
-  border-radius:var(--radius-lg); padding:18px 22px;
-  margin-bottom:28px; animation:fadeIn 0.4s ease;
+  border-radius:var(--radius-lg); padding:14px 18px;
+  margin-bottom:20px; animation:fadeIn 0.4s ease;
   display:flex; align-items:flex-start; justify-content:space-between;
   gap:12px; flex-wrap:wrap;
 }
@@ -407,8 +407,8 @@
 
 .dignity-panel-wrap {
   background:var(--bg-card); border:1px solid var(--border);
-  border-radius:var(--radius-lg); padding:22px 26px;
-  margin-bottom:28px; animation:fadeIn 0.4s ease;
+  border-radius:var(--radius-lg); padding:16px 18px;
+  margin-bottom:20px; animation:fadeIn 0.4s ease;
 }
 .dignity-panel-head {
   display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;
@@ -417,7 +417,7 @@
   font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.14em;
   text-transform:uppercase; color:var(--gold-dim);
 }
-.dignity-grid { display:flex; flex-direction:column; gap:10px; margin-bottom:18px; }
+.dignity-grid { display:flex; flex-direction:column; gap:5px; margin-bottom:14px; }
 .dignity-row  {
   display:grid; align-items:center; gap:8px;
   grid-template-columns:20px 80px 1fr 32px 22px;
@@ -449,7 +449,7 @@
 
 .almuten-card {
   background:rgba(201,168,76,0.07); border:1px solid rgba(201,168,76,0.3);
-  border-radius:var(--radius); padding:16px 18px; margin-top:8px;
+  border-radius:var(--radius); padding:12px 14px; margin-top:4px;
 }
 .almuten-head { display:flex; align-items:center; gap:12px; }
 .almuten-glyph { font-size:1.8rem; opacity:0.85; flex-shrink:0; }
@@ -479,10 +479,10 @@
   font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.14em;
   text-transform:uppercase; color:var(--gold-dim);
 }
-.lots-grid { display:flex; flex-direction:column; gap:12px; }
+.lots-grid { display:flex; flex-direction:column; gap:7px; }
 .lot-row {
   display:flex; align-items:center; gap:10px;
-  padding:11px 14px; border-radius:var(--radius);
+  padding:7px 10px; border-radius:var(--radius);
   background:rgba(201,168,76,0.03); border:1px solid rgba(201,168,76,0.08);
   transition:border-color 0.2s;
 }
@@ -561,13 +561,13 @@
   text-transform:uppercase; color:var(--gold-dim); margin-bottom:12px;
 }
 .pred-grid {
-  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+  display:grid; grid-template-columns:1fr 1fr; gap:12px;
 }
 @media(max-width:520px){ .pred-grid{ grid-template-columns:1fr; } }
 
 .pred-card {
   background:rgba(201,168,76,0.04); border:1px solid rgba(201,168,76,0.14);
-  border-radius:var(--radius); padding:16px 18px;
+  border-radius:var(--radius); padding:12px 14px;
 }
 .pred-card-head {
   display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;
@@ -588,4 +588,201 @@
 .pred-tema {
   font-size:0.88rem; font-style:italic; color:var(--text-dim);
   line-height:1.5; border-top:1px solid rgba(201,168,76,0.1); padding-top:8px;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   BREATHING ROOM OVERRIDES
+   ═══════════════════════════════════════════════════ */
+
+/* Hlavní container */
+.astrolog-wrap {
+  padding: 44px 32px 90px !important;
+}
+
+/* Header */
+.astrolog-header {
+  margin-bottom: 56px !important;
+  padding-bottom: 32px !important;
+}
+
+/* Step taby */
+.astrolog-steps {
+  gap: 14px !important;
+  margin-bottom: 48px !important;
+}
+.astrolog-step {
+  padding: 16px 12px !important;
+}
+.astrolog-step span {
+  font-size: 1rem !important;
+  margin-bottom: 4px !important;
+}
+
+/* Section titles */
+.astrolog-section-title {
+  margin-bottom: 28px !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.2em !important;
+}
+
+/* Inputy */
+.astrolog-input {
+  padding: 14px 18px !important;
+  font-size: 1.05rem !important;
+  border-radius: 8px !important;
+}
+.astrolog-select {
+  padding: 14px 36px 14px 18px !important;
+  font-size: 1rem !important;
+  border-radius: 8px !important;
+}
+
+/* Form fields */
+.birth-field {
+  gap: 10px !important;
+  margin-bottom: 30px !important;
+}
+.birth-grid {
+  gap: 24px !important;
+  margin-bottom: 32px !important;
+}
+
+/* Hledat */
+.btn-search {
+  padding: 14px 22px !important;
+  font-size: 0.72rem !important;
+}
+
+/* Warn box */
+.warn-box {
+  padding: 16px 20px !important;
+  font-size: 0.88rem !important;
+  margin-bottom: 28px !important;
+  border-radius: 8px !important;
+}
+
+/* Birth tip */
+.birth-tip {
+  padding: 18px 22px !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 32px !important;
+  border-radius: 10px !important;
+}
+
+/* ── HLAVNÍ TLAČÍTKO ── */
+.astrolog-btn {
+  padding: 18px 48px !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.18em !important;
+  border-radius: 8px !important;
+}
+
+/* Btn row */
+.btn-row {
+  margin-top: 36px !important;
+  gap: 16px !important;
+}
+
+/* Panels */
+.dignity-panel-wrap,
+.lots-panel-wrap,
+.pred-panel-wrap,
+.temp-panel-wrap {
+  padding: 26px 28px !important;
+  margin-bottom: 32px !important;
+  border-radius: 14px !important;
+}
+
+/* House system */
+.house-sys-row { margin-bottom: 28px !important; }
+.house-btn { padding: 12px 26px !important; }
+
+/* Results */
+.result-card {
+  padding: 22px 24px !important;
+  margin-bottom: 18px !important;
+  border-radius: 12px !important;
+}
+.results-summary {
+  padding: 18px 24px !important;
+  margin-bottom: 32px !important;
+}
+
+/* Planet table */
+.planet-table th { padding: 12px 14px !important; }
+.planet-table td { padding: 10px 10px !important; }
+
+/* Category cards */
+.category-card {
+  padding: 22px 16px !important;
+  border-radius: 12px !important;
+}
+.category-icon { font-size: 2.2rem !important; margin-bottom: 10px !important; }
+.category-grid { gap: 16px !important; margin-bottom: 36px !important; }
+
+/* ═══════════════════════════════════════════════════
+   MOBILE — portrait / úzký displej
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 540px) {
+  /* Container — méně padding na stranách */
+  .astrolog-wrap {
+    padding: 24px 16px 70px !important;
+  }
+
+  /* Header kompaktnější */
+  .astrolog-header {
+    margin-bottom: 32px !important;
+    padding-bottom: 20px !important;
+  }
+
+  /* Taby — menší písmeno, méně padding */
+  .astrolog-steps {
+    gap: 6px !important;
+    margin-bottom: 32px !important;
+  }
+  .astrolog-step {
+    padding: 10px 4px !important;
+    font-size: 0.52rem !important;
+    letter-spacing: 0.05em !important;
+  }
+  .astrolog-step span {
+    font-size: 0.85rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* Inputy — trochu menší na mobilu */
+  .astrolog-input {
+    padding: 12px 14px !important;
+    font-size: 1rem !important;
+  }
+  .astrolog-select {
+    padding: 12px 30px 12px 14px !important;
+  }
+
+  /* Tlačítko — full width na mobilu */
+  .astrolog-btn {
+    padding: 16px 24px !important;
+    font-size: 0.82rem !important;
+    width: 100% !important;
+  }
+  .btn-row {
+    flex-direction: column !important;
+    margin-top: 28px !important;
+  }
+
+  /* Panels */
+  .dignity-panel-wrap,
+  .lots-panel-wrap,
+  .pred-panel-wrap,
+  .temp-panel-wrap {
+    padding: 18px 16px !important;
+  }
+
+  /* Warn box */
+  .warn-box {
+    font-size: 0.85rem !important;
+    padding: 14px 16px !important;
+    line-height: 1.6 !important;
+  }
 }
