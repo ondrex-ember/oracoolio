@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarot — Výklad ze 3 karet | Oracoolio</title>
+  <meta name="description" content="Výklad Tarotu ze 3 karet s AI věštcem. Minulost, přítomnost a budoucnost zdarma online.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://oracoolio.com/tarot/">
+  <meta name="author" content="ondrex">
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="cs_CZ">
+  <meta property="og:site_name"   content="Oracoolio">
+  <meta property="og:title"       content="Tarot — Výklad ze 3 karet | Oracoolio">
+  <meta property="og:description" content="Výklad Tarotu ze 3 karet s AI věštcem zdarma online.">
+  <meta property="og:url"         content="https://oracoolio.com/tarot/">
+  <meta property="og:image"       content="https://oracoolio.com/assets/og-image.jpg">
+  <meta name="google-site-verification" content="HeChd4paxpWn6emGa3HjuQyFjuCw85kWsUwtk1IRobY">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW6CLRYTF3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW6CLRYTF3');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG6N9KV');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vp48p83k4t");</script>
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1a1a2e">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="app-container">
+        <main id="tarot-section" class="hidden">
+            <button class="back-btn" onclick="window.location.href='../index.html'">← Zpět do Oracoolia</button>
+            <header>
+                <h1>Klasický Tarot</h1>
+                <p class="subtitle">Zeptejte se karet na svou cestu</p>
+                <button id="draw-btn">Vytáhnout 3 karty</button>
+            </header>
+            
+            <div id="loading" class="hidden">Karty se míchají...</div>
+            
+            <div id="tarot-board" class="hidden">
+                <div class="spread-container">
+                    <div class="card-wrapper">
+                        <h3 class="position-title">Minulost</h3>
+                        <div class="card-display perspective" id="card1-container">
+                            <div class="card-inner" id="card1-inner">
+                                <div class="card-face card-back"><img src="../assets/card_back.jpg" alt="Rub karty"></div>
+                                <div class="card-face card-front"><img id="card1-img" src="" alt="Minulost"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <h3 class="position-title">Přítomnost</h3>
+                        <div class="card-display perspective" id="card2-container">
+                            <div class="card-inner" id="card2-inner">
+                                <div class="card-face card-back"><img src="../assets/card_back.jpg" alt="Rub karty"></div>
+                                <div class="card-face card-front"><img id="card2-img" src="" alt="Přítomnost"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <h3 class="position-title">Budoucnost</h3>
+                        <div class="card-display perspective" id="card3-container">
+                            <div class="card-inner" id="card3-inner">
+                                <div class="card-face card-back"><img src="../assets/card_back.jpg" alt="Rub karty"></div>
+                                <div class="card-face card-front"><img id="card3-img" src="" alt="Budoucnost"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-info hidden" id="reading-text"></div>
+
+                <div id="ai-reading-container" class="ai-reading hidden">
+                    <h3>✨ Hlas Oracoolia ✨</h3>
+                    <p id="ai-text-content"></p>
+                </div>
+            </div>
+        </main>
+</div>
+  <script src="tarot.js"></script>
+</body>
+</html>
