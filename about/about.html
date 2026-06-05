@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-cs="O Oracooliu — Bezplatná věštírna online | Oracoolio" data-en="About Oracoolio — Free Oracle Online | Oracoolio">O Oracooliu — Bezplatná věštírna online | Oracoolio</title>
+  <meta name="description" content="Oracoolio je bezplatná osobní věštírna — Tarot, I-Ťing, Numerologie, Astrolog, Somnium a Karolky Pasiáns. Bez registrace, bez reklam, bez sledování.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://oracoolio.com/about/">
+  <meta name="author" content="ondrex">
+  <meta name="language" content="cs">
+  <meta name="geo.region" content="CZ">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="cs_CZ">
+  <meta property="og:site_name"   content="Oracoolio">
+  <meta property="og:title"       content="O Oracooliu — Bezplatná věštírna online">
+  <meta property="og:description" content="Šest věšteckých nástrojů pod jednou střechou. Zdarma, bez registrace, bez reklam.">
+  <meta property="og:url"         content="https://oracoolio.com/about/">
+  <meta property="og:image"       content="https://oracoolio.com/assets/og-image.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="O Oracooliu — Bezplatná věštírna online">
+  <meta name="twitter:description" content="Šest věšteckých nástrojů pod jednou střechou. Zdarma, bez registrace, bez reklam.">
+  <meta name="twitter:image"       content="https://oracoolio.com/assets/og-image.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "O Oracooliu",
+    "url": "https://oracoolio.com/about/",
+    "description": "Oracoolio je bezplatná osobní věštírna nabízející Tarot, I-Ťing, Numerologii, Astrologii, výklad snů a karetní hry zdarma, bez registrace.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Oracoolio",
+      "url": "https://oracoolio.com/"
+    },
+    "inLanguage": ["cs", "en"]
+  }
+  </script>
+
+  <meta name="google-site-verification" content="HeChd4paxpWn6emGa3HjuQyFjuCw85kWsUwtk1IRobY">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW6CLRYTF3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW6CLRYTF3');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG6N9KV');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vp48p83k4t");</script>
+
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#06060f">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Design tokens (sdílené s Astrologem) ── */
+    :root {
+      --gold:        #c9a84c;
+      --gold-light:  #e8c97a;
+      --gold-dim:    #7a6230;
+      --bg-deep:     #06060f;
+      --bg-card:     #0d0d20;
+      --bg-panel:    #111128;
+      --border:      rgba(201,168,76,0.22);
+      --border-glow: rgba(201,168,76,0.55);
+      --text:        #ddd8cc;
+      --text-dim:    #8a8278;
+      --text-faint:  #4a4640;
+      --radius:      6px;
+      --radius-lg:   12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: var(--bg-deep);
+      color: var(--text);
+      font-family: 'Crimson Pro', Georgia, serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Starfield canvas ── */
+    #about-canvas {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none; z-index: 0; opacity: 0.45;
+    }
+
+    /* ── Root wrapper ── */
+    #about-root {
+      position: relative; z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
+
+    /* ── Header ── */
+    .about-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 48px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .about-back {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--gold-dim);
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .about-back:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.07); }
+
+    .about-title-group { flex: 1; }
+    .about-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+    .about-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-top: 4px;
+    }
+
+    /* Lang switch */
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--gold-dim);
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      padding: 5px 10px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active,
+    .lang-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.07); }
+    .lang-sep { color: var(--text-faint); font-size: 0.8rem; user-select: none; }
+
+    /* ── Typography ── */
+    h1.about-h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .about-perex {
+      font-size: 1.15rem;
+      color: var(--text);
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Section headings ── */
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    h2.about-h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+    }
+
+    h3.about-h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+
+    p.about-p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    p.about-p:last-child { margin-bottom: 0; }
+
+    /* ── Sekce bloky ── */
+    .about-section {
+      margin-bottom: 48px;
+    }
+
+    /* ── Privacy card ── */
+    .privacy-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .privacy-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top left, rgba(201,168,76,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .privacy-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 100px;
+      padding: 4px 14px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .privacy-pill::before { content: '🔒'; font-size: 0.75rem; }
+
+    /* ── Tool cards grid ── */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 560px) {
+      .tools-grid { grid-template-columns: 1fr; }
+    }
+
+    .tool-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      transition: border-color 0.25s, background 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .tool-card:hover {
+      border-color: rgba(201,168,76,0.45);
+      background: #0f0f24;
+    }
+    .tool-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent);
+    }
+
+    .tool-icon {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: block;
+      filter: drop-shadow(0 0 6px rgba(201,168,76,0.3));
+    }
+    .tool-name {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+    .tool-desc {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--text-dim);
+    }
+
+    /* ── CTA blok ── */
+    .cta-block {
+      text-align: center;
+      margin-bottom: 64px;
+      padding: 40px 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-ornament {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      color: var(--gold-dim);
+      margin-bottom: 16px;
+    }
+    .cta-headline {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      letter-spacing: 0.04em;
+    }
+    .cta-sub {
+      font-size: 1rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 12px 32px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .cta-btn:hover {
+      background: rgba(201,168,76,0.1);
+      border-color: var(--gold-light);
+      color: var(--gold-light);
+      box-shadow: 0 0 20px rgba(201,168,76,0.15);
+    }
+
+    /* ── Footer ── */
+    .about-footer {
+      border-top: 1px solid rgba(201,168,76,0.1);
+      padding-top: 28px;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .footer-sep { color: rgba(255,255,255,0.15); font-size: 0.9rem; user-select: none; }
+    .footer-link {
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-family: 'Crimson Pro', Georgia, serif;
+      letter-spacing: 0.5px;
+      padding: 4px 8px;
+      border-radius: var(--radius);
+      transition: color 0.3s, text-shadow 0.3s, background 0.3s;
+    }
+    .footer-ember:hover  { color: #ff6a1a; text-shadow: 0 0 6px rgba(255,106,26,0.9), 0 0 14px rgba(255,80,0,0.7); background: rgba(255,80,0,0.07); }
+    .footer-doupe:hover  { color: #a855f7; text-shadow: 0 0 6px rgba(168,85,247,0.9), 0 0 14px rgba(168,85,247,0.6); background: rgba(168,85,247,0.07); }
+    .footer-beer:hover   { color: #f59e0b; text-shadow: 0 0 6px rgba(245,158,11,0.9), 0 0 14px rgba(245,158,11,0.6); background: rgba(245,158,11,0.07); }
+    .footer-credit {
+      color: rgba(255,255,255,0.2);
+      font-size: 0.78rem;
+      font-style: italic;
+      letter-spacing: 0.5px;
+    }
+    .footer-credit a { color: inherit; text-decoration: none; }
+    .footer-heart { display: inline-block; transition: transform 0.3s, filter 0.3s; }
+    .footer-credit:hover .footer-heart { transform: scale(1.4); filter: drop-shadow(0 0 4px rgba(233,69,96,0.8)); }
+
+    /* ── Ornament divider ── */
+    .ornament {
+      text-align: center;
+      color: var(--gold-dim);
+      letter-spacing: 0.4em;
+      font-size: 0.8rem;
+      margin: 40px 0;
+      opacity: 0.6;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      #about-root { padding: 20px 16px 60px; }
+      .about-header { gap: 10px; }
+      .about-title { font-size: 1.4rem; }
+      .about-subtitle { display: none; }
+      .privacy-card { padding: 18px 20px; }
+      .cta-block { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<canvas id="about-canvas"></canvas>
+
+<div id="about-root">
+
+  <!-- HEADER -->
+  <header class="about-header">
+    <a href="../index.html" class="about-back" data-cs="← Zpět" data-en="← Back">← Zpět</a>
+    <div class="about-title-group">
+      <div class="about-title">Oracoolio</div>
+      <div class="about-subtitle" data-cs="O projektu" data-en="About the project">O projektu</div>
+    </div>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-lang-cs" onclick="setLang('cs')">CS</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+    </div>
+  </header>
+
+  <!-- H1 -->
+  <h1 class="about-h1" data-cs="Vítejte v Oracooliu" data-en="Welcome to Oracoolio">Vítejte v Oracooliu</h1>
+
+  <!-- PEREX -->
+  <p class="about-perex" data-cs="Oracoolio je bezplatná osobní věštírna, která spojuje starobylé věštecké systémy s moderním digitálním prostředím. Bez registrace, bez poplatků, bez sledování." data-en="Oracoolio is a free personal oracle that brings together ancient divination systems in a modern digital space. No sign-up, no fees, no tracking.">
+    Oracoolio je bezplatná osobní věštírna, která spojuje starobylé věštecké systémy s moderním digitálním prostředím. Bez registrace, bez poplatků, bez sledování.
+  </p>
+
+  <!-- SEKCE 1: Co je Oracoolio -->
+  <div class="about-section">
+    <div class="section-label" data-cs="1 — Co je Oracoolio" data-en="1 — What is Oracoolio">1 — Co je Oracoolio</div>
+    <p class="about-p" data-cs="Oracoolio vzniklo z přesvědčení, že hluboká sebereflexe by neměla být za mříží předplatného. Každý nástroj, který tu najdete, je plně funkční a promyšlený — ne ukázka zdarma, která vás přesměruje k placené verzi." data-en="Oracoolio was built on a simple belief: deep self-reflection shouldn't be locked behind a paywall. Every tool you find here is fully functional and thoughtfully crafted — not a free preview that redirects you to a paid tier.">
+      Oracoolio vzniklo z přesvědčení, že hluboká sebereflexe by neměla být za mříží předplatného. Každý nástroj, který tu najdete, je plně funkční a promyšlený — ne ukázka zdarma, která vás přesměruje k placené verzi.
+    </p>
+    <p class="about-p" data-cs="Pod jednou střechou nabízíme šest odlišných přístupů k sebepoznání: od starověké čínské Knihy proměn přes klasický Waite-Smithův Tarot až po moderní numerologický rozbor nebo plnohodnotný astrologický horoskop. Každý systém má svou vlastní logiku, svůj jazyk a svůj pohled na lidský osud." data-en="Under one roof, we offer six distinct approaches to self-knowledge: from the ancient Chinese Book of Changes and classic Waite-Smith Tarot to modern numerological analysis and a full astrological chart. Each system has its own logic, its own language, its own lens on the human experience.">
+      Pod jednou střechou nabízíme šest odlišných přístupů k sebepoznání: od starověké čínské Knihy proměn přes klasický Waite-Smithův Tarot až po moderní numerologický rozbor nebo plnohodnotný astrologický horoskop. Každý systém má svou vlastní logiku, svůj jazyk a svůj pohled na lidský osud.
+    </p>
+  </div>
+
+  <!-- SEKCE 1.1: Soukromí -->
+  <div class="privacy-card">
+    <div class="privacy-pill" data-cs="Soukromí na prvním místě" data-en="Privacy first">Soukromí na prvním místě</div>
+    <div class="section-label" data-cs="1.1 — Žádná data, žádný účet" data-en="1.1 — No data, no account">1.1 — Žádná data, žádný účet</div>
+    <p class="about-p" data-cs="Oracoolio nezná vaše jméno. Nepotřebuje váš e-mail. Nic neodesílá na server." data-en="Oracoolio doesn't know your name. It doesn't need your email. Nothing you enter is ever sent to a server.">
+      Oracoolio nezná vaše jméno. Nepotřebuje váš e-mail. Nic neodesílá na server.
+    </p>
+    <p class="about-p" data-cs="Vše, co zadáte — datum narození, jméno, otázku — zůstává výhradně ve vašem prohlížeči. Žádný účet, žádná databáze, žádná reklama. Provoz aplikace financujeme z vlastních prostředků, protože věříme, že věštírna funguje lépe bez komerčního šumu." data-en="Every detail you provide — your date of birth, your name, your question — stays entirely within your browser. No accounts, no database, no ads. We fund the app ourselves, because we believe an oracle works better without commercial noise.">
+      Vše, co zadáte — datum narození, jméno, otázku — zůstává výhradně ve vašem prohlížeči. Žádný účet, žádná databáze, žádná reklama. Provoz aplikace financujeme z vlastních prostředků, protože věříme, že věštírna funguje lépe bez komerčního šumu.
+    </p>
+  </div>
+
+  <!-- SEKCE 1.2: Nástroje -->
+  <div class="about-section">
+    <div class="section-label" data-cs="1.2 — Jedna střecha, šest světů" data-en="1.2 — One roof, six worlds">1.2 — Jedna střecha, šest světů</div>
+    <p class="about-p" data-cs="Nemusíte hledat jinde. Oracoolio integruje nástroje, které jinak existují jako oddělené weby s různou kvalitou a pochybným soukromím." data-en="No need to look elsewhere. Oracoolio brings together tools that usually exist as scattered websites of varying quality and questionable privacy.">
+      Nemusíte hledat jinde. Oracoolio integruje nástroje, které jinak existují jako oddělené weby s různou kvalitou a pochybným soukromím.
+    </p>
+  </div>
+
+  <!-- TOOL CARDS GRID -->
+  <div class="tools-grid">
+
+    <!-- 1.2.1 Tarot -->
+    <div class="tool-card">
+      <span class="tool-icon">🔮</span>
+      <div class="section-label" data-cs="1.2.1 — Klasický Tarot" data-en="1.2.1 — Classic Tarot">1.2.1 — Klasický Tarot</div>
+      <h3 class="about-h3" data-cs="Klasický Tarot" data-en="Classic Tarot">Klasický Tarot</h3>
+      <p class="tool-desc" data-cs="Výklad ze tří karet na základě tradičního Waite-Smithova souboru. Minulost, přítomnost a budoucnost — a pak promluví věštec: AI výklad vašich karet sestavený přímo pro váš konkrétní tah, v reálném čase." data-en="A three-card reading from the traditional Waite-Smith deck. Past, present and future — then the oracle speaks: an AI-generated reading written for your specific draw, in real time.">
+        Výklad ze tří karet na základě tradičního Waite-Smithova souboru. Minulost, přítomnost a budoucnost — a pak promluví věštec: AI výklad vašich karet sestavený přímo pro váš konkrétní tah, v reálném čase.
+      </p>
+    </div>
+
+    <!-- 1.2.2 I-Ťing -->
+    <div class="tool-card">
+      <span class="tool-icon">☯️</span>
+      <div class="section-label" data-cs="1.2.2 — I-Ťing" data-en="1.2.2 — I Ching">1.2.2 — I-Ťing</div>
+      <h3 class="about-h3" data-cs="I-Ťing — Kniha proměn" data-en="I Ching — Book of Changes">I-Ťing — Kniha proměn</h3>
+      <p class="tool-desc" data-cs="Starověký čínský věštecký systém postavený na šedesáti čtyřech hexagramech. Házíte mincemi, systém čte výsledek a přiřadí vám hexagram podle tradiční King Wen sekvence — s plným výkladem rozsudku a obrazu. Každý den jedna konzultace — záměrně. Kniha proměn není automat." data-en="The ancient Chinese divination system of sixty-four hexagrams. You toss coins, the system reads the result and assigns your hexagram according to the traditional King Wen sequence — with a full reading of the Judgment and the Image. One consultation per day — by design. The Book of Changes is not a slot machine.">
+        Starověký čínský věštecký systém postavený na šedesáti čtyřech hexagramech. Házíte mincemi, systém čte výsledek a přiřadí vám hexagram podle tradiční King Wen sekvence — s plným výkladem rozsudku a obrazu. Každý den jedna konzultace — záměrně. Kniha proměn není automat.
+      </p>
+    </div>
+
+    <!-- 1.2.3 Numero -->
+    <div class="tool-card">
+      <span class="tool-icon">✦</span>
+      <div class="section-label" data-cs="1.2.3 — Numero" data-en="1.2.3 — Numero">1.2.3 — Numero</div>
+      <h3 class="about-h3" data-cs="Numero — Numerologický rozbor" data-en="Numero — Numerological Reading">Numero — Numerologický rozbor</h3>
+      <p class="tool-desc" data-cs="Komplexní výklad vašeho jména a data narození. Číslo životní cesty, duše, osobnosti, osudu, číslo zralosti, karmická čísla, mistrovská čísla, Pythagorova mřížka, osobní rok a den, životní vrcholy a partnerská synastrie — numerologická kompatibilita dvou lidí. Žádný jiný bezplatný nástroj v češtině nenabízí takovou hloubku." data-en="A comprehensive reading of your name and date of birth. Life path, soul, personality, destiny, maturity number, karmic and master numbers, Pythagorean grid, personal year and day, life pinnacles and partner synastry — a numerological compatibility reading for two people. No other free tool in Czech offers this depth.">
+        Komplexní výklad vašeho jména a data narození. Číslo životní cesty, duše, osobnosti, osudu, číslo zralosti, karmická čísla, mistrovská čísla, Pythagorova mřížka, osobní rok a den, životní vrcholy a partnerská synastrie — numerologická kompatibilita dvou lidí. Žádný jiný bezplatný nástroj v češtině nenabízí takovou hloubku.
+      </p>
+    </div>
+
+    <!-- 1.2.4 Astrolog -->
+    <div class="tool-card">
+      <span class="tool-icon">☽</span>
+      <div class="section-label" data-cs="1.2.4 — Astrolog" data-en="1.2.4 — Astrolog">1.2.4 — Astrolog</div>
+      <h3 class="about-h3" data-cs="Astrolog — Horoskop dle Dr. Jana Kefera" data-en="Astrolog — Chart by Dr. Jan Kefer">Astrolog — Horoskop dle Dr. Jana Kefera</h3>
+      <p class="tool-desc" data-cs="Plnohodnotný astrologický horoskop postavený na odkazu Dr. Jana Kefera — legendárního českého astrologa a hermetika. Stačí zadat město narození — polohu dohledáme automaticky. Výpočty pokrývají planetární pozice, domy, sektu, esenciální dignity, arabské losy, temperament, profekce a Firdárii. SVG kolo horoskopu generované přímo ve vašem prohlížeči." data-en="A full astrological chart built on the legacy of Dr. Jan Kefer — a legendary Czech astrologer and hermeticist. Just enter your city of birth — we look up the coordinates automatically. Calculations cover planetary positions, houses, sect, essential dignities, Arabic lots, temperament, profections and Firdaria. The horoscope wheel is rendered as an SVG directly in your browser.">
+        Plnohodnotný astrologický horoskop postavený na odkazu Dr. Jana Kefera — legendárního českého astrologa a hermetika. Stačí zadat město narození — polohu dohledáme automaticky. Výpočty pokrývají planetární pozice, domy, sektu, esenciální dignity, arabské losy, temperament, profekce a Firdárii. SVG kolo horoskopu generované přímo ve vašem prohlížeči.
+      </p>
+    </div>
+
+    <!-- 1.2.5 Somnium -->
+    <div class="tool-card">
+      <span class="tool-icon">🌙</span>
+      <div class="section-label" data-cs="1.2.5 — Somnium" data-en="1.2.5 — Somnium">1.2.5 — Somnium</div>
+      <h3 class="about-h3" data-cs="Somnium — Výklad snů" data-en="Somnium — Dream Reading">Somnium — Výklad snů</h3>
+      <p class="tool-desc" data-cs="Personalizovaný snář postavený na jungiánské archetypalní symbolice. Zadáte symbol, emoci, děj a kontext svého snu — a Somnium složí jedinečný výklad psaný v arkaické češtině, barokním jazykem starých herbářů a snářů. Každá interpretace je výsledkem ručně sestaveného pravidlového enginu — žádné generické odpovědi, žádné šablony." data-en="A personalised dream reader built on Jungian archetypal symbolism. You provide the symbol, emotion, action and context of your dream — and Somnium composes a unique reading written in archaic Czech, in the baroque language of old herbals and dream books. Every interpretation comes from a hand-crafted rule engine — no generic responses, no templates.">
+        Personalizovaný snář postavený na jungiánské archetypalní symbolice. Zadáte symbol, emoci, děj a kontext svého snu — a Somnium složí jedinečný výklad psaný v arkaické češtině, barokním jazykem starých herbářů a snářů. Každá interpretace je výsledkem ručně sestaveného pravidlového enginu — žádné generické odpovědi, žádné šablony.
+      </p>
+    </div>
+
+    <!-- 1.2.6 Karolky -->
+    <div class="tool-card">
+      <span class="tool-icon">🃏</span>
+      <div class="section-label" data-cs="1.2.6 — Karolky Pasiáns" data-en="1.2.6 — Karolky Solitaire">1.2.6 — Karolky Pasiáns</div>
+      <h3 class="about-h3" data-cs="Karolky Pasiáns" data-en="Karolky Solitaire">Karolky Pasiáns</h3>
+      <p class="tool-desc" data-cs="Double Klondike se 104 kartami. Tři kola se stupňující se obtížností lízu — drag &amp; drop i dotykové ovládání. Největší zkouška trpělivosti, bez reklam a bez odpočítávání." data-en="Double Klondike with 104 cards. Three rounds with progressively tightening draw rules — drag and drop and touch controls. The ultimate patience test, ad-free and untimed.">
+        Double Klondike se 104 kartami. Tři kola se stupňující se obtížností lízu — drag &amp; drop i dotykové ovládání. Největší zkouška trpělivosti, bez reklam a bez odpočítávání.
+      </p>
+    </div>
+
+  </div><!-- /.tools-grid -->
+
+  <div class="ornament">✦ · · · ✦</div>
+
+  <!-- SEKCE 2: Proč česky -->
+  <div class="about-section">
+    <div class="section-label" data-cs="2 — Proč česky (a anglicky)" data-en="2 — Why Czech (and English)">2 — Proč česky (a anglicky)</div>
+    <p class="about-p" data-cs="Česká ezoterická tradice je bohatá a nedostatečně digitalizovaná. Oracoolio chce být místem, kde tato tradice žije v moderní formě — dostupná každému, kdo hledá. Anglická verze vznikla proto, aby Kefer, Somnium a český přístup k hermetismu mohly oslovit i širší publikum." data-en="The Czech esoteric tradition is rich and underdigitised. Oracoolio aims to be a place where this tradition lives in modern form — accessible to anyone who seeks it. The English version exists so that Kefer, Somnium and the Czech approach to hermeticism can reach a broader audience.">
+      Česká ezoterická tradice je bohatá a nedostatečně digitalizovaná. Oracoolio chce být místem, kde tato tradice žije v moderní formě — dostupná každému, kdo hledá. Anglická verze vznikla proto, aby Kefer, Somnium a český přístup k hermetismu mohly oslovit i širší publikum.
+    </p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <div class="cta-ornament">· · ✦ · ·</div>
+    <div class="cta-headline" data-cs="Připraveni?" data-en="Ready?">Připraveni?</div>
+    <div class="cta-sub" data-cs="Vstupte do Oracoolia a vyberte svůj nástroj." data-en="Enter Oracoolio and choose your path.">Vstupte do Oracoolia a vyberte svůj nástroj.</div>
+    <a href="../index.html" class="cta-btn" data-cs="← Zpět do Oracoolia" data-en="← Back to Oracoolio">← Zpět do Oracoolia</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="about-footer">
+    <div class="footer-links">
+      <a href="https://ember-pa.cz" target="_blank" rel="noopener" class="footer-link footer-ember">🔥 Ember PA</a>
+      <span class="footer-sep">|</span>
+      <a href="https://myscriptorium.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">👾 Scriptorium</a>
+      <span class="footer-sep">|</span>
+      <a href="https://occultix.app" target="_blank" rel="noopener" class="footer-link footer-beer">⛧ Occultix</a>
+      <span class="footer-sep">|</span>
+      <a href="https://fractout.com" target="_blank" rel="noopener" class="footer-link footer-doupe">𖦹ׂ Fractout</a>
+      <span class="footer-sep">|</span>
+      <a href="https://newsandradio.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">📰 Jouza News&amp;Radio 📻</a>
+    </div>
+    <div class="footer-credit">
+      Vyvíjeno s <span class="footer-heart">❤️</span> v Novém Boru. By <a href="https://ember-pa.cz" target="_blank" rel="noopener">Ondrex</a>
+    </div>
+  </footer>
+
+</div><!-- /#about-root -->
+
+<!-- Starfield canvas -->
+<script>
+(function() {
+  const canvas = document.getElementById('about-canvas');
+  const ctx = canvas.getContext('2d');
+  const GOLD = 'rgba(201,168,76,';
+  let stars = [];
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    draw();
+  }
+
+  function initStars(n) {
+    stars = [];
+    for (let i = 0; i < n; i++) {
+      stars.push({
+        x: Math.random(), y: Math.random(),
+        r: Math.random() * 1.2 + 0.2,
+        a: Math.random() * 0.6 + 0.15,
+        speed: Math.random() * 0.0003 + 0.0001,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function draw() {
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+    const t = Date.now() * 0.001;
+    stars.forEach(s => {
+      const pulse = s.a * (0.7 + 0.3 * Math.sin(t * s.speed * 1000 + s.phase));
+      ctx.beginPath();
+      ctx.arc(s.x * W, s.y * H, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = GOLD + pulse + ')';
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+
+  initStars(180);
+  resize();
+  window.addEventListener('resize', resize);
+})();
+</script>
+
+<!-- Lokalizace -->
+<script>
+function setLang(lang) {
+  localStorage.setItem('oracoolio_lang', lang);
+  document.documentElement.lang = lang;
+
+  // Title tag
+  const titleEl = document.querySelector('title');
+  if (titleEl) {
+    titleEl.textContent = lang === 'en'
+      ? 'About Oracoolio — Free Oracle Online | Oracoolio'
+      : 'O Oracooliu — Bezplatná věštírna online | Oracoolio';
+  }
+
+  // Lang buttons
+  document.getElementById('btn-lang-cs').classList.toggle('active', lang === 'cs');
+  document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
+
+  // data-cs / data-en elements
+  document.querySelectorAll('[data-cs]').forEach(el => {
+    const val = lang === 'en' ? el.dataset.en : el.dataset.cs;
+    if (!val) return;
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.placeholder = val;
+    } else {
+      el.textContent = val;
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('oracoolio_lang');
+  const browser = (navigator.language || 'cs').startsWith('en') ? 'en' : 'cs';
+  setLang(saved || browser);
+});
+</script>
+
+</body>
+</html>
