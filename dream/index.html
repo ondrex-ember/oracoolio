@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somnium — Výklad snů | Oracoolio</title>
+  <meta name="description" content="Personalizovaný výklad snů postavený na jungiovské symbolice. Symbol, emoce, děj a kontext — zrcadlo tvé noci.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://oracoolio.com/dream/">
+  <meta name="author" content="ondrex">
+  <meta name="language" content="cs">
+  <meta name="geo.region" content="CZ">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="cs_CZ">
+  <meta property="og:site_name"   content="Oracoolio">
+  <meta property="og:title"       content="Somnium — Výklad snů | Oracoolio">
+  <meta property="og:description" content="Personalizovaný výklad snů. Symbol, emoce, děj, kontext — zrcadlo tvé noci.">
+  <meta property="og:url"         content="https://oracoolio.com/dream/">
+  <meta property="og:image"       content="https://oracoolio.com/assets/og-image.jpg">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Somnium — Výklad snů | Oracoolio">
+  <meta name="twitter:description" content="Personalizovaný výklad snů zdarma online.">
+  <meta name="twitter:image"       content="https://oracoolio.com/assets/og-image.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Oracoolio Somnium",
+    "url": "https://oracoolio.com/dream/",
+    "description": "Personalizovaný výklad snů postavený na jungiovské symbolice.",
+    "applicationCategory": "EntertainmentApplication",
+    "operatingSystem": "Web",
+    "publisher": { "@type": "Organization", "name": "Oracoolio", "url": "https://oracoolio.com/" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CZK" },
+    "inLanguage": ["cs"]
+  }
+  </script>
+
+  <!-- Analytics — stejné jako numero.html -->
+  <meta name="google-site-verification" content="HeChd4paxpWn6emGa3HjuQyFjuCw85kWsUwtk1IRobY">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW6CLRYTF3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW6CLRYTF3');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG6N9KV');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vp48p83k4t");</script>
+
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#09090f">
+
+  <link rel="stylesheet" href="somnium.css">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Hvězdné pozadí — ID shodné s Oracoolio konvencí -->
+<canvas id="sky-canvas"></canvas>
+
+<div class="som-wrap">
+
+  <!-- Back — identický pattern jako numero.html -->
+  <div style="padding:0">
+    <a href="../index.html" class="back-btn">← Zpět do Oracoolia</a>
+  </div>
+
+  <!-- Nadpis -->
+  <div class="page-title">
+    <h1>Oracoolio Somnium</h1>
+    <p class="subtitle">Personalizovaný výklad snů</p>
+    <div class="title-divider"></div>
+  </div>
+
+  <!-- Step indicator -->
+  <div class="step-indicator" aria-label="Průběh">
+    <div class="step-dot"></div>
+    <div class="step-dot"></div>
+    <div class="step-dot"></div>
+    <div class="step-dot"></div>
+  </div>
+
+  <!-- Hlavní obsah — vyplní somnium.js -->
+  <main id="app-main"></main>
+
+</div>
+
+<!-- Spodní navigace -->
+<div class="bottom-nav">
+  <button id="btn-back" class="btn-back hidden">← Zpět</button>
+</div>
+
+<!-- Engine jako ES modul -->
+<script type="module" src="somnium.js"></script>
+
+</body>
+</html>
