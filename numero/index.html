@@ -6,7 +6,7 @@
   <title>Numero — Numerologický rozbor | Oracoolio</title>
   <meta name="description" content="Kompletní numerologický rozbor vaší duše zdarma. Životní číslo, číslo duše, osobnosti, mřížka, cykly a partnerská shoda.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://oracoolio.com/numero/">
+  <link rel="canonical" href="https://oracoolio.com/numero.html">
   <meta name="author" content="ondrex">
   <meta name="language" content="cs">
   <meta name="geo.region" content="CZ">
@@ -15,22 +15,22 @@
   <meta property="og:site_name"   content="Oracoolio">
   <meta property="og:title"       content="Numero — Numerologický rozbor zdarma | Oracoolio">
   <meta property="og:description" content="Kompletní numerologický rozbor vaší duše. Životní číslo, mřížka, cykly a partnerská shoda zdarma.">
-  <meta property="og:url"         content="https://oracoolio.com/numero/">
+  <meta property="og:url"         content="https://oracoolio.com/numero.html">
   <meta property="og:image"       content="https://oracoolio.com/assets/og-image.jpg">
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Numero — Numerologický rozbor zdarma | Oracoolio">
   <meta name="twitter:description" content="Kompletní numerologický rozbor vaší duše zdarma online.">
   <meta name="twitter:image"       content="https://oracoolio.com/assets/og-image.jpg">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Oracoolio Numero","url":"https://oracoolio.com/numero/","description":"Kompletní numerologický rozbor vaší duše zdarma.","applicationCategory":"EntertainmentApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Oracoolio","url":"https://oracoolio.com/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"CZK"},"inLanguage":["cs","en"]}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Oracoolio Numero","url":"https://oracoolio.com/numero.html","description":"Kompletní numerologický rozbor vaší duše zdarma.","applicationCategory":"EntertainmentApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Oracoolio","url":"https://oracoolio.com/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"CZK"},"inLanguage":["cs","en"]}
   </script>
   <meta name="google-site-verification" content="HeChd4paxpWn6emGa3HjuQyFjuCw85kWsUwtk1IRobY">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW6CLRYTF3"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW6CLRYTF3');</script>
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG6N9KV');</script>
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vp48p83k4t");</script>
-  <link rel="icon" href="../assets/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <meta name="theme-color" content="#09090f">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="numero.css">
@@ -54,6 +54,42 @@
       margin: 20px 0 10px 0;
     }
     .back-btn:hover { border-color: rgba(201,168,76,0.7); color: rgba(201,168,76,1); }
+    /* Header row — back btn + lang switch */
+    .num-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0 10px;
+    }
+    .num-lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+    }
+    .nlang-btn {
+      background: none;
+      border: 1px solid rgba(201,168,76,0.25);
+      color: rgba(201,168,76,0.35);
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      letter-spacing: inherit;
+      transition: all 0.2s;
+    }
+    .nlang-btn.active {
+      border-color: rgba(201,168,76,0.8);
+      color: rgba(201,168,76,1);
+    }
+    .nlang-btn:hover:not(.active) {
+      border-color: rgba(201,168,76,0.5);
+      color: rgba(201,168,76,0.7);
+    }
+    .num-lang-sep { color: rgba(201,168,76,0.25); }
   </style>
 </head>
 <body>
@@ -62,8 +98,13 @@
 <canvas id="sky-canvas"></canvas>
 
 <div class="container">
-  <div style="padding: 20px 0 0 0;">
+  <div class="num-header">
     <a href="../index.html" class="back-btn" data-cs="← Zpět do Oracoolia" data-en="← Back to Oracoolio">← Zpět do Oracoolia</a>
+    <div class="num-lang-switch">
+      <button onclick="setLang('cs')" id="btn-lang-cs" class="nlang-btn active">CS</button>
+      <span class="num-lang-sep">|</span>
+      <button onclick="setLang('en')" id="btn-lang-en" class="nlang-btn">EN</button>
+    </div>
   </div>
 
   <div class="page-title">
@@ -125,16 +166,7 @@
     <div id="outputArea"></div>
   </div>
 
-  <!-- Lang switch -->
-  <div style="position:fixed;top:16px;right:20px;display:flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.1em;z-index:100;">
-    <button onclick="setLang('cs')" id="btn-lang-cs"
-            style="background:none;border:1px solid rgba(201,168,76,0.4);color:rgba(201,168,76,0.5);padding:4px 10px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:inherit;letter-spacing:inherit;transition:all 0.2s;"
-            class="nlang-btn active">CS</button>
-    <span style="color:rgba(201,168,76,0.3);">|</span>
-    <button onclick="setLang('en')" id="btn-lang-en"
-            style="background:none;border:1px solid rgba(201,168,76,0.2);color:rgba(201,168,76,0.3);padding:4px 10px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:inherit;letter-spacing:inherit;transition:all 0.2s;"
-            class="nlang-btn">EN</button>
-  </div>
+
 </div>
 
 <script src="numero.js" defer></script>
