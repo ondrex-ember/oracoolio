@@ -1,0 +1,4970 @@
+{
+  "version": "1",
+  "last_updated": "2026-06-03",
+  "symbols": {
+    "auto": {
+      "id": "auto",
+      "label": "Auto",
+      "category": "objekty",
+      "base_meaning": "Nástroj vůle a směřování, jenž ukazuje, kdo řídí život snícího.",
+      "extended_meaning": "Auto jest ve snech obrazem osobní vůle a schopnosti řídit vlastní osud — kdo sedí za volantem, jest otázkou první a nejdůležitější. Řídí-li snící sám, jest pánem svého směřování; sedí-li na místě spolujezdce či na zadním sedadle, přenechal někому jinému moc nad svým životem. Brzdy nefungující, cesta neznámá či vůz nekontrolovatelný věstí pocit ztráty kontroly v bdělém životě. Značka, stav a barva vozu jsou zrcadlem toho, jak snící vnímá svou osobní sílu a společenské postavení.",
+      "illustration": "auto_volant.svg",
+      "tags": [
+        "kontrola",
+        "vule",
+        "smer",
+        "identita",
+        "spolecnost",
+        "rychlost",
+        "ztrata_kontroly"
+      ],
+      "relevant_verbs": [
+        "riditi",
+        "zratiti_oporu",
+        "prchati",
+        "padati"
+      ],
+      "related_symbols": [
+        "cesta",
+        "krizovatha",
+        "most",
+        "kridla",
+        "persona"
+      ],
+      "frequency_rank": 9,
+      "archetypal_domain": "persona",
+      "secondary_domain": "animus",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "bource": {
+      "id": "bource",
+      "label": "Bouře",
+      "category": "priroda",
+      "base_meaning": "Nezkrocená síla, jež přichází zvenčí a otřásá vším, co stojí.",
+      "extended_meaning": "Bouře ve snech jest ohlášením onoho, co snící nemohl řídit ani odvrátiti. Přichází jako hněv nebí, jako spravedlnost bez tváře, jako zkoušení pevnosti toho, co bylo postaveno. Kdo bouři přestojí, ten prošel ohněm přeměny — kdo se před ní skryje, ten vyčká, ale nezíská.",
+      "illustration": "bource_blesk.svg",
+      "tags": [
+        "chaos",
+        "sila",
+        "zmena",
+        "hrozba",
+        "zkouska",
+        "priroda"
+      ],
+      "relevant_verbs": [
+        "prchati",
+        "zustati_stat",
+        "staveti"
+      ],
+      "related_symbols": [
+        "dest",
+        "more",
+        "hora",
+        "ohen"
+      ],
+      "frequency_rank": 14,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "shadow",
+      "added_version": "1",
+      "content_status": "complete"
+    },
+    "cesta": {
+      "id": "cesta",
+      "label": "Cesta",
+      "category": "mista",
+      "base_meaning": "Směřování života, jehož průběh i cíl jsou otázkou snícímu kladenouу.",
+      "extended_meaning": "Cesta jest ve snech obrazem samotného průběhu života — ne cíle, nýbrž pohybu k němu. Její podoba mluví jasně: cesta přímá a otevřená věstí jasnost záměru; cesta zarostlá či rozvětvená ukazuje na rozcestí a nerozhodnutost. Ztratiti cestu v lese jest ztratiti orientaci v životě; nalézti neočekávanou zkratku jest intuitivním průlomem. Kdo kráčí po cestě, jest aktérem vlastního osudu; kdo na cestě stojí bez pohybu, jest snícím v bodě, kdy se volba stala nevyhnutelnou.",
+      "illustration": "cesta_rozcesti.svg",
+      "tags": [
+        "smer",
+        "volba",
+        "pohyb",
+        "zivot",
+        "orientace",
+        "transformace",
+        "individualita"
+      ],
+      "relevant_verbs": [
+        "kraceti",
+        "bloudit",
+        "odbociti",
+        "zastaviti_se",
+        "prchati"
+      ],
+      "related_symbols": [
+        "rozcesti",
+        "most",
+        "auto",
+        "les",
+        "hora",
+        "brana"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "cizi_clovek": {
+      "id": "cizi_clovek",
+      "label": "Cizinec",
+      "category": "lide",
+      "base_meaning": "Neznámá postava, jež nese tvář toho, co snící v sobě dosud nepoznal.",
+      "extended_meaning": "Cizinec ve snu není náhodným kolemjdoucím — jest poslem z hlubin psýché, jehož podoba odpovídá tomu, co zůstává neintegrováno. Muž-cizinec v snu ženy jest často prvním zjevením animu; žena-cizinka v snu muže hlasem animy. Cizinec může přinášeti dar i hrozbu — oboje jsou pozvánkou k setkání se sebou samým v neznámé podobě. Odmítnouti cizince jest odmítnouti část vlastní duše; přijmouti jej jest krokem k celistvosti, jež přesahuje to, čím snící dosud byl.",
+      "illustration": "cizi_clovek_setkani.svg",
+      "tags": [
+        "stin",
+        "anima",
+        "animus",
+        "integrace",
+        "neznamo",
+        "posel",
+        "setkani"
+      ],
+      "relevant_verbs": [
+        "setkati_se",
+        "prchati",
+        "otociti_se",
+        "vstoupiti"
+      ],
+      "related_symbols": [
+        "stin",
+        "anima",
+        "animus",
+        "maska",
+        "pronasledovani",
+        "posel"
+      ],
+      "frequency_rank": 11,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "anima",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "dest": {
+      "id": "dest",
+      "label": "Déšť",
+      "category": "priroda",
+      "base_meaning": "Voda přicházející shora — očista, jíž nelze uniknout, a přece lze v ní stanout.",
+      "extended_meaning": "Déšť jest ve snech obrazem toho, co přichází bez pozvání a proměňuje vše, čeho se dotkne. Jest symbolem očisty — ale také náhlé zranitelnosti: snící, jenž jest zmočen deštěm, nemůže předstírat, že jest chráněn. Jemný déšť mluví o tichém uvolnění napětí, o slzách, jež konečně přišly; průtrž mračen mluví o zahlcení, o emoci, jež čekala příliš dlouho. Déšť otvírá zemi — a tato metafora jest ve snech mocná: co bylo suché a uzavřené, stává se po dešti přijímajícím a živým. Stát v dešti bez strachu jest ve snech obrazem přijetí vlastní zranitelnosti.",
+      "illustration": "dest_ocista.svg",
+      "tags": [
+        "ocista",
+        "zranitelnost",
+        "uvolneni",
+        "transformace",
+        "zahlceni",
+        "voda",
+        "prijeti"
+      ],
+      "relevant_verbs": [
+        "mociti",
+        "prchati",
+        "zastaviti_se",
+        "otevirati",
+        "plakat"
+      ],
+      "related_symbols": [
+        "voda",
+        "more",
+        "reka",
+        "led",
+        "strom",
+        "tma"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "dite": {
+      "id": "dite",
+      "label": "Dítě",
+      "category": "osoby",
+      "base_meaning": "Nejzranitelnější část snícího — a ta, která si dosud pamatuje, proč jest život krásný.",
+      "extended_meaning": "Dítě jest ve snech archetypálním obrazem původu: toho, čím snící byl před tím, než se naučil skrývat, přizpůsobovat a chránit. Jest symbolem nevinnosti — ale nevinnosti jako síly, ne slabosti: dítě ve snu nese v sobě možnost, jež dospělost zatemnila. Ohrožené dítě mluví o části snícího, jež jest zranitelná a nechráněná, o vnitřním dítěti, jež volá o pozornost. Dítě hrající si jest obrazem živosti, jíž se snící odcizil. Nalézt dítě jest obrazem znovunalezení sebe sama v jeho původní, nedeformované podobě — a toto nalezení jest jedním z nejhlubších darů, jež sen může přinésti.",
+      "illustration": "dite_nevinnost.svg",
+      "tags": [
+        "nevinnost",
+        "zranitelnost",
+        "puvod",
+        "vitalita",
+        "hravost",
+        "anima",
+        "znovunalezeni"
+      ],
+      "relevant_verbs": [
+        "chraniti",
+        "opustiti",
+        "naleznouti",
+        "hrati_si",
+        "plakat"
+      ],
+      "related_symbols": [
+        "matka",
+        "anima",
+        "skola",
+        "rodina",
+        "dům",
+        "svetlo"
+      ],
+      "frequency_rank": 9,
+      "archetypal_domain": "anima",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "domov": {
+      "id": "domov",
+      "label": "Domov",
+      "category": "mista",
+      "base_meaning": "Místo, kam snící patří — nebo místo, jež hledá a nenachází.",
+      "extended_meaning": "Domov jest ve snech obrazem zakořenění a bezpečí v jejich nejhlubší podobě: ne nutně konkrétní stavbou, nýbrž pocitem příslušnosti, místem kde snící smí být sám sebou bez masky. Nalézti domov jest obrazem integrace — self, jež nalezlo své místo. Ztratiti domov jest jedním z nejbolestivějších snových obrazů: dezorientace, pocit, že svět nemá střed. Cizí domov nebo domov proměněný mluví o odcizení od vlastního původu, o části snícího, jíž se domov stal nepřístupným. Budovati domov mluví o vědomém úsilí k zakořenění — o snícím, jenž se rozhodl vytvořit to, co nenašel.",
+      "illustration": "domov_zakorenost.svg",
+      "tags": [
+        "zakorenost",
+        "bezpeci",
+        "self",
+        "prijeti",
+        "ztrata",
+        "patalezitost",
+        "puvod"
+      ],
+      "relevant_verbs": [
+        "navratiti_se",
+        "ztratiti",
+        "budovat",
+        "opustiti",
+        "hledati"
+      ],
+      "related_symbols": [
+        "dum",
+        "matka",
+        "rodina",
+        "pes",
+        "dite",
+        "svetlo"
+      ],
+      "frequency_rank": 10,
+      "archetypal_domain": "self",
+      "secondary_domain": "collective",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "drak": {
+      "id": "drak",
+      "label": "Drak",
+      "category": "zvirata",
+      "base_meaning": "Nejstarší strážce pokladu — chaos v jeho nejvelkolepější podobě.",
+      "extended_meaning": "Drak jest ve snech archetypálním obrazem kolektivního stínu: bytostí, jež jest příliš velká na to, aby byla potlačena, a příliš stará na to, aby byla ignorována. Na rozdíl od hada, jenž jest intimní a osobní, jest drak kosmický — představuje síly, jež přesahují jednotlivce a patří k mytické vrstvě psýché. Drak střežící poklad mluví o tom, že největší hodnoty jsou chráněny největším strachem: aby snící dosáhl toho, po čem touží, musí projít skrze to, čeho se nejvíce bojí. Drak přemožený neznamená nic, pokud snící nepochopil, čím drak byl — neboť přemoci bez porozumění jest jen jiný útěk.",
+      "illustration": "drak_chaos.svg",
+      "tags": [
+        "kolektivni_stin",
+        "chaos",
+        "sila",
+        "poklad",
+        "strach",
+        "mytus",
+        "transformace"
+      ],
+      "relevant_verbs": [
+        "celiti",
+        "prchati",
+        "premoci",
+        "konfrontovati",
+        "leteti"
+      ],
+      "related_symbols": [
+        "had",
+        "vlk",
+        "zbran",
+        "les",
+        "hora",
+        "collective"
+      ],
+      "frequency_rank": 7,
+      "archetypal_domain": "collective",
+      "secondary_domain": "shadow",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "dum": {
+      "id": "dum",
+      "label": "Dům",
+      "category": "mista",
+      "base_meaning": "Obydlí duše, jehož pokoje jsou vrstvami psýché samé.",
+      "extended_meaning": "Dům jest ve snové symbolice nejdůvěrnějším obrazem snícího jako celku — každé patro, každý pokoj, každý sklep i půda odpovídají vrstvám jeho nitra. Sklep věstí nevědomé a potlačené, půda pak sny a myšlenky nezpracované; fasáda jest personou, maskou ukazovanou světu. Dům polorozpadlý mluví o zanedbané části sebe sama, dům neznámý s mnoha pokoji zve ke zkoumání toho, co v sobě snící dosud neobjevil. Jung sám užíval obrazu domu jako základní metafory pro strukturu psýché.",
+      "illustration": "dum_psyhe.svg",
+      "tags": [
+        "psyhe",
+        "identita",
+        "persona",
+        "nevedomi",
+        "rodina",
+        "bezpeci",
+        "tajemstvi"
+      ],
+      "relevant_verbs": [
+        "vstoupiti",
+        "vyjiti",
+        "skryti_se",
+        "prohledavati",
+        "zamknout"
+      ],
+      "related_symbols": [
+        "sklep",
+        "puda",
+        "dvere",
+        "okno",
+        "schody"
+      ],
+      "frequency_rank": 6,
+      "archetypal_domain": "self",
+      "secondary_domain": "persona",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "had": {
+      "id": "had",
+      "label": "Had",
+      "category": "zvirata",
+      "base_meaning": "Skrytá hrozba a zrada, leč i prastará moudrost a léčení.",
+      "extended_meaning": "Plazivec z hlubin zemských, jenž kůži svou svléká a věčně se znovuzrozuje. Ve snech zjevený často věští zradu úkladnou či pokušení tělesné, avšak zasvěceným přináší klíče k tajnému vědění, alchymické proměně ducha a probuzení síly dřímající.",
+      "illustration": "snake_uroboros.svg",
+      "tags": [
+        "zvirata",
+        "moudrost",
+        "zrada",
+        "transformace",
+        "pokuseni",
+        "jed"
+      ],
+      "relevant_verbs": [
+        "ustknouti",
+        "plazit_se",
+        "syceti",
+        "svlekat_kuzi",
+        "ovinouti"
+      ],
+      "related_symbols": [
+        "drak",
+        "jablko",
+        "hul_asklepiova",
+        "strom_poznani"
+      ],
+      "frequency_rank": 1,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "trickster",
+      "added_version": "1",
+      "content_status": "complete"
+    },
+    "hora": {
+      "id": "hora",
+      "label": "Hora",
+      "category": "priroda",
+      "base_meaning": "Vrchol, k němuž se stoupá — a z nějž jest vždy daleko vidět.",
+      "extended_meaning": "Hora jest ve snech obrazem individuace v její nejdoslovnější podobě: stoupání jest namáhavé, cesta není přímá a vrchol bývá zahalen mlhou ještě dlouho poté, co snící vyrazil. Jest symbolem úsilí o celistvost — ne triumfu, nýbrž pohybu směrem vzhůru navzdory únavě a pochybám. Dosáhnouti vrcholu jest vzácné; častěji snící stoupá, zabloudit nebo se zastaví — a právě tato místa na cestě jsou poselstvím. Hora jest také místem zjevení: co bylo dole skryto, jest odshora viditelné, a tato perspektiva jest darem, jenž se jinak nedostává.",
+      "illustration": "hora_vrchol.svg",
+      "tags": [
+        "individuace",
+        "usili",
+        "perspektiva",
+        "cil",
+        "rust",
+        "odhodlani",
+        "jasnost"
+      ],
+      "relevant_verbs": [
+        "stoupati",
+        "klesati",
+        "zastaviti_se",
+        "bloudit",
+        "hledeti"
+      ],
+      "related_symbols": [
+        "cesta",
+        "oblak",
+        "pad",
+        "propast",
+        "strom",
+        "svetlo"
+      ],
+      "frequency_rank": 6,
+      "archetypal_domain": "self",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "hrbitov": {
+      "id": "hrbitov",
+      "label": "Hřbitov",
+      "category": "mista",
+      "base_meaning": "Místo, kde jsou uloženy konce — a kde snící zjistí, co z toho zůstalo živé.",
+      "extended_meaning": "Hřbitov jest ve snech místem paměti a smrtelnosti: ne nutně místem strachu, nýbrž místem pravdy o pomíjivosti. Navštíviti hřbitov ve snu jest obrazem konfrontace s vlastní mortalitou nebo s tím, co v životě snícího zemřelo — vztah, část identity, fáze existence. Hroby cizí mluví o kolektivní paměti, o vědomí, že snící jest součástí proudu životů, jež přišly a odešly. Vlastní hrob jest jedním z nejsilnějších snových obrazů: nikoliv prokletí, nýbrž výzva — podívati se na vlastní konec a vrátiti se k životu změněn. Hřbitov plný květin mluví o přijetí; hřbitov zanedbaný mluví o odmítání truchlit.",
+      "illustration": "hrbitov_pamet.svg",
+      "tags": [
+        "mortalita",
+        "pamet",
+        "konec",
+        "truchleni",
+        "kolektivni",
+        "pravda",
+        "pomíjivost"
+      ],
+      "relevant_verbs": [
+        "navstiviti",
+        "truchliti",
+        "zapaliti_svici",
+        "cist_napis",
+        "odejiti"
+      ],
+      "related_symbols": [
+        "smrt",
+        "tma",
+        "kvet",
+        "collective",
+        "les"
+      ],
+      "frequency_rank": 9,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "collective",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "jaro": {
+      "id": "jaro",
+      "label": "Jaro",
+      "category": "priroda",
+      "base_meaning": "Návrat, jenž nepotřebuje vysvětlení — jen zemi, jež vydržela zimu.",
+      "extended_meaning": "Jaro jest ve snech obrazem znovuzrození po temné fázi: ne popřením zimy, nýbrž důkazem, že zima neměla poslední slovo. Jest to jeden z mála archetypálních obrazů, jenž nese v sobě příslib bez podmínek — vědomí, že cykly pokračují a že to, co zmrzlo, může znovu roztát. Jaro přicházející mluví o fázi obnovy v psýché snícího: o energii, jež se vrací po vyčerpání, o naději, jež vyklíčila z přežitého. Jaro, jež nepřichází, mluví o depresi nebo o zaseknutí v zimní fázi — o části snícího, jež nevěří, že obnova jest možná. Být v jaru mluví o přítomnosti v okamžiku plném potenciálu: snící jest na začátku něčeho, co teprve ukáže, čím se stane.",
+      "illustration": "jaro_znovuzrozeni.svg",
+      "tags": [
+        "znovuzrozeni",
+        "cyklus",
+        "nadeji",
+        "obnova",
+        "potencial",
+        "zima",
+        "prichod"
+      ],
+      "relevant_verbs": [
+        "vyklicit",
+        "roztati",
+        "cekat",
+        "probudit_se",
+        "sadit"
+      ],
+      "related_symbols": [
+        "kvet",
+        "strom",
+        "svetlo",
+        "slunce",
+        "transformation",
+        "nemoc",
+        "zima"
+      ],
+      "frequency_rank": 9,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "jidlo": {
+      "id": "jidlo",
+      "label": "Jídlo",
+      "category": "predmety",
+      "base_meaning": "Co snící přijímá do těla — a co odmítá přijmout do života.",
+      "extended_meaning": "Jídlo jest ve snech obrazem přijímání: nikoliv jen výživy těla, nýbrž přijímání zkušenosti, lásky, života samotného. Hodovat mluví o hojnosti a sdílení, o části snícího, jež jest otevřená a přijímající. Odmítati jídlo mluví o části snícího, jež se uzavřela — z kontroly, ze strachu nebo z hlubokého smutku. Jídlo zkažené nebo otravné mluví o tom, co bylo přijato a co škodí — o vztahu, prostředí nebo přesvědčení, jež snícího ničí. Hladovět ve snu jest obrazem vyčerpání životní síly: snící potřebuje něco, co nedostává — a to něco jest zřídkakdy jen pokrm.",
+      "illustration": "jidlo_prijimani.svg",
+      "tags": [
+        "life_force",
+        "touha",
+        "prijimani",
+        "odmitnuti",
+        "hojnost",
+        "kontrola",
+        "hlad"
+      ],
+      "relevant_verbs": [
+        "jisti",
+        "odmitnouti",
+        "sdilet",
+        "hladovet",
+        "variti"
+      ],
+      "related_symbols": [
+        "matka",
+        "telo",
+        "nemoc",
+        "stul",
+        "life_force"
+      ],
+      "frequency_rank": 7,
+      "archetypal_domain": "life_force",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "klec": {
+      "id": "klec",
+      "label": "Klec",
+      "category": "objekty",
+      "base_meaning": "Příbytek bez vůle — ohraniční, jež drží uvnitř i venku zároveň.",
+      "extended_meaning": "Klec jest obrazem každého svazku, jenž přestal být úmluvou a stal se vězeňstvím. Ve snech zjevená ukazuje meze, jež snící sám přijal — nebo jež mu byly vloženy bez jeho souhlasu. Stín klece však padá na obě strany: i ten, kdo zamyká, uvězněn jest svým strachem ze ztráty.",
+      "illustration": "klec_prazdna.svg",
+      "tags": [
+        "vezeni",
+        "svoboda",
+        "omezeni",
+        "ovladani",
+        "svazek",
+        "strach"
+      ],
+      "relevant_verbs": [
+        "vstoupiti",
+        "zustati_stat",
+        "prchati"
+      ],
+      "related_symbols": [
+        "dum",
+        "brana",
+        "zed"
+      ],
+      "frequency_rank": 28,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "persona",
+      "added_version": "1",
+      "content_status": "complete"
+    },
+    "kocka": {
+      "id": "kocka",
+      "label": "Kočka",
+      "category": "zvirata",
+      "base_meaning": "Bytost, jež přišla sama od sebe — a odejde, až uzná za vhodné.",
+      "extended_meaning": "Kočka jest ve snech obrazem intuice a nezávislosti: na rozdíl od psa nečeká na souhlas a nežádá o povolení. Představuje v psýché tu část, jež ví bez vysvětlení — temnou, smyslnou, schopnou ticha i náhlého pohybu. Kočka přátelská mluví o přístupu k vlastní intuici, o důvěře ve vnitřní vědění. Kočka hrozivá nebo cizí mluví o části snícího, jíž se snící bojí: o smyslnosti, nezávislosti nebo temném vědění, jež bylo označeno za nebezpečné. Kočka, jež zmizí a vrátí se, mluví o rytmu, jenž není lineární — o části psýché, jež přichází a odchází podle vlastních zákonů.",
+      "illustration": "kocka_intuice.svg",
+      "tags": [
+        "intuice",
+        "nezavislost",
+        "smyslnost",
+        "ticho",
+        "temnost",
+        "anima",
+        "rytmus"
+      ],
+      "relevant_verbs": [
+        "pozorovat",
+        "hladiti",
+        "pustit",
+        "nasledovati",
+        "skryti_se"
+      ],
+      "related_symbols": [
+        "anima",
+        "had",
+        "tma",
+        "zrcadlo",
+        "zvire"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "anima",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "krev": {
+      "id": "krev",
+      "label": "Krev",
+      "category": "substance",
+      "base_meaning": "Životní esence, vášeň palčivá, oběť krvavá i rodová pouta.",
+      "extended_meaning": "Rudá tekutina, v níž koluje sama duše a síla předků. Prolita-li jest na zem, zmar a rány osudu věští. Však pije-li se z kalichu či tepem v žilách buší, značí přísahu nezrušitelnou, sílu nezdolnou a spojení temných i světlých principů v jedno.",
+      "illustration": "blood_drop.svg",
+      "tags": [
+        "zivot",
+        "obet",
+        "zraneni",
+        "rod",
+        "vassen",
+        "esence",
+        "bolest"
+      ],
+      "relevant_verbs": [
+        "krvacet",
+        "prolit",
+        "pit",
+        "pulzovati",
+        "srazet_se"
+      ],
+      "related_symbols": [
+        "srdce",
+        "nuz",
+        "kalich",
+        "upir",
+        "rana_otevrena"
+      ],
+      "frequency_rank": 4,
+      "archetypal_domain": "life_force",
+      "secondary_domain": "anima",
+      "added_version": "1",
+      "content_status": "complete"
+    },
+    "kridla": {
+      "id": "kridla",
+      "label": "Křídla",
+      "category": "telo",
+      "base_meaning": "Co roste na zádech, když snící přestane věřit, že musí zůstat na zemi.",
+      "extended_meaning": "Křídla jsou ve snech obrazem svobody v její nejtelesnější podobě: ne ptáka, jenž létá — nýbrž samotného snícího, jemuž vyrostlo něco, co dosud neměl. Jest to obraz transformace dokončené nebo probíhající: část anima nebo animus, jež nalezla svůj výraz. Křídla příliš malá na vzlet mluví o touze po svobodě, jež dosud nenalezla dost síly; křídla přistřižená mluví o vnější nebo vnitřní síle, jež brání snícímu odletět. Letěti pomocí křídel jest ve snech odlišné od prosté levitace: jest to svoboda, jíž bylo dosaženo vlastním úsilím — a proto jest trvalejší.",
+      "illustration": "kridla_svoboda.svg",
+      "tags": [
+        "svoboda",
+        "transformace",
+        "animus",
+        "vzlet",
+        "telo",
+        "usili",
+        "ruzeni"
+      ],
+      "relevant_verbs": [
+        "vzletnout",
+        "padati",
+        "rozevrit_kridla",
+        "chytiti",
+        "nesti"
+      ],
+      "related_symbols": [
+        "letani",
+        "pad",
+        "ptak",
+        "hora",
+        "oblak",
+        "animus"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "animus",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "kun": {
+      "id": "kun",
+      "label": "Kůň",
+      "category": "zvirata",
+      "base_meaning": "Síla, jež nese — pokud snící ví, jak sedět v sedle.",
+      "extended_meaning": "Kůň jest ve snech obrazem životní síly a vůle v jejich nejtelesnějších podobách: jest to energie, jež může nést snícího kupředu — nebo jej shodit, pokud není v rovnováze s tím, co nese. Kůň zkrocený a poslušný mluví o animus v jeho produktivní podobě: síla usměrněná k účelu. Kůň divoký nebo splašený mluví o energii, jíž se snící bojí a již se pokouší kontrolovat, místo aby s ní spolupracoval. Jezditi na koni jest ve snech obrazem zvládnuté síly — ale zvládnuté skrze vztah, ne skrze nadvládu. Kůň padlý jest jedním z nejsmutnějších snových obrazů: síla vyčerpaná nebo zmařená.",
+      "illustration": "kun_sila.svg",
+      "tags": [
+        "sila",
+        "vule",
+        "animus",
+        "kontrola",
+        "spoluprace",
+        "vitalita",
+        "smer"
+      ],
+      "relevant_verbs": [
+        "jedeti",
+        "zkrotiti",
+        "padnouti",
+        "pustiti",
+        "spolupracovat"
+      ],
+      "related_symbols": [
+        "animus",
+        "vlk",
+        "zbran",
+        "cesta",
+        "hora"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "animus",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "kvet": {
+      "id": "kvet",
+      "label": "Květ",
+      "category": "priroda",
+      "base_meaning": "Pomíjivost, jež se nestydí za svou krásu — ani za svůj konec.",
+      "extended_meaning": "Květ jest ve snech obrazem krásy a pomíjivosti zároveň: bytosti, jež přichází v plnosti a odchází bez lítosti. Jest to jeden z mála snových obrazů, v němž jest mortalita laskavá — připomínka, že krátké může být dokonalé. Květ kvetoucí mluví o fázi plnosti, o okamžiku, kdy jest snící v tom, co jest — a jest to dost. Květ uvadající mluví o přijímání konce, o smutku, jenž jest součástí cyklu. Květ nikdy nekvetoucí mluví o části snícího, jíž nebylo dovoleno rozvinout se: potenciálu zadušeném podmínkami nebo strachem. Pole květů mluví o hojnosti a radosti, o životě, jenž přetéká.",
+      "illustration": "kvet_pomijivost.svg",
+      "tags": [
+        "pomijivost",
+        "krasa",
+        "mortalita",
+        "plnost",
+        "cyklus",
+        "radost",
+        "potencial"
+      ],
+      "relevant_verbs": [
+        "kvesti",
+        "uvadati",
+        "trhat",
+        "sadit",
+        "darovat"
+      ],
+      "related_symbols": [
+        "hrbitov",
+        "strom",
+        "matka",
+        "dite",
+        "svetlo",
+        "jaro"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "led": {
+      "id": "led",
+      "label": "Led",
+      "category": "priroda",
+      "base_meaning": "Voda, jež přestala téci — stagnace nebo ochrana, záleží na tom, co leží pod ním.",
+      "extended_meaning": "Led jest ve snech obrazem toho, co bylo kdysi v pohybu a přestalo: emoce zmrzlá v čase, vztah, jenž ztratil teplo, část snícího, jež se uzavřela a ztuhla jako obrana před bolestí. Kráčeti po ledu jest obrazem situace, kde jest každý krok nejistý a kde tenký povrch skrývá hloubku, jež může pohltit. Led prasklý nebo tající mluví o tání obrany — bolestném, ale nezbytném. Pod ledem jest vždy voda: to, co bylo zmrazeno, nezmizelo, nýbrž čeká. A toto čekání jest poselstvím snu o potlačené živosti, jež si hledá cestu zpět.",
+      "illustration": "led_tani.svg",
+      "tags": [
+        "stagnace",
+        "ochrana",
+        "zmrazeni",
+        "strach",
+        "tani",
+        "transformace",
+        "mortalita"
+      ],
+      "relevant_verbs": [
+        "zmrznout",
+        "tati",
+        "kraceti",
+        "prasknouti",
+        "padati"
+      ],
+      "related_symbols": [
+        "voda",
+        "dest",
+        "more",
+        "smrt",
+        "tma",
+        "propast"
+      ],
+      "frequency_rank": 9,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "lekarna": {
+      "id": "lekarna",
+      "label": "Lékárna",
+      "category": "mista",
+      "base_meaning": "Místo lékú — kde snící hledá, co by uzdravilo to, co bolí.",
+      "extended_meaning": "Lékárna jest ve snech obrazem vědomého hledání léku: snící ví, že jest nemocen nebo zraněn, a hledá prostředek. Jest to jeden z nejmodernějších snových archetyů — místo, kde jest uzdravení dostupné, ale záleží na tom, zda snící ví, co hledá. Nenalézti lék mluví o bezmoci nebo o nemoci, jíž medicína nemůže pomoci — o zranění psýché, jež vyžaduje jiný druh péče. Dostat špatný lék mluví o falešném řešení, o povrchní náplasti na hlubokou ránu. Lékárna prázdná mluví o vyčerpání zdrojů nebo o pocitu, že pomoc neexistuje. Stát ve frontě v lékárně mluví o čekání na uzdravení — trpělivém nebo zoufajícím.",
+      "illustration": "lekarna_uzdraveni.svg",
+      "tags": [
+        "uzdraveni",
+        "hledani",
+        "bezmoc",
+        "telo",
+        "mortalita",
+        "pomoc",
+        "reseni"
+      ],
+      "relevant_verbs": [
+        "hledati",
+        "cekat",
+        "odejit_bez",
+        "dostat",
+        "odmitnout"
+      ],
+      "related_symbols": [
+        "nemoc",
+        "telo",
+        "matka",
+        "svetlo",
+        "transformation"
+      ],
+      "frequency_rank": 6,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "les": {
+      "id": "les",
+      "label": "Les",
+      "category": "priroda",
+      "base_meaning": "Území neznámého, kde platí jiné zákony než ve světě lidí.",
+      "extended_meaning": "Les jest ve snech prastarým obrazem nevědomého v jeho divokém, nekroceném stavu — vstoupiti do lesa jest vydati se na cestu bez zaručeného návratu. Co se v lese skrývá, jest tím, co civilizace a persona vytěsnily: pudovost, stín, zapomenuté hlasy předků. Les však není jen hrozbou — jest i místem iniciace, kde hrdina nachází to, po čem pátral, a kde se proměna stává možnou. Ztratiti se v lese jest ztrátou orientace v životě; nalézti v něm cestu jest nalezením sebe sama.",
+      "illustration": "les_tma.svg",
+      "tags": [
+        "nevedomi",
+        "divocina",
+        "iniciac",
+        "stin",
+        "strach",
+        "transformace",
+        "predci"
+      ],
+      "relevant_verbs": [
+        "bloudit",
+        "skryti_se",
+        "prchati",
+        "vstoupiti",
+        "otociti_se"
+      ],
+      "related_symbols": [
+        "strom",
+        "vlk",
+        "baba_jaga",
+        "cesta",
+        "tma",
+        "zvire"
+      ],
+      "frequency_rank": 10,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "collective",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "letani": {
+      "id": "letani",
+      "label": "Létání",
+      "category": "abstrakce",
+      "base_meaning": "Osvobození ducha od pout tělesných a přesažení mezí daných.",
+      "extended_meaning": "Vznášeti se nad zemí jest ve snech obrazem touhy po svobodě, jež přesahuje každodenní tíži — po pohledu z výše, jenž mění proporce všeho, co zdálo se neřešitelným. Létání však nese i svůj stín: výšina svádí k pýše Íkarově, k přesvědčení, že snící jest povznesen nad omezení lidská. Protiváhou pádu jest létání jeho spolumluvčím — oba zjevují se ve snech těch, kdož zápasí s otázkou, kde jest jejich pravé místo: na zemi či výše, než jim náleží.",
+      "illustration": "letani_oblaka.svg",
+      "tags": [
+        "svoboda",
+        "pycha",
+        "radost",
+        "unik",
+        "vzneseni",
+        "telo",
+        "duch"
+      ],
+      "relevant_verbs": [
+        "vznaseti_se",
+        "padati",
+        "preleteti"
+      ],
+      "related_symbols": [
+        "pad",
+        "kridla",
+        "ptak",
+        "hora",
+        "oblak"
+      ],
+      "frequency_rank": 4,
+      "archetypal_domain": "animus",
+      "secondary_domain": "shadow",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "leto": {
+      "id": "leto",
+      "label": "Léto",
+      "category": "priroda",
+      "base_meaning": "Vrchol, jenž v sobě nese první stín budoucího konce.",
+      "extended_meaning": "Léto jest ve snech obrazem plnosti a vrcholu — okamžiku, kdy energie dosáhla svého maxima a snící stojí v plném světle. Jest to archetyp sebevyjádření a hojnosti, ale také první tušení, že vrchol jest bodem obratu. Být v létě mluví o fázi, kdy snící má dost: dost síly, dost světla, dost prostoru. Horké léto mluví o přetížení nebo intenzitě, jež přestává být příjemná — o energii, jež spaluje místo aby živila. Léto bez konce mluví o strachu z obratu, o části snícího, jež se drží vrcholu a odmítá připustit, že cykly pokračují. Bouře v létě mluví o narušení plnosti — o nečekaném konfliktu v době, kdy vše mělo být v pořádku.",
+      "illustration": "leto_plnost.svg",
+      "tags": [
+        "plnost",
+        "vrchol",
+        "sila",
+        "svetlo",
+        "hojnost",
+        "obrat",
+        "intenzita"
+      ],
+      "relevant_verbs": [
+        "ziviti",
+        "spalovati",
+        "uzivati",
+        "odmitnouti"
+      ],
+      "related_symbols": [
+        "jaro",
+        "podzim",
+        "slunce",
+        "kvet",
+        "more",
+        "bource"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "self",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "listi": {
+      "id": "listi",
+      "label": "Listí",
+      "category": "priroda",
+      "base_meaning": "Pomíjivá krása věcí, jež svůj čas naplnily a nyní padají.",
+      "extended_meaning": "Listí ve snech — zvláště padající — nese v sobě tichý smutek přirozeného konce. Nejde o smrt násilnou, nýbrž o uzavření kruhu: co vzrostlo, musí opadnouti, aby zem přijala novou setbu. Snícímu ukazuje, že některé věci nelze zachrániti — a že pouštění jest rovněž formou moudrosti.",
+      "illustration": "listi_padajici.svg",
+      "tags": [
+        "pomijivost",
+        "konec",
+        "podzim",
+        "krasa",
+        "cas",
+        "smireni"
+      ],
+      "relevant_verbs": [
+        "hledati",
+        "naleznouti",
+        "zustati_stat"
+      ],
+      "related_symbols": [
+        "strom",
+        "dest",
+        "snih",
+        "cesta"
+      ],
+      "frequency_rank": 35,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "complete"
+    },
+    "lod": {
+      "id": "lod",
+      "label": "Loď",
+      "category": "predmety",
+      "base_meaning": "Konstrukce uprostřed vody — co drží snícího nad hloubkou, záleží na tom, co postavil.",
+      "extended_meaning": "Loď jest ve snech obrazem self v pohybu skrze nevědomé: není to přirozená bytost jako ryba, nýbrž lidský výtvor, jenž umožňuje přechod přes vody, jež by jinak pohltily. Loď pevná a řízená mluví o self, jež má směr a strukturu; loď děravá nebo zmítaná bouří mluví o krizi identity uprostřed emočního zahlcení. Opustiti loď jest obrazem vzdání se struktury — dobrovolného nebo vynuceného. Připlout do přístavu mluví o dočasném bezpečí, o místě, kde lze zakotvit a nabrat síly. Loď bez posádky plující sama mluví o autonomii procesů, jež snící nespustil vědomě.",
+      "illustration": "lod_plavba.svg",
+      "tags": [
+        "self",
+        "prechod",
+        "struktura",
+        "smer",
+        "krize",
+        "bezpeci",
+        "nevedomi"
+      ],
+      "relevant_verbs": [
+        "plout",
+        "zakotvit",
+        "opustiti",
+        "riditi",
+        "bourit_se"
+      ],
+      "related_symbols": [
+        "more",
+        "reka",
+        "voda",
+        "ostrov",
+        "ryba",
+        "cesta"
+      ],
+      "frequency_rank": 9,
+      "archetypal_domain": "self",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "maska": {
+      "id": "maska",
+      "label": "Maska",
+      "category": "predmety",
+      "base_meaning": "Tvář nasazená pro druhé — a otázka, zda ji snící stále ještě dokáže sundat.",
+      "extended_meaning": "Maska jest ve snech obrazem persony v jejím nejdoslovnějším vyjádření: snící ví, že nese tvář, jež není jeho vlastní, a sen mu ukazuje, co to znamená. Nasaditi masku jest obrazem vědomého přizpůsobení — někdy nutného, někdy destruktivního. Nemoct sundat masku jest jedním z nejznepokojivějších snových obrazů: persona, jež přirostla k tváři, a snící neví, co jest pod ní. Maska, jež se promění v jinou tvář, mluví o mnoha vrstvách přizpůsobení. Za maskou jest vždy otázka: co jest skutečné? A tato otázka jest jádrem každého snu, v němž se maska objeví.",
+      "illustration": "maska_persona.svg",
+      "tags": [
+        "persona",
+        "prizpusobeni",
+        "skryvani",
+        "identita",
+        "stin",
+        "konfrontace",
+        "pravda"
+      ],
+      "relevant_verbs": [
+        "nasaditi",
+        "sundati",
+        "skryti",
+        "odhalit",
+        "prirust"
+      ],
+      "related_symbols": [
+        "persona",
+        "zrcadlo",
+        "pronasledovani",
+        "skola",
+        "dite",
+        "tvar"
+      ],
+      "frequency_rank": 9,
+      "archetypal_domain": "persona",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "matka": {
+      "id": "matka",
+      "label": "Matka",
+      "category": "osoby",
+      "base_meaning": "Prvotní druhý — bytost, od níž snící přišel a k níž se část jeho psýché vždy vrací.",
+      "extended_meaning": "Matka jest ve snech jedním z nejarchetypálnějších obrazů: není to nutně vlastní matka snícího, nýbrž princip původu, péče, přijetí a pohlcení. Velká Matka jest v kolektivním nevědomí obrazem země, jež živí — ale také hltá. Matka laskavá mluví o bezpečí a zakořenění; matka vzdálená nebo chladná mluví o hladu po přijetí, jenž snící nosí v sobě. Matka, jež brání odchodu, jest obrazem komplexu, jenž poutá snícího k minulosti. Setkání s matkou ve snu jest vždy setkáním s původem vlastní psýché — s tím, co bylo vloženo dříve, než snící mohl voliti.",
+      "illustration": "matka_puvod.svg",
+      "tags": [
+        "puvod",
+        "pece",
+        "prijeti",
+        "pohlceni",
+        "anima",
+        "kolektivni",
+        "zakorenost"
+      ],
+      "relevant_verbs": [
+        "chraniti",
+        "pritat",
+        "pustiti",
+        "volati",
+        "navratiti_se"
+      ],
+      "related_symbols": [
+        "dite",
+        "zeme",
+        "more",
+        "anima",
+        "rodina",
+        "otec"
+      ],
+      "frequency_rank": 10,
+      "archetypal_domain": "anima",
+      "secondary_domain": "collective",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "more": {
+      "id": "more",
+      "label": "Moře",
+      "category": "priroda",
+      "base_meaning": "Bezedná rozloha nevědomého, jež pohltiti může i navrátiti.",
+      "extended_meaning": "Moře jest tím, co bylo před počátkem a co zůstane po konci — pralůno, z něhož povstává život a do něhož se vrací. Ve snech\n                    zjevené představuje plnost kolektivního nevědomí: snící stojí\n                    na břehu jako na prahu toho, co přesahuje jeho jednotlivou duši.\n                    Vstoupiti do moře jest vzdáti se hranic ega; býti jím pohlcen\n                    jest ztrátou sebe, leč i možností zrodu nového. Barva, klidnost\n                    či zuřivost vln jsou hlasem stavu nitra v okamžiku snu.",
+      "illustration": "more_hlubina.svg",
+      "tags": [
+        "nevedomi",
+        "hlubina",
+        "kolektivni",
+        "zivot",
+        "smrt",
+        "transformace",
+        "svoboda"
+      ],
+      "relevant_verbs": [
+        "tonuti",
+        "prouditi",
+        "ponoriti_se",
+        "plavat"
+      ],
+      "related_symbols": [
+        "voda",
+        "reka",
+        "ostrov",
+        "ryba",
+        "lod",
+        "boure"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "collective",
+      "secondary_domain": "anima",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "most": {
+      "id": "most",
+      "label": "Most",
+      "category": "mista",
+      "base_meaning": "Přechod mezi dvěma břehy — rozhodnutí, jež nelze učinit napůl.",
+      "extended_meaning": "Most jest ve snech obrazem přechodu, jenž jest nezvratný: kdo přešel, nemůže tvrdit, že nepřešel. Jest symbolem míst v životě, kde snící stojí mezi tím, co bylo, a tím, co teprve bude — mezi starým já a novým, mezi vztahem a jeho koncem, mezi bezpečím a neznámem. Stav mostu mluví hlasitě: most pevný a široký zve k přechodu bez váhání; most vratký či nedostavěný odráží pochyby o připravenosti ke změně. Zůstati stát uprostřed mostu jest obrazem snícího, jenž se rozhodl, a přece váhá dokončit to, co začal.",
+      "illustration": "most_prechod.svg",
+      "tags": [
+        "prechod",
+        "rozhodnuti",
+        "zmena",
+        "nezvratnost",
+        "odvaha",
+        "transformace",
+        "rozcesti"
+      ],
+      "relevant_verbs": [
+        "kraceti",
+        "zastaviti_se",
+        "odbociti",
+        "vstoupiti",
+        "prchati"
+      ],
+      "related_symbols": [
+        "reka",
+        "cesta",
+        "brana",
+        "rozcesti",
+        "voda",
+        "propast"
+      ],
+      "frequency_rank": 10,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "nahota": {
+      "id": "nahota",
+      "label": "Nahota",
+      "category": "abstrakce",
+      "base_meaning": "Odložení každé masky — zranitelnost, jež nemá kam se skrýt.",
+      "extended_meaning": "Nahota ve snech jest jedním z nejrozšířenějších zjevení a téměř nikdy nesouvisí s tělesností samou — jest obrazem odhalení, jež snící nezamýšlel a jemuž se nemůže vyhnout. Persona byla stržena: role, tituly, očekávání padla a zbývá pouze to, čím snící jest bez příkras. Stud, jenž nahotu provází, jest hlasem mezery mezi tím, jak snící sebe prezentuje, a tím, kým se v hloubi cítí být. Sníti se nahým před zraky druhých jest zesílenou otázkou: obstojím, je-li vidět vše?",
+      "illustration": "nahota_odhaleni.svg",
+      "tags": [
+        "zranitelnost",
+        "persona",
+        "stud",
+        "odhaleni",
+        "autenticita",
+        "soud",
+        "strach"
+      ],
+      "relevant_verbs": [
+        "svleci_se",
+        "skryti_se",
+        "obstati",
+        "selhat",
+        "setkati_se"
+      ],
+      "related_symbols": [
+        "maska",
+        "skola",
+        "zrcadlo",
+        "stin"
+      ],
+      "frequency_rank": 2,
+      "archetypal_domain": "persona",
+      "secondary_domain": "shadow",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "nemoc": {
+      "id": "nemoc",
+      "label": "Nemoc",
+      "category": "telo",
+      "base_meaning": "Tělo, jež promluvilo — a snící jej dosud neposlouchal.",
+      "extended_meaning": "Nemoc jest ve snech obrazem toho, co bylo přehlíženo: tělo jako nejupřímnější část psýché, jež nemůže lhát tak obratně jako mysl. Onemocnět ve snu jest zřídkakdy proroctví — jest to poselství o části snícího, jež jest vyčerpána, zanedbaná nebo potlačena. Nemoc vlastní mluví o vnitřní nerovnováze; nemoc blízkého mluví o vztahu, jenž potřebuje pozornost. Uzdravení ve snu jest obrazem integrace — přijetí té části psýché, jíž bylo ublíženo. Nevyléčitelná nemoc ve snu mluví o mortalitě jako realitě, již snící odmítá přijmout, a přece ji nese.",
+      "illustration": "nemoc_telo.svg",
+      "tags": [
+        "telo",
+        "signál",
+        "vycerpani",
+        "mortalita",
+        "integrace",
+        "nerovnovaha",
+        "pece"
+      ],
+      "relevant_verbs": [
+        "onemocnet",
+        "uzdraviti_se",
+        "pecovat",
+        "ignorovati",
+        "padnouti"
+      ],
+      "related_symbols": [
+        "smrt",
+        "telo",
+        "lekarna",
+        "matka",
+        "svetlo",
+        "tma"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "obchod": {
+      "id": "obchod",
+      "label": "Obchod",
+      "category": "mista",
+      "base_meaning": "Místo výměny — kde snící zjistí, co jest ochoten dát a co očekává nazpět.",
+      "extended_meaning": "Obchod jest ve snech obrazem persony v ekonomickém světě: místa, kde vládnou pravidla výměny, kde má vše cenu a kde snící musí rozhodovat. Být v obchodě bez peněz mluví o pocitu nedostatečnosti nebo o strachu, že snící nemá dost — dost hodnoty, dost prostředků, dost práva žádat. Obchod plný zboží, jež snící nepotřebuje, mluví o zahlcení volbami bez smyslu — o moderní úzkosti hojnosti. Krást v obchodě mluví o části snícího, jež se cítí být vylučována z toho, co ostatní mají — nebo o impulsu vzít zkratkou to, co se zdá nedosažitelné. Obchod zavřený mluví o přístupu odepřeném: k zdrojům, k možnostem, k části světa.",
+      "illustration": "obchod_vymena.svg",
+      "tags": [
+        "persona",
+        "vymena",
+        "hodnota",
+        "uzkost",
+        "volba",
+        "nedostatecnost",
+        "zahlceni"
+      ],
+      "relevant_verbs": [
+        "kupovati",
+        "prodavati",
+        "krasti",
+        "odejit_bez",
+        "rozhodovati"
+      ],
+      "related_symbols": [
+        "penize",
+        "maska",
+        "cesta",
+        "jidlo",
+        "domov"
+      ],
+      "frequency_rank": 6,
+      "archetypal_domain": "persona",
+      "secondary_domain": "shadow",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "oblak": {
+      "id": "oblak",
+      "label": "Oblak",
+      "category": "priroda",
+      "base_meaning": "Co pluje mezi snícím a sluncem — nebo co nese déšť, jenž byl potřeba.",
+      "extended_meaning": "Oblak jest ve snech obrazem přechodnosti a neurčitosti: tvar, jenž se neustále mění a nikdy není přesně tím, čím byl. Oblak jako zastínění mluví o dočasné ztrátě jasnosti nebo energie — o melancholii, pochybnosti, nejasném smutku bez konkrétní příčiny. Oblak bouřlivý mluví o přicházejícím emočním výboji: ne hrozbě, nýbrž nevyhnutelnosti, jíž jest třeba projít. Plout v oblacích mluví o snění, o vzdálenosti od každodenní reality — příjemné nebo znepokojivé podle toho, nakolik snící potřebuje zůstat nohama na zemi. Oblak, jenž se rozplyne a odkryje slunce, jest obrazem dočasnosti každé temné fáze.",
+      "illustration": "oblak_premennost.svg",
+      "tags": [
+        "premennost",
+        "neurčitost",
+        "melancholie",
+        "přechod",
+        "snovost",
+        "uvolneni",
+        "bouře"
+      ],
+      "relevant_verbs": [
+        "plout",
+        "zastinit",
+        "rozplynout_se",
+        "pritekati",
+        "hledeti"
+      ],
+      "related_symbols": [
+        "slunce",
+        "dest",
+        "letani",
+        "kridla",
+        "svetlo"
+      ],
+      "frequency_rank": 6,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "ohen": {
+      "id": "ohen",
+      "label": "Oheň",
+      "category": "zivly",
+      "base_meaning": "Hněv, vášeň nezkrocená a stravující očista.",
+      "extended_meaning": "Plamen zhoubný i hřejivý, jenž na popel obrací staré a zkažené, aby z něj nové povstati mohlo. Oheň ve snu zřít jest znamením touhy palčivé, zlosti spalující, či mocného alchymického tavení hrubé matérie v ryzí zlato ducha.",
+      "illustration": "fire_flame.svg",
+      "tags": [
+        "zivel",
+        "ocista",
+        "zkaza",
+        "vassen",
+        "transformace",
+        "svetlo",
+        "teplo"
+      ],
+      "relevant_verbs": [
+        "horeti",
+        "spaliti",
+        "hrati",
+        "plapolati",
+        "sezehnouti",
+        "zarit",
+        "dusiti"
+      ],
+      "related_symbols": [
+        "popel",
+        "hranice",
+        "slunce",
+        "jiskra",
+        "pochoden",
+        "kour"
+      ],
+      "frequency_rank": 5,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "animus",
+      "added_version": "1",
+      "content_status": "complete"
+    },
+    "ostrov": {
+      "id": "ostrov",
+      "label": "Ostrov",
+      "category": "mista",
+      "base_meaning": "Pevnina obklopená vodou — útočiště nebo vězení, záleží na tom, zda přišla loď.",
+      "extended_meaning": "Ostrov jest ve snech obrazem self v izolaci: místo ohraničené, jasně definované, obklopené nevědomým ze všech stran. Někdy jest ostrov darem — místem klidu, kde snící konečně slyší sám sebe bez hluku světa. Jindy jest ostrov vězením — izolací, z níž snící nemůže nebo nechce odplout. Opuštěný ostrov mluví o hlubokém pocitu osamělosti, o části snícího, jež jest odříznuta od ostatních. Nalézti ostrov uprostřed bouře jest obrazem self jako útočiště: že i uprostřed největšího chaosu existuje místo, jež jest pevné.",
+      "illustration": "ostrov_izolace.svg",
+      "tags": [
+        "izolace",
+        "self",
+        "klid",
+        "vezeni",
+        "osameni",
+        "pevnina",
+        "utociste"
+      ],
+      "relevant_verbs": [
+        "plout_k",
+        "opustiti",
+        "zustat",
+        "naleznouti",
+        "obeplout"
+      ],
+      "related_symbols": [
+        "more",
+        "lod",
+        "voda",
+        "hora",
+        "les"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "self",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "otec": {
+      "id": "otec",
+      "label": "Otec",
+      "category": "osoby",
+      "base_meaning": "Hlas zákona v psýché — autorita, již snící přijal, odmítl nebo dosud nenašel.",
+      "extended_meaning": "Otec jest ve snech obrazem principu řádu, zákona a autority: ne nutně vlastního otce, nýbrž otcovského archetypu, jenž určuje, co jest správné, co jest dovoleno a co jest od snícího očekáváno. Otec silný a přítomný mluví o internalizované autoritě — o hlase, jenž říká snícímu, co má dělat, i když otce dávno není. Otec vzdálený nebo němý mluví o chybějícím principu směřování, o snícím, jenž bloudí bez vnitřního kompasu. Konfrontace s otcem ve snu jest obrazem individuace v její nejtěžší fázi: oddělit se od zděděného řádu a nalézt vlastní zákon.",
+      "illustration": "otec_autorita.svg",
+      "tags": [
+        "autorita",
+        "zakon",
+        "rad",
+        "persona",
+        "animus",
+        "oddeleni",
+        "smer"
+      ],
+      "relevant_verbs": [
+        "poslechnout",
+        "vzeprit_se",
+        "nasledovati",
+        "konfrontovati",
+        "mlceti"
+      ],
+      "related_symbols": [
+        "matka",
+        "zbran",
+        "skola",
+        "persona",
+        "dite",
+        "rodina"
+      ],
+      "frequency_rank": 10,
+      "archetypal_domain": "animus",
+      "secondary_domain": "persona",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "pad": {
+      "id": "pad",
+      "label": "Pád",
+      "category": "abstrakce",
+      "base_meaning": "Ztráta opory a kontroly, z níž vychází buď zničení, nebo prozření.",
+      "extended_meaning": "Pád jest ve snech jedním z nejstarších a nejrozšířenějších zjevení — tělo snícího ví o propasti dříve, než ji rozum pojmenuje. Sestupuje se vždy z něčeho, co se zdálo pevným: z výše postavení, ze sebeúcty, z iluzí o vlastní neochvějnosti. Jung viděl v pádu obraz nutného sestoupení do stínu — bez pádu není individuace, neboť celistvost nelze nalézt pouze na vrcholu. Zda pád končí nárazem či letem, jest otázkou, již sen klade snícímu zcela osobně.",
+      "illustration": "pad_propast.svg",
+      "tags": [
+        "strach",
+        "ztrata_kontroly",
+        "ponizeni",
+        "transformace",
+        "stin",
+        "pycha"
+      ],
+      "relevant_verbs": [
+        "padati",
+        "zratiti_oporu",
+        "vznaseti_se"
+      ],
+      "related_symbols": [
+        "letani",
+        "propast",
+        "schody",
+        "hora",
+        "kridla"
+      ],
+      "frequency_rank": 3,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "penize": {
+      "id": "penize",
+      "label": "Peníze",
+      "category": "predmety",
+      "base_meaning": "Zhmotnělá hodnota — a obraz toho, co snící považuje za zdroj bezpečí nebo studu.",
+      "extended_meaning": "Peníze jsou ve snech zřídkakdy o penězích samotných: jsou obrazem hodnoty, bezpečí, moci a společenského postavení — všeho, co persona potřebuje k tomu, aby obstála. Ztratiti peníze jest jedním z nejčastějších úzkostných snů: mluví o strachu ze ztráty kontroly, postavení nebo přijetí. Nalézti peníze mluví o nečekaném zdroji hodnoty — někdy doslova, někdy jako obraz skrytého talentu nebo energie. Peníze falešné mluví o personie, jež jest prázdná uvnitř. Rozdávati peníze jest obrazem štědrosti nebo strachu z vlastní hodnoty — a rozdíl mezi těmito dvěma jest ve snu vždy cítit.",
+      "illustration": "penize_hodnota.svg",
+      "tags": [
+        "hodnota",
+        "bezpeci",
+        "ztrata",
+        "persona",
+        "uzkost",
+        "moc",
+        "spolecnost"
+      ],
+      "relevant_verbs": [
+        "ztratiti",
+        "naleznouti",
+        "rozdavati",
+        "krasti",
+        "pocitati"
+      ],
+      "related_symbols": [
+        "persona",
+        "maska",
+        "obchod",
+        "otec",
+        "stin"
+      ],
+      "frequency_rank": 7,
+      "archetypal_domain": "persona",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "pes": {
+      "id": "pes",
+      "label": "Pes",
+      "category": "zvirata",
+      "base_meaning": "Bytost, jež zůstala — věrnost jako instinkt, jenž nezná podmínky.",
+      "extended_meaning": "Pes jest ve snech obrazem loajality v její nejpřímější podobě: na rozdíl od vlka, jenž jest stínem nezkroceným, jest pes stínem přijatým a přetvořeným ve společníka. Přítomnost psa ve snu mluví o části snícího, jež jest věrná — instinktivní, ale domestikovaná, schopná milovat bez výpočtu. Pes přátelský jest obrazem zdravého vztahu k vlastním instinktům; pes agresivní nebo opuštěný mluví o části snícího, jíž bylo ublíženo nebo jíž bylo zanedbáno. Ztratiti psa jest ve snech obrazem ztráty něčeho věrného — vztahu, části sebe, jistoty, jež byla samozřejmá a jejíž absence teprve ukáže, jak velká byla.",
+      "illustration": "pes_loajalita.svg",
+      "tags": [
+        "loajalita",
+        "instinkt",
+        "vernost",
+        "domov",
+        "ztrata",
+        "pritelstvi",
+        "duvera"
+      ],
+      "relevant_verbs": [
+        "hladiti",
+        "ztratiti",
+        "naleznouti",
+        "opustiti",
+        "nasledovati"
+      ],
+      "related_symbols": [
+        "vlk",
+        "zvire",
+        "dite",
+        "domov",
+        "matka"
+      ],
+      "frequency_rank": 7,
+      "archetypal_domain": "collective",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "podzim": {
+      "id": "podzim",
+      "label": "Podzim",
+      "category": "priroda",
+      "base_meaning": "Umění pouštět — vědomí, že krása a konec mohou přijít společně.",
+      "extended_meaning": "Podzim jest ve snech obrazem uvolňování a přijetí: fáze, kdy to, co bylo plné, začíná odevzdávat. Jest to jeden z nejkrásnějších a nejsmutnějších archetypálních obrazů zároveň — připomínka, že konec nemusí být tragédií. Padající listí mluví o vědomém nebo nevědomém pouštění: vztahů, identit, přesvědčení, jež svůj čas přežila. Sklizeň na podzim mluví o sbírání toho, co bylo zaseto — o fázi, kdy snící sklízí výsledky své práce nebo svých rozhodnutí. Holé stromy mluví o očištění od toho, co bylo jen ozdobou: snící stojí sám se sebou bez vnějšího listí. Podzim přicházející příliš brzy mluví o ztrátě, jež přišla dříve než měla — o smutku nebo rozčarování uprostřed toho, co mělo být ještě létem.",
+      "illustration": "podzim_pusteni.svg",
+      "tags": [
+        "pusteni",
+        "smutek",
+        "prechod",
+        "sklizen",
+        "ocisteni",
+        "krasa",
+        "konec"
+      ],
+      "relevant_verbs": [
+        "pustit",
+        "sklizeti",
+        "opadavat",
+        "zastaviti_se",
+        "stahnout_se"
+      ],
+      "related_symbols": [
+        "zima",
+        "jaro",
+        "strom",
+        "smrt",
+        "les",
+        "listi"
+      ],
+      "frequency_rank": 9,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "shadow",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "pronasledovani": {
+      "id": "pronasledovani",
+      "label": "Pronásledování",
+      "category": "abstrakce",
+      "base_meaning": "To, před čím snící prchá, jest tím, čemu dosud nedokázal čeliti.",
+      "extended_meaning": "Pronásledování jest ve snech nejzřetelnějším hlasem stínu — něco, co bylo odříznuto, potlačeno či zapřeno, nabývá podoby a počíná se přibližovati. Pronásledovatel není nepřítel zvenčí, nýbrž odštěpená část snícího samého: hněv neprojevený, vina neodpuštěná, touha zapovězená. Jung učil, že namísto útěku jest třeba se otočiti a tváří v tvář zjevení státi — neboť pronásledovatel, jemuž snící čelí, ztrácí moc a počíná proměňovati se v dárce skrytého vědění.",
+      "illustration": "pronasledovani_stin.svg",
+      "tags": [
+        "strach",
+        "stin",
+        "utek",
+        "konfrontace",
+        "vina",
+        "potlaceni",
+        "nevedomi"
+      ],
+      "relevant_verbs": [
+        "prchati",
+        "pronasledovati",
+        "otociti_se",
+        "skryti_se"
+      ],
+      "related_symbols": [
+        "stin",
+        "maska",
+        "had",
+        "vlk",
+        "neznamy_muz"
+      ],
+      "frequency_rank": 5,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "propast": {
+      "id": "propast",
+      "label": "Propast",
+      "category": "priroda",
+      "base_meaning": "Bezednost, jež nepozve — a přece táhne pohledem dolů.",
+      "extended_meaning": "Propast se liší od pádu tím, že snící dosud nestojí. Stojí na okraji a hledí. Toto hledění jest samo o sobě poselstvím: existenciální úzkost ze svobody, již Pascal i Kierkegaard znali — závrať z toho, že lze skočiti, že nic nezaručuje pevnost půdy pod nohama. Propast jest obrazem míst v životě, kde chybí záchytný bod: víra, vztah, smysl. Zároveň jest propast výzvou k sestoupení — ne ke zničení, nýbrž k nalezení toho, co leží za hranicí jistoty.",
+      "illustration": "propast_okraj.svg",
+      "tags": [
+        "uzkost",
+        "svoboda",
+        "existencialnost",
+        "bezednost",
+        "strach",
+        "volba",
+        "hloubka"
+      ],
+      "relevant_verbs": [
+        "hledeti",
+        "padati",
+        "zratiti_oporu",
+        "zastaviti_se"
+      ],
+      "related_symbols": [
+        "pad",
+        "tma",
+        "sklep",
+        "studna",
+        "hora"
+      ],
+      "frequency_rank": 4,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "mortality",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "ptak": {
+      "id": "ptak",
+      "label": "Pták",
+      "category": "zvirata",
+      "base_meaning": "Bytost, jež překonala tíži země — svoboda duše ve svém nejčistším obraze.",
+      "extended_meaning": "Pták jest ve snech poslem mezi světy: létá tam, kde člověk nemůže, a vidí to, co jest z výšky skryto pohledu zdola. Jest obrazem duše v jejím nejvolnějším projevu — touhy po svobodě, po překonání omezení, jež poutají snícího k zemi. Druh ptáka určuje povahu poselství: orel mluví o síle a vůli, holubice o míru a animě, havran o stínu a proroctví, malý zpívající pták o radosti, jež byla zapomenuta. Pták v kleci jest jedním z nejsmutnějších obrazů psýché — vědomím, že svoboda jest na dosah, a přece uzavřena.",
+      "illustration": "ptak_kridla.svg",
+      "tags": [
+        "svoboda",
+        "duse",
+        "vyska",
+        "poselstvi",
+        "touha",
+        "anima",
+        "intuice"
+      ],
+      "relevant_verbs": [
+        "leteti",
+        "vznaseti_se",
+        "zpivati",
+        "prchati",
+        "nasledovati"
+      ],
+      "related_symbols": [
+        "kridla",
+        "letani",
+        "klec",
+        "strom",
+        "more",
+        "anima"
+      ],
+      "frequency_rank": 7,
+      "archetypal_domain": "anima",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "reka": {
+      "id": "reka",
+      "label": "Řeka",
+      "category": "priroda",
+      "base_meaning": "Čas plynoucí, jenž nečeká a zpět se neobrací nikdy.",
+      "extended_meaning": "Řeka jest obrazem života samého v jeho neúprosném proudění — od pramene nevinnosti až k ústí, jež se ztrácí v bezejmenném\n                    moři. Ve snech nese poselství o tom, jak snící prožívá čas:\n                    zda s ním plyne, či proti němu zápasí, zda přechází na druhý\n                    břeh anebo na břehu stojí, neschopen kroky učiniti. Překročení\n                    řeky jest prastarý obraz rozhodnutí, přechodu, ba i smrti —\n                    neboť za řekou leží vždy jiný svět.",
+      "illustration": "reka_proud.svg",
+      "tags": [
+        "cas",
+        "prechod",
+        "rozhodnuti",
+        "smrt",
+        "zivot",
+        "pohyb",
+        "hranice"
+      ],
+      "relevant_verbs": [
+        "prouditi",
+        "tonuti",
+        "prebrodit",
+        "plynout_casem"
+      ],
+      "related_symbols": [
+        "voda",
+        "more",
+        "most",
+        "brod",
+        "lod",
+        "smrt"
+      ],
+      "frequency_rank": 12,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "rodina": {
+      "id": "rodina",
+      "label": "Rodina",
+      "category": "lide",
+      "base_meaning": "Prvotní svazek krve a osudu, z něhož snící vzešel a jenž jej dosud tvaruje.",
+      "extended_meaning": "Rodina ve snech není nikdy jen vzpomínkou — jest živoucím archetypem, jenž formoval snícího dříve, než nabyl slov. Postavy rodičů, sourozenců a předků nesou v sobě kondenzované vzorce: co bylo milováno, co zapovězeno, co nikdy neřečeno. Kdo se rodině ve snu přibližuje, hledá svůj původ; kdo od ní prchá, hledá sebe.",
+      "illustration": "rodina_strom.svg",
+      "tags": [
+        "puvod",
+        "svazek",
+        "dedictvi",
+        "vztahy",
+        "krev",
+        "minulost"
+      ],
+      "relevant_verbs": [
+        "hledati",
+        "prchati",
+        "zustati_stat",
+        "vstoupiti"
+      ],
+      "related_symbols": [
+        "matka",
+        "dum",
+        "dite",
+        "strom"
+      ],
+      "frequency_rank": 6,
+      "archetypal_domain": "collective",
+      "secondary_domain": "anima",
+      "added_version": "1",
+      "content_status": "complete"
+    },
+    "ryba": {
+      "id": "ryba",
+      "label": "Ryba",
+      "category": "zvirata",
+      "base_meaning": "Bytost žijící zcela ponořená — průvodce v hlubinách, jež snící vidí jen zdola.",
+      "extended_meaning": "Ryba jest ve snech obrazem obsahu kolektivního nevědomí: toho, co pluje v hloubce, co jest životem — ale životem jiného světa, světa pod povrchem. Ryba chycená jest obrazem obsahu nevědomého přivedeného do vědomí: to, co bylo neviditelné, jest nyní v rukou snícího — a záleží, co s tím udělá. Ryba, jež unikne, mluví o poznatku, jenž byl blízko a zmizel. Mnoho ryb mluví o bohatství nevědomého, o množství obsahů, jež čekají. Ryba mrtvá mluví o zanedbání — o části snícího, jež potřebovala pozornost a nedostala ji včas.",
+      "illustration": "ryba_hlubina.svg",
+      "tags": [
+        "nevedomi",
+        "kolektivni",
+        "hlubina",
+        "obsah",
+        "chyceni",
+        "unik",
+        "bohatstvi"
+      ],
+      "relevant_verbs": [
+        "chytiti",
+        "pustiti",
+        "ponoriti_se",
+        "pozorovat",
+        "utect"
+      ],
+      "related_symbols": [
+        "more",
+        "voda",
+        "studna",
+        "had",
+        "reka"
+      ],
+      "frequency_rank": 7,
+      "archetypal_domain": "collective",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "schody": {
+      "id": "schody",
+      "label": "Schody",
+      "category": "mista",
+      "base_meaning": "Pohyb mezi vrstvami — každý schod jest rozhodnutím, zda výš nebo níž.",
+      "extended_meaning": "Schody jsou ve snech obrazem hierarchie a transformace zároveň: vertikální pohyb skrze vrstvy psýché nebo existence. Stoupati po schodech mluví o vědomém úsilí k vyššímu — k jasnosti, individuaci, pochopení; ale také o ambici, jež může přerůst snícího. Sestupovati po schodech jest obrazem vědomého sestupu do hloubi — nebezpečného, ale nezbytného pro toho, kdo chce poznat vlastní základy. Schody bez konce mluví o Sisyfovské únavě, o cíli, jenž se vzdaluje s každým krokem. Schody zlomené nebo chybějící mluví o přerušení cesty — o místě, kde snící neví, jak dál.",
+      "illustration": "schody_vrstvy.svg",
+      "tags": [
+        "hierarchie",
+        "transformace",
+        "usili",
+        "sestup",
+        "vystup",
+        "volba",
+        "unavas"
+      ],
+      "relevant_verbs": [
+        "stoupati",
+        "sestupovati",
+        "zastaviti_se",
+        "padnouti",
+        "preskociti"
+      ],
+      "related_symbols": [
+        "dum",
+        "pad",
+        "hora",
+        "sklep",
+        "transformation"
+      ],
+      "frequency_rank": 7,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "sklep": {
+      "id": "sklep",
+      "label": "Sklep",
+      "category": "mista",
+      "base_meaning": "Nejhlubší vrstva domu — to, co bylo uloženo, zapomenuto a přesto zůstalo.",
+      "extended_meaning": "Sklep jest ve snech místem, kam vědomí nesestupuje rádo — a přece jest sestoupení do sklepa jedním z nejdůležitějších pohybů individuace. Co se zde skrývá, bylo uloženo záměrně: vzpomínky bolestné, impulsy nepřijatelné, pravdy nepohodlné. Strachuje-li se snící sklepa, brání se setkání s vlastním stínem; vstoupí-li bez váhání, jest připraven integrovat to, co dosud odmítal. Jung sám sestoupil do sklepa vlastní psýché a nazval to konfrontací s nevědomým — nutnou podmínkou každé skutečné proměny.",
+      "illustration": "sklep_tma.svg",
+      "tags": [
+        "nevedomi",
+        "stin",
+        "strach",
+        "pamet",
+        "potlaceni",
+        "hloubka",
+        "integrace"
+      ],
+      "relevant_verbs": [
+        "sestoupiti",
+        "skryti_se",
+        "prohledavati",
+        "zamknout",
+        "vstoupiti"
+      ],
+      "related_symbols": [
+        "dum",
+        "tma",
+        "had",
+        "propast",
+        "studna"
+      ],
+      "frequency_rank": 13,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "skola": {
+      "id": "skola",
+      "label": "Škola",
+      "category": "mista",
+      "base_meaning": "Místo zkoušení a soudu, kde snící stojí před tváří vlastních nároků.",
+      "extended_meaning": "Škola ve snech není obrazem minulosti, nýbrž přítomného pocitu, že snící jest zkoušen a shledáván nedostatečným. Zapomenuté zkoušení, nenapsaná práce, ztracená třída — to vše jsou hlasy vnitřního kritika, jenž měří a odsuzuje. Škola zjevuje se nejčastěji v dobách, kdy snící čelí novým nárokům či pochybuje o vlastní způsobilosti; jest promítnutím autority a hodnocení, jež snící přijal za vlastní. Kdo jest učitelem ve snu, ukazuje, čí hlas vnitřního soudce jest právě nejsilnější.",
+      "illustration": "skola_lavice.svg",
+      "tags": [
+        "zkouska",
+        "hodnoceni",
+        "autorita",
+        "soud",
+        "nedostatecnost",
+        "persona",
+        "vina"
+      ],
+      "relevant_verbs": [
+        "zkouseti",
+        "obstati",
+        "selhat",
+        "prchati"
+      ],
+      "related_symbols": [
+        "lavice",
+        "ucitel",
+        "kniha",
+        "maska",
+        "persona"
+      ],
+      "frequency_rank": 14,
+      "archetypal_domain": "persona",
+      "secondary_domain": "shadow",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "slunce": {
+      "id": "slunce",
+      "label": "Slunce",
+      "category": "abstrakce",
+      "base_meaning": "Světlo, jež není třeba hledat — jest a bylo, dávno před snícím.",
+      "extended_meaning": "Slunce jest ve snech obrazem nejvyššího principu vědomí a životní síly: archetypální symbol self v jeho kosmickém rozměru, otce světla, středu, kolem něhož se točí. Slunce vycházející mluví o naději a počátku, o energii, jež přichází po temnotě. Slunce zapadající mluví o konci fáze — klidném nebo bolestném. Slunce zakryté mračny mluví o dočasné ztrátě orientace nebo životní energie. Hledět přímo do slunce jest obrazem konfrontace s nejvyšší pravdou: oslepující, ne proto že jest nepřátelské, nýbrž proto že jest příliš velké na pohled bez přípravy. Snící, jenž sám září jako slunce, jest na prahu největšího snového daru — a největší zodpovědnosti.",
+      "illustration": "slunce_stred.svg",
+      "tags": [
+        "vedomi",
+        "zivot",
+        "self",
+        "naděje",
+        "počátek",
+        "konec",
+        "kosmicko"
+      ],
+      "relevant_verbs": [
+        "vychazeti",
+        "zapadati",
+        "zahalit",
+        "hledeti",
+        "zarit"
+      ],
+      "related_symbols": [
+        "svetlo",
+        "ohen",
+        "hora",
+        "more",
+        "transformation",
+        "self"
+      ],
+      "frequency_rank": 10,
+      "archetypal_domain": "self",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "smrt": {
+      "id": "smrt",
+      "label": "Smrt",
+      "category": "abstrakce",
+      "base_meaning": "Konec jedné podoby bytí, jenž jest vždy i prahem zrodu nového.",
+      "extended_meaning": "Smrt ve snu jest zřídkakdy proroctvím tělesného skonu — jest obrazem konce, jenž jest nutnou podmínkou počátku. Umírati ve snu značí, že něco v životě snícího dospělo ke svému završení: vztah, role, přesvědčení, podoba sebe sama. Psyché takto oznamuje, že staré já již nepostačuje a že individuace volá k přerodu. Spatřiti smrt druhého pak věstí odumírání té části snícího, kterou onen druhý v jeho nitru představuje — ne zánik, nýbrž proměnu.",
+      "illustration": "smrt_prehod.svg",
+      "tags": [
+        "konec",
+        "zrod",
+        "transformace",
+        "cas",
+        "pomijivost",
+        "individuace",
+        "prechod"
+      ],
+      "relevant_verbs": [
+        "umirati",
+        "pohrbiti",
+        "znovuzroditi_se",
+        "prochazeti_prahem"
+      ],
+      "related_symbols": [
+        "reka",
+        "had",
+        "kost",
+        "rakev",
+        "brana",
+        "tma"
+      ],
+      "frequency_rank": 7,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "snih": {
+      "id": "snih",
+      "label": "Sníh",
+      "category": "priroda",
+      "base_meaning": "Bílý příkrov, jenž přikrývá i chrání, tiší i pohřbívá.",
+      "extended_meaning": "Sníh ve snech jest dvojlící: přináší klid a čistotu, avšak pod jeho tíží dřímá vše, co bylo — skryto, nikoliv zničeno. Jest symbolem přerušení, zimního spánku duše, doby kdy se na povrchu nic nehýbe, ale v hloubi se cosi připravuje. Přemíra sněhu věstí zahlcení nebo odříznutí od světa živých.",
+      "illustration": "snih_krajina.svg",
+      "tags": [
+        "cistota",
+        "ticho",
+        "skryti",
+        "zima",
+        "pauza",
+        "izolace"
+      ],
+      "relevant_verbs": [
+        "zustati_stat",
+        "hledati",
+        "prchati"
+      ],
+      "related_symbols": [
+        "led",
+        "dest",
+        "listi",
+        "hora"
+      ],
+      "frequency_rank": 22,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "complete"
+    },
+    "strom": {
+      "id": "strom",
+      "label": "Strom",
+      "category": "priroda",
+      "base_meaning": "Osa světa, jež spojuje podzemí kořenů s nebem koruny.",
+      "extended_meaning": "Strom jest ve snech jedním z nejuniverzálnějších symbolů lidstva — jeho kořeny sahají do temnot nevědomého, kmen prochází světem každodenním a koruna dotýká se toho, co přesahuje jednotlivý život. Jest obrazem růstu, jenž je pomalý a neodvolatelný, a individuace, jež má svůj vlastní čas. Strom zdravý věstí zakořeněnost a životní sílu; strom padlý či suchý mluví o části snícího, jež odumřela či byla odříznuta od živin. Jung viděl ve stromě přirozený mandala-symbol psýché — celistvost, jež roste zdola nahoru a nelze ji vynutit.",
+      "illustration": "strom_koreny.svg",
+      "tags": [
+        "rust",
+        "zakorenenost",
+        "cas",
+        "celistvost",
+        "zivot",
+        "smrt",
+        "individuace"
+      ],
+      "relevant_verbs": [
+        "rust",
+        "zakorenit_se",
+        "vyrazit_vetvemi",
+        "padati",
+        "skryti_se"
+      ],
+      "related_symbols": [
+        "les",
+        "koren",
+        "had",
+        "jablko",
+        "strom_poznani",
+        "hora"
+      ],
+      "frequency_rank": 5,
+      "archetypal_domain": "life_force",
+      "secondary_domain": "self",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "studna": {
+      "id": "studna",
+      "label": "Studna",
+      "category": "mista",
+      "base_meaning": "Úzký sestup do hloubi, z níž voda přichází — a kam hlas mizí bez ohlasu.",
+      "extended_meaning": "Studna jest ve snech obrazem uzavřeného nevědomého: na rozdíl od moře, jež jest neohraničené a bouřlivé, jest studna tichá, tmavá a ohraničená zdí kamene. Co jest dole, jest skutečné — ale nedostupné bez vědomého úsilí vytáhnout nahoru to, co leží v hloubi. Voda ve studni jest obrazem hlubinné pravdy: čistá voda věstí přístup k vlastní podstatě, kalná voda mluví o potlačených obsahách, jež se mísí a kvasí. Studna bez vody jest jedním z nejsmutnějších obrazů vyčerpání — místem, kde snící hledal zdroj a nenalezl nic.",
+      "illustration": "studna_hloubka.svg",
+      "tags": [
+        "hloubka",
+        "nevedomi",
+        "pravda",
+        "zdroj",
+        "potlaceni",
+        "ticho",
+        "uzavreni"
+      ],
+      "relevant_verbs": [
+        "sestoupiti",
+        "nahlizeti",
+        "vytahnouti",
+        "cerpati"
+      ],
+      "related_symbols": [
+        "voda",
+        "sklep",
+        "propast",
+        "tma",
+        "had",
+        "zrcadlo"
+      ],
+      "frequency_rank": 11,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "self",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "stul": {
+      "id": "stul",
+      "label": "Stůl",
+      "category": "predmety",
+      "base_meaning": "Místo, kde se sedí společně — a kde se snící dozví, kdo jest u jeho stolu a kdo chybí.",
+      "extended_meaning": "Stůl jest ve snech obrazem sdílení a společenství: místem, kde se setkávají lidé a kde jídlo, slovo nebo ticho tvoří pouto. Stůl plný lidí mluví o pocitu příslušnosti, o životě obklopeném ostatními; stůl prázdný mluví o osamělosti nebo o místě, jež čeká být naplněno. Stůl, u něhož sedí mrtví nebo chybějící, jest obrazem truchlení nebo nedokončeného loučení. Být vyloučen od stolu mluví o vyřazení ze společenství — o pocitu, že snící nepatří tam, kde by chtěl patřit. Prostřít stůl jest obrazem připravenosti přijmout druhé: gesto péče, jež jest zároveň aktem odvahy.",
+      "illustration": "stul_spolecenstvi.svg",
+      "tags": [
+        "spolecenstvi",
+        "sdileni",
+        "pece",
+        "osamelost",
+        "prijeti",
+        "vylouceni",
+        "pamet"
+      ],
+      "relevant_verbs": [
+        "sedet",
+        "prostrit",
+        "odejit_od_stolu",
+        "pozvat",
+        "truchliti"
+      ],
+      "related_symbols": [
+        "jidlo",
+        "matka",
+        "rodina",
+        "domov",
+        "hrbitov"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "collective",
+      "secondary_domain": "persona",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "svetlo": {
+      "id": "svetlo",
+      "label": "Světlo",
+      "category": "abstrakce",
+      "base_meaning": "Co přichází a tma ustupuje — ale snící musí být schopen vydržet pohled.",
+      "extended_meaning": "Světlo jest ve snech obrazem vědomí v jeho nejčistší podobě: tím, co osvětluje a umožňuje vidět. Jest protiváhou tmy — ale ne jejím nepřítelem: světlo a tma ve snech tvoří celek, a kde jest světlo příliš ostré, může oslepovat stejně jako tma. Přicházeti ke světlu jest obrazem individuace, osvícení nebo uzdravení — pohybu od nevědomého k vědomému. Světlo vzdálené a nedosažitelné mluví o naději nebo cíli, jenž jest stále před snícím. Světlo, jež zhasne, jest obrazem náhlé ztráty orientace. Být zdrojem světla jest jedním z nejsilnějších snových obrazů: snící, jenž již nehledá světlo venku, nýbrž nese vlastní.",
+      "illustration": "svetlo_vedomi.svg",
+      "tags": [
+        "vedomi",
+        "jasnost",
+        "individuace",
+        "osviceni",
+        "nadeji",
+        "stin",
+        "oslepeni"
+      ],
+      "relevant_verbs": [
+        "osvititi",
+        "zhasnout",
+        "hledati",
+        "nesti",
+        "odvratiti_se"
+      ],
+      "related_symbols": [
+        "tma",
+        "ohen",
+        "slunce",
+        "self",
+        "transformation"
+      ],
+      "frequency_rank": 10,
+      "archetypal_domain": "self",
+      "secondary_domain": "transformation",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "tma": {
+      "id": "tma",
+      "label": "Tma",
+      "category": "abstrakce",
+      "base_meaning": "Nepřítomnost světla, v níž snící jest odkázán na jiné smysly než zrak.",
+      "extended_meaning": "Tma ve snech není pouhou absencí světla — jest přítomností toho, co nelze spatřiti, a proto jest o to mocnější. Vědomí jest ztotožňováno se zrakem; tma jest tedy říší, kde vědomá kontrola selhává a kde přebírají slovo hlubší vrstvy psýché. Bát se tmy ve snu jest báti se vlastního nevědomého; pohybovati se tmou bez paniky jest znamením, že snící nalézá důvěru v to, co přesahuje jeho racionální uchopení. Světlo, jež se v tmě náhle zjeví, jest jedním z nejsilnějších obrazů průlomu a naděje.",
+      "illustration": "tma_svetlo.svg",
+      "tags": [
+        "nevedomi",
+        "strach",
+        "stin",
+        "neznamo",
+        "intuice",
+        "hlubina",
+        "prulez"
+      ],
+      "relevant_verbs": [
+        "bloudit",
+        "skryti_se",
+        "hledeti",
+        "vstoupiti",
+        "otociti_se"
+      ],
+      "related_symbols": [
+        "sklep",
+        "propast",
+        "les",
+        "had",
+        "svetlo"
+      ],
+      "frequency_rank": 3,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "valka": {
+      "id": "valka",
+      "label": "Válka",
+      "category": "udalosti",
+      "base_meaning": "Místo, kde se rozhoduje o přežití — a kde snící zjistí, co v sobě jest schopen.",
+      "extended_meaning": "Válka jest ve snech obrazem kolektivního stínu v jeho největším měřítku: konfliktu, jenž přesahuje jednoho člověka a vtahuje snícího do něčeho, co nezačal a co nemůže sám zastavit. Být ve válce mluví o části snícího, jež jest zasažena silami většími než jeho vůle — o přetížení, o pocitu, že život jest bojiště. Bojovati ve válce mluví o aktivním zapojení do konfliktu, jenž může být vnější nebo vnitřní: válka v psýché mezi protichůdnými silami jest jednou z nejčastějších podob tohoto snu. Přežít válku jest obrazem transformace skrze krajnost: snící, jenž prošel, jest jiný. Válka bez konce mluví o vyčerpání, o konfliktu, jenž se stal stavem — a snící zapomněl, jak žít bez něj.",
+      "illustration": "valka_konflikt.svg",
+      "tags": [
+        "konflikt",
+        "stin",
+        "kolektivni",
+        "preziti",
+        "transformace",
+        "vycerpani",
+        "sila"
+      ],
+      "relevant_verbs": [
+        "bojovati",
+        "prezit",
+        "utect",
+        "kapitulovat",
+        "chraniti"
+      ],
+      "related_symbols": [
+        "zbran",
+        "pronasledovani",
+        "smrt",
+        "otec",
+        "collective",
+        "tma"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "collective",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "vlk": {
+      "id": "vlk",
+      "label": "Vlk",
+      "category": "zvirata",
+      "base_meaning": "Bytost, jež běží v noci a ví, co chce — instinkt bez omluvy.",
+      "extended_meaning": "Vlk jest ve snech jedním z nejsilnějších obrazů stínu v jeho prvotní, předcivilizační podobě: není zlý, jest jen nezkrocený. Představuje v psýché snícího ty části, jež byly označeny za nebezpečné a zapuzeny do tmy lesa — agresivitu, smyslnost, teritorialitu, touhu, jež se nechce přizpůsobit. Být pronásledován vlkem jest obrazem útěku před vlastním instinktem: čím rychleji snící běží, tím blíže vlk jest. Zastaviti se a obrátiti se k vlku jest ve snech jedním z nejodvážnějších činů — a vlk, jenž byl přijat, se často promění v průvodce. Vlk ve smečce mluví o kolektivním stínu, o silách, jež jsou větší než jeden člověk.",
+      "illustration": "vlk_instinkt.svg",
+      "tags": [
+        "instinkt",
+        "stin",
+        "agrese",
+        "nezkrocenost",
+        "touha",
+        "les",
+        "transformace"
+      ],
+      "relevant_verbs": [
+        "prchati",
+        "zastaviti_se",
+        "obratiti_se",
+        "nasledovati",
+        "vrceti"
+      ],
+      "related_symbols": [
+        "les",
+        "pronasledovani",
+        "had",
+        "drak",
+        "tma",
+        "zvire"
+      ],
+      "frequency_rank": 5,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "voda": {
+      "id": "voda",
+      "label": "Voda",
+      "category": "zivly",
+      "base_meaning": "Hlubina nevědomého, z níž vše povstává a do níž vše navrací se.",
+      "extended_meaning": "Voda jest praobrazem duše samé — bez tvaru, leč tvárná nade vše, schopna živiti i pohltiti. Ve snech plyne jako zrcadlo toho, co jest skryto pod hladinou vědomí: city pohřbené, vzpomínky potopené, touhy nevyslovené. Klidná hladina věstí smíření se sebou samým, bouřlivý příboj pak zápas s tím, čemu snící dosud vzdoruje. Sestoupiti do vod jest vždy sestoupením do sebe — iniciací, z níž se vychází proměněn anebo nevyjde se vůbec.",
+      "illustration": "voda_hlubina.svg",
+      "tags": [
+        "nevedomi",
+        "transformace",
+        "city",
+        "duše",
+        "ocista",
+        "hlubina",
+        "zivot",
+        "smrt"
+      ],
+      "relevant_verbs": [
+        "tonuti",
+        "prouditi",
+        "ponoriti_se",
+        "pritekati",
+        "vytekati"
+      ],
+      "related_symbols": [
+        "had",
+        "more",
+        "studna",
+        "dest",
+        "led",
+        "reka"
+      ],
+      "frequency_rank": 2,
+      "archetypal_domain": "transformation",
+      "secondary_domain": "anima",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "zbran": {
+      "id": "zbran",
+      "label": "Zbraň",
+      "category": "predmety",
+      "base_meaning": "Nástroj síly v ruce snícího — otázka jest, zda chrání, nebo útočí.",
+      "extended_meaning": "Zbraň jest ve snech zastřešujícím obrazem agrese v její nejpřímější podobě: síly, jež může ublížit nebo ochránit, a záleží vždy na tom, v čí ruce jest a kam míří. Držeti zbraň jest obrazem moci — ale také odpovědnosti: snící, jenž drží zbraň, musí rozhodnout. Být ozbrojen proti pronásledovateli mluví o zdravé obraně stínu; útočit zbraní na někoho blízkého mluví o potlačené agresi, jež hledá výraz. Zbraň odložená jest obrazem vzdání se kontroly nebo odvahy k míru. Druh zbraně nese svůj vlastní jazyk: meč mluví o vůli a jasnosti, střelná zbraň o vzdálené agresi, nůž o intimní, nevyhnutelné konfrontaci.",
+      "illustration": "zbran_sila.svg",
+      "tags": [
+        "agrese",
+        "moc",
+        "obrana",
+        "rozhodnuti",
+        "stin",
+        "kontrola",
+        "konfrontace"
+      ],
+      "relevant_verbs": [
+        "drzeti",
+        "odloziti",
+        "utociti",
+        "braniti",
+        "namiriti"
+      ],
+      "related_symbols": [
+        "pronasledovani",
+        "vlk",
+        "drak",
+        "had",
+        "otec",
+        "valka"
+      ],
+      "frequency_rank": 6,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "animus",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "zima": {
+      "id": "zima",
+      "label": "Zima",
+      "category": "priroda",
+      "base_meaning": "Tma, jež není nepřítelem — jen prostorem, v němž se něco připravuje.",
+      "extended_meaning": "Zima jest ve snech obrazem stažení, klidu a temné fáze cyklu: okamžiku, kdy energie zmizela pod povrch a snící jest sám s tím, co zbyde po odebrání světla. Jest to archetyp introverze, čekání a nevědomí v jeho nejčistší podobě. Být v zimě mluví o fázi stažení: snící možná neví, co se děje pod povrchem — ale něco se děje. Zmrznout v zimě mluví o paralýze nebo depresi: o energii, jež přestala téct a snící neví jak ji rozhýbat. Přežít zimu mluví o odolnosti a víře v cyklus — o části snícího, jež ví, že jaro přijde, i když jej ještě nevidí. Zima bez konce jest obrazem ztráty víry v obnovu: snící uvízl ve fázi, jež měla být přechodná, a přestala se jevit jako přechodná.",
+      "illustration": "zima_tma.svg",
+      "tags": [
+        "tma",
+        "klid",
+        "introverse",
+        "cekani",
+        "paralýza",
+        "odolnost",
+        "nevydomi"
+      ],
+      "relevant_verbs": [
+        "cekat",
+        "mrznout",
+        "prezit",
+        "stahnout_se",
+        "vydrzet"
+      ],
+      "related_symbols": [
+        "jaro",
+        "smrt",
+        "led",
+        "snih",
+        "tma",
+        "studna"
+      ],
+      "frequency_rank": 9,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "zrcadlo": {
+      "id": "zrcadlo",
+      "label": "Zrcadlo",
+      "category": "predmety",
+      "base_meaning": "Povrch, jenž vrací obraz — ale ne vždy ten, který snící očekával.",
+      "extended_meaning": "Zrcadlo jest ve snech místem konfrontace: snící přistoupí a uvidí — ale co uvidí, jest otázkou. Spatřiti vlastní tvář jest obrazem připravenosti k sebepoznání; spatřiti tvář cizí nebo deformovanou jest obrazem odcizení od sebe sama, od persony, jež se odtrhla od skutečného já. Zrcadlo, jež neodrází nic, mluví o hlubokém prožitku prázdnoty nebo ztráty identity. Rozbité zrcadlo jest obrazem persony v troskách — bolestné, ale osvobozující, neboť za střepy bývá vidět něco skutečnějšího. Zrcadlo jest vždy výzvou: podívati se a nezavřít oči.",
+      "illustration": "zrcadlo_obraz.svg",
+      "tags": [
+        "sebeobraz",
+        "konfrontace",
+        "identita",
+        "persona",
+        "odcizeni",
+        "pravda",
+        "sebezkresleni"
+      ],
+      "relevant_verbs": [
+        "nahlizeti",
+        "odvratiti_se",
+        "rozbiti",
+        "pristoupiti",
+        "uzrit"
+      ],
+      "related_symbols": [
+        "persona",
+        "maska",
+        "tvar",
+        "oci",
+        "tma",
+        "svetlo"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "persona",
+      "secondary_domain": "self",
+      "added_version": "1",
+      "content_status": "draft"
+    },
+    "zuby": {
+      "id": "zuby",
+      "label": "Zuby",
+      "category": "telo",
+      "base_meaning": "Životní síla, pýcha a palčivá obava ze ztráty moci či skonu.",
+      "extended_meaning": "Vypadávající či drolící se chrup jest zlověstným znamením mementa mori, zvěstí o nemoci, úpadku síly životní či ztrátě tváře před světem. Kdo ve snu zuby své tratí, ten o pevnou oporu svou v bdělém světě přichází a strachu z bezmoci hluboce propadá.",
+      "illustration": "teeth_decay.svg",
+      "tags": [
+        "telo",
+        "ztrata",
+        "smrt",
+        "strach",
+        "sila",
+        "pomijivost",
+        "starnuti",
+        "bezmoc"
+      ],
+      "relevant_verbs": [
+        "vypadnouti",
+        "drolit_se",
+        "kousati",
+        "skripati",
+        "cenit_tesaky",
+        "krvacet"
+      ],
+      "related_symbols": [
+        "lebka",
+        "krev",
+        "stari",
+        "smrtka",
+        "kosti"
+      ],
+      "frequency_rank": 2,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "shadow",
+      "added_version": "1",
+      "content_status": "complete"
+    },
+    "zvire": {
+      "id": "zvire",
+      "label": "Zvíře",
+      "category": "zvirata",
+      "base_meaning": "Hlas přirozenosti a pudu, jenž v člověku předchází každé myšlence.",
+      "extended_meaning": "Zvíře ve snech jest obrazem těch sil v člověku, jež jsou starší než řeč a rozum — instinkty, tělesnost, pudová moudrost, jež civilizace přikryla, avšak nevyhladila. Druh zvířete určuje povahu poselství: dravec mluví o skryté síle či hněvu, krotké zvíře o potlačené něžnosti, plaz o nejstarších vrstvách psýché. Týráno-li jest zvíře ve snu, jest snící odříznut od vlastní přirozenosti; stojí-li zvíře po boku snícího, nalezl spojenectví se svou pudovou silou. Jung nazýval zvíře jedním z nejpřímějších poslů nevědomého.",
+      "illustration": "zvire_pud.svg",
+      "tags": [
+        "pud",
+        "prirodzenost",
+        "instinkt",
+        "sila",
+        "stin",
+        "telo",
+        "divocina"
+      ],
+      "relevant_verbs": [
+        "pronasledovati",
+        "prchati",
+        "zkrotiti",
+        "nasledovati",
+        "ustknouti"
+      ],
+      "related_symbols": [
+        "had",
+        "vlk",
+        "kun",
+        "ptak",
+        "les",
+        "stín"
+      ],
+      "frequency_rank": 6,
+      "archetypal_domain": "shadow",
+      "secondary_domain": "life_force",
+      "added_version": "1",
+      "content_status": "draft"
+    }
+  },
+  "emotions": {
+    "hruza": {
+      "id": "hruza",
+      "label": "Hrůza",
+      "color_hex": "#8B0000",
+      "emoji": "😱",
+      "valence": "negative",
+      "intensity": "high",
+      "modifier_prefix": "tvůj sen ti tuto oblast neukazuje jako bezpečnou, ale jako hrozbu",
+      "modifier_body": "intenzivní strach naznačuje, že v bdělém životě cítíš reálnou ztrátu kontroly",
+      "quadrant": "negative_high"
+    },
+    "uzkost": {
+      "id": "uzkost",
+      "label": "Úzkost",
+      "color_hex": "#9B59B6",
+      "emoji": "😰",
+      "valence": "negative",
+      "intensity": "medium",
+      "modifier_prefix": "úzkost, kterou jsi cítil, mění celý charakter symbolu",
+      "modifier_body": "tento pocit naznačuje, že situace ve snu rezonuje s něčím nevyřešeným",
+      "quadrant": "negative_medium"
+    },
+    "klid": {
+      "id": "klid",
+      "label": "Klid",
+      "color_hex": "#4A90D9",
+      "emoji": "😌",
+      "valence": "positive",
+      "intensity": "low",
+      "modifier_prefix": "přestože symbol může znít silně, ty ses u něj cítil v bezpečí",
+      "modifier_body": "vnitřní klid naznačuje, že si s touto situací v hloubi duše dokážeš poradit",
+      "quadrant": "positive_low"
+    },
+    "radost": {
+      "id": "radost",
+      "label": "Radost",
+      "color_hex": "#F1C40F",
+      "emoji": "😄",
+      "valence": "positive",
+      "intensity": "high",
+      "modifier_prefix": "radost, se kterou jsi symbol prožíval, mu dává zcela nový rozměr",
+      "modifier_body": "silná pozitivní emoce naznačuje, že tato oblast tě v životě skutečně naplňuje",
+      "quadrant": "positive_high"
+    },
+    "smutek": {
+      "id": "smutek",
+      "label": "Smutek",
+      "color_hex": "#2C3E50",
+      "emoji": "😢",
+      "valence": "negative",
+      "intensity": "medium",
+      "modifier_prefix": "smutek přebarvuje symbol do tónů ztráty a touhy",
+      "modifier_body": "tato emoce odkazuje na něco, s čím ses dosud nepodařilo se vnitřně rozloučit",
+      "quadrant": "negative_medium"
+    },
+    "hnev": {
+      "id": "hnev",
+      "label": "Hněv",
+      "color_hex": "#C0392B",
+      "emoji": "😤",
+      "valence": "negative",
+      "intensity": "high",
+      "modifier_prefix": "někde v bdělém životě se cítíš přehlížen/a nebo omezován/a — a mlčíš o tom příliš dlouho",
+      "modifier_body": "hněv, který jsi cítil, odhaluje, že symbol zasáhl místo, kde máš nevyřčené hranice",
+      "quadrant": "negative_high"
+    },
+    "melancholie": {
+      "id": "melancholie",
+      "label": "Melancholie",
+      "color_hex": "#566573",
+      "emoji": "🌧️",
+      "valence": "negative",
+      "intensity": "low",
+      "modifier_prefix": "část tebe truchlí po něčem, co možná nikdy nenastalo — nebo co jsi nechal/a minout",
+      "modifier_body": "melancholie zbarvuje symbol tichým smutkem bez jasné příčiny",
+      "quadrant": "negative_low"
+    },
+    "euforie": {
+      "id": "euforie",
+      "label": "Euforie",
+      "color_hex": "#F39C12",
+      "emoji": "🌟",
+      "valence": "positive",
+      "intensity": "high",
+      "modifier_prefix": "taková přemíra světla někdy naznačuje, že si něčeho v bdělém životě velmi silně přeješ",
+      "modifier_body": "euforie, která tě provázela, dává symbolu skoro nereálnou intenzitu",
+      "quadrant": "positive_high"
+    },
+    "nadeje": {
+      "id": "nadeje",
+      "label": "Naděje",
+      "color_hex": "#27AE60",
+      "emoji": "🌱",
+      "valence": "positive",
+      "intensity": "medium",
+      "modifier_prefix": "věstí, že část tebe věří v možnost změny — i tam, kde to vědomě vzdáváš",
+      "modifier_body": "naděje, kterou jsi u symbolu cítil, otevírá výklad směrem k budoucnosti",
+      "quadrant": "positive_medium"
+    }
+  },
+  "verbs": {
+    "topit_se": {
+      "id": "topit_se",
+      "label": "Topil/a jsem se",
+      "applicable_symbols": [
+        "voda",
+        "more",
+        "reka",
+        "blatiste"
+      ],
+      "action_meaning": "máš pocit, že tě situace přemáhá a nedokážeš se nadechnout",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "plavat": {
+      "id": "plavat",
+      "label": "Plaval/a jsem",
+      "applicable_symbols": [
+        "voda",
+        "more",
+        "reka",
+        "bazen"
+      ],
+      "action_meaning": "dokážeš v dané situaci aktivně fungovat a pohybovat se vpřed",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "utikat": {
+      "id": "utikat",
+      "label": "Utíkal/a jsem",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "instinkt říká: s tím se teď nechci konfrontovat",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "pozorovat": {
+      "id": "pozorovat",
+      "label": "Díval/a jsem se",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "jsi si situace vědom/a, ale zatím ji neřešíš — jsi pozorovatel",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "ustknouti": {
+      "id": "ustknouti",
+      "label": "Uštknul/a mě",
+      "applicable_symbols": [
+        "had",
+        "drak",
+        "stir"
+      ],
+      "action_meaning": "přišel nečekaný úder ze strany, na kterou jsi se nepřipravil/a",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "plazit_se": {
+      "id": "plazit_se",
+      "label": "Plazil/a jsem se",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "postupuješ opatrně, skrytě — situace vyžaduje ticho a trpělivost",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "horeti": {
+      "id": "horeti",
+      "label": "Hořel/a jsem",
+      "applicable_symbols": [
+        "ohen",
+        "hranice",
+        "svice",
+        "slunce",
+        "valka"
+      ],
+      "action_meaning": "procházíš intenzivní transformací, která tě zároveň bolí i čistí",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "hasit": {
+      "id": "hasit",
+      "label": "Hasil/a jsem",
+      "applicable_symbols": [
+        "ohen",
+        "hranice"
+      ],
+      "action_meaning": "snažíš se kontrolovat situaci nebo emoce, které přesahují tvé síly",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "krvacet": {
+      "id": "krvacet",
+      "label": "Krvácet",
+      "applicable_symbols": [
+        "krev",
+        "rana_otevrena",
+        "nuz"
+      ],
+      "action_meaning": "zranění je viditelné — ztráta, kterou nelze skrýt před sebou ani světem",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "vypadnouti": {
+      "id": "vypadnouti",
+      "label": "Vypadl/a mi",
+      "applicable_symbols": [
+        "zuby",
+        "kost"
+      ],
+      "action_meaning": "prožíváš ztrátu opory nebo sebedůvěry — něco pevného se uvolnilo",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "prebrodit": {
+      "id": "prebrodit",
+      "label": "Přebrodil/a jsem se",
+      "applicable_symbols": [
+        "reka",
+        "blatiste",
+        "more"
+      ],
+      "action_meaning": "rozhodl/a ses překonat překážku a přešel/přešla na druhou stranu",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "plynout_casem": {
+      "id": "plynout_casem",
+      "label": "Plynul/a jsem s proudem",
+      "applicable_symbols": [
+        "reka",
+        "cas",
+        "more"
+      ],
+      "action_meaning": "necháváš věci plynout bez odporu — nevíš kam tě to nese",
+      "action_direction": "avoidance",
+      "intensity": "low"
+    },
+    "riditi": {
+      "id": "riditi",
+      "label": "Řídil/a jsem",
+      "applicable_symbols": [
+        "auto",
+        "vlak",
+        "lod"
+      ],
+      "action_meaning": "máš pocit, že ovládáš směr svého života a rozhoduješ se vědomě",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "bloudit": {
+      "id": "bloudit",
+      "label": "Bloudil/a jsem",
+      "applicable_symbols": [
+        "les",
+        "cesta",
+        "mesto",
+        "labyrint"
+      ],
+      "action_meaning": "nevíš kudy dál — ztratil/a jsi orientaci nebo cíl",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "zkouseti": {
+      "id": "zkouseti",
+      "label": "Zkoušeli mě",
+      "applicable_symbols": [
+        "skola",
+        "soud",
+        "divadlo"
+      ],
+      "action_meaning": "cítíš, že tě někdo hodnotí a bojíš se, že nebudeš dost dobrý/dobrá",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "obstati": {
+      "id": "obstati",
+      "label": "Obstál/a jsem",
+      "applicable_symbols": [
+        "skola",
+        "soud",
+        "boj"
+      ],
+      "action_meaning": "dokázal/a jsi obstát pod tlakem — něco v tobě vydrželo",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "selhat": {
+      "id": "selhat",
+      "label": "Selhal/a jsem",
+      "applicable_symbols": [
+        "skola",
+        "soud",
+        "divadlo",
+        "boj"
+      ],
+      "action_meaning": "máš pocit, že jsi nesplnil/a očekávání — své nebo cizí",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "setkati_se": {
+      "id": "setkati_se",
+      "label": "Setkal/a jsem se",
+      "applicable_symbols": [
+        "cizi_clovek",
+        "postava",
+        "strin"
+      ],
+      "action_meaning": "narazil/a jsi na něco neznámého v sobě — zatím nevíš co to je",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "zkrotiti": {
+      "id": "zkrotiti",
+      "label": "Zkrotil/a jsem",
+      "applicable_symbols": [
+        "zvire",
+        "kun",
+        "had",
+        "vlk"
+      ],
+      "action_meaning": "ovládl/a jsi impulz nebo instinkt, který byl silnější než ty",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "nasledovati": {
+      "id": "nasledovati",
+      "label": "Následoval/a jsem",
+      "applicable_symbols": [
+        "zvire",
+        "kun",
+        "vlk",
+        "ptak"
+      ],
+      "action_meaning": "svěřil/a ses instinktu a šel/šla za ním bez racionálního důvodu",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "leteti": {
+      "id": "leteti",
+      "label": "Letěl/a jsem",
+      "applicable_symbols": [
+        "letani",
+        "ptak",
+        "kridla",
+        "oblaka"
+      ],
+      "action_meaning": "cítíš svobodu nebo touhu překonat omezení, která tě drží",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "padati": {
+      "id": "padati",
+      "label": "Padal/a jsem",
+      "applicable_symbols": [
+        "propast",
+        "vyska",
+        "hora",
+        "most"
+      ],
+      "action_meaning": "ztrácíš půdu pod nohama — něco se vymklo kontrole",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "vstoupiti": {
+      "id": "vstoupiti",
+      "label": "Vstoupil/a jsem",
+      "applicable_symbols": [
+        "dum",
+        "les",
+        "skola",
+        "jeskyne",
+        "brana"
+      ],
+      "action_meaning": "vědomě jsi překročil/a práh — jdeš do něčeho neznámého záměrně",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "prchati": {
+      "id": "prchati",
+      "label": "Prchal/a jsem",
+      "applicable_symbols": [
+        "pronasledovani",
+        "les",
+        "smrt",
+        "tma"
+      ],
+      "action_meaning": "utíkáš před něčím, co nechceš vidět nebo přiznat",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "umirati": {
+      "id": "umirati",
+      "label": "Umíral/a jsem",
+      "applicable_symbols": [
+        "smrt",
+        "krev",
+        "tma",
+        "nemoc"
+      ],
+      "action_meaning": "procházíš koncem nějaké fáze — něco v tobě se uzavírá",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "staveti": {
+      "id": "staveti",
+      "label": "Stavěl/a jsem",
+      "applicable_symbols": [
+        "dum",
+        "hora",
+        "zed",
+        "most"
+      ],
+      "action_meaning": "budujete něco trvalého — investuješ energii do toho, co má vydržet",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "hledati": {
+      "id": "hledati",
+      "label": "Hledal/a jsem",
+      "applicable_symbols": [
+        "les",
+        "dum",
+        "cesta",
+        "labyrint"
+      ],
+      "action_meaning": "hledáš něco důležitého, ale ještě nevíš přesně co to je",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "naleznouti": {
+      "id": "naleznouti",
+      "label": "Nalezl/a jsem",
+      "applicable_symbols": [
+        "les",
+        "dum",
+        "cesta",
+        "skrys"
+      ],
+      "action_meaning": "narazil/a jsi na něco, co jsi hledal/a — nebo co hledalo tebe",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "otociti_se": {
+      "id": "otociti_se",
+      "label": "Otočil/a jsem se",
+      "applicable_symbols": [
+        "pronasledovani",
+        "tma",
+        "strin"
+      ],
+      "action_meaning": "místo útěku jsi čelil/a tomu, co tě pronásledovalo",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "zustati_stat": {
+      "id": "zustati_stat",
+      "label": "Zůstal/a jsem stát",
+      "applicable_symbols": [
+        "most",
+        "cesta",
+        "brana",
+        "krizovat"
+      ],
+      "action_meaning": "jsi na prahu rozhodnutí, ale nedokážeš se pohnout ani zpět ani vpřed",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "skryti_se": {
+      "id": "skryti_se",
+      "label": "Skryl/a jsem se",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "vyhýbáš se konfrontaci a hledáš úkryt před tím, co tě ohrožuje",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "zastaviti_se": {
+      "id": "zastaviti_se",
+      "label": "Zastavil/a jsem se",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "ocitl/a ses na místě, kde nevíš, jak pokračovat dál",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "opustiti": {
+      "id": "opustiti",
+      "label": "Opustil/a jsem",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "opouštíš něco nebo někoho — vědomě nebo pod tlakem okolností",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "chraniti": {
+      "id": "chraniti",
+      "label": "Chránil/a jsem",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "přebíráš odpovědnost za někoho nebo něco a bráníš to před ohrožením",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "ztratiti": {
+      "id": "ztratiti",
+      "label": "Ztratil/a jsem",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "něco důležitého ti zmizelo z dosahu a nevíš, zda to znovu najdeš",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "pustiti": {
+      "id": "pustiti",
+      "label": "Pustil/a jsem",
+      "applicable_symbols": [
+        "*",
+        "podzim",
+        "list",
+        "provaz",
+        "ruka"
+      ],
+      "action_meaning": "dobrovolně nebo z nutnosti pouštíš to, na čem ti záleželo",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "kraceti": {
+      "id": "kraceti",
+      "label": "Kráčel/a jsem",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "postupuješ vpřed vlastním tempem bez tlaku — situace je pod kontrolou",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "plakat": {
+      "id": "plakat",
+      "label": "Plakal/a jsem",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "emoce tě přemáhají a nacházejí si cestu ven",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "navratiti_se": {
+      "id": "navratiti_se",
+      "label": "Vrátil/a jsem se",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "vracíš se k něčemu, co jsi opustil/a — vědomě nebo z nutnosti",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "nesti": {
+      "id": "nesti",
+      "label": "Nesl/a jsem",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "neseš zátěž — fyzickou, emoční nebo symbolickou — a snažíš se ji udržet",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "cekat": {
+      "id": "cekat",
+      "label": "Čekal/a jsem",
+      "applicable_symbols": [
+        "*"
+      ],
+      "action_meaning": "odkládáš jednání a čekáš — na signál, na souhlas, na změnu",
+      "action_direction": "avoidance",
+      "intensity": "low"
+    },
+    "tonuti": {
+      "id": "tonuti",
+      "label": "Tonul/a jsem",
+      "applicable_symbols": [
+        "voda",
+        "more",
+        "reka",
+        "blatiste"
+      ],
+      "action_meaning": "pomalu tě přemáhá něco, čemu se nedá vzdorovat",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "prouditi": {
+      "id": "prouditi",
+      "label": "Proudil/a jsem",
+      "applicable_symbols": [
+        "voda",
+        "reka",
+        "more"
+      ],
+      "action_meaning": "nestavíš odpor — necháváš se unášet silou, která tě přesahuje",
+      "action_direction": "avoidance",
+      "intensity": "low"
+    },
+    "ponoriti_se": {
+      "id": "ponoriti_se",
+      "label": "Ponořil/a jsem se",
+      "applicable_symbols": [
+        "voda",
+        "more",
+        "ryba",
+        "studna"
+      ],
+      "action_meaning": "vědomě sestupuješ do hloubky — hledáš, co je pod povrchem",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "odbociti": {
+      "id": "odbociti",
+      "label": "Odbočil/a jsem",
+      "applicable_symbols": [
+        "cesta",
+        "most",
+        "les",
+        "brana"
+      ],
+      "action_meaning": "opouštíš původní směr a vydáváš se jinou cestou",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "prohledavati": {
+      "id": "prohledavati",
+      "label": "Prohledával/a jsem",
+      "applicable_symbols": [
+        "dum",
+        "sklep",
+        "labyrint",
+        "tma"
+      ],
+      "action_meaning": "aktivně hledáš něco skrytého — odpověď nebo ztracený kus sebe",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "zamknout": {
+      "id": "zamknout",
+      "label": "Zamkl/a jsem",
+      "applicable_symbols": [
+        "dum",
+        "sklep",
+        "brana",
+        "klic"
+      ],
+      "action_meaning": "uzavíráš přístup — chráníš nebo vězníš, možná obojí zároveň",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "stoupati": {
+      "id": "stoupati",
+      "label": "Stoupal/a jsem",
+      "applicable_symbols": [
+        "hora",
+        "schody",
+        "strom",
+        "vez"
+      ],
+      "action_meaning": "postupuješ vzhůru s úsilím, ale s jasným směrem",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "truchliti": {
+      "id": "truchliti",
+      "label": "Truchlil/a jsem",
+      "applicable_symbols": [
+        "hrbitov",
+        "stul",
+        "pokoj"
+      ],
+      "action_meaning": "procházíš ztrátou a dovolil/a sis ji naplno cítit",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "sadit": {
+      "id": "sadit",
+      "label": "Sázel/a jsem",
+      "applicable_symbols": [
+        "jaro",
+        "kvet",
+        "zahrada"
+      ],
+      "action_meaning": "vkládáš energii do něčeho, co teprve poroste",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "hladiti": {
+      "id": "hladiti",
+      "label": "Hladil/a jsem",
+      "applicable_symbols": [
+        "zvire",
+        "pes",
+        "kocka",
+        "vlk"
+      ],
+      "action_meaning": "navazuješ kontakt s něčím divokým nebo zranitelným — opatrně",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "plout": {
+      "id": "plout",
+      "label": "Plul/a jsem",
+      "applicable_symbols": [
+        "lod",
+        "more",
+        "oblak",
+        "reka"
+      ],
+      "action_meaning": "pohybuješ se s přirozeným tokem bez odporu a námahy",
+      "action_direction": "avoidance",
+      "intensity": "low"
+    },
+    "zarit": {
+      "id": "zarit",
+      "label": "Zářil/a jsem",
+      "applicable_symbols": [
+        "ohen",
+        "slunce",
+        "svetlo",
+        "ohne"
+      ],
+      "action_meaning": "vyzařuješ sílu nebo pozornost — vědomě nebo jako reakci na ostatní",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "zratiti_oporu": {
+      "id": "zratiti_oporu",
+      "label": "Ztratil/a jsem oporu",
+      "applicable_symbols": [
+        "pad",
+        "propast",
+        "auto",
+        "schody"
+      ],
+      "action_meaning": "situace se vymkla kontrole a nemáš se čeho zachytit",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "pronasledovati": {
+      "id": "pronasledovati",
+      "label": "Pronásledoval/a jsem",
+      "applicable_symbols": [
+        "pronasledovani",
+        "zvire",
+        "vlk",
+        "les"
+      ],
+      "action_meaning": "aktivně sleduješ nebo tlačíš na něco, co se ti vzdaluje",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "sestoupiti": {
+      "id": "sestoupiti",
+      "label": "Sestoupil/a jsem",
+      "applicable_symbols": [
+        "sklep",
+        "studna",
+        "schody",
+        "jeskyne"
+      ],
+      "action_meaning": "vědomě sestupuješ do temnější vrstvy — hledáš, co je skryto",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "nahlizeti": {
+      "id": "nahlizeti",
+      "label": "Nahlížel/a jsem",
+      "applicable_symbols": [
+        "studna",
+        "zrcadlo",
+        "propast",
+        "okno",
+        "tma"
+      ],
+      "action_meaning": "nahlížíš opatrně do hloubky — bez odhodlání vstoupit, ale se zájmem",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "odvratiti_se": {
+      "id": "odvratiti_se",
+      "label": "Odvrátil/a jsem se",
+      "applicable_symbols": [
+        "zrcadlo",
+        "svetlo",
+        "ohen"
+      ],
+      "action_meaning": "odmítáš pohled na to, co ti situace ukazuje",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "prezit": {
+      "id": "prezit",
+      "label": "Přežil/a jsem",
+      "applicable_symbols": [
+        "valka",
+        "zima",
+        "nemoc",
+        "povodne"
+      ],
+      "action_meaning": "prošel/a jsi něčím těžkým a vyšel/a z toho — poznamenán/a, ale živý/á",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "pritekati": {
+      "id": "pritekati",
+      "label": "Přitékal/a jsem",
+      "applicable_symbols": [
+        "voda",
+        "reka",
+        "more",
+        "destova_voda"
+      ],
+      "action_meaning": "něco přichází zvolna a nevyhnutelně — ještě to neovládáš",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "vytekati": {
+      "id": "vytekati",
+      "label": "Vytékal/a jsem",
+      "applicable_symbols": [
+        "voda",
+        "reka",
+        "more",
+        "krev"
+      ],
+      "action_meaning": "ztrácíš něco, co v tobě bylo — energie, síla, emoce odcházejí",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "syceti": {
+      "id": "syceti",
+      "label": "Syčel/a jsem",
+      "applicable_symbols": [
+        "had",
+        "tma",
+        "pavoucek"
+      ],
+      "action_meaning": "vyjadřuješ varování nebo odpor bez přímé konfrontace",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "svlekat_kuzi": {
+      "id": "svlekat_kuzi",
+      "label": "Svlékal/a jsem kůži",
+      "applicable_symbols": [
+        "had",
+        "zrcadlo"
+      ],
+      "action_meaning": "procházíš proměnou — stará vrstva odpadá, nová ještě není hotová",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "ovinouti": {
+      "id": "ovinouti",
+      "label": "Ovinul/a jsem",
+      "applicable_symbols": [
+        "had",
+        "provaz",
+        "koren"
+      ],
+      "action_meaning": "obemykáš nebo jsi obemknut/a — ochrana i uvěznění zároveň",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "drolit_se": {
+      "id": "drolit_se",
+      "label": "Drolil/a jsem se",
+      "applicable_symbols": [
+        "zuby",
+        "zed",
+        "kamen"
+      ],
+      "action_meaning": "rozpadáš se pomalu a neviditelně — zevnitř",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "kousati": {
+      "id": "kousati",
+      "label": "Kousl/a jsem",
+      "applicable_symbols": [
+        "zuby",
+        "zvire",
+        "had",
+        "vlk"
+      ],
+      "action_meaning": "reagoval/a jsi útokem — instinktivně, ze strachu nebo vzteku",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "skripati": {
+      "id": "skripati",
+      "label": "Skřípal/a jsem",
+      "applicable_symbols": [
+        "zuby",
+        "kamen"
+      ],
+      "action_meaning": "zadržuješ něco silou — bolest, hněv nebo strach proniká přes stažená ústa",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "cenit_tesaky": {
+      "id": "cenit_tesaky",
+      "label": "Cenil/a jsem tesáky",
+      "applicable_symbols": [
+        "zuby",
+        "vlk",
+        "zvire",
+        "tma"
+      ],
+      "action_meaning": "ukazuješ sílu nebo hrozbu — vymezuješ se",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "prolit": {
+      "id": "prolit",
+      "label": "Prolil/a jsem krev",
+      "applicable_symbols": [
+        "krev",
+        "valka",
+        "nuz",
+        "ruka"
+      ],
+      "action_meaning": "došlo k porušení — tvému nebo cizímu — co se stalo, nelze vzít zpět",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "pit": {
+      "id": "pit",
+      "label": "Pil/a jsem krev",
+      "applicable_symbols": [
+        "krev",
+        "had",
+        "tma"
+      ],
+      "action_meaning": "přijímáš nebo vstřebáváš něco zakázaného nebo vitálního",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "pulzovati": {
+      "id": "pulzovati",
+      "label": "Pulzoval/a jsem",
+      "applicable_symbols": [
+        "krev",
+        "srdce",
+        "ohen"
+      ],
+      "action_meaning": "cítíš silný rytmický náboj — životní sílu nebo nebezpečí",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "srazet_se": {
+      "id": "srazet_se",
+      "label": "Srážel/a jsem se",
+      "applicable_symbols": [
+        "krev",
+        "zima",
+        "kamen"
+      ],
+      "action_meaning": "něco v tobě tuhne nebo se uzavírá — obranná reakce",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "spaliti": {
+      "id": "spaliti",
+      "label": "Spálil/a jsem",
+      "applicable_symbols": [
+        "ohen",
+        "valka",
+        "dum"
+      ],
+      "action_meaning": "záměrně nebo z nutnosti jsi zničil/a — bez možnosti návratu",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "plapolati": {
+      "id": "plapolati",
+      "label": "Plapolal/a jsem",
+      "applicable_symbols": [
+        "ohen",
+        "svetlo",
+        "voda"
+      ],
+      "action_meaning": "jsi nestálý/á, ale živý/á — pohybuješ se s každým závanem",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "sezehnouti": {
+      "id": "sezehnouti",
+      "label": "Sezhl/a jsem",
+      "applicable_symbols": [
+        "ohen",
+        "slunce",
+        "poust"
+      ],
+      "action_meaning": "byl/a jsi zasažen/a zvenčí silou, která pálí a ničí",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "dusiti": {
+      "id": "dusiti",
+      "label": "Dusil/a jsem",
+      "applicable_symbols": [
+        "ohen",
+        "voda",
+        "tma",
+        "provaz"
+      ],
+      "action_meaning": "zbavuješ něco kyslíku — potlačuješ nebo jsi potlačován/a",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "spalovati": {
+      "id": "spalovati",
+      "label": "Spaloval/a jsem",
+      "applicable_symbols": [
+        "ohen",
+        "valka",
+        "les"
+      ],
+      "action_meaning": "dlouhodobě a vědomě ničíš nebo se necháš ničit — proces, ne moment",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "pohrbiti": {
+      "id": "pohrbiti",
+      "label": "Pohřbil/a jsem",
+      "applicable_symbols": [
+        "hrbitov",
+        "zeme",
+        "kamen",
+        "rakev"
+      ],
+      "action_meaning": "uzavíráš něco definitivně — dáváš tomu místo i rozloučení",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "znovuzroditi_se": {
+      "id": "znovuzroditi_se",
+      "label": "Znovuzrodil/a jsem se",
+      "applicable_symbols": [
+        "hrbitov",
+        "jaro",
+        "voda",
+        "ohen"
+      ],
+      "action_meaning": "prošel/a jsi koncem a vrátil/a ses jiný/á — proměna skrze smrt",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "prochazeti_prahem": {
+      "id": "prochazeti_prahem",
+      "label": "Procházel/a jsem prahem",
+      "applicable_symbols": [
+        "brana",
+        "hrbitov",
+        "dum",
+        "tma"
+      ],
+      "action_meaning": "stojíš na hranici mezi dvěma světy — přecházíš vědomě",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "navstiviti": {
+      "id": "navstiviti",
+      "label": "Navštívil/a jsem",
+      "applicable_symbols": [
+        "hrbitov",
+        "dum",
+        "stul"
+      ],
+      "action_meaning": "vrátil/a ses k něčemu minulému — abys vzdal/a hold nebo se rozloučil/a",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "zapaliti_svici": {
+      "id": "zapaliti_svici",
+      "label": "Zapálil/a jsem svíci",
+      "applicable_symbols": [
+        "hrbitov",
+        "tma",
+        "ohen",
+        "svetlo"
+      ],
+      "action_meaning": "vnášíš malé světlo do tmy — gesto naděje nebo vzpomínky",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "cist_napis": {
+      "id": "cist_napis",
+      "label": "Četl/a jsem nápis",
+      "applicable_symbols": [
+        "hrbitov",
+        "zed",
+        "kamen",
+        "brana"
+      ],
+      "action_meaning": "hledáš smysl nebo zprávu zanechanou někým jiným",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "odejiti": {
+      "id": "odejiti",
+      "label": "Odešel/a jsem",
+      "applicable_symbols": [
+        "hrbitov",
+        "brana",
+        "cesta",
+        "dum"
+      ],
+      "action_meaning": "opouštíš místo nebo situaci — vědomě, s rozhodnutím",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "rust": {
+      "id": "rust",
+      "label": "Rostl/a jsem",
+      "applicable_symbols": [
+        "strom",
+        "jaro",
+        "koren",
+        "svetlo"
+      ],
+      "action_meaning": "rozvíjíš se přirozeně — pomalu a bez násilí",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "zakorenit_se": {
+      "id": "zakorenit_se",
+      "label": "Zakoření/a jsem se",
+      "applicable_symbols": [
+        "strom",
+        "zeme",
+        "koren",
+        "zima"
+      ],
+      "action_meaning": "hledáš pevné ukotvení — zapouštíš kořeny tam, kde stojíš",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "vyrazit_vetvemi": {
+      "id": "vyrazit_vetvemi",
+      "label": "Vyrazil/a jsem větvemi",
+      "applicable_symbols": [
+        "strom",
+        "jaro",
+        "svetlo"
+      ],
+      "action_meaning": "po klidu nebo tichosti se projevuješ naplno — expanze",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "vyklicit": {
+      "id": "vyklicit",
+      "label": "Vyklíčil/a jsem",
+      "applicable_symbols": [
+        "jaro",
+        "zeme",
+        "semeno",
+        "voda"
+      ],
+      "action_meaning": "něco nového se probouzí — křehce, ale nevyhnutelně",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "roztati": {
+      "id": "roztati",
+      "label": "Roztál/a jsem",
+      "applicable_symbols": [
+        "zima",
+        "jaro",
+        "voda",
+        "led"
+      ],
+      "action_meaning": "tuhá vrstva v tobě povoluje — začínáš znovu cítit",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "probudit_se": {
+      "id": "probudit_se",
+      "label": "Probudil/a jsem se",
+      "applicable_symbols": [
+        "zima",
+        "jaro",
+        "strom",
+        "svetlo"
+      ],
+      "action_meaning": "vracíš se z dlouhého útlumu — pomalu, ale vlastní silou",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "ziviti": {
+      "id": "ziviti",
+      "label": "Živil/a jsem",
+      "applicable_symbols": [
+        "strom",
+        "zvire",
+        "jaro",
+        "stul"
+      ],
+      "action_meaning": "dáváš ze sebe druhým — nebo si dovolil/a přijímat výživu",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "uzivati": {
+      "id": "uzivati",
+      "label": "Užíval/a jsem si",
+      "applicable_symbols": [
+        "leto",
+        "more",
+        "svetlo",
+        "kvet"
+      ],
+      "action_meaning": "bytí bez tlaku a výkonu — přítomnost pro sebe",
+      "action_direction": "avoidance",
+      "intensity": "low"
+    },
+    "sklizeti": {
+      "id": "sklizeti",
+      "label": "Sklízel/a jsem",
+      "applicable_symbols": [
+        "podzim",
+        "pole",
+        "strom",
+        "leto"
+      ],
+      "action_meaning": "přijímáš plody toho, co bylo zaseto — uznáváš výsledek své práce",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "opadavat": {
+      "id": "opadavat",
+      "label": "Opadával/a jsem",
+      "applicable_symbols": [
+        "podzim",
+        "strom",
+        "list"
+      ],
+      "action_meaning": "ztrácíš to, co bylo viditelné — přirozeně, ne jako prohra",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "zmrznout": {
+      "id": "zmrznout",
+      "label": "Zmrzl/a jsem",
+      "applicable_symbols": [
+        "zima",
+        "led",
+        "tma",
+        "voda"
+      ],
+      "action_meaning": "zastavil/a ses — emoce nebo pohyb se uzavřely do tuhosti",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "tati": {
+      "id": "tati",
+      "label": "Tál/a jsem",
+      "applicable_symbols": [
+        "zima",
+        "jaro",
+        "led",
+        "slunce"
+      ],
+      "action_meaning": "pomalu se uvolňuješ z dlouhého sevření — bez aktivního úsilí",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "prasknouti": {
+      "id": "prasknouti",
+      "label": "Praskl/a jsem",
+      "applicable_symbols": [
+        "zima",
+        "strom",
+        "led",
+        "kamen"
+      ],
+      "action_meaning": "dosáhl/a jsi hranice únosnosti — něco se zlomilo nebo otevřelo",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "mrznout": {
+      "id": "mrznout",
+      "label": "Mrzl/a jsem",
+      "applicable_symbols": [
+        "zima",
+        "tma",
+        "led",
+        "poust"
+      ],
+      "action_meaning": "postupně tě přemáhá chlad — znecitlivění jako obrana i nebezpečí",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "vydrzet": {
+      "id": "vydrzet",
+      "label": "Vydržel/a jsem",
+      "applicable_symbols": [
+        "zima",
+        "valka",
+        "tma",
+        "nemoc"
+      ],
+      "action_meaning": "zůstal/a jsi — ne bez bolesti, ale bez vzdání",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "stahnout_se": {
+      "id": "stahnout_se",
+      "label": "Stáhl/a jsem se",
+      "applicable_symbols": [
+        "zima",
+        "strom",
+        "zvire",
+        "sklep"
+      ],
+      "action_meaning": "zatahoval/a ses dovnitř — ochrana skrze zmenšení a ústup",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "vyjiti": {
+      "id": "vyjiti",
+      "label": "Vyšel/a jsem",
+      "applicable_symbols": [
+        "dum",
+        "sklep",
+        "brana",
+        "tma"
+      ],
+      "action_meaning": "opouštíš uzavřený prostor — vycházíš na světlo nebo ven do neznáma",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "budovat": {
+      "id": "budovat",
+      "label": "Budoval/a jsem",
+      "applicable_symbols": [
+        "dum",
+        "kamen",
+        "zeme",
+        "strom"
+      ],
+      "action_meaning": "stavíš něco trvalého — vědomě a s výhledem do budoucna",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "otevirati": {
+      "id": "otevirati",
+      "label": "Otevíral/a jsem",
+      "applicable_symbols": [
+        "dum",
+        "brana",
+        "okno",
+        "svetlo"
+      ],
+      "action_meaning": "odstraňuješ bariéru — zvěš nebo zranitelnost, ale také průchod",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "vzletnout": {
+      "id": "vzletnout",
+      "label": "Vzlétl/a jsem",
+      "applicable_symbols": [
+        "kridla",
+        "ptak",
+        "oblak",
+        "hora"
+      ],
+      "action_meaning": "odlepil/a ses od země — přechod ze sevření do volnosti",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "rozevrit_kridla": {
+      "id": "rozevrit_kridla",
+      "label": "Rozevřel/a jsem křídla",
+      "applicable_symbols": [
+        "kridla",
+        "ptak",
+        "orel",
+        "svetlo"
+      ],
+      "action_meaning": "ukazuješ svůj rozsah — připravuješ se nebo se projevuješ naplno",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "vznaseti_se": {
+      "id": "vznaseti_se",
+      "label": "Vznášel/a jsem se",
+      "applicable_symbols": [
+        "kridla",
+        "oblak",
+        "letani",
+        "voda"
+      ],
+      "action_meaning": "jsi mezi — ani na zemi, ani vysoko — v lehkém, beztížném stavu",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "obratiti_se": {
+      "id": "obratiti_se",
+      "label": "Obrátil/a jsem se",
+      "applicable_symbols": [
+        "vlk",
+        "zvire",
+        "pronasledovani",
+        "cesta"
+      ],
+      "action_meaning": "přestal/a jsi utíkat — otočil/a ses čelem k tomu, co tě pronásleduje",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "vrceti": {
+      "id": "vrceti",
+      "label": "Vrčel/a jsem",
+      "applicable_symbols": [
+        "vlk",
+        "zvire",
+        "pes",
+        "tma"
+      ],
+      "action_meaning": "vyjadřuješ nízké, hluboké varování — instinktivní odpor nebo strach",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "rozbiti": {
+      "id": "rozbiti",
+      "label": "Rozbil/a jsem",
+      "applicable_symbols": [
+        "zrcadlo",
+        "maska",
+        "okno",
+        "kamen"
+      ],
+      "action_meaning": "záměrně nebo v afektu jsi zničil/a obraz — svůj nebo cizí",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "pristoupiti": {
+      "id": "pristoupiti",
+      "label": "Přistoupil/a jsem",
+      "applicable_symbols": [
+        "zrcadlo",
+        "brana",
+        "cizi_clovek",
+        "svetlo"
+      ],
+      "action_meaning": "přiblížil/a ses k něčemu, čeho ses bál/a — vědomě",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "uzrit": {
+      "id": "uzrit",
+      "label": "Uzřel/a jsem",
+      "applicable_symbols": [
+        "zrcadlo",
+        "studna",
+        "svetlo",
+        "tma"
+      ],
+      "action_meaning": "spatřil/a jsi něco, co bylo skryté — pravdu o sobě nebo o situaci",
+      "action_direction": "awareness_passive",
+      "intensity": "high"
+    },
+    "nasaditi": {
+      "id": "nasaditi",
+      "label": "Nasadil/a jsem",
+      "applicable_symbols": [
+        "maska",
+        "persona",
+        "zrcadlo",
+        "skola"
+      ],
+      "action_meaning": "oblékl/a jsi roli — ze strachu, ze zvyku nebo ze strategické nutnosti",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "sundati": {
+      "id": "sundati",
+      "label": "Sundal/a jsem",
+      "applicable_symbols": [
+        "maska",
+        "persona",
+        "zrcadlo",
+        "svetlo"
+      ],
+      "action_meaning": "odložil/a jsi roli nebo ochranu — zranitelně, ale pravdivě",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "skryti": {
+      "id": "skryti",
+      "label": "Skryl/a jsem se",
+      "applicable_symbols": [
+        "maska",
+        "tma",
+        "sklep",
+        "dum"
+      ],
+      "action_meaning": "ukryl/a jsi sebe nebo něco citlivého — ze strachu z odhalení",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "odhalit": {
+      "id": "odhalit",
+      "label": "Odhalil/a jsem",
+      "applicable_symbols": [
+        "maska",
+        "zrcadlo",
+        "svetlo",
+        "tma"
+      ],
+      "action_meaning": "ukázal/a jsi to, co bylo zakryté — sobě nebo druhým",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "prirust": {
+      "id": "prirust",
+      "label": "Přirostl/a jsem",
+      "applicable_symbols": [
+        "maska",
+        "koren",
+        "strom",
+        "zeme"
+      ],
+      "action_meaning": "ztotožnil/a ses s rolí tak, že ji nelze snadno odložit",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "pritat": {
+      "id": "pritat",
+      "label": "Přivinul/a jsem",
+      "applicable_symbols": [
+        "matka",
+        "dite",
+        "ruka",
+        "teplo"
+      ],
+      "action_meaning": "hledáš nebo nabízíš tělesné bezpečí a blízkost",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "volati": {
+      "id": "volati",
+      "label": "Volal/a jsem",
+      "applicable_symbols": [
+        "matka",
+        "dite",
+        "otec",
+        "tma"
+      ],
+      "action_meaning": "voláš někoho — z potřeby, ze ztráty nebo ze strachu",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "hrati_si": {
+      "id": "hrati_si",
+      "label": "Hrál/a jsem si",
+      "applicable_symbols": [
+        "dite",
+        "jaro",
+        "zvire",
+        "svetlo"
+      ],
+      "action_meaning": "byl/a jsi přítomný/á bez výkonu — lehkost a spontaneita",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "poslechnout": {
+      "id": "poslechnout",
+      "label": "Poslechl/a jsem",
+      "applicable_symbols": [
+        "matka",
+        "otec",
+        "skola",
+        "brana"
+      ],
+      "action_meaning": "přizpůsobil/a ses autoritě — z respektu, strachu nebo únavy",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "vzeprit_se": {
+      "id": "vzeprit_se",
+      "label": "Vzepřel/a jsem se",
+      "applicable_symbols": [
+        "matka",
+        "otec",
+        "skola",
+        "brana"
+      ],
+      "action_meaning": "postavil/a ses autoritě — vědomě nebo zoufale",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "konfrontovati": {
+      "id": "konfrontovati",
+      "label": "Konfrontoval/a jsem",
+      "applicable_symbols": [
+        "matka",
+        "otec",
+        "zrcadlo",
+        "stul"
+      ],
+      "action_meaning": "přinesl/a jsi do vztahu to, co bylo nevyřčené — s rizikem",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "mlceti": {
+      "id": "mlceti",
+      "label": "Mlčel/a jsem",
+      "applicable_symbols": [
+        "matka",
+        "otec",
+        "stul",
+        "tma"
+      ],
+      "action_meaning": "zadržel/a jsi slova — ze strachu, ze smutku nebo z bezmoci",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "pecovat": {
+      "id": "pecovat",
+      "label": "Pečoval/a jsem",
+      "applicable_symbols": [
+        "matka",
+        "dite",
+        "nemoc",
+        "zvire"
+      ],
+      "action_meaning": "staral/a ses o druhého — s láskou i s vyčerpáním",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "svleci_se": {
+      "id": "svleci_se",
+      "label": "Svlékl/a jsem se",
+      "applicable_symbols": [
+        "nahota",
+        "zrcadlo",
+        "voda",
+        "maska"
+      ],
+      "action_meaning": "odložil/a jsi všechny vrstvy — zranitelnost bez ochrany",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "onemocnet": {
+      "id": "onemocnet",
+      "label": "Onemocněl/a jsem",
+      "applicable_symbols": [
+        "nemoc",
+        "zima",
+        "tma",
+        "postel"
+      ],
+      "action_meaning": "tělo nebo duše dostaly signál — přetížení, které se nedalo ignorovat",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "uzdraviti_se": {
+      "id": "uzdraviti_se",
+      "label": "Uzdravil/a jsem se",
+      "applicable_symbols": [
+        "nemoc",
+        "jaro",
+        "svetlo",
+        "voda"
+      ],
+      "action_meaning": "prošel/a jsi krizí a vrátil/a ses — s jiným vztahem k sobě",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "ignorovati": {
+      "id": "ignorovati",
+      "label": "Ignoroval/a jsem",
+      "applicable_symbols": [
+        "nemoc",
+        "maska",
+        "tma",
+        "zrcadlo"
+      ],
+      "action_meaning": "vědomě nebo ze strachu jsi odvrátil/a pohled — od bolesti nebo pravdy",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "jedeti": {
+      "id": "jedeti",
+      "label": "Jel/a jsem",
+      "applicable_symbols": [
+        "kun",
+        "cesta",
+        "les",
+        "auto"
+      ],
+      "action_meaning": "nechal/a ses nést silou, která není tvá — spolupráce nebo podřízení",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "spolupracovat": {
+      "id": "spolupracovat",
+      "label": "Spolupracoval/a jsem",
+      "applicable_symbols": [
+        "kun",
+        "kocka",
+        "zvire",
+        "strom"
+      ],
+      "action_meaning": "navázal/a jsi vztah s instinktivní silou — respekt místo kontroly",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "pustit": {
+      "id": "pustit",
+      "label": "Pustil/a jsem",
+      "applicable_symbols": [
+        "kun",
+        "ryba",
+        "provaz",
+        "ruka"
+      ],
+      "action_meaning": "uvolnil/a jsi kontrolu — vědomě nebo z nutnosti",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "chytiti": {
+      "id": "chytiti",
+      "label": "Chytil/a jsem",
+      "applicable_symbols": [
+        "ryba",
+        "zvire",
+        "ruka",
+        "voda"
+      ],
+      "action_meaning": "zachytil/a jsi něco prchavého — intuici, emoci nebo příležitost",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "utect": {
+      "id": "utect",
+      "label": "Utekl/a jsem",
+      "applicable_symbols": [
+        "kun",
+        "vlk",
+        "pronasledovani",
+        "cesta",
+        "valka",
+        "zbran"
+      ],
+      "action_meaning": "dal/a jsi se na útěk — před nebezpečím nebo před sebou",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "zakotvit": {
+      "id": "zakotvit",
+      "label": "Zakotvil/a jsem",
+      "applicable_symbols": [
+        "lod",
+        "ostrov",
+        "pristav",
+        "more"
+      ],
+      "action_meaning": "našel/la jsi místo, kde se zastavit — vědomě se ukotvuješ",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "bourit_se": {
+      "id": "bourit_se",
+      "label": "Bouřil/a jsem se",
+      "applicable_symbols": [
+        "lod",
+        "more",
+        "valka",
+        "ohen"
+      ],
+      "action_meaning": "vzdoruješ silám kolem sebe — nebo v sobě — s vášní i rizikem",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "plout_k": {
+      "id": "plout_k",
+      "label": "Plul/a jsem k",
+      "applicable_symbols": [
+        "lod",
+        "ostrov",
+        "more",
+        "cesta"
+      ],
+      "action_meaning": "máš cíl a míříš k němu — přes otevřenou a nejistou plochu",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "zustat": {
+      "id": "zustat",
+      "label": "Zůstal/a jsem",
+      "applicable_symbols": [
+        "ostrov",
+        "lod",
+        "dum",
+        "brana"
+      ],
+      "action_meaning": "rozhodl/a ses nepohnout — z volby, z únavy nebo z odvahy",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "obeplout": {
+      "id": "obeplout",
+      "label": "Obeplul/a jsem",
+      "applicable_symbols": [
+        "lod",
+        "ostrov",
+        "more",
+        "hora"
+      ],
+      "action_meaning": "obešel/la jsi překážku — místo přímé konfrontace zvolil/a oklik",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "sestupovati": {
+      "id": "sestupovati",
+      "label": "Sestupoval/a jsem",
+      "applicable_symbols": [
+        "schody",
+        "sklep",
+        "studna",
+        "hora"
+      ],
+      "action_meaning": "dobrovolně nebo nevyhnutelně jdeš dolů — do hloubky nebo do tmy",
+      "action_direction": "awareness_passive",
+      "intensity": "high"
+    },
+    "preskociti": {
+      "id": "preskociti",
+      "label": "Přeskočil/a jsem",
+      "applicable_symbols": [
+        "schody",
+        "cesta",
+        "most",
+        "brana"
+      ],
+      "action_meaning": "přeskočil/a jsi krok — ze spěchu, ze strachu nebo z nutnosti",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "klesati": {
+      "id": "klesati",
+      "label": "Klesal/a jsem",
+      "applicable_symbols": [
+        "schody",
+        "pad",
+        "propast",
+        "voda"
+      ],
+      "action_meaning": "ztrácíš výšku nebo sílu — pomalu a těžko zastavitelně",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "vychazeti": {
+      "id": "vychazeti",
+      "label": "Vycházel/a jsem",
+      "applicable_symbols": [
+        "slunce",
+        "jaro",
+        "svetlo",
+        "oblak"
+      ],
+      "action_meaning": "začínáš — pomalu se zjevuješ nebo se vracíš po temnotě",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "zapadati": {
+      "id": "zapadati",
+      "label": "Zapadal/a jsem",
+      "applicable_symbols": [
+        "slunce",
+        "oblak",
+        "podzim",
+        "more"
+      ],
+      "action_meaning": "uzavíráš cyklus — konec dne, konec etapy, tichý odchod",
+      "action_direction": "awareness_passive",
+      "intensity": "medium"
+    },
+    "zahalit": {
+      "id": "zahalit",
+      "label": "Zahalil/a jsem",
+      "applicable_symbols": [
+        "oblak",
+        "maska",
+        "tma",
+        "zrcadlo"
+      ],
+      "action_meaning": "překryl/a jsi světlo nebo pravdu — svou nebo cizí",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "hledeti": {
+      "id": "hledeti",
+      "label": "Hleděl/a jsem",
+      "applicable_symbols": [
+        "slunce",
+        "svetlo",
+        "oblak",
+        "hora"
+      ],
+      "action_meaning": "soustředil/a sis pohled — v úžasu, v bezradnosti nebo v meditaci",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "osvititi": {
+      "id": "osvititi",
+      "label": "Osvítil/a jsem",
+      "applicable_symbols": [
+        "svetlo",
+        "slunce",
+        "ohen",
+        "zrcadlo"
+      ],
+      "action_meaning": "přinesl/a jsi jasnost tam, kde byla tma — pochopení nebo odhalení",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "zhasnout": {
+      "id": "zhasnout",
+      "label": "Zhasl/a jsem",
+      "applicable_symbols": [
+        "svetlo",
+        "ohen",
+        "svice",
+        "tma"
+      ],
+      "action_meaning": "světlo zhaslo — tvé nebo cizí — záměrně nebo vyčerpáním",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "zastinit": {
+      "id": "zastinit",
+      "label": "Zastínil/a jsem",
+      "applicable_symbols": [
+        "oblak",
+        "strom",
+        "maska",
+        "svetlo"
+      ],
+      "action_meaning": "postavil/a ses mezi světlo a něco jiného — ochrana i blokace",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "rozplynout_se": {
+      "id": "rozplynout_se",
+      "label": "Rozplynul/a jsem se",
+      "applicable_symbols": [
+        "oblak",
+        "voda",
+        "mlha",
+        "tma"
+      ],
+      "action_meaning": "ztratil/a jsi kontury — hranice mezi tebou a okolím zmizely",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "zpivati": {
+      "id": "zpivati",
+      "label": "Zpíval/a jsem",
+      "applicable_symbols": [
+        "ptak",
+        "svetlo",
+        "jaro",
+        "ohen"
+      ],
+      "action_meaning": "vyjadřoval/a jsi to, co nelze říct slovy — smutek i radost i vzdor",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "sedet": {
+      "id": "sedet",
+      "label": "Seděl/a jsem",
+      "applicable_symbols": [
+        "stul",
+        "dum",
+        "matka",
+        "otec"
+      ],
+      "action_meaning": "byl/a jsi přítomný/á u stolu — v tichosti, v napětí nebo v blízkosti",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    },
+    "prostrit": {
+      "id": "prostrit",
+      "label": "Prostřel/a jsem",
+      "applicable_symbols": [
+        "stul",
+        "dum",
+        "matka",
+        "jaro"
+      ],
+      "action_meaning": "připravil/a jsi místo pro druhé — gesto péče a přijetí",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "pozvat": {
+      "id": "pozvat",
+      "label": "Pozval/a jsem",
+      "applicable_symbols": [
+        "stul",
+        "dum",
+        "cizi_clovek",
+        "svetlo"
+      ],
+      "action_meaning": "otevřel/a jsi prostor pro druhého — s důvěrou nebo odvahou",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "odejit_od_stolu": {
+      "id": "odejit_od_stolu",
+      "label": "Odešel/a jsem od stolu",
+      "applicable_symbols": [
+        "stul",
+        "dum",
+        "matka",
+        "otec"
+      ],
+      "action_meaning": "opustil/a jsi společný prostor — s hněvem, smutkem nebo úlevou",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "jisti": {
+      "id": "jisti",
+      "label": "Jedl/a jsem",
+      "applicable_symbols": [
+        "stul",
+        "jidlo",
+        "matka",
+        "telo"
+      ],
+      "action_meaning": "přijímal/a jsi výživu — fyzickou i symbolickou — dovolil/a si být nasycen/a",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "odmitnouti": {
+      "id": "odmitnouti",
+      "label": "Odmítl/a jsem",
+      "applicable_symbols": [
+        "stul",
+        "jidlo",
+        "maska",
+        "matka"
+      ],
+      "action_meaning": "nepřijal/a jsi to, co ti bylo nabídnuto — z odporu, strachu nebo kontroly",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "sdilet": {
+      "id": "sdilet",
+      "label": "Sdílel/a jsem",
+      "applicable_symbols": [
+        "stul",
+        "jidlo",
+        "cizi_clovek",
+        "svetlo"
+      ],
+      "action_meaning": "dal/a jsi druhému ze svého — jídlo, slova nebo přítomnost",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "hladovet": {
+      "id": "hladovet",
+      "label": "Hladověl/a jsem",
+      "applicable_symbols": [
+        "stul",
+        "jidlo",
+        "zima",
+        "tma"
+      ],
+      "action_meaning": "chybělo ti to základní — nepřijímal/a jsi nebo ti nebylo dáno",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "variti": {
+      "id": "variti",
+      "label": "Vařil/a jsem",
+      "applicable_symbols": [
+        "stul",
+        "ohen",
+        "matka",
+        "dum"
+      ],
+      "action_meaning": "přeměňoval/a jsi suroviny v něco výživného — péče skrze tvorbu",
+      "action_direction": "active_coping",
+      "intensity": "low"
+    },
+    "darovat": {
+      "id": "darovat",
+      "label": "Daroval/a jsem",
+      "applicable_symbols": [
+        "stul",
+        "jidlo",
+        "ruka",
+        "svetlo"
+      ],
+      "action_meaning": "dal/a jsi bez podmínek — ze srdce nebo z potřeby být potřebný/á",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "kvesti": {
+      "id": "kvesti",
+      "label": "Kvetl/a jsem",
+      "applicable_symbols": [
+        "kvet",
+        "jaro",
+        "strom",
+        "svetlo"
+      ],
+      "action_meaning": "byl/a jsi v plném rozkvětu — otevřenost, krása, zranitelnost zároveň",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "uvadati": {
+      "id": "uvadati",
+      "label": "Uvadal/a jsem",
+      "applicable_symbols": [
+        "kvet",
+        "podzim",
+        "tma",
+        "nemoc"
+      ],
+      "action_meaning": "pomalu ztrácíš životnost — vyčerpání nebo přirozený konec cyklu",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "trhat": {
+      "id": "trhat",
+      "label": "Trhal/a jsem",
+      "applicable_symbols": [
+        "kvet",
+        "ruka",
+        "jaro",
+        "strom"
+      ],
+      "action_meaning": "vzal/a jsi něco krásného — s láskou nebo s ničením, záleží na úmyslu",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "rozdavati": {
+      "id": "rozdavati",
+      "label": "Rozdával/a jsem",
+      "applicable_symbols": [
+        "penize",
+        "ruka",
+        "stul",
+        "svetlo"
+      ],
+      "action_meaning": "dával/a jsi ze svého — ze štědrosti nebo z potřeby zbavit se tíhy",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "krasti": {
+      "id": "krasti",
+      "label": "Kradl/a jsem",
+      "applicable_symbols": [
+        "penize",
+        "tma",
+        "sklep",
+        "maska"
+      ],
+      "action_meaning": "bral/a jsi bez svolení — z nouze, ze vzteku nebo ze zoufalství",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "pocitati": {
+      "id": "pocitati",
+      "label": "Počítal/a jsem",
+      "applicable_symbols": [
+        "penize",
+        "stul",
+        "tma",
+        "dum"
+      ],
+      "action_meaning": "kontroloval/a jsi zdroje — ze strachu o nedostatek nebo z potřeby jistoty",
+      "action_direction": "avoidance",
+      "intensity": "medium"
+    },
+    "kupovati": {
+      "id": "kupovati",
+      "label": "Kupoval/a jsem",
+      "applicable_symbols": [
+        "penize",
+        "stul",
+        "brana",
+        "cesta"
+      ],
+      "action_meaning": "směňoval/a jsi — hledal/a jsi hodnotu nebo zaplňoval/a prázdnotu",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "prodavati": {
+      "id": "prodavati",
+      "label": "Prodával/a jsem",
+      "applicable_symbols": [
+        "penize",
+        "ruka",
+        "maska",
+        "cesta"
+      ],
+      "action_meaning": "vzdával/a ses něčeho výměnou — z nutnosti nebo s bolestí",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "rozhodovati": {
+      "id": "rozhodovati",
+      "label": "Rozhodoval/a jsem",
+      "applicable_symbols": [
+        "penize",
+        "brana",
+        "cesta",
+        "stul"
+      ],
+      "action_meaning": "stál/a jsi před volbou — s vědomím, že každá cesta něco stojí",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "bojovati": {
+      "id": "bojovati",
+      "label": "Bojoval/a jsem",
+      "applicable_symbols": [
+        "valka",
+        "zbran",
+        "ohen",
+        "tma"
+      ],
+      "action_meaning": "aktivně ses střetával/a — s druhým nebo se sebou samým/ou",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "kapitulovat": {
+      "id": "kapitulovat",
+      "label": "Kapituloval/a jsem",
+      "applicable_symbols": [
+        "valka",
+        "zbran",
+        "brana",
+        "tma"
+      ],
+      "action_meaning": "vzdal/a jsi boj — z vyčerpání, z moudrosti nebo ze zhroucení",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "drzeti": {
+      "id": "drzeti",
+      "label": "Držel/a jsem",
+      "applicable_symbols": [
+        "valka",
+        "zbran",
+        "ruka",
+        "kamen"
+      ],
+      "action_meaning": "nepouštěl/a jsi — pozici, zbraň nebo hranici — za každou cenu",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "odloziti": {
+      "id": "odloziti",
+      "label": "Odložil/a jsem",
+      "applicable_symbols": [
+        "valka",
+        "zbran",
+        "stul",
+        "brana"
+      ],
+      "action_meaning": "dal/a jsi zbraň nebo boj ze ruky — vědomé ukončení",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "utociti": {
+      "id": "utociti",
+      "label": "Útočil/a jsem",
+      "applicable_symbols": [
+        "valka",
+        "zbran",
+        "ohen",
+        "vlk"
+      ],
+      "action_meaning": "první jsi udeřil/a — z odvahy, ze strachu nebo z agrese",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "braniti": {
+      "id": "braniti",
+      "label": "Bránil/a jsem",
+      "applicable_symbols": [
+        "valka",
+        "zbran",
+        "dum",
+        "brana"
+      ],
+      "action_meaning": "chránil/a jsi něco nebo někoho — s odhodláním i za cenu sebe",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "namiriti": {
+      "id": "namiriti",
+      "label": "Namířil/a jsem",
+      "applicable_symbols": [
+        "valka",
+        "zbran",
+        "zrcadlo",
+        "tma"
+      ],
+      "action_meaning": "zaměřil/a jsi sílu nebo hněv na konkrétní cíl — vědomě nebo slepě",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "odejit_bez": {
+      "id": "odejit_bez",
+      "label": "Odešel/a jsem bez",
+      "applicable_symbols": [
+        "lekarna",
+        "brana",
+        "tma",
+        "dum"
+      ],
+      "action_meaning": "nepřijal/a jsi pomoc, která byla dostupná — z pýchy, strachu nebo rezignace",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "dostat": {
+      "id": "dostat",
+      "label": "Dostal/a jsem",
+      "applicable_symbols": [
+        "lekarna",
+        "ruka",
+        "svetlo",
+        "nemoc"
+      ],
+      "action_meaning": "přijal/a jsi to, co jsi potřeboval/a — s úlevou nebo s pochybností",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "odmitnout": {
+      "id": "odmitnout",
+      "label": "Odmítl/a jsem",
+      "applicable_symbols": [
+        "lekarna",
+        "maska",
+        "brana",
+        "tma"
+      ],
+      "action_meaning": "řekl/a jsi ne pomoci — ze strachu být viděn/a nebo z nedůvěry",
+      "action_direction": "avoidance",
+      "intensity": "high"
+    },
+    "mociti": {
+      "id": "mociti",
+      "label": "Močil/a jsem",
+      "applicable_symbols": [
+        "dest",
+        "voda",
+        "tma",
+        "telo"
+      ],
+      "action_meaning": "byl/a jsi promočen/a — prostoupila tě síla zvenčí, bez možnosti úniku",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "medium"
+    },
+    "padnouti": {
+      "id": "padnouti",
+      "label": "Padl/a jsem",
+      "applicable_symbols": [
+        "kun",
+        "nemoc",
+        "schody",
+        "pad"
+      ],
+      "action_meaning": "padl/a jsi — náhle a definitivně, bez možnosti se zachytit",
+      "action_direction": "passive_overwhelmed",
+      "intensity": "high"
+    },
+    "celiti": {
+      "id": "celiti",
+      "label": "Čelil/a jsem",
+      "applicable_symbols": [
+        "drak",
+        "pronasledovani",
+        "vlk",
+        "tma"
+      ],
+      "action_meaning": "stál/a jsi tváří v tvář tomu, čeho ses bál/a — bez úniku",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "premoci": {
+      "id": "premoci",
+      "label": "Přemohl/a jsem",
+      "applicable_symbols": [
+        "drak",
+        "valka",
+        "vlk"
+      ],
+      "action_meaning": "překonal/a jsi sílu, která tě přesahovala — za cenu všeho",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "vytahnouti": {
+      "id": "vytahnouti",
+      "label": "Vytáhl/a jsem",
+      "applicable_symbols": [
+        "studna",
+        "more",
+        "voda",
+        "tma"
+      ],
+      "action_meaning": "vynesl/a jsi na povrch něco, co bylo skryté v hloubi",
+      "action_direction": "active_coping",
+      "intensity": "high"
+    },
+    "cerpati": {
+      "id": "cerpati",
+      "label": "Čerpal/a jsem",
+      "applicable_symbols": [
+        "studna",
+        "voda",
+        "zeme"
+      ],
+      "action_meaning": "vědomě čerpáš ze zdroje — sbíráš to, co ti bylo nabídnuto",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "preleteti": {
+      "id": "preleteti",
+      "label": "Přelétl/a jsem",
+      "applicable_symbols": [
+        "letani",
+        "ptak",
+        "kridla",
+        "hora"
+      ],
+      "action_meaning": "přeletel/a jsi nad překážkou — volně a bez kontaktu se zemí",
+      "action_direction": "active_coping",
+      "intensity": "medium"
+    },
+    "hrati": {
+      "id": "hrati",
+      "label": "Hrál/a jsem si",
+      "applicable_symbols": [
+        "ohen",
+        "svetlo",
+        "jaro",
+        "dite"
+      ],
+      "action_meaning": "pohyboval/a ses s lehkostí bez tlaku na výsledek",
+      "action_direction": "awareness_passive",
+      "intensity": "low"
+    }
+  },
+  "contexts": {
+    "prace": {
+      "id": "prace",
+      "label": "Práce",
+      "icon": "💼",
+      "conclusion_passive": "Zkus se zamyslet, co nebo kdo tě v práci teď přemáhá.",
+      "conclusion_active": "Tvoje energie v práci hledá správný výstup — zaměř ji.",
+      "conclusion_avoidance": "Možná odkládáš něco v práci, co vyžaduje pozornost.",
+      "conclusion_awareness": "Vnímáš situaci v práci, ale čekáš na správný moment.",
+      "reflection_question": "Co konkrétního tě teď v práci nejvíce zatěžuje?"
+    },
+    "vztahy": {
+      "id": "vztahy",
+      "label": "Vztahy",
+      "icon": "💕",
+      "conclusion_passive": "Ve vztazích cítíš přetlak emocí, které nemají kde vyjít.",
+      "conclusion_active": "Ve vztazích se pohybuješ s jistotou, i když je to náročné.",
+      "conclusion_avoidance": "Možná se vyhýbáš obtížnému rozhovoru, který je potřeba mít.",
+      "conclusion_awareness": "Situaci ve vztazích vidíš jasně — teď jde o to, jak zareagovat.",
+      "reflection_question": "S kým nebo o čem jsi dlouho nemluvil/a otevřeně?"
+    },
+    "zdravi": {
+      "id": "zdravi",
+      "label": "Zdraví",
+      "icon": "🏥",
+      "conclusion_passive": "Tělo nebo mysl ti posílá signál, který nelze ignorovat.",
+      "conclusion_active": "Pracuješ aktivně na svém zdraví — pokračuj v tom.",
+      "conclusion_avoidance": "Odkládáš návštěvu nebo změnu, která by ti ulevila.",
+      "conclusion_awareness": "Uvědomuješ si, co zdraví ovlivňuje — zbývá jednat.",
+      "reflection_question": "Co pro své zdraví děláš a co stále odkládáš?"
+    },
+    "rozvoj": {
+      "id": "rozvoj",
+      "label": "Rozvoj",
+      "icon": "🌱",
+      "conclusion_passive": "Na cestě svého rozvoje narážíš na vnitřní odpor nebo strach.",
+      "conclusion_active": "Růst, který prožíváš, je náročný — ale jdeš správným směrem.",
+      "conclusion_avoidance": "Odkládáš krok, který by tě posunul dál.",
+      "conclusion_awareness": "Vidíš kam chceš jít — teď jde o odvahu udělat první krok.",
+      "reflection_question": "Co tě brání udělat další krok ve svém rozvoji?"
+    },
+    "finance": {
+      "id": "finance",
+      "label": "Finance",
+      "icon": "💰",
+      "conclusion_passive": "Ve financích cítíš nejistotu nebo tlak, který tě svazuje.",
+      "conclusion_active": "V oblasti financí postupuješ uvědoměle a s rozvahou.",
+      "conclusion_avoidance": "Vyhýbáš se finančnímu rozhodnutí, které nemůžeš odkládat dál.",
+      "conclusion_awareness": "Vidíš finanční situaci jasně — teď záleží na odvaze jednat.",
+      "reflection_question": "Jaké finanční rozhodnutí stále odkládáš?"
+    },
+    "rodina": {
+      "id": "rodina",
+      "label": "Rodina",
+      "icon": "🏠",
+      "conclusion_passive": "V rodině nebo doma cítíš napětí, které hledá cestu ven.",
+      "conclusion_active": "V rodinných vztazích se pohybuješ s láskou a jasnou hlavou.",
+      "conclusion_avoidance": "Vyhýbáš se rozhovoru nebo situaci v rodině, která potřebuje řešení.",
+      "conclusion_awareness": "Vidíš rodinnou dynamiku — teď záleží, jak se zachováš.",
+      "reflection_question": "Co v rodině nebo doma potřebuje tvoji pozornost?"
+    }
+  },
+  "combination_overrides": {
+    "voda+uzkost+topit_se+prace": {
+      "custom_text": "Voda úzkostí barví práci v zahlcující prostředí. Tvůj sen je velmi přímý: cítíš se přetížen/a. Tohle není metafora — je to výzva ke změně.",
+      "reflection_question": "Co z tvého pracovního seznamu by zmizelo, kdyby nic nebylo povinné?"
+    },
+    "ohen+radost+horeti+rozvoj": {
+      "custom_text": "Oheň s radostí — vzácná kombinace. Procházíš proměnou, která tě bolí, ale ty to cítíš jako správné. Jako zlato, které se taví, aby mohlo být tvarováno.",
+      "reflection_question": "Co v tobě nyní prochází proměnou, i když to není bez bolesti?"
+    }
+  },
+  "meta": {
+    "total_symbols": 67,
+    "total_emotions": 9,
+    "total_verbs": 187,
+    "total_contexts": 6,
+    "total_overrides": 2,
+    "supported_languages": [
+      "cs",
+      "en"
+    ],
+    "content_guidelines_version": "1"
+  }
+}
