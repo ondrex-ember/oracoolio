@@ -125,24 +125,26 @@ function drawCard() {
             const imgEl = document.getElementById(`card${num}-img`);
             imgEl.src = '../assets/' + card.image;
             
-            let posText, keywords, meaning;
+            let posText, keywords, meaning, cardName;
+            const isEN = TAROT_LANG === 'en';
+            cardName = isEN ? (card.name_en || card.name_cz) : card.name_cz;
             if (isReversed) {
                 imgEl.classList.add('reversed-card');
                 posText = T('reversed');
-                keywords = card.keywords_reversed;
-                meaning = card.meaning_reversed_general;
+                keywords = isEN ? (card.keywords_reversed_en || card.keywords_reversed) : card.keywords_reversed;
+                meaning  = isEN ? (card.meaning_reversed_general_en || card.meaning_reversed_general) : card.meaning_reversed_general;
             } else {
                 imgEl.classList.remove('reversed-card');
                 posText = T('upright');
-                keywords = card.keywords_upright;
-                meaning = card.meaning_upright_general;
+                keywords = isEN ? (card.keywords_upright_en || card.keywords_upright) : card.keywords_upright;
+                meaning  = isEN ? (card.meaning_upright_general_en || card.meaning_upright_general) : card.meaning_upright_general;
             }
 
-            kartyProAI.push(`${card.name_cz} (${posText})`);
+            kartyProAI.push(`${cardName} (${posText})`);
 
             htmlContent += `
                 <div class="reading-block">
-                    <h4>${positions[index]}: ${card.name_cz}</h4>
+                    <h4>${positions[index]}: ${cardName}</h4>
                     <div class="meta-info">${posText} | ${keywords}</div>
                     <p>${meaning}</p>
                 </div>
