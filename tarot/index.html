@@ -24,6 +24,23 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <meta name="theme-color" content="#1a1a2e">
   <link rel="stylesheet" href="../style.css">
+  <style>
+    .tarot-lang-switch {
+      position: absolute; top: 14px; right: 14px;
+      display: flex; align-items: center; gap: 4px; z-index: 100;
+    }
+    .tarot-lang-btn {
+      background: none;
+      border: 1px solid rgba(201,168,76,0.25);
+      color: rgba(201,168,76,0.4);
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 0.65rem; letter-spacing: 0.12em;
+      padding: 4px 9px; border-radius: 4px; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tarot-lang-btn.active,
+    .tarot-lang-btn:hover { border-color: rgba(201,168,76,0.8); color: #c9a84c; }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,19 +60,28 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="app-container">
         <main id="tarot-section">
-            <button class="back-btn" onclick="window.location.href='../index.html'">← Zpět do Oracoolia</button>
+            <button class="back-btn" onclick="window.location.href='../index.html'"
+                data-cs="← Zpět do Oracoolia" data-en="← Back to Oracoolio">← Zpět do Oracoolia</button>
+
+            <!-- Lang switch -->
+            <div class="tarot-lang-switch">
+                <button class="tarot-lang-btn active" id="btn-lang-cs" onclick="setLang('cs')">CS</button>
+                <span style="color:rgba(201,168,76,0.25);font-size:.8rem;">|</span>
+                <button class="tarot-lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+            </div>
+
             <header>
-                <h1>Klasický Tarot</h1>
-                <p class="subtitle">Zeptejte se karet na svou cestu</p>
-                <button id="draw-btn">Vytáhnout 3 karty</button>
+                <h1 data-cs="Klasický Tarot" data-en="Classic Tarot">Klasický Tarot</h1>
+                <p class="subtitle" data-cs="Zeptejte se karet na svou cestu" data-en="Ask the cards about your path">Zeptejte se karet na svou cestu</p>
+                <button id="draw-btn" data-cs="Vytáhnout 3 karty" data-en="Draw 3 cards">Vytáhnout 3 karty</button>
             </header>
             
-            <div id="loading" class="hidden">Karty se míchají...</div>
+            <div id="loading" class="hidden" data-cs="Karty se míchají..." data-en="Shuffling the cards...">Karty se míchají...</div>
             
             <div id="tarot-board" class="hidden">
                 <div class="spread-container">
                     <div class="card-wrapper">
-                        <h3 class="position-title">Minulost</h3>
+                        <h3 class="position-title" data-cs="Minulost" data-en="Past">Minulost</h3>
                         <div class="card-display perspective" id="card1-container">
                             <div class="card-inner" id="card1-inner">
                                 <div class="card-face card-back"><img src="../assets/card_back.jpg" alt="Rub karty"></div>
@@ -64,7 +90,7 @@
                         </div>
                     </div>
                     <div class="card-wrapper">
-                        <h3 class="position-title">Přítomnost</h3>
+                        <h3 class="position-title" data-cs="Přítomnost" data-en="Present">Přítomnost</h3>
                         <div class="card-display perspective" id="card2-container">
                             <div class="card-inner" id="card2-inner">
                                 <div class="card-face card-back"><img src="../assets/card_back.jpg" alt="Rub karty"></div>
@@ -73,7 +99,7 @@
                         </div>
                     </div>
                     <div class="card-wrapper">
-                        <h3 class="position-title">Budoucnost</h3>
+                        <h3 class="position-title" data-cs="Budoucnost" data-en="Future">Budoucnost</h3>
                         <div class="card-display perspective" id="card3-container">
                             <div class="card-inner" id="card3-inner">
                                 <div class="card-face card-back"><img src="../assets/card_back.jpg" alt="Rub karty"></div>
@@ -86,7 +112,7 @@
                 <div class="card-info hidden" id="reading-text"></div>
 
                 <div id="ai-reading-container" class="ai-reading hidden">
-                    <h3>✨ Hlas Oracoolia ✨</h3>
+                    <h3 id="ai-title" data-cs="✨ Hlas Oracoolia ✨" data-en="✨ The Oracle Speaks ✨">✨ Hlas Oracoolia ✨</h3>
                     <p id="ai-text-content"></p>
                 </div>
             </div>
@@ -115,6 +141,7 @@
 <style>
   .app-container { display: flex; flex-direction: column; }
 </style>
+<script src="../lang.js"></script>
 <script src="tarot.js"></script>
 </body>
 </html>
