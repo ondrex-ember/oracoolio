@@ -38,26 +38,50 @@
     "inLanguage": "cs"
   }
   </script>
+  <style>
+    .kp-lang-switch {
+      position: absolute; top: 14px; right: 14px;
+      display: flex; align-items: center; gap: 4px; z-index: 600;
+    }
+    .kp-lang-btn {
+      background: none;
+      border: 1px solid rgba(201,168,76,0.25);
+      color: rgba(201,168,76,0.4);
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 0.65rem; letter-spacing: 0.12em;
+      padding: 4px 9px; border-radius: 4px; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .kp-lang-btn.active,
+    .kp-lang-btn:hover { border-color: rgba(201,168,76,0.8); color: #c9a84c; }
+  </style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <main id="karolky-section">
 
-        <button class="back-btn" onclick="window.location.href='../index.html'">← Zpět do Oracoolia</button>
+        <button id="kp-back-btn" class="back-btn" onclick="window.location.href='../index.html'">← Zpět do Oracoolia</button>
+
+        <!-- ── Lang switch ── -->
+        <div class="kp-lang-switch">
+            <button class="kp-lang-btn active" id="btn-lang-cs" onclick="kpSetLang('cs')">CS</button>
+            <span style="color:rgba(201,168,76,0.25);font-size:.8rem;">|</span>
+            <button class="kp-lang-btn" id="btn-lang-en" onclick="kpSetLang('en')">EN</button>
+        </div>
 
         <!-- Horní lišta s názvem, HUD a tlačítkem nová hra -->
         <header id="kp-header">
             <h1>Karolky Pasiáns</h1>
             <div id="kp-hud">
-                <span class="kp-pill">Kolo <span id="kp-pass">1</span>/3</span>
-                <span class="kp-pill">Po <span id="kp-draw">3</span></span>
+                <span class="kp-pill"><span id="kp-round-label">Kolo</span> <span id="kp-pass">1</span>/3</span>
+                <span class="kp-pill"><span id="kp-draw-label">Po</span> <span id="kp-draw">3</span></span>
                 <div id="kp-dots">
                     <div class="kp-dot kp-dot-active" id="kp-d1"></div>
                     <div class="kp-dot" id="kp-d2"></div>
                     <div class="kp-dot" id="kp-d3"></div>
                 </div>
-                <span class="kp-pill">Stoh: <span id="kp-stock-cnt">0</span></span>
-                <button class="kp-new-btn" onclick="kpNewGame()">✦ Nová hra</button>
+                <span class="kp-pill"><span id="kp-stock-label">Stoh:</span> <span id="kp-stock-cnt">0</span></span>
+                <button id="kp-new-btn" class="kp-new-btn" onclick="kpNewGame()">✦ Nová hra</button>
             </div>
         </header>
 
@@ -68,8 +92,8 @@
                 <span id="kp-info-sub"></span>
             </div>
             <div class="kp-info-right">
-                <span class="kp-info-hint">Klepněte na cíl</span>
-                <button class="kp-cancel-btn" onclick="kpClearSel()">✕ Zrušit</button>
+                <span id="kp-info-hint" class="kp-info-hint">Klepněte na cíl</span>
+                <button id="kp-cancel-btn" class="kp-cancel-btn" onclick="kpClearSel()">✕ Zrušit</button>
             </div>
         </div>
 
@@ -114,7 +138,7 @@
                 <h2 id="kp-ov-title"></h2>
                 <p id="kp-ov-msg"></p>
                 <button class="kp-obtn kp-obtn-gold" onclick="kpNewGame();kpCloseOverlay()">✦ Nová hra</button>
-                <button class="kp-obtn kp-obtn-ghost" onclick="kpCloseOverlay()">Zavřít</button>
+                <button id="kp-close-btn" class="kp-obtn kp-obtn-ghost" onclick="kpCloseOverlay()">Zavřít</button>
             </div>
         </div>
 
@@ -156,6 +180,7 @@
     </div>
 </footer>
 
+<script src="../lang.js"></script>
 <script src="karolky.js"></script>
 </body>
 </html>
