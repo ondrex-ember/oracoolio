@@ -35,7 +35,13 @@
       "archetypal_domain": "persona",
       "secondary_domain": "animus",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "prace",
+        "identita",
+        "zmena",
+        "rozvoj"
+      ]
     },
     "bource": {
       "id": "bource",
@@ -67,7 +73,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "shadow",
       "added_version": "1",
-      "content_status": "complete"
+      "content_status": "complete",
+      "relevant_contexts": [
+        "zmena",
+        "rozvoj",
+        "spiritualita",
+        "zdravi"
+      ]
     },
     "cesta": {
       "id": "cesta",
@@ -104,7 +116,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rozvoj",
+        "zmena",
+        "identita",
+        "spiritualita"
+      ]
     },
     "cizi_clovek": {
       "id": "cizi_clovek",
@@ -140,7 +158,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "anima",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "vztahy",
+        "identita",
+        "rozvoj",
+        "spiritualita"
+      ]
     },
     "dest": {
       "id": "dest",
@@ -177,7 +201,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "zdravi",
+        "spiritualita",
+        "ztrata"
+      ]
     },
     "dite": {
       "id": "dite",
@@ -214,7 +244,13 @@
       "archetypal_domain": "anima",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rodina",
+        "minulost",
+        "ztrata",
+        "zdravi"
+      ]
     },
     "domov": {
       "id": "domov",
@@ -251,7 +287,13 @@
       "archetypal_domain": "self",
       "secondary_domain": "collective",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rodina",
+        "identita",
+        "minulost",
+        "ztrata"
+      ]
     },
     "drak": {
       "id": "drak",
@@ -288,7 +330,13 @@
       "archetypal_domain": "collective",
       "secondary_domain": "shadow",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "spiritualita",
+        "identita",
+        "zmena",
+        "rozvoj"
+      ]
     },
     "dum": {
       "id": "dum",
@@ -324,7 +372,13 @@
       "archetypal_domain": "self",
       "secondary_domain": "persona",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "minulost",
+        "rodina",
+        "rozvoj"
+      ]
     },
     "had": {
       "id": "had",
@@ -358,7 +412,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "trickster",
       "added_version": "1",
-      "content_status": "complete"
+      "content_status": "complete",
+      "relevant_contexts": [
+        "identita",
+        "spiritualita",
+        "zmena",
+        "vztahy"
+      ]
     },
     "hora": {
       "id": "hora",
@@ -395,7 +455,13 @@
       "archetypal_domain": "self",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rozvoj",
+        "spiritualita",
+        "identita",
+        "zmena"
+      ]
     },
     "hrbitov": {
       "id": "hrbitov",
@@ -431,7 +497,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "collective",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "ztrata",
+        "minulost",
+        "spiritualita",
+        "zmena"
+      ]
     },
     "jaro": {
       "id": "jaro",
@@ -469,7 +541,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "zdravi",
+        "rozvoj",
+        "kreativita"
+      ]
     },
     "jidlo": {
       "id": "jidlo",
@@ -505,7 +583,13 @@
       "archetypal_domain": "life_force",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zdravi",
+        "rodina",
+        "vztahy",
+        "identita"
+      ]
     },
     "klec": {
       "id": "klec",
@@ -536,7 +620,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "persona",
       "added_version": "1",
-      "content_status": "complete"
+      "content_status": "complete",
+      "relevant_contexts": [
+        "prace",
+        "vztahy",
+        "identita",
+        "zmena"
+      ]
     },
     "kocka": {
       "id": "kocka",
@@ -572,7 +662,13 @@
       "archetypal_domain": "anima",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "kreativita",
+        "identita",
+        "spiritualita",
+        "vztahy"
+      ]
     },
     "krev": {
       "id": "krev",
@@ -608,7 +704,13 @@
       "archetypal_domain": "life_force",
       "secondary_domain": "anima",
       "added_version": "1",
-      "content_status": "complete"
+      "content_status": "complete",
+      "relevant_contexts": [
+        "zdravi",
+        "rodina",
+        "vztahy",
+        "ztrata"
+      ]
     },
     "kridla": {
       "id": "kridla",
@@ -645,7 +747,13 @@
       "archetypal_domain": "animus",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "rozvoj",
+        "kreativita",
+        "identita"
+      ]
     },
     "kun": {
       "id": "kun",
@@ -681,7 +789,13 @@
       "archetypal_domain": "animus",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rozvoj",
+        "prace",
+        "zdravi",
+        "zmena"
+      ]
     },
     "kvet": {
       "id": "kvet",
@@ -718,7 +832,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "ztrata",
+        "kreativita",
+        "spiritualita",
+        "zmena"
+      ]
     },
     "led": {
       "id": "led",
@@ -755,7 +875,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "ztrata",
+        "zdravi",
+        "minulost"
+      ]
     },
     "lekarna": {
       "id": "lekarna",
@@ -791,7 +917,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zdravi",
+        "zmena",
+        "rozvoj",
+        "identita"
+      ]
     },
     "les": {
       "id": "les",
@@ -828,7 +960,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "collective",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "zmena",
+        "spiritualita",
+        "minulost"
+      ]
     },
     "letani": {
       "id": "letani",
@@ -862,7 +1000,13 @@
       "archetypal_domain": "animus",
       "secondary_domain": "shadow",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "kreativita",
+        "rozvoj",
+        "spiritualita"
+      ]
     },
     "leto": {
       "id": "leto",
@@ -898,7 +1042,13 @@
       "archetypal_domain": "self",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zdravi",
+        "kreativita",
+        "vztahy",
+        "zmena"
+      ]
     },
     "listi": {
       "id": "listi",
@@ -930,7 +1080,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "complete"
+      "content_status": "complete",
+      "relevant_contexts": [
+        "ztrata",
+        "zmena",
+        "minulost",
+        "spiritualita"
+      ]
     },
     "lod": {
       "id": "lod",
@@ -967,7 +1123,13 @@
       "archetypal_domain": "self",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "rozvoj",
+        "spiritualita",
+        "identita"
+      ]
     },
     "maska": {
       "id": "maska",
@@ -1004,7 +1166,13 @@
       "archetypal_domain": "persona",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "prace",
+        "vztahy",
+        "zmena"
+      ]
     },
     "matka": {
       "id": "matka",
@@ -1041,14 +1209,20 @@
       "archetypal_domain": "anima",
       "secondary_domain": "collective",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rodina",
+        "minulost",
+        "ztrata",
+        "zdravi"
+      ]
     },
     "more": {
       "id": "more",
       "label": "Moře",
       "category": "priroda",
       "base_meaning": "Bezedná rozloha nevědomého, jež pohltiti může i navrátiti.",
-      "extended_meaning": "Moře jest tím, co bylo před počátkem a co zůstane po konci — pralůno, z něhož povstává život a do něhož se vrací. Ve snech\n                    zjevené představuje plnost kolektivního nevědomí: snící stojí\n                    na břehu jako na prahu toho, co přesahuje jeho jednotlivou duši.\n                    Vstoupiti do moře jest vzdáti se hranic ega; býti jím pohlcen\n                    jest ztrátou sebe, leč i možností zrodu nového. Barva, klidnost\n                    či zuřivost vln jsou hlasem stavu nitra v okamžiku snu.",
+      "extended_meaning": "Moře jest tím, co bylo před počátkem a co zůstane po konci — pralůno, z něhož povstává život a do něhož se vrací. Ve snech\n  zjevené představuje plnost kolektivního nevědomí: snící stojí\n  na břehu jako na prahu toho, co přesahuje jeho jednotlivou duši.\n  Vstoupiti do moře jest vzdáti se hranic ega; býti jím pohlcen\n  jest ztrátou sebe, leč i možností zrodu nového. Barva, klidnost\n  či zuřivost vln jsou hlasem stavu nitra v okamžiku snu.",
       "illustration": "more_hlubina.svg",
       "tags": [
         "nevedomi",
@@ -1077,7 +1251,13 @@
       "archetypal_domain": "collective",
       "secondary_domain": "anima",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "spiritualita",
+        "zmena",
+        "identita",
+        "ztrata"
+      ]
     },
     "most": {
       "id": "most",
@@ -1114,7 +1294,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "rozvoj",
+        "vztahy",
+        "identita"
+      ]
     },
     "nahota": {
       "id": "nahota",
@@ -1149,7 +1335,13 @@
       "archetypal_domain": "persona",
       "secondary_domain": "shadow",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "vztahy",
+        "prace",
+        "rozvoj"
+      ]
     },
     "nemoc": {
       "id": "nemoc",
@@ -1186,7 +1378,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zdravi",
+        "ztrata",
+        "zmena",
+        "rozvoj"
+      ]
     },
     "obchod": {
       "id": "obchod",
@@ -1222,7 +1420,13 @@
       "archetypal_domain": "persona",
       "secondary_domain": "shadow",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "finance",
+        "prace",
+        "identita",
+        "vztahy"
+      ]
     },
     "oblak": {
       "id": "oblak",
@@ -1258,7 +1462,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "spiritualita",
+        "ztrata",
+        "kreativita"
+      ]
     },
     "ohen": {
       "id": "ohen",
@@ -1297,7 +1507,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "animus",
       "added_version": "1",
-      "content_status": "complete"
+      "content_status": "complete",
+      "relevant_contexts": [
+        "zmena",
+        "kreativita",
+        "vztahy",
+        "rozvoj"
+      ]
     },
     "ostrov": {
       "id": "ostrov",
@@ -1333,7 +1549,13 @@
       "archetypal_domain": "self",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "spiritualita",
+        "ztrata",
+        "zmena"
+      ]
     },
     "otec": {
       "id": "otec",
@@ -1370,7 +1592,13 @@
       "archetypal_domain": "animus",
       "secondary_domain": "persona",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rodina",
+        "identita",
+        "minulost",
+        "rozvoj"
+      ]
     },
     "pad": {
       "id": "pad",
@@ -1403,7 +1631,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "identita",
+        "rozvoj",
+        "prace"
+      ]
     },
     "penize": {
       "id": "penize",
@@ -1439,7 +1673,13 @@
       "archetypal_domain": "persona",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "finance",
+        "identita",
+        "prace",
+        "ztrata"
+      ]
     },
     "pes": {
       "id": "pes",
@@ -1475,7 +1715,13 @@
       "archetypal_domain": "collective",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "vztahy",
+        "rodina",
+        "ztrata",
+        "identita"
+      ]
     },
     "podzim": {
       "id": "podzim",
@@ -1512,7 +1758,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "shadow",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "ztrata",
+        "zmena",
+        "minulost",
+        "rozvoj"
+      ]
     },
     "pronasledovani": {
       "id": "pronasledovani",
@@ -1547,7 +1799,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "zmena",
+        "prace",
+        "vztahy"
+      ]
     },
     "propast": {
       "id": "propast",
@@ -1582,7 +1840,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "mortality",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "spiritualita",
+        "zmena",
+        "ztrata"
+      ]
     },
     "ptak": {
       "id": "ptak",
@@ -1619,14 +1883,20 @@
       "archetypal_domain": "anima",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "kreativita",
+        "zmena",
+        "spiritualita",
+        "rozvoj"
+      ]
     },
     "reka": {
       "id": "reka",
       "label": "Řeka",
       "category": "priroda",
       "base_meaning": "Čas plynoucí, jenž nečeká a zpět se neobrací nikdy.",
-      "extended_meaning": "Řeka jest obrazem života samého v jeho neúprosném proudění — od pramene nevinnosti až k ústí, jež se ztrácí v bezejmenném\n                    moři. Ve snech nese poselství o tom, jak snící prožívá čas:\n                    zda s ním plyne, či proti němu zápasí, zda přechází na druhý\n                    břeh anebo na břehu stojí, neschopen kroky učiniti. Překročení\n                    řeky jest prastarý obraz rozhodnutí, přechodu, ba i smrti —\n                    neboť za řekou leží vždy jiný svět.",
+      "extended_meaning": "Řeka jest obrazem života samého v jeho neúprosném proudění — od pramene nevinnosti až k ústí, jež se ztrácí v bezejmenném\n  moři. Ve snech nese poselství o tom, jak snící prožívá čas:\n  zda s ním plyne, či proti němu zápasí, zda přechází na druhý\n  břeh anebo na břehu stojí, neschopen kroky učiniti. Překročení\n  řeky jest prastarý obraz rozhodnutí, přechodu, ba i smrti —\n  neboť za řekou leží vždy jiný svět.",
       "illustration": "reka_proud.svg",
       "tags": [
         "cas",
@@ -1655,7 +1925,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "spiritualita",
+        "minulost",
+        "rozvoj"
+      ]
     },
     "rodina": {
       "id": "rodina",
@@ -1688,7 +1964,13 @@
       "archetypal_domain": "collective",
       "secondary_domain": "anima",
       "added_version": "1",
-      "content_status": "complete"
+      "content_status": "complete",
+      "relevant_contexts": [
+        "rodina",
+        "minulost",
+        "identita",
+        "ztrata"
+      ]
     },
     "ryba": {
       "id": "ryba",
@@ -1724,7 +2006,13 @@
       "archetypal_domain": "collective",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "spiritualita",
+        "kreativita",
+        "identita",
+        "rozvoj"
+      ]
     },
     "schody": {
       "id": "schody",
@@ -1760,7 +2048,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rozvoj",
+        "prace",
+        "identita",
+        "zmena"
+      ]
     },
     "sklep": {
       "id": "sklep",
@@ -1796,7 +2090,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "minulost",
+        "zmena",
+        "spiritualita"
+      ]
     },
     "skola": {
       "id": "skola",
@@ -1831,7 +2131,13 @@
       "archetypal_domain": "persona",
       "secondary_domain": "shadow",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rozvoj",
+        "identita",
+        "prace",
+        "minulost"
+      ]
     },
     "slunce": {
       "id": "slunce",
@@ -1868,7 +2174,13 @@
       "archetypal_domain": "self",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "spiritualita",
+        "zdravi",
+        "rozvoj",
+        "zmena"
+      ]
     },
     "smrt": {
       "id": "smrt",
@@ -1904,7 +2216,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "ztrata",
+        "spiritualita",
+        "minulost"
+      ]
     },
     "snih": {
       "id": "snih",
@@ -1936,7 +2254,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "complete"
+      "content_status": "complete",
+      "relevant_contexts": [
+        "ztrata",
+        "zmena",
+        "minulost",
+        "spiritualita"
+      ]
     },
     "strom": {
       "id": "strom",
@@ -1973,7 +2297,13 @@
       "archetypal_domain": "life_force",
       "secondary_domain": "self",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "rozvoj",
+        "spiritualita",
+        "rodina",
+        "minulost"
+      ]
     },
     "studna": {
       "id": "studna",
@@ -2009,7 +2339,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "self",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "spiritualita",
+        "minulost",
+        "zmena"
+      ]
     },
     "stul": {
       "id": "stul",
@@ -2045,7 +2381,13 @@
       "archetypal_domain": "collective",
       "secondary_domain": "persona",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "vztahy",
+        "rodina",
+        "ztrata",
+        "minulost"
+      ]
     },
     "svetlo": {
       "id": "svetlo",
@@ -2081,7 +2423,13 @@
       "archetypal_domain": "self",
       "secondary_domain": "transformation",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "spiritualita",
+        "rozvoj",
+        "zmena",
+        "identita"
+      ]
     },
     "tma": {
       "id": "tma",
@@ -2117,7 +2465,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "spiritualita",
+        "zmena",
+        "minulost"
+      ]
     },
     "valka": {
       "id": "valka",
@@ -2154,7 +2508,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "collective",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "prace",
+        "vztahy",
+        "identita"
+      ]
     },
     "vlk": {
       "id": "vlk",
@@ -2191,7 +2551,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "zmena",
+        "vztahy",
+        "rozvoj"
+      ]
     },
     "voda": {
       "id": "voda",
@@ -2229,7 +2595,13 @@
       "archetypal_domain": "transformation",
       "secondary_domain": "anima",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "spiritualita",
+        "vztahy",
+        "identita"
+      ]
     },
     "zbran": {
       "id": "zbran",
@@ -2266,7 +2638,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "animus",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "prace",
+        "vztahy",
+        "zmena"
+      ]
     },
     "zima": {
       "id": "zima",
@@ -2303,7 +2681,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "zmena",
+        "ztrata",
+        "zdravi",
+        "minulost"
+      ]
     },
     "zrcadlo": {
       "id": "zrcadlo",
@@ -2340,7 +2724,13 @@
       "archetypal_domain": "persona",
       "secondary_domain": "self",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "zmena",
+        "rozvoj",
+        "ztrata"
+      ]
     },
     "zuby": {
       "id": "zuby",
@@ -2378,7 +2768,13 @@
       "archetypal_domain": "mortality",
       "secondary_domain": "shadow",
       "added_version": "1",
-      "content_status": "complete"
+      "content_status": "complete",
+      "relevant_contexts": [
+        "zdravi",
+        "identita",
+        "prace",
+        "ztrata"
+      ]
     },
     "zvire": {
       "id": "zvire",
@@ -2415,7 +2811,13 @@
       "archetypal_domain": "shadow",
       "secondary_domain": "life_force",
       "added_version": "1",
-      "content_status": "draft"
+      "content_status": "draft",
+      "relevant_contexts": [
+        "identita",
+        "zdravi",
+        "zmena",
+        "spiritualita"
+      ]
     }
   },
   "emotions": {
@@ -4943,6 +5345,76 @@
       "conclusion_avoidance": "Vyhýbáš se rozhovoru nebo situaci v rodině, která potřebuje řešení.",
       "conclusion_awareness": "Vidíš rodinnou dynamiku — teď záleží, jak se zachováš.",
       "reflection_question": "Co v rodině nebo doma potřebuje tvoji pozornost?"
+    },
+    "kreativita": {
+      "id": "kreativita",
+      "label": "Kreativita",
+      "icon": "🎨",
+      "conclusion_passive": "Ve tvorbě nebo projektech cítíš blok, který tě zastavuje.",
+      "conclusion_active": "Tvoje kreativní energie teď teče — využij ten tok.",
+      "conclusion_avoidance": "Odkládáš projekt nebo tvorbu, která tě v hloubi volá.",
+      "conclusion_awareness": "Vidíš jasně co chceš stvořit — teď jde o odvahu začít.",
+      "reflection_question": "Co tvoříš nebo chceš stvořit, ale stále odkládáš?"
+    },
+    "spiritualita": {
+      "id": "spiritualita",
+      "label": "Spiritualita",
+      "icon": "☯️",
+      "conclusion_passive": "Hledáš smysl nebo oporu a zatím se nedaří je najít.",
+      "conclusion_active": "Na své duchovní cestě postupuješ — věř procesu.",
+      "conclusion_avoidance": "Možná se vyhýbáš otázce, která tě na hlubší rovině tíží.",
+      "conclusion_awareness": "Tušíš odpověď — teď jde o odvahu ji přijmout.",
+      "reflection_question": "Jaká životní otázka tě teď nejvíce hledá?"
+    },
+    "ztrata": {
+      "id": "ztrata",
+      "label": "Ztráta",
+      "icon": "🕯️",
+      "conclusion_passive": "Neseš ztrátu nebo bolest, která si žádá prostor a čas.",
+      "conclusion_active": "Procházíš těžkým obdobím — ale jdeš skrz něj, ne kolem.",
+      "conclusion_avoidance": "Možná se vyhýbáš loučení nebo bolesti, která čeká na uznání.",
+      "conclusion_awareness": "Vidíš co se změnilo nebo ztratilo — teď jde o přijetí.",
+      "reflection_question": "S čím nebo s kým se stále loučíš, i když ses rozloučit měl/a?"
+    },
+    "identita": {
+      "id": "identita",
+      "label": "Identita",
+      "icon": "🪞",
+      "conclusion_passive": "Kdo jsi a jaká je tvoje role — tyto otázky tě teď tíží.",
+      "conclusion_active": "Hledáš sebe sama aktivně — to je odvážná cesta.",
+      "conclusion_avoidance": "Možná odkládáš setkání se sebou samým/samou, jak skutečně jsi.",
+      "conclusion_awareness": "Vidíš kdo jsi a co chceš — teď jde o to žít to naplno.",
+      "reflection_question": "Které části sebe sama ještě nepřijímáš nebo neznáš?"
+    },
+    "minulost": {
+      "id": "minulost",
+      "label": "Minulost",
+      "icon": "⏳",
+      "conclusion_passive": "Něco z minulosti tě stahuje zpět nebo nedává pokoj.",
+      "conclusion_active": "Díváš se do minulosti s odvahou — abys z ní mohl/a jít dál.",
+      "conclusion_avoidance": "Možná se vyhýbáš vzpomínce nebo tématu, které čeká na uzavření.",
+      "conclusion_awareness": "Vidíš minulost jasně — teď jde o to nechat ji být minulostí.",
+      "reflection_question": "Co z minulosti stále ovlivňuje tvoje rozhodnutí dnes?"
+    },
+    "zmena": {
+      "id": "zmena",
+      "label": "Změna",
+      "icon": "🦋",
+      "conclusion_passive": "Procházíš změnou, která tě přesahuje a zatím nevíš kam jde.",
+      "conclusion_active": "Změna, kterou prožíváš, tě posouvá správným směrem.",
+      "conclusion_avoidance": "Možná odkládáš změnu, která tě uvnitř čeká.",
+      "conclusion_awareness": "Vidíš změnu před sebou jasně — teď jde o první krok.",
+      "reflection_question": "Jaká změna v tvém životě čeká na tvoje přivolení?"
+    },
+    "obecny": {
+      "id": "obecny",
+      "label": "Jinde / Neurčitě",
+      "icon": "🌀",
+      "conclusion_passive": "Tvůj sen pracuje s něčím, co zatím nemá jasnou adresu v bdělém světě.",
+      "conclusion_active": "Energie tohoto snu hledá místo kde se může vyjádřit — nech ji volně plynout.",
+      "conclusion_avoidance": "Možná ještě nevíš kde přesně se tato situace hraje — a to je v pořádku.",
+      "conclusion_awareness": "Obraz snu vidíš jasně — jeho odkaz do bdělého života se teprve rýsuje.",
+      "reflection_question": "V jaké oblasti svého života tento obraz nejvíce rezonuje?"
     }
   },
   "combination_overrides": {
@@ -4959,7 +5431,7 @@
     "total_symbols": 67,
     "total_emotions": 9,
     "total_verbs": 187,
-    "total_contexts": 6,
+    "total_contexts": 13,
     "total_overrides": 2,
     "supported_languages": [
       "cs",
