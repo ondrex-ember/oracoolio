@@ -3,25 +3,89 @@
 
 const API_URL = 'https://script.google.com/macros/s/AKfycbzg2YNckMcLzo5Z2bVbonXMHTJXInJfR1M4BsXhWE0CrbUTQ9cht2YOSSfg-Wkhl_nT/exec';
 
-let tarotDeck = [];
+// ── Lokalizace ────────────────────────────────────────────────
+let TAROT_LANG = 'cs';
 
-const drawBtn = document.getElementById('draw-btn');
+const TAROT_STRINGS = {
+  cs: {
+    positions:    ['Minulost', 'Přítomnost', 'Budoucnost'],
+    upright:      'Přímá pozice',
+    reversed:     'Obrácená pozice',
+    drawBtn:      'Vytáhnout 3 karty',
+    loading:      'Karty se míchají...',
+    loadError:    'Nepodařilo se načíst karty.',
+    aiListening:  '<i>Hlas Oracoolia naslouchá hvězdám...</i>',
+    aiError:      'Spojení s astrální sférou selhalo.',
+    aiTitle:      '✨ Hlas Oracoolia ✨',
+    h1:           'Klasický Tarot',
+    subtitle:     'Zeptejte se karet na svou cestu',
+    back:         '← Zpět do Oracoolia',
+    altBack:      'Rub karty',
+  },
+  en: {
+    positions:    ['Past', 'Present', 'Future'],
+    upright:      'Upright',
+    reversed:     'Reversed',
+    drawBtn:      'Draw 3 cards',
+    loading:      'Shuffling the cards...',
+    loadError:    'Failed to load the cards.',
+    aiListening:  '<i>The Oracle is listening to the stars...</i>',
+    aiError:      'Connection to the astral sphere has failed.',
+    aiTitle:      '✨ The Oracle Speaks ✨',
+    h1:           'Classic Tarot',
+    subtitle:     'Ask the cards about your path',
+    back:         '← Back to Oracoolio',
+    altBack:      'Card back',
+  }
+};
+
+function T(key) {
+  return TAROT_STRINGS[TAROT_LANG][key];
+}
+
+function setLang(lang) {
+  TAROT_LANG = lang;
+  if (typeof setGlobalLang === 'function') setGlobalLang(lang);
+  document.documentElement.lang = lang;
+  document.title = lang === 'en'
+    ? 'Tarot — 3-Card Reading | Oracoolio'
+    : 'Tarot — Výklad ze 3 karet | Oracoolio';
+  // Lang buttons
+  const cs = document.getElementById('btn-lang-cs');
+  const en = document.getElementById('btn-lang-en');
+  if (cs) cs.classList.toggle('active', lang === 'cs');
+  if (en) en.classList.toggle('active', lang === 'en');
+  // Static data-cs/data-en elements
+  document.querySelectorAll('[data-cs]').forEach(el => {
+    const val = lang === 'en' ? el.dataset.en : el.dataset.cs;
+    if (val !== undefined) el.textContent = val;
+  });
+  // Position titles
+  const posTitles = document.querySelectorAll('.position-title');
+  T('positions').forEach((pos, i) => { if (posTitles[i]) posTitles[i].textContent = pos; });
+  // Draw button
+  const btn = document.getElementById('draw-btn');
+  if (btn) btn.textContent = T('drawBtn');
+}
+
+let tarotDeck = [];const drawBtn = document.getElementById('draw-btn');
 const loadingDiv = document.getElementById('loading');
 const tarotBoard = document.getElementById('tarot-board');
 
 async function loadCards() {
     drawBtn.classList.add('hidden');
     loadingDiv.classList.remove('hidden');
+    loadingDiv.textContent = T('loading');
 
     try {
         const response = await fetch(API_URL);
         tarotDeck = await response.json();
-        console.log("Karty úspěšně načteny:", tarotDeck);
         loadingDiv.classList.add('hidden');
         drawBtn.classList.remove('hidden');
+        drawBtn.textContent = T('drawBtn');
     } catch (error) {
         console.error("Chyba při stahování karet:", error);
-        loadingDiv.innerText = "Nepodařilo se načíst karty.";
+        loadingDiv.textContent = T('loadError');
     }
 }
 
@@ -51,7 +115,7 @@ function drawCard() {
             drawnCards.push(deckCopy.splice(randomIndex, 1)[0]); 
         }
 
-        const positions = ["Minulost", "Přítomnost", "Budoucnost"];
+        const positions = T('positions');
         let htmlContent = ""; 
         let kartyProAI = []; 
 
@@ -64,12 +128,12 @@ function drawCard() {
             let posText, keywords, meaning;
             if (isReversed) {
                 imgEl.classList.add('reversed-card');
-                posText = "Obrácená pozice";
+                posText = T('reversed');
                 keywords = card.keywords_reversed;
                 meaning = card.meaning_reversed_general;
             } else {
                 imgEl.classList.remove('reversed-card');
-                posText = "Přímá pozice";
+                posText = T('upright');
                 keywords = card.keywords_upright;
                 meaning = card.meaning_upright_general;
             }
@@ -95,10 +159,10 @@ function drawCard() {
             readingTextContainer.classList.remove('hidden');
             
             aiContainer.classList.remove('hidden');
-            aiTextEl.innerHTML = "<i>Hlas Oracoolia naslouchá hvězdám...</i>";
+            aiTextEl.innerHTML = T('aiListening');
 
             const kartyString = encodeURIComponent(kartyProAI.join(", "));
-            const fetchUrl = `${API_URL}?action=reading&cards=${kartyString}`;
+            const fetchUrl = `${API_URL}?action=reading&cards=${kartyString}&lang=${TAROT_LANG}`;
 
             fetch(fetchUrl)
                 .then(response => response.json())
@@ -108,7 +172,7 @@ function drawCard() {
                     }
                 })
                 .catch(err => {
-                    aiTextEl.innerHTML = "Spojení s astrální sférou selhalo.";
+                    aiTextEl.innerHTML = T('aiError');
                 });
 
         }, 2200);
@@ -142,6 +206,10 @@ function typeWriterEffect(text, elementId, speed = 35) {
 if (drawBtn) {
     drawBtn.addEventListener('click', drawCard);
 }
-loadCards();
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof getLang === 'function') setLang(getLang());
+    loadCards();
+});
 
 // ==========================================
