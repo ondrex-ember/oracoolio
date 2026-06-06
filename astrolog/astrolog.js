@@ -155,6 +155,7 @@ const T = key => STRINGS[LANG]?.[key] ?? STRINGS.cs[key] ?? key;
 
 function setLang(lang) {
   LANG = lang;
+  setGlobalLang(lang);
   document.getElementById('btn-lang-cs').classList.toggle('active', lang === 'cs');
   document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
   // Update all static elements with data-cs / data-en attributes
@@ -191,6 +192,8 @@ let birthData = {
 
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+  // Načti uložený jazyk
+  if (typeof getLang === 'function') setLang(getLang());
   buildTimezoneSelect();
   buildPlanetTable();
   buildAscendentSelect();
