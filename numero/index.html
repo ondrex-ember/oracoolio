@@ -198,11 +198,13 @@
 
 </div><!-- /.container -->
 
+<script src="../lang.js"></script>
 <script src="numero.js" defer></script>
 <script>
 // ── Lokalizace ────────────────────────────────────────────
 function setLang(lang) {
   if (typeof NUMERO_LANG !== 'undefined') NUMERO_LANG = lang;
+  setGlobalLang(lang);
   document.documentElement.lang = lang;
   document.title = lang === 'en' ? 'Numero — Numerological Reading | Oracoolio' : 'Numero — Numerologický rozbor | Oracoolio';
   document.getElementById('btn-lang-cs').style.color = lang === 'cs' ? 'rgba(201,168,76,1)' : 'rgba(201,168,76,0.3)';
@@ -225,6 +227,10 @@ function setLang(lang) {
     el.placeholder = lang === 'en' ? (el.dataset.placeholderEn || el.dataset.placeholderCs) : el.dataset.placeholderCs;
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof getLang === 'function') setLang(getLang());
+});
 </script>
 
 
