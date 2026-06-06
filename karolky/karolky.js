@@ -25,6 +25,77 @@ const KP_RANK_CZ = {
 const KP_SUIT_CZ = {
     'hearts':'Srdce ♥','diamonds':'Kára ♦','clubs':'Kříže ♣','spades':'Piky ♠'
 };
+const KP_RANK_EN = {
+    'A':'Ace','2':'Two','3':'Three','4':'Four','5':'Five',
+    '6':'Six','7':'Seven','8':'Eight','9':'Nine','10':'Ten',
+    'J':'Jack','Q':'Queen','K':'King'
+};
+const KP_SUIT_EN = {
+    'hearts':'Hearts ♥','diamonds':'Diamonds ♦','clubs':'Clubs ♣','spades':'Spades ♠'
+};
+
+// ── Lokalizace ────────────────────────────────────────────────
+let KP_LANG = 'cs';
+
+const KP_STRINGS = {
+  cs: {
+    newGame:       '✦ Nová hra',
+    back:          '← Zpět do Oracoolia',
+    tapHint:       'Klepněte na cíl',
+    cancel:        '✕ Zrušit',
+    close:         'Zavřít',
+    foundation:    (val) => `Hodnota ${val} · lze na foundation`,
+    tableau:       (n)   => `${n} karet · pouze na tableau`,
+    winTitle:      'VÝHRA!',
+    loseTitle:     'Prohra',
+    winMsg:        'Hvězdy vám přejí! Osud byl ve vašich rukou a vy jste ho zkrotili.',
+    loseMsg:       'Tři kola prošla jako voda. Karty tentokrát nepřály — ale osud se mění s každým novým pokusem.',
+    round:         'Kolo',
+    draw:          'Po',
+    stock:         'Stoh:',
+  },
+  en: {
+    newGame:       '✦ New game',
+    back:          '← Back to Oracoolio',
+    tapHint:       'Tap a target',
+    cancel:        '✕ Cancel',
+    close:         'Close',
+    foundation:    (val) => `Value ${val} · can go to foundation`,
+    tableau:       (n)   => `${n} cards · tableau only`,
+    winTitle:      'YOU WIN!',
+    loseTitle:     'Game over',
+    winMsg:        'The stars favour you! Fate was in your hands — and you tamed it.',
+    loseMsg:       'Three rounds have passed. The cards weren\'t on your side this time — but fate shifts with every new attempt.',
+    round:         'Round',
+    draw:          'Draw',
+    stock:         'Stock:',
+  }
+};
+
+function KP_T(key, ...args) {
+  const fn = KP_STRINGS[KP_LANG][key];
+  return typeof fn === 'function' ? fn(...args) : fn;
+}
+
+function kpSetLang(lang) {
+  KP_LANG = lang;
+  if (typeof setGlobalLang === 'function') setGlobalLang(lang);
+  // Statické prvky v HTML
+  const q = (id) => document.getElementById(id);
+  if (q('kp-new-btn'))    q('kp-new-btn').textContent    = KP_T('newGame');
+  if (q('kp-back-btn'))   q('kp-back-btn').textContent   = KP_T('back');
+  if (q('kp-info-hint'))  q('kp-info-hint').textContent  = KP_T('tapHint');
+  if (q('kp-cancel-btn')) q('kp-cancel-btn').textContent = KP_T('cancel');
+  if (q('kp-close-btn'))  q('kp-close-btn').textContent  = KP_T('close');
+  // Lang buttons
+  const cs = q('btn-lang-cs'); const en = q('btn-lang-en');
+  if (cs) cs.classList.toggle('active', lang === 'cs');
+  if (en) en.classList.toggle('active', lang === 'en');
+  // HUD labels
+  const rndEl = q('kp-round-label'); if (rndEl) rndEl.textContent = KP_T('round');
+  const drwEl = q('kp-draw-label');  if (drwEl) drwEl.textContent = KP_T('draw');
+  const stEl  = q('kp-stock-label'); if (stEl)  stEl.textContent  = KP_T('stock');
+}
 
 function kpVal(r) {
     if (r==='A') return 1; if (r==='J') return 11;
@@ -139,11 +210,13 @@ function kpSetSel(src, col, cidx, cards, cardObj) {
     const sub  = document.getElementById('kp-info-sub');
     if (!bar) return;
 
-    txt.textContent = `${KP_RANK_CZ[cardObj.rank] || cardObj.rank} — ${KP_SUIT_CZ[cardObj.suit] || cardObj.suit}`;
+    const rankMap = KP_LANG === 'en' ? KP_RANK_EN : KP_RANK_CZ;
+    const suitMap = KP_LANG === 'en' ? KP_SUIT_EN : KP_SUIT_CZ;
+    txt.textContent = `${rankMap[cardObj.rank] || cardObj.rank} — ${suitMap[cardObj.suit] || cardObj.suit}`;
     txt.style.color = cardObj.color === 'red' ? '#e07070' : '#e0d5b8';
     sub.textContent = cards.length === 1
-        ? `Hodnota ${cardObj.val} · lze na foundation`
-        : `${cards.length} karet · pouze na tableau`;
+        ? KP_T('foundation', cardObj.val)
+        : KP_T('tableau', cards.length);
 
     bar.classList.remove('kp-infobar-hidden');
     kpRender();
@@ -226,10 +299,8 @@ function kpShowResult(win) {
     const ov = document.getElementById('kp-overlay');
     if (!ov) return;
     document.getElementById('kp-ov-icon').textContent  = win ? '✦' : '✕';
-    document.getElementById('kp-ov-title').textContent = win ? 'VÝHRA!' : 'Prohra';
-    document.getElementById('kp-ov-msg').textContent   = win
-        ? 'Hvězdy vám přejí! Osud byl ve vašich rukou a vy jste ho zkrotili.'
-        : 'Tři kola prošla jako voda. Karty tentokrát nepřály — ale osud se mění s každým novým pokusem.';
+    document.getElementById('kp-ov-title').textContent = win ? KP_T('winTitle') : KP_T('loseTitle');
+    document.getElementById('kp-ov-msg').textContent   = win ? KP_T('winMsg') : KP_T('loseMsg');
     ov.style.display = 'flex';
 }
 
@@ -535,5 +606,6 @@ function kpOnDropTableau(e, targetCol) {
 
 // ── Auto-init při načtení stránky ──
 document.addEventListener('DOMContentLoaded', function() {
+    if (typeof getLang === 'function') kpSetLang(getLang());
     if (typeof kpNewGame === 'function') kpNewGame();
 });
