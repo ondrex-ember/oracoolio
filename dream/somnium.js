@@ -164,24 +164,75 @@ function vtag(v, univ) {
 
 // ── Krok 4: Kontext ───────────────────────────────────────────────────────────
 
+function ctxCard(c) {
+  return `<div class="context-card${S.context?.id===c.id?' selected':''}" data-id="${c.id}" role="button" tabindex="0">
+    <span class="context-card-icon">${c.icon}</span>
+    <span class="context-card-label">${c.label}</span>
+  </div>`;
+}
+
+function selectContext(id) {
+  S.context = S.db.contexts[id];
+  S.result  = S.engine.generateInterpretation({
+    symbolId:S.symbol.id, emotionId:S.emotion.id,
+    verbId:S.verb.id, contextId:S.context.id,
+  });
+  setTimeout(() => renderStep('result'), 160);
+}
+
+function wireContextCards(container) {
+  container.querySelectorAll('.context-card').forEach(card => {
+    const fn = () => selectContext(card.dataset.id);
+    card.addEventListener('click', fn);
+    card.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') fn(); });
+  });
+}
+
 function renderContext() {
   updateTrail();
   const grid = document.getElementById('context-grid');
   if (!grid) return;
-  grid.innerHTML = Object.values(S.db.contexts).map(c => `
-    <div class="context-card${S.context?.id===c.id?' selected':''}" data-id="${c.id}" role="button" tabindex="0">
-      <span class="context-card-icon">${c.icon}</span>
-      <span class="context-card-label">${c.label}</span>
-    </div>`).join('');
-  grid.querySelectorAll('.context-card').forEach(c => {
-    const fn = () => {
-      S.context = S.db.contexts[c.dataset.id];
-      S.result  = S.engine.generateInterpretation({ symbolId:S.symbol.id, emotionId:S.emotion.id, verbId:S.verb.id, contextId:S.context.id });
-      setTimeout(() => renderStep('result'), 160);
-    };
-    c.addEventListener('click', fn);
-    c.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') fn(); });
-  });
+
+  // Odděl obecny od ostatních
+  const allCtx  = Object.values(S.db.contexts);
+  const obecny  = S.db.contexts['obecny'] ?? null;
+  const regular = allCtx.filter(c => c.id !== 'obecny');
+
+  // Relevant contexts pro vybraný symbol (nové pole — fallback na vše)
+  const relIds = new Set(S.symbol.relevant_contexts ?? []);
+  const hasSplit = relIds.size > 0;
+
+  const primary   = hasSplit ? regular.filter(c =>  relIds.has(c.id)) : regular;
+  const secondary = hasSplit ? regular.filter(c => !relIds.has(c.id)) : [];
+
+  let showMore = false;
+
+  function renderInner() {
+    const shown = showMore ? [...primary, ...secondary] : primary;
+
+    grid.innerHTML = `
+      <div class="ctx-grid-inner">${shown.map(ctxCard).join('')}</div>
+
+      ${secondary.length && !showMore ? `
+        <button class="ctx-more-btn" id="ctx-more-btn">
+          Zobrazit další možnosti (${secondary.length}) ›
+        </button>` : ''}
+
+      ${obecny ? `
+        <div class="ctx-obecny-wrap">
+          ${ctxCard(obecny)}
+        </div>` : ''}
+    `;
+
+    wireContextCards(grid);
+
+    document.getElementById('ctx-more-btn')?.addEventListener('click', () => {
+      showMore = true;
+      renderInner();
+    });
+  }
+
+  renderInner();
 }
 
 // ── Krok 5: Výsledek ──────────────────────────────────────────────────────────
