@@ -354,3 +354,55 @@ body {
   .interp-header{ padding: 18px 18px 16px; }
   .interp-text p{ font-size: 15px; }
 }
+/* ── Context step — nová logika ──────────────────────────────── */
+
+/* Inner grid (stejný jako .context-grid, bez top-level gap) */
+.ctx-grid-inner {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+
+/* Zobrazit více tlačítko */
+.ctx-more-btn {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px 20px;
+  background: transparent;
+  border: 1px dashed var(--border-hi);
+  border-radius: var(--r);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--ease);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.ctx-more-btn:hover {
+  border-color: var(--gold-dim);
+  color: var(--gold);
+  border-style: solid;
+}
+
+/* Obecny — separator + karta */
+.ctx-obecny-wrap {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.ctx-obecny-wrap .context-card {
+  opacity: 0.65;
+  font-style: italic;
+}
+.ctx-obecny-wrap .context-card:hover {
+  opacity: 1;
+}
+.ctx-obecny-wrap .context-card-label {
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .ctx-grid-inner { grid-template-columns: 1fr; }
+}
