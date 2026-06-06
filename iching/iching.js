@@ -43,6 +43,7 @@ function T(key, ...args) {
 
 function setLang(lang) {
   ICHING_LANG = lang;
+  setGlobalLang(lang);
   // Fix page title and html lang
   document.documentElement.lang = lang;
   document.title = lang === 'en' ? 'I Ching — Book of Changes | Oracoolio' : 'I-Ťing — Kniha proměn | Oracoolio';
@@ -223,6 +224,8 @@ function updateBadge() {
 
 // ── Init ──────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+  // Načti uložený jazyk
+  if (typeof getLang === 'function') setLang(getLang());
   updateBadge();
   if (checkDailyLimit()) {
     const btn = document.getElementById('toss-btn');
