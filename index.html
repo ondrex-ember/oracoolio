@@ -96,6 +96,37 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
     <style>
+    /* ── Lang switch ── */
+    .home-lang-switch {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .home-lang-btn {
+        background: rgba(13,13,32,0.85);
+        border: 1px solid rgba(201,168,76,0.25);
+        color: rgba(201,168,76,0.45);
+        font-family: 'Cinzel', serif;
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        transition: all 0.2s;
+    }
+    .home-lang-btn.active,
+    .home-lang-btn:hover {
+        border-color: rgba(201,168,76,0.8);
+        color: #c9a84c;
+        background: rgba(13,13,32,0.95);
+    }
+    .home-lang-sep { color: rgba(201,168,76,0.2); font-size: 0.8rem; user-select: none; }
     /* ── About trigger ── */
     #about-trigger {
         position: fixed;
@@ -230,14 +261,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ── About trigger (levý horní roh) ── -->
     <button id="about-trigger" onclick="openAboutModal()" title="O projektu" aria-label="O projektu">?</button>
 
+    <!-- ── Lang switch (pravý horní roh) ── -->
+    <div class="home-lang-switch">
+        <button class="home-lang-btn active" id="btn-lang-cs" onclick="homeLang('cs')">CS</button>
+        <span class="home-lang-sep">|</span>
+        <button class="home-lang-btn" id="btn-lang-en" onclick="homeLang('en')">EN</button>
+    </div>
+
     <!-- ── About modal ── -->
     <div id="about-modal-overlay" onclick="closeAboutModal(event)">
         <div id="about-modal" role="dialog" aria-modal="true" aria-label="O Oracooliu">
             <button id="about-modal-close" onclick="closeAboutModal()" aria-label="Zavřít">✕</button>
-            <div class="modal-label">O projektu</div>
+            <div class="modal-label" data-cs="O projektu" data-en="About">O projektu</div>
             <div class="modal-title">Oracoolio</div>
-            <p class="modal-text">Bezplatná osobní věštírna — šest nástrojů pod jednou střechou. Bez registrace, bez reklam, bez sledování. Vše běží přímo ve vašem prohlížeči.</p>
-            <a href="about/" class="modal-cta">→ Více o Oracooliu</a>
+            <p class="modal-text" data-cs="Bezplatná osobní věštírna — šest nástrojů pod jednou střechou. Bez registrace, bez reklam, bez sledování. Vše běží přímo ve vašem prohlížeči." data-en="A free personal oracle — six tools under one roof. No sign-up, no ads, no tracking. Everything runs directly in your browser.">Bezplatná osobní věštírna — šest nástrojů pod jednou střechou. Bez registrace, bez reklam, bez sledování. Vše běží přímo ve vašem prohlížeči.</p>
+            <a href="about/" class="modal-cta" data-cs="→ Více o Oracooliu" data-en="→ About Oracoolio">→ Více o Oracooliu</a>
         </div>
     </div>
 
@@ -246,64 +284,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="dashboard" class="dashboard-active">
             <header>
                 <h1 class="main-title">Oracoolio</h1>
-                <p class="subtitle">Vaše osobní věštírna - zvolte svou cestu poznání</p>
+                <p class="subtitle" data-cs="Vaše osobní věštírna - zvolte svou cestu poznání" data-en="Your personal oracle — choose your path">Vaše osobní věštírna - zvolte svou cestu poznání</p>
             </header>
             
             <div class="menu-grid">
 
                 <div class="menu-item" onclick="showApp('tarot')">
                     <div class="menu-icon">🔮</div>
-                    <h2>Klasický Tarot</h2>
-                    <p>Výklad ze 3 karet. Zrcadlo vaší minulosti, přítomnosti a budoucnosti.</p>
+                    <h2 data-cs="Klasický Tarot" data-en="Classic Tarot">Klasický Tarot</h2>
+                    <p data-cs="Výklad ze 3 karet. Zrcadlo vaší minulosti, přítomnosti a budoucnosti." data-en="A 3-card reading. Mirror of your past, present and future.">Výklad ze 3 karet. Zrcadlo vaší minulosti, přítomnosti a budoucnosti.</p>
                 </div>
 
                 <div class="menu-item" onclick="showApp('iching')">
                     <div class="menu-icon">☯️</div>
-                    <h2>I-Ťing</h2>
-                    <p>Kniha proměn. Hod mincemi a soulad s vesmírem.</p>
-                    <div class="status-badge" id="iching-status">Dnes zbývá: 1 konzultace</div>
+                    <h2 data-cs="I-Ťing" data-en="I Ching">I-Ťing</h2>
+                    <p data-cs="Kniha proměn. Hod mincemi a soulad s vesmírem." data-en="Book of Changes. Toss coins and align with the universe.">Kniha proměn. Hod mincemi a soulad s vesmírem.</p>
+                    <div class="status-badge" id="iching-status" data-cs="Dnes zbývá: 1 konzultace" data-en="Today: 1 consultation left">Dnes zbývá: 1 konzultace</div>
                 </div>
 
                 <div class="menu-item menu-item-featured" onclick="showApp('numero')">
                     <div class="menu-icon">✦</div>
-                    <h2>Numero</h2>
-                    <p>Kompletní numerologický rozbor vaší duše. Datum, jméno, mřížka, cykly.</p>
-                    <div class="status-badge status-badge-new">✦ Nové</div>
+                    <h2 data-cs="Numero" data-en="Numero">Numero</h2>
+                    <p data-cs="Kompletní numerologický rozbor vaší duše. Datum, jméno, mřížka, cykly." data-en="Complete numerological reading of your soul. Date, name, grid, cycles.">Kompletní numerologický rozbor vaší duše. Datum, jméno, mřížka, cykly.</p>
+                    <div class="status-badge status-badge-new" data-cs="✦ Nové" data-en="✦ New">✦ Nové</div>
                 </div>
+
                 <div class="menu-item menu-item-featured" onclick="showApp('astrolog')">
                     <div class="menu-icon">☽</div>
-                    <h2>Astrolog</h2>
-                    <p>Horoskop dle Dr. Jana Kefera. Planety, domy, temperament a výklad.</p>
-                    <div class="status-badge status-badge-new">✦ Nové</div>
+                    <h2 data-cs="Astrolog" data-en="Astrolog">Astrolog</h2>
+                    <p data-cs="Horoskop dle Dr. Jana Kefera. Planety, domy, temperament a výklad." data-en="Horoscope by Dr. Jan Kefer. Planets, houses, temperament and reading.">Horoskop dle Dr. Jana Kefera. Planety, domy, temperament a výklad.</p>
+                    <div class="status-badge status-badge-new" data-cs="✦ Nové" data-en="✦ New">✦ Nové</div>
                 </div>
 
                 <div class="menu-item menu-item-featured" onclick="window.location.href='dream/'">
                     <div class="menu-icon">🌙</div>
-                    <h2>Somnium</h2>
-                    <p>Personalizovaný výklad snů. Symbol, emoce, děj, kontext — zrcadlo tvé noci.</p>
-                    <div class="status-badge status-badge-new">✦ Nové</div>
+                    <h2 data-cs="Somnium" data-en="Somnium">Somnium</h2>
+                    <p data-cs="Personalizovaný výklad snů. Symbol, emoce, děj, kontext — zrcadlo tvé noci." data-en="Personalised dream reading. Symbol, emotion, action, context — mirror of your night.">Personalizovaný výklad snů. Symbol, emoce, děj, kontext — zrcadlo tvé noci.</p>
+                    <div class="status-badge status-badge-new" data-cs="✦ Nové · #CZ" data-en="✦ New · #CZ">✦ Nové · #CZ</div>
                 </div>
-
-
 
                 <div class="menu-item menu-item-featured" onclick="showApp('karolky')">
                     <div class="menu-icon">🃏</div>
-                    <h2>Karolky Pasiáns</h2>
-                    <p>Double Klondike — 104 karet, 3 kola. Největší zkouška osudu.</p>
+                    <h2 data-cs="Karolky Pasiáns" data-en="Karolky Solitaire">Karolky Pasiáns</h2>
+                    <p data-cs="Double Klondike — 104 karet, 3 kola. Největší zkouška osudu." data-en="Double Klondike — 104 cards, 3 rounds. The ultimate test of fate.">Double Klondike — 104 karet, 3 kola. Největší zkouška osudu.</p>
                 </div>
-                
-
 
                 <div class="menu-item locked">
                     <div class="menu-icon">🎴</div>
-                    <h2>Biedermeier Tarot</h2>
-                    <p>Historický cikánský výklad. Brzy k dispozici.</p>
-                    <div class="status-badge" style="border-color:#555;color:#555;">Připravujeme</div>
+                    <h2 data-cs="Biedermeier Tarot" data-en="Biedermeier Tarot">Biedermeier Tarot</h2>
+                    <p data-cs="Historický cikánský výklad. Brzy k dispozici." data-en="Historical Romani reading. Coming soon.">Historický cikánský výklad. Brzy k dispozici.</p>
+                    <div class="status-badge" style="border-color:#555;color:#555;" data-cs="Připravujeme" data-en="Coming soon">Připravujeme</div>
                 </div>
 
             </div>
-
-
 
     <!-- ==========================================
          PATIČKA ORACOOLIA
@@ -325,14 +358,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://fractout.com" target="_blank" rel="noopener" class="footer-link footer-doupe">
                 𖦹ׂ Fractout
             </a>
-                        <span class="footer-sep">|</span>
+            <span class="footer-sep">|</span>
             <a href="https://newsandradio.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">
-                📰 Jouza News&Radio 📻
+                📰 Jouza News&amp;Radio 📻
             </a>
             <span class="footer-sep">|</span>
-            <a href="about/" class="footer-link footer-doupe">ℹ O projektu</a>
-            
-           
+            <a href="about/" class="footer-link footer-doupe" data-cs="ℹ O projektu" data-en="ℹ About">ℹ O projektu</a>
         </div>
         <div class="footer-credit">
             Vyvíjeno s <span class="footer-heart">❤️</span> v Novém Boru. By <span class="footer-author"><a href="https://ember-pa.cz" target="_blank" rel="noopener">Ondrex</a></span>
@@ -345,8 +376,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              ========================================== -->
     </div><!-- /.app-container -->
 
+    <script src="lang.js"></script>
     <script src="app.js"></script>
     <script>
+    function homeLang(lang) {
+        if (typeof setGlobalLang === 'function') setGlobalLang(lang);
+        document.documentElement.lang = lang;
+        document.title = lang === 'en'
+            ? 'Oracoolio – Tarot, I Ching, Horoscope, Dream Reader, Numerology & Solitaire'
+            : 'Oracoolio – Tarot, I-Ching, horoskop, snář, numerologie i Pasiáns zdarma';
+        document.getElementById('btn-lang-cs').classList.toggle('active', lang === 'cs');
+        document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
+        document.querySelectorAll('[data-cs]').forEach(el => {
+            const val = lang === 'en' ? el.dataset.en : el.dataset.cs;
+            if (val !== undefined) el.textContent = val;
+        });
+        // I-Ťing badge ze storage
+        const ichingUsed = localStorage.getItem('iching_last_date') === new Date().toISOString().slice(0,10);
+        const badge = document.getElementById('iching-status');
+        if (badge) {
+            badge.textContent = ichingUsed
+                ? (lang === 'en' ? 'Consultation used' : 'Konzultace využita')
+                : (lang === 'en' ? 'Today: 1 consultation left' : 'Dnes zbývá: 1 konzultace');
+            badge.classList.toggle('badge-used', ichingUsed);
+        }
+    }
+
     function openAboutModal() {
         document.getElementById('about-modal-overlay').classList.add('open');
         document.body.style.overflow = 'hidden';
@@ -358,6 +413,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape') closeAboutModal();
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const lang = (typeof getLang === 'function') ? getLang() : 'cs';
+        homeLang(lang);
     });
     </script>
 </body>
