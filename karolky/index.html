@@ -1,186 +1,616 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karolky Pasiáns | Oracoolio</title>
-  <meta name="description" content="Karolky Pasiáns — Double Klondike se 104 kartami a 3 koly. Největší zkouška osudu.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://oracoolio.com/karolky/">
-  <meta name="author" content="ondrex">
-  <meta property="og:type"        content="website">
-  <meta property="og:locale"      content="cs_CZ">
-  <meta property="og:site_name"   content="Oracoolio">
-  <meta property="og:title"       content="Karolky Pasiáns | Oracoolio">
-  <meta property="og:description" content="Karolky Pasiáns — Double Klondike se 104 kartami a 3 koly.">
-  <meta property="og:url"         content="https://oracoolio.com/karolky/">
-  <meta property="og:image"       content="https://oracoolio.com/assets/og-image.jpg">
-  <meta name="google-site-verification" content="HeChd4paxpWn6emGa3HjuQyFjuCw85kWsUwtk1IRobY">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW6CLRYTF3"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW6CLRYTF3');</script>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-5FG6N9KV");</script>
-  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vp48p83k4t");</script>
-  <link rel="icon" href="../assets/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#09090f">
-  <link rel="stylesheet" href="../style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Karolky Pasiáns — Oracoolio",
-    "url": "https://oracoolio.com/karolky/",
-    "description": "Karolky Pasiáns — Double Klondike se 104 kartami a 3 koly. Největší zkouška osudu zdarma online.",
-    "applicationCategory": "GameApplication",
-    "operatingSystem": "Web",
-    "publisher": { "@type": "Organization", "name": "Oracoolio", "url": "https://oracoolio.com/" },
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CZK" },
-    "inLanguage": "cs"
+// 5. KAROLKY II — Double Klondike Engine
+//    104 karet (2 balíčky), 8 tableau sloupců,
+//    8 foundation hromádek (2× každá barva).
+//    Kolo 1 → lízej 3, kolo 2 → lízej 2, kolo 3 → lízej 1.
+//    Max 3 kola, pak prohra.
+//    Pravidla tableau: střídavé barvy, sestupně.
+//    Prázdný sloupec: pouze Král.
+//    Ovládání: drag & drop + tap-to-select + dvojklik na foundation.
+// ==========================================
+
+// ── Konfigurace ──────────────────────────────────────────────
+const KP_SUITS = [
+    { suit:'hearts',   sym:'♥', color:'red'   },
+    { suit:'diamonds', sym:'♦', color:'red'   },
+    { suit:'clubs',    sym:'♣', color:'black' },
+    { suit:'spades',   sym:'♠', color:'black' },
+];
+const KP_RANKS = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+
+const KP_RANK_CZ = {
+    'A':'Eso','2':'Dvojka','3':'Trojka','4':'Čtyřka','5':'Pětka',
+    '6':'Šestka','7':'Sedmička','8':'Osmička','9':'Devítka','10':'Desítka',
+    'J':'Kluk','Q':'Dáma','K':'Král'
+};
+const KP_SUIT_CZ = {
+    'hearts':'Srdce ♥','diamonds':'Kára ♦','clubs':'Kříže ♣','spades':'Piky ♠'
+};
+const KP_RANK_EN = {
+    'A':'Ace','2':'Two','3':'Three','4':'Four','5':'Five',
+    '6':'Six','7':'Seven','8':'Eight','9':'Nine','10':'Ten',
+    'J':'Jack','Q':'Queen','K':'King'
+};
+const KP_SUIT_EN = {
+    'hearts':'Hearts ♥','diamonds':'Diamonds ♦','clubs':'Clubs ♣','spades':'Spades ♠'
+};
+
+// ── Lokalizace ────────────────────────────────────────────────
+let KP_LANG = 'cs';
+
+const KP_STRINGS = {
+  cs: {
+    newGame:       '✦ Nová hra',
+    back:          '← Zpět do Oracoolia',
+    tapHint:       'Klepněte na cíl',
+    cancel:        '✕ Zrušit',
+    close:         'Zavřít',
+    foundation:    (val) => `Hodnota ${val} · lze na foundation`,
+    tableau:       (n)   => `${n} karet · pouze na tableau`,
+    winTitle:      'VÝHRA!',
+    loseTitle:     'Prohra',
+    winMsg:        'Hvězdy vám přejí! Osud byl ve vašich rukou a vy jste ho zkrotili.',
+    loseMsg:       'Tři kola prošla jako voda. Karty tentokrát nepřály — ale osud se mění s každým novým pokusem.',
+    round:         'Kolo',
+    draw:          'Po',
+    stock:         'Stoh:',
+  },
+  en: {
+    newGame:       '✦ New game',
+    back:          '← Back to Oracoolio',
+    tapHint:       'Tap a target',
+    cancel:        '✕ Cancel',
+    close:         'Close',
+    foundation:    (val) => `Value ${val} · can go to foundation`,
+    tableau:       (n)   => `${n} cards · tableau only`,
+    winTitle:      'YOU WIN!',
+    loseTitle:     'Game over',
+    winMsg:        'The stars favour you! Fate was in your hands — and you tamed it.',
+    loseMsg:       'Three rounds have passed. The cards weren\'t on your side this time — but fate shifts with every new attempt.',
+    round:         'Round',
+    draw:          'Draw',
+    stock:         'Stock:',
   }
-  </script>
-  <style>
-    .kp-lang-switch {
-      position: absolute; top: 14px; right: 14px;
-      display: flex; align-items: center; gap: 4px; z-index: 600;
+};
+
+function KP_T(key, ...args) {
+  const fn = KP_STRINGS[KP_LANG][key];
+  return typeof fn === 'function' ? fn(...args) : fn;
+}
+
+function kpSetLang(lang) {
+  KP_LANG = lang;
+  if (typeof setGlobalLang === 'function') setGlobalLang(lang);
+  // Statické prvky v HTML
+  const q = (id) => document.getElementById(id);
+  if (q('kp-new-btn'))    q('kp-new-btn').textContent    = KP_T('newGame');
+  if (q('kp-back-btn'))   q('kp-back-btn').textContent   = KP_T('back');
+  if (q('kp-info-hint'))  q('kp-info-hint').textContent  = KP_T('tapHint');
+  if (q('kp-cancel-btn')) q('kp-cancel-btn').textContent = KP_T('cancel');
+  if (q('kp-close-btn'))  q('kp-close-btn').textContent  = KP_T('close');
+  // Lang buttons
+  const cs = q('btn-lang-cs'); const en = q('btn-lang-en');
+  if (cs) cs.classList.toggle('active', lang === 'cs');
+  if (en) en.classList.toggle('active', lang === 'en');
+  // HUD labels
+  const rndEl = q('kp-round-label'); if (rndEl) rndEl.textContent = KP_T('round');
+  const drwEl = q('kp-draw-label');  if (drwEl) drwEl.textContent = KP_T('draw');
+  const stEl  = q('kp-stock-label'); if (stEl)  stEl.textContent  = KP_T('stock');
+  // data-cs / data-en (patička apod.)
+  document.querySelectorAll('[data-cs]').forEach(el => {
+    const val = lang === 'en' ? el.dataset.en : el.dataset.cs;
+    if (val !== undefined) el.textContent = val;
+  });
+}
+
+function kpVal(r) {
+    if (r==='A') return 1; if (r==='J') return 11;
+    if (r==='Q') return 12; if (r==='K') return 13;
+    return parseInt(r);
+}
+
+// ── Herní stav ────────────────────────────────────────────────
+let KP = {};           // celý stav hry
+let kpTapSel = null;   // aktuálně vybraná karta (tap)
+let kpDragEl = null;   // aktuálně tažená karta (drag)
+
+// ── Nová hra ──────────────────────────────────────────────────
+function kpNewGame() {
+    // Sestav a zamíchej 2 balíčky (104 karet)
+    let deck = [];
+    for (let n = 0; n < 2; n++)
+        for (let s of KP_SUITS)
+            for (let r of KP_RANKS)
+                deck.push({ suit:s.suit, sym:s.sym, color:s.color, rank:r, val:kpVal(r), face:false });
+
+    for (let i = deck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[j]] = [deck[j], deck[i]];
     }
-    .kp-lang-btn {
-      background: none;
-      border: 1px solid rgba(201,168,76,0.25);
-      color: rgba(201,168,76,0.4);
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 0.65rem; letter-spacing: 0.12em;
-      padding: 4px 9px; border-radius: 4px; cursor: pointer;
-      transition: all 0.2s;
+
+    KP = {
+        stock: [],
+        waste: [],
+        foundations: [ [], [], [], [], [], [], [], [] ], // 8 hromádek (2× každá barva)
+        tableau: [ [], [], [], [], [], [], [], [] ],      // 8 sloupců
+        pass: 1,       // aktuální kolo (1–3)
+        drawN: 3,      // kolik karet se lízá v tomto kole
+        over: false,
+    };
+
+    kpTapSel = null;
+    kpDragEl = null;
+
+    // Rozdej tableau: sloupec i dostane i+1 karet (1..8), poslední lícem nahoru
+    let ptr = deck.length - 1;
+    for (let col = 0; col < 8; col++) {
+        for (let row = 0; row <= col; row++) {
+            const c = { ...deck[ptr--] };
+            c.face = (row === col);
+            KP.tableau[col].push(c);
+        }
     }
-    .kp-lang-btn.active,
-    .kp-lang-btn:hover { border-color: rgba(201,168,76,0.8); color: #c9a84c; }
-  </style>
-</head>
-<body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <main id="karolky-section">
+    // Zbytek jde do stohu
+    while (ptr >= 0) KP.stock.push({ ...deck[ptr--], face: false });
 
-        <button id="kp-back-btn" class="back-btn" onclick="window.location.href='../index.html'">← Zpět do Oracoolia</button>
+    kpCloseOverlay();
+    kpUpdateHUD();
+    kpRender();
+}
 
-        <!-- ── Lang switch ── -->
-        <div class="kp-lang-switch">
-            <button class="kp-lang-btn active" id="btn-lang-cs" onclick="kpSetLang('cs')">CS</button>
-            <span style="color:rgba(201,168,76,0.25);font-size:.8rem;">|</span>
-            <button class="kp-lang-btn" id="btn-lang-en" onclick="kpSetLang('en')">EN</button>
-        </div>
+// ── HUD (kolo, počty) ─────────────────────────────────────────
+function kpUpdateHUD() {
+    const el = (id) => document.getElementById(id);
+    if (el('kp-pass'))      el('kp-pass').textContent      = KP.pass;
+    if (el('kp-draw'))      el('kp-draw').textContent      = KP.drawN;
+    if (el('kp-stock-cnt')) el('kp-stock-cnt').textContent = KP.stock.length;
 
-        <!-- Horní lišta s názvem, HUD a tlačítkem nová hra -->
-        <header id="kp-header">
-            <h1>Karolky Pasiáns</h1>
-            <div id="kp-hud">
-                <span class="kp-pill"><span id="kp-round-label">Kolo</span> <span id="kp-pass">1</span>/3</span>
-                <span class="kp-pill"><span id="kp-draw-label">Po</span> <span id="kp-draw">3</span></span>
-                <div id="kp-dots">
-                    <div class="kp-dot kp-dot-active" id="kp-d1"></div>
-                    <div class="kp-dot" id="kp-d2"></div>
-                    <div class="kp-dot" id="kp-d3"></div>
-                </div>
-                <span class="kp-pill"><span id="kp-stock-label">Stoh:</span> <span id="kp-stock-cnt">0</span></span>
-                <button id="kp-new-btn" class="kp-new-btn" onclick="kpNewGame()">✦ Nová hra</button>
-            </div>
-        </header>
+    for (let i = 1; i <= 3; i++) {
+        const d = el(`kp-d${i}`);
+        if (!d) continue;
+        d.className = 'kp-dot';
+        if (i < KP.pass)      d.classList.add('kp-dot-done');
+        else if (i === KP.pass) d.classList.add('kp-dot-active');
+    }
 
-        <!-- Info bar — zobrazí se při tap-výběru karty -->
-        <div id="kp-infobar" class="kp-infobar-hidden">
-            <div class="kp-info-left">
-                <span id="kp-info-txt"></span>
-                <span id="kp-info-sub"></span>
-            </div>
-            <div class="kp-info-right">
-                <span id="kp-info-hint" class="kp-info-hint">Klepněte na cíl</span>
-                <button id="kp-cancel-btn" class="kp-cancel-btn" onclick="kpClearSel()">✕ Zrušit</button>
-            </div>
-        </div>
+    const rec = el('kp-recycle');
+    if (rec) {
+        if (KP.stock.length === 0 && KP.pass < 3)  { rec.textContent = '↺'; rec.style.display = ''; }
+        else if (KP.stock.length === 0)             { rec.textContent = '✕'; rec.style.display = ''; }
+        else                                         { rec.style.display = 'none'; }
+    }
+}
 
-        <!-- Herní plocha -->
-        <div id="kp-game">
+// ── Klik na stoh ──────────────────────────────────────────────
+function kpClickStock() {
+    if (KP.over) return;
+    kpClearSelInternal();
 
-            <!-- TOP ROW: stock | waste | spacer | 8 foundations (11 sloupců) -->
-            <div class="kp-grid kp-grid-11">
-                <div class="kp-slot kp-stock-slot" id="kp-stock" onclick="kpClickStock()">
-                    <span id="kp-recycle"></span>
-                </div>
-                <div class="kp-slot" id="kp-waste"></div>
-                <div class="kp-spacer"></div>
-                <div class="kp-slot kp-foundation" id="kp-f0" data-suit="hearts"   data-color="red"   data-sym="♥"></div>
-                <div class="kp-slot kp-foundation" id="kp-f1" data-suit="hearts"   data-color="red"   data-sym="♥"></div>
-                <div class="kp-slot kp-foundation" id="kp-f2" data-suit="diamonds" data-color="red"   data-sym="♦"></div>
-                <div class="kp-slot kp-foundation" id="kp-f3" data-suit="diamonds" data-color="red"   data-sym="♦"></div>
-                <div class="kp-slot kp-foundation" id="kp-f4" data-suit="clubs"    data-color="black" data-sym="♣"></div>
-                <div class="kp-slot kp-foundation" id="kp-f5" data-suit="clubs"    data-color="black" data-sym="♣"></div>
-                <div class="kp-slot kp-foundation" id="kp-f6" data-suit="spades"   data-color="black" data-sym="♠"></div>
-                <div class="kp-slot kp-foundation" id="kp-f7" data-suit="spades"   data-color="black" data-sym="♠"></div>
-            </div>
+    if (KP.stock.length === 0) {
+        if (KP.pass >= 3) { kpShowResult(false); return; }
+        KP.pass++;
+        KP.drawN = KP.pass === 2 ? 2 : 1;
+        KP.stock = [...KP.waste].reverse().map(c => ({ ...c, face: false }));
+        KP.waste = [];
+        kpUpdateHUD();
+        kpRender();
+        return;
+    }
 
-            <!-- TABLEAU ROW: 8 sloupců -->
-            <div class="kp-grid kp-grid-8">
-                <div class="kp-slot kp-tab" id="kp-t0"></div>
-                <div class="kp-slot kp-tab" id="kp-t1"></div>
-                <div class="kp-slot kp-tab" id="kp-t2"></div>
-                <div class="kp-slot kp-tab" id="kp-t3"></div>
-                <div class="kp-slot kp-tab" id="kp-t4"></div>
-                <div class="kp-slot kp-tab" id="kp-t5"></div>
-                <div class="kp-slot kp-tab" id="kp-t6"></div>
-                <div class="kp-slot kp-tab" id="kp-t7"></div>
-            </div>
+    const n = Math.min(KP.drawN, KP.stock.length);
+    for (let i = 0; i < n; i++) {
+        const c = KP.stock.pop();
+        c.face = true;
+        KP.waste.push(c);
+    }
+    kpUpdateHUD();
+    kpRender();
+}
 
-        </div><!-- /#kp-game -->
+// ── Tap výběr ─────────────────────────────────────────────────
+function kpSetSel(src, col, cidx, cards, cardObj) {
+    kpTapSel = { src, col, cidx, cards, cardObj };
 
-        <!-- Win / Lose overlay -->
-        <div id="kp-overlay">
-            <div id="kp-overlay-box">
-                <div id="kp-ov-icon"></div>
-                <h2 id="kp-ov-title"></h2>
-                <p id="kp-ov-msg"></p>
-                <button class="kp-obtn kp-obtn-gold" onclick="kpNewGame();kpCloseOverlay()">✦ Nová hra</button>
-                <button id="kp-close-btn" class="kp-obtn kp-obtn-ghost" onclick="kpCloseOverlay()">Zavřít</button>
-            </div>
-        </div>
+    const bar  = document.getElementById('kp-infobar');
+    const txt  = document.getElementById('kp-info-txt');
+    const sub  = document.getElementById('kp-info-sub');
+    if (!bar) return;
 
-        <footer id="oracoolio-footer" style="position:relative;z-index:10;">
-            <div class="footer-links">
-                <a href="https://ember-pa.cz" target="_blank" rel="noopener" class="footer-link footer-ember">🔥 Ember PA</a>
-                <span class="footer-sep">|</span>
-                <a href="https://myscriptorium.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">👾 Scriptorium</a>
-                <span class="footer-sep">|</span>
-                <a href="https://occultix.app" target="_blank" rel="noopener" class="footer-link footer-beer">⛧ Occultix</a>
-                <span class="footer-sep">|</span>
-                <a href="https://fractout.com" target="_blank" rel="noopener" class="footer-link footer-doupe">𖦹ׂ Fractout</a>
-                <span class="footer-sep">|</span>
-                <a href="https://newsandradio.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">📰 Jouza News&amp;Radio 📻</a>
-                <span class="footer-sep">|</span>
-                <a href="../about/" class="footer-link footer-doupe" data-cs="ℹ O projektu" data-en="ℹ About">ℹ O projektu</a>
-            </div>
-            <div class="footer-credit">
-                Vyvíjeno s <span class="footer-heart">❤️</span> v Novém Boru. By <a href="https://ember-pa.cz" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Ondrex</a>
-            </div>
-        </footer>
+    const rankMap = KP_LANG === 'en' ? KP_RANK_EN : KP_RANK_CZ;
+    const suitMap = KP_LANG === 'en' ? KP_SUIT_EN : KP_SUIT_CZ;
+    txt.textContent = `${rankMap[cardObj.rank] || cardObj.rank} — ${suitMap[cardObj.suit] || cardObj.suit}`;
+    txt.style.color = cardObj.color === 'red' ? '#e07070' : '#e0d5b8';
+    sub.textContent = cards.length === 1
+        ? KP_T('foundation', cardObj.val)
+        : KP_T('tableau', cards.length);
 
-    </main><!-- /#karolky-section -->
-    <div class="footer-links">
-        <a href="https://ember-pa.cz" target="_blank" rel="noopener" class="footer-link footer-ember">🔥 Ember PA</a>
-        <span class="footer-sep">|</span>
-        <a href="https://myscriptorium.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">👾 Scriptorium</a>
-        <span class="footer-sep">|</span>
-        <a href="https://occultix.app" target="_blank" rel="noopener" class="footer-link footer-beer">⛧ Occultix</a>
-        <span class="footer-sep">|</span>
-        <a href="https://fractout.com" target="_blank" rel="noopener" class="footer-link footer-doupe">𖦹ׂ Fractout</a>
-        <span class="footer-sep">|</span>
-        <a href="https://newsandradio.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">📰 Jouza News&amp;Radio 📻</a>
-        <span class="footer-sep">|</span>
-        <a href="../about/" class="footer-link footer-doupe" data-cs="ℹ O projektu" data-en="ℹ About">ℹ O projektu</a>
-    </div>
-    <div class="footer-credit">
-        <span data-cs="Vyvíjeno s" data-en="Developed with">Vyvíjeno s</span> <span class="footer-heart">❤️</span> <span data-cs="v Novém Boru. By" data-en="in Nový Bor. By">v Novém Boru. By</span> <a href="https://ember-pa.cz" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Ondrex</a>
-    </div>
-</footer>
+    bar.classList.remove('kp-infobar-hidden');
+    kpRender();
+}
 
-<script src="../lang.js"></script>
-<script src="karolky.js"></script>
-</body>
-</html>
+function kpClearSelInternal() {
+    kpTapSel = null;
+    const bar = document.getElementById('kp-infobar');
+    if (bar) bar.classList.add('kp-infobar-hidden');
+}
+
+function kpClearSel() {
+    kpClearSelInternal();
+    kpRender();
+}
+
+// ── Pokus o tap-přesun na cíl ────────────────────────────────
+function kpTryPlace(targetType, targetIdx) {
+    if (!kpTapSel) return false;
+    const { src, col: sc, cidx: si, cards } = kpTapSel;
+    const lead = cards[0];
+    let moved = false;
+
+    if (targetType === 'foundation') {
+        if (cards.length !== 1) return false;
+        const fPile = KP.foundations[targetIdx];
+        const fEl   = document.getElementById(`kp-f${targetIdx}`);
+        const fSuit = fEl.dataset.suit;
+        if (fPile.length === 0) {
+            if (lead.val === 1 && lead.suit === fSuit) { fPile.push(lead); moved = true; }
+        } else {
+            const top = fPile[fPile.length - 1];
+            if (top.suit === fSuit && lead.suit === fSuit && top.val === lead.val - 1) {
+                fPile.push(lead); moved = true;
+            }
+        }
+    } else if (targetType === 'tableau') {
+        const tPile = KP.tableau[targetIdx];
+        if (tPile.length === 0) {
+            if (lead.val === 13) { tPile.push(...cards); moved = true; }
+        } else {
+            const top = tPile[tPile.length - 1];
+            if (top.face && top.color !== lead.color && top.val === lead.val + 1) {
+                tPile.push(...cards); moved = true;
+            }
+        }
+    }
+
+    if (moved) {
+        kpRemoveSrc(src, sc, si, cards.length);
+        kpClearSelInternal();
+        kpCheckWin();
+        kpUpdateHUD();
+        kpRender();
+        return true;
+    }
+    return false;
+}
+
+// ── Smazání z původního místa ─────────────────────────────────
+function kpRemoveSrc(src, col, cidx, count) {
+    if (src === 'tableau') {
+        KP.tableau[col].splice(cidx);
+        // Auto-flip poslední karty
+        if (KP.tableau[col].length > 0)
+            KP.tableau[col][KP.tableau[col].length - 1].face = true;
+    } else if (src === 'waste') {
+        KP.waste.pop();
+    }
+}
+
+// ── Kontrola výhry ────────────────────────────────────────────
+function kpCheckWin() {
+    const won = KP.foundations.every(f => f.length === 13);
+    if (won) { KP.over = true; kpShowResult(true); }
+}
+
+// ── Výsledkový overlay ────────────────────────────────────────
+function kpShowResult(win) {
+    const ov = document.getElementById('kp-overlay');
+    if (!ov) return;
+    document.getElementById('kp-ov-icon').textContent  = win ? '✦' : '✕';
+    document.getElementById('kp-ov-title').textContent = win ? KP_T('winTitle') : KP_T('loseTitle');
+    document.getElementById('kp-ov-msg').textContent   = win ? KP_T('winMsg') : KP_T('loseMsg');
+    ov.style.display = 'flex';
+}
+
+function kpCloseOverlay() {
+    const ov = document.getElementById('kp-overlay');
+    if (ov) ov.style.display = 'none';
+}
+
+// ── Karta: vytvoření HTML elementu ───────────────────────────
+function kpMakeCard(card) {
+    const el = document.createElement('div');
+    el.className = 'kp-card';
+
+    if (!card.face) {
+        el.classList.add('kp-back');
+        el.draggable = false;
+        return el;
+    }
+
+    const clr = card.color === 'red' ? 'kp-red' : 'kp-black';
+    el.classList.add(clr);
+    el.draggable = true;
+    el.innerHTML = `
+        <span class="kp-pip-tl ${clr}">${card.rank}<br>${card.sym}</span>
+        <span class="kp-pip-br ${clr}">${card.rank}<br>${card.sym}</span>
+    `;
+    return el;
+}
+
+// ── Render ────────────────────────────────────────────────────
+function kpRender() {
+    kpRenderStock();
+    kpRenderWaste();
+    kpRenderFoundations();
+    kpRenderTableau();
+}
+
+function kpRenderStock() {
+    const slot = document.getElementById('kp-stock');
+    if (!slot) return;
+    slot.querySelectorAll('.kp-card').forEach(e => e.remove());
+    if (KP.stock.length > 0) {
+        const el = kpMakeCard({ face: false });
+        el.style.cursor = 'pointer';
+        slot.appendChild(el);
+    }
+}
+
+function kpRenderWaste() {
+    const slot = document.getElementById('kp-waste');
+    if (!slot) return;
+    slot.innerHTML = '';
+    if (KP.waste.length === 0) return;
+
+    // Zobraz max. 3 karty, fanouškovitě
+    const showN  = Math.min(3, KP.waste.length);
+    const start  = KP.waste.length - showN;
+    const slotW  = slot.offsetWidth || 70;
+    const fan    = Math.min(slotW * 0.18, 12);
+
+    for (let i = 0; i < showN; i++) {
+        const card  = KP.waste[start + i];
+        const isTop = i === showN - 1;
+        const el    = kpMakeCard(card);
+        el.style.left   = `${i * fan}px`;
+        el.style.zIndex = 10 + i;
+
+        if (!isTop) {
+            el.draggable = false;
+            el.style.pointerEvents = 'none';
+        } else {
+            el.dataset.kpSrc = 'waste';
+            if (kpTapSel && kpTapSel.src === 'waste') el.classList.add('kp-selected');
+            el.ondragstart = kpOnDragStart;
+            el.ondragend   = kpOnDragEnd;
+            el.ondblclick  = kpOnDblClick;
+            el.onclick = function(e) {
+                e.stopPropagation();
+                if (kpTapSel && kpTapSel.src === 'waste') { kpClearSel(); return; }
+                kpSetSel('waste', -1, -1, [card], card);
+            };
+        }
+        slot.appendChild(el);
+    }
+}
+
+function kpRenderFoundations() {
+    for (let fi = 0; fi < 8; fi++) {
+        const slot = document.getElementById(`kp-f${fi}`);
+        if (!slot) continue;
+        slot.querySelectorAll('.kp-card').forEach(e => e.remove());
+
+        const pile = KP.foundations[fi];
+        if (pile.length > 0) {
+            const el = kpMakeCard(pile[pile.length - 1]);
+            el.style.zIndex = 10;
+            // Foundation: tap jako cíl
+            el.onclick = (e) => { e.stopPropagation(); kpTryPlace('foundation', fi); };
+            slot.appendChild(el);
+        }
+
+        // Slot sám přijímá tap jako cíl
+        slot.onclick = () => kpTryPlace('foundation', fi);
+        // Drag & drop cíl
+        slot.ondragover = (e) => e.preventDefault();
+        slot.ondrop     = (e) => kpOnDropFoundation(e, fi);
+    }
+}
+
+function kpRenderTableau() {
+    for (let col = 0; col < 8; col++) {
+        const slot = document.getElementById(`kp-t${col}`);
+        if (!slot) continue;
+        slot.querySelectorAll('.kp-card').forEach(e => e.remove());
+
+        const pile     = KP.tableau[col];
+        const slotW    = slot.offsetWidth || 70;
+        const cardH    = slotW * 1.45;
+        const cascade  = Math.max(16, cardH * 0.22);
+
+        pile.forEach((card, idx) => {
+            const el = kpMakeCard(card);
+            el.style.top    = `${idx * cascade}px`;
+            el.style.zIndex = 10 + idx;
+
+            if (card.face) {
+                el.dataset.kpSrc  = 'tableau';
+                el.dataset.kpCol  = col;
+                el.dataset.kpIdx  = idx;
+
+                // Zvýraznit pokud je vybraná
+                if (kpTapSel && kpTapSel.src === 'tableau' &&
+                    kpTapSel.col === col && kpTapSel.cidx === idx) {
+                    el.classList.add('kp-selected');
+                }
+
+                el.ondragstart = kpOnDragStart;
+                el.ondragend   = kpOnDragEnd;
+                el.ondblclick  = kpOnDblClick;
+                el.onclick = (function(c, cardRef, idxRef) {
+                    return function(e) {
+                        e.stopPropagation();
+                        // Pokud je vybraná jiná karta → pokus o přesun na tuto kolonku
+                        if (kpTapSel && !(kpTapSel.src === 'tableau' && kpTapSel.col === c && kpTapSel.cidx === idxRef)) {
+                            const placed = kpTryPlace('tableau', c);
+                            if (!placed) kpClearSel();
+                            return;
+                        }
+                        // Deselect
+                        if (kpTapSel && kpTapSel.src === 'tableau' && kpTapSel.col === c && kpTapSel.cidx === idxRef) {
+                            kpClearSel(); return;
+                        }
+                        // Nový výběr — vezme kartu + celý "vláček" pod ní
+                        const cards = KP.tableau[c].slice(idxRef);
+                        kpSetSel('tableau', c, idxRef, cards, cardRef);
+                    };
+                })(col, card, idx);
+            }
+            slot.appendChild(el);
+        });
+
+        // Slot sám = cíl pro tap a drag
+        slot.onclick = (function(c) {
+            return function(e) {
+                if (kpTapSel) kpTryPlace('tableau', c);
+            };
+        })(col);
+        slot.ondragover = (e) => e.preventDefault();
+        slot.ondrop = (function(c) {
+            return function(e) { kpOnDropTableau(e, c); };
+        })(col);
+
+        // Dynamická výška slotu podle počtu karet
+        if (pile.length > 0) {
+            const slotW2   = slot.offsetWidth || 70;
+            const cardH2   = slotW2 * 1.45;
+            const cascade2 = Math.max(16, cardH2 * 0.22);
+            slot.style.paddingBottom = `${(pile.length - 1) * cascade2 + cardH2}px`;
+        } else {
+            slot.style.paddingBottom = '';
+        }
+    }
+}
+
+// ── Drag & Drop handlers ──────────────────────────────────────
+function kpOnDragStart(e) {
+    kpDragEl = this;
+    setTimeout(() => { if (kpDragEl) kpDragEl.style.opacity = '0.45'; }, 0);
+}
+
+function kpOnDragEnd(e) {
+    if (kpDragEl) kpDragEl.style.opacity = '1';
+    kpDragEl = null;
+}
+
+function kpOnDblClick(e) {
+    // Pokus o automatické vhození na foundation
+    e.stopPropagation();
+    const src  = this.dataset.kpSrc;
+    const col  = parseInt(this.dataset.kpCol);
+    const cidx = parseInt(this.dataset.kpIdx);
+
+    let card;
+    if (src === 'tableau') {
+        const pile = KP.tableau[col];
+        if (cidx !== pile.length - 1) return; // Jen vrchní karta
+        card = pile[cidx];
+    } else if (src === 'waste') {
+        card = KP.waste[KP.waste.length - 1];
+    } else return;
+
+    // Najdi vhodnou foundation
+    for (let fi = 0; fi < 8; fi++) {
+        const fEl   = document.getElementById(`kp-f${fi}`);
+        const fSuit = fEl.dataset.suit;
+        if (fSuit !== card.suit) continue;
+        const fPile = KP.foundations[fi];
+        const ok = (fPile.length === 0 && card.val === 1) ||
+                   (fPile.length > 0 && fPile[fPile.length-1].val === card.val - 1);
+        if (ok) {
+            fPile.push(card);
+            kpRemoveSrc(src, col, cidx, 1);
+            kpCheckWin();
+            kpUpdateHUD();
+            kpRender();
+            return;
+        }
+    }
+}
+
+function kpOnDropFoundation(e, fi) {
+    e.preventDefault();
+    if (!kpDragEl) return;
+
+    const src  = kpDragEl.dataset.kpSrc;
+    const col  = parseInt(kpDragEl.dataset.kpCol);
+    const cidx = parseInt(kpDragEl.dataset.kpIdx);
+
+    let card;
+    if (src === 'tableau') {
+        if (cidx !== KP.tableau[col].length - 1) return; // Jen vrchní karta
+        card = KP.tableau[col][cidx];
+    } else if (src === 'waste') {
+        card = KP.waste[KP.waste.length - 1];
+    } else return;
+
+    const fEl   = document.getElementById(`kp-f${fi}`);
+    const fSuit = fEl.dataset.suit;
+    const fPile = KP.foundations[fi];
+
+    let ok = false;
+    if (fPile.length === 0) {
+        ok = (card.val === 1 && card.suit === fSuit);
+    } else {
+        const top = fPile[fPile.length - 1];
+        ok = (top.suit === fSuit && card.suit === fSuit && top.val === card.val - 1);
+    }
+
+    if (ok) {
+        fPile.push(card);
+        kpRemoveSrc(src, col, cidx, 1);
+        kpCheckWin();
+        kpUpdateHUD();
+        kpRender();
+    }
+}
+
+function kpOnDropTableau(e, targetCol) {
+    e.preventDefault();
+    if (!kpDragEl) return;
+
+    const src  = kpDragEl.dataset.kpSrc;
+    const col  = parseInt(kpDragEl.dataset.kpCol);
+    const cidx = parseInt(kpDragEl.dataset.kpIdx);
+
+    let cards;
+    if (src === 'tableau') {
+        cards = KP.tableau[col].slice(cidx);
+    } else if (src === 'waste') {
+        cards = [KP.waste[KP.waste.length - 1]];
+    } else return;
+
+    const lead   = cards[0];
+    const tPile  = KP.tableau[targetCol];
+    let ok = false;
+
+    if (tPile.length === 0) {
+        ok = (lead.val === 13);
+    } else {
+        const top = tPile[tPile.length - 1];
+        ok = (top.face && top.color !== lead.color && top.val === lead.val + 1);
+    }
+
+    if (ok) {
+        tPile.push(...cards);
+        kpRemoveSrc(src, col, cidx, cards.length);
+        kpCheckWin();
+        kpUpdateHUD();
+        kpRender();
+    }
+}
+
+
+// ── Auto-init při načtení stránky ──
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof getLang === 'function') kpSetLang(getLang());
+    if (typeof kpNewGame === 'function') kpNewGame();
+});
