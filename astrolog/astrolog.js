@@ -197,6 +197,7 @@ function planetName(id) {
 function signName(n) {
   const z = ZNAMENI.find(z => z.n === n);
   return z ? (LANG === 'en' ? z.name_en : z.name) : '';
+}
 
 function setLang(lang) {
   LANG = lang;
@@ -1787,7 +1788,6 @@ function renderResults(results, container) {
       <div class="result-source">Zdroj: ${r.zdroj}</div>
     `;
     container.appendChild(card);
-  });
   });
 }
 
