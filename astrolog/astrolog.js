@@ -26,10 +26,15 @@ const ZNAMENI = [
   {n:11,name:"Vodnář",   name_en:"Aquarius",     sym:"♒"},{n:12, name:"Ryby",      name_en:"Pisces",      sym:"♓"}
 ];
 
-const KAT_NAMES = {
+const KAT_NAMES_CS = {
   osobnost:"Osobnost", zdravi:"Zdraví", finance:"Finance",
   laska:"Láska", povolani:"Povolání", cestovani:"Cestování"
 };
+const KAT_NAMES_EN = {
+  osobnost:"Personality", zdravi:"Health", finance:"Finance",
+  laska:"Love", povolani:"Career", cestovani:"Travel"
+};
+const KAT_NAMES = () => LANG === 'en' ? KAT_NAMES_EN : KAT_NAMES_CS;
 
 const TIMEZONES = [
   { group:"— Střední Evropa —", zones:[
@@ -278,7 +283,8 @@ async function searchCity() {
   birthData.lat = null; birthData.lng = null;
   birthData.cityFound = false; birthData.cityName = null;
   try {
-    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=3&addressdetails=1`;
+    const lang_param = LANG === 'en' ? '&accept-language=en' : '&accept-language=cs';
+    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=3&addressdetails=1${lang_param}`;
     const resp = await fetch(url, { headers:{'Accept-Language':'cs,en','User-Agent':'Oracoolio/1.2 (oracoolio.com)'} });
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data = await resp.json();
@@ -1773,14 +1779,15 @@ function renderResults(results, container) {
   results.forEach((r, i) => {
     const level = r.score >= 0.75 ? 'high' : r.score >= 0.45 ? 'medium' : 'low';
     const badge = level === 'high' ? T('badge_high') : level === 'medium' ? T('badge_medium') : T('badge_low');
-    const tags  = r.kategorie.map(k => `<span class="kat-tag">${KAT_NAMES[k]||k}</span>`).join('');
+    const tags  = r.kategorie.map(k => `<span class="kat-tag">${KAT_NAMES()[k]||k}</span>`).join('');
     const card  = document.createElement('div');
     card.className = `result-card ${level}`;
     card.style.animationDelay = `${i * 0.05}s`;
     const resultText = LANG === 'en' ? (r.text_en || r.text_cs) : r.text_cs;
+    const resultTema = LANG === 'en' ? (r.tema_en || r.tema) : r.tema;
     card.innerHTML = `
       <div class="result-head">
-        <div class="result-tema">${r.tema}</div>
+        <div class="result-tema">${resultTema}</div>
         <div class="result-meta"><span class="result-badge badge-${level}">${badge}</span></div>
       </div>
       <div class="result-kategorie">${tags}</div>
