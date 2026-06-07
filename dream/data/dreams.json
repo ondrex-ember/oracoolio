@@ -13516,6 +13516,174 @@
         "zmena",
         "zdravi"
       ]
+    },
+    "kost": {
+      "id": "kost",
+      "label": "Kost",
+      "category": "telo",
+      "base_meaning": "Pozůstatek po tom, co živé bylo — tvrdý svědek pomíjivosti.",
+      "extended_meaning": "Kost jest ve snech nejtrvalejším z tělesných pozůstatků — tím, co přežije maso i krev. Jung spojoval kost s archetypem mortality a s kolektivní pamětí rodu: v kostech jsou uloženy vzpomínky předků, jichž vědomí již nezná. Snící, jenž kosti vidí, jest zván k setkání s tím, co jest v jeho bytí nejtrvanlivější a co přetrvá vše pomíjivé.",
+      "illustration": "kost.svg",
+      "tags": [
+        "telo",
+        "smrt",
+        "pomijivost",
+        "rod",
+        "pamet",
+        "pozustatek",
+        "trvanlivost"
+      ],
+      "relevant_verbs": [
+        "truchliti",
+        "hledati",
+        "naleznouti",
+        "hladiti",
+        "pozorovat"
+      ],
+      "related_symbols": [
+        "smrt",
+        "hrbitov",
+        "krev",
+        "lebka",
+        "kostlivec"
+      ],
+      "frequency_rank": 5,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "collective",
+      "added_version": "1.1",
+      "content_status": "complete",
+      "relevant_contexts": [
+        "ztrata",
+        "minulost",
+        "spiritualita",
+        "zdravi"
+      ]
+    },
+    "lebka": {
+      "id": "lebka",
+      "label": "Lebka",
+      "category": "telo",
+      "base_meaning": "Tvář zbavená masa — prázdné oči, jíž věčnost hledí zpět.",
+      "extended_meaning": "Lebka jest nejvýmluvnějším symbolem mortality — memento mori v té nejčistší podobě. V jungiovském výkladu stojí na hranici mezi stínem a smrtí: konfrontuje snícího s jeho vlastní smrtelností a s temnotou, jíž denní vědomí popírá. Prázdné očnice jsou oči, jíž vidí za závoj zdání — lebka jest vizí bez iluze, pravdou bez ozdob.",
+      "illustration": "lebka.svg",
+      "tags": [
+        "smrt",
+        "memento_mori",
+        "tvar",
+        "prazdnota",
+        "mortality",
+        "konfrontace",
+        "smrtelnost"
+      ],
+      "relevant_verbs": [
+        "pozorovat",
+        "hledeti",
+        "truchliti",
+        "zastaviti_se",
+        "prchati"
+      ],
+      "related_symbols": [
+        "smrt",
+        "hrbitov",
+        "kost",
+        "kostlivec",
+        "tma"
+      ],
+      "frequency_rank": 7,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "shadow",
+      "added_version": "1.1",
+      "content_status": "complete",
+      "relevant_contexts": [
+        "ztrata",
+        "spiritualita",
+        "identita",
+        "minulost"
+      ]
+    },
+    "kostlivec": {
+      "id": "kostlivec",
+      "label": "Kostlivec",
+      "category": "osoby",
+      "base_meaning": "Člověk zbaven vší iluze těla — kostěný posel z říše mrtvých.",
+      "extended_meaning": "Kostlivec ve snech bývá archetypální figurou — poslem z druhé strany, jenž přichází s poselstvím, které vědomí nechce slyšeti. Jung jej spojoval s archetypem stínu v jeho smrtelné podobě: jest to já, jímž snící bude, odstraní-li se vše přidané a naučené. Setkat se s kostlivcem ve snu jest pozvánkou k radikální upřímnosti vůči vlastní smrtelnosti a k přijetí toho, co nelze odložiti.",
+      "illustration": "kostlivec.svg",
+      "tags": [
+        "smrt",
+        "figura",
+        "posel",
+        "stin",
+        "mortality",
+        "iluze",
+        "konfrontace"
+      ],
+      "relevant_verbs": [
+        "pozorovat",
+        "prchati",
+        "setkati_se",
+        "zastaviti_se",
+        "konfrontovati"
+      ],
+      "related_symbols": [
+        "smrt",
+        "hrbitov",
+        "kost",
+        "lebka",
+        "cizi_clovek"
+      ],
+      "frequency_rank": 8,
+      "archetypal_domain": "mortality",
+      "secondary_domain": "shadow",
+      "added_version": "1.1",
+      "content_status": "complete",
+      "relevant_contexts": [
+        "ztrata",
+        "spiritualita",
+        "zmena",
+        "identita"
+      ]
+    },
+    "kostnice": {
+      "id": "kostnice",
+      "label": "Kostnice",
+      "category": "mista",
+      "base_meaning": "Místo, kde kosti předků odpočívají pospolu — sakrální paměť rodu.",
+      "extended_meaning": "Kostnice jest ve snech výjimečným místem: na rozdíl od hřbitova, jenž jest prostorem individuální smrti, kostnice sjednocuje — kosti jsou zde anonymní, kolektivní, propojené v tichém společenství. Jung by ji spojoval s kolektivním nevědomím v jeho nejdoslovnější podobě. Snící v kostnici — zvláště je-li sen příjemný — jest v hlubokém kontaktu s pamětí rodu a s dědičností, jíž přesahuje jeho individuální život.",
+      "illustration": "kostnice.svg",
+      "tags": [
+        "misto",
+        "kosti",
+        "predkove",
+        "kolektivni",
+        "pamet",
+        "rod",
+        "sakralni"
+      ],
+      "relevant_verbs": [
+        "vstoupiti",
+        "pozorovat",
+        "hledeti",
+        "zastaviti_se",
+        "prochazeti_prahem"
+      ],
+      "related_symbols": [
+        "hrbitov",
+        "kost",
+        "lebka",
+        "kostlivec",
+        "strom"
+      ],
+      "frequency_rank": 10,
+      "archetypal_domain": "collective",
+      "secondary_domain": "mortality",
+      "added_version": "1.1",
+      "content_status": "complete",
+      "relevant_contexts": [
+        "minulost",
+        "spiritualita",
+        "ztrata",
+        "identita"
+      ]
     }
   },
   "emotions": {
@@ -16126,7 +16294,7 @@
     }
   },
   "meta": {
-    "total_symbols": 342,
+    "total_symbols": 346,
     "total_emotions": 9,
     "total_verbs": 187,
     "total_contexts": 13,
