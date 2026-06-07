@@ -5,25 +5,25 @@
 
 // ── DATA ──────────────────────────────────────────────────────
 const PLANETS = [
-  { id:"Slunce",  glyph:"☀", retro:false, body:"Sun"     },
-  { id:"Luna",    glyph:"☽", retro:false, body:"Moon"    },
-  { id:"Merkur",  glyph:"☿", retro:true,  body:"Mercury" },
-  { id:"Venuše",  glyph:"♀", retro:true,  body:"Venus"   },
-  { id:"Mars",    glyph:"♂", retro:true,  body:"Mars"    },
-  { id:"Jupiter", glyph:"♃", retro:true,  body:"Jupiter" },
-  { id:"Saturn",  glyph:"♄", retro:true,  body:"Saturn"  },
-  { id:"Uran",    glyph:"♅", retro:true,  body:"Uranus"  },
-  { id:"Neptun",  glyph:"♆", retro:true,  body:"Neptune" },
-  { id:"Pluto",   glyph:"♇", retro:true,  body:"Pluto"   }
+  { id:"Slunce",  name_en:"Sun",     glyph:"☀", retro:false, body:"Sun"     },
+  { id:"Luna",    name_en:"Moon",    glyph:"☽", retro:false, body:"Moon"    },
+  { id:"Merkur",  name_en:"Mercury", glyph:"☿", retro:true,  body:"Mercury" },
+  { id:"Venuše",  name_en:"Venus",   glyph:"♀", retro:true,  body:"Venus"   },
+  { id:"Mars",    name_en:"Mars",    glyph:"♂", retro:true,  body:"Mars"    },
+  { id:"Jupiter", name_en:"Jupiter", glyph:"♃", retro:true,  body:"Jupiter" },
+  { id:"Saturn",  name_en:"Saturn",  glyph:"♄", retro:true,  body:"Saturn"  },
+  { id:"Uran",    name_en:"Uranus",  glyph:"♅", retro:true,  body:"Uranus"  },
+  { id:"Neptun",  name_en:"Neptune", glyph:"♆", retro:true,  body:"Neptune" },
+  { id:"Pluto",   name_en:"Pluto",   glyph:"♇", retro:true,  body:"Pluto"   }
 ];
 
 const ZNAMENI = [
-  {n:1, name:"Beran",    sym:"♈"},{n:2,  name:"Býk",      sym:"♉"},
-  {n:3, name:"Blíženci", sym:"♊"},{n:4,  name:"Rak",       sym:"♋"},
-  {n:5, name:"Lev",      sym:"♌"},{n:6,  name:"Panna",     sym:"♍"},
-  {n:7, name:"Váhy",     sym:"♎"},{n:8,  name:"Štír",      sym:"♏"},
-  {n:9, name:"Střelec",  sym:"♐"},{n:10, name:"Kozoroh",   sym:"♑"},
-  {n:11,name:"Vodnář",   sym:"♒"},{n:12, name:"Ryby",      sym:"♓"}
+  {n:1, name:"Beran",    name_en:"Aries",       sym:"♈"},{n:2,  name:"Býk",      name_en:"Taurus",      sym:"♉"},
+  {n:3, name:"Blíženci", name_en:"Gemini",       sym:"♊"},{n:4,  name:"Rak",       name_en:"Cancer",      sym:"♋"},
+  {n:5, name:"Lev",      name_en:"Leo",          sym:"♌"},{n:6,  name:"Panna",     name_en:"Virgo",       sym:"♍"},
+  {n:7, name:"Váhy",     name_en:"Libra",        sym:"♎"},{n:8,  name:"Štír",      name_en:"Scorpio",     sym:"♏"},
+  {n:9, name:"Střelec",  name_en:"Sagittarius",  sym:"♐"},{n:10, name:"Kozoroh",   name_en:"Capricorn",   sym:"♑"},
+  {n:11,name:"Vodnář",   name_en:"Aquarius",     sym:"♒"},{n:12, name:"Ryby",      name_en:"Pisces",      sym:"♓"}
 ];
 
 const KAT_NAMES = {
@@ -120,6 +120,23 @@ const STRINGS = {
     step4_label: 'Výklad',
     // Čas
     cas_neznamy:  '(čas neznámý)',
+    // Geocoding
+    geo_hledam:        'Hledám…',
+    geo_hledat:        'Hledat',
+    geo_nenalezeno:    (q) => `Místo „${q}" nebylo nalezeno. Zkuste anglický název nebo přidejte stát.`,
+    geo_chyba:         (msg) => `Chyba připojení (${msg}). Zkontrolujte internet.`,
+    geo_confirm_cas:   'Čas narození není zadán.\n\nBez přesného času nelze správně vypočítat Ascendent ani domy.\n\nPokračovat s odhadem (poledne)?',
+    geo_confirm_misto: 'Místo narození nebylo ověřeno (souřadnice chybí).\n\nAscendent a domy nelze vypočítat. Pokračovat bez místa?',
+    warn_cas:          'Čas nebyl zadán — použito poledne (12:00). Ascendent a domy jsou pouze přibližné.',
+    warn_misto:        'Souřadnice místa chybí — Ascendent a domy nelze určit.',
+    // Výklad (Step IV)
+    vyklad_loading:    'Sestavuji výklad',
+    vyklad_prazdno:    'Žádné interpretace neodpovídají zadaným pozicím.\nZkuste zadat více planet nebo rozšiřte výběr témat.',
+    badge_high:        'Silná shoda',
+    badge_medium:      'Shoda',
+    badge_low:         'Slabá shoda',
+    // Dignities panel
+    dignity_pname:     (p) => p.id,
   },
   en: {
     // Module A – Sect
@@ -147,11 +164,39 @@ const STRINGS = {
     step4_label: 'Reading',
     // Time
     cas_neznamy:  '(time unknown)',
+    // Geocoding
+    geo_hledam:        'Searching…',
+    geo_hledat:        'Search',
+    geo_nenalezeno:    (q) => `Location "${q}" not found. Try the English name or add the country.`,
+    geo_chyba:         (msg) => `Connection error (${msg}). Check your internet.`,
+    geo_confirm_cas:   'Birth time not entered.\n\nWithout an exact time, the Ascendant and houses cannot be calculated correctly.\n\nContinue with an estimate (noon)?',
+    geo_confirm_misto: 'Birth place not verified (coordinates missing).\n\nAscendant and houses cannot be calculated. Continue without a place?',
+    warn_cas:          'Time not entered — noon (12:00) used. Ascendant and houses are approximate only.',
+    warn_misto:        'Place coordinates missing — Ascendant and houses cannot be determined.',
+    // Reading (Step IV)
+    vyklad_loading:    'Building your reading',
+    vyklad_prazdno:    'No interpretations match the entered positions.\nTry entering more planets or broaden your topic selection.',
+    badge_high:        'Strong match',
+    badge_medium:      'Match',
+    badge_low:         'Weak match',
+    // Dignities panel
+    dignity_pname:     (p) => p.name_en,
   }
 };
 
 let LANG = 'cs';
 const T = key => STRINGS[LANG]?.[key] ?? STRINGS.cs[key] ?? key;
+
+/** Vrátí lokalizovaný název planety podle jejího CS id */
+function planetName(id) {
+  const p = PLANETS.find(pl => pl.id === id);
+  return p ? (LANG === 'en' ? p.name_en : p.id) : id;
+}
+
+/** Vrátí lokalizovaný název znamení podle čísla (1–12) */
+function signName(n) {
+  const z = ZNAMENI.find(z => z.n === n);
+  return z ? (LANG === 'en' ? z.name_en : z.name) : '';
 
 function setLang(lang) {
   LANG = lang;
@@ -227,7 +272,7 @@ async function searchCity() {
   if (!q) return;
   const btn  = document.getElementById('city-search-btn');
   const wrap = document.getElementById('city-result-wrap');
-  btn.disabled = true; btn.textContent = 'Hledám…';
+  btn.disabled = true; btn.textContent = T('geo_hledam');
   wrap.innerHTML = '<div class="city-searching">✦ Hledám souřadnice…</div>';
   birthData.lat = null; birthData.lng = null;
   birthData.cityFound = false; birthData.cityName = null;
@@ -237,7 +282,7 @@ async function searchCity() {
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data = await resp.json();
     if (!data || data.length === 0) {
-      wrap.innerHTML = `<div class="city-error">Místo „${esc(q)}" nebylo nalezeno. Zkuste anglický název nebo přidejte stát.</div>`;
+      wrap.innerHTML = `<div class="city-error">${T('geo_nenalezeno')(esc(q))}</div>`;
       return;
     }
     const place = data.find(d => ['city','town','village','municipality'].includes(d.type)) || data[0];
@@ -252,9 +297,9 @@ async function searchCity() {
       <span class="coord-badge">λ ${birthData.lng.toFixed(4)}°</span>
     </div>`;
   } catch(e) {
-    wrap.innerHTML = `<div class="city-error">Chyba připojení (${esc(e.message)}). Zkontrolujte internet.</div>`;
+    wrap.innerHTML = `<div class="city-error">${T('geo_chyba')(esc(e.message))}</div>`;
   } finally {
-    btn.disabled = false; btn.textContent = 'Hledat';
+    btn.disabled = false; btn.textContent = T('geo_hledat');
   }
 }
 
@@ -282,11 +327,11 @@ function goToStep2() {
     alert('Zadejte prosím datum narození.'); document.getElementById('birth-date').focus(); return;
   }
   if (!birthData.time) {
-    const ok = confirm('Čas narození není zadán.\n\nBez přesného času nelze správně vypočítat Ascendent ani domy.\n\nPokračovat s odhadem (poledne)?');
+    const ok = confirm(T('geo_confirm_cas'));
     if (!ok) return;
   }
   if (!birthData.cityFound && document.getElementById('birth-city').value.trim()) {
-    const ok = confirm('Místo narození nebylo ověřeno (souřadnice chybí).\n\nAscendent a domy nelze vypočítat. Pokračovat bez místa?');
+    const ok = confirm(T('geo_confirm_misto'));
     if (!ok) return;
   }
 
@@ -428,9 +473,9 @@ function calcBirthChart() {
   };
 
   if (!hasTime)
-    chart.warnings.push('Čas nebyl zadán — použito poledne (12:00). Ascendent a domy jsou pouze přibližné.');
+    chart.warnings.push(T('warn_cas'));
   if (!hasLoc)
-    chart.warnings.push('Souřadnice místa chybí — Ascendent a domy nelze určit.');
+    chart.warnings.push(T('warn_misto'));
 
   // ── Planet positions ──
   for (const p of PLANETS) {
@@ -745,7 +790,7 @@ function renderDignityPanel(chart) {
     const scoreStr = (dig.score > 0 ? '+' : '') + dig.score;
     return `<div class="dignity-row">
       <span class="dignity-glyph">${p.glyph}</span>
-      <span class="dignity-pname">${p.id}</span>
+      <span class="dignity-pname">${LANG === 'en' ? p.name_en : p.id}</span>
       <div class="dignity-bar-wrap"><div class="dignity-bar-fill grade-${dig.grade.toLowerCase()}" style="width:${pct}%"></div></div>
       <span class="dignity-score">${scoreStr}</span>
       <span class="dignity-grade grade-${dig.grade.toLowerCase()}">${dig.grade}</span>
@@ -903,7 +948,9 @@ function renderLotsPanel(chart) {
     const lot = chart.arabicLots[def.id];
     if (!lot) return '';
 
-    const signName = ZNAMENI_NAZVY[lot.sign] || '';
+    const signName = LANG === 'en'
+      ? (ZNAMENI.find(z => z.n === lot.sign)?.name_en || '')
+      : (ZNAMENI_NAZVY[lot.sign] || '');
     const signSym  = ZNAMENI.find(z => z.n === lot.sign)?.sym || '';
     const degStr   = lot.deg.toFixed(1) + '°';
     const dum      = lot.dum;
@@ -1271,10 +1318,12 @@ function renderPredictionPanel(chart) {
   if (chart.profekce) {
     const p      = chart.profekce;
     const zn     = ZNAMENI.find(z => z.n === p.sign);
-    const znStr  = zn ? `${zn.sym} ${zn.name}` : '';
+    const znStr  = zn ? `${zn.sym} ${LANG === 'en' ? zn.name_en : zn.name}` : '';
     const lord   = p.lord;
     const glph   = PLANET_GLYPHS_STR[lord] || '';
     const tema   = (STRINGS[LANG]?.rok_tema || STRINGS.cs.rok_tema)[p.house] || '';
+    const houseLabel = LANG === 'en' ? `${p.house}. house` : `${p.house}. dům`;
+    const ageLabel   = LANG === 'en' ? `${p.age}` : `${p.age}. rok`;
 
     profHTML = `<div class="pred-card">
       <div class="pred-card-head">
@@ -1285,10 +1334,10 @@ function renderPredictionPanel(chart) {
         </details>
       </div>
       <div class="pred-rows">
-        <div class="pred-row"><span class="pred-label">${T('profekce_vek')}</span><span class="pred-val">${p.age}. rok</span></div>
-        <div class="pred-row"><span class="pred-label">${T('profekce_aktivni_dum')}</span><span class="pred-val pred-hl">${p.house}. dům</span></div>
+        <div class="pred-row"><span class="pred-label">${T('profekce_vek')}</span><span class="pred-val">${ageLabel}</span></div>
+        <div class="pred-row"><span class="pred-label">${T('profekce_aktivni_dum')}</span><span class="pred-val pred-hl">${houseLabel}</span></div>
         <div class="pred-row"><span class="pred-label">${T('profekce_aktivni_zn')}</span><span class="pred-val">${znStr}</span></div>
-        <div class="pred-row"><span class="pred-label">${T('profekce_vladce')}</span><span class="pred-val pred-hl">${glph} ${lord}</span></div>
+        <div class="pred-row"><span class="pred-label">${T('profekce_vladce')}</span><span class="pred-val pred-hl">${glph} ${planetName(lord)}</span></div>
       </div>
       <div class="pred-tema">${tema}</div>
     </div>`;
@@ -1312,7 +1361,7 @@ function renderPredictionPanel(chart) {
       <div class="pred-rows">
         <div class="pred-row">
           <span class="pred-label">${T('firdaria_hlavni')}</span>
-          <span class="pred-val pred-hl">${mg} ${f.planet}</span>
+          <span class="pred-val pred-hl">${mg} ${planetName(f.planet)}</span>
         </div>
         <div class="pred-row">
           <span class="pred-label"></span>
@@ -1320,7 +1369,7 @@ function renderPredictionPanel(chart) {
         </div>
         <div class="pred-row">
           <span class="pred-label">${T('firdaria_sub')}</span>
-          <span class="pred-val pred-hl">${sg} ${f.sub.planet}</span>
+          <span class="pred-val pred-hl">${sg} ${planetName(f.sub.planet)}</span>
         </div>
         <div class="pred-row">
           <span class="pred-label"></span>
@@ -1622,7 +1671,7 @@ function buildPlanetTable() {
     tr.id = `row-${p.id}`;
 
     let znOpts = '<option value="">—</option>';
-    ZNAMENI.forEach(z => { znOpts += `<option value="${z.n}">${z.sym} ${z.name}</option>`; });
+    ZNAMENI.forEach(z => { znOpts += `<option value="${z.n}">${z.sym} ${LANG === 'en' ? z.name_en : z.name}</option>`; });
     let dmOpts = '<option value="">—</option>';
     for (let i = 1; i <= 12; i++) dmOpts += `<option value="${i}">${i}.</option>`;
 
@@ -1634,7 +1683,7 @@ function buildPlanetTable() {
       <td>
         <div class="planet-name-cell">
           <span class="planet-glyph">${p.glyph}</span>
-          <span class="planet-label">${p.id}</span>
+          <span class="planet-label">${LANG === 'en' ? p.name_en : p.id}</span>
           <span class="planet-deg" id="deg-${p.id}"></span>
         </div>
       </td>
@@ -1651,7 +1700,7 @@ function buildAscendentSelect() {
   const sel = document.getElementById('ascendent-select');
   ZNAMENI.forEach(z => {
     const o = document.createElement('option');
-    o.value = z.n; o.textContent = `${z.sym} ${z.name}`;
+    o.value = z.n; o.textContent = `${z.sym} ${LANG === 'en' ? z.name_en : z.name}`;
     sel.appendChild(o);
   });
 }
@@ -1708,7 +1757,7 @@ function sestavitVyklad() {
   }
   goToStep(4);
   const container = document.getElementById('results-container');
-  container.innerHTML = '<div class="astrolog-loading">Sestavuji výklad</div>';
+  container.innerHTML = `<div class="astrolog-loading">${T('vyklad_loading')}</div>`;
   setTimeout(() => renderResults(matchRules(userData, [...selectedKats]), container), 600);
 }
 
@@ -1717,26 +1766,28 @@ function renderResults(results, container) {
   container.innerHTML = '';
   if (!results.length) {
     container.innerHTML = `<div class="empty-state"><div class="empty-icon">⟡</div>
-      <p>Žádné interpretace neodpovídají zadaným pozicím.<br>Zkuste zadat více planet nebo rozšiřte výběr témat.</p></div>`;
+      <p>${T('vyklad_prazdno').replace('\n','<br>')}</p></div>`;
     return;
   }
   results.forEach((r, i) => {
     const level = r.score >= 0.75 ? 'high' : r.score >= 0.45 ? 'medium' : 'low';
-    const badge = level === 'high' ? 'Silná shoda' : level === 'medium' ? 'Shoda' : 'Slabá shoda';
+    const badge = level === 'high' ? T('badge_high') : level === 'medium' ? T('badge_medium') : T('badge_low');
     const tags  = r.kategorie.map(k => `<span class="kat-tag">${KAT_NAMES[k]||k}</span>`).join('');
     const card  = document.createElement('div');
     card.className = `result-card ${level}`;
     card.style.animationDelay = `${i * 0.05}s`;
+    const resultText = LANG === 'en' ? (r.text_en || r.text_cs) : r.text_cs;
     card.innerHTML = `
       <div class="result-head">
         <div class="result-tema">${r.tema}</div>
         <div class="result-meta"><span class="result-badge badge-${level}">${badge}</span></div>
       </div>
       <div class="result-kategorie">${tags}</div>
-      <div class="result-text">${r.text_cs}</div>
+      <div class="result-text">${resultText}</div>
       <div class="result-source">Zdroj: ${r.zdroj}</div>
     `;
     container.appendChild(card);
+  });
   });
 }
 
@@ -1750,7 +1801,9 @@ const PLANET_GLYPHS_MAP = {
   'Uran':'♅','Neptun':'♆','Pluto':'♇'
 };
 const ZODIAC_GLYPHS_ARR = ['♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓'];
-const ZODIAC_NAMES_ARR  = ['Beran','Býk','Blíženci','Rak','Lev','Panna','Váhy','Štír','Střelec','Kozoroh','Vodnář','Ryby'];
+const ZODIAC_NAMES_ARR_CS = ['Beran','Býk','Blíženci','Rak','Lev','Panna','Váhy','Štír','Střelec','Kozoroh','Vodnář','Ryby'];
+const ZODIAC_NAMES_ARR_EN = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
+const ZODIAC_NAMES_ARR    = () => LANG === 'en' ? ZODIAC_NAMES_ARR_EN : ZODIAC_NAMES_ARR_CS;
 const ELEM_FILL = ['#200a04','#061408','#060c1a','#04081a'];
 const ELEM_IDX  = [0,1,2,3,0,1,2,3,0,1,2,3]; // fire,earth,air,water per sign
 
@@ -1943,7 +1996,7 @@ function drawHoroscopeWheel(chart) {
         x:f(lp.x), y:f(lp.y+5), 'text-anchor':'middle',
         'font-size':'11', fill:lm.color, 'font-family':'serif',
         'font-weight':'bold', cursor:'default',
-        title:`${lm.sym} ${ZNAMENI_NAZVY[lot.sign]} ${lot.deg.toFixed(1)}°`
+        title:`${lm.sym} ${LANG === 'en' ? (ZNAMENI.find(z=>z.n===lot.sign)?.name_en||'') : ZNAMENI_NAZVY[lot.sign]} ${lot.deg.toFixed(1)}°`
       }, lm.sym));
     }
   }
@@ -1984,7 +2037,7 @@ function showPlanetTooltip(p, svgPt, event) {
   const tt = document.getElementById('wheel-tip');
   if (!tt) return;
   const sym   = ZODIAC_GLYPHS_ARR[p.sign - 1] || '';
-  const sname = ZODIAC_NAMES_ARR[p.sign - 1]  || '';
+  const sname = ZODIAC_NAMES_ARR()[p.sign - 1]  || '';
   const retro = p.retro ? ' <span style="color:#c07878">℞</span>' : '';
   const dum   = p.dum   ? ` · <em>${p.dum}. dům</em>` : '';
   tt.innerHTML = `<strong>${p.name}</strong> ${sym} ${sname} ${p.deg.toFixed(1)}°${retro}${dum}`;
