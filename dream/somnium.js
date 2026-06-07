@@ -92,15 +92,26 @@ function renderSymbol() {
   inp.oninput = () => {
     const q = inp.value.trim().toLowerCase();
     const filtered = q ? all.filter(s => s.label.toLowerCase().includes(q) || s.id.includes(q) || s.base_meaning.toLowerCase().includes(q)) : all;
-    renderSymbolGrid(filtered.slice(0, 24));
+    renderSymbolGrid(filtered.slice(0, 24), filtered.length, all.length, !!q);
   };
   inp.focus();
-  renderSymbolGrid(all.slice(0, 24));
+  renderSymbolGrid(all.slice(0, 24), all.length, all.length, false);
 }
 
-function renderSymbolGrid(syms) {
+function renderSymbolGrid(syms, shown, total, isSearch) {
   const grid = document.getElementById('symbol-grid');
   if (!grid) return;
+  // Update count info
+  const info = document.getElementById('symbol-count');
+  if (info) {
+    if (isSearch) {
+      info.textContent = shown > 24
+        ? `Nalezeno ${shown} symbolů — zobrazuji prvních 24`
+        : shown === 0 ? '' : `Nalezeno ${shown} symbol${shown===1?'':'ů'}`;
+    } else {
+      info.textContent = `Zobrazuji nejčastějších ${Math.min(shown,24)} symbolů z celkem ${total}`;
+    }
+  }
   if (!syms.length) { grid.innerHTML = '<p class="no-results">Žádný symbol nenalezen</p>'; return; }
   grid.innerHTML = syms.map(s => `
     <div class="symbol-card${S.symbol?.id===s.id?' selected':''}" data-id="${s.id}" role="button" tabindex="0">
@@ -164,75 +175,24 @@ function vtag(v, univ) {
 
 // ── Krok 4: Kontext ───────────────────────────────────────────────────────────
 
-function ctxCard(c) {
-  return `<div class="context-card${S.context?.id===c.id?' selected':''}" data-id="${c.id}" role="button" tabindex="0">
-    <span class="context-card-icon">${c.icon}</span>
-    <span class="context-card-label">${c.label}</span>
-  </div>`;
-}
-
-function selectContext(id) {
-  S.context = S.db.contexts[id];
-  S.result  = S.engine.generateInterpretation({
-    symbolId:S.symbol.id, emotionId:S.emotion.id,
-    verbId:S.verb.id, contextId:S.context.id,
-  });
-  setTimeout(() => renderStep('result'), 160);
-}
-
-function wireContextCards(container) {
-  container.querySelectorAll('.context-card').forEach(card => {
-    const fn = () => selectContext(card.dataset.id);
-    card.addEventListener('click', fn);
-    card.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') fn(); });
-  });
-}
-
 function renderContext() {
   updateTrail();
   const grid = document.getElementById('context-grid');
   if (!grid) return;
-
-  // Odděl obecny od ostatních
-  const allCtx  = Object.values(S.db.contexts);
-  const obecny  = S.db.contexts['obecny'] ?? null;
-  const regular = allCtx.filter(c => c.id !== 'obecny');
-
-  // Relevant contexts pro vybraný symbol (nové pole — fallback na vše)
-  const relIds = new Set(S.symbol.relevant_contexts ?? []);
-  const hasSplit = relIds.size > 0;
-
-  const primary   = hasSplit ? regular.filter(c =>  relIds.has(c.id)) : regular;
-  const secondary = hasSplit ? regular.filter(c => !relIds.has(c.id)) : [];
-
-  let showMore = false;
-
-  function renderInner() {
-    const shown = showMore ? [...primary, ...secondary] : primary;
-
-    grid.innerHTML = `
-      <div class="ctx-grid-inner">${shown.map(ctxCard).join('')}</div>
-
-      ${secondary.length && !showMore ? `
-        <button class="ctx-more-btn" id="ctx-more-btn">
-          Zobrazit další možnosti (${secondary.length}) ›
-        </button>` : ''}
-
-      ${obecny ? `
-        <div class="ctx-obecny-wrap">
-          ${ctxCard(obecny)}
-        </div>` : ''}
-    `;
-
-    wireContextCards(grid);
-
-    document.getElementById('ctx-more-btn')?.addEventListener('click', () => {
-      showMore = true;
-      renderInner();
-    });
-  }
-
-  renderInner();
+  grid.innerHTML = Object.values(S.db.contexts).map(c => `
+    <div class="context-card${S.context?.id===c.id?' selected':''}" data-id="${c.id}" role="button" tabindex="0">
+      <span class="context-card-icon">${c.icon}</span>
+      <span class="context-card-label">${c.label}</span>
+    </div>`).join('');
+  grid.querySelectorAll('.context-card').forEach(c => {
+    const fn = () => {
+      S.context = S.db.contexts[c.dataset.id];
+      S.result  = S.engine.generateInterpretation({ symbolId:S.symbol.id, emotionId:S.emotion.id, verbId:S.verb.id, contextId:S.context.id });
+      setTimeout(() => renderStep('result'), 160);
+    };
+    c.addEventListener('click', fn);
+    c.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') fn(); });
+  });
 }
 
 // ── Krok 5: Výsledek ──────────────────────────────────────────────────────────
@@ -346,6 +306,7 @@ function stepsHTML() {
         <span class="search-icon">⌕</span>
         <input type="text" id="symbol-search" class="search-input" placeholder="Hledat symbol…" autocomplete="off">
       </div>
+      <p class="symbol-count-info" id="symbol-count"></p>
       <div class="symbol-grid" id="symbol-grid"></div>
     </section>
 
