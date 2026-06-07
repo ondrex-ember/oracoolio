@@ -95,6 +95,11 @@ function kpSetLang(lang) {
   const rndEl = q('kp-round-label'); if (rndEl) rndEl.textContent = KP_T('round');
   const drwEl = q('kp-draw-label');  if (drwEl) drwEl.textContent = KP_T('draw');
   const stEl  = q('kp-stock-label'); if (stEl)  stEl.textContent  = KP_T('stock');
+  // data-cs / data-en (patička apod.)
+  document.querySelectorAll('[data-cs]').forEach(el => {
+    const val = lang === 'en' ? el.dataset.en : el.dataset.cs;
+    if (val !== undefined) el.textContent = val;
+  });
 }
 
 function kpVal(r) {
