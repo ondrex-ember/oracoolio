@@ -37,61 +37,61 @@ const KAT_NAMES_EN = {
 const KAT_NAMES = () => LANG === 'en' ? KAT_NAMES_EN : KAT_NAMES_CS;
 
 const TIMEZONES = [
-  { group:"— Střední Evropa —", zones:[
-    { val:"Europe/Prague",  label:"Praha, Berlín, Vídeň, Budapešť — CET/CEST (UTC+1/+2)" },
-    { val:"Europe/Warsaw",  label:"Varšava, Bratislava — CET/CEST (UTC+1/+2)" },
-    { val:"Europe/Rome",    label:"Řím, Madrid, Paříž — CET/CEST (UTC+1/+2)" },
+  { group:"— Střední Evropa —", group_en:"— Central Europe —", zones:[
+    { val:"Europe/Prague",  label:"Praha, Berlín, Vídeň, Budapešť — CET/CEST (UTC+1/+2)", label_en:"Prague, Berlin, Vienna, Budapest — CET/CEST (UTC+1/+2)" },
+    { val:"Europe/Warsaw",  label:"Varšava, Bratislava — CET/CEST (UTC+1/+2)",            label_en:"Warsaw, Bratislava — CET/CEST (UTC+1/+2)" },
+    { val:"Europe/Rome",    label:"Řím, Madrid, Paříž — CET/CEST (UTC+1/+2)",             label_en:"Rome, Madrid, Paris — CET/CEST (UTC+1/+2)" },
   ]},
-  { group:"— Záp. Evropa —", zones:[
-    { val:"Europe/London",      label:"Londýn, Dublin — GMT/BST (UTC+0/+1)" },
-    { val:"Europe/Lisbon",      label:"Lisabon — WET/WEST (UTC+0/+1)" },
-    { val:"Atlantic/Reykjavik", label:"Reykjavík — GMT (UTC+0)" },
+  { group:"— Záp. Evropa —", group_en:"— Western Europe —", zones:[
+    { val:"Europe/London",      label:"Londýn, Dublin — GMT/BST (UTC+0/+1)",  label_en:"London, Dublin — GMT/BST (UTC+0/+1)" },
+    { val:"Europe/Lisbon",      label:"Lisabon — WET/WEST (UTC+0/+1)",        label_en:"Lisbon — WET/WEST (UTC+0/+1)" },
+    { val:"Atlantic/Reykjavik", label:"Reykjavík — GMT (UTC+0)",              label_en:"Reykjavík — GMT (UTC+0)" },
   ]},
-  { group:"— Vých. Evropa & Blízký východ —", zones:[
-    { val:"Europe/Bucharest", label:"Bukurešť, Helsinki, Atény — EET/EEST (UTC+2/+3)" },
-    { val:"Europe/Kiev",      label:"Kyjev, Riga, Vilnius — EET/EEST (UTC+2/+3)" },
-    { val:"Europe/Moscow",    label:"Moskva — MSK (UTC+3)" },
-    { val:"Europe/Istanbul",  label:"Istanbul — TRT (UTC+3)" },
-    { val:"Asia/Tehran",      label:"Teherán — IRST (UTC+3:30/+4:30)" },
-    { val:"Asia/Dubai",       label:"Dubaj, Abu Dhabi — GST (UTC+4)" },
+  { group:"— Vých. Evropa & Blízký východ —", group_en:"— Eastern Europe & Middle East —", zones:[
+    { val:"Europe/Bucharest", label:"Bukurešť, Helsinki, Atény — EET/EEST (UTC+2/+3)", label_en:"Bucharest, Helsinki, Athens — EET/EEST (UTC+2/+3)" },
+    { val:"Europe/Kiev",      label:"Kyjev, Riga, Vilnius — EET/EEST (UTC+2/+3)",      label_en:"Kyiv, Riga, Vilnius — EET/EEST (UTC+2/+3)" },
+    { val:"Europe/Moscow",    label:"Moskva — MSK (UTC+3)",                             label_en:"Moscow — MSK (UTC+3)" },
+    { val:"Europe/Istanbul",  label:"Istanbul — TRT (UTC+3)",                           label_en:"Istanbul — TRT (UTC+3)" },
+    { val:"Asia/Tehran",      label:"Teherán — IRST (UTC+3:30/+4:30)",                  label_en:"Tehran — IRST (UTC+3:30/+4:30)" },
+    { val:"Asia/Dubai",       label:"Dubaj, Abu Dhabi — GST (UTC+4)",                   label_en:"Dubai, Abu Dhabi — GST (UTC+4)" },
   ]},
-  { group:"— Asie —", zones:[
-    { val:"Asia/Karachi",   label:"Karáčí, Islámábád — PKT (UTC+5)" },
-    { val:"Asia/Kolkata",   label:"Indie — IST (UTC+5:30)" },
-    { val:"Asia/Dhaka",     label:"Dháka — BST (UTC+6)" },
-    { val:"Asia/Bangkok",   label:"Bangkok, Jakarta — ICT (UTC+7)" },
-    { val:"Asia/Shanghai",  label:"Peking, Šanghaj — CST (UTC+8)" },
-    { val:"Asia/Singapore", label:"Singapur — SGT (UTC+8)" },
-    { val:"Asia/Tokyo",     label:"Tokio — JST (UTC+9)" },
-    { val:"Asia/Seoul",     label:"Soul — KST (UTC+9)" },
+  { group:"— Asie —", group_en:"— Asia —", zones:[
+    { val:"Asia/Karachi",   label:"Karáčí, Islámábád — PKT (UTC+5)",  label_en:"Karachi, Islamabad — PKT (UTC+5)" },
+    { val:"Asia/Kolkata",   label:"Indie — IST (UTC+5:30)",            label_en:"India — IST (UTC+5:30)" },
+    { val:"Asia/Dhaka",     label:"Dháka — BST (UTC+6)",               label_en:"Dhaka — BST (UTC+6)" },
+    { val:"Asia/Bangkok",   label:"Bangkok, Jakarta — ICT (UTC+7)",    label_en:"Bangkok, Jakarta — ICT (UTC+7)" },
+    { val:"Asia/Shanghai",  label:"Peking, Šanghaj — CST (UTC+8)",    label_en:"Beijing, Shanghai — CST (UTC+8)" },
+    { val:"Asia/Singapore", label:"Singapur — SGT (UTC+8)",            label_en:"Singapore — SGT (UTC+8)" },
+    { val:"Asia/Tokyo",     label:"Tokio — JST (UTC+9)",               label_en:"Tokyo — JST (UTC+9)" },
+    { val:"Asia/Seoul",     label:"Soul — KST (UTC+9)",                label_en:"Seoul — KST (UTC+9)" },
   ]},
-  { group:"— Afrika —", zones:[
-    { val:"Africa/Cairo",   label:"Káhira — EET (UTC+2)" },
-    { val:"Africa/Lagos",   label:"Lagos — WAT (UTC+1)" },
-    { val:"Africa/Nairobi", label:"Nairobi — EAT (UTC+3)" },
+  { group:"— Afrika —", group_en:"— Africa —", zones:[
+    { val:"Africa/Cairo",   label:"Káhira — EET (UTC+2)", label_en:"Cairo — EET (UTC+2)" },
+    { val:"Africa/Lagos",   label:"Lagos — WAT (UTC+1)",  label_en:"Lagos — WAT (UTC+1)" },
+    { val:"Africa/Nairobi", label:"Nairobi — EAT (UTC+3)", label_en:"Nairobi — EAT (UTC+3)" },
   ]},
-  { group:"— Sev. Amerika —", zones:[
-    { val:"America/New_York",    label:"New York, Miami — EST/EDT (UTC-5/-4)" },
-    { val:"America/Chicago",     label:"Chicago, Dallas — CST/CDT (UTC-6/-5)" },
-    { val:"America/Denver",      label:"Denver — MST/MDT (UTC-7/-6)" },
-    { val:"America/Los_Angeles", label:"Los Angeles — PST/PDT (UTC-8/-7)" },
-    { val:"America/Anchorage",   label:"Anchorage — AKST/AKDT (UTC-9/-8)" },
-    { val:"Pacific/Honolulu",    label:"Honolulu — HST (UTC-10)" },
+  { group:"— Sev. Amerika —", group_en:"— North America —", zones:[
+    { val:"America/New_York",    label:"New York, Miami — EST/EDT (UTC-5/-4)",  label_en:"New York, Miami — EST/EDT (UTC-5/-4)" },
+    { val:"America/Chicago",     label:"Chicago, Dallas — CST/CDT (UTC-6/-5)", label_en:"Chicago, Dallas — CST/CDT (UTC-6/-5)" },
+    { val:"America/Denver",      label:"Denver — MST/MDT (UTC-7/-6)",           label_en:"Denver — MST/MDT (UTC-7/-6)" },
+    { val:"America/Los_Angeles", label:"Los Angeles — PST/PDT (UTC-8/-7)",      label_en:"Los Angeles — PST/PDT (UTC-8/-7)" },
+    { val:"America/Anchorage",   label:"Anchorage — AKST/AKDT (UTC-9/-8)",      label_en:"Anchorage — AKST/AKDT (UTC-9/-8)" },
+    { val:"Pacific/Honolulu",    label:"Honolulu — HST (UTC-10)",               label_en:"Honolulu — HST (UTC-10)" },
   ]},
-  { group:"— Jižní & Stř. Amerika —", zones:[
-    { val:"America/Mexico_City",             label:"Mexico City — CST/CDT (UTC-6/-5)" },
-    { val:"America/Bogota",                  label:"Bogotá, Lima — COT (UTC-5)" },
-    { val:"America/Sao_Paulo",               label:"São Paulo — BRT/BRST (UTC-3/-2)" },
-    { val:"America/Argentina/Buenos_Aires",  label:"Buenos Aires — ART (UTC-3)" },
+  { group:"— Jižní & Stř. Amerika —", group_en:"— South & Central America —", zones:[
+    { val:"America/Mexico_City",            label:"Mexico City — CST/CDT (UTC-6/-5)", label_en:"Mexico City — CST/CDT (UTC-6/-5)" },
+    { val:"America/Bogota",                 label:"Bogotá, Lima — COT (UTC-5)",       label_en:"Bogotá, Lima — COT (UTC-5)" },
+    { val:"America/Sao_Paulo",              label:"São Paulo — BRT/BRST (UTC-3/-2)",  label_en:"São Paulo — BRT/BRST (UTC-3/-2)" },
+    { val:"America/Argentina/Buenos_Aires", label:"Buenos Aires — ART (UTC-3)",       label_en:"Buenos Aires — ART (UTC-3)" },
   ]},
-  { group:"— Oceánie —", zones:[
-    { val:"Australia/Perth",    label:"Perth — AWST (UTC+8)" },
-    { val:"Australia/Adelaide", label:"Adelaide — ACST/ACDT (UTC+9:30/+10:30)" },
-    { val:"Australia/Sydney",   label:"Sydney, Melbourne — AEST/AEDT (UTC+10/+11)" },
-    { val:"Pacific/Auckland",   label:"Auckland — NZST/NZDT (UTC+12/+13)" },
+  { group:"— Oceánie —", group_en:"— Oceania —", zones:[
+    { val:"Australia/Perth",    label:"Perth — AWST (UTC+8)",                       label_en:"Perth — AWST (UTC+8)" },
+    { val:"Australia/Adelaide", label:"Adelaide — ACST/ACDT (UTC+9:30/+10:30)",    label_en:"Adelaide — ACST/ACDT (UTC+9:30/+10:30)" },
+    { val:"Australia/Sydney",   label:"Sydney, Melbourne — AEST/AEDT (UTC+10/+11)", label_en:"Sydney, Melbourne — AEST/AEDT (UTC+10/+11)" },
+    { val:"Pacific/Auckland",   label:"Auckland — NZST/NZDT (UTC+12/+13)",          label_en:"Auckland — NZST/NZDT (UTC+12/+13)" },
   ]},
-  { group:"— UTC —", zones:[
-    { val:"UTC", label:"UTC — Koordinovaný světový čas (UTC+0)" },
+  { group:"— UTC —", group_en:"— UTC —", zones:[
+    { val:"UTC", label:"UTC — Koordinovaný světový čas (UTC+0)", label_en:"UTC — Coordinated Universal Time (UTC+0)" },
   ]},
 ];
 
@@ -228,6 +228,10 @@ function setLang(lang) {
     renderTemperamentPanel(lastChartData);
     renderPredictionPanel(lastChartData);
   }
+  // Rebuild timezone select and planet table with new lang
+  buildTimezoneSelect();
+  buildPlanetTable();
+  if (lastChartData) fillPlanetTable(lastChartData);
 }
 
 // ── STATE ─────────────────────────────────────────────────────
@@ -260,16 +264,20 @@ document.addEventListener('DOMContentLoaded', () => {
 // ── TIMEZONE SELECT ───────────────────────────────────────────
 function buildTimezoneSelect() {
   const sel = document.getElementById('birth-tz');
+  const currentVal = sel.value;
+  sel.innerHTML = '';
   TIMEZONES.forEach(g => {
     const og = document.createElement('optgroup');
-    og.label = g.group;
+    og.label = LANG === 'en' ? (g.group_en || g.group) : g.group;
     g.zones.forEach(z => {
       const o = document.createElement('option');
-      o.value = z.val; o.textContent = z.label;
+      o.value = z.val;
+      o.textContent = LANG === 'en' ? (z.label_en || z.label) : z.label;
       og.appendChild(o);
     });
     sel.appendChild(og);
   });
+  if (currentVal) sel.value = currentVal;
 }
 
 // ── NOMINATIM ─────────────────────────────────────────────────
@@ -1631,7 +1639,7 @@ function showCalcBanner(chart) {
     : '';
 
   const ascStr = chart.ascendent
-    ? `${T('banner_ascendent')}: ${ZNAMENI[chart.ascendent.sign - 1].sym} ${ZNAMENI[chart.ascendent.sign - 1].name} (${chart.ascendent.deg.toFixed(1)}°)`
+    ? `${T('banner_ascendent')}: ${ZNAMENI[chart.ascendent.sign - 1].sym} ${LANG === 'en' ? ZNAMENI[chart.ascendent.sign - 1].name_en : ZNAMENI[chart.ascendent.sign - 1].name} (${chart.ascendent.deg.toFixed(1)}°)`
     : '';
 
   // Sekta row (Modul A)
