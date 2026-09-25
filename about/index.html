@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-cs="O Oracooliu — Bezplatná věštírna online | Oracoolio" data-en="About Oracoolio — Free Oracle Online | Oracoolio">O Oracooliu — Bezplatná věštírna online | Oracoolio</title>
-  <meta name="description" content="Oracoolio je bezplatná osobní věštírna — Tarot, I-Ťing, Numerologie, Astrolog, Somnium a Karolky Pasiáns. Bez registrace, bez reklam, bez sledování.">
+  <meta name="description" content="Oracoolio je bezplatná osobní věštírna — Tarot, I-Ťing, Numerologie, Astrolog, Somnium a Karolky Pasiáns. Bez registrace, bez reklam, bez prodeje dat.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://oracoolio.com/about/">
   <meta name="author" content="ondrex">
@@ -40,10 +40,11 @@
   </script>
 
   <meta name="google-site-verification" content="HeChd4paxpWn6emGa3HjuQyFjuCw85kWsUwtk1IRobY">
+  <!-- Google Consent Mode v2 (advanced) — výchozí stav, musí být před GTM/Clarity -->
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'denied',wait_for_update:500});gtag('set','ads_data_redaction',true);function orcLoadClarity(){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vp48p83k4t");}try{if(localStorage.getItem('oracoolio_consent')==='granted'){gtag('consent','update',{analytics_storage:'granted',functionality_storage:'granted'});orcLoadClarity();}}catch(e){}</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW6CLRYTF3"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW6CLRYTF3');</script>
+  <script>gtag('js',new Date());gtag('config','G-VW6CLRYTF3');</script>
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG6N9KV');</script>
-  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vp48p83k4t");</script>
 
   <link rel="icon" href="../assets/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
@@ -459,8 +460,8 @@
   <h1 class="about-h1" data-cs="Vítejte v Oracooliu" data-en="Welcome to Oracoolio">Vítejte v Oracooliu</h1>
 
   <!-- PEREX -->
-  <p class="about-perex" data-cs="Oracoolio je bezplatná osobní věštírna, která spojuje starobylé věštecké systémy s moderním digitálním prostředím. Bez registrace, bez poplatků, bez sledování." data-en="Oracoolio is a free personal oracle that brings together ancient divination systems in a modern digital space. No sign-up, no fees, no tracking.">
-    Oracoolio je bezplatná osobní věštírna, která spojuje starobylé věštecké systémy s moderním digitálním prostředím. Bez registrace, bez poplatků, bez sledování.
+  <p class="about-perex" data-cs="Oracoolio je bezplatná osobní věštírna, která spojuje starobylé věštecké systémy s moderním digitálním prostředím. Bez registrace, bez poplatků, bez prodeje dat." data-en="Oracoolio is a free personal oracle that brings together ancient divination systems in a modern digital space. No sign-up, no fees, no data sold.">
+    Oracoolio je bezplatná osobní věštírna, která spojuje starobylé věštecké systémy s moderním digitálním prostředím. Bez registrace, bez poplatků, bez prodeje dat.
   </p>
 
   <!-- SEKCE 1: Co je Oracoolio -->
@@ -589,6 +590,8 @@
       <a href="https://fractout.com" target="_blank" rel="noopener" class="footer-link footer-doupe">𖦹ׂ Fractout</a>
       <span class="footer-sep">|</span>
       <a href="https://newsandradio.cz" target="_blank" rel="noopener" class="footer-link footer-doupe">📰 Jouza News&amp;Radio 📻</a>
+      <span class="footer-sep">|</span>
+      <a href="#" class="footer-link footer-doupe" onclick="if(typeof oracoolioConsentInfo==='function')oracoolioConsentInfo();return false;" data-cs="🍪 Soukromí" data-en="🍪 Privacy">🍪 Soukromí</a>
     </div>
     <div class="footer-credit">
       Vyvíjeno s <span class="footer-heart">❤️</span> v Novém Boru. By <a href="https://ember-pa.cz" target="_blank" rel="noopener">Ondrex</a>
@@ -643,6 +646,8 @@
   window.addEventListener('resize', resize);
 })();
 </script>
+
+<script src="../consent.js"></script>
 
 <!-- Lokalizace -->
 <script>
