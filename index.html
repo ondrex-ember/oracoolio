@@ -2,14 +2,38 @@
 <html lang="cs">
 <head>
     <meta name="google-site-verification" content="HeChd4paxpWn6emGa3HjuQyFjuCw85kWsUwtk1IRobY" />
+    <!-- Google Consent Mode v2 (advanced) — výchozí stav, musí být před GTM/Clarity -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'denied',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+    function orcLoadClarity(){
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "vp48p83k4t");
+    }
+    try{
+      if(localStorage.getItem('oracoolio_consent')==='granted'){
+        gtag('consent','update',{analytics_storage:'granted',functionality_storage:'granted'});
+        orcLoadClarity();
+      }
+    }catch(e){}
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW6CLRYTF3"></script>
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vp48p83k4t");
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-VW6CLRYTF3');
     </script>
 
     <!-- Google Tag Manager -->
@@ -19,13 +43,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FG6N9KV');</script>
     <!-- End Google Tag Manager -->
-    
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VW6CLRYTF3');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -274,7 +291,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <button id="about-modal-close" onclick="closeAboutModal()" aria-label="Zavřít">✕</button>
             <div class="modal-label" data-cs="O projektu" data-en="About">O projektu</div>
             <div class="modal-title">Oracoolio</div>
-            <p class="modal-text" data-cs="Bezplatná osobní věštírna — šest nástrojů pod jednou střechou. Bez registrace, bez reklam, bez sledování. Vše běží přímo ve vašem prohlížeči." data-en="A free personal oracle — six tools under one roof. No sign-up, no ads, no tracking. Everything runs directly in your browser.">Bezplatná osobní věštírna — šest nástrojů pod jednou střechou. Bez registrace, bez reklam, bez sledování. Vše běží přímo ve vašem prohlížeči.</p>
+            <p class="modal-text" data-cs="Bezplatná osobní věštírna — šest nástrojů pod jednou střechou. Bez registrace, bez reklam, bez prodeje dat. Vše, co zadáte, zůstává ve vašem prohlížeči." data-en="A free personal oracle — six tools under one roof. No sign-up, no ads, no data sold. Everything you enter stays in your browser.">Bezplatná osobní věštírna — šest nástrojů pod jednou střechou. Bez registrace, bez reklam, bez prodeje dat. Vše, co zadáte, zůstává ve vašem prohlížeči.</p>
             <a href="about/" class="modal-cta" data-cs="→ Více o Oracooliu" data-en="→ About Oracoolio">→ Více o Oracooliu</a>
         </div>
     </div>
@@ -364,6 +381,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </a>
             <span class="footer-sep">|</span>
             <a href="about/" class="footer-link footer-doupe" data-cs="ℹ O projektu" data-en="ℹ About">ℹ O projektu</a>
+            <span class="footer-sep">|</span>
+            <a href="#" class="footer-link footer-doupe" onclick="if(typeof oracoolioConsentInfo==='function')oracoolioConsentInfo();return false;" data-cs="🍪 Soukromí" data-en="🍪 Privacy">🍪 Soukromí</a>
         </div>
         <div class="footer-credit">
             <span data-cs="Vyvíjeno s" data-en="Developed with">Vyvíjeno s</span> <span class="footer-heart">❤️</span> <span data-cs="v Novém Boru. By" data-en="in Nový Bor. By">v Novém Boru. By</span> <span class="footer-author"><a href="https://ember-pa.cz" target="_blank" rel="noopener">Ondrex</a></span>
@@ -377,6 +396,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div><!-- /.app-container -->
 
     <script src="lang.js"></script>
+    <script src="consent.js"></script>
     <script src="app.js"></script>
     <script>
     function homeLang(lang) {
