@@ -197,11 +197,23 @@ function renderContext() {
 
 // ── Krok 5: Výsledek ──────────────────────────────────────────────────────────
 
+const LAYER_LABELS = {
+  emotion: 'Tvoje emoce',
+  verb:    'Tvoje jednání',
+  context: 'Do tvého života',
+  advice:  'Co s tím',
+};
+
 function renderResult() {
   const r    = S.result;
   const card = document.getElementById('interp-card');
   if (!card) return;
-  const pHtml    = r.text.split('\n\n').filter(Boolean).map(p => `<p>${p}</p>`).join('');
+  const sections = r.sections ?? r.text.split('\n\n').filter(Boolean).map(text => ({ type:'override', text }));
+  const pHtml    = sections.map(s => {
+    const label = LAYER_LABELS[s.type];
+    return (label ? `<span class="layer-label">${label}</span>` : '')
+         + `<p class="layer layer-${s.type}">${s.text}</p>`;
+  }).join('');
   const engLabel = r.metadata.engine_type === 'override' ? '✦ Přesná kombinace' : '◈ Rule-based výklad';
   const confPct  = Math.round(r.confidence * 100);
 
