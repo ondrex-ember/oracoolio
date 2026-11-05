@@ -7,7 +7,7 @@
       "label": "Auto",
       "category": "objekty",
       "base_meaning": "Nástroj vůle a směřování, jenž ukazuje, kdo řídí život snícího.",
-      "extended_meaning": "Auto jest ve snech obrazem osobní vůle a schopnosti řídit vlastní osud — kdo sedí za volantem, jest otázkou první a nejdůležitější. Řídí-li snící sám, jest pánem svého směřování; sedí-li na místě spolujezdce či na zadním sedadle, přenechal někому jinému moc nad svým životem. Brzdy nefungující, cesta neznámá či vůz nekontrolovatelný věstí pocit ztráty kontroly v bdělém životě. Značka, stav a barva vozu jsou zrcadlem toho, jak snící vnímá svou osobní sílu a společenské postavení.",
+      "extended_meaning": "Auto jest ve snech obrazem osobní vůle a schopnosti řídit vlastní osud — kdo sedí za volantem, jest otázkou první a nejdůležitější. Řídí-li snící sám, jest pánem svého směřování; sedí-li na místě spolujezdce či na zadním sedadle, přenechal někomu jinému moc nad svým životem. Brzdy nefungující, cesta neznámá či vůz nekontrolovatelný věstí pocit ztráty kontroly v bdělém životě. Značka, stav a barva vozu jsou zrcadlem toho, jak snící vnímá svou osobní sílu a společenské postavení.",
       "illustration": "auto_volant.svg",
       "tags": [
         "kontrola",
@@ -85,7 +85,7 @@
       "id": "cesta",
       "label": "Cesta",
       "category": "mista",
-      "base_meaning": "Směřování života, jehož průběh i cíl jsou otázkou snícímu kladenouу.",
+      "base_meaning": "Směřování života, jehož průběh i cíl jsou otázkou, kterou sen klade snícímu.",
       "extended_meaning": "Cesta jest ve snech obrazem samotného průběhu života — ne cíle, nýbrž pohybu k němu. Její podoba mluví jasně: cesta přímá a otevřená věstí jasnost záměru; cesta zarostlá či rozvětvená ukazuje na rozcestí a nerozhodnutost. Ztratiti cestu v lese jest ztratiti orientaci v životě; nalézti neočekávanou zkratku jest intuitivním průlomem. Kdo kráčí po cestě, jest aktérem vlastního osudu; kdo na cestě stojí bez pohybu, jest snícím v bodě, kdy se volba stala nevyhnutelnou.",
       "illustration": "cesta_rozcesti.svg",
       "tags": [
@@ -3681,7 +3681,7 @@
       "label": "Stříbro",
       "category": "substance",
       "base_meaning": "Kov měsíce a zrcadel, jenž odráží pravdu studeným světlem.",
-      "extended_meaning": "Stříbro jest lunárním kovem — přiřazováno měsíci, noci, ženskému principu a intuici. Na rozdíl od zlata neohřívá, nýbrž osvěcuje chladně a přesně. Ve snech bývá stříbro obrazem anima nebo intuitivního poznání — toho, co přichází v noci a co denní rozum přehlíží. Stříbrné věci ve snu mají cenu, jíž nelze změřit trhem.",
+      "extended_meaning": "Stříbro jest lunárním kovem — přiřazováno měsíci, noci, ženskému principu a intuici. Na rozdíl od zlata neohřívá, nýbrž osvěcuje chladně a přesně. Ve snech bývá stříbro obrazem anima nebo intuitivního poznání — toho, co přichází v noci a co denní rozum přehlíží. Stříbrné věci ve snu mají cenu, již nelze změřit trhem.",
       "illustration": "stribro.svg",
       "tags": [
         "mesic",
@@ -4541,7 +4541,7 @@
       "label": "Ještěrka",
       "category": "zvirata",
       "base_meaning": "Drobný plaz světla a stínu, jenž mizí dříve, než jej oko zachytí.",
-      "extended_meaning": "Ještěrka jest mistryní úniku — žije na hranici světla a stínu a překračuje ji tak rychle, že ji oko sotva sleduje. Ve snech přichází jako obraz psychické energie, jíž se nedaří uchopit — intuice, tušení, myšlenka, jež mizí právě tehdy, když po ní člověk sahá. Jungiánsky bývá ještěrka blízká animě v její prchavé, těžko uchopitelné podobě.",
+      "extended_meaning": "Ještěrka jest mistryní úniku — žije na hranici světla a stínu a překračuje ji tak rychle, že ji oko sotva sleduje. Ve snech přichází jako obraz psychické energie, již se nedaří uchopit — intuice, tušení, myšlenka, jež mizí právě tehdy, když po ní člověk sahá. Jungiánsky bývá ještěrka blízká animě v její prchavé, těžko uchopitelné podobě.",
       "illustration": "jesterka.svg",
       "tags": [
         "prchavost",
@@ -5437,7 +5437,7 @@
       "label": "Tygr",
       "category": "zvirata",
       "base_meaning": "Pruhovaný vládce džungle, jenž kombinuje krásu a smrtelnou přesnost v jediném těle.",
-      "extended_meaning": "Tygr jest obrazem energie, jíž nelze ani spoutati, ani ignorovati — přichází tiše, avšak jeho přítomnost jest cítiti dříve, než je vidět. Ve snech přichází jako obraz intenzivní psychické energie: ať již tvůrčí síly, erotické přitažlivosti nebo nekontrolované agrese. Jungiánsky bývá tygr blízký stínu v jeho nejkrásnějším a nejnebezpečnějším vydání.",
+      "extended_meaning": "Tygr jest obrazem energie, již nelze ani spoutati, ani ignorovati — přichází tiše, avšak jeho přítomnost jest cítiti dříve, než je vidět. Ve snech přichází jako obraz intenzivní psychické energie: ať již tvůrčí síly, erotické přitažlivosti nebo nekontrolované agrese. Jungiánsky bývá tygr blízký stínu v jeho nejkrásnějším a nejnebezpečnějším vydání.",
       "illustration": "tygr.svg",
       "tags": [
         "krasa",
@@ -5518,7 +5518,7 @@
       "id": "delfin",
       "label": "Delfín",
       "category": "zvirata",
-      "base_meaning": "Bytost radostného pohybu mezi světy — hladinou i hloubkou — jíž hra jest vážností.",
+      "base_meaning": "Bytost radostného pohybu mezi světy — hladinou i hloubkou — jejíž hra jest vážností.",
       "extended_meaning": "Delfín jest symbolem inteligence v harmonii s živlem — nepluje jen proto, aby přežil, nýbrž proto, že jej to těší. Ve snech přichází jako obraz psyché v rovnováze: schopné ponořiti se i vynořiti, hráti si i vážně pracovati. Jungiánsky bývá delfín blízký animě ve světlé podobě — průvodci, jenž zná hloubku, avšak miluje hladinu.",
       "illustration": "delfin.svg",
       "tags": [
@@ -5722,7 +5722,7 @@
       "id": "starec",
       "label": "Stařec",
       "category": "osoby",
-      "base_meaning": "Tichá figura moudrosti na konci cesty, jíž věk jest zbroj i břemeno.",
+      "base_meaning": "Tichá figura moudrosti na konci cesty, jehož věk jest zbroj i břemeno.",
       "extended_meaning": "Stařec jest jedním z Jungových základních archetypů — Moudrý stařec, Senex. Přichází ve snech jako průvodce, varující hlas nebo jako obraz části psyché, jež ví, avšak nemůže jednat namísto sniče. Jeho moudrost jest nabyta ztrátou — přišel o iluze, o rychlost, o jistoty, a zůstalo mu to podstatné. Kde se zjeví, tam jest třeba naslouchati.",
       "illustration": "starec.svg",
       "tags": [
@@ -5763,7 +5763,7 @@
       "id": "starena",
       "label": "Stařena",
       "category": "osoby",
-      "base_meaning": "Pramatka věků, jíž vrásčitá tvář skrývá buď moudrost nebo zkázu — záleží na tom, kdo hledí.",
+      "base_meaning": "Pramatka věků, jejíž vrásčitá tvář skrývá buď moudrost nebo zkázu — záleží na tom, kdo hledí.",
       "extended_meaning": "Stařena jest ženským protějškem Moudrého starce — Velká Matka ve svém podzimním vydání. Ve snech přichází jako Baba Jaga i jako dobrotivá babička: obě jsou pravdivé, obě jsou totéž. Jungiánsky bývá stařena obrazem animy nebo Velké Matky v její chthonické podobě — ví věci, jež mladost nezná, a neptá se, zda jest její vědění vhod.",
       "illustration": "starena.svg",
       "tags": [
@@ -5844,8 +5844,8 @@
       "id": "kralovna",
       "label": "Královna",
       "category": "osoby",
-      "base_meaning": "Ženská osa království, jíž moc nevychází z meče, nýbrž z hlubiny, z níž vše vzešlo.",
-      "extended_meaning": "Královna jest archetypem ženské moci ve světlé podobě — pečující, intuitivní, integrující. Ve snech přichází jako obraz animy v její královské podobě nebo jako vnitřní ženský princip dosáhnuvší plnosti. Jungiánsky bývá královna blízká Velké Matce v její benevolentní podobě — avšak pozor: královna temná jest čarodějnicí, jíž láska jest nástrojem moci.",
+      "base_meaning": "Ženská osa království, jejíž moc nevychází z meče, nýbrž z hlubiny, z níž vše vzešlo.",
+      "extended_meaning": "Královna jest archetypem ženské moci ve světlé podobě — pečující, intuitivní, integrující. Ve snech přichází jako obraz animy v její královské podobě nebo jako vnitřní ženský princip dosáhnuvší plnosti. Jungiánsky bývá královna blízká Velké Matce v její benevolentní podobě — avšak pozor: královna temná jest čarodějnicí, jejíž láska jest nástrojem moci.",
       "illustration": "kralovna.svg",
       "tags": [
         "zenská_moc",
@@ -5885,7 +5885,7 @@
       "label": "Princ",
       "category": "osoby",
       "base_meaning": "Mladý hrdina na prahu — ještě nezískal trůn, avšak již ví, že musí o něj usilovat.",
-      "extended_meaning": "Princ jest archetypem nevyzrálé mužnosti hledající svou formu — plný energie, avšak bez zkušenosti, jíž nabývá teprve cestou. Ve snech přichází jako obraz části psyché, jíž úkol jest před ní, nikoliv za ní. Jungiánsky bývá princ blízký archetypu puera aeternus — věčného mladíka, jenž musí projít zkouškou, aby dospěl v krále.",
+      "extended_meaning": "Princ jest archetypem nevyzrálé mužnosti hledající svou formu — plný energie, avšak bez zkušenosti, jíž nabývá teprve cestou. Ve snech přichází jako obraz části psyché, jejíž úkol jest před ní, nikoliv za ní. Jungiánsky bývá princ blízký archetypu puera aeternus — věčného mladíka, jenž musí projít zkouškou, aby dospěl v krále.",
       "illustration": "princ.svg",
       "tags": [
         "mladost",
@@ -6006,7 +6006,7 @@
       "label": "Císařovna",
       "category": "abstrakce",
       "base_meaning": "Ženská moc na vrcholu světa — reprezentace, důstojnost a skrytá vláda za trůnem.",
-      "extended_meaning": "Císařovna jest archetypem ženské moci v její nejformálnější podobě — koruna jako závazek, nikoliv ozdoba. Ve snech přichází jako obraz animy, jíž přirozená síla jest svázána protokolem a očekáváním: královský plášť jako persona, pod níž teprve hledáme skutečnou ženu. Jungiánsky bývá císařovna obrazem napětí mezi veřejnou rolí a vnitřní pravdou.",
+      "extended_meaning": "Císařovna jest archetypem ženské moci v její nejformálnější podobě — koruna jako závazek, nikoliv ozdoba. Ve snech přichází jako obraz animy, jejíž přirozená síla jest svázána protokolem a očekáváním: královský plášť jako persona, pod níž teprve hledáme skutečnou ženu. Jungiánsky bývá císařovna obrazem napětí mezi veřejnou rolí a vnitřní pravdou.",
       "illustration": "cisarovna.svg",
       "tags": [
         "moc",
@@ -6208,7 +6208,7 @@
       "label": "Zloděj",
       "category": "abstrakce",
       "base_meaning": "Tichý vetřelec, jenž bere to, co mu nepatří — nebo to, co mu bylo odepřeno.",
-      "extended_meaning": "Zloděj ve snech přichází jako obraz porušení hranic nebo jako část psyché, jíž touha přerostla etiku. Jungiánsky bývá zloděj blízký tricksteri nebo stínu — energie, jíž společnost odsoudila, avšak jíž pohon jest pochopitelný: bere, protože nedostal. Snový zloděj krade zpravidla to, po čem sníč vědomě netouží přiznat, že touží.",
+      "extended_meaning": "Zloděj ve snech přichází jako obraz porušení hranic nebo jako část psyché, jejíž touha přerostla etiku. Jungiánsky bývá zloděj blízký tricksteri nebo stínu — energie, již společnost odsoudila, avšak jejíž pohon jest pochopitelný: bere, protože nedostal. Snový zloděj krade zpravidla to, po čem sníč vědomě netouží přiznat, že touží.",
       "illustration": "zlodej.svg",
       "tags": [
         "kradení",
@@ -6249,7 +6249,7 @@
       "label": "Kněz",
       "category": "abstrakce",
       "base_meaning": "Prostředník mezi světem viděným a světem skrytým — mluvčí toho, co přesahuje slova.",
-      "extended_meaning": "Kněz ve snech jest obrazem principu, jenž překračuje osobní — kolektivní víry, tradice, posvátného řádu. Jungiánsky bývá kněz blízký archetypu moudrého průvodce nebo Senexa v jeho duchovní podobě. Avšak kněz může být i obrazem rigidní autority — pravidel, jíž smysl byl zapomenut, zatímco forma přetrvala.",
+      "extended_meaning": "Kněz ve snech jest obrazem principu, jenž překračuje osobní — kolektivní víry, tradice, posvátného řádu. Jungiánsky bývá kněz blízký archetypu moudrého průvodce nebo Senexa v jeho duchovní podobě. Avšak kněz může být i obrazem rigidní autority — pravidel, jejichž smysl byl zapomenut, zatímco forma přetrvala.",
       "illustration": "knez.svg",
       "tags": [
         "posvatno",
@@ -6287,7 +6287,7 @@
       "label": "Policista",
       "category": "abstrakce",
       "base_meaning": "Strážce řádu — ochránce i dozorce, záleží na tom, na které straně hranice stojíš.",
-      "extended_meaning": "Policista ve snech jest ambivalentní figura — přichází jako ochrana nebo jako hrozba podle vztahu sniče k autoritě a pravidlům. Jungiánsky bývá policista obrazem super-ega nebo persony: internalizovaného hlasu společnosti, jenž dohlíží na chování. Být pronásledován policistou ve snu zpravidla neznamená vinu, nýbrž pocit, že žijeme pod dohledem pravidel, jíž jsme přijali bez volby.",
+      "extended_meaning": "Policista ve snech jest ambivalentní figura — přichází jako ochrana nebo jako hrozba podle vztahu sniče k autoritě a pravidlům. Jungiánsky bývá policista obrazem super-ega nebo persony: internalizovaného hlasu společnosti, jenž dohlíží na chování. Být pronásledován policistou ve snu zpravidla neznamená vinu, nýbrž pocit, že žijeme pod dohledem pravidel, jež jsme přijali bez volby.",
       "illustration": "policista.svg",
       "tags": [
         "rad",
@@ -6367,8 +6367,8 @@
       "id": "panna",
       "label": "Panna",
       "category": "osoby",
-      "base_meaning": "Nedotčená celistvost — ne naivita, nýbrž plnost, jíž svět ještě nerozdělil.",
-      "extended_meaning": "Panna jest symbolem integrity v původním smyslu — bytí celou sebou, nerozdělenou nároky druhých. Ve snech přichází jako obraz části psyché, jíž čistota jest silou, nikoliv slabostí. Jungiánsky bývá panna blízká animě v její první podobě — kor, Eva — čisté potenciality, jež teprve vstupuje do světa vztahů a zkušeností.",
+      "base_meaning": "Nedotčená celistvost — ne naivita, nýbrž plnost, již svět ještě nerozdělil.",
+      "extended_meaning": "Panna jest symbolem integrity v původním smyslu — bytí celou sebou, nerozdělenou nároky druhých. Ve snech přichází jako obraz části psyché, jejíž čistota jest silou, nikoliv slabostí. Jungiánsky bývá panna blízká animě v její první podobě — kor, Eva — čisté potenciality, jež teprve vstupuje do světa vztahů a zkušeností.",
       "illustration": "panna.svg",
       "tags": [
         "cistota",
@@ -6449,7 +6449,7 @@
       "label": "Obr",
       "category": "osoby",
       "base_meaning": "Přemožitelná síla v lidské podobě — příliš velký pro svět, v němž žije.",
-      "extended_meaning": "Obr ve snech jest obrazem síly, jíž měřítko jest nesprávné — přemáhá nikoliv ze zlé vůle, nýbrž proto, že nevládne sobě samému v měřítku světa kolem. Jungiánsky bývá obr blízký stínu nebo inflátu ega: nevědomé síle, jíž růst nebyl doprovázen moudrostí. Avšak obr může být i obr dobrý — který neví o své síle, a proto ubližuje.",
+      "extended_meaning": "Obr ve snech jest obrazem síly, jejíž měřítko jest nesprávné — přemáhá nikoliv ze zlé vůle, nýbrž proto, že nevládne sobě samému v měřítku světa kolem. Jungiánsky bývá obr blízký stínu nebo inflátu ega: nevědomé síle, jejíž růst nebyl doprovázen moudrostí. Avšak obr může být i obr dobrý — který neví o své síle, a proto ubližuje.",
       "illustration": "obr.svg",
       "tags": [
         "sila",
@@ -6489,7 +6489,7 @@
       "label": "Trpaslík",
       "category": "abstrakce",
       "base_meaning": "Malá figura velkého vědění — skrytá v hlubinách země, blízká kovům a tajemstvím.",
-      "extended_meaning": "Trpaslík jest bytostí podzemní moudrosti — žije v hlubinách, zná skryté síly, pracuje s tím, co jest pod povrchem. Ve snech přichází jako obraz části psyché, jíž velikost není ve vzrůstu, nýbrž v hloubce vědění. Jungiánsky bývá trpaslík blízký archetypu chthonického průvodce nebo stínu v jeho moudrém vydání — Rumplestiltskin i Gimli, obojí pravdivé.",
+      "extended_meaning": "Trpaslík jest bytostí podzemní moudrosti — žije v hlubinách, zná skryté síly, pracuje s tím, co jest pod povrchem. Ve snech přichází jako obraz části psyché, jejíž velikost není ve vzrůstu, nýbrž v hloubce vědění. Jungiánsky bývá trpaslík blízký archetypu chthonického průvodce nebo stínu v jeho moudrém vydání — Rumplestiltskin i Gimli, obojí pravdivé.",
       "illustration": "trpaslik.svg",
       "tags": [
         "moudrost",
@@ -6528,7 +6528,7 @@
       "id": "dvojnik",
       "label": "Dvojník",
       "category": "osoby",
-      "base_meaning": "Tvář, jíž znáš — a přece to nejsi ty. Nebo jsi?",
+      "base_meaning": "Tvář, již znáš — a přece to nejsi ty. Nebo jsi?",
       "extended_meaning": "Dvojník jest jedním z nejznepokojivějších snových figur — setkání s tím, jenž vypadá jako já, avšak jest jiný, nebo jest příliš stejný. Ve snech přichází jako obraz stínu v jeho nejintenzivnější podobě: není to cizinec, jest to já sám, avšak ten, jenž žije jinou volbu. Jungiánsky jest dvojník ztělesněním nevědomé druhé poloviny — co bylo potlačeno, nabylo tváře.",
       "illustration": "dvojnik.svg",
       "tags": [
@@ -6568,7 +6568,7 @@
       "id": "demon",
       "label": "Démon",
       "category": "abstrakce",
-      "base_meaning": "Tvář temné energie, jíž člověk odmítl přiznat — a která proto narostla za jeho zády.",
+      "base_meaning": "Tvář temné energie, již člověk odmítl přiznat — a která proto narostla za jeho zády.",
       "extended_meaning": "Démon ve snech jest zřídkakdy vnějším zlem — jest obrazem potlačené psychické energie, jíž odmítnutí dalo autonomii. Jungiánsky jest démon stínem v jeho nejkondenzovanější podobě: vše, co bylo označeno jako nepřijatelné a vytlačeno do tmy, nabylo tváře a vrací se. Konfrontace s démonem ve snu jest výzvou k integraci, nikoliv k útěku.",
       "illustration": "demon.svg",
       "tags": [
@@ -6648,8 +6648,8 @@
       "id": "carodejnice",
       "label": "Čarodějnice",
       "category": "abstrakce",
-      "base_meaning": "Žena na okraji světa, jíž moc přichází z míst, kam řádní lidé nevstupují.",
-      "extended_meaning": "Čarodějnice jest archetypem ženské moci v její temné, nekontrolované nebo odmítané podobě — Velká Matka v jejím destruktivním aspektu. Ve snech přichází jako obraz animy ve stínu nebo jako projekce strachu z ženské autonomie. Jungiánsky jest čarodějnice zpravidla obrazem potlačené intuice nebo tvůrčí síly, jíž společnost odsoudila jako nebezpečnou.",
+      "base_meaning": "Žena na okraji světa, jejíž moc přichází z míst, kam řádní lidé nevstupují.",
+      "extended_meaning": "Čarodějnice jest archetypem ženské moci v její temné, nekontrolované nebo odmítané podobě — Velká Matka v jejím destruktivním aspektu. Ve snech přichází jako obraz animy ve stínu nebo jako projekce strachu z ženské autonomie. Jungiánsky jest čarodějnice zpravidla obrazem potlačené intuice nebo tvůrčí síly, již společnost odsoudila jako nebezpečnou.",
       "illustration": "carodejnice.svg",
       "tags": [
         "temná_moc",
@@ -6689,7 +6689,7 @@
       "label": "Učitel",
       "category": "abstrakce",
       "base_meaning": "Ten, jenž ukazuje cestu vědění — avšak jen sníč sám může projíti dveřmi, na něž učitel ukáže.",
-      "extended_meaning": "Učitel ve snech bývá obrazem vnitřního průvodce nebo vnější autority, jíž vliv přetrval. Jungiánsky bývá učitel blízký archetypu Moudrého starce v jeho dostupnější, každodenní podobě. Avšak učitel ve snu může být i obrazem super-ega nebo internalizovaného hodnotitele: hlas, jenž stále klasifikuje a posuzuje dávno po opuštění školy.",
+      "extended_meaning": "Učitel ve snech bývá obrazem vnitřního průvodce nebo vnější autority, jejíž vliv přetrval. Jungiánsky bývá učitel blízký archetypu Moudrého starce v jeho dostupnější, každodenní podobě. Avšak učitel ve snu může být i obrazem super-ega nebo internalizovaného hodnotitele: hlas, jenž stále klasifikuje a posuzuje dávno po opuštění školy.",
       "illustration": "ucitel.svg",
       "tags": [
         "vedení",
@@ -6730,7 +6730,7 @@
       "label": "Přítel",
       "category": "abstrakce",
       "base_meaning": "Člověk, jenž zná naši tvář i naši masku — a zůstává přesto.",
-      "extended_meaning": "Přítel ve snech jest vzácnou figurou bezpodmínečnosti — nebo jejím testem. Přichází jako obraz části psyché, jíž jsme přijali, nebo jako projekce toho, po čem toužíme ve vztazích. Jungiánsky bývá přítel blízký animě nebo animusu v jejich světlé podobě: spojenec na cestě, jenž nás vidí jinak než my sami, a právě proto jest cenný.",
+      "extended_meaning": "Přítel ve snech jest vzácnou figurou bezpodmínečnosti — nebo jejím testem. Přichází jako obraz části psyché, již jsme přijali, nebo jako projekce toho, po čem toužíme ve vztazích. Jungiánsky bývá přítel blízký animě nebo animusu v jejich světlé podobě: spojenec na cestě, jenž nás vidí jinak než my sami, a právě proto jest cenný.",
       "illustration": "pritel.svg",
       "tags": [
         "blízkost",
@@ -6771,7 +6771,7 @@
       "label": "Dav",
       "category": "abstrakce",
       "base_meaning": "Anonymní tělo bez tváře — síla kolektiva, v němž jednotlivec mizí nebo jest unášen.",
-      "extended_meaning": "Dav ve snech jest obrazem kolektivního tlaku — energie skupiny, jíž vlastní logika přehlušuje osobní hlas. Jungiánsky jest dav symbolem kolektivního nevědomí v jeho nediferencované podobě: archetyp bez tváře, jenž pohltí ego, pokud toto neví, kdo jest. Být ztracen v davu je snová výzva k nalezení vlastního hlasu.",
+      "extended_meaning": "Dav ve snech jest obrazem kolektivního tlaku — energie skupiny, jejíž vlastní logika přehlušuje osobní hlas. Jungiánsky jest dav symbolem kolektivního nevědomí v jeho nediferencované podobě: archetyp bez tváře, jenž pohltí ego, pokud toto neví, kdo jest. Být ztracen v davu je snová výzva k nalezení vlastního hlasu.",
       "illustration": "dav.svg",
       "tags": [
         "kolektiv",
@@ -6812,7 +6812,7 @@
       "label": "Voják",
       "category": "abstrakce",
       "base_meaning": "Tělo disciplíny ve službě příkazu — hrdina nebo stroj, záleží na tom, čí rozkazy plní.",
-      "extended_meaning": "Voják ve snech jest obrazem disciplinované síly — ega, jíž vůle jest podřízena vyššímu příkazu. Jungiánsky bývá voják blízký animusu v jeho kolektivní, povinnostní podobě: loajalita, disciplína, oběť osobního pro věc. Avšak voják bez svědomí jest obrazem stínu — síla bez reflexe ve službě destrukce.",
+      "extended_meaning": "Voják ve snech jest obrazem disciplinované síly — ega, jehož vůle jest podřízena vyššímu příkazu. Jungiánsky bývá voják blízký animusu v jeho kolektivní, povinnostní podobě: loajalita, disciplína, oběť osobního pro věc. Avšak voják bez svědomí jest obrazem stínu — síla bez reflexe ve službě destrukce.",
       "illustration": "vojak.svg",
       "tags": [
         "disciplina",
@@ -6853,7 +6853,7 @@
       "label": "Mrtvý",
       "category": "abstrakce",
       "base_meaning": "Tvář z druhé strany — přichází ve snech nikoliv strašit, nýbrž doříci to, co zůstalo nevyřčeno.",
-      "extended_meaning": "Mrtvý ve snech jest zpravidla nositelem poselství — zemřelý příbuzný, přátelé nebo neznámá figura přichází jako obraz toho, co jest v psyché odloženo nebo nedokončeno. Jungiánsky bývá mrtvý blízký archetypu stínu nebo animy/animusu: část nás samých, jíž jsme pohřbili zaživa, žádá o slovo. Smrt ve snu jest zřídkakdy literální — jest zpravidla transformační.",
+      "extended_meaning": "Mrtvý ve snech jest zpravidla nositelem poselství — zemřelý příbuzný, přátelé nebo neznámá figura přichází jako obraz toho, co jest v psyché odloženo nebo nedokončeno. Jungiánsky bývá mrtvý blízký archetypu stínu nebo animy/animusu: část nás samých, již jsme pohřbili zaživa, žádá o slovo. Smrt ve snu jest zřídkakdy literální — jest zpravidla transformační.",
       "illustration": "mrtvy.svg",
       "tags": [
         "poselstvi",
@@ -6973,7 +6973,7 @@
       "label": "Ďábel",
       "category": "abstrakce",
       "base_meaning": "Princip sváru a pokušení — ne vnější zlo, nýbrž hlas, jenž slibuje zkratku.",
-      "extended_meaning": "Ďábel ve snech jest archetypem pokušení: nikoliv absolutního zla, nýbrž energií, jíž nabídka jest vždy srozumitelná a lákavá. Jungiánsky bývá ďábel blízký tricksteri nebo stínu v jeho svůdné podobě — přichází s tím, po čem ego touží, avšak zatajuje cenu. Konfrontace s ďáblem jest testem vědomosti vlastních tužeb.",
+      "extended_meaning": "Ďábel ve snech jest archetypem pokušení: nikoliv absolutního zla, nýbrž energií, jejíž nabídka jest vždy srozumitelná a lákavá. Jungiánsky bývá ďábel blízký tricksteri nebo stínu v jeho svůdné podobě — přichází s tím, po čem ego touží, avšak zatajuje cenu. Konfrontace s ďáblem jest testem vědomosti vlastních tužeb.",
       "illustration": "dabel.svg",
       "tags": [
         "pokuseni",
@@ -7093,7 +7093,7 @@
       "label": "Milenec",
       "category": "abstrakce",
       "base_meaning": "Figura vášně a překročení — přichází tam, kde závazek nestačí nebo kde duše hledá to, co vztah nedal.",
-      "extended_meaning": "Milenec ve snech jest obrazem animy nebo animusu v jejich vášnivé, transgresivní podobě — energie, jíž pravidla nestačí. Jungiánsky bývá milenec blízký archetypu erota: touha po spojení, jíž hloubka přesahuje tělesné. Snový milenec přichází tehdy, kdy část psyché hladoví po intenzitě, již vědomý život nedopřává.",
+      "extended_meaning": "Milenec ve snech jest obrazem animy nebo animusu v jejich vášnivé, transgresivní podobě — energie, jíž pravidla nestačí. Jungiánsky bývá milenec blízký archetypu erota: touha po spojení, jejíž hloubka přesahuje tělesné. Snový milenec přichází tehdy, kdy část psyché hladoví po intenzitě, již vědomý život nedopřává.",
       "illustration": "milenec.svg",
       "tags": [
         "vášeň",
@@ -7131,7 +7131,7 @@
       "id": "prostitutka",
       "label": "Prostitutka",
       "category": "abstrakce",
-      "base_meaning": "Figura, jíž tělo jest zbožím a jejíž přítomnost ve snu odhaluje něco o ceně intimity.",
+      "base_meaning": "Figura, jejíž tělo jest zbožím a jejíž přítomnost ve snu odhaluje něco o ceně intimity.",
       "extended_meaning": "Prostitutka ve snech jest archetypem animy ve stínu — ženského principu redukovaného na funkci nebo transakci. Jungiánsky bývá prostitutka obrazem toho, jak zacházíme s vlastní duší nebo intimností: prodáváme je za bezpečí, uznání, peníze? Avšak prostitutka jest i obraz Afrodity v jejím temném aspektu — posvátná sexualita degradovaná tlakem světa.",
       "illustration": "prostitutka.svg",
       "tags": [
@@ -7212,7 +7212,7 @@
       "label": "Vězeň",
       "category": "abstrakce",
       "base_meaning": "Uzavřený ve vlastní kleci — ať již z vůle světa nebo z vůle vlastních přesvědčení.",
-      "extended_meaning": "Vězeň ve snech jest obrazem uvězněné části psyché — energie nebo potenciálu, jenž jest uzavřen a nemůže se projevit. Jungiánsky bývá vězeň blízký stínu nebo animě: část nás samých, jíž jsme odsoudili a uzavřeli. Klíč od cely bývá ve snu vždy někde — avšak sníč jej musí nejprve hledati.",
+      "extended_meaning": "Vězeň ve snech jest obrazem uvězněné části psyché — energie nebo potenciálu, jenž jest uzavřen a nemůže se projevit. Jungiánsky bývá vězeň blízký stínu nebo animě: část nás samých, již jsme odsoudili a uzavřeli. Klíč od cely bývá ve snu vždy někde — avšak sníč jej musí nejprve hledati.",
       "illustration": "vezen.svg",
       "tags": [
         "uvezeni",
@@ -7292,7 +7292,7 @@
       "id": "puda_2",
       "label": "Půda",
       "category": "mista",
-      "base_meaning": "Nejvyšší patro domu — místo světla a zapomnění, kde leží věci, jíž nevíme kam s nimi.",
+      "base_meaning": "Nejvyšší patro domu — místo světla a zapomnění, kde leží věci, jež nevíme kam s nimi.",
       "extended_meaning": "Půda ve snech jest archetypem paměti a odložených obsahů — ne tak temná jako sklep, avšak stejně opomíjená. Jungiánsky jest půda horní vrstvou nevědomí: místo, kde leží věci z dávné minulosti, přikryté prachem. Co na půdě nalezneme, bývá překvapivě staré a překvapivě důležité.",
       "illustration": "puda_2.svg",
       "tags": [
@@ -7332,7 +7332,7 @@
       "id": "labyrint",
       "label": "Labyrint",
       "category": "mista",
-      "base_meaning": "Cesta, jíž střed jest skryt a každá odbočka vypadá jako správná — dokud není.",
+      "base_meaning": "Cesta, jejíž střed jest skryt a každá odbočka vypadá jako správná — dokud není.",
       "extended_meaning": "Labyrint jest jedním z nejuniverzálnějších snových obrazů — cesta dovnitř jest zároveň cestou k centru sebe sama. Ve snech přichází jako obraz psychického zmatení nebo jako iniciační prostor: chaos, jenž má řád, avšak řád, jejž nelze pochopit zvenčí. Jungiánsky jest labyrint obrazem individuační cesty — nikoliv přímé, nýbrž spirálovité, opakující se, prohlubující.",
       "illustration": "labyrint.svg",
       "tags": [
@@ -7415,7 +7415,7 @@
       "label": "Záchod",
       "category": "mista",
       "base_meaning": "Místo, kam odkládáme to, co tělo odmítlo — a co psyché raději nechce vidět.",
-      "extended_meaning": "Záchod ve snech jest obrazem psychického vylučování — potřeby zbavit se obsahů, jíž si vědomí přeje neznat. Jungiánsky bývá záchod blízký stínu v jeho nejpraktičtější podobě: co organismu neprospívá, musí ven. Snový záchod bývá špinavý, veřejný nebo nefunkční — obraz blokované schopnosti propustit to, co již neslouží.",
+      "extended_meaning": "Záchod ve snech jest obrazem psychického vylučování — potřeby zbavit se obsahů, jež si vědomí přeje neznat. Jungiánsky bývá záchod blízký stínu v jeho nejpraktičtější podobě: co organismu neprospívá, musí ven. Snový záchod bývá špinavý, veřejný nebo nefunkční — obraz blokované schopnosti propustit to, co již neslouží.",
       "illustration": "zachod.svg",
       "tags": [
         "vylouceni",
@@ -7455,7 +7455,7 @@
       "label": "Hrad",
       "category": "mista",
       "base_meaning": "Pevnost z kamene a vůle — chrání to, co je uvnitř, avšak také uvězňuje.",
-      "extended_meaning": "Hrad ve snech jest obrazem obranyschopnosti a moci — avšak i izolace. Jungiánsky bývá hrad archetypem opevněného Já: struktura, jíž cílem jest ochrana, avšak jejíž hradby mohou snadno přerůst ve vězení. Kdo vládne hradu ve snu, kdo jej dobývá a co jest uvnitř — to jest klíč k výkladu.",
+      "extended_meaning": "Hrad ve snech jest obrazem obranyschopnosti a moci — avšak i izolace. Jungiánsky bývá hrad archetypem opevněného Já: struktura, jejíž cílem jest ochrana, avšak jejíž hradby mohou snadno přerůst ve vězení. Kdo vládne hradu ve snu, kdo jej dobývá a co jest uvnitř — to jest klíč k výkladu.",
       "illustration": "hrad.svg",
       "tags": [
         "ochrana",
@@ -7496,7 +7496,7 @@
       "label": "Věž",
       "category": "mista",
       "base_meaning": "Vertikála moci nebo uvěznění — čím výše, tím vzdálenější od země a od ostatních.",
-      "extended_meaning": "Věž ve snech jest obrazem výšky bez zakořenění — intelektu odtrženého od těla, moci odtrženého od empatie. Jungiánsky bývá věž blízká archetypu Senexa v jeho rigidní podobě nebo animusu v jeho tyranském aspektu. Věž jest i místem uvěznění princezny — animy, jíž svoboda čeká na osvoboditele zevnitř.",
+      "extended_meaning": "Věž ve snech jest obrazem výšky bez zakořenění — intelektu odtrženého od těla, moci odtrženého od empatie. Jungiánsky bývá věž blízká archetypu Senexa v jeho rigidní podobě nebo animusu v jeho tyranském aspektu. Věž jest i místem uvěznění princezny — animy, jejíž svoboda čeká na osvoboditele zevnitř.",
       "illustration": "vez.svg",
       "tags": [
         "výška",
@@ -8190,7 +8190,7 @@
       "label": "Divadlo",
       "category": "mista",
       "base_meaning": "Místo, kde se hraje pravda pod maskou — a kde hranice mezi hercem a rolí se stává otázkou.",
-      "extended_meaning": "Divadlo ve snech jest archetypálním místem persóny — prostorem, kde role jest vědomě přijata, avšak kde hrozí, že herec zapomene, kým jest pod maskou. Jungiánsky bývá divadlo blízké archetypu persóny a Já: co se hraje na jevišti, co se děje za oponou a kdo sedí v hledišti — to vše jsou aspekty psychického dění. Být nucen hrát roli, jíž neznáme, jest klasický snový obraz krize identity.",
+      "extended_meaning": "Divadlo ve snech jest archetypálním místem persóny — prostorem, kde role jest vědomě přijata, avšak kde hrozí, že herec zapomene, kým jest pod maskou. Jungiánsky bývá divadlo blízké archetypu persóny a Já: co se hraje na jevišti, co se děje za oponou a kdo sedí v hledišti — to vše jsou aspekty psychického dění. Být nucen hrát roli, již neznáme, jest klasický snový obraz krize identity.",
       "illustration": "divadlo.svg",
       "tags": [
         "persona",
@@ -8353,7 +8353,7 @@
       "label": "Dveře",
       "category": "mista",
       "base_meaning": "Práh v čistém tvaru — co jest za nimi, ještě nevíme, a to jest vše.",
-      "extended_meaning": "Dveře ve snech jest jedním z nejuniverzálnějších snových obrazů prahu a volby. Jungiánsky jest dveře archetypem přechodu: každé zavřené dveře jest nevědomý obsah čekající na otevření, každé otevřené dveře jest výzva ke vstupu. Dveře, jíž nelze otevřít, jsou obrazem blokované transformace.",
+      "extended_meaning": "Dveře ve snech jsou jedním z nejuniverzálnějších snových obrazů prahu a volby. Jungiánsky jest dveře archetypem přechodu: každé zavřené dveře jest nevědomý obsah čekající na otevření, každé otevřené dveře jest výzva ke vstupu. Dveře, jež nelze otevřít, jsou obrazem blokované transformace.",
       "illustration": "dvere.svg",
       "tags": [
         "práh",
@@ -8394,7 +8394,7 @@
       "label": "Stěna",
       "category": "mista",
       "base_meaning": "Hranice bez průchodu — místo, kde pohyb končí a otázka zní: proč zde stěna stojí?",
-      "extended_meaning": "Stěna ve snech jest obrazem překážky nebo ochranné hranice — záleží na tom, zda jest stěna uvnitř nebo vně sniče. Jungiánsky bývá stěna blízká archetypu psychické obrany nebo komplexu: struktura, jíž smyslem bylo kdysi chránit, avšak jíž přítomnost nyní zabraňuje průchodu. Co jest na druhé straně, jest vždy důležitější než stěna sama.",
+      "extended_meaning": "Stěna ve snech jest obrazem překážky nebo ochranné hranice — záleží na tom, zda jest stěna uvnitř nebo vně sniče. Jungiánsky bývá stěna blízká archetypu psychické obrany nebo komplexu: struktura, jejíž smyslem bylo kdysi chránit, avšak jejíž přítomnost nyní zabraňuje průchodu. Co jest na druhé straně, jest vždy důležitější než stěna sama.",
       "illustration": "stena.svg",
       "tags": [
         "překážka",
@@ -8435,7 +8435,7 @@
       "label": "Vězení",
       "category": "mista",
       "base_meaning": "Prostor, z něhož není úniku — a kde otázka viny teprve začíná.",
-      "extended_meaning": "Vězení ve snech jest archetypálním místem uvěznění — ať již za trest, omylem nebo vlastní volbou. Jungiánsky bývá vězení blízké stínu nebo komplexu v jeho nejrigidnější podobě: psychická struktura, jíž úkolem bylo kdysi zadržet nebezpečné, avšak jíž mříže nyní drží i to, co by mohlo být svobodné. Kdo jest ve vězení, kdo věznit a je-li cela zamčena zevnitř nebo zvenčí — to jest klíč.",
+      "extended_meaning": "Vězení ve snech jest archetypálním místem uvěznění — ať již za trest, omylem nebo vlastní volbou. Jungiánsky bývá vězení blízké stínu nebo komplexu v jeho nejrigidnější podobě: psychická struktura, jejíž úkolem bylo kdysi zadržet nebezpečné, avšak jejíž mříže nyní drží i to, co by mohlo být svobodné. Kdo jest ve vězení, kdo věznit a je-li cela zamčena zevnitř nebo zvenčí — to jest klíč.",
       "illustration": "vezeni.svg",
       "tags": [
         "uvezeni",
@@ -8638,8 +8638,8 @@
       "id": "vlasy",
       "label": "Vlasy",
       "category": "telo",
-      "base_meaning": "Koruna těla — síla, smyslovost nebo identita, jíž lze ostříhat v jediném gestu.",
-      "extended_meaning": "Vlasy ve snech jest obrazem vitality, identity a společenského signálu. Jungiánsky bývají vlasy blízké archetypu animy nebo animusu v jejich smyslové podobě: Samsonova síla sídlila ve vlasech, mnichova pokora v jejich ostříhání. Ztráta vlasů ve snu jest zřídkakdy kosmetická — bývá obrazem ztráty moci, identity nebo přechodu.",
+      "base_meaning": "Koruna těla — síla, smyslovost nebo identita, již lze ostříhat v jediném gestu.",
+      "extended_meaning": "Vlasy ve snech jsou obrazem vitality, identity a společenského signálu. Jungiánsky bývají vlasy blízké archetypu animy nebo animusu v jejich smyslové podobě: Samsonova síla sídlila ve vlasech, mnichova pokora v jejich ostříhání. Ztráta vlasů ve snu jest zřídkakdy kosmetická — bývá obrazem ztráty moci, identity nebo přechodu.",
       "illustration": "vlasy.svg",
       "tags": [
         "vitalita",
@@ -8679,7 +8679,7 @@
       "label": "Oči",
       "category": "telo",
       "base_meaning": "Okno duše — co vidíme a co se odváží vidět nás zpět.",
-      "extended_meaning": "Oči ve snech jest archetypálním obrazem vědomí, pohledu a poznání. Jungiánsky bývají oči blízké funkcím vnímání a intuice: co oči ve snu vidí nebo odmítají vidět, co jest oslepující nebo skryté — to jest obraz psychické pozornosti a jejích hranic. Oko, jíž hledí zpět, jest obrazem sebereflexe nebo konfrontace se stínem.",
+      "extended_meaning": "Oči ve snech jsou archetypálním obrazem vědomí, pohledu a poznání. Jungiánsky bývají oči blízké funkcím vnímání a intuice: co oči ve snu vidí nebo odmítají vidět, co jest oslepující nebo skryté — to jest obraz psychické pozornosti a jejích hranic. Oko, jež hledí zpět, jest obrazem sebereflexe nebo konfrontace se stínem.",
       "illustration": "oci.svg",
       "tags": [
         "vědomí",
@@ -8719,7 +8719,7 @@
       "label": "Ruce",
       "category": "telo",
       "base_meaning": "Nástroj vůle ve světě — co uchopujeme, co tvoříme, co pouštíme.",
-      "extended_meaning": "Ruce ve snech jest obrazem schopnosti jednat, tvořit a vztahovat se. Jungiánsky bývají ruce blízké archetypu animusu v jeho aktivním aspektu nebo funkci ega: co ruce ve snu dělají, co nemohou udělat nebo co drží příliš pevně — to jest obraz psychické akce a její blokace. Ruce, jíž ubližují, jsou jiný obraz než ruce, jíž léčí.",
+      "extended_meaning": "Ruce ve snech jsou obrazem schopnosti jednat, tvořit a vztahovat se. Jungiánsky bývají ruce blízké archetypu animusu v jeho aktivním aspektu nebo funkci ega: co ruce ve snu dělají, co nemohou udělat nebo co drží příliš pevně — to jest obraz psychické akce a její blokace. Ruce, jež ubližují, jsou jiný obraz než ruce, jíž léčí.",
       "illustration": "ruce.svg",
       "tags": [
         "čin",
@@ -8758,7 +8758,7 @@
       "label": "Nohy",
       "category": "telo",
       "base_meaning": "Základ pohybu a zakořenění — co nás nese světem a co nás spojuje se zemí.",
-      "extended_meaning": "Nohy ve snech jest obrazem schopnosti pohybu, ukotvení a směřování. Jungiánsky bývají nohy blízké archetypu cesty a individuace v jejím tělesném aspektu: nohy, jíž nenesou nebo jsou příliš těžké, jsou obrazem psychické nehybnosti. Bosé nohy na zemi jsou obrazem zakořenění a kontaktu s realitou.",
+      "extended_meaning": "Nohy ve snech jsou obrazem schopnosti pohybu, ukotvení a směřování. Jungiánsky bývají nohy blízké archetypu cesty a individuace v jejím tělesném aspektu: nohy, jež nenesou nebo jsou příliš těžké, jsou obrazem psychické nehybnosti. Bosé nohy na zemi jsou obrazem zakořenění a kontaktu s realitou.",
       "illustration": "nohy.svg",
       "tags": [
         "pohyb",
@@ -8795,7 +8795,7 @@
       "label": "Ústa",
       "category": "telo",
       "base_meaning": "Místo slova i mlčení — co říkáme, co polykneme zpět a co vychází bez kontroly.",
-      "extended_meaning": "Ústa ve snech jest obrazem komunikace, výrazu a jejich potlačení. Jungiánsky bývají ústa blízká archetypu animy nebo animusu v jejich verbální podobě: co ze sebe vydáváme slovy, co odmítáme vyslovit. Usta zašitá nebo němá jsou klasickým obrazem potlačeného výrazu; usta, jíž mluví bez vůle sniče, jsou obrazem autonomního komplexu.",
+      "extended_meaning": "Ústa ve snech jsou obrazem komunikace, výrazu a jejich potlačení. Jungiánsky bývají ústa blízká archetypu animy nebo animusu v jejich verbální podobě: co ze sebe vydáváme slovy, co odmítáme vyslovit. Usta zašitá nebo němá jsou klasickým obrazem potlačeného výrazu; usta, jež mluví bez vůle sniče, jsou obrazem autonomního komplexu.",
       "illustration": "usta.svg",
       "tags": [
         "výraz",
@@ -8874,7 +8874,7 @@
       "label": "Prsa",
       "category": "telo",
       "base_meaning": "Střed těla, kde bije srdce a kde výživa měla svůj první zdroj — blízkost a mateřství v jednom obraze.",
-      "extended_meaning": "Prsa ve snech jest archetypálním obrazem péče, výživy a intimity — Velká Matka v tělesné podobě. Jungiánsky bývají prsa blízká archetypu animy nebo Velké Matky: co jest v tomto obraze nabízeno, odmítáno nebo zraněno — to vypovídá o vztahu sniče k péči a intimní závislosti. Prsa jsou i obrazem zranitelného středu.",
+      "extended_meaning": "Prsa ve snech jsou archetypálním obrazem péče, výživy a intimity — Velká Matka v tělesné podobě. Jungiánsky bývají prsa blízká archetypu animy nebo Velké Matky: co jest v tomto obraze nabízeno, odmítáno nebo zraněno — to vypovídá o vztahu sniče k péči a intimní závislosti. Prsa jsou i obrazem zranitelného středu.",
       "illustration": "prsa.svg",
       "tags": [
         "péče",
@@ -8913,7 +8913,7 @@
       "label": "Genitálie",
       "category": "telo",
       "base_meaning": "Původ a touha v jednom místě — kde život začíná a kde psyché nejméně lže.",
-      "extended_meaning": "Genitálie ve snech jest obrazem vitální síly, sexuality a tvůrčího principu v jeho nejpůvodnější podobě. Jungiánsky bývají genitálie blízké archetypu animy nebo animusu v jejich instinktivní vrstvě: co jest ve snu s tímto obrazem spojeno — stud, touha, zranění nebo svoboda — to jest obraz vztahu sniče k vlastní vitální energii a sexualitě.",
+      "extended_meaning": "Genitálie ve snech jsou obrazem vitální síly, sexuality a tvůrčího principu v jeho nejpůvodnější podobě. Jungiánsky bývají genitálie blízké archetypu animy nebo animusu v jejich instinktivní vrstvě: co jest ve snu s tímto obrazem spojeno — stud, touha, zranění nebo svoboda — to jest obraz vztahu sniče k vlastní vitální energii a sexualitě.",
       "illustration": "genitalie.svg",
       "tags": [
         "vitalita",
@@ -8952,8 +8952,8 @@
       "id": "slzy",
       "label": "Slzy",
       "category": "telo",
-      "base_meaning": "Voda, jíž tělo vydává, když slova nestačí — pravda v tekuté podobě.",
-      "extended_meaning": "Slzy ve snech jest obrazem autentického citu — psyché, jíž se dotkneme pod vrstvou kontroly. Jungiánsky bývají slzy blízké archetypu animy nebo funkci cítění: co vyvolává slzy ve snu, co zůstává neoplakáno v bdělém životě. Slzy, jíž nemohou vytéct, jsou obrazem zablokovaného žalu; slzy, jíž nemohou přestat, jsou obrazem zaplaveného ega.",
+      "base_meaning": "Voda, již tělo vydává, když slova nestačí — pravda v tekuté podobě.",
+      "extended_meaning": "Slzy ve snech jsou obrazem autentického citu — psyché, jíž se dotkneme pod vrstvou kontroly. Jungiánsky bývají slzy blízké archetypu animy nebo funkci cítění: co vyvolává slzy ve snu, co zůstává neoplakáno v bdělém životě. Slzy, jež nemohou vytéct, jsou obrazem zablokovaného žalu; slzy, jež nemohou přestat, jsou obrazem zaplaveného ega.",
       "illustration": "slzy.svg",
       "tags": [
         "cit",
@@ -8993,7 +8993,7 @@
       "id": "moc",
       "label": "Moč",
       "category": "telo",
-      "base_meaning": "Tělo, jíž propouští to, co již nepotřebuje — a co se děje, když tato schopnost selže.",
+      "base_meaning": "Tělo, jež propouští to, co již nepotřebuje — a co se děje, když tato schopnost selže.",
       "extended_meaning": "Moč ve snech jest obrazem psychického vylučování a kontroly — schopnosti či neschopnosti propustit to, co organismus zpracoval. Jungiánsky bývá moč blízká stínu v jeho tělesné, tabuizované podobě: pomočení jest obrazem ztráty kontroly, ztráty hranic nebo regrese. Hledání záchodu, jenž není nebo nefunguje, jest klasický snový obraz psychické blokace vylučování nežádoucích obsahů.",
       "illustration": "moc.svg",
       "tags": [
@@ -9072,7 +9072,7 @@
       "id": "nador",
       "label": "Nádor",
       "category": "telo",
-      "base_meaning": "Růst, jenž nebyl pozván — energie bez směru, jíž tělo nevědí jak zastavit.",
+      "base_meaning": "Růst, jenž nebyl pozván — energie bez směru, již tělo neví jak zastavit.",
       "extended_meaning": "Nádor ve snech jest obrazem psychického obsahu, jenž roste autonomně mimo vědomou kontrolu — komplexu, jenž se živí sám sebou. Jungiánsky bývá nádor blízký archetypu stínu v jeho nejnaléhavější podobě: co bylo potlačeno a ignorováno, začalo růst. Kde v těle sídlí, co jest uvnitř a zda jest léčitelný — to jsou klíčové otázky výkladu.",
       "illustration": "nador.svg",
       "tags": [
@@ -9112,8 +9112,8 @@
       "id": "paralyza",
       "label": "Paralýza",
       "category": "telo",
-      "base_meaning": "Tělo, jíž ví, co chce, a přesto se nehýbe — vůle zaklíněná mezi záměrem a pohybem.",
-      "extended_meaning": "Paralýza ve snech jest jedním z nejčastějších a nejuniverzálnějších snových obrazů — psyché, jíž nemůže jednat tváří v tvář nebezpečí nebo výzvy. Jungiánsky bývá paralýza obrazem blokované libida nebo konfliktu mezi vědomou vůlí a nevědomou brzdou: ego chce, avšak něco hlubšího zakazuje. Jest to vždy obraz psychické nehybnosti v klíčovém okamžiku.",
+      "base_meaning": "Tělo, jež ví, co chce, a přesto se nehýbe — vůle zaklíněná mezi záměrem a pohybem.",
+      "extended_meaning": "Paralýza ve snech jest jedním z nejčastějších a nejuniverzálnějších snových obrazů — psyché, jež nemůže jednat tváří v tvář nebezpečí nebo výzvy. Jungiánsky bývá paralýza obrazem blokované libida nebo konfliktu mezi vědomou vůlí a nevědomou brzdou: ego chce, avšak něco hlubšího zakazuje. Jest to vždy obraz psychické nehybnosti v klíčovém okamžiku.",
       "illustration": "paralyza.svg",
       "tags": [
         "blokace",
@@ -9152,7 +9152,7 @@
       "id": "zvraceni",
       "label": "Zvracení",
       "category": "telo",
-      "base_meaning": "Tělo, jíž odmítlo přijmout — co bylo spolknuto a co se nyní vrací ven s naléhavostí.",
+      "base_meaning": "Tělo, jež odmítlo přijmout — co bylo spolknuto a co se nyní vrací ven s naléhavostí.",
       "extended_meaning": "Zvracení ve snech jest obrazem psychického odmítnutí nebo katarze — co bylo přijato, co nebylo strávitelné a co musí být vyvrženo. Jungiánsky bývá zvracení blízké archetypu očisty nebo krize integrace: psyché se zbavuje toho, co nemůže asimilovat. Co je zvraceno a za jakých okolností — to jest klíč k výkladu.",
       "illustration": "zvraceni.svg",
       "tags": [
@@ -9191,7 +9191,7 @@
       "id": "slepota",
       "label": "Slepota",
       "category": "telo",
-      "base_meaning": "Oči, jíž jsou otevřeny, a přesto nic nevidí — nebo jíž vidět odmítají.",
+      "base_meaning": "Oči, jež jsou otevřeny, a přesto nic nevidí — nebo jež vidět odmítají.",
       "extended_meaning": "Slepota ve snech jest archetypálním obrazem odmítnutí nebo neschopnosti vidět — co jest přítomno, avšak vědomí nevnímá. Jungiánsky bývá slepota blízká archetypu potlačení nebo vytěsnění: Oidipus si vyloupil oči teprve poté, co konečně uviděl pravdu. Slepota ve snu jest zřídkakdy fyzická — jest vždy otázkou, co odmítáme vědět.",
       "illustration": "slepota.svg",
       "tags": [
@@ -9273,7 +9273,7 @@
       "id": "amputace",
       "label": "Amputace",
       "category": "telo",
-      "base_meaning": "Část těla, jíž není — odtětá nebo odňatá, a přesto stále přítomná jako přízrak.",
+      "base_meaning": "Část těla, jež není — odtětá nebo odňatá, a přesto stále přítomná jako přízrak.",
       "extended_meaning": "Amputace ve snech jest obrazem radikální ztráty schopnosti nebo části identity — co bylo integrální součástí, jest nyní pryč. Jungiánsky bývá amputace blízká archetypu oběti nebo zkázy schopnosti: ztráta ruky jest ztráta činu, ztráta nohy jest ztráta pohybu a směřování. Fantómová bolest — přítomnost nepřítomného — jest obrazem psychického truchlení za ztracenou schopnost.",
       "illustration": "amputace.svg",
       "tags": [
@@ -9353,7 +9353,7 @@
       "label": "Břicho",
       "category": "telo",
       "base_meaning": "Střed těla a střed pocitu — kde instinkt mluví dříve než mysl a kde se nosí to nejtěžší.",
-      "extended_meaning": "Břicho ve snech jest obrazem instinktivního vědění, viscerálního pocitu a toho, co neseme uvnitř. Jungiánsky bývá břicho blízké archetypu animy nebo středu tělesného Já: pocit v břiše jest obraz psychické pravdy, jíž mysl ještě neformulovala. Břicho jako místo tíhy, bolesti nebo skrytého plodu — každý obraz říká něco jiného o vnitřním nošení.",
+      "extended_meaning": "Břicho ve snech jest obrazem instinktivního vědění, viscerálního pocitu a toho, co neseme uvnitř. Jungiánsky bývá břicho blízké archetypu animy nebo středu tělesného Já: pocit v břiše jest obraz psychické pravdy, již mysl ještě neformulovala. Břicho jako místo tíhy, bolesti nebo skrytého plodu — každý obraz říká něco jiného o vnitřním nošení.",
       "illustration": "bricho.svg",
       "tags": [
         "instinkt",
@@ -9393,7 +9393,7 @@
       "label": "Stehna",
       "category": "telo",
       "base_meaning": "Síla pohybu a intimity v jednom místě — co nese tělo vpřed a co střeží přechod.",
-      "extended_meaning": "Stehna ve snech jest obrazem tělesné síly, smyslnosti a přechodu k intimní zóně. Jungiánsky bývají stehna blízká archetypu animy nebo animusu v jejich tělesné smyslové vrstvě: síla nebo zranitelnost stehen vypovídá o vztahu k vlastní tělesné moci a smyslnosti. Zranění stehna jest klasický obraz zranění pohybu nebo intimity.",
+      "extended_meaning": "Stehna ve snech jsou obrazem tělesné síly, smyslnosti a přechodu k intimní zóně. Jungiánsky bývají stehna blízká archetypu animy nebo animusu v jejich tělesné smyslové vrstvě: síla nebo zranitelnost stehen vypovídá o vztahu k vlastní tělesné moci a smyslnosti. Zranění stehna jest klasický obraz zranění pohybu nebo intimity.",
       "illustration": "stehna.svg",
       "tags": [
         "síla",
@@ -9433,7 +9433,7 @@
       "label": "Kůže",
       "category": "telo",
       "base_meaning": "Nejtenčí hranice mezi mnou a světem — co svět vidí a co já cítím zevnitř.",
-      "extended_meaning": "Kůže ve snech jest archetypálním obrazem hranice, identity a zranitelnosti — nejpovrchnější a zároveň nejrozsáhlejší orgán. Jungiánsky bývá kůže blízká archetypu persóny: co kůže ukazuje, skrývá nebo co pod ní vyvěrá. Kůže, jíž se loupe, praská nebo mění barvu, jest obrazem psychické transformace nebo krizové hranice.",
+      "extended_meaning": "Kůže ve snech jest archetypálním obrazem hranice, identity a zranitelnosti — nejpovrchnější a zároveň nejrozsáhlejší orgán. Jungiánsky bývá kůže blízká archetypu persóny: co kůže ukazuje, skrývá nebo co pod ní vyvěrá. Kůže, jež se loupe, praská nebo mění barvu, jest obrazem psychické transformace nebo krizové hranice.",
       "illustration": "kuze.svg",
       "tags": [
         "hranice",
@@ -9513,7 +9513,7 @@
       "label": "Rána",
       "category": "telo",
       "base_meaning": "Místo, kde hranice byla porušena — otevřené, bolestivé a zároveň místo vstupu světla.",
-      "extended_meaning": "Rána ve snech jest archetypálním obrazem zranění a zároveň místa transformace — Jung řekl, že rána jest místem, kde světlo vstupuje. Jungiánsky bývá rána blízká archetypu raněného léčitele: kdo byl zraněn, má přístup k hlubinám, jíž nezraněný nezná. Čerstvá rána jest jiný obraz než rána hojená nebo zanedbaná — každá fáze má svůj psychický ekvivalent.",
+      "extended_meaning": "Rána ve snech jest archetypálním obrazem zranění a zároveň místa transformace — Jung řekl, že rána jest místem, kde světlo vstupuje. Jungiánsky bývá rána blízká archetypu raněného léčitele: kdo byl zraněn, má přístup k hlubinám, jež nezraněný nezná. Čerstvá rána jest jiný obraz než rána hojená nebo zanedbaná — každá fáze má svůj psychický ekvivalent.",
       "illustration": "rana.svg",
       "tags": [
         "zranění",
@@ -9552,7 +9552,7 @@
       "id": "zlomenina",
       "label": "Zlomenina",
       "category": "telo",
-      "base_meaning": "Kost, jíž praskla pod tlakem — pevná struktura, jíž se ukázalo, že má své meze.",
+      "base_meaning": "Kost, jež praskla pod tlakem — pevná struktura, jež se ukázalo, že má své meze.",
       "extended_meaning": "Zlomenina ve snech jest obrazem strukturálního selhání pod tlakem — co bylo považováno za pevné, se ukázalo jako křehké. Jungiánsky bývá zlomenina blízká archetypu krize nebo transformace: kost se musí zlomit, aby se srostla silněji. Která část těla jest zlomena a za jakých okolností — to určuje psychický obsah: zlomená ruka jest jiný obraz než zlomená páteř.",
       "illustration": "zlomenina.svg",
       "tags": [
@@ -9592,8 +9592,8 @@
       "id": "menstruace",
       "label": "Menstruace",
       "category": "telo",
-      "base_meaning": "Cyklický návrat — tělo, jíž připomíná svůj rytmus a svou schopnost začínat znovu.",
-      "extended_meaning": "Menstruace ve snech jest archetypálním obrazem ženského cyklu, lunárního rytmu a cyklické obnovy. Jungiánsky bývá menstruace blízká archetypu animy nebo Velké Matky v jejich lunární podobě: krev, jíž není z rány, nýbrž z cyklu — obraz přirozené ztráty a přirozené obnovy. Stud, úleva nebo obava z menstruace ve snu — to vše vypovídá o vztahu k vlastní tělesnosti a ženskému principu.",
+      "base_meaning": "Cyklický návrat — tělo, jež připomíná svůj rytmus a svou schopnost začínat znovu.",
+      "extended_meaning": "Menstruace ve snech jest archetypálním obrazem ženského cyklu, lunárního rytmu a cyklické obnovy. Jungiánsky bývá menstruace blízká archetypu animy nebo Velké Matky v jejich lunární podobě: krev, jež není z rány, nýbrž z cyklu — obraz přirozené ztráty a přirozené obnovy. Stud, úleva nebo obava z menstruace ve snu — to vše vypovídá o vztahu k vlastní tělesnosti a ženskému principu.",
       "illustration": "menstruace.svg",
       "tags": [
         "cyklus",
@@ -9671,8 +9671,8 @@
       "id": "bolest",
       "label": "Bolest",
       "category": "telo",
-      "base_meaning": "Signál, jenž odmítá být ignorován — tělo nebo psyché volají pozornost k místu, jíž potřebuje péči.",
-      "extended_meaning": "Bolest ve snech jest archetypálním obrazem psychického nebo tělesného signálu — co odmítá zůstat v tichu. Jungiánsky bývá bolest blízká funkci stínu nebo animy: to, co bolí, jest vždy místo, kde jest třeba pozornosti. Bolest, jíž snič ignoruje, jest jiný obraz než bolest, jíž přijme — obojí vypovídá o vztahu k vlastnímu utrpení.",
+      "base_meaning": "Signál, jenž odmítá být ignorován — tělo nebo psyché volají pozornost k místu, jež potřebuje péči.",
+      "extended_meaning": "Bolest ve snech jest archetypálním obrazem psychického nebo tělesného signálu — co odmítá zůstat v tichu. Jungiánsky bývá bolest blízká funkci stínu nebo animy: to, co bolí, jest vždy místo, kde jest třeba pozornosti. Bolest, již snič ignoruje, jest jiný obraz než bolest, již přijme — obojí vypovídá o vztahu k vlastnímu utrpení.",
       "illustration": "bolest.svg",
       "tags": [
         "signál",
@@ -9791,7 +9791,7 @@
       "id": "mozek",
       "label": "Mozek",
       "category": "telo",
-      "base_meaning": "Orgán myšlení jako fyzický objekt — hmota, jíž produkuje vědomí, avšak sama jest nevědomá.",
+      "base_meaning": "Orgán myšlení jako fyzický objekt — hmota, jež produkuje vědomí, avšak sama jest nevědomá.",
       "extended_meaning": "Mozek ve snech jest obrazem instrumentu vědomí — nikoli vědomí samotného. Jungiánsky bývá mozek blízký archetypu logos nebo ega v jeho fyziologickém substrátu: vidět mozek ve snu jest jiný obraz než myslet — jest to pohled na nástroj zvenčí. Nemocný nebo poškozený mozek jest obrazem krize racionálního řízení; mozek mimo tělo jest obrazem radikálního odtržení intelektu od prožitku.",
       "illustration": "mozek.svg",
       "tags": [
@@ -9833,7 +9833,7 @@
       "label": "Deštník",
       "category": "predmety",
       "base_meaning": "Přenosná ochrana před tím, co padá z nebe — intimní štít proti tomu, co přichází shora.",
-      "extended_meaning": "Deštník ve snech jest obrazem osobní obrany proti vnějšímu tlaku nebo emocím, jíž přicházejí shora — z nevědomí, z autority, z osudu. Jungiánsky bývá deštník blízký archetypu persóny jako ochranné struktury: fungující deštník jest obraz funkční obrany; roztržený nebo chybějící deštník jest obraz psychické zranitelnosti vůči tomu, co se valí. Co padá a zda deštník pomáhá — to jest jádro výkladu.",
+      "extended_meaning": "Deštník ve snech jest obrazem osobní obrany proti vnějšímu tlaku nebo emocím, jež přicházejí shora — z nevědomí, z autority, z osudu. Jungiánsky bývá deštník blízký archetypu persóny jako ochranné struktury: fungující deštník jest obraz funkční obrany; roztržený nebo chybějící deštník jest obraz psychické zranitelnosti vůči tomu, co se valí. Co padá a zda deštník pomáhá — to jest jádro výkladu.",
       "illustration": "destnik.svg",
       "tags": [
         "ochrana",
@@ -10033,7 +10033,7 @@
       "id": "nuz",
       "label": "Nůž",
       "category": "predmety",
-      "base_meaning": "Nástroj i zbraň v jednom — co odděluje, co chrání a co může zranit, závisí jen na ruce, jíž jej drží.",
+      "base_meaning": "Nástroj i zbraň v jednom — co odděluje, co chrání a co může zranit, závisí jen na ruce, jež jej drží.",
       "extended_meaning": "Nůž ve snech jest archetypálním obrazem rozlišování, řezu a moci oddělovat. Jungiánsky bývá nůž blízký archetypu animusu v jeho agresivní nebo analytické podobě: kdo nůž drží, na co míří a zda snič útočí nebo se brání — to jest jádro výkladu. Nůž jako dar jest jiný obraz než nůž jako hrozba; chirurgický nůž jest jiný obraz než dýka.",
       "illustration": "nuz.svg",
       "tags": [
@@ -10073,7 +10073,7 @@
       "id": "mec",
       "label": "Meč",
       "category": "predmety",
-      "base_meaning": "Nůž povýšený na symbol — zbraň, jíž nese čest, spravedlnost a moc zabíjet ve jménu pravdy.",
+      "base_meaning": "Nůž povýšený na symbol — zbraň, jež nese čest, spravedlnost a moc zabíjet ve jménu pravdy.",
       "extended_meaning": "Meč ve snech jest archetypálním obrazem mužské síly, spravedlnosti a rozlišování v jeho nejvyšší, nejkulturnější podobě. Jungiánsky bývá meč blízký archetypu hrdiny nebo animusu: meč jest logos jako čin — řeže iluze, odděluje pravdu od lži. Získání meče jest iniciačním obrazem; zlomený meč jest obrazem krize mužské identity nebo ztráty principu.",
       "illustration": "mec.svg",
       "tags": [
@@ -10114,7 +10114,7 @@
       "label": "Skříň (druhá)",
       "category": "predmety",
       "base_meaning": "Co jest ve skříni tentokrát — věci, kostry nebo práh do jiného světa?",
-      "extended_meaning": "Druhý výskyt skříně ve snu nebo v sérii snů nese zesílenou symboliku: psyché se vrací k tomuto obrazu, protože prvním průchodem nezůstalo vše vyřešeno. Jungiánsky bývá opakovaná skříň obrazem persistentního stínového obsahu nebo tématu, jíž čeká na plné vědomé zpracování. Co jest uvnitř tentokrát — to jest klíčová otázka.",
+      "extended_meaning": "Druhý výskyt skříně ve snu nebo v sérii snů nese zesílenou symboliku: psyché se vrací k tomuto obrazu, protože prvním průchodem nezůstalo vše vyřešeno. Jungiánsky bývá opakovaná skříň obrazem persistentního stínového obsahu nebo tématu, jež čeká na plné vědomé zpracování. Co jest uvnitř tentokrát — to jest klíčová otázka.",
       "illustration": "skrin_2.svg",
       "tags": [
         "opakování",
@@ -10193,7 +10193,7 @@
       "id": "nadoba",
       "label": "Nádoba",
       "category": "predmety",
-      "base_meaning": "Prázdný tvar čekající na obsah — forma, jíž dává smysl tomu, co jest do ní vloženo.",
+      "base_meaning": "Prázdný tvar čekající na obsah — forma, jež dává smysl tomu, co jest do ní vloženo.",
       "extended_meaning": "Nádoba ve snech jest archetypálním ženským symbolem — přijímající, obsahující, uchovávající. Jungiánsky bývá nádoba blízká archetypu animy nebo Velké Matky v její přijímající dimenzi: co nádoba obsahuje, zda jest plná nebo prázdná, zda teče nebo jest celistvá — to vše jest obraz psychické kapacity přijímat a uchovávat. Rozbití nádoby jest obrazem ztráty schopnosti zadržet.",
       "illustration": "nadoba.svg",
       "tags": [
@@ -10233,7 +10233,7 @@
       "label": "Šaty",
       "category": "predmety",
       "base_meaning": "Druhá kůže vybraná vědomě — co ukazujeme světu a co před ním skrýváme tím, co oblékáme.",
-      "extended_meaning": "Šaty ve snech jest archetypálním obrazem persóny — co vědomě prezentujeme světu jako svůj zevnějšek. Jungiánsky bývají šaty blízké persóně v její doslovné podobě: přijít bez šatů jest obraz ztráty persóny nebo zranitelné autenticity; mít špatné šaty jest obraz nevhodné role; oblékat cizí šaty jest obraz přejímání cizí identity.",
+      "extended_meaning": "Šaty ve snech jsou archetypálním obrazem persóny — co vědomě prezentujeme světu jako svůj zevnějšek. Jungiánsky bývají šaty blízké persóně v její doslovné podobě: přijít bez šatů jest obraz ztráty persóny nebo zranitelné autenticity; mít špatné šaty jest obraz nevhodné role; oblékat cizí šaty jest obraz přejímání cizí identity.",
       "illustration": "saty.svg",
       "tags": [
         "persona",
@@ -10271,7 +10271,7 @@
       "id": "klobouk",
       "label": "Klobouk",
       "category": "predmety",
-      "base_meaning": "Co neseme na hlavě — myšlenka, role nebo identita, jíž lze sundat a položit.",
+      "base_meaning": "Co neseme na hlavě — myšlenka, role nebo identita, již lze sundat a položit.",
       "extended_meaning": "Klobouk ve snech jest obrazem přijatelné role nebo postoje — persóny v její nejpohyblivější, nejměnitelnější podobě. Jungiánsky bývá klobouk blízký archetypu persóny nebo animy v různých kulturních vtěleních: různé klobouky jsou různé role. Sundat klobouk jest gesto úcty nebo vzdání se role; ztratit klobouk jest obrazem nejistoty ve vlastní identitě nebo společenské pozici.",
       "illustration": "klobouk.svg",
       "tags": [
@@ -10555,8 +10555,8 @@
       "id": "nuzky",
       "label": "Nůžky",
       "category": "predmety",
-      "base_meaning": "Dvě čepele, jíž jsou k sobě vázány — oddělují, avšak samy jsou celistvé jen tehdy, když spolupracují.",
-      "extended_meaning": "Nůžky ve snech jest obrazem oddělování a rozlišování v jeho dvojité, dialektické podobě — na rozdíl od nože nůžky vyžadují dvě síly v rovnováze. Jungiánsky bývají nůžky blízké archetypu animusu nebo Velké Matky jako Osudové přadleny: co jest střiženo, co jest odděleno a zda snič střihá nebo jest střižen — to jest jádro výkladu. Stříhat vlasy nebo pouto nese archetypální dimenzi.",
+      "base_meaning": "Dvě čepele, jež jsou k sobě vázány — oddělují, avšak samy jsou celistvé jen tehdy, když spolupracují.",
+      "extended_meaning": "Nůžky ve snech jsou obrazem oddělování a rozlišování v jeho dvojité, dialektické podobě — na rozdíl od nože nůžky vyžadují dvě síly v rovnováze. Jungiánsky bývají nůžky blízké archetypu animusu nebo Velké Matky jako Osudové přadleny: co jest střiženo, co jest odděleno a zda snič střihá nebo jest střižen — to jest jádro výkladu. Stříhat vlasy nebo pouto nese archetypální dimenzi.",
       "illustration": "nuzky.svg",
       "tags": [
         "oddělení",
@@ -10632,7 +10632,7 @@
       "id": "kriz",
       "label": "Kříž",
       "category": "predmety",
-      "base_meaning": "Dvě linie, jíž se kříží v jednom bodě — vertikála nebe a horizontála země se setkávají v těle přibitém uprostřed.",
+      "base_meaning": "Dvě linie, jež se kříží v jednom bodě — vertikála nebe a horizontála země se setkávají v těle přibitém uprostřed.",
       "extended_meaning": "Kříž ve snech jest jedním z nejuniverzálnějších archetypálních symbolů — bod průsečíku mezi transcendentním a pozemským, mezi věčným a časným. Jungiánsky bývá kříž blízký archetypu self jako symbolu celku nebo utrpení individuace: nosit kříž jest obrazem přijatého břemene; kříž jako hrob jest obrazem konce; kříž jako světlo jest obrazem transformace skrze utrpení.",
       "illustration": "kriz.svg",
       "tags": [
@@ -10790,7 +10790,7 @@
       "label": "Hodiny",
       "category": "predmety",
       "base_meaning": "Čas učiněný viditelným — mechanismus, jenž neustále připomíná, že okamžik odchází.",
-      "extended_meaning": "Hodiny ve snech jest archetypálním obrazem vědomí času a smrtelnosti — co tikají, co odměřují a zda jdou správně, to vše vypovídá o vztahu sniče k časnosti. Jungiánsky bývají hodiny blízké archetypu stínu jako memento mori nebo self jako symbolu celého životního oblouku: zastavené hodiny jsou klasickým obrazem psychického zamrznutí nebo traumatu; zrychlené hodiny jsou obrazem úzkosti z času.",
+      "extended_meaning": "Hodiny ve snech jsou archetypálním obrazem vědomí času a smrtelnosti — co tikají, co odměřují a zda jdou správně, to vše vypovídá o vztahu sniče k časnosti. Jungiánsky bývají hodiny blízké archetypu stínu jako memento mori nebo self jako symbolu celého životního oblouku: zastavené hodiny jsou klasickým obrazem psychického zamrznutí nebo traumatu; zrychlené hodiny jsou obrazem úzkosti z času.",
       "illustration": "hodiny.svg",
       "tags": [
         "čas",
@@ -10911,7 +10911,7 @@
       "label": "Kolo",
       "category": "predmety",
       "base_meaning": "Kruh v pohybu — symbol, jenž spojuje celek s cestou, dokonalost tvaru s nutností pohybu vpřed.",
-      "extended_meaning": "Kolo ve snech jest archetypálním obrazem cyklu, pohybu a celku zároveň — mandala v pohybu. Jungiánsky bývá kolo blízké archetypu self jako symbolu celku nebo Kola osudu: kolo, jíž se otáčí, jest obrazem cyklického času nebo karmy; zlomené kolo jest obrazem přerušení cyklu nebo krize pohybu. Kolo jako dopravní prostředek nese jiné konotace než kolo jako symbol.",
+      "extended_meaning": "Kolo ve snech jest archetypálním obrazem cyklu, pohybu a celku zároveň — mandala v pohybu. Jungiánsky bývá kolo blízké archetypu self jako symbolu celku nebo Kola osudu: kolo, jež se otáčí, jest obrazem cyklického času nebo karmy; zlomené kolo jest obrazem přerušení cyklu nebo krize pohybu. Kolo jako dopravní prostředek nese jiné konotace než kolo jako symbol.",
       "illustration": "kolo.svg",
       "tags": [
         "cyklus",
@@ -10951,7 +10951,7 @@
       "label": "Dýka",
       "category": "predmety",
       "base_meaning": "Nůž, jenž byl stvořen pouze k jednomu — kratší než meč, skrytější než nůž, určená k blízkému úderu.",
-      "extended_meaning": "Dýka ve snech jest obrazem skryté agrese nebo obrany — zbraň intimní vzdálenosti, jíž lze ukrýt a vytáhnout překvapivě. Jungiánsky bývá dýka blízká archetypu stínu nebo animusu v jeho nejstinnější podobě: kdo dýku nese, kdo jest zasažen a zda jest dýka skrytá nebo viditelná — to jest jádro výkladu. Dýka v zádech jest archetypálním obrazem zrady.",
+      "extended_meaning": "Dýka ve snech jest obrazem skryté agrese nebo obrany — zbraň intimní vzdálenosti, již lze ukrýt a vytáhnout překvapivě. Jungiánsky bývá dýka blízká archetypu stínu nebo animusu v jeho nejstinnější podobě: kdo dýku nese, kdo jest zasažen a zda jest dýka skrytá nebo viditelná — to jest jádro výkladu. Dýka v zádech jest archetypálním obrazem zrady.",
       "illustration": "dyka.svg",
       "tags": [
         "skrytá_agrese",
@@ -11110,7 +11110,7 @@
       "label": "Kabát",
       "category": "predmety",
       "base_meaning": "Vnější vrstva ochranná — co oblékáme proti světu, co chráníme uvnitř a co kabátem signalizujeme ven.",
-      "extended_meaning": "Kabát ve snech jest obrazem vnější ochrany a společenské prezentace — silnější, veřejnější vrstva než košile. Jungiánsky bývá kabát blízký archetypu persóny v její obranné funkci: ztratit kabát na mrazu jest obrazem ztráty ochrany; mít příliš těžký kabát jest obrazem přehnané obrany nebo role, jíž svírá. Cizí kabát jest obrazem přejímání cizí persóny.",
+      "extended_meaning": "Kabát ve snech jest obrazem vnější ochrany a společenské prezentace — silnější, veřejnější vrstva než košile. Jungiánsky bývá kabát blízký archetypu persóny v její obranné funkci: ztratit kabát na mrazu jest obrazem ztráty ochrany; mít příliš těžký kabát jest obrazem přehnané obrany nebo role, jež svírá. Cizí kabát jest obrazem přejímání cizí persóny.",
       "illustration": "kabat.svg",
       "tags": [
         "ochrana",
@@ -11150,7 +11150,7 @@
       "label": "Košile",
       "category": "predmety",
       "base_meaning": "Vrstva nejblíže tělu pod vším ostatním — co jest nejsoukromější ve společenském oblékání.",
-      "extended_meaning": "Košile ve snech jest obrazem intimnější vrstvy identity než kabát nebo sako — blíže tělu, blíže pravému já. Jungiánsky bývá košile blízká persóně v její osobnější dimenzi: košile s krví jest obrazem zranění skrytého pod povrchem; košile, jíž nepatří, jest obrazem přejaté identity. Svléknout košili jest obrazem odložení persóny a přiblížení se pravému já.",
+      "extended_meaning": "Košile ve snech jest obrazem intimnější vrstvy identity než kabát nebo sako — blíže tělu, blíže pravému já. Jungiánsky bývá košile blízká persóně v její osobnější dimenzi: košile s krví jest obrazem zranění skrytého pod povrchem; košile, jež nepatří, jest obrazem přejaté identity. Svléknout košili jest obrazem odložení persóny a přiblížení se pravému já.",
       "illustration": "kosile.svg",
       "tags": [
         "intimita",
@@ -11267,7 +11267,7 @@
       "id": "vidlicka",
       "label": "Vidlička",
       "category": "predmety",
-      "base_meaning": "Nástroj, jenž nabodává — elegantní zbraň u stolu, jíž přináší potravu k ústům v civilizovaném gestu.",
+      "base_meaning": "Nástroj, jenž nabodává — elegantní zbraň u stolu, jež přináší potravu k ústům v civilizovaném gestu.",
       "extended_meaning": "Vidlička ve snech jest obrazem přijímání potravy v její kultivované, společenské podobě — na rozdíl od rukou je vidlička gesto civilizace a distancování od instinktu. Jungiánsky bývá vidlička blízká archetypu animusu nebo persóny u stolu: s kým snič jí, co nabodává a zda jest vidlička zbraní nebo nástrojem — to jest jádro výkladu. Jíst vidličkou u slavnostního stolu jest jiný obraz než bodání vidličkou.",
       "illustration": "vidlicka.svg",
       "tags": [
@@ -11667,7 +11667,7 @@
       "label": "Pletení",
       "category": "udalosti",
       "base_meaning": "Tvorba skrze opakovaný rytmický pohyb — nitě se kříží, vzor vzniká postupně a celek jest viditelný teprve na konci.",
-      "extended_meaning": "Pletení ve snech jest obrazem trpělivé, rytmické tvorby — archetyp přadlen a Moiren, jíž tkají osud. Jungiánsky bývá pletení blízké archetypu Velké Matky nebo animy v její tvůrčí dimenzi: co jest pleteno, z jakého materiálu a zda vzor vychází nebo se rozpadá — to jest jádro výkladu. Rozpárat pletení jest obrazem destrukce trpělivé práce; plést pro druhého jest obrazem péče nebo pouta.",
+      "extended_meaning": "Pletení ve snech jest obrazem trpělivé, rytmické tvorby — archetyp přadlen a Moiren, jež tkají osud. Jungiánsky bývá pletení blízké archetypu Velké Matky nebo animy v její tvůrčí dimenzi: co jest pleteno, z jakého materiálu a zda vzor vychází nebo se rozpadá — to jest jádro výkladu. Rozpárat pletení jest obrazem destrukce trpělivé práce; plést pro druhého jest obrazem péče nebo pouta.",
       "illustration": "pleteni.svg",
       "tags": [
         "tvorba",
@@ -11949,7 +11949,7 @@
       "label": "Roztrhání",
       "category": "udalosti",
       "base_meaning": "Násilné oddělení bez nástroje — co jest roztrženo, bylo roztrženo silou, nikoli nástrojem; primitivnější a afektivnější než řez.",
-      "extended_meaning": "Roztrhání ve snech jest obrazem afektivní destrukce nebo násilné separace — vášeň nebo zuřivost, jíž nepoužívá nůž, ale ruce nebo sílu. Jungiánsky bývá roztrhání blízké archetypu stínu nebo dionýského principu: roztrhané oblečení jest obrazem zranění persóny; roztrhané dopisy nebo fotografie jsou obrazem odmítnutí nebo loučení s minulostí. Co jest roztrženo a s jakým pocitem — to jest klíčová otázka.",
+      "extended_meaning": "Roztrhání ve snech jest obrazem afektivní destrukce nebo násilné separace — vášeň nebo zuřivost, jež nepoužívá nůž, ale ruce nebo sílu. Jungiánsky bývá roztrhání blízké archetypu stínu nebo dionýského principu: roztrhané oblečení jest obrazem zranění persóny; roztrhané dopisy nebo fotografie jsou obrazem odmítnutí nebo loučení s minulostí. Co jest roztrženo a s jakým pocitem — to jest klíčová otázka.",
       "illustration": "roztrhani.svg",
       "tags": [
         "násilí",
@@ -12303,7 +12303,7 @@
       "label": "Záchrana",
       "category": "udalosti",
       "base_meaning": "Příchod pomoci v okamžiku krajní nouze — někdo nebo něco zadrží pád, vytáhne z vody, přinese světlo.",
-      "extended_meaning": "Záchrana ve snech jest obrazem psychické pomoci nebo milosti — kdo zachraňuje a kdo jest zachraňován vypovídá o vztahu mezi vědomím a nevědomými zdroji. Jungiánsky bývá záchrana blízká archetypu self nebo pozitivní animy: být zachráněn jest obrazem dostupnosti vnitřních zdrojů; zachraňovat druhé jest obrazem hrdinského komplexu nebo projekce; záchrana, jíž přijde pozdě, jest obrazem tragické dimenze psyché.",
+      "extended_meaning": "Záchrana ve snech jest obrazem psychické pomoci nebo milosti — kdo zachraňuje a kdo jest zachraňován vypovídá o vztahu mezi vědomím a nevědomými zdroji. Jungiánsky bývá záchrana blízká archetypu self nebo pozitivní animy: být zachráněn jest obrazem dostupnosti vnitřních zdrojů; zachraňovat druhé jest obrazem hrdinského komplexu nebo projekce; záchrana, jež přijde pozdě, jest obrazem tragické dimenze psyché.",
       "illustration": "zachrana.svg",
       "tags": [
         "pomoc",
@@ -12501,7 +12501,7 @@
       "id": "strelba",
       "label": "Střelba",
       "category": "udalosti",
-      "base_meaning": "Projektil vyslaný na dálku — násilí nebo přesnost bez přímého kontaktu; moc, jíž zasahuje cíl z bezpečné vzdálenosti.",
+      "base_meaning": "Projektil vyslaný na dálku — násilí nebo přesnost bez přímého kontaktu; moc, jež zasahuje cíl z bezpečné vzdálenosti.",
       "extended_meaning": "Střelba ve snech jest obrazem distancované agrese nebo přesné intence — střelec volí cíl a stiskne spoušť, aniž by se musel dotknout. Jungiánsky bývá střelba blízká archetypu stínu nebo animusu: být střelen jest obrazem zasažení nevědomým obsahem; střílet jest obrazem vědomé nebo nevědomé agrese; minout cíl jest obrazem frustrované intence. Zbraň jako rozšíření moci animusu jest klasickým jungiánským obrazem.",
       "illustration": "strelba.svg",
       "tags": [
@@ -12618,7 +12618,7 @@
       "id": "let",
       "label": "Let",
       "category": "udalosti",
-      "base_meaning": "Osvobození od gravitace — tělo se vznáší nad zemí a snič prožívá dimenzi, jíž ve bdělém stavu nezná.",
+      "base_meaning": "Osvobození od gravitace — tělo se vznáší nad zemí a snič prožívá dimenzi, již ve bdělém stavu nezná.",
       "extended_meaning": "Let ve snech jest archetypálním obrazem transcendence, svobody nebo odpoutání od tíže — jeden z nejradostnějších snových obrazů. Jungiánsky bývá let blízký archetypu hrdiny nebo self: létat snadno jest obrazem psychické svobody a sebepřesahu; létat s námahou jest obrazem aspirace; příliš vysoký let jest obrazem inflace ega nebo ikárského komplexu. Výška letu a schopnost řídit směr vypovídají o vztahu ke svobodě.",
       "illustration": "let.svg",
       "tags": [
@@ -12812,7 +12812,7 @@
       "label": "Kruh",
       "category": "abstrakce",
       "base_meaning": "Linie bez začátku a konce — geometrický tvar, jenž jest v každé kultuře symbolem celku, věčnosti a uzavřenosti.",
-      "extended_meaning": "Kruh ve snech jest archetypálním symbolem self — mandala jako přirozený výraz psychické celistvosti. Jungiánsky jest kruh jedním z nejdůležitějších symbolů: spontánní kreslení nebo snění kruhů jest považováno za projev procesu individuace; kruh jako ochranná hranice jest obrazem temenos; rozbitý kruh jest obrazem narušené integrity. Jung věnoval mandале — kruhu s centrem — zvláštní pozornost jako symbolu psychického řádu.",
+      "extended_meaning": "Kruh ve snech jest archetypálním symbolem self — mandala jako přirozený výraz psychické celistvosti. Jungiánsky jest kruh jedním z nejdůležitějších symbolů: spontánní kreslení nebo snění kruhů jest považováno za projev procesu individuace; kruh jako ochranná hranice jest obrazem temenos; rozbitý kruh jest obrazem narušené integrity. Jung věnoval mandale — kruhu s centrem — zvláštní pozornost jako symbolu psychického řádu.",
       "illustration": "kruh.svg",
       "tags": [
         "celistvost",
@@ -12967,8 +12967,8 @@
       "id": "cislo_7",
       "label": "Číslo 7",
       "category": "abstrakce",
-      "base_meaning": "Sedm dnů týdne, sedm not, sedm nebes — číslo, jíž překračuje přirozený řád čtyřky a vstupuje do dimenze posvátného.",
-      "extended_meaning": "Číslo 7 ve snech jest archetypálním symbolem posvátného řádu a dovršení — sedmý den odpočinku, sedm stupňů zasvěcení, sedm planet starověku. Jungiánsky bývá číslo 7 blízké procesu individuace jako symbolu dokončeného cyklu na vyšší rovině: sedm kroků, sedm postav nebo sedm opakování ve snu nesou vždy dimenzi rituálního nebo duchovního dovršení. Jest to číslo, jíž překračuje přirozený čas.",
+      "base_meaning": "Sedm dnů týdne, sedm not, sedm nebes — číslo, jež překračuje přirozený řád čtyřky a vstupuje do dimenze posvátného.",
+      "extended_meaning": "Číslo 7 ve snech jest archetypálním symbolem posvátného řádu a dovršení — sedmý den odpočinku, sedm stupňů zasvěcení, sedm planet starověku. Jungiánsky bývá číslo 7 blízké procesu individuace jako symbolu dokončeného cyklu na vyšší rovině: sedm kroků, sedm postav nebo sedm opakování ve snu nesou vždy dimenzi rituálního nebo duchovního dovršení. Jest to číslo, jež překračuje přirozený čas.",
       "illustration": "cislo_7.svg",
       "tags": [
         "posvátnost",
@@ -13007,8 +13007,8 @@
       "id": "cislo_8",
       "label": "Číslo 8",
       "category": "abstrakce",
-      "base_meaning": "Osm jako dvě čtvernosti nad sebou — nebo položená nekonečno; číslo, jíž spojuje cyklus dokončení s principem věčného návratu.",
-      "extended_meaning": "Číslo 8 ve snech jest archetypálním symbolem obnovy, rovnováhy a věčného cyklu — osmička jako nekonečno, osm paprsků kola dharmy, osm světových stran. Jungiánsky bývá číslo 8 blízké archetypu self v jeho cyklické dimenzi: osmý krok, osmá postava nebo osmé opakování nesou dimenzi cyklického dovršení a nového začátku. Číslo 8 jest číslem, jíž překračuje sedm a vrací se na vyšší rovině téhož.",
+      "base_meaning": "Osm jako dvě čtvernosti nad sebou — nebo položená nekonečno; číslo, jež spojuje cyklus dokončení s principem věčného návratu.",
+      "extended_meaning": "Číslo 8 ve snech jest archetypálním symbolem obnovy, rovnováhy a věčného cyklu — osmička jako nekonečno, osm paprsků kola dharmy, osm světových stran. Jungiánsky bývá číslo 8 blízké archetypu self v jeho cyklické dimenzi: osmý krok, osmá postava nebo osmé opakování nesou dimenzi cyklického dovršení a nového začátku. Číslo 8 jest číslem, jež překračuje sedm a vrací se na vyšší rovině téhož.",
       "illustration": "cislo_8.svg",
       "tags": [
         "obnova",
@@ -13123,7 +13123,7 @@
       "label": "Modrá",
       "category": "abstrakce",
       "base_meaning": "Barva nebe a hlubiny — vzdálenost, která přitahuje; klid, jenž skrývá nezměrnost.",
-      "extended_meaning": "Modrá ve snech jest archetypálním symbolem transcendence, hloubky a spirituality — nebe jako výšina, moře jako hloubka, obě modré a obě bez dna. Jungiánsky bývá modrá blízká archetypu animy nebo self v jeho spirituální dimenzi: světlá modrá jest obrazem klidné distance; tmavá modrá jest obrazem nevědomé hloubky. Modrá jest barva, jíž uklidňuje afekt červené a uvádí psyché do kontemplace.",
+      "extended_meaning": "Modrá ve snech jest archetypálním symbolem transcendence, hloubky a spirituality — nebe jako výšina, moře jako hloubka, obě modré a obě bez dna. Jungiánsky bývá modrá blízká archetypu animy nebo self v jeho spirituální dimenzi: světlá modrá jest obrazem klidné distance; tmavá modrá jest obrazem nevědomé hloubky. Modrá jest barva, jež uklidňuje afekt červené a uvádí psyché do kontemplace.",
       "illustration": "modra.svg",
       "tags": [
         "transcendence",
@@ -13162,8 +13162,8 @@
       "id": "zluta",
       "label": "Žlutá",
       "category": "abstrakce",
-      "base_meaning": "Barva slunce a zlata — vědomí, osvícení, ale také žloutenka a zrада; světlo, jíž může oslepit.",
-      "extended_meaning": "Žlutá ve snech jest archetypálním symbolem vědomí a duchovního světla — slunce jako zdroj orientace, zlato jako hodnota a vhled. Jungiánsky bývá žlutá blízká archetypu self nebo ega ve své solární dimenzi: zlatožlutá jest obrazem integrace a vhledu; syrově žlutá nebo žlutá nemoci může být obrazem egoické inflace nebo úzkosti. Žlutá jest barva, jíž přináší světlo do tmy — avšak příliš mnoho světla také oslepuje.",
+      "base_meaning": "Barva slunce a zlata — vědomí, osvícení, ale také žloutenka a zrada; světlo, jež může oslepit.",
+      "extended_meaning": "Žlutá ve snech jest archetypálním symbolem vědomí a duchovního světla — slunce jako zdroj orientace, zlato jako hodnota a vhled. Jungiánsky bývá žlutá blízká archetypu self nebo ega ve své solární dimenzi: zlatožlutá jest obrazem integrace a vhledu; syrově žlutá nebo žlutá nemoci může být obrazem egoické inflace nebo úzkosti. Žlutá jest barva, jež přináší světlo do tmy — avšak příliš mnoho světla také oslepuje.",
       "illustration": "zluta.svg",
       "tags": [
         "vědomí",
@@ -13202,7 +13202,7 @@
       "label": "Zelená",
       "category": "abstrakce",
       "base_meaning": "Barva rostoucího — příroda jako obnova, growth jako princip, naděje jako barva.",
-      "extended_meaning": "Zelená ve snech jest archetypálním symbolem růstu, obnovy a životní síly — tráva po dešti, listí na jaře, zelená jako příslib pokračování. Jungiánsky bývá zelená blízká archetypu animy v její přírodní dimenzi nebo life_force jako principu: zelená zdravá jest obrazem vitality; zelená hnijící nebo příliš tmavá může být obrazem stagnace nebo stínu přírody. Zelená jest barva, jíž spojuje člověka s cyklem živého.",
+      "extended_meaning": "Zelená ve snech jest archetypálním symbolem růstu, obnovy a životní síly — tráva po dešti, listí na jaře, zelená jako příslib pokračování. Jungiánsky bývá zelená blízká archetypu animy v její přírodní dimenzi nebo life_force jako principu: zelená zdravá jest obrazem vitality; zelená hnijící nebo příliš tmavá může být obrazem stagnace nebo stínu přírody. Zelená jest barva, jež spojuje člověka s cyklem živého.",
       "illustration": "zelena.svg",
       "tags": [
         "růst",
@@ -13281,7 +13281,7 @@
       "label": "Bílá",
       "category": "abstrakce",
       "base_meaning": "Přítomnost všech barev nebo jejich absence — čistota, prázdnota, počátek nebo konec.",
-      "extended_meaning": "Bílá ve snech jest archetypálním symbolem čistoty, transcendence a prázdnoty — sníh jako bílá krajina, bílý oděv jako rituální čistota, bílá jako barva smrti v mnoha kulturách. Jungiánsky bývá bílá blízká archetypu self v jeho transcendentní dimenzi nebo persona jako povrchu: bílá jako čistota jest obrazem nevinnosti nebo aspirace; bílá jako sterilní prázdnota jest obrazem odcizení od vitalit. Bílá jest barva, jíž stojí na prahu mezi prázdnotou a plností.",
+      "extended_meaning": "Bílá ve snech jest archetypálním symbolem čistoty, transcendence a prázdnoty — sníh jako bílá krajina, bílý oděv jako rituální čistota, bílá jako barva smrti v mnoha kulturách. Jungiánsky bývá bílá blízká archetypu self v jeho transcendentní dimenzi nebo persona jako povrchu: bílá jako čistota jest obrazem nevinnosti nebo aspirace; bílá jako sterilní prázdnota jest obrazem odcizení od vitalit. Bílá jest barva, jež stojí na prahu mezi prázdnotou a plností.",
       "illustration": "bila.svg",
       "tags": [
         "čistota",
@@ -13359,7 +13359,7 @@
       "id": "hudba",
       "label": "Hudba",
       "category": "abstrakce",
-      "base_meaning": "Zvuk uspořádaný v čase — řeč, jíž přeskakuje slova a hovoří přímo k tělu a duši.",
+      "base_meaning": "Zvuk uspořádaný v čase — řeč, jež přeskakuje slova a hovoří přímo k tělu a duši.",
       "extended_meaning": "Hudba ve snech jest archetypálním symbolem harmonizace a afektivního pohybu — melodie jako emocionální linie, rytmus jako tělesný zákon, harmonie jako psychická integrace. Jungiánsky bývá hudba blízká archetypu animy nebo self v jeho estetické dimenzi: slyšet krásnou hudbu jest obrazem psychické harmonie nebo kontaktu s hlubinami; neslyšet hudbu nebo ji ztratit jest obrazem odcizení od vnitřního rytmu. Hudba ve snu jest řeč nevědomí v její nejpřímější podobě.",
       "illustration": "hudba.svg",
       "tags": [
@@ -13399,8 +13399,8 @@
       "id": "zvuk",
       "label": "Zvuk",
       "category": "abstrakce",
-      "base_meaning": "Vibrace, jíž přichází z místa, jež nelze vidět — informace bez formy, přítomnost bez těla.",
-      "extended_meaning": "Zvuk ve snech jest archetypálním symbolem komunikace z nevědomých zdrojů — hlas bez těla, zvuk bez zdroje, volání z tmy. Jungiánsky bývá zvuk blízký archetypu animy nebo stínu jako hlasu: slyšet jméno je archetypální volání; slyšet varování je obrazem intuice; nesrozumitelný zvuk je obrazem komunikace, jíž ego ještě neumí dekódovat. Zvuk ve snu jest vždy informace — otázka jest, kdo mluví a co říká.",
+      "base_meaning": "Vibrace, jež přichází z místa, jež nelze vidět — informace bez formy, přítomnost bez těla.",
+      "extended_meaning": "Zvuk ve snech jest archetypálním symbolem komunikace z nevědomých zdrojů — hlas bez těla, zvuk bez zdroje, volání z tmy. Jungiánsky bývá zvuk blízký archetypu animy nebo stínu jako hlasu: slyšet jméno je archetypální volání; slyšet varování je obrazem intuice; nesrozumitelný zvuk je obrazem komunikace, již ego ještě neumí dekódovat. Zvuk ve snu jest vždy informace — otázka jest, kdo mluví a co říká.",
       "illustration": "zvuk.svg",
       "tags": [
         "komunikace",
@@ -13438,7 +13438,7 @@
       "id": "teplo",
       "label": "Teplo",
       "category": "abstrakce",
-      "base_meaning": "Přítomnost energie, jíž dává životu podmínky — péče jako fyzický pocit, bezpečí jako teplota.",
+      "base_meaning": "Přítomnost energie, jež dává životu podmínky — péče jako fyzický pocit, bezpečí jako teplota.",
       "extended_meaning": "Teplo ve snech jest archetypálním symbolem péče, přijetí a životní síly — teplo krbu, teplo objetí, teplo slunce. Jungiánsky bývá teplo blízké archetypu animy nebo Velké matky v její pečující dimenzi: teplo jako bezpečí jest obrazem základní důvěry; teplo jako dusno jest obrazem přílišné závislosti nebo symbiózy. Teplo jest fyzickým ekvivalentem emocionální péče — kde jest teplo ve snu, tam jest zdroj životní síly.",
       "illustration": "teplo.svg",
       "tags": [
@@ -13558,7 +13558,7 @@
       "id": "rytmus",
       "label": "Rytmus",
       "category": "abstrakce",
-      "base_meaning": "Opakování v čase s pravidelností, jíž tělo zná dříve než mysl — srdce, dech, krok, návrat.",
+      "base_meaning": "Opakování v čase s pravidelností, již tělo zná dříve než mysl — srdce, dech, krok, návrat.",
       "extended_meaning": "Rytmus ve snech jest archetypálním symbolem tělesné moudrosti a cyklického řádu — rytmus jako zákon, jenž existuje dříve než vědomí. Jungiánsky bývá rytmus blízký archetypu self v jeho temporální dimenzi nebo life_force jako pulzu: slyšet rytmus a pohybovat se s ním jest obrazem synchronizace s přirozeným řádem; ztratit rytmus jest obrazem vnitřní dezorientace nebo traumatu. Rytmus jest to, co zůstává, když se ztratí melodie.",
       "illustration": "rytmus.svg",
       "tags": [
@@ -13597,7 +13597,7 @@
       "label": "Levitace",
       "category": "abstrakce",
       "base_meaning": "Tělo uvolněné ze zákonů gravitace — svoboda od tíže nebo ztráta zakořenění, vznášení se jako milost nebo jako nebezpečí.",
-      "extended_meaning": "Levitace ve snech jest archetypálním obrazem transcendence tělesnosti a osvobození od pozemských omezení — blízká létání, avšak pasivnější a klidnější. Jungiánsky bývá levitace blízká archetypu self v jeho spirituální dimenzi nebo animě jako spojnici nebe a země: levitace jako milost jest obrazem psychické lehkosti a kontaktu s vyšším; levitace jako nekontrolované vznášení jest obrazem ztráty zakořenění nebo disociace. Tělo, jíž se vznáší, opustilo zemi — otázka jest, zda se vrátí.",
+      "extended_meaning": "Levitace ve snech jest archetypálním obrazem transcendence tělesnosti a osvobození od pozemských omezení — blízká létání, avšak pasivnější a klidnější. Jungiánsky bývá levitace blízká archetypu self v jeho spirituální dimenzi nebo animě jako spojnici nebe a země: levitace jako milost jest obrazem psychické lehkosti a kontaktu s vyšším; levitace jako nekontrolované vznášení jest obrazem ztráty zakořenění nebo disociace. Tělo, jež se vznáší, opustilo zemi — otázka jest, zda se vrátí.",
       "illustration": "levitace.svg",
       "tags": [
         "transcendence",
@@ -13713,7 +13713,7 @@
       "id": "duse",
       "label": "Duše",
       "category": "abstrakce",
-      "base_meaning": "To, co jest v těle a přesahuje tělo — přítomnost, jíž nelze lokalizovat, avšak jejíž nepřítomnost jest okamžitě znatelná.",
+      "base_meaning": "To, co jest v těle a přesahuje tělo — přítomnost, již nelze lokalizovat, avšak jejíž nepřítomnost jest okamžitě znatelná.",
       "extended_meaning": "Duše ve snech jest archetypálním symbolem psychické hloubky a transcendentní dimenze osobnosti — anima jako duše v jungiánském smyslu, avšak duše jako symbol jest širší. Jungiánsky bývá duše blízká archetypu animy nebo self v jeho spirituální dimenzi: vidět vlastní duši jest obrazem sebetranscendence; ztratit duši jest obrazem psychické disociace nebo hlubokého odcizení. Duše jest to, co dává životu dimenzi přesahující funkci.",
       "illustration": "duse.svg",
       "tags": [
@@ -13752,7 +13752,7 @@
       "id": "hranice",
       "label": "Hranice",
       "category": "abstrakce",
-      "base_meaning": "Linie, jíž odděluje jedno od druhého — práh mezi bezpečím a nebezpečím, mezi self a druhým, mezi vědomím a nevědomím.",
+      "base_meaning": "Linie, jež odděluje jedno od druhého — práh mezi bezpečím a nebezpečím, mezi self a druhým, mezi vědomím a nevědomím.",
       "extended_meaning": "Hranice ve snech jest archetypálním symbolem diferenciace a sebedefinice — kde jest hranice, tam jest identita; kde hranice chybí, tam jest splývání nebo invaze. Jungiánsky bývá hranice blízká archetypu persony jako vnější hranice nebo self jako vnitřní hranice: přecházet hranici jest obrazem transformace nebo přestoupení; bránit hranici jest obrazem sebeobrany nebo rigidity; nemít hranici jest obrazem psychické nezralosti. Hranice není zeď — jest to membrána.",
       "illustration": "hranice.svg",
       "tags": [
@@ -13788,7 +13788,7 @@
       "id": "jin_jang",
       "label": "Jin-jang",
       "category": "abstrakce",
-      "base_meaning": "Dva principy, jíž se vzájemně obsahují — světlo v temnotě, temnota ve světle, protiklad jako podmínka celku.",
+      "base_meaning": "Dva principy, jež se vzájemně obsahují — světlo v temnotě, temnota ve světle, protiklad jako podmínka celku.",
       "extended_meaning": "Jin-jang ve snech jest archetypálním symbolem coincidentia oppositorum — jungiánský princip, jenž jest ústřední pro psychickou integraci. Jungiánsky bývá jin-jang blízký archetypu self jako celku obsahujícího protiklady: vidět jin-jang jest obrazem psychické připravenosti integrovat protikladné dimenze; rozdělit jin-jang jest obrazem psychické polarizace. Jin bez jangu jest stejně neúplný jako jang bez jinu — integrace protikladů jest podmínkou individua.",
       "illustration": "jin_jang.svg",
       "tags": [
@@ -13827,7 +13827,7 @@
       "label": "Děj",
       "category": "abstrakce",
       "base_meaning": "Sekvence událostí nesená kauzalitou nebo logikou snu — ne obraz, ale pohyb; ne symbol, ale příběh jako symbol.",
-      "extended_meaning": "Děj ve snech jest metasymboly druhého řádu — způsob, jímž nevědomí organizuje obrazy do narativu. Jungiánsky jest děj snu blízký procesu individuace jako příběhu: hrdina, jenž prochází zkouškou; postava, jíž prochází transformací; vztah, jenž se vyvíjí — vše jsou narativní struktury, jíž nesou archetypální vzorce. Děj snu jest důležitější než jednotlivé obrazy — jest to syntax nevědomí, nikoli pouze jeho slovník.",
+      "extended_meaning": "Děj ve snech jest metasymboly druhého řádu — způsob, jímž nevědomí organizuje obrazy do narativu. Jungiánsky jest děj snu blízký procesu individuace jako příběhu: hrdina, jenž prochází zkouškou; postava, jež prochází transformací; vztah, jenž se vyvíjí — vše jsou narativní struktury, jež nesou archetypální vzorce. Děj snu jest důležitější než jednotlivé obrazy — jest to syntax nevědomí, nikoli pouze jeho slovník.",
       "illustration": "dej.svg",
       "tags": [
         "narativ",
@@ -13906,8 +13906,8 @@
       "id": "lebka",
       "label": "Lebka",
       "category": "telo",
-      "base_meaning": "Tvář zbavená masa — prázdné oči, jíž věčnost hledí zpět.",
-      "extended_meaning": "Lebka jest nejvýmluvnějším symbolem mortality — memento mori v té nejčistší podobě. V jungiovském výkladu stojí na hranici mezi stínem a smrtí: konfrontuje snícího s jeho vlastní smrtelností a s temnotou, jíž denní vědomí popírá. Prázdné očnice jsou oči, jíž vidí za závoj zdání — lebka jest vizí bez iluze, pravdou bez ozdob.",
+      "base_meaning": "Tvář zbavená masa — prázdné oči, jimiž věčnost hledí zpět.",
+      "extended_meaning": "Lebka jest nejvýmluvnějším symbolem mortality — memento mori v té nejčistší podobě. V jungiovském výkladu stojí na hranici mezi stínem a smrtí: konfrontuje snícího s jeho vlastní smrtelností a s temnotou, již denní vědomí popírá. Prázdné očnice jsou oči, jež vidí za závoj zdání — lebka jest vizí bez iluze, pravdou bez ozdob.",
       "illustration": "lebka.svg",
       "tags": [
         "smrt",
@@ -13993,7 +13993,7 @@
       "label": "Kostnice",
       "category": "mista",
       "base_meaning": "Místo, kde kosti předků odpočívají pospolu — sakrální paměť rodu.",
-      "extended_meaning": "Kostnice jest ve snech výjimečným místem: na rozdíl od hřbitova, jenž jest prostorem individuální smrti, kostnice sjednocuje — kosti jsou zde anonymní, kolektivní, propojené v tichém společenství. Jung by ji spojoval s kolektivním nevědomím v jeho nejdoslovnější podobě. Snící v kostnici — zvláště je-li sen příjemný — jest v hlubokém kontaktu s pamětí rodu a s dědičností, jíž přesahuje jeho individuální život.",
+      "extended_meaning": "Kostnice jest ve snech výjimečným místem: na rozdíl od hřbitova, jenž jest prostorem individuální smrti, kostnice sjednocuje — kosti jsou zde anonymní, kolektivní, propojené v tichém společenství. Jung by ji spojoval s kolektivním nevědomím v jeho nejdoslovnější podobě. Snící v kostnici — zvláště je-li sen příjemný — jest v hlubokém kontaktu s pamětí rodu a s dědičností, jež přesahuje jeho individuální život.",
       "illustration": "kostnice.svg",
       "tags": [
         "misto",
