@@ -29,6 +29,8 @@ export function createEngine(dreamData) {
     if (override) {
       return {
         text:               override.custom_text,
+        sections:           String(override.custom_text).split('\n\n').filter(Boolean)
+                              .map(text => ({ type: 'override', text })),
         reflectionQuestion: override.reflection_question,
         metadata:           _meta(inputs, 'override'),
         confidence:         1.0,
@@ -41,6 +43,7 @@ export function createEngine(dreamData) {
 
     return {
       text:               result.text,
+      sections:           result.sections,
       reflectionQuestion: result.reflectionQuestion,
       metadata:           _meta(inputs, 'rule-based'),
       confidence,
