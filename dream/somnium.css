@@ -416,3 +416,20 @@ body {
   margin: -14px 0 14px;
   opacity: 0.7;
 }
+
+/* ── Vrstvený výklad (Somnium v2) ─────────────────────────────── */
+.interp-text .layer-lead   { font-style: italic; color: var(--gold); font-size: 18px; }
+.interp-text .layer-symbol { margin-bottom: 22px; }
+.interp-text .layer-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin: 6px 0 6px;
+}
+.interp-text .layer-advice { border-left: 2px solid var(--gold-dim); padding-left: 14px; }
+@media (max-width: 540px) {
+  .interp-text .layer-lead { font-size: 16px; }
+}
