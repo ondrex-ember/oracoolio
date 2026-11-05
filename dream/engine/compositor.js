@@ -95,13 +95,14 @@ function buildEmotion(emotion) {
  * stejný text, což drží testy i sdílení výkladů stabilní.
  */
 const VERB_LEADS = [
-  (l, m) => `Tvoje jednání ve snu (${l}) naznačuje, že ${m}.`,
-  (l, m) => `Důležité je i to, co jsi ve snu dělal/a (${l}) — říká, že ${m}.`,
-  (l, m) => `Sloveso tvého snu (${l}) vypovídá o tom, že ${m}.`,
+  (l, m) => `Tvoje jednání ve snu — ${l} — naznačuje, že ${m}.`,
+  (l, m) => `Důležité je i to, co se ve snu dělo: ${l}. Znamená to, že ${m}.`,
+  (l, m) => `${cap(l)}. Sen tím říká, že ${m}.`,
 ];
 
 function buildVerb(symbol, verb) {
-  const label   = lc(verb.label ?? '');
+  // label_second = tvar ve 2. osobě ("padal/a jsi"); fallback na label
+  const label   = lc(verb.label_second ?? verb.label ?? '');
   const meaning = stripPeriod(verb.action_meaning ?? '');
   if (!meaning) return '';
   const pick = stableIndex(`${symbol.id}|${verb.id}`, VERB_LEADS.length);
