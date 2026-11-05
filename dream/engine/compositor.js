@@ -24,57 +24,106 @@ const DIRECTION_TO_CONCLUSION = {
 
 /**
  * Složí personalizovaný výklad ze čtyř vstupních entit.
+ *
+ * Výstup je vrstvený: `sections` (typed) pro UI a `text` (odstavce oddělené
+ * prázdným řádkem) pro zpětnou kompatibilitu a testy.
+ *
+ * Typy sekcí: lead | symbol | emotion | verb | context | advice
+ *
+ * Slot "advice" je zatím neaktivní — zobrazí se, jakmile DB obsahuje
+ *   context.advice_passive|active|avoidance|awareness  a/nebo  symbol.practice
+ *
  * @param {Object} symbol   - objekt symbolu z dreamData
  * @param {Object} emotion  - objekt emoce z dreamData
  * @param {Object} verb     - objekt verbu z dreamData
  * @param {Object} context  - objekt kontextu z dreamData
- * @returns {{ text: string, reflectionQuestion: string }}
+ * @returns {{ text: string, sections: Array<{type:string,text:string}>, reflectionQuestion: string }}
  */
 export function composeInterpretation(symbol, emotion, verb, context) {
   const conclusionKey = DIRECTION_TO_CONCLUSION[verb.action_direction]
                      ?? DIRECTION_TO_CONCLUSION.default;
   const conclusion    = context[conclusionKey] ?? context.conclusion_passive ?? '';
 
-  const paragraph1 = buildParagraph1(symbol, emotion);
-  const paragraph2 = buildParagraph2(verb);
-  const paragraph3 = conclusion;
-
-  const text = [paragraph1, paragraph2, paragraph3]
-    .filter(Boolean)
-    .join('\n\n');
+  const sections = [
+    { type: 'lead',    text: buildLead(symbol) },
+    { type: 'symbol',  text: buildSymbolBody(symbol) },
+    { type: 'emotion', text: buildEmotion(emotion) },
+    { type: 'verb',    text: buildVerb(symbol, verb) },
+    { type: 'context', text: conclusion },
+    { type: 'advice',  text: buildAdvice(symbol, verb, context) },
+  ].filter(s => s.text);
 
   return {
-    text,
+    text:               sections.map(s => s.text).join('\n\n'),
+    sections,
     reflectionQuestion: context.reflection_question ?? '',
   };
 }
 
-// ── Paragraph builders ─────────────────────────────────────────────────────────
+// ── Section builders ───────────────────────────────────────────────────────────
 
-/**
- * Odstavec 1: Symbol v kontextu emoce.
- * Formát: "[Label] ve snech symbolizuje [base_meaning]. [modifier_prefix] — [modifier_body]."
- */
-function buildParagraph1(symbol, emotion) {
-  // base_meaning: lowercase prvního písmene, bez tečky na konci
-  const meaning = lc(stripPeriod(symbol.base_meaning));
-
-  // modifier_prefix: kapitalní první písmeno
-  const prefix = cap(emotion.modifier_prefix);
-  const body   = emotion.modifier_body;
-
-  return `${symbol.label} ve snech symbolizuje ${meaning}. ${prefix} — ${body}.`;
+/** Úvodní věta: stručný význam symbolu. */
+function buildLead(symbol) {
+  const base = ensurePeriod(symbol.base_meaning);
+  return base ? cap(base) : '';
 }
 
 /**
- * Odstavec 2: Děj jako zpráva.
- * Formát: "Tvoje jednání ve snu ([verb_label]) naznačuje, že [action_meaning]."
+ * Hlavní výklad symbolu. Používá extended_meaning; pokud chybí, spadne zpět
+ * na formulaci z base_meaning, aby výklad nezůstal prázdný.
  */
-function buildParagraph2(verb) {
-  const label   = verb.label.charAt(0).toLowerCase() + verb.label.slice(1);
-  const meaning = stripPeriod(verb.action_meaning);
+function buildSymbolBody(symbol) {
+  const ext = (symbol.extended_meaning ?? '').trim();
+  if (ext) return ext;
+  const meaning = lc(stripPeriod(symbol.base_meaning ?? ''));
+  return meaning ? `${symbol.label} ve snech symbolizuje ${meaning}.` : '';
+}
 
-  return `Tvoje jednání ve snu (${label}) naznačuje, že ${meaning}.`;
+/** Emoce: "[prefix] — [body]." */
+function buildEmotion(emotion) {
+  const prefix = cap(emotion.modifier_prefix ?? '');
+  const body   = emotion.modifier_body ?? '';
+  if (!prefix && !body) return '';
+  if (!body)   return ensurePeriod(prefix);
+  if (!prefix) return ensurePeriod(cap(body));
+  return `${prefix} — ${stripPeriod(body)}.`;
+}
+
+/**
+ * Děj jako zpráva. Úvodní formule se střídají (3 varianty), ale výběr je
+ * deterministický (hash id symbolu + slovesa) — stejná kombinace dá vždy
+ * stejný text, což drží testy i sdílení výkladů stabilní.
+ */
+const VERB_LEADS = [
+  (l, m) => `Tvoje jednání ve snu (${l}) naznačuje, že ${m}.`,
+  (l, m) => `Důležité je i to, co jsi ve snu dělal/a (${l}) — říká, že ${m}.`,
+  (l, m) => `Sloveso tvého snu (${l}) vypovídá o tom, že ${m}.`,
+];
+
+function buildVerb(symbol, verb) {
+  const label   = lc(verb.label ?? '');
+  const meaning = stripPeriod(verb.action_meaning ?? '');
+  if (!meaning) return '';
+  const pick = stableIndex(`${symbol.id}|${verb.id}`, VERB_LEADS.length);
+  return VERB_LEADS[pick](label, meaning);
+}
+
+/**
+ * Slot pro radu. Priorita: advice_<direction> z kontextu, pak symbol.practice.
+ * Obě pole jsou volitelná — bez nich se sekce vynechá.
+ */
+const DIRECTION_TO_ADVICE = {
+  passive_overwhelmed: 'advice_passive',
+  active_coping:       'advice_active',
+  avoidance:           'advice_avoidance',
+  awareness_passive:   'advice_awareness',
+};
+
+function buildAdvice(symbol, verb, context) {
+  const key       = DIRECTION_TO_ADVICE[verb.action_direction] ?? 'advice_passive';
+  const ctxAdvice = (context[key] ?? '').trim();
+  const practice  = (symbol.practice ?? '').trim();
+  return [ctxAdvice, practice].filter(Boolean).join(' ');
 }
 
 // ── String utilities ───────────────────────────────────────────────────────────
@@ -95,4 +144,18 @@ function lc(str) {
 function stripPeriod(str) {
   if (!str) return '';
   return str.endsWith('.') ? str.slice(0, -1) : str;
+}
+
+/** Přidá tečku, pokud věta nekončí interpunkcí. */
+function ensurePeriod(str) {
+  if (!str) return '';
+  const s = str.trim();
+  return /[.!?…]$/.test(s) ? s : `${s}.`;
+}
+
+/** Deterministický index 0..n-1 z řetězce (djb2). */
+function stableIndex(str, n) {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0;
+  return Math.abs(h) % n;
 }
