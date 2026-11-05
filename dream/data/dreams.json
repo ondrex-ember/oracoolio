@@ -13791,6 +13791,7 @@
     "topit_se": {
       "id": "topit_se",
       "label": "Topil/a jsem se",
+      "label_second": "Topil/a ses",
       "applicable_symbols": [
         "voda",
         "more",
@@ -13804,6 +13805,7 @@
     "plavat": {
       "id": "plavat",
       "label": "Plaval/a jsem",
+      "label_second": "Plaval/a jsi",
       "applicable_symbols": [
         "voda",
         "more",
@@ -13817,6 +13819,7 @@
     "utikat": {
       "id": "utikat",
       "label": "Utíkal/a jsem",
+      "label_second": "Utíkal/a jsi",
       "applicable_symbols": [
         "*"
       ],
@@ -13827,6 +13830,7 @@
     "pozorovat": {
       "id": "pozorovat",
       "label": "Díval/a jsem se",
+      "label_second": "Díval/a ses",
       "applicable_symbols": [
         "*"
       ],
@@ -13837,6 +13841,7 @@
     "ustknouti": {
       "id": "ustknouti",
       "label": "Uštknul/a mě",
+      "label_second": "Uštknul/a tě",
       "applicable_symbols": [
         "had",
         "drak",
@@ -13849,6 +13854,7 @@
     "plazit_se": {
       "id": "plazit_se",
       "label": "Plazil/a jsem se",
+      "label_second": "Plazil/a ses",
       "applicable_symbols": [
         "*"
       ],
@@ -13859,6 +13865,7 @@
     "horeti": {
       "id": "horeti",
       "label": "Hořel/a jsem",
+      "label_second": "Hořel/a jsi",
       "applicable_symbols": [
         "ohen",
         "hranice",
@@ -13873,6 +13880,7 @@
     "hasit": {
       "id": "hasit",
       "label": "Hasil/a jsem",
+      "label_second": "Hasil/a jsi",
       "applicable_symbols": [
         "ohen",
         "hranice"
@@ -13884,6 +13892,7 @@
     "krvacet": {
       "id": "krvacet",
       "label": "Krvácet",
+      "label_second": "Krvácel/a jsi",
       "applicable_symbols": [
         "krev",
         "rana_otevrena",
@@ -13896,6 +13905,7 @@
     "vypadnouti": {
       "id": "vypadnouti",
       "label": "Vypadl/a mi",
+      "label_second": "Vypadl/a ti",
       "applicable_symbols": [
         "zuby",
         "kost"
@@ -13907,6 +13917,7 @@
     "prebrodit": {
       "id": "prebrodit",
       "label": "Přebrodil/a jsem se",
+      "label_second": "Přebrodil/a ses",
       "applicable_symbols": [
         "reka",
         "blatiste",
@@ -13919,6 +13930,7 @@
     "plynout_casem": {
       "id": "plynout_casem",
       "label": "Plynul/a jsem s proudem",
+      "label_second": "Plynul/a jsi s proudem",
       "applicable_symbols": [
         "reka",
         "cas",
@@ -13931,6 +13943,7 @@
     "riditi": {
       "id": "riditi",
       "label": "Řídil/a jsem",
+      "label_second": "Řídil/a jsi",
       "applicable_symbols": [
         "auto",
         "vlak",
@@ -13943,6 +13956,7 @@
     "bloudit": {
       "id": "bloudit",
       "label": "Bloudil/a jsem",
+      "label_second": "Bloudil/a jsi",
       "applicable_symbols": [
         "les",
         "cesta",
@@ -13956,6 +13970,7 @@
     "zkouseti": {
       "id": "zkouseti",
       "label": "Zkoušeli mě",
+      "label_second": "Zkoušeli tě",
       "applicable_symbols": [
         "skola",
         "soud",
@@ -13968,6 +13983,7 @@
     "obstati": {
       "id": "obstati",
       "label": "Obstál/a jsem",
+      "label_second": "Obstál/a jsi",
       "applicable_symbols": [
         "skola",
         "soud",
@@ -13980,6 +13996,7 @@
     "selhat": {
       "id": "selhat",
       "label": "Selhal/a jsem",
+      "label_second": "Selhal/a jsi",
       "applicable_symbols": [
         "skola",
         "soud",
@@ -13993,6 +14010,7 @@
     "setkati_se": {
       "id": "setkati_se",
       "label": "Setkal/a jsem se",
+      "label_second": "Setkal/a ses",
       "applicable_symbols": [
         "cizi_clovek",
         "postava",
@@ -14005,6 +14023,7 @@
     "zkrotiti": {
       "id": "zkrotiti",
       "label": "Zkrotil/a jsem",
+      "label_second": "Zkrotil/a jsi",
       "applicable_symbols": [
         "zvire",
         "kun",
@@ -14018,6 +14037,7 @@
     "nasledovati": {
       "id": "nasledovati",
       "label": "Následoval/a jsem",
+      "label_second": "Následoval/a jsi",
       "applicable_symbols": [
         "zvire",
         "kun",
@@ -14031,6 +14051,7 @@
     "leteti": {
       "id": "leteti",
       "label": "Letěl/a jsem",
+      "label_second": "Letěl/a jsi",
       "applicable_symbols": [
         "letani",
         "ptak",
@@ -14044,6 +14065,7 @@
     "padati": {
       "id": "padati",
       "label": "Padal/a jsem",
+      "label_second": "Padal/a jsi",
       "applicable_symbols": [
         "propast",
         "vyska",
@@ -14057,6 +14079,7 @@
     "vstoupiti": {
       "id": "vstoupiti",
       "label": "Vstoupil/a jsem",
+      "label_second": "Vstoupil/a jsi",
       "applicable_symbols": [
         "dum",
         "les",
@@ -14071,6 +14094,7 @@
     "prchati": {
       "id": "prchati",
       "label": "Prchal/a jsem",
+      "label_second": "Prchal/a jsi",
       "applicable_symbols": [
         "pronasledovani",
         "les",
@@ -14084,6 +14108,7 @@
     "umirati": {
       "id": "umirati",
       "label": "Umíral/a jsem",
+      "label_second": "Umíral/a jsi",
       "applicable_symbols": [
         "smrt",
         "krev",
@@ -14097,6 +14122,7 @@
     "staveti": {
       "id": "staveti",
       "label": "Stavěl/a jsem",
+      "label_second": "Stavěl/a jsi",
       "applicable_symbols": [
         "dum",
         "hora",
@@ -14110,6 +14136,7 @@
     "hledati": {
       "id": "hledati",
       "label": "Hledal/a jsem",
+      "label_second": "Hledal/a jsi",
       "applicable_symbols": [
         "les",
         "dum",
@@ -14123,6 +14150,7 @@
     "naleznouti": {
       "id": "naleznouti",
       "label": "Nalezl/a jsem",
+      "label_second": "Nalezl/a jsi",
       "applicable_symbols": [
         "les",
         "dum",
@@ -14136,6 +14164,7 @@
     "otociti_se": {
       "id": "otociti_se",
       "label": "Otočil/a jsem se",
+      "label_second": "Otočil/a ses",
       "applicable_symbols": [
         "pronasledovani",
         "tma",
@@ -14148,6 +14177,7 @@
     "zustati_stat": {
       "id": "zustati_stat",
       "label": "Zůstal/a jsem stát",
+      "label_second": "Zůstal/a jsi stát",
       "applicable_symbols": [
         "most",
         "cesta",
@@ -14161,6 +14191,7 @@
     "skryti_se": {
       "id": "skryti_se",
       "label": "Skryl/a jsem se",
+      "label_second": "Skryl/a ses",
       "applicable_symbols": [
         "*"
       ],
@@ -14171,6 +14202,7 @@
     "zastaviti_se": {
       "id": "zastaviti_se",
       "label": "Zastavil/a jsem se",
+      "label_second": "Zastavil/a ses",
       "applicable_symbols": [
         "*"
       ],
@@ -14181,6 +14213,7 @@
     "opustiti": {
       "id": "opustiti",
       "label": "Opustil/a jsem",
+      "label_second": "Opustil/a jsi",
       "applicable_symbols": [
         "*"
       ],
@@ -14191,6 +14224,7 @@
     "chraniti": {
       "id": "chraniti",
       "label": "Chránil/a jsem",
+      "label_second": "Chránil/a jsi",
       "applicable_symbols": [
         "*"
       ],
@@ -14201,6 +14235,7 @@
     "ztratiti": {
       "id": "ztratiti",
       "label": "Ztratil/a jsem",
+      "label_second": "Ztratil/a jsi",
       "applicable_symbols": [
         "*"
       ],
@@ -14211,6 +14246,7 @@
     "pustiti": {
       "id": "pustiti",
       "label": "Pustil/a jsem",
+      "label_second": "Pustil/a jsi",
       "applicable_symbols": [
         "*",
         "podzim",
@@ -14225,6 +14261,7 @@
     "kraceti": {
       "id": "kraceti",
       "label": "Kráčel/a jsem",
+      "label_second": "Kráčel/a jsi",
       "applicable_symbols": [
         "*"
       ],
@@ -14235,6 +14272,7 @@
     "plakat": {
       "id": "plakat",
       "label": "Plakal/a jsem",
+      "label_second": "Plakal/a jsi",
       "applicable_symbols": [
         "*"
       ],
@@ -14245,6 +14283,7 @@
     "navratiti_se": {
       "id": "navratiti_se",
       "label": "Vrátil/a jsem se",
+      "label_second": "Vrátil/a ses",
       "applicable_symbols": [
         "*"
       ],
@@ -14255,6 +14294,7 @@
     "nesti": {
       "id": "nesti",
       "label": "Nesl/a jsem",
+      "label_second": "Nesl/a jsi",
       "applicable_symbols": [
         "*"
       ],
@@ -14265,6 +14305,7 @@
     "cekat": {
       "id": "cekat",
       "label": "Čekal/a jsem",
+      "label_second": "Čekal/a jsi",
       "applicable_symbols": [
         "*"
       ],
@@ -14275,6 +14316,7 @@
     "tonuti": {
       "id": "tonuti",
       "label": "Tonul/a jsem",
+      "label_second": "Tonul/a jsi",
       "applicable_symbols": [
         "voda",
         "more",
@@ -14288,6 +14330,7 @@
     "prouditi": {
       "id": "prouditi",
       "label": "Proudil/a jsem",
+      "label_second": "Proudil/a jsi",
       "applicable_symbols": [
         "voda",
         "reka",
@@ -14300,6 +14343,7 @@
     "ponoriti_se": {
       "id": "ponoriti_se",
       "label": "Ponořil/a jsem se",
+      "label_second": "Ponořil/a ses",
       "applicable_symbols": [
         "voda",
         "more",
@@ -14313,6 +14357,7 @@
     "odbociti": {
       "id": "odbociti",
       "label": "Odbočil/a jsem",
+      "label_second": "Odbočil/a jsi",
       "applicable_symbols": [
         "cesta",
         "most",
@@ -14326,6 +14371,7 @@
     "prohledavati": {
       "id": "prohledavati",
       "label": "Prohledával/a jsem",
+      "label_second": "Prohledával/a jsi",
       "applicable_symbols": [
         "dum",
         "sklep",
@@ -14339,6 +14385,7 @@
     "zamknout": {
       "id": "zamknout",
       "label": "Zamkl/a jsem",
+      "label_second": "Zamkl/a jsi",
       "applicable_symbols": [
         "dum",
         "sklep",
@@ -14352,6 +14399,7 @@
     "stoupati": {
       "id": "stoupati",
       "label": "Stoupal/a jsem",
+      "label_second": "Stoupal/a jsi",
       "applicable_symbols": [
         "hora",
         "schody",
@@ -14365,6 +14413,7 @@
     "truchliti": {
       "id": "truchliti",
       "label": "Truchlil/a jsem",
+      "label_second": "Truchlil/a jsi",
       "applicable_symbols": [
         "hrbitov",
         "stul",
@@ -14377,6 +14426,7 @@
     "sadit": {
       "id": "sadit",
       "label": "Sázel/a jsem",
+      "label_second": "Sázel/a jsi",
       "applicable_symbols": [
         "jaro",
         "kvet",
@@ -14389,6 +14439,7 @@
     "hladiti": {
       "id": "hladiti",
       "label": "Hladil/a jsem",
+      "label_second": "Hladil/a jsi",
       "applicable_symbols": [
         "zvire",
         "pes",
@@ -14402,6 +14453,7 @@
     "plout": {
       "id": "plout",
       "label": "Plul/a jsem",
+      "label_second": "Plul/a jsi",
       "applicable_symbols": [
         "lod",
         "more",
@@ -14415,6 +14467,7 @@
     "zarit": {
       "id": "zarit",
       "label": "Zářil/a jsem",
+      "label_second": "Zářil/a jsi",
       "applicable_symbols": [
         "ohen",
         "slunce",
@@ -14428,6 +14481,7 @@
     "zratiti_oporu": {
       "id": "zratiti_oporu",
       "label": "Ztratil/a jsem oporu",
+      "label_second": "Ztratil/a jsi oporu",
       "applicable_symbols": [
         "pad",
         "propast",
@@ -14441,6 +14495,7 @@
     "pronasledovati": {
       "id": "pronasledovati",
       "label": "Pronásledoval/a jsem",
+      "label_second": "Pronásledoval/a jsi",
       "applicable_symbols": [
         "pronasledovani",
         "zvire",
@@ -14454,6 +14509,7 @@
     "sestoupiti": {
       "id": "sestoupiti",
       "label": "Sestoupil/a jsem",
+      "label_second": "Sestoupil/a jsi",
       "applicable_symbols": [
         "sklep",
         "studna",
@@ -14467,6 +14523,7 @@
     "nahlizeti": {
       "id": "nahlizeti",
       "label": "Nahlížel/a jsem",
+      "label_second": "Nahlížel/a jsi",
       "applicable_symbols": [
         "studna",
         "zrcadlo",
@@ -14481,6 +14538,7 @@
     "odvratiti_se": {
       "id": "odvratiti_se",
       "label": "Odvrátil/a jsem se",
+      "label_second": "Odvrátil/a ses",
       "applicable_symbols": [
         "zrcadlo",
         "svetlo",
@@ -14493,6 +14551,7 @@
     "prezit": {
       "id": "prezit",
       "label": "Přežil/a jsem",
+      "label_second": "Přežil/a jsi",
       "applicable_symbols": [
         "valka",
         "zima",
@@ -14506,6 +14565,7 @@
     "pritekati": {
       "id": "pritekati",
       "label": "Přitékal/a jsem",
+      "label_second": "Přitékal/a jsi",
       "applicable_symbols": [
         "voda",
         "reka",
@@ -14519,6 +14579,7 @@
     "vytekati": {
       "id": "vytekati",
       "label": "Vytékal/a jsem",
+      "label_second": "Vytékal/a jsi",
       "applicable_symbols": [
         "voda",
         "reka",
@@ -14532,6 +14593,7 @@
     "syceti": {
       "id": "syceti",
       "label": "Syčel/a jsem",
+      "label_second": "Syčel/a jsi",
       "applicable_symbols": [
         "had",
         "tma",
@@ -14544,6 +14606,7 @@
     "svlekat_kuzi": {
       "id": "svlekat_kuzi",
       "label": "Svlékal/a jsem kůži",
+      "label_second": "Svlékal/a jsi kůži",
       "applicable_symbols": [
         "had",
         "zrcadlo"
@@ -14555,6 +14618,7 @@
     "ovinouti": {
       "id": "ovinouti",
       "label": "Ovinul/a jsem",
+      "label_second": "Ovinul/a jsi",
       "applicable_symbols": [
         "had",
         "provaz",
@@ -14567,6 +14631,7 @@
     "drolit_se": {
       "id": "drolit_se",
       "label": "Drolil/a jsem se",
+      "label_second": "Drolil/a ses",
       "applicable_symbols": [
         "zuby",
         "zed",
@@ -14579,6 +14644,7 @@
     "kousati": {
       "id": "kousati",
       "label": "Kousl/a jsem",
+      "label_second": "Kousl/a jsi",
       "applicable_symbols": [
         "zuby",
         "zvire",
@@ -14592,6 +14658,7 @@
     "skripati": {
       "id": "skripati",
       "label": "Skřípal/a jsem",
+      "label_second": "Skřípal/a jsi",
       "applicable_symbols": [
         "zuby",
         "kamen"
@@ -14603,6 +14670,7 @@
     "cenit_tesaky": {
       "id": "cenit_tesaky",
       "label": "Cenil/a jsem tesáky",
+      "label_second": "Cenil/a jsi tesáky",
       "applicable_symbols": [
         "zuby",
         "vlk",
@@ -14616,6 +14684,7 @@
     "prolit": {
       "id": "prolit",
       "label": "Prolil/a jsem krev",
+      "label_second": "Prolil/a jsi krev",
       "applicable_symbols": [
         "krev",
         "valka",
@@ -14629,6 +14698,7 @@
     "pit": {
       "id": "pit",
       "label": "Pil/a jsem krev",
+      "label_second": "Pil/a jsi krev",
       "applicable_symbols": [
         "krev",
         "had",
@@ -14641,6 +14711,7 @@
     "pulzovati": {
       "id": "pulzovati",
       "label": "Pulzoval/a jsem",
+      "label_second": "Pulzoval/a jsi",
       "applicable_symbols": [
         "krev",
         "srdce",
@@ -14653,6 +14724,7 @@
     "srazet_se": {
       "id": "srazet_se",
       "label": "Srážel/a jsem se",
+      "label_second": "Srážel/a ses",
       "applicable_symbols": [
         "krev",
         "zima",
@@ -14665,6 +14737,7 @@
     "spaliti": {
       "id": "spaliti",
       "label": "Spálil/a jsem",
+      "label_second": "Spálil/a jsi",
       "applicable_symbols": [
         "ohen",
         "valka",
@@ -14677,6 +14750,7 @@
     "plapolati": {
       "id": "plapolati",
       "label": "Plapolal/a jsem",
+      "label_second": "Plapolal/a jsi",
       "applicable_symbols": [
         "ohen",
         "svetlo",
@@ -14689,6 +14763,7 @@
     "sezehnouti": {
       "id": "sezehnouti",
       "label": "Sezhl/a jsem",
+      "label_second": "Sezhl/a jsi",
       "applicable_symbols": [
         "ohen",
         "slunce",
@@ -14701,6 +14776,7 @@
     "dusiti": {
       "id": "dusiti",
       "label": "Dusil/a jsem",
+      "label_second": "Dusil/a jsi",
       "applicable_symbols": [
         "ohen",
         "voda",
@@ -14714,6 +14790,7 @@
     "spalovati": {
       "id": "spalovati",
       "label": "Spaloval/a jsem",
+      "label_second": "Spaloval/a jsi",
       "applicable_symbols": [
         "ohen",
         "valka",
@@ -14726,6 +14803,7 @@
     "pohrbiti": {
       "id": "pohrbiti",
       "label": "Pohřbil/a jsem",
+      "label_second": "Pohřbil/a jsi",
       "applicable_symbols": [
         "hrbitov",
         "zeme",
@@ -14739,6 +14817,7 @@
     "znovuzroditi_se": {
       "id": "znovuzroditi_se",
       "label": "Znovuzrodil/a jsem se",
+      "label_second": "Znovuzrodil/a ses",
       "applicable_symbols": [
         "hrbitov",
         "jaro",
@@ -14752,6 +14831,7 @@
     "prochazeti_prahem": {
       "id": "prochazeti_prahem",
       "label": "Procházel/a jsem prahem",
+      "label_second": "Procházel/a jsi prahem",
       "applicable_symbols": [
         "brana",
         "hrbitov",
@@ -14765,6 +14845,7 @@
     "navstiviti": {
       "id": "navstiviti",
       "label": "Navštívil/a jsem",
+      "label_second": "Navštívil/a jsi",
       "applicable_symbols": [
         "hrbitov",
         "dum",
@@ -14777,6 +14858,7 @@
     "zapaliti_svici": {
       "id": "zapaliti_svici",
       "label": "Zapálil/a jsem svíci",
+      "label_second": "Zapálil/a jsi svíci",
       "applicable_symbols": [
         "hrbitov",
         "tma",
@@ -14790,6 +14872,7 @@
     "cist_napis": {
       "id": "cist_napis",
       "label": "Četl/a jsem nápis",
+      "label_second": "Četl/a jsi nápis",
       "applicable_symbols": [
         "hrbitov",
         "zed",
@@ -14803,6 +14886,7 @@
     "odejiti": {
       "id": "odejiti",
       "label": "Odešel/a jsem",
+      "label_second": "Odešel/a jsi",
       "applicable_symbols": [
         "hrbitov",
         "brana",
@@ -14816,6 +14900,7 @@
     "rust": {
       "id": "rust",
       "label": "Rostl/a jsem",
+      "label_second": "Rostl/a jsi",
       "applicable_symbols": [
         "strom",
         "jaro",
@@ -14829,6 +14914,7 @@
     "zakorenit_se": {
       "id": "zakorenit_se",
       "label": "Zakoření/a jsem se",
+      "label_second": "Zakoření/a ses",
       "applicable_symbols": [
         "strom",
         "zeme",
@@ -14842,6 +14928,7 @@
     "vyrazit_vetvemi": {
       "id": "vyrazit_vetvemi",
       "label": "Vyrazil/a jsem větvemi",
+      "label_second": "Vyrazil/a jsi větvemi",
       "applicable_symbols": [
         "strom",
         "jaro",
@@ -14854,6 +14941,7 @@
     "vyklicit": {
       "id": "vyklicit",
       "label": "Vyklíčil/a jsem",
+      "label_second": "Vyklíčil/a jsi",
       "applicable_symbols": [
         "jaro",
         "zeme",
@@ -14867,6 +14955,7 @@
     "roztati": {
       "id": "roztati",
       "label": "Roztál/a jsem",
+      "label_second": "Roztál/a jsi",
       "applicable_symbols": [
         "zima",
         "jaro",
@@ -14880,6 +14969,7 @@
     "probudit_se": {
       "id": "probudit_se",
       "label": "Probudil/a jsem se",
+      "label_second": "Probudil/a ses",
       "applicable_symbols": [
         "zima",
         "jaro",
@@ -14893,6 +14983,7 @@
     "ziviti": {
       "id": "ziviti",
       "label": "Živil/a jsem",
+      "label_second": "Živil/a jsi",
       "applicable_symbols": [
         "strom",
         "zvire",
@@ -14906,6 +14997,7 @@
     "uzivati": {
       "id": "uzivati",
       "label": "Užíval/a jsem si",
+      "label_second": "Užíval/a sis",
       "applicable_symbols": [
         "leto",
         "more",
@@ -14919,6 +15011,7 @@
     "sklizeti": {
       "id": "sklizeti",
       "label": "Sklízel/a jsem",
+      "label_second": "Sklízel/a jsi",
       "applicable_symbols": [
         "podzim",
         "pole",
@@ -14932,6 +15025,7 @@
     "opadavat": {
       "id": "opadavat",
       "label": "Opadával/a jsem",
+      "label_second": "Opadával/a jsi",
       "applicable_symbols": [
         "podzim",
         "strom",
@@ -14944,6 +15038,7 @@
     "zmrznout": {
       "id": "zmrznout",
       "label": "Zmrzl/a jsem",
+      "label_second": "Zmrzl/a jsi",
       "applicable_symbols": [
         "zima",
         "led",
@@ -14957,6 +15052,7 @@
     "tati": {
       "id": "tati",
       "label": "Tál/a jsem",
+      "label_second": "Tál/a jsi",
       "applicable_symbols": [
         "zima",
         "jaro",
@@ -14970,6 +15066,7 @@
     "prasknouti": {
       "id": "prasknouti",
       "label": "Praskl/a jsem",
+      "label_second": "Praskl/a jsi",
       "applicable_symbols": [
         "zima",
         "strom",
@@ -14983,6 +15080,7 @@
     "mrznout": {
       "id": "mrznout",
       "label": "Mrzl/a jsem",
+      "label_second": "Mrzl/a jsi",
       "applicable_symbols": [
         "zima",
         "tma",
@@ -14996,6 +15094,7 @@
     "vydrzet": {
       "id": "vydrzet",
       "label": "Vydržel/a jsem",
+      "label_second": "Vydržel/a jsi",
       "applicable_symbols": [
         "zima",
         "valka",
@@ -15009,6 +15108,7 @@
     "stahnout_se": {
       "id": "stahnout_se",
       "label": "Stáhl/a jsem se",
+      "label_second": "Stáhl/a ses",
       "applicable_symbols": [
         "zima",
         "strom",
@@ -15022,6 +15122,7 @@
     "vyjiti": {
       "id": "vyjiti",
       "label": "Vyšel/a jsem",
+      "label_second": "Vyšel/a jsi",
       "applicable_symbols": [
         "dum",
         "sklep",
@@ -15035,6 +15136,7 @@
     "budovat": {
       "id": "budovat",
       "label": "Budoval/a jsem",
+      "label_second": "Budoval/a jsi",
       "applicable_symbols": [
         "dum",
         "kamen",
@@ -15048,6 +15150,7 @@
     "otevirati": {
       "id": "otevirati",
       "label": "Otevíral/a jsem",
+      "label_second": "Otevíral/a jsi",
       "applicable_symbols": [
         "dum",
         "brana",
@@ -15061,6 +15164,7 @@
     "vzletnout": {
       "id": "vzletnout",
       "label": "Vzlétl/a jsem",
+      "label_second": "Vzlétl/a jsi",
       "applicable_symbols": [
         "kridla",
         "ptak",
@@ -15074,6 +15178,7 @@
     "rozevrit_kridla": {
       "id": "rozevrit_kridla",
       "label": "Rozevřel/a jsem křídla",
+      "label_second": "Rozevřel/a jsi křídla",
       "applicable_symbols": [
         "kridla",
         "ptak",
@@ -15087,6 +15192,7 @@
     "vznaseti_se": {
       "id": "vznaseti_se",
       "label": "Vznášel/a jsem se",
+      "label_second": "Vznášel/a ses",
       "applicable_symbols": [
         "kridla",
         "oblak",
@@ -15100,6 +15206,7 @@
     "obratiti_se": {
       "id": "obratiti_se",
       "label": "Obrátil/a jsem se",
+      "label_second": "Obrátil/a ses",
       "applicable_symbols": [
         "vlk",
         "zvire",
@@ -15113,6 +15220,7 @@
     "vrceti": {
       "id": "vrceti",
       "label": "Vrčel/a jsem",
+      "label_second": "Vrčel/a jsi",
       "applicable_symbols": [
         "vlk",
         "zvire",
@@ -15126,6 +15234,7 @@
     "rozbiti": {
       "id": "rozbiti",
       "label": "Rozbil/a jsem",
+      "label_second": "Rozbil/a jsi",
       "applicable_symbols": [
         "zrcadlo",
         "maska",
@@ -15139,6 +15248,7 @@
     "pristoupiti": {
       "id": "pristoupiti",
       "label": "Přistoupil/a jsem",
+      "label_second": "Přistoupil/a jsi",
       "applicable_symbols": [
         "zrcadlo",
         "brana",
@@ -15152,6 +15262,7 @@
     "uzrit": {
       "id": "uzrit",
       "label": "Uzřel/a jsem",
+      "label_second": "Uzřel/a jsi",
       "applicable_symbols": [
         "zrcadlo",
         "studna",
@@ -15165,6 +15276,7 @@
     "nasaditi": {
       "id": "nasaditi",
       "label": "Nasadil/a jsem",
+      "label_second": "Nasadil/a jsi",
       "applicable_symbols": [
         "maska",
         "persona",
@@ -15178,6 +15290,7 @@
     "sundati": {
       "id": "sundati",
       "label": "Sundal/a jsem",
+      "label_second": "Sundal/a jsi",
       "applicable_symbols": [
         "maska",
         "persona",
@@ -15191,6 +15304,7 @@
     "skryti": {
       "id": "skryti",
       "label": "Skryl/a jsem se",
+      "label_second": "Skryl/a ses",
       "applicable_symbols": [
         "maska",
         "tma",
@@ -15204,6 +15318,7 @@
     "odhalit": {
       "id": "odhalit",
       "label": "Odhalil/a jsem",
+      "label_second": "Odhalil/a jsi",
       "applicable_symbols": [
         "maska",
         "zrcadlo",
@@ -15217,6 +15332,7 @@
     "prirust": {
       "id": "prirust",
       "label": "Přirostl/a jsem",
+      "label_second": "Přirostl/a jsi",
       "applicable_symbols": [
         "maska",
         "koren",
@@ -15230,6 +15346,7 @@
     "pritat": {
       "id": "pritat",
       "label": "Přivinul/a jsem",
+      "label_second": "Přivinul/a jsi",
       "applicable_symbols": [
         "matka",
         "dite",
@@ -15243,6 +15360,7 @@
     "volati": {
       "id": "volati",
       "label": "Volal/a jsem",
+      "label_second": "Volal/a jsi",
       "applicable_symbols": [
         "matka",
         "dite",
@@ -15256,6 +15374,7 @@
     "hrati_si": {
       "id": "hrati_si",
       "label": "Hrál/a jsem si",
+      "label_second": "Hrál/a sis",
       "applicable_symbols": [
         "dite",
         "jaro",
@@ -15269,6 +15388,7 @@
     "poslechnout": {
       "id": "poslechnout",
       "label": "Poslechl/a jsem",
+      "label_second": "Poslechl/a jsi",
       "applicable_symbols": [
         "matka",
         "otec",
@@ -15282,6 +15402,7 @@
     "vzeprit_se": {
       "id": "vzeprit_se",
       "label": "Vzepřel/a jsem se",
+      "label_second": "Vzepřel/a ses",
       "applicable_symbols": [
         "matka",
         "otec",
@@ -15295,6 +15416,7 @@
     "konfrontovati": {
       "id": "konfrontovati",
       "label": "Konfrontoval/a jsem",
+      "label_second": "Konfrontoval/a jsi",
       "applicable_symbols": [
         "matka",
         "otec",
@@ -15308,6 +15430,7 @@
     "mlceti": {
       "id": "mlceti",
       "label": "Mlčel/a jsem",
+      "label_second": "Mlčel/a jsi",
       "applicable_symbols": [
         "matka",
         "otec",
@@ -15321,6 +15444,7 @@
     "pecovat": {
       "id": "pecovat",
       "label": "Pečoval/a jsem",
+      "label_second": "Pečoval/a jsi",
       "applicable_symbols": [
         "matka",
         "dite",
@@ -15334,6 +15458,7 @@
     "svleci_se": {
       "id": "svleci_se",
       "label": "Svlékl/a jsem se",
+      "label_second": "Svlékl/a ses",
       "applicable_symbols": [
         "nahota",
         "zrcadlo",
@@ -15347,6 +15472,7 @@
     "onemocnet": {
       "id": "onemocnet",
       "label": "Onemocněl/a jsem",
+      "label_second": "Onemocněl/a jsi",
       "applicable_symbols": [
         "nemoc",
         "zima",
@@ -15360,6 +15486,7 @@
     "uzdraviti_se": {
       "id": "uzdraviti_se",
       "label": "Uzdravil/a jsem se",
+      "label_second": "Uzdravil/a ses",
       "applicable_symbols": [
         "nemoc",
         "jaro",
@@ -15373,6 +15500,7 @@
     "ignorovati": {
       "id": "ignorovati",
       "label": "Ignoroval/a jsem",
+      "label_second": "Ignoroval/a jsi",
       "applicable_symbols": [
         "nemoc",
         "maska",
@@ -15386,6 +15514,7 @@
     "jedeti": {
       "id": "jedeti",
       "label": "Jel/a jsem",
+      "label_second": "Jel/a jsi",
       "applicable_symbols": [
         "kun",
         "cesta",
@@ -15399,6 +15528,7 @@
     "spolupracovat": {
       "id": "spolupracovat",
       "label": "Spolupracoval/a jsem",
+      "label_second": "Spolupracoval/a jsi",
       "applicable_symbols": [
         "kun",
         "kocka",
@@ -15412,6 +15542,7 @@
     "pustit": {
       "id": "pustit",
       "label": "Pustil/a jsem",
+      "label_second": "Pustil/a jsi",
       "applicable_symbols": [
         "kun",
         "ryba",
@@ -15425,6 +15556,7 @@
     "chytiti": {
       "id": "chytiti",
       "label": "Chytil/a jsem",
+      "label_second": "Chytil/a jsi",
       "applicable_symbols": [
         "ryba",
         "zvire",
@@ -15438,6 +15570,7 @@
     "utect": {
       "id": "utect",
       "label": "Utekl/a jsem",
+      "label_second": "Utekl/a jsi",
       "applicable_symbols": [
         "kun",
         "vlk",
@@ -15453,6 +15586,7 @@
     "zakotvit": {
       "id": "zakotvit",
       "label": "Zakotvil/a jsem",
+      "label_second": "Zakotvil/a jsi",
       "applicable_symbols": [
         "lod",
         "ostrov",
@@ -15466,6 +15600,7 @@
     "bourit_se": {
       "id": "bourit_se",
       "label": "Bouřil/a jsem se",
+      "label_second": "Bouřil/a ses",
       "applicable_symbols": [
         "lod",
         "more",
@@ -15479,6 +15614,7 @@
     "plout_k": {
       "id": "plout_k",
       "label": "Plul/a jsem k",
+      "label_second": "Plul/a jsi k",
       "applicable_symbols": [
         "lod",
         "ostrov",
@@ -15492,6 +15628,7 @@
     "zustat": {
       "id": "zustat",
       "label": "Zůstal/a jsem",
+      "label_second": "Zůstal/a jsi",
       "applicable_symbols": [
         "ostrov",
         "lod",
@@ -15505,6 +15642,7 @@
     "obeplout": {
       "id": "obeplout",
       "label": "Obeplul/a jsem",
+      "label_second": "Obeplul/a jsi",
       "applicable_symbols": [
         "lod",
         "ostrov",
@@ -15518,6 +15656,7 @@
     "sestupovati": {
       "id": "sestupovati",
       "label": "Sestupoval/a jsem",
+      "label_second": "Sestupoval/a jsi",
       "applicable_symbols": [
         "schody",
         "sklep",
@@ -15531,6 +15670,7 @@
     "preskociti": {
       "id": "preskociti",
       "label": "Přeskočil/a jsem",
+      "label_second": "Přeskočil/a jsi",
       "applicable_symbols": [
         "schody",
         "cesta",
@@ -15544,6 +15684,7 @@
     "klesati": {
       "id": "klesati",
       "label": "Klesal/a jsem",
+      "label_second": "Klesal/a jsi",
       "applicable_symbols": [
         "schody",
         "pad",
@@ -15557,6 +15698,7 @@
     "vychazeti": {
       "id": "vychazeti",
       "label": "Vycházel/a jsem",
+      "label_second": "Vycházel/a jsi",
       "applicable_symbols": [
         "slunce",
         "jaro",
@@ -15570,6 +15712,7 @@
     "zapadati": {
       "id": "zapadati",
       "label": "Zapadal/a jsem",
+      "label_second": "Zapadal/a jsi",
       "applicable_symbols": [
         "slunce",
         "oblak",
@@ -15583,6 +15726,7 @@
     "zahalit": {
       "id": "zahalit",
       "label": "Zahalil/a jsem",
+      "label_second": "Zahalil/a jsi",
       "applicable_symbols": [
         "oblak",
         "maska",
@@ -15596,6 +15740,7 @@
     "hledeti": {
       "id": "hledeti",
       "label": "Hleděl/a jsem",
+      "label_second": "Hleděl/a jsi",
       "applicable_symbols": [
         "slunce",
         "svetlo",
@@ -15609,6 +15754,7 @@
     "osvititi": {
       "id": "osvititi",
       "label": "Osvítil/a jsem",
+      "label_second": "Osvítil/a jsi",
       "applicable_symbols": [
         "svetlo",
         "slunce",
@@ -15622,6 +15768,7 @@
     "zhasnout": {
       "id": "zhasnout",
       "label": "Zhasl/a jsem",
+      "label_second": "Zhasl/a jsi",
       "applicable_symbols": [
         "svetlo",
         "ohen",
@@ -15635,6 +15782,7 @@
     "zastinit": {
       "id": "zastinit",
       "label": "Zastínil/a jsem",
+      "label_second": "Zastínil/a jsi",
       "applicable_symbols": [
         "oblak",
         "strom",
@@ -15648,6 +15796,7 @@
     "rozplynout_se": {
       "id": "rozplynout_se",
       "label": "Rozplynul/a jsem se",
+      "label_second": "Rozplynul/a ses",
       "applicable_symbols": [
         "oblak",
         "voda",
@@ -15661,6 +15810,7 @@
     "zpivati": {
       "id": "zpivati",
       "label": "Zpíval/a jsem",
+      "label_second": "Zpíval/a jsi",
       "applicable_symbols": [
         "ptak",
         "svetlo",
@@ -15674,6 +15824,7 @@
     "sedet": {
       "id": "sedet",
       "label": "Seděl/a jsem",
+      "label_second": "Seděl/a jsi",
       "applicable_symbols": [
         "stul",
         "dum",
@@ -15687,6 +15838,7 @@
     "prostrit": {
       "id": "prostrit",
       "label": "Prostřel/a jsem",
+      "label_second": "Prostřel/a jsi",
       "applicable_symbols": [
         "stul",
         "dum",
@@ -15700,6 +15852,7 @@
     "pozvat": {
       "id": "pozvat",
       "label": "Pozval/a jsem",
+      "label_second": "Pozval/a jsi",
       "applicable_symbols": [
         "stul",
         "dum",
@@ -15713,6 +15866,7 @@
     "odejit_od_stolu": {
       "id": "odejit_od_stolu",
       "label": "Odešel/a jsem od stolu",
+      "label_second": "Odešel/a jsi od stolu",
       "applicable_symbols": [
         "stul",
         "dum",
@@ -15726,6 +15880,7 @@
     "jisti": {
       "id": "jisti",
       "label": "Jedl/a jsem",
+      "label_second": "Jedl/a jsi",
       "applicable_symbols": [
         "stul",
         "jidlo",
@@ -15739,6 +15894,7 @@
     "odmitnouti": {
       "id": "odmitnouti",
       "label": "Odmítl/a jsem",
+      "label_second": "Odmítl/a jsi",
       "applicable_symbols": [
         "stul",
         "jidlo",
@@ -15752,6 +15908,7 @@
     "sdilet": {
       "id": "sdilet",
       "label": "Sdílel/a jsem",
+      "label_second": "Sdílel/a jsi",
       "applicable_symbols": [
         "stul",
         "jidlo",
@@ -15765,6 +15922,7 @@
     "hladovet": {
       "id": "hladovet",
       "label": "Hladověl/a jsem",
+      "label_second": "Hladověl/a jsi",
       "applicable_symbols": [
         "stul",
         "jidlo",
@@ -15778,6 +15936,7 @@
     "variti": {
       "id": "variti",
       "label": "Vařil/a jsem",
+      "label_second": "Vařil/a jsi",
       "applicable_symbols": [
         "stul",
         "ohen",
@@ -15791,6 +15950,7 @@
     "darovat": {
       "id": "darovat",
       "label": "Daroval/a jsem",
+      "label_second": "Daroval/a jsi",
       "applicable_symbols": [
         "stul",
         "jidlo",
@@ -15804,6 +15964,7 @@
     "kvesti": {
       "id": "kvesti",
       "label": "Kvetl/a jsem",
+      "label_second": "Kvetl/a jsi",
       "applicable_symbols": [
         "kvet",
         "jaro",
@@ -15817,6 +15978,7 @@
     "uvadati": {
       "id": "uvadati",
       "label": "Uvadal/a jsem",
+      "label_second": "Uvadal/a jsi",
       "applicable_symbols": [
         "kvet",
         "podzim",
@@ -15830,6 +15992,7 @@
     "trhat": {
       "id": "trhat",
       "label": "Trhal/a jsem",
+      "label_second": "Trhal/a jsi",
       "applicable_symbols": [
         "kvet",
         "ruka",
@@ -15843,6 +16006,7 @@
     "rozdavati": {
       "id": "rozdavati",
       "label": "Rozdával/a jsem",
+      "label_second": "Rozdával/a jsi",
       "applicable_symbols": [
         "penize",
         "ruka",
@@ -15856,6 +16020,7 @@
     "krasti": {
       "id": "krasti",
       "label": "Kradl/a jsem",
+      "label_second": "Kradl/a jsi",
       "applicable_symbols": [
         "penize",
         "tma",
@@ -15869,6 +16034,7 @@
     "pocitati": {
       "id": "pocitati",
       "label": "Počítal/a jsem",
+      "label_second": "Počítal/a jsi",
       "applicable_symbols": [
         "penize",
         "stul",
@@ -15882,6 +16048,7 @@
     "kupovati": {
       "id": "kupovati",
       "label": "Kupoval/a jsem",
+      "label_second": "Kupoval/a jsi",
       "applicable_symbols": [
         "penize",
         "stul",
@@ -15895,6 +16062,7 @@
     "prodavati": {
       "id": "prodavati",
       "label": "Prodával/a jsem",
+      "label_second": "Prodával/a jsi",
       "applicable_symbols": [
         "penize",
         "ruka",
@@ -15908,6 +16076,7 @@
     "rozhodovati": {
       "id": "rozhodovati",
       "label": "Rozhodoval/a jsem",
+      "label_second": "Rozhodoval/a jsi",
       "applicable_symbols": [
         "penize",
         "brana",
@@ -15921,6 +16090,7 @@
     "bojovati": {
       "id": "bojovati",
       "label": "Bojoval/a jsem",
+      "label_second": "Bojoval/a jsi",
       "applicable_symbols": [
         "valka",
         "zbran",
@@ -15934,6 +16104,7 @@
     "kapitulovat": {
       "id": "kapitulovat",
       "label": "Kapituloval/a jsem",
+      "label_second": "Kapituloval/a jsi",
       "applicable_symbols": [
         "valka",
         "zbran",
@@ -15947,6 +16118,7 @@
     "drzeti": {
       "id": "drzeti",
       "label": "Držel/a jsem",
+      "label_second": "Držel/a jsi",
       "applicable_symbols": [
         "valka",
         "zbran",
@@ -15960,6 +16132,7 @@
     "odloziti": {
       "id": "odloziti",
       "label": "Odložil/a jsem",
+      "label_second": "Odložil/a jsi",
       "applicable_symbols": [
         "valka",
         "zbran",
@@ -15973,6 +16146,7 @@
     "utociti": {
       "id": "utociti",
       "label": "Útočil/a jsem",
+      "label_second": "Útočil/a jsi",
       "applicable_symbols": [
         "valka",
         "zbran",
@@ -15986,6 +16160,7 @@
     "braniti": {
       "id": "braniti",
       "label": "Bránil/a jsem",
+      "label_second": "Bránil/a jsi",
       "applicable_symbols": [
         "valka",
         "zbran",
@@ -15999,6 +16174,7 @@
     "namiriti": {
       "id": "namiriti",
       "label": "Namířil/a jsem",
+      "label_second": "Namířil/a jsi",
       "applicable_symbols": [
         "valka",
         "zbran",
@@ -16012,6 +16188,7 @@
     "odejit_bez": {
       "id": "odejit_bez",
       "label": "Odešel/a jsem bez",
+      "label_second": "Odešel/a jsi bez",
       "applicable_symbols": [
         "lekarna",
         "brana",
@@ -16025,6 +16202,7 @@
     "dostat": {
       "id": "dostat",
       "label": "Dostal/a jsem",
+      "label_second": "Dostal/a jsi",
       "applicable_symbols": [
         "lekarna",
         "ruka",
@@ -16038,6 +16216,7 @@
     "odmitnout": {
       "id": "odmitnout",
       "label": "Odmítl/a jsem",
+      "label_second": "Odmítl/a jsi",
       "applicable_symbols": [
         "lekarna",
         "maska",
@@ -16051,6 +16230,7 @@
     "mociti": {
       "id": "mociti",
       "label": "Močil/a jsem",
+      "label_second": "Močil/a jsi",
       "applicable_symbols": [
         "dest",
         "voda",
@@ -16064,6 +16244,7 @@
     "padnouti": {
       "id": "padnouti",
       "label": "Padl/a jsem",
+      "label_second": "Padl/a jsi",
       "applicable_symbols": [
         "kun",
         "nemoc",
@@ -16077,6 +16258,7 @@
     "celiti": {
       "id": "celiti",
       "label": "Čelil/a jsem",
+      "label_second": "Čelil/a jsi",
       "applicable_symbols": [
         "drak",
         "pronasledovani",
@@ -16090,6 +16272,7 @@
     "premoci": {
       "id": "premoci",
       "label": "Přemohl/a jsem",
+      "label_second": "Přemohl/a jsi",
       "applicable_symbols": [
         "drak",
         "valka",
@@ -16102,6 +16285,7 @@
     "vytahnouti": {
       "id": "vytahnouti",
       "label": "Vytáhl/a jsem",
+      "label_second": "Vytáhl/a jsi",
       "applicable_symbols": [
         "studna",
         "more",
@@ -16115,6 +16299,7 @@
     "cerpati": {
       "id": "cerpati",
       "label": "Čerpal/a jsem",
+      "label_second": "Čerpal/a jsi",
       "applicable_symbols": [
         "studna",
         "voda",
@@ -16127,6 +16312,7 @@
     "preleteti": {
       "id": "preleteti",
       "label": "Přelétl/a jsem",
+      "label_second": "Přelétl/a jsi",
       "applicable_symbols": [
         "letani",
         "ptak",
@@ -16140,6 +16326,7 @@
     "hrati": {
       "id": "hrati",
       "label": "Hrál/a jsem si",
+      "label_second": "Hrál/a sis",
       "applicable_symbols": [
         "ohen",
         "svetlo",
