@@ -39,7 +39,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "bource": {
       "id": "bource",
@@ -77,7 +78,8 @@
         "rozvoj",
         "spiritualita",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "cesta": {
       "id": "cesta",
@@ -118,7 +120,8 @@
         "zmena",
         "identita",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "cizi_clovek": {
       "id": "cizi_clovek",
@@ -156,7 +159,8 @@
         "identita",
         "rozvoj",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "dest": {
       "id": "dest",
@@ -199,7 +203,8 @@
         "zdravi",
         "spiritualita",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "dite": {
       "id": "dite",
@@ -240,7 +245,8 @@
         "minulost",
         "ztrata",
         "zdravi"
-      ]
+      ],
+      "polarity": "gift"
     },
     "domov": {
       "id": "domov",
@@ -283,7 +289,8 @@
         "identita",
         "minulost",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "drak": {
       "id": "drak",
@@ -325,7 +332,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "dum": {
       "id": "dum",
@@ -367,7 +375,8 @@
         "minulost",
         "rodina",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "had": {
       "id": "had",
@@ -404,7 +413,8 @@
         "spiritualita",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "threat"
     },
     "hora": {
       "id": "hora",
@@ -447,7 +457,8 @@
         "spiritualita",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "hrbitov": {
       "id": "hrbitov",
@@ -488,7 +499,8 @@
         "minulost",
         "spiritualita",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "jaro": {
       "id": "jaro",
@@ -531,7 +543,8 @@
         "zdravi",
         "rozvoj",
         "kreativita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "jidlo": {
       "id": "jidlo",
@@ -571,7 +584,8 @@
         "rodina",
         "vztahy",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "klec": {
       "id": "klec",
@@ -606,7 +620,8 @@
         "vztahy",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "threat"
     },
     "kocka": {
       "id": "kocka",
@@ -647,7 +662,8 @@
         "identita",
         "spiritualita",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "krev": {
       "id": "krev",
@@ -685,7 +701,8 @@
         "rodina",
         "vztahy",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "kridla": {
       "id": "kridla",
@@ -727,7 +744,8 @@
         "rozvoj",
         "kreativita",
         "identita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "kun": {
       "id": "kun",
@@ -768,7 +786,8 @@
         "prace",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kvet": {
       "id": "kvet",
@@ -811,7 +830,8 @@
         "kreativita",
         "spiritualita",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "led": {
       "id": "led",
@@ -854,7 +874,8 @@
         "ztrata",
         "zdravi",
         "minulost"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "lekarna": {
       "id": "lekarna",
@@ -894,7 +915,8 @@
         "zmena",
         "rozvoj",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "les": {
       "id": "les",
@@ -936,7 +958,8 @@
         "zmena",
         "spiritualita",
         "minulost"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "letani": {
       "id": "letani",
@@ -976,7 +999,8 @@
         "kreativita",
         "rozvoj",
         "spiritualita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "leto": {
       "id": "leto",
@@ -1018,7 +1042,8 @@
         "kreativita",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "listi": {
       "id": "listi",
@@ -1056,7 +1081,8 @@
         "zmena",
         "minulost",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "lod": {
       "id": "lod",
@@ -1099,7 +1125,8 @@
         "rozvoj",
         "spiritualita",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "maska": {
       "id": "maska",
@@ -1140,7 +1167,8 @@
         "prace",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "matka": {
       "id": "matka",
@@ -1181,7 +1209,8 @@
         "minulost",
         "ztrata",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "more": {
       "id": "more",
@@ -1222,7 +1251,8 @@
         "zmena",
         "identita",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "most": {
       "id": "most",
@@ -1263,7 +1293,8 @@
         "rozvoj",
         "vztahy",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "nahota": {
       "id": "nahota",
@@ -1303,7 +1334,8 @@
         "vztahy",
         "prace",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "nemoc": {
       "id": "nemoc",
@@ -1345,7 +1377,8 @@
         "ztrata",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "obchod": {
       "id": "obchod",
@@ -1387,7 +1420,8 @@
         "prace",
         "identita",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "oblak": {
       "id": "oblak",
@@ -1429,7 +1463,8 @@
         "spiritualita",
         "ztrata",
         "kreativita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ohen": {
       "id": "ohen",
@@ -1471,7 +1506,8 @@
         "kreativita",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ostrov": {
       "id": "ostrov",
@@ -1513,7 +1549,8 @@
         "spiritualita",
         "ztrata",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "otec": {
       "id": "otec",
@@ -1555,7 +1592,8 @@
         "identita",
         "minulost",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "pad": {
       "id": "pad",
@@ -1594,7 +1632,8 @@
         "identita",
         "rozvoj",
         "prace"
-      ]
+      ],
+      "polarity": "threat"
     },
     "penize": {
       "id": "penize",
@@ -1634,7 +1673,8 @@
         "identita",
         "prace",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "pes": {
       "id": "pes",
@@ -1676,7 +1716,8 @@
         "rodina",
         "ztrata",
         "identita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "podzim": {
       "id": "podzim",
@@ -1719,7 +1760,8 @@
         "zmena",
         "minulost",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "pronasledovani": {
       "id": "pronasledovani",
@@ -1758,7 +1800,8 @@
         "zmena",
         "prace",
         "vztahy"
-      ]
+      ],
+      "polarity": "threat"
     },
     "propast": {
       "id": "propast",
@@ -1799,7 +1842,8 @@
         "spiritualita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "ptak": {
       "id": "ptak",
@@ -1841,7 +1885,8 @@
         "zmena",
         "spiritualita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "gift"
     },
     "reka": {
       "id": "reka",
@@ -1882,7 +1927,8 @@
         "spiritualita",
         "minulost",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "rodina": {
       "id": "rodina",
@@ -1921,7 +1967,8 @@
         "minulost",
         "identita",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ryba": {
       "id": "ryba",
@@ -1963,7 +2010,8 @@
         "kreativita",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "schody": {
       "id": "schody",
@@ -2004,7 +2052,8 @@
         "prace",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "sklep": {
       "id": "sklep",
@@ -2046,7 +2095,8 @@
         "minulost",
         "zmena",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "skola": {
       "id": "skola",
@@ -2085,7 +2135,8 @@
         "identita",
         "prace",
         "minulost"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "slunce": {
       "id": "slunce",
@@ -2126,7 +2177,8 @@
         "zdravi",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "smrt": {
       "id": "smrt",
@@ -2165,7 +2217,8 @@
         "ztrata",
         "spiritualita",
         "minulost"
-      ]
+      ],
+      "polarity": "threat"
     },
     "snih": {
       "id": "snih",
@@ -2203,7 +2256,8 @@
         "zmena",
         "minulost",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "strom": {
       "id": "strom",
@@ -2243,7 +2297,8 @@
         "spiritualita",
         "rodina",
         "minulost"
-      ]
+      ],
+      "polarity": "gift"
     },
     "studna": {
       "id": "studna",
@@ -2285,7 +2340,8 @@
         "spiritualita",
         "minulost",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "stul": {
       "id": "stul",
@@ -2327,7 +2383,8 @@
         "rodina",
         "ztrata",
         "minulost"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "svetlo": {
       "id": "svetlo",
@@ -2367,7 +2424,8 @@
         "rozvoj",
         "zmena",
         "identita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "tma": {
       "id": "tma",
@@ -2409,7 +2467,8 @@
         "spiritualita",
         "zmena",
         "minulost"
-      ]
+      ],
+      "polarity": "threat"
     },
     "valka": {
       "id": "valka",
@@ -2451,7 +2510,8 @@
         "prace",
         "vztahy",
         "identita"
-      ]
+      ],
+      "polarity": "threat"
     },
     "vlk": {
       "id": "vlk",
@@ -2494,7 +2554,8 @@
         "zmena",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "voda": {
       "id": "voda",
@@ -2538,7 +2599,8 @@
         "spiritualita",
         "vztahy",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zbran": {
       "id": "zbran",
@@ -2581,7 +2643,8 @@
         "prace",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "threat"
     },
     "zima": {
       "id": "zima",
@@ -2624,7 +2687,8 @@
         "ztrata",
         "zdravi",
         "minulost"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zrcadlo": {
       "id": "zrcadlo",
@@ -2665,7 +2729,8 @@
         "zmena",
         "rozvoj",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zuby": {
       "id": "zuby",
@@ -2705,7 +2770,8 @@
         "identita",
         "prace",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "zvire": {
       "id": "zvire",
@@ -2747,7 +2813,8 @@
         "zdravi",
         "zmena",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "pramen": {
       "id": "pramen",
@@ -2787,7 +2854,8 @@
         "rozvoj",
         "spiritualita",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "jezero": {
       "id": "jezero",
@@ -2827,7 +2895,8 @@
         "spiritualita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "hvezda": {
       "id": "hvezda",
@@ -2867,7 +2936,8 @@
         "spiritualita",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "zatmeni": {
       "id": "zatmeni",
@@ -2907,7 +2977,8 @@
         "ztrata",
         "spiritualita",
         "identita"
-      ]
+      ],
+      "polarity": "threat"
     },
     "mocal": {
       "id": "mocal",
@@ -2947,7 +3018,8 @@
         "identita",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "threat"
     },
     "plevel": {
       "id": "plevel",
@@ -2987,7 +3059,8 @@
         "zdravi",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "jeskyne": {
       "id": "jeskyne",
@@ -3027,7 +3100,8 @@
         "spiritualita",
         "ztrata",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "udoli": {
       "id": "udoli",
@@ -3067,7 +3141,8 @@
         "rodina",
         "ztrata",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "blesk": {
       "id": "blesk",
@@ -3107,7 +3182,8 @@
         "identita",
         "spiritualita",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "poust": {
       "id": "poust",
@@ -3147,7 +3223,8 @@
         "spiritualita",
         "ztrata",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "pisek": {
       "id": "pisek",
@@ -3187,7 +3264,8 @@
         "identita",
         "ztrata",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kamen": {
       "id": "kamen",
@@ -3226,7 +3304,8 @@
         "minulost",
         "rozvoj",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "drahokam": {
       "id": "drahokam",
@@ -3266,7 +3345,8 @@
         "rozvoj",
         "spiritualita",
         "finance"
-      ]
+      ],
+      "polarity": "gift"
     },
     "puda": {
       "id": "puda",
@@ -3306,7 +3386,8 @@
         "minulost",
         "identita",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zemetreseni": {
       "id": "zemetreseni",
@@ -3346,7 +3427,8 @@
         "ztrata",
         "identita",
         "zdravi"
-      ]
+      ],
+      "polarity": "threat"
     },
     "tornado": {
       "id": "tornado",
@@ -3386,7 +3468,8 @@
         "ztrata",
         "zdravi",
         "identita"
-      ]
+      ],
+      "polarity": "threat"
     },
     "prach": {
       "id": "prach",
@@ -3426,7 +3509,8 @@
         "ztrata",
         "identita",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "sul": {
       "id": "sul",
@@ -3466,7 +3550,8 @@
         "vztahy",
         "spiritualita",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "sira": {
       "id": "sira",
@@ -3506,7 +3591,8 @@
         "spiritualita",
         "identita",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kristal": {
       "id": "kristal",
@@ -3546,7 +3632,8 @@
         "spiritualita",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "rosa": {
       "id": "rosa",
@@ -3586,7 +3673,8 @@
         "zdravi",
         "spiritualita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "gift"
     },
     "stribro": {
       "id": "stribro",
@@ -3626,7 +3714,8 @@
         "spiritualita",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "gift"
     },
     "zelezo": {
       "id": "zelezo",
@@ -3666,7 +3755,8 @@
         "identita",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "usvit": {
       "id": "usvit",
@@ -3706,7 +3796,8 @@
         "rozvoj",
         "spiritualita",
         "identita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "soumrak": {
       "id": "soumrak",
@@ -3746,7 +3837,8 @@
         "ztrata",
         "spiritualita",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "popel": {
       "id": "popel",
@@ -3786,7 +3878,8 @@
         "zmena",
         "spiritualita",
         "minulost"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "sopka": {
       "id": "sopka",
@@ -3826,7 +3919,8 @@
         "zmena",
         "vztahy",
         "identita"
-      ]
+      ],
+      "polarity": "threat"
     },
     "prales": {
       "id": "prales",
@@ -3866,7 +3960,8 @@
         "spiritualita",
         "ztrata",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "krater": {
       "id": "krater",
@@ -3906,7 +4001,8 @@
         "ztrata",
         "zmena",
         "identita"
-      ]
+      ],
+      "polarity": "threat"
     },
     "vir": {
       "id": "vir",
@@ -3946,7 +4042,8 @@
         "zdravi",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "threat"
     },
     "mlha": {
       "id": "mlha",
@@ -3986,7 +4083,8 @@
         "zmena",
         "spiritualita",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "mesic": {
       "id": "mesic",
@@ -4026,7 +4124,8 @@
         "identita",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "trny": {
       "id": "trny",
@@ -4066,7 +4165,8 @@
         "identita",
         "zdravi",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "lev": {
       "id": "lev",
@@ -4106,7 +4206,8 @@
         "prace",
         "rozvoj",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "medved": {
       "id": "medved",
@@ -4146,7 +4247,8 @@
         "zdravi",
         "rozvoj",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "orel": {
       "id": "orel",
@@ -4186,7 +4288,8 @@
         "identita",
         "spiritualita",
         "prace"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "holubice": {
       "id": "holubice",
@@ -4226,7 +4329,8 @@
         "spiritualita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "krab": {
       "id": "krab",
@@ -4266,7 +4370,8 @@
         "vztahy",
         "zdravi",
         "prace"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "osel": {
       "id": "osel",
@@ -4306,7 +4411,8 @@
         "rodina",
         "zdravi",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "slon": {
       "id": "slon",
@@ -4346,7 +4452,8 @@
         "rodina",
         "spiritualita",
         "identita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "opice": {
       "id": "opice",
@@ -4385,7 +4492,8 @@
         "vztahy",
         "rozvoj",
         "kreativita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "krokodyl": {
       "id": "krokodyl",
@@ -4425,7 +4533,8 @@
         "zdravi",
         "vztahy",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "jesterka": {
       "id": "jesterka",
@@ -4465,7 +4574,8 @@
         "kreativita",
         "rozvoj",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zaba": {
       "id": "zaba",
@@ -4505,7 +4615,8 @@
         "spiritualita",
         "zdravi",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ropucha": {
       "id": "ropucha",
@@ -4545,7 +4656,8 @@
         "spiritualita",
         "ztrata",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "pavouk": {
       "id": "pavouk",
@@ -4585,7 +4697,8 @@
         "identita",
         "kreativita",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "moucha": {
       "id": "moucha",
@@ -4625,7 +4738,8 @@
         "vztahy",
         "identita",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "cerv": {
       "id": "cerv",
@@ -4665,7 +4779,8 @@
         "ztrata",
         "spiritualita",
         "minulost"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "hlemyzd": {
       "id": "hlemyzd",
@@ -4705,7 +4820,8 @@
         "zdravi",
         "rozvoj",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "mys": {
       "id": "mys",
@@ -4745,7 +4861,8 @@
         "identita",
         "vztahy",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "prase": {
       "id": "prase",
@@ -4784,7 +4901,8 @@
         "identita",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "byk": {
       "id": "byk",
@@ -4824,7 +4942,8 @@
         "prace",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "krava": {
       "id": "krava",
@@ -4864,7 +4983,8 @@
         "zdravi",
         "spiritualita",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ovce": {
       "id": "ovce",
@@ -4904,7 +5024,8 @@
         "vztahy",
         "prace",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kozel": {
       "id": "kozel",
@@ -4943,7 +5064,8 @@
         "rozvoj",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "havran": {
       "id": "havran",
@@ -4983,7 +5105,8 @@
         "identita",
         "ztrata",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "lednacek": {
       "id": "lednacek",
@@ -5023,7 +5146,8 @@
         "identita",
         "kreativita",
         "spiritualita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "slepice": {
       "id": "slepice",
@@ -5062,7 +5186,8 @@
         "identita",
         "prace",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "stene": {
       "id": "stene",
@@ -5102,7 +5227,8 @@
         "rodina",
         "identita",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "liska": {
       "id": "liska",
@@ -5141,7 +5267,8 @@
         "vztahy",
         "prace",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "netopyr": {
       "id": "netopyr",
@@ -5181,7 +5308,8 @@
         "identita",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "threat"
     },
     "zmije": {
       "id": "zmije",
@@ -5220,7 +5348,8 @@
         "vztahy",
         "identita",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "stir": {
       "id": "stir",
@@ -5260,7 +5389,8 @@
         "identita",
         "zmena",
         "spiritualita"
-      ]
+      ],
+      "polarity": "threat"
     },
     "jelen": {
       "id": "jelen",
@@ -5299,7 +5429,8 @@
         "spiritualita",
         "rozvoj",
         "vztahy"
-      ]
+      ],
+      "polarity": "gift"
     },
     "tygr": {
       "id": "tygr",
@@ -5339,7 +5470,8 @@
         "zdravi",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zralok": {
       "id": "zralok",
@@ -5379,7 +5511,8 @@
         "identita",
         "prace",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "delfin": {
       "id": "delfin",
@@ -5419,7 +5552,8 @@
         "vztahy",
         "rozvoj",
         "spiritualita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "motyl": {
       "id": "motyl",
@@ -5459,7 +5593,8 @@
         "spiritualita",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "gift"
     },
     "hmyz": {
       "id": "hmyz",
@@ -5499,7 +5634,8 @@
         "identita",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "sova": {
       "id": "sova",
@@ -5539,7 +5675,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "sup": {
       "id": "sup",
@@ -5578,7 +5715,8 @@
         "zmena",
         "spiritualita",
         "zdravi"
-      ]
+      ],
+      "polarity": "threat"
     },
     "starec": {
       "id": "starec",
@@ -5618,7 +5756,8 @@
         "rozvoj",
         "identita",
         "minulost"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "starena": {
       "id": "starena",
@@ -5658,7 +5797,8 @@
         "rodina",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kral": {
       "id": "kral",
@@ -5697,7 +5837,8 @@
         "prace",
         "rozvoj",
         "rodina"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kralovna": {
       "id": "kralovna",
@@ -5736,7 +5877,8 @@
         "vztahy",
         "rozvoj",
         "rodina"
-      ]
+      ],
+      "polarity": "gift"
     },
     "princ": {
       "id": "princ",
@@ -5776,7 +5918,8 @@
         "rozvoj",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "princezna": {
       "id": "princezna",
@@ -5815,7 +5958,8 @@
         "vztahy",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "cisar": {
       "id": "cisar",
@@ -5854,7 +5998,8 @@
         "identita",
         "rozvoj",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "cisarovna": {
       "id": "cisarovna",
@@ -5893,7 +6038,8 @@
         "prace",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "lekar": {
       "id": "lekar",
@@ -5933,7 +6079,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "sestra": {
       "id": "sestra",
@@ -5973,7 +6120,8 @@
         "vztahy",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "bratr": {
       "id": "bratr",
@@ -6012,7 +6160,8 @@
         "vztahy",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "vrah": {
       "id": "vrah",
@@ -6051,7 +6200,8 @@
         "zmena",
         "zdravi",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "zlodej": {
       "id": "zlodej",
@@ -6091,7 +6241,8 @@
         "vztahy",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "knez": {
       "id": "knez",
@@ -6128,7 +6279,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "policista": {
       "id": "policista",
@@ -6168,7 +6320,8 @@
         "vztahy",
         "prace",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "pruvodce": {
       "id": "pruvodce",
@@ -6207,7 +6360,8 @@
         "rozvoj",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "panna": {
       "id": "panna",
@@ -6246,7 +6400,8 @@
         "vztahy",
         "rozvoj",
         "spiritualita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "hrdina": {
       "id": "hrdina",
@@ -6286,7 +6441,8 @@
         "rozvoj",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "obr": {
       "id": "obr",
@@ -6325,7 +6481,8 @@
         "rozvoj",
         "zdravi",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "trpaslik": {
       "id": "trpaslik",
@@ -6364,7 +6521,8 @@
         "rozvoj",
         "spiritualita",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "dvojnik": {
       "id": "dvojnik",
@@ -6403,7 +6561,8 @@
         "zmena",
         "zdravi",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "demon": {
       "id": "demon",
@@ -6441,7 +6600,8 @@
         "zdravi",
         "spiritualita",
         "zmena"
-      ]
+      ],
+      "polarity": "threat"
     },
     "andel": {
       "id": "andel",
@@ -6481,7 +6641,8 @@
         "rozvoj",
         "zmena",
         "identita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "carodejnice": {
       "id": "carodejnice",
@@ -6520,7 +6681,8 @@
         "spiritualita",
         "rozvoj",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ucitel": {
       "id": "ucitel",
@@ -6560,7 +6722,8 @@
         "rozvoj",
         "prace",
         "vztahy"
-      ]
+      ],
+      "polarity": "gift"
     },
     "pritel": {
       "id": "pritel",
@@ -6600,7 +6763,8 @@
         "identita",
         "rozvoj",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "dav": {
       "id": "dav",
@@ -6640,7 +6804,8 @@
         "vztahy",
         "prace",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "vojak": {
       "id": "vojak",
@@ -6680,7 +6845,8 @@
         "prace",
         "rozvoj",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "mrtvy": {
       "id": "mrtvy",
@@ -6719,7 +6885,8 @@
         "zmena",
         "spiritualita",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "nymfa": {
       "id": "nymfa",
@@ -6758,7 +6925,8 @@
         "identita",
         "spiritualita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "buh": {
       "id": "buh",
@@ -6797,7 +6965,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "dabel": {
       "id": "dabel",
@@ -6836,7 +7005,8 @@
         "vztahy",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "threat"
     },
     "manzel": {
       "id": "manzel",
@@ -6875,7 +7045,8 @@
         "identita",
         "rozvoj",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "manzelka": {
       "id": "manzelka",
@@ -6914,7 +7085,8 @@
         "identita",
         "rozvoj",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "milenec": {
       "id": "milenec",
@@ -6952,7 +7124,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "prostitutka": {
       "id": "prostitutka",
@@ -6991,7 +7164,8 @@
         "identita",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zebrak": {
       "id": "zebrak",
@@ -7030,7 +7204,8 @@
         "identita",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "vezen": {
       "id": "vezen",
@@ -7069,7 +7244,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "pokoj": {
       "id": "pokoj",
@@ -7109,7 +7285,8 @@
         "zdravi",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "puda_2": {
       "id": "puda_2",
@@ -7148,7 +7325,8 @@
         "rozvoj",
         "ztrata",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "labyrint": {
       "id": "labyrint",
@@ -7188,7 +7366,8 @@
         "rozvoj",
         "zmena",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "koupelna": {
       "id": "koupelna",
@@ -7228,7 +7407,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zachod": {
       "id": "zachod",
@@ -7267,7 +7447,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "hrad": {
       "id": "hrad",
@@ -7307,7 +7488,8 @@
         "rozvoj",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "vez": {
       "id": "vez",
@@ -7347,7 +7529,8 @@
         "rozvoj",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "balkon": {
       "id": "balkon",
@@ -7386,7 +7569,8 @@
         "vztahy",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "nadrazi": {
       "id": "nadrazi",
@@ -7426,7 +7610,8 @@
         "vztahy",
         "ztrata",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "pristav": {
       "id": "pristav",
@@ -7466,7 +7651,8 @@
         "vztahy",
         "rozvoj",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "zahrada": {
       "id": "zahrada",
@@ -7506,7 +7692,8 @@
         "rozvoj",
         "spiritualita",
         "identita"
-      ]
+      ],
+      "polarity": "gift"
     },
     "chram": {
       "id": "chram",
@@ -7546,7 +7733,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "kostel": {
       "id": "kostel",
@@ -7586,7 +7774,8 @@
         "identita",
         "rozvoj",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "nemocnice": {
       "id": "nemocnice",
@@ -7625,7 +7814,8 @@
         "zmena",
         "ztrata",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "stan": {
       "id": "stan",
@@ -7665,7 +7855,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "blazinec": {
       "id": "blazinec",
@@ -7705,7 +7896,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "krizovatka": {
       "id": "krizovatka",
@@ -7745,7 +7937,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ulice": {
       "id": "ulice",
@@ -7785,7 +7978,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ulicka": {
       "id": "ulicka",
@@ -7825,7 +8019,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "peklo": {
       "id": "peklo",
@@ -7865,7 +8060,8 @@
         "identita",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "threat"
     },
     "nebe": {
       "id": "nebe",
@@ -7905,7 +8101,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "hlubina": {
       "id": "hlubina",
@@ -7945,7 +8142,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "threat"
     },
     "tovarna": {
       "id": "tovarna",
@@ -7984,7 +8182,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "divadlo": {
       "id": "divadlo",
@@ -8023,7 +8222,8 @@
         "rozvoj",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "chata": {
       "id": "chata",
@@ -8063,7 +8263,8 @@
         "zdravi",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "skrin": {
       "id": "skrin",
@@ -8103,7 +8304,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "okno": {
       "id": "okno",
@@ -8143,7 +8345,8 @@
         "vztahy",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "dvere": {
       "id": "dvere",
@@ -8183,7 +8386,8 @@
         "rozvoj",
         "zmena",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "stena": {
       "id": "stena",
@@ -8223,7 +8427,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "vezeni": {
       "id": "vezeni",
@@ -8263,7 +8468,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "balkon_2": {
       "id": "balkon_2",
@@ -8302,7 +8508,8 @@
         "vztahy",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "prah": {
       "id": "prah",
@@ -8342,7 +8549,8 @@
         "zmena",
         "rozvoj",
         "spiritualita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "soudni": {
       "id": "soudni",
@@ -8382,7 +8590,8 @@
         "rozvoj",
         "ztrata",
         "zmena"
-      ]
+      ],
+      "polarity": "threat"
     },
     "kuchyne": {
       "id": "kuchyne",
@@ -8422,7 +8631,8 @@
         "vztahy",
         "rozvoj",
         "identita"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "vlasy": {
       "id": "vlasy",
@@ -8461,7 +8671,8 @@
         "zdravi",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "oci": {
       "id": "oci",
@@ -8500,7 +8711,8 @@
         "rozvoj",
         "vztahy",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ruce": {
       "id": "ruce",
@@ -8538,7 +8750,8 @@
         "rozvoj",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "nohy": {
       "id": "nohy",
@@ -8574,7 +8787,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "usta": {
       "id": "usta",
@@ -8611,7 +8825,8 @@
         "vztahy",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "krk": {
       "id": "krk",
@@ -8651,7 +8866,8 @@
         "identita",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "prsa": {
       "id": "prsa",
@@ -8689,7 +8905,8 @@
         "zdravi",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "genitalie": {
       "id": "genitalie",
@@ -8728,7 +8945,8 @@
         "identita",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "slzy": {
       "id": "slzy",
@@ -8768,7 +8986,8 @@
         "vztahy",
         "ztrata",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "moc": {
       "id": "moc",
@@ -8807,7 +9026,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "stolice": {
       "id": "stolice",
@@ -8845,7 +9065,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "nador": {
       "id": "nador",
@@ -8884,7 +9105,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "paralyza": {
       "id": "paralyza",
@@ -8923,7 +9145,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "zvraceni": {
       "id": "zvraceni",
@@ -8961,7 +9184,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "slepota": {
       "id": "slepota",
@@ -9001,7 +9225,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "threat"
     },
     "holohlavost": {
       "id": "holohlavost",
@@ -9041,7 +9266,8 @@
         "zmena",
         "rozvoj",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "amputace": {
       "id": "amputace",
@@ -9080,7 +9306,8 @@
         "identita",
         "ztrata",
         "zmena"
-      ]
+      ],
+      "polarity": "threat"
     },
     "jazyk": {
       "id": "jazyk",
@@ -9118,7 +9345,8 @@
         "vztahy",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "bricho": {
       "id": "bricho",
@@ -9157,7 +9385,8 @@
         "identita",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "stehna": {
       "id": "stehna",
@@ -9196,7 +9425,8 @@
         "identita",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kuze": {
       "id": "kuze",
@@ -9235,7 +9465,8 @@
         "zdravi",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "slinivka": {
       "id": "slinivka",
@@ -9274,7 +9505,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "rana": {
       "id": "rana",
@@ -9313,7 +9545,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "zlomenina": {
       "id": "zlomenina",
@@ -9352,7 +9585,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "menstruace": {
       "id": "menstruace",
@@ -9390,7 +9624,8 @@
         "identita",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "tehotenstvi": {
       "id": "tehotenstvi",
@@ -9429,7 +9664,8 @@
         "identita",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "gift"
     },
     "bolest": {
       "id": "bolest",
@@ -9468,7 +9704,8 @@
         "identita",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "sperma": {
       "id": "sperma",
@@ -9507,7 +9744,8 @@
         "identita",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "hlava": {
       "id": "hlava",
@@ -9546,7 +9784,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "mozek": {
       "id": "mozek",
@@ -9586,7 +9825,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "destnik": {
       "id": "destnik",
@@ -9624,7 +9864,8 @@
         "vztahy",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "hul": {
       "id": "hul",
@@ -9664,7 +9905,8 @@
         "rozvoj",
         "vztahy",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "klic": {
       "id": "klic",
@@ -9703,7 +9945,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "zamek": {
       "id": "zamek",
@@ -9742,7 +9985,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zvon": {
       "id": "zvon",
@@ -9782,7 +10026,8 @@
         "vztahy",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "nuz": {
       "id": "nuz",
@@ -9821,7 +10066,8 @@
         "vztahy",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "threat"
     },
     "mec": {
       "id": "mec",
@@ -9860,7 +10106,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "threat"
     },
     "skrin_2": {
       "id": "skrin_2",
@@ -9899,7 +10146,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "krabice": {
       "id": "krabice",
@@ -9938,7 +10186,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "nadoba": {
       "id": "nadoba",
@@ -9976,7 +10225,8 @@
         "vztahy",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "saty": {
       "id": "saty",
@@ -10014,7 +10264,8 @@
         "vztahy",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "klobouk": {
       "id": "klobouk",
@@ -10054,7 +10305,8 @@
         "vztahy",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kravata": {
       "id": "kravata",
@@ -10094,7 +10346,8 @@
         "vztahy",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "prsten": {
       "id": "prsten",
@@ -10133,7 +10386,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "vlak": {
       "id": "vlak",
@@ -10173,7 +10427,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "letadlo": {
       "id": "letadlo",
@@ -10213,7 +10468,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "vuz": {
       "id": "vuz",
@@ -10253,7 +10509,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zebrik": {
       "id": "zebrik",
@@ -10291,7 +10548,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "nuzky": {
       "id": "nuzky",
@@ -10328,7 +10586,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kniha": {
       "id": "kniha",
@@ -10366,7 +10625,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "gift"
     },
     "kriz": {
       "id": "kriz",
@@ -10406,7 +10666,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "mince": {
       "id": "mince",
@@ -10443,7 +10704,8 @@
         "zmena",
         "vztahy",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "dalekohled": {
       "id": "dalekohled",
@@ -10480,7 +10742,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "lampa": {
       "id": "lampa",
@@ -10519,7 +10782,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "hodiny": {
       "id": "hodiny",
@@ -10559,7 +10823,8 @@
         "zmena",
         "ztrata",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "bota": {
       "id": "bota",
@@ -10598,7 +10863,8 @@
         "zmena",
         "vztahy",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "mapa": {
       "id": "mapa",
@@ -10637,7 +10903,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "gift"
     },
     "kolo": {
       "id": "kolo",
@@ -10676,7 +10943,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "dyka": {
       "id": "dyka",
@@ -10715,7 +10983,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "sekera": {
       "id": "sekera",
@@ -10754,7 +11023,8 @@
         "identita",
         "ztrata",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "lano": {
       "id": "lano",
@@ -10793,7 +11063,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kocar": {
       "id": "kocar",
@@ -10831,7 +11102,8 @@
         "zmena",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kabat": {
       "id": "kabat",
@@ -10870,7 +11142,8 @@
         "vztahy",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kosile": {
       "id": "kosile",
@@ -10908,7 +11181,8 @@
         "vztahy",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zavazadlo": {
       "id": "zavazadlo",
@@ -10947,7 +11221,8 @@
         "zmena",
         "ztrata",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "popelnik": {
       "id": "popelnik",
@@ -10985,7 +11260,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "vidlicka": {
       "id": "vidlicka",
@@ -11025,7 +11301,8 @@
         "identita",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kladivo": {
       "id": "kladivo",
@@ -11064,7 +11341,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "pila": {
       "id": "pila",
@@ -11103,7 +11381,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "plavani": {
       "id": "plavani",
@@ -11141,7 +11420,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "koupani": {
       "id": "koupani",
@@ -11179,7 +11459,8 @@
         "zmena",
         "zdravi",
         "rozvoj"
-      ]
+      ],
+      "polarity": "gift"
     },
     "beh": {
       "id": "beh",
@@ -11216,7 +11497,8 @@
         "zmena",
         "ztrata",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "skryvani": {
       "id": "skryvani",
@@ -11254,7 +11536,8 @@
         "vztahy",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zkouska": {
       "id": "zkouska",
@@ -11294,7 +11577,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "jizda": {
       "id": "jizda",
@@ -11334,7 +11618,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "cestovani": {
       "id": "cestovani",
@@ -11374,7 +11659,8 @@
         "rozvoj",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "pleteni": {
       "id": "pleteni",
@@ -11412,7 +11698,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "peceni": {
       "id": "peceni",
@@ -11452,7 +11739,8 @@
         "zdravi",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "seti": {
       "id": "seti",
@@ -11490,7 +11778,8 @@
         "zmena",
         "identita",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "narozeni": {
       "id": "narozeni",
@@ -11530,7 +11819,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "gift"
     },
     "pohreb": {
       "id": "pohreb",
@@ -11570,7 +11860,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zabloudeni": {
       "id": "zabloudeni",
@@ -11610,7 +11901,8 @@
         "zmena",
         "ztrata",
         "rozvoj"
-      ]
+      ],
+      "polarity": "threat"
     },
     "prerezani": {
       "id": "prerezani",
@@ -11649,7 +11941,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "roztrhani": {
       "id": "roztrhani",
@@ -11687,7 +11980,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "ztrata": {
       "id": "ztrata",
@@ -11724,7 +12018,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "uviznuti": {
       "id": "uviznuti",
@@ -11762,7 +12057,8 @@
         "zmena",
         "ztrata",
         "zdravi"
-      ]
+      ],
+      "polarity": "threat"
     },
     "znasilneni": {
       "id": "znasilneni",
@@ -11800,7 +12096,8 @@
         "vztahy",
         "identita",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "vrazda": {
       "id": "vrazda",
@@ -11839,7 +12136,8 @@
         "vztahy",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "svatba": {
       "id": "svatba",
@@ -11879,7 +12177,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "rozvod": {
       "id": "rozvod",
@@ -11918,7 +12217,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "trest": {
       "id": "trest",
@@ -11956,7 +12256,8 @@
         "vztahy",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "hledani": {
       "id": "hledani",
@@ -11994,7 +12295,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "zachrana": {
       "id": "zachrana",
@@ -12034,7 +12336,8 @@
         "vztahy",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "gift"
     },
     "obetovani": {
       "id": "obetovani",
@@ -12073,7 +12376,8 @@
         "rozvoj",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "piti": {
       "id": "piti",
@@ -12111,7 +12415,8 @@
         "vztahy",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "obleceni": {
       "id": "obleceni",
@@ -12150,7 +12455,8 @@
         "vztahy",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "svleceni": {
       "id": "svleceni",
@@ -12188,7 +12494,8 @@
         "zdravi",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "strelba": {
       "id": "strelba",
@@ -12227,7 +12534,8 @@
         "vztahy",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "kradez": {
       "id": "kradez",
@@ -12264,7 +12572,8 @@
         "identita",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "padani": {
       "id": "padani",
@@ -12302,7 +12611,8 @@
         "zdravi",
         "zmena",
         "ztrata"
-      ]
+      ],
+      "polarity": "threat"
     },
     "let": {
       "id": "let",
@@ -12342,7 +12652,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "gift"
     },
     "plac": {
       "id": "plac",
@@ -12380,7 +12691,8 @@
         "vztahy",
         "identita",
         "ztrata"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "vareni": {
       "id": "vareni",
@@ -12418,7 +12730,8 @@
         "identita",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "moceni": {
       "id": "moceni",
@@ -12455,7 +12768,8 @@
         "identita",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "defekace": {
       "id": "defekace",
@@ -12490,7 +12804,8 @@
         "identita",
         "zmena",
         "vztahy"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kruh": {
       "id": "kruh",
@@ -12528,7 +12843,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "ctverec": {
       "id": "ctverec",
@@ -12565,7 +12881,8 @@
         "rozvoj",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "cislo_3": {
       "id": "cislo_3",
@@ -12604,7 +12921,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "cislo_4": {
       "id": "cislo_4",
@@ -12642,7 +12960,8 @@
         "rozvoj",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "cislo_7": {
       "id": "cislo_7",
@@ -12681,7 +13000,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "cislo_8": {
       "id": "cislo_8",
@@ -12718,7 +13038,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "stred": {
       "id": "stred",
@@ -12756,7 +13077,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "gift"
     },
     "cervena": {
       "id": "cervena",
@@ -12793,7 +13115,8 @@
         "vztahy",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "modra": {
       "id": "modra",
@@ -12832,7 +13155,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "gift"
     },
     "zluta": {
       "id": "zluta",
@@ -12870,7 +13194,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "gift"
     },
     "zelena": {
       "id": "zelena",
@@ -12909,7 +13234,8 @@
         "rozvoj",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "cerna": {
       "id": "cerna",
@@ -12947,7 +13273,8 @@
         "ztrata",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "bila": {
       "id": "bila",
@@ -12986,7 +13313,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "gift"
     },
     "ticho": {
       "id": "ticho",
@@ -13024,7 +13352,8 @@
         "rozvoj",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "hudba": {
       "id": "hudba",
@@ -13063,7 +13392,8 @@
         "rozvoj",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "zvuk": {
       "id": "zvuk",
@@ -13101,7 +13431,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "teplo": {
       "id": "teplo",
@@ -13140,7 +13471,8 @@
         "zdravi",
         "identita",
         "rozvoj"
-      ]
+      ],
+      "polarity": "gift"
     },
     "chlad": {
       "id": "chlad",
@@ -13179,7 +13511,8 @@
         "zdravi",
         "identita",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "transformace": {
       "id": "transformace",
@@ -13218,7 +13551,8 @@
         "zmena",
         "rozvoj",
         "zdravi"
-      ]
+      ],
+      "polarity": "gift"
     },
     "rytmus": {
       "id": "rytmus",
@@ -13255,7 +13589,8 @@
         "identita",
         "rozvoj",
         "zmena"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "levitace": {
       "id": "levitace",
@@ -13293,7 +13628,8 @@
         "rozvoj",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "geometricky": {
       "id": "geometricky",
@@ -13331,7 +13667,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "osa": {
       "id": "osa",
@@ -13369,7 +13706,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "duse": {
       "id": "duse",
@@ -13407,7 +13745,8 @@
         "rozvoj",
         "zdravi",
         "zmena"
-      ]
+      ],
+      "polarity": "gift"
     },
     "hranice": {
       "id": "hranice",
@@ -13442,7 +13781,8 @@
         "vztahy",
         "zmena",
         "rozvoj"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "jin_jang": {
       "id": "jin_jang",
@@ -13479,7 +13819,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "gift"
     },
     "dej": {
       "id": "dej",
@@ -13515,7 +13856,8 @@
         "rozvoj",
         "zmena",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "kost": {
       "id": "kost",
@@ -13557,7 +13899,8 @@
         "minulost",
         "spiritualita",
         "zdravi"
-      ]
+      ],
+      "polarity": "ambivalent"
     },
     "lebka": {
       "id": "lebka",
@@ -13599,7 +13942,8 @@
         "spiritualita",
         "identita",
         "minulost"
-      ]
+      ],
+      "polarity": "threat"
     },
     "kostlivec": {
       "id": "kostlivec",
@@ -13641,7 +13985,8 @@
         "spiritualita",
         "zmena",
         "identita"
-      ]
+      ],
+      "polarity": "threat"
     },
     "kostnice": {
       "id": "kostnice",
@@ -13683,7 +14028,8 @@
         "spiritualita",
         "ztrata",
         "identita"
-      ]
+      ],
+      "polarity": "threat"
     }
   },
   "emotions": {
@@ -13696,7 +14042,12 @@
       "intensity": "high",
       "modifier_prefix": "tvůj sen ti tuto oblast neukazuje jako bezpečnou, ale jako hrozbu",
       "modifier_body": "intenzivní strach naznačuje, že v bdělém životě cítíš reálnou ztrátu kontroly",
-      "quadrant": "negative_high"
+      "quadrant": "negative_high",
+      "variants": {
+        "threat": "Strach z tohoto obrazu je přirozená reakce, ne přehnaná. Sen ti ukazuje místo, kde se v bdělém životě cítíš bezbranně, a hrůza je čistý signál, že tam něco potřebuje tvou pozornost.",
+        "gift": "Strach z něčeho, co je samo o sobě dobré, bývá strach z vlastního štěstí nebo z toho, že o dar přijdeš. Sen se možná ptá, co tě drží od přijetí toho, co ti náleží.",
+        "ambivalent": "Strach rozhoduje, kterou tvář symbolu sen zvýraznil: tu temnou, ohrožující. Upozorňuje tě na místo, kde se něco v tobě nebo kolem tebe obrací proti tobě."
+      }
     },
     "uzkost": {
       "id": "uzkost",
@@ -13707,7 +14058,12 @@
       "intensity": "medium",
       "modifier_prefix": "úzkost, kterou jsi cítil, mění celý charakter symbolu",
       "modifier_body": "tento pocit naznačuje, že situace ve snu rezonuje s něčím nevyřešeným",
-      "quadrant": "negative_medium"
+      "quadrant": "negative_medium",
+      "variants": {
+        "threat": "Úzkost tu nemluví o samotném obrazu, ale o tom, co za ním tušíš: něco nevyřešeného, co se blíží, i když to zatím neumíš pojmenovat.",
+        "gift": "Úzkost nad něčím dobrým naznačuje, že si dobré věci nedokážeš naplno dovolit. Tušíš, že nic není zadarmo, nebo že si to nezasloužíš.",
+        "ambivalent": "Úzkost ukazuje na napětí mezi dvěma póly symbolu: dobré a nebezpečné se v něm potkává a ty nevíš, ke které straně se přiklonit."
+      }
     },
     "klid": {
       "id": "klid",
@@ -13718,7 +14074,12 @@
       "intensity": "low",
       "modifier_prefix": "přestože symbol může znít silně, ty ses u něj cítil v bezpečí",
       "modifier_body": "vnitřní klid naznačuje, že si s touto situací v hloubi duše dokážeš poradit",
-      "quadrant": "positive_low"
+      "quadrant": "positive_low",
+      "variants": {
+        "threat": "Klid tváří v tvář něčemu hrozivému je vzácný. Může znamenat, že ses s touto hrozbou už vnitřně vyrovnal/a, nebo že ji dlouho potlačuješ, až přestala působit. Stojí za to zjistit, která z těch dvou možností platí.",
+        "gift": "Klid tu sedí: tento obraz se ti ukazuje jako zdroj opory. Sen potvrzuje, že máš v sobě nebo kolem sebe něco, o co se můžeš opřít.",
+        "ambivalent": "Klid ukazuje, že dokážeš držet obě poloviny symbolu bez boje. To bývá znamení vnitřní zralosti, ne lhostejnosti."
+      }
     },
     "radost": {
       "id": "radost",
@@ -13729,7 +14090,12 @@
       "intensity": "high",
       "modifier_prefix": "radost, se kterou jsi symbol prožíval, mu dává zcela nový rozměr",
       "modifier_body": "silná pozitivní emoce naznačuje, že tato oblast tě v životě skutečně naplňuje",
-      "quadrant": "positive_high"
+      "quadrant": "positive_high",
+      "variants": {
+        "threat": "Radost tam, kde bys čekal/a hrozbu, bývá znamením, že ses jí postavil/a, nebo že tě přitahuje to nebezpečné a zakázané. Sen tě možná zve k přiznání, co tě fascinuje na hranici bezpečí.",
+        "gift": "Radost k tomuto obrazu patří. Sen ukazuje oblast, která tě skutečně naplňuje a kterou stojí za to v bdělém životě vědomě živit.",
+        "ambivalent": "Radost vybírá světlou stranu symbolu. Sen ti ukazuje, co v tomto tématu skutečně funguje a z čeho můžeš čerpat."
+      }
     },
     "smutek": {
       "id": "smutek",
@@ -13740,7 +14106,12 @@
       "intensity": "medium",
       "modifier_prefix": "smutek přebarvuje symbol do tónů ztráty a touhy",
       "modifier_body": "tato emoce odkazuje na něco, s čím ses dosud nepodařilo se vnitřně rozloučit",
-      "quadrant": "negative_medium"
+      "quadrant": "negative_medium",
+      "variants": {
+        "threat": "Smutek z hrozivého obrazu je smutek ze ztráty, která už nastala nebo nastane. Nejde o strach z budoucnosti, ale o truchlení nad tím, co se nedá vrátit.",
+        "gift": "Smutek u něčeho krásného bývá touha po tom, co je nedosažitelné nebo ztracené. Obraz ti připomíná, co ti v životě chybí.",
+        "ambivalent": "Smutek odhaluje tu stranu symbolu, která se týká ztráty nebo odloučení. Je tam něco, s čím ses dosud nerozloučil/a."
+      }
     },
     "hnev": {
       "id": "hnev",
@@ -13751,7 +14122,12 @@
       "intensity": "high",
       "modifier_prefix": "někde v bdělém životě se cítíš přehlížen/a nebo omezován/a — a mlčíš o tom příliš dlouho",
       "modifier_body": "hněv, který jsi cítil, odhaluje, že symbol zasáhl místo, kde máš nevyřčené hranice",
-      "quadrant": "negative_high"
+      "quadrant": "negative_high",
+      "variants": {
+        "threat": "Hněv vůči hrozbě je zdravá obrana. Sen ukazuje, že ti někdo nebo něco překračuje hranice a ty to už nechceš snášet mlčky.",
+        "gift": "Hněv nad něčím dobrým ukazuje, že ti někdo nebo něco brání v tom, na co máš nárok. Je to hněv ze zablokovaného dobra.",
+        "ambivalent": "Hněv říká, že symbol zasáhl tvoje nevyřčené hranice. Něco tě tlačí do role, kterou nechceš, a zatím o tom mlčíš."
+      }
     },
     "melancholie": {
       "id": "melancholie",
@@ -13762,7 +14138,12 @@
       "intensity": "low",
       "modifier_prefix": "část tebe truchlí po něčem, co možná nikdy nenastalo — nebo co jsi nechal/a minout",
       "modifier_body": "melancholie zbarvuje symbol tichým smutkem bez jasné příčiny",
-      "quadrant": "negative_low"
+      "quadrant": "negative_low",
+      "variants": {
+        "threat": "Tichá melancholie u hrozivého obrazu naznačuje smíření s něčím tvrdým. Nebojíš se, jen víš, že to patří k životu a nedá se odvrátit.",
+        "gift": "Melancholie k něčemu milému je stesk. Stýská se ti po době nebo vztahu, kde jsi tohle dobré cítil/a doopravdy.",
+        "ambivalent": "Melancholie symbol ztlumuje: nic se nedramatizuje, jen se tiše připomíná to, co už není, nebo možná nikdy nebylo."
+      }
     },
     "euforie": {
       "id": "euforie",
@@ -13773,7 +14154,12 @@
       "intensity": "high",
       "modifier_prefix": "taková přemíra světla někdy naznačuje, že si něčeho v bdělém životě velmi silně přeješ",
       "modifier_body": "euforie, která tě provázela, dává symbolu skoro nereálnou intenzitu",
-      "quadrant": "positive_high"
+      "quadrant": "positive_high",
+      "variants": {
+        "threat": "Euforie uprostřed nebezpečí je podezřelá. Může znamenat touhu po riziku, únik před realitou nebo úlevu, že se hrozba konečně ukázala. Zeptej se, co ti dává pocit, že ti nic nehrozí.",
+        "gift": "Euforie je tu silná a pochopitelná. Nadšení dobře ukazuje směr, jen málokdy vydrží jako každodenní stav, a sen s tím počítá.",
+        "ambivalent": "Euforie přehání jednu stranu symbolu. Sen se ptá, co zatím přehlížíš, protože tě pohlcuje jas."
+      }
     },
     "nadeje": {
       "id": "nadeje",
@@ -13784,7 +14170,12 @@
       "intensity": "medium",
       "modifier_prefix": "věstí, že část tebe věří v možnost změny — i tam, kde to vědomě vzdáváš",
       "modifier_body": "naděje, kterou jsi u symbolu cítil, otevírá výklad směrem k budoucnosti",
-      "quadrant": "positive_medium"
+      "quadrant": "positive_medium",
+      "variants": {
+        "threat": "Naděje tváří v tvář hrozbě znamená, že část tebe věří, že tuhle zkoušku lze přežít a že za ní vede cesta dál.",
+        "gift": "Naděje u obrazu dobra je přirozená. Sen říká, že to, co si přeješ, není mimo dosah.",
+        "ambivalent": "Naděje obrací symbol k budoucnosti. I to, co je nejednoznačné, se může obrátit dobře."
+      }
     }
   },
   "verbs": {
@@ -13891,7 +14282,7 @@
     },
     "krvacet": {
       "id": "krvacet",
-      "label": "Krvácet",
+      "label": "Krvácel/a jsem",
       "label_second": "Krvácel/a jsi",
       "applicable_symbols": [
         "krev",
@@ -15613,8 +16004,8 @@
     },
     "plout_k": {
       "id": "plout_k",
-      "label": "Plul/a jsem k",
-      "label_second": "Plul/a jsi k",
+      "label": "Plul/a jsem k cíli",
+      "label_second": "Plul/a jsi k cíli",
       "applicable_symbols": [
         "lod",
         "ostrov",
@@ -16187,8 +16578,8 @@
     },
     "odejit_bez": {
       "id": "odejit_bez",
-      "label": "Odešel/a jsem bez",
-      "label_second": "Odešel/a jsi bez",
+      "label": "Odešel/a jsem bez pomoci",
+      "label_second": "Odešel/a jsi bez pomoci",
       "applicable_symbols": [
         "lekarna",
         "brana",
