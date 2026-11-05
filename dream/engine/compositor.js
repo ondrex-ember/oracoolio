@@ -47,7 +47,7 @@ export function composeInterpretation(symbol, emotion, verb, context) {
   const sections = [
     { type: 'lead',    text: buildLead(symbol) },
     { type: 'symbol',  text: buildSymbolBody(symbol) },
-    { type: 'emotion', text: buildEmotion(emotion) },
+    { type: 'emotion', text: buildEmotion(emotion, symbol) },
     { type: 'verb',    text: buildVerb(symbol, verb) },
     { type: 'context', text: conclusion },
     { type: 'advice',  text: buildAdvice(symbol, verb, context) },
@@ -79,8 +79,16 @@ function buildSymbolBody(symbol) {
   return meaning ? `${symbol.label} ve snech symbolizuje ${meaning}.` : '';
 }
 
-/** Emoce: "[prefix] — [body]." */
-function buildEmotion(emotion) {
+/**
+ * Emoce. Pokud DB obsahuje emotion.variants, vybere se varianta podle
+ * symbol.polarity (threat | gift | ambivalent; default ambivalent).
+ * Jinak fallback na původní "[prefix] — [body]."
+ */
+function buildEmotion(emotion, symbol) {
+  const polarity = symbol?.polarity ?? 'ambivalent';
+  const variant  = emotion.variants?.[polarity] ?? emotion.variants?.ambivalent;
+  if (variant) return ensurePeriod(variant);
+
   const prefix = cap(emotion.modifier_prefix ?? '');
   const body   = emotion.modifier_body ?? '';
   if (!prefix && !body) return '';
