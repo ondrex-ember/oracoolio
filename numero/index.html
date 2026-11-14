@@ -33,7 +33,14 @@
   <link rel="icon" href="assets/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <meta name="theme-color" content="#09090f">
+  <!-- Modern Web Guidance: warm the font connections, preserve the existing typography. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <!-- The hero is CSS-backed. Preload the correct density before stylesheet discovery. -->
+  <link rel="preload" as="image" type="image/webp" fetchpriority="high"
+        href="numero-v623-hero-1x.webp"
+        imagesrcset="numero-v623-hero-1x.webp 1x, numero-v613-hero.webp 2x">
   <link rel="stylesheet" href="numero.css">
   <style>
     html, body { margin: 0; padding: 0; background: #09090f; overflow-x: hidden; width: 100%; }
@@ -107,15 +114,15 @@
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<canvas id="sky-canvas"></canvas>
+<canvas id="sky-canvas" aria-hidden="true"></canvas>
 
 <div class="container">
   <div class="num-header">
     <a href="../index.html" class="back-btn" data-cs="← Zpět do Oracoolia" data-en="← Back to Oracoolio">← Zpět do Oracoolia</a>
-    <div class="num-lang-switch">
-      <button onclick="setLang('cs')" id="btn-lang-cs" class="nlang-btn active">CS</button>
+    <div class="num-lang-switch" role="group" aria-label="Jazyk / Language">
+      <button type="button" onclick="setLang('cs')" id="btn-lang-cs" class="nlang-btn active" aria-label="Čeština" aria-pressed="true">CS</button>
       <span class="num-lang-sep">|</span>
-      <button onclick="setLang('en')" id="btn-lang-en" class="nlang-btn">EN</button>
+      <button type="button" onclick="setLang('en')" id="btn-lang-en" class="nlang-btn" aria-label="English" aria-pressed="false">EN</button>
     </div>
   </div>
 
@@ -126,8 +133,8 @@
   </div>
 
   <div class="card">
-    <div class="form-section-label" data-cs="Vaše identita" data-en="Your identity">Vaše identita</div>
-    <form id="numForm">
+    <div id="numero-form-heading" class="form-section-label" data-cs="Vaše identita" data-en="Your identity">Vaše identita</div>
+    <form id="numForm" aria-labelledby="numero-form-heading">
       <div class="form-group">
         <label for="fullName" data-cs="Celé jméno" data-en="Full name">Celé jméno</label>
         <input type="text" id="fullName" value="Aurelie Nováková" required>
@@ -211,6 +218,8 @@ function setLang(lang) {
   if (typeof NUMERO_LANG !== 'undefined') NUMERO_LANG = lang;
   setGlobalLang(lang);
   document.documentElement.lang = lang;
+  document.getElementById('btn-lang-cs').setAttribute('aria-pressed', String(lang === 'cs'));
+  document.getElementById('btn-lang-en').setAttribute('aria-pressed', String(lang === 'en'));
   document.title = lang === 'en' ? 'Numero — Numerological Reading | Oracoolio' : 'Numero — Numerologický rozbor | Oracoolio';
   document.getElementById('btn-lang-cs').style.color = lang === 'cs' ? 'rgba(201,168,76,1)' : 'rgba(201,168,76,0.3)';
   document.getElementById('btn-lang-cs').style.borderColor = lang === 'cs' ? 'rgba(201,168,76,0.8)' : 'rgba(201,168,76,0.2)';

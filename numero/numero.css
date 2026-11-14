@@ -2541,3 +2541,33 @@ body {
     print-color-adjust: exact;
   }
 }
+
+
+/* ==========================================================================
+   v6.2.3 — Modern Web Guidance / Stage 1
+   Density-aware, optimized decorative hero. The full-resolution drawing stays
+   the same; 1x devices can use a smaller WebP. Existing background rules above
+   remain the fallback for browsers without image-set().
+   ========================================================================== */
+@supports (background-image: image-set(url('example.webp') 1x)) {
+  .page-title {
+    background-image:
+      radial-gradient(circle at 50% 52%, rgba(9,9,12,.08) 0%, rgba(9,9,12,.34) 20%, rgba(9,9,12,.76) 39%, rgba(9,9,12,.16) 62%, rgba(9,9,12,.02) 100%),
+      linear-gradient(90deg, rgba(8,8,10,.28) 0%, rgba(8,8,10,.12) 14%, rgba(8,8,10,.02) 29%, rgba(8,8,10,.02) 71%, rgba(8,8,10,.12) 86%, rgba(8,8,10,.28) 100%),
+      image-set(
+        url('numero-v623-hero-1x.webp') type('image/webp') 1x,
+        url('numero-v613-hero.webp') type('image/webp') 2x
+      );
+  }
+  @media (max-width: 730px) {
+    .page-title {
+      background-image:
+        radial-gradient(circle at 50% 52%, rgba(9,9,12,.05) 0%, rgba(9,9,12,.30) 20%, rgba(9,9,12,.72) 46%, rgba(9,9,12,.16) 69%, rgba(9,9,12,.02) 100%),
+        linear-gradient(90deg, rgba(8,8,10,.16), rgba(8,8,10,.06) 12%, rgba(8,8,10,.02) 28%, rgba(8,8,10,.02) 72%, rgba(8,8,10,.06) 88%, rgba(8,8,10,.16)),
+        image-set(
+          url('numero-v623-hero-1x.webp') type('image/webp') 1x,
+          url('numero-v613-hero.webp') type('image/webp') 2x
+        );
+    }
+  }
+}

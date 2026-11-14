@@ -2,6 +2,13 @@
 // ORACOOLIO — Numero v1.0
 // ==========================================
 
+// Rendering safety: never interpret a user-provided partner name as HTML.
+// This does not affect the numerology parser or any calculations.
+function numeroEscapeText(value) {
+  const entities = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+  return String(value).replace(/[&<>"']/g, character => entities[character]);
+}
+
 // =========================================================
 // LUNÁRNÍ ENGINE (Z tvého kalendáře)
 // =========================================================
@@ -639,7 +646,7 @@ function calculateAndRender() {
         html += `<div class="synastry-block">
             <div class="result-section-title" style="margin-bottom:18px;">${lang === 'en' ? 'Partner Synastry' : 'Partnerská synastrie'}</div>
             <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:20px;">
-                ${lang === 'en' ? 'Your Life Path' : 'Tvé životní číslo'} <strong style="color:var(--gold);">${lifePath.finalNumber}</strong> · ${pName || 'Partner'} <strong style="color:var(--gold);">${partnerLp}</strong>
+                ${lang === 'en' ? 'Your Life Path' : 'Tvé životní číslo'} <strong style="color:var(--gold);">${lifePath.finalNumber}</strong> · ${numeroEscapeText(pName || 'Partner')} <strong style="color:var(--gold);">${partnerLp}</strong>
             </p>
             <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:14px;">
                 <span style="font-family:'Cinzel',serif; font-size:3rem; color:var(--gold); line-height:1;">${synastryNum}</span>
