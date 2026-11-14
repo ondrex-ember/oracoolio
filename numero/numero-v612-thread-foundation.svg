@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420">
+<defs>
+ <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#745a38" stop-opacity=".4"/><stop offset=".42" stop-color="#745a38" stop-opacity=".14"/><stop offset=".65" stop-color="#745a38" stop-opacity=".06"/><stop offset="1" stop-color="#745a38" stop-opacity=".25"/></linearGradient>
+ <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(48)"><path d="M0 0V8" fill="none" stroke="#886a43" stroke-width=".58" opacity=".14"/></pattern>
+</defs>
+<!-- a ribbon develops naturally from the drapery, arcs into the architecture -->
+<g fill="none" stroke="url(#ink)" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M 174 350 C 210 314, 253 314, 288 355 S 386 408, 429 376 S 521 344, 561 379 C 588 402, 624 403, 656 380 S 718 350, 770 376 C 846 413, 931 405, 1054 366" stroke-width="7"/>
+ <path d="M 174 354 C 210 318, 253 318, 288 359 S 386 412, 429 380 S 521 348, 561 383 C 588 406, 624 407, 656 384 S 718 354, 770 380 C 846 417, 931 409, 1054 370" stroke-width="1.3"/>
+ <path d="M 172 345 C 211 308, 252 310, 292 349 S 387 398, 425 371 S 519 337, 564 372 C 601 401, 623 395, 657 375 S 717 344, 774 369 C 844 403, 937 396, 1058 359" stroke-width="1"/>
+ <path d="M190 357Q169 335 156 311M238 333Q230 310 206 296M396 392Q413 369 405 347M558 381Q585 358 585 329M813 383Q818 352 841 335" stroke-width="1.4"/>
+</g>
+<!-- small botanical leaves and clean construction lines -->
+<g fill="url(#hatch)" stroke="#876a46" stroke-opacity=".28" stroke-width="1">
+ <path d="M156 311q-32-22-41-9q15 21 41 9zM206 296q-13-34-28-28q0 23 28 28zM405 347q-32-15-42-2q18 19 42 2zM585 329q15-27 31-22q-4 25-31 22zM841 335q18-25 37-17q-9 26-37 17z"/>
+</g>
+<g fill="none" stroke="#8a6d49" stroke-opacity=".20" stroke-width=".8">
+ <path d="M316 46H886M352 66H823"/><path d="M327 44v13m-8-6h17M836 44v13m-8-6h17"/>
+ <path d="M1008 78v95m-20-47h40M984 122q25-35 49 0q-24 35-49 0z"/>
+</g>
+</svg>

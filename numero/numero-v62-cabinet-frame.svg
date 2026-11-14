@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="none">
+<defs>
+ <pattern id="dot" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r=".8" fill="#ad8a52" opacity=".42"/></pattern>
+</defs>
+<g fill="none" stroke="#94744a" stroke-width="1.2" opacity=".43">
+<path d="M22 58Q22 22 60 22H155M1045 22H1140Q1178 22 1178 58"/>
+<path d="M22 562Q22 598 60 598H155M1045 598H1140Q1178 598 1178 562"/>
+<path d="M45 90Q75 50 104 90Q82 115 53 109Q74 86 89 88"/>
+<path d="M1155 90Q1125 50 1096 90Q1118 115 1147 109Q1126 86 1111 88"/>
+<path d="M45 530Q75 570 104 530Q82 505 53 511Q74 534 89 532"/>
+<path d="M1155 530Q1125 570 1096 530Q1118 505 1147 511Q1126 534 1111 532"/>
+</g>
+<g stroke="#8e6e49" fill="none" stroke-width=".75" opacity=".46">
+ <path d="M370 21H536L600 25L664 21H830"/>
+ <path d="M370 599H536L600 595L664 599H830"/>
+ <path d="M600 11l9 13-9 13-9-13z"/>
+ <path d="M600 583l9 13-9 13-9-13z"/>
+ <circle cx="600" cy="24" r="3"/>
+ <circle cx="600" cy="596" r="3"/>
+</g>
+<g stroke="#b18d5a" stroke-width=".85" opacity=".26" fill="none">
+<path d="M8 105C58 163 39 213 10 261M1192 105C1142 163 1161 213 1190 261"/>
+<path d="M8 515C58 457 39 407 10 359M1192 515C1142 457 1161 407 1190 359"/>
+</g>
+</svg>

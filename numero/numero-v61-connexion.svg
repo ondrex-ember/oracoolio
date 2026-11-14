@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 380" aria-hidden="true">
+<defs>
+  <pattern id="atlasH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><path d="M0 0V8" stroke="#745a3a" stroke-width=".53" opacity=".24"/></pattern>
+  <linearGradient id="quiet" x1="0" x2="1"><stop stop-color="#795e3c" stop-opacity="0"/><stop offset=".28" stop-color="#795e3c" stop-opacity=".19"/><stop offset=".68" stop-color="#795e3c" stop-opacity=".11"/><stop offset="1" stop-color="#795e3c" stop-opacity="0"/></linearGradient>
+</defs>
+<!-- the narrative's two baselines are joined by a quiet, ordered drafting grid -->
+<path d="M205 183Q343 172 487 188T790 187" fill="none" stroke="url(#quiet)" stroke-width="1.2"/>
+<path d="M221 197Q364 201 506 189T842 202" fill="none" stroke="#8d7551" stroke-width=".5" opacity=".14"/>
+<path d="M310 356H770" stroke="#886b48" stroke-width=".65" stroke-dasharray="1 6" opacity=".20"/>
+<g fill="none" stroke="#876949" opacity=".18" stroke-width=".7">
+  <circle cx="716" cy="200" r="105"/>
+  <circle cx="716" cy="200" r="74"/>
+  <path d="M611 200H821 M716 95V305 M642 126L790 274 M642 274L790 126"/>
+  <path d="M740 305Q860 337 1030 320"/>
+</g>
+<g stroke="#735333" fill="none" opacity=".25">
+ <path d="M291 190h17 m-8-9v18 M547 190h17 m-8-9v18 M800 189h17 m-8-9v18" stroke-width=".9"/>
+</g>
+<!-- organic trace begins geometrically and splits into a restrained branch -->
+<g fill="none" stroke="#755539" stroke-linecap="round">
+ <path d="M772 356Q894 332 934 297Q979 260 1001 182" stroke-width="2.5" opacity=".28"/>
+ <path d="M934 297Q993 314 1059 269 M960 279Q956 239 940 214 M988 233Q1036 208 1097 195 M1001 182Q995 144 1024 105" stroke-width="1.7" opacity=".29"/>
+ <path d="M1019 107Q1063 89 1089 61 M1025 104Q1007 68 977 47 M1050 272Q1061 237 1080 228" stroke-width="1.0" opacity=".29"/>
+</g>
+<g fill="#8e714e" fill-opacity=".13" stroke="#76583a" stroke-opacity=".20" stroke-width=".8">
+<path d="M987 293q-26-27-44-15q22 33 44 15z M1012 278q24-24 39-16q-13 27-39 16z M944 226q-23-19-32-6q12 19 32 6z M1092 195q18-16 30-8q-13 23-30 8z M1022 107q-22-21-34-11q15 24 34 11z"/>
+</g>
+</svg>

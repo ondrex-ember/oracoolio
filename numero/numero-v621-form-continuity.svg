@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 650" preserveAspectRatio="none" aria-hidden="true">
+<defs>
+  <linearGradient id="s" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#866c46" stop-opacity=".32"/><stop offset=".26" stop-color="#8f704a" stop-opacity=".12"/><stop offset=".74" stop-color="#8f704a" stop-opacity=".05"/><stop offset="1" stop-color="#866c46" stop-opacity=".28"/></linearGradient>
+</defs>
+<g fill="none" stroke="url(#s)" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M24 609 C140 600 146 622 250 612 C421 596 506 622 665 615 Q822 603 1052 609" stroke-width="1.4"/>
+ <path d="M35 616 C159 604 166 628 266 620 C435 604 517 633 666 622 Q838 611 1042 618" stroke-width=".7"/>
+ <path d="M20 512 C34 564 72 602 119 603" stroke-width="1.1"/>
+ <path d="M121 602 C168 587 178 562 205 559" stroke-width=".8"/>
+ <path d="M1046 530 C1014 569 974 591 946 602" stroke-width="1.2"/>
+ <path d="M1006 554 C980 570 960 581 950 600" stroke-width=".8"/>
+ <path d="M681 593 Q756 567 816 589 Q894 618 963 588" stroke-width=".75"/>
+</g>
+<g fill="none" stroke="#9b7e55" stroke-opacity=".19" stroke-width="1.1">
+ <path d="M920 80C967 51 1021 68 1037 110 M934 93C975 70 1012 87 1019 121"/>
+ <path d="M1055 215Q1018 251 1037 300Q1046 341 1018 367"/>
+</g>
+<g fill="#b69971" fill-opacity=".19" stroke="#94734d" stroke-opacity=".2" stroke-width=".8">
+ <path d="M32 604Q22 578 10 578Q11 598 32 604Z"/>
+ <path d="M69 605Q61 574 51 571Q47 599 69 605Z"/>
+ <path d="M980 587Q996 565 1015 570Q1006 594 980 587Z"/>
+ <path d="M1021 545Q1035 530 1052 535Q1048 553 1021 545Z"/>
+</g>
+</svg>

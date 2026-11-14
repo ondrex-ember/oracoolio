@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470">
+<defs><linearGradient id="u" x1="0" x2="1"><stop stop-color="#6e5136" stop-opacity=".25"/><stop offset=".36" stop-color="#806347" stop-opacity=".1"/><stop offset=".62" stop-color="#806347" stop-opacity=".035"/><stop offset="1" stop-color="#806347" stop-opacity=".26"/></linearGradient></defs>
+<g fill="none" stroke="url(#u)" stroke-linecap="round">
+ <path d="M140 405 C260 345 302 469 434 417 S630 360 704 421 S879 466 1027 369" stroke-width="9"/>
+ <path d="M143 402 C262 342 305 466 436 414 S635 357 708 418 S883 463 1030 366" stroke-width="1.4"/>
+ <path d="M147 411 C267 351 300 476 432 424 S628 368 702 426 S881 474 1025 376" stroke-width="1.1"/>
+ <path d="M318 430C307 405 288 388 262 378M552 389Q576 364 565 329M826 449Q853 417 894 416M1027 369Q1041 325 1068 307" stroke-width="2"/>
+</g>
+<g fill="#bca17d" fill-opacity=".10" stroke="#876b49" stroke-opacity=".26" stroke-width=".8">
+<path d="M263 378q-31-19-46-8q25 26 46 8zM263 378q-10-30-27-34q-4 28 27 34zM565 329q-21-28-37-22q14 28 37 22zM894 416q23-24 39-13q-14 25-39 13zM1068 307q-27-18-41-4q15 20 41 4z"/>
+</g>
+<g stroke="#816545" stroke-opacity=".18" stroke-width=".8" fill="none">
+<path d="M300 68H874M308 75H852"/><path d="M585 90L593 98L585 106L577 98Z"/>
+<path d="M985 135q38-71 77 0q-38 71-77 0zM980 135h86M1023 95v80"/>
+</g>
+</svg>
