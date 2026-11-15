@@ -3062,3 +3062,494 @@ body {
     width: min(100%, 198px);
   }
 }
+
+
+/* ==========================================================================
+   v6.2.7 — Escher continuity rebuild for TODAY WIDGET
+   Replaces the eye-catching undefined shape with a clearer impossible-bridge /
+   lunar observatory composition that connects the left daily-energy scene with
+   the right moon panel more intentionally on desktop and mobile portrait.
+   ========================================================================== */
+#outputArea > .today-widget {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(10,11,14,.97) 0%, rgba(9,10,14,.95) 34%, rgba(8,9,12,.97) 100%) !important;
+}
+#outputArea > .today-widget .today-mandala { display: none !important; }
+#outputArea > .today-widget::before {
+  content: '';
+  position: absolute;
+  inset: 14px 18px 14px 18px;
+  background-image: url('numero-v627-today-bridge.webp');
+  background-repeat: no-repeat;
+  background-position: center 82%;
+  background-size: min(96%, 1120px) auto;
+  opacity: .34;
+  pointer-events: none;
+  z-index: 0;
+}
+#outputArea > .today-widget::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 22% 26%, rgba(222,189,122,.12) 0%, rgba(222,189,122,.05) 14%, rgba(222,189,122,0) 26%),
+    linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(5,6,9,.10) 54%, rgba(5,6,9,.22) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+#outputArea > .today-widget .today-widget-inner {
+  position: relative;
+  z-index: 1;
+}
+#outputArea > .today-widget .today-left {
+  position: relative;
+  padding-left: 285px;
+  min-height: 248px;
+  border-right: 1px solid rgba(194,165,113,.34);
+  background: linear-gradient(90deg, rgba(10,10,12,.78) 0%, rgba(10,10,12,.60) 26%, rgba(10,10,12,.20) 48%, rgba(10,10,12,0) 68%) !important;
+}
+#outputArea > .today-widget .today-left::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  bottom: 18px;
+  width: 246px;
+  background-image: url('numero-escher-lunar.webp');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  opacity: .95;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 72%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 72%, transparent 100%);
+}
+#outputArea > .today-widget .today-right {
+  position: relative;
+  border-left: 1px solid rgba(194,165,113,.18);
+  background: linear-gradient(180deg, rgba(10,10,12,.40) 0%, rgba(10,10,12,.54) 100%) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+}
+#outputArea > .today-widget .num-lunar-art {
+  width: min(100%, 188px);
+}
+#outputArea > .today-widget .moon-name,
+#outputArea > .today-widget .moon-desc {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1100px) {
+  #outputArea > .today-widget::before {
+    background-size: min(100%, 980px) auto;
+    background-position: center 84%;
+    opacity: .31;
+  }
+  #outputArea > .today-widget .today-left {
+    padding-left: 230px;
+  }
+  #outputArea > .today-widget .today-left::before {
+    width: 190px;
+  }
+}
+
+@media (max-width: 900px) {
+  #outputArea > .today-widget::before {
+    background-size: min(110%, 880px) auto;
+    background-position: center 86%;
+  }
+  #outputArea > .today-widget .today-left {
+    padding-left: 190px;
+  }
+  #outputArea > .today-widget .today-left::before {
+    width: 156px;
+  }
+  #outputArea > .today-widget .today-right { flex-basis: 210px; }
+}
+
+@media (max-width: 730px) {
+  #outputArea > .today-widget {
+    background: linear-gradient(180deg, rgba(10,11,14,.97) 0%, rgba(9,10,13,.98) 100%) !important;
+  }
+  #outputArea > .today-widget::before {
+    inset: 14px 10px 16px 10px;
+    background-image: url('numero-v627-today-tower.webp');
+    background-position: center 56%;
+    background-size: auto min(100% - 8px);
+    opacity: .30;
+  }
+  #outputArea > .today-widget .today-left {
+    min-height: 168px;
+    padding: 22px 18px 16px 116px !important;
+    border-right: none;
+    border-bottom: none;
+    background: linear-gradient(180deg, rgba(10,10,12,.78) 0%, rgba(10,10,12,.42) 56%, rgba(10,10,12,0) 100%) !important;
+  }
+  #outputArea > .today-widget .today-left::before {
+    left: 12px;
+    top: 16px;
+    bottom: auto;
+    width: 102px;
+    height: 118px;
+    -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 76%, transparent 100%), linear-gradient(180deg, #000 0%, #000 86%, transparent 100%);
+    mask-image: linear-gradient(90deg, #000 0%, #000 76%, transparent 100%), linear-gradient(180deg, #000 0%, #000 86%, transparent 100%);
+  }
+  #outputArea > .today-widget .today-left::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: -1px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(194,165,113,0), rgba(194,165,113,.58) 18%, rgba(194,165,113,.58) 82%, rgba(194,165,113,0));
+  }
+  #outputArea > .today-widget .today-right {
+    width: 100%;
+    margin-top: 0;
+    padding: 12px 14px 24px !important;
+    border-left: none;
+    background: linear-gradient(180deg, rgba(10,10,12,0) 0%, rgba(10,10,12,.18) 30%, rgba(10,10,12,.34) 100%) !important;
+    box-shadow: none;
+  }
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(100%, 206px);
+    margin: 0 auto 4px;
+  }
+  #outputArea > .today-widget .moon-name { font-size: 1.08rem; }
+  #outputArea > .today-widget .moon-desc { max-width: 16rem; margin-inline: auto; }
+}
+
+@media (max-width: 480px) {
+  #outputArea > .today-widget::before {
+    inset: 16px 2px 16px 2px;
+    background-position: center 58%;
+    background-size: auto calc(100% - 10px);
+    opacity: .29;
+  }
+  #outputArea > .today-widget .today-left {
+    padding-left: 108px !important;
+  }
+  #outputArea > .today-widget .today-left::before {
+    width: 96px;
+    height: 112px;
+  }
+  #outputArea > .today-widget .num-lunar-art { width: min(100%, 194px); }
+}
+
+@media (max-width: 390px) {
+  #outputArea > .today-widget::before {
+    background-position: center 60%;
+    background-size: auto calc(100% - 6px);
+  }
+  #outputArea > .today-widget .today-left {
+    padding-left: 100px !important;
+  }
+  #outputArea > .today-widget .today-left::before {
+    width: 90px;
+    height: 106px;
+  }
+  #outputArea > .today-widget .today-vibrace-num { font-size: 4rem; }
+  #outputArea > .today-widget .num-lunar-art { width: min(100%, 182px); }
+}
+
+
+/* ==========================================================================
+   v6.2.8 — mobile portrait correction for TODAY widget
+   Fixes: top visual no longer crushed in upper-left corner; moon panel stays
+   visually centered; upper/lower halves read as one calm vertical composition.
+   ========================================================================== */
+@media (max-width: 730px) {
+  #outputArea > .today-widget::before {
+    inset: 12px 6px 14px 6px;
+    background-image:
+      linear-gradient(180deg, rgba(8,9,12,.12) 0%, rgba(8,9,12,.04) 30%, rgba(8,9,12,.12) 100%),
+      url('numero-v627-today-tower.webp');
+    background-position: center, center 58%;
+    background-size: cover, auto calc(100% - 14px);
+    opacity: .24;
+  }
+  #outputArea > .today-widget .today-left {
+    min-height: 228px;
+    padding: 22px 20px 18px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    background: linear-gradient(180deg, rgba(10,10,12,.72) 0%, rgba(10,10,12,.42) 62%, rgba(10,10,12,.06) 100%) !important;
+  }
+  #outputArea > .today-widget .today-left::before {
+    display: none;
+  }
+  #outputArea > .today-widget .today-left::after {
+    left: 24px;
+    right: 24px;
+    bottom: 0;
+  }
+  #outputArea > .today-widget .today-day-label,
+  #outputArea > .today-widget .today-vibrace-num,
+  #outputArea > .today-widget .today-vibrace-title,
+  #outputArea > .today-widget .today-vibrace-desc,
+  #outputArea > .today-widget .today-month-badge {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  #outputArea > .today-widget .today-vibrace-num {
+    margin-top: 8px;
+    line-height: .95;
+  }
+  #outputArea > .today-widget .today-vibrace-title {
+    margin-top: 2px;
+  }
+  #outputArea > .today-widget .today-vibrace-desc {
+    margin-top: 10px;
+  }
+  #outputArea > .today-widget .today-month-badge {
+    margin-top: 14px;
+  }
+  #outputArea > .today-widget .today-right {
+    padding: 14px 18px 26px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(10,10,12,.02) 0%, rgba(10,10,12,.20) 24%, rgba(10,10,12,.40) 100%) !important;
+  }
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(100%, 214px);
+    margin: 0 auto 8px;
+  }
+  #outputArea > .today-widget .moon-name,
+  #outputArea > .today-widget .moon-desc {
+    max-width: 16rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #outputArea > .today-widget::before {
+    inset: 10px 2px 12px 2px;
+    background-position: center, center 60%;
+    background-size: cover, auto calc(100% - 10px);
+  }
+  #outputArea > .today-widget .today-left {
+    min-height: 214px;
+    padding: 20px 16px 16px !important;
+  }
+  #outputArea > .today-widget .today-vibrace-desc,
+  #outputArea > .today-widget .moon-desc {
+    max-width: 14.75rem;
+  }
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(100%, 200px);
+  }
+}
+
+@media (max-width: 390px) {
+  #outputArea > .today-widget .today-left {
+    min-height: 204px;
+    padding: 18px 14px 14px !important;
+  }
+  #outputArea > .today-widget .today-day-label,
+  #outputArea > .today-widget .today-vibrace-title,
+  #outputArea > .today-widget .today-vibrace-desc,
+  #outputArea > .today-widget .today-month-badge,
+  #outputArea > .today-widget .moon-name,
+  #outputArea > .today-widget .moon-desc {
+    max-width: 13.5rem;
+  }
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(100%, 188px);
+  }
+}
+
+
+/* ==========================================================================
+   v6.2.9 — moon phase panel re-centered for mobile portrait
+   Goal: the lunar artwork should fill the whole lower object more cleanly,
+   stay centered, and stop collapsing into a top-left visual cluster.
+   ========================================================================== */
+@media (max-width: 730px) {
+  #outputArea > .today-widget .today-widget-inner {
+    gap: 0;
+  }
+  #outputArea > .today-widget .today-right {
+    margin-top: 0 !important;
+    min-height: 292px;
+    padding: 18px 18px 28px !important;
+    display: grid !important;
+    place-items: center;
+    align-content: center;
+    text-align: center;
+    background:
+      linear-gradient(180deg, rgba(10,10,12,.06) 0%, rgba(10,10,12,.18) 20%, rgba(10,10,12,.38) 100%) !important;
+  }
+  #outputArea > .today-widget .today-right::before {
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 50% 24%, rgba(227,191,127,.09) 0%, rgba(227,191,127,.02) 22%, rgba(227,191,127,0) 48%),
+      linear-gradient(180deg, rgba(13,13,16,0) 0%, rgba(13,13,16,.14) 16%, rgba(13,13,16,.52) 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: 100% 100%, 100% 100%;
+    box-shadow: inset 0 1px 0 rgba(201,170,114,.24);
+  }
+  #outputArea > .today-widget .today-right::after {
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    width: min(72vw, 260px);
+    height: 22px;
+    background: radial-gradient(ellipse at center, rgba(201,170,114,.12) 0%, rgba(201,170,114,.04) 46%, rgba(201,170,114,0) 74%);
+  }
+  #outputArea > .today-widget .today-right > * {
+    position: relative;
+    z-index: 1;
+  }
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(92%, 264px) !important;
+    max-width: 264px;
+    margin: 0 auto 12px !important;
+  }
+  #outputArea > .today-widget .num-lunar-art svg,
+  #outputArea > .today-widget .num-lunar-art .num-geometry-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #outputArea > .today-widget .moon-name {
+    max-width: 14ch;
+    font-size: 1.18rem;
+    margin: 0 auto 6px;
+  }
+  #outputArea > .today-widget .moon-desc {
+    max-width: 16rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #outputArea > .today-widget .today-right {
+    min-height: 276px;
+    padding: 16px 14px 24px !important;
+  }
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(94%, 244px) !important;
+    max-width: 244px;
+  }
+}
+
+@media (max-width: 390px) {
+  #outputArea > .today-widget .today-right {
+    min-height: 260px;
+    padding: 14px 12px 22px !important;
+  }
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(95%, 226px) !important;
+    max-width: 226px;
+  }
+  #outputArea > .today-widget .moon-name,
+  #outputArea > .today-widget .moon-desc {
+    max-width: 14rem;
+  }
+}
+/* ===========================================================================
+   Numero v6.2.10 — MOBILE MOON PANEL: STRUCTURAL FIX (not a visual scale hack)
+   Root cause: the 900px breakpoint used flex-basis:210px.  Subsequent mobile
+   rules changed width but not flex-basis, so the lunar column remained 210px
+   wide and pinned to the left. Override BOTH dimensions and center the SVG.
+   Desktop/tablet >730px are deliberately untouched.
+   =========================================================================== */
+@media (max-width: 730px) {
+  #outputArea > .today-widget .today-widget-inner {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  #outputArea > .today-widget .today-right {
+    /* The essential fix: take up the ENTIRE second row in the flex layout. */
+    flex: 0 0 100% !important;
+    flex-basis: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    margin: 0 !important;
+    min-height: clamp(320px, 90vw, 420px);
+    padding: clamp(16px, 4vw, 24px) 16px clamp(22px, 5vw, 32px) !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    border-left: 0 !important;
+    border-top: 0;
+    background: linear-gradient(180deg,
+      rgba(10, 10, 13, .07) 0%,
+      rgba(10, 10, 13, .24) 22%,
+      rgba(10, 10, 13, .54) 100%) !important;
+  }
+
+  /* Suppress the competing abstract stairway under the moon instrument. */
+  #outputArea > .today-widget .today-right::before {
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(10, 10, 13, .06) 0%,
+      rgba(10, 10, 13, .18) 40%,
+      rgba(10, 10, 13, .42) 100%);
+    box-shadow: inset 0 1px 0 rgba(195, 166, 116, .24);
+  }
+  #outputArea > .today-widget .today-right::after { display: none; }
+
+  /* Full-width engraved moon instrument, scaled intrinsically, no crop. */
+  #outputArea > .today-widget .num-lunar-art {
+    display: block;
+    flex: 0 0 auto;
+    width: min(100%, 440px) !important;
+    min-width: 0;
+    max-width: 440px !important;
+    margin: 0 auto 7px !important;
+    padding: 0;
+    box-sizing: border-box;
+    align-self: center;
+  }
+  #outputArea > .today-widget .num-lunar-art > svg,
+  #outputArea > .today-widget .num-lunar-art .num-geometry-svg {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+    margin: 0 auto;
+    aspect-ratio: 244 / 153;
+    object-fit: contain;
+  }
+
+  #outputArea > .today-widget .moon-name,
+  #outputArea > .today-widget .moon-desc {
+    align-self: center;
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+    z-index: 2;
+  }
+  #outputArea > .today-widget .moon-name {
+    width: auto;
+    max-width: 90% !important;
+    margin-top: 0;
+    font-size: clamp(1rem, 3.3vw, 1.14rem);
+  }
+  #outputArea > .today-widget .moon-desc {
+    max-width: 31ch !important;
+    margin-bottom: 0;
+  }
+}
