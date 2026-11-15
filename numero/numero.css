@@ -2571,3 +2571,494 @@ body {
     }
   }
 }
+
+
+/* ==========================================================================
+   v6.2.4 — mobile portrait composition pass
+   Goal: on portrait phones, the engraved scenes must read as whole objects,
+   fill the available area more gracefully, and stop looking like clipped
+   leftovers from the desktop layout. Desktop rules stay untouched.
+   ========================================================================== */
+@media (max-width: 730px) {
+  .page-title {
+    min-height: 272px;
+    padding: 78px 14px 30px;
+    background-position: center, center, 49% center;
+    background-size: cover, cover, cover;
+  }
+  .page-title::before { width: 44%; opacity: .16; }
+  .page-title::after  { width: 41%; opacity: .24; }
+  .page-title h1 {
+    max-width: 9.5ch;
+    margin-inline: auto;
+    line-height: 1.08;
+  }
+  .page-title .subtitle {
+    max-width: 260px;
+    margin-inline: auto;
+    line-height: 1.42;
+  }
+
+  .container > .card {
+    padding: 22px 16px 24px;
+    background-color:#ecdfc9;
+    background-image:
+      linear-gradient(180deg, rgba(239,229,210,.88) 0%, rgba(239,229,210,.95) 24%, rgba(239,229,210,.98) 58%, rgba(239,229,210,.94) 100%),
+      url('numero-escher-identity.webp'),
+      url('numero-v621-form-continuity.svg'),
+      url('numero-v613-form-right.webp'),
+      url('numero-escher-paper.svg');
+    background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat;
+    background-position:center, left -10px top 36px, center bottom -4px, right -36px top 172px, center;
+    background-size:cover, min(38vw,138px) auto, 100% auto, min(78vw,320px) auto, 220px;
+  }
+  .container > .card > .form-section-label {
+    margin-bottom: 18px;
+    padding-right: 84px;
+  }
+  #numForm {
+    display: block;
+    padding-top: 4px;
+    padding-left: 0;
+  }
+  #numForm .form-group,
+  #numForm .partner-section,
+  #numForm .settings-box,
+  #numForm button[type='submit'] { position: relative; z-index: 1; }
+  #numForm .settings-box {
+    margin-top: 22px;
+    padding: 18px 18px 18px;
+    background-position: center, center;
+    background-size: cover, cover;
+  }
+  #numForm .settings-box::after {
+    left: 20px;
+    right: 20px;
+    top: 50%;
+  }
+  #numForm button[type='submit'] {
+    display:block;
+    width:100%;
+    margin-top:18px;
+  }
+
+  #outputArea > .today-widget {
+    background-image:
+      linear-gradient(180deg, rgba(16,17,19,.76), rgba(17,17,18,.91) 56%, rgba(17,17,18,.96)),
+      url('numero-escher-lunar.webp'),
+      url('numero-v3-paradox.svg');
+    background-repeat:no-repeat,no-repeat,no-repeat;
+    background-position:center, left -14px top, center bottom;
+    background-size:cover, min(58vw,228px) auto, 155% auto;
+    min-height: 0;
+  }
+  #outputArea > .today-widget .today-left {
+    padding: 26px 18px 18px 120px;
+    min-height: 170px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+  }
+  #outputArea > .today-widget .today-right {
+    padding: 18px 16px 20px;
+    background-position:center, center;
+    background-size:cover, 122% auto;
+  }
+  #outputArea > .today-widget .num-lunar-art { width:min(100%,236px); }
+  #outputArea > .today-widget .moon-name {
+    max-width: 17ch;
+    margin-inline:auto;
+  }
+
+  #outputArea > .card:nth-child(2) {
+    background-image:
+      linear-gradient(180deg, rgba(236,227,209,.72), rgba(236,227,209,.93) 36%, rgba(236,227,209,.97) 82%),
+      url('numero-v612-humanitas-foundation.webp'),
+      url('numero-v61-existence-architecture.webp'),
+      url('numero-v612-thread-foundation.svg'),
+      url('numero-escher-paper.svg');
+    background-position:center, left top, right top 115px, center, center;
+    background-size:cover, min(48vw,180px) auto, min(56vw,215px) auto, cover, 220px;
+    background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat;
+    padding-top: 26px;
+  }
+  #outputArea > .card:nth-child(2) > .result-section-title { padding-right: 42px; }
+  #outputArea > .card:nth-child(2) .big-number {
+    min-width: 64px;
+    font-size: 3.6rem;
+  }
+  #outputArea > .card:nth-child(2) .result-item-flex { align-items:flex-start; }
+
+  #outputArea > .card:nth-child(4) {
+    background-image:
+      linear-gradient(180deg, rgba(236,227,209,.78), rgba(236,227,209,.94) 38%, rgba(236,227,209,.98) 82%),
+      url('numero-v612-humanitas-karma.webp'),
+      url('numero-v61-karma-architecture.webp'),
+      url('numero-v612-thread-karma.svg'),
+      url('numero-escher-paper.svg');
+    background-position:center, left top, right bottom 18px, center, center;
+    background-size:cover, min(48vw,180px) auto, min(58vw,230px) auto, cover, 220px;
+    background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat;
+  }
+  #outputArea > .card:nth-child(4) > .result-section-title { padding-right: 46px; }
+  #outputArea > .card:nth-child(4) > p { padding-top: 8px; }
+  #outputArea > .card:nth-child(4) > div[style*="border-left"] { margin-bottom: 14px !important; }
+
+  #outputArea::after {
+    background-position: center center;
+    background-size: contain;
+    aspect-ratio: 3 / 1.06;
+    background-color: #14120e;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    min-height: 248px;
+    padding-top: 72px;
+  }
+  .container > .card {
+    background-position:center, left -8px top 44px, center bottom -8px, right -56px top 205px, center;
+    background-size:cover, 118px auto, 100% auto, 280px auto, 220px;
+  }
+  #outputArea > .today-widget {
+    background-size:cover, 190px auto, 145% auto;
+  }
+  #outputArea > .today-widget .today-left {
+    padding-left: 110px;
+    min-height: 158px;
+  }
+  #outputArea > .today-widget .num-lunar-art { width:min(100%,210px); }
+  #outputArea > .card:nth-child(2) {
+    background-size:cover, 160px auto, 190px auto, cover, 220px;
+    background-position:center, left top, right top 126px, center, center;
+  }
+  #outputArea > .card:nth-child(4) {
+    background-size:cover, 160px auto, 205px auto, cover, 220px;
+  }
+}
+
+@media (max-width: 390px) {
+  .page-title { min-height: 232px; }
+  .container > .card > .form-section-label { padding-right: 68px; }
+  .container > .card {
+    background-position:center, left -10px top 48px, center bottom -8px, right -72px top 220px, center;
+    background-size:cover, 106px auto, 100% auto, 252px auto, 220px;
+  }
+  #outputArea > .today-widget .today-left {
+    padding-left: 98px;
+    min-height: 148px;
+  }
+  #outputArea > .today-widget .today-vibrace-num { font-size: 4.2rem; }
+  #outputArea > .card:nth-child(2) .big-number { min-width: 54px; font-size: 3.2rem; }
+}
+
+
+/* ==========================================================================
+   v6.2.5 — mobile portrait composition refinement
+   Focus: YOUR IDENTITY / FOUNDATION OF YOUR EXISTENCE / KARMIC LESSONS
+   Goal: stop the engraved scenes from collapsing into the upper-left corner,
+   restore the lower-left shell motif in the identity panel, and make the
+   mobile compositions feel closer to the desktop flow.
+   ========================================================================== */
+@media (max-width: 730px) {
+  .container > .card {
+    padding-top: 22px;
+    padding-bottom: 26px;
+    background-image:
+      linear-gradient(180deg, rgba(239,229,210,.76) 0%, rgba(239,229,210,.90) 18%, rgba(239,229,210,.95) 42%, rgba(239,229,210,.97) 100%),
+      url('numero-escher-identity.webp'),
+      url('numero-v621-identity-lower.webp'),
+      url('numero-v621-form-continuity.svg'),
+      url('numero-v613-form-right.webp'),
+      url('numero-escher-paper.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    /* whole upper figure visible, lower partner motif restored, right art readable */
+    background-position:
+      center,
+      left -2px top 34px,
+      left -10px bottom 108px,
+      center bottom -4px,
+      right -54px center,
+      center;
+    background-size:
+      cover,
+      auto 158px,
+      auto 188px,
+      100% auto,
+      auto 80%,
+      220px;
+  }
+  .container > .card > .form-section-label {
+    margin-bottom: 20px;
+    padding-right: 74px;
+  }
+  #numForm {
+    padding-bottom: 6px;
+  }
+  #numForm .partner-section {
+    position: relative;
+    padding-bottom: 2px;
+  }
+  #numForm .settings-box {
+    margin-top: 18px;
+    background-image:
+      linear-gradient(180deg, rgba(244,235,218,.74), rgba(239,229,209,.90)),
+      url('numero-v621-method-niche.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, right -4px center;
+    background-size: cover, auto 100%;
+  }
+
+  #outputArea > .card:nth-child(2) {
+    background-image:
+      linear-gradient(180deg, rgba(236,227,209,.70) 0%, rgba(236,227,209,.88) 18%, rgba(236,227,209,.95) 44%, rgba(236,227,209,.98) 100%),
+      url('numero-v612-humanitas-foundation.webp'),
+      url('numero-v61-existence-architecture.webp'),
+      url('numero-v612-thread-foundation.svg'),
+      url('numero-escher-paper.svg');
+    background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat;
+    background-position:
+      center,
+      left -6px center,
+      right -4px center,
+      center,
+      center;
+    background-size:
+      cover,
+      auto calc(100% - 30px),
+      auto 66%,
+      cover,
+      220px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  #outputArea > .card:nth-child(2) > .result-section-title {
+    padding-right: 24px;
+  }
+  #outputArea > .card:nth-child(2) .result-item-flex {
+    position: relative;
+    z-index: 1;
+  }
+
+  #outputArea > .card:nth-child(4) {
+    background-image:
+      linear-gradient(180deg, rgba(236,227,209,.74) 0%, rgba(236,227,209,.90) 20%, rgba(236,227,209,.96) 48%, rgba(236,227,209,.985) 100%),
+      url('numero-v612-humanitas-karma.webp'),
+      url('numero-v61-karma-architecture.webp'),
+      url('numero-v612-thread-karma.svg'),
+      url('numero-escher-paper.svg');
+    background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat;
+    background-position:
+      center,
+      left -6px center,
+      right -8px center,
+      center,
+      center;
+    background-size:
+      cover,
+      auto calc(100% - 28px),
+      auto 68%,
+      cover,
+      220px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  #outputArea > .card:nth-child(4) > .result-section-title {
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container > .card {
+    background-position:
+      center,
+      left -4px top 36px,
+      left -14px bottom 116px,
+      center bottom -6px,
+      right -72px center,
+      center;
+    background-size:
+      cover,
+      auto 150px,
+      auto 178px,
+      100% auto,
+      auto 78%,
+      220px;
+  }
+  #numForm .settings-box {
+    background-position: center, right -24px center;
+    background-size: cover, auto 98%;
+  }
+  #outputArea > .card:nth-child(2) {
+    background-position: center, left -14px center, right -14px center, center, center;
+    background-size: cover, auto calc(100% - 32px), auto 62%, cover, 220px;
+  }
+  #outputArea > .card:nth-child(4) {
+    background-position: center, left -16px center, right -16px center, center, center;
+    background-size: cover, auto calc(100% - 32px), auto 64%, cover, 220px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container > .card {
+    background-position:
+      center,
+      left -8px top 38px,
+      left -18px bottom 120px,
+      center bottom -8px,
+      right -86px center,
+      center;
+    background-size:
+      cover,
+      auto 142px,
+      auto 166px,
+      100% auto,
+      auto 74%,
+      220px;
+  }
+  #outputArea > .card:nth-child(2) {
+    background-position: center, left -20px center, right -20px center, center, center;
+    background-size: cover, auto calc(100% - 34px), auto 59%, cover, 220px;
+  }
+  #outputArea > .card:nth-child(4) {
+    background-position: center, left -22px center, right -22px center, center, center;
+    background-size: cover, auto calc(100% - 34px), auto 60%, cover, 220px;
+  }
+}
+
+
+/* ==========================================================================
+   v6.2.6 — mobile portrait continuity polish for TODAY + LUNAR PHASE
+   Goal: on narrow portrait mobile, make the two stacked objects feel like one
+   continuous composition rather than two disconnected blocks.
+   ========================================================================== */
+@media (max-width: 730px) {
+  #outputArea > .today-widget {
+    isolation: isolate;
+    background-image:
+      linear-gradient(180deg, rgba(15,16,18,.76) 0%, rgba(16,16,18,.88) 49%, rgba(16,16,18,.97) 100%),
+      url('numero-escher-lunar.webp'),
+      url('numero-v3-paradox.svg'),
+      url('numero-v62-continuity.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: center, left -8px top -2px, center center, center;
+    background-size: cover, min(60vw, 224px) auto, 168% auto, cover;
+  }
+
+  #outputArea > .today-widget .today-widget-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  #outputArea > .today-widget .today-left {
+    position: relative;
+    z-index: 2;
+    padding: 24px 18px 18px 118px;
+    min-height: 166px;
+    border-bottom: none;
+    background: transparent;
+  }
+
+  #outputArea > .today-widget .today-left::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(201,170,114,0), rgba(201,170,114,.62) 18%, rgba(201,170,114,.62) 82%, rgba(201,170,114,0));
+    opacity: .9;
+  }
+
+  #outputArea > .today-widget .today-right {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: -8px;
+    padding: 28px 16px 22px;
+    border-left: none;
+    border-top: none;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  #outputArea > .today-widget .today-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(180deg, rgba(17,17,18,0) 0%, rgba(17,17,18,.48) 10%, rgba(17,17,18,.76) 28%, rgba(17,17,18,.92) 100%),
+      url('numero-v62-continuity.svg'),
+      url('numero-v3-paradox.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, center top, center center;
+    background-size: cover, 100% 100%, 160% auto;
+    box-shadow: inset 0 1px 0 rgba(201,170,114,.30);
+  }
+
+  #outputArea > .today-widget .today-right::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -14px;
+    transform: translateX(-50%);
+    width: min(72vw, 280px);
+    height: 30px;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(201,170,114,.16) 0%, rgba(201,170,114,.07) 42%, rgba(201,170,114,0) 72%);
+    opacity: .95;
+  }
+
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(100%, 224px);
+    margin: -2px auto 2px;
+  }
+
+  #outputArea > .today-widget .moon-name {
+    max-width: 16ch;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #outputArea > .today-widget {
+    background-position: center, left -12px top -2px, center center, center;
+    background-size: cover, 198px auto, 158% auto, cover;
+  }
+
+  #outputArea > .today-widget .today-left {
+    padding: 24px 18px 18px 108px;
+    min-height: 158px;
+  }
+
+  #outputArea > .today-widget .today-right {
+    margin-top: -10px;
+    padding: 26px 14px 20px;
+  }
+
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(100%, 212px);
+  }
+}
+
+@media (max-width: 390px) {
+  #outputArea > .today-widget {
+    background-position: center, left -14px top 0, center center, center;
+    background-size: cover, 186px auto, 152% auto, cover;
+  }
+
+  #outputArea > .today-widget .today-left {
+    padding-left: 98px;
+    min-height: 150px;
+  }
+
+  #outputArea > .today-widget .today-right {
+    margin-top: -12px;
+  }
+
+  #outputArea > .today-widget .num-lunar-art {
+    width: min(100%, 198px);
+  }
+}
