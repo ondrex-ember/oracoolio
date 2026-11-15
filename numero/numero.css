@@ -1113,7 +1113,7 @@ body {
 }
 .page-title::before {
  left:13px;top:13px;bottom:13px;right:auto;width:33%;height:auto;transform:none;
- background:url('numero-v3-paradox.svg') center left/contain no-repeat;
+ background:none center left/contain no-repeat;
  opacity:.34;pointer-events:none;z-index:0;
 }
 .page-title::after {
@@ -1163,14 +1163,14 @@ body {
 /* INITIAL TABLE — left human engraving, right impossible architecture. */
 .container > .card {
  background-image:linear-gradient(90deg,rgba(232,221,198,.06),rgba(232,221,198,.61) 17%,rgba(235,225,205,.96) 31%,rgba(235,225,205,.88)),
- url('numero-escher-identity.webp'),url('numero-v3-paradox.svg'),url('numero-escher-paper.svg');
+ url('numero-escher-identity.webp'),none,url('numero-escher-paper.svg');
  background-position:center,8px 40px,right -105px bottom -55px,center;
  background-size:cover,267px auto,530px auto,220px;
  background-repeat:no-repeat,no-repeat,no-repeat,repeat;
 }
 #numForm {grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);column-gap:36px;}
 #numForm .settings-box {
- background-image:linear-gradient(180deg,rgba(227,211,183,.91),rgba(231,216,191,.74)),url('numero-v3-paradox.svg');
+ background-image:linear-gradient(180deg,rgba(227,211,183,.91),rgba(231,216,191,.74)),none;
  background-repeat:no-repeat;
  background-position:center,right -75px bottom -30px;
  background-size:cover,430px auto;
@@ -1194,7 +1194,7 @@ body {
 #outputArea > .today-widget {
  min-height:245px;
  background-image:linear-gradient(90deg,rgba(13,14,15,.28),rgba(15,16,17,.84) 31%,rgba(15,16,17,.89) 68%,rgba(17,17,17,.65)),
- url('numero-escher-lunar.webp'),url('numero-v3-paradox.svg');
+ url('numero-escher-lunar.webp'),none;
  background-position:center,left center,right center;
  background-size:cover,320px auto,650px auto;
  box-shadow:inset 0 0 0 6px #141413,inset 0 0 0 7px #aa8b5d,0 13px 29px #0007;
@@ -1245,7 +1245,7 @@ body {
  padding:24px 21px;
 }
 #outputArea > .card:nth-child(3) .pinnacle-card:nth-child(2) {
- background-image:linear-gradient(130deg,#1c1b19ed,#131516dd),url('numero-v3-paradox.svg');
+ background-image:linear-gradient(130deg,#1c1b19ed,#131516dd),none;
  background-size:cover,310px auto;
 }
 #outputArea > .card:nth-child(3) .pinnacle-card:nth-child(3) {
@@ -1279,7 +1279,7 @@ body {
 #outputArea > .card:nth-child(5) {
  background-color:#171717;
  background-image:linear-gradient(180deg,#141515d8,#141515d3 48%,#141515e5),
- url('numero-escher-finale.webp'),url('numero-v3-paradox.svg');
+ url('numero-escher-finale.webp'),none;
  background-size:cover,cover,1000px auto;
  background-position:center,center,center;
 }
@@ -1290,7 +1290,7 @@ body {
 #outputArea > .card:nth-child(5) .pinnacle-card {
  background-color:#ecdfc6;
  background-image:linear-gradient(138deg,#f5ead2ec,#e8d9baee),
- url('numero-v3-paradox.svg'),url('numero-escher-paper.svg');
+ none,url('numero-escher-paper.svg');
  background-position:center,center bottom,center;
  background-size:cover,310px auto,200px;
  border:1px solid #d5b887;
@@ -1309,7 +1309,7 @@ body {
 /* NUMEROLOGICAL 3x3 — counts, absence and lines are still parser output. */
 #outputArea > .card:nth-child(6) {
  background-image:linear-gradient(90deg,#ebe0c9ef,#ebe0c9fc 55%,#ebe0c9eb),
- url('numero-v3-paradox.svg'),url('numero-v3-bionica.svg'),url('numero-escher-paper.svg');
+ none,url('numero-v3-bionica.svg'),url('numero-escher-paper.svg');
  background-size:cover,650px auto,300px auto,220px;
  background-position:center,right top,right bottom,center;
  background-repeat:no-repeat,no-repeat,no-repeat,repeat;
@@ -1337,7 +1337,7 @@ body {
 
 /* Dual field / synastry — visibly two interleaving structures, no false value. */
 #outputArea > .synastry-block {
- background-image:linear-gradient(90deg,#ece0c9eb,#ece0c9ec),url('numero-v3-paradox.svg'),url('numero-v3-bionica.svg');
+ background-image:linear-gradient(90deg,#ece0c9eb,#ece0c9ec),none,url('numero-v3-bionica.svg');
  background-size:cover,600px auto,300px auto;
  background-position:center,left top,right bottom;
  background-repeat:no-repeat;
@@ -1346,7 +1346,7 @@ body {
  min-height:215px;border:1px solid #b99b69;
  box-shadow:inset 0 0 0 8px #141310,inset 0 0 0 9px #9d8254;
  background-image:linear-gradient(90deg,#1515159e,#1515150d 45% 65%,#151515b6),
- url('numero-escher-finale.webp'),url('numero-v3-paradox.svg');
+ url('numero-escher-finale.webp'),none;
  background-position:center,center,center;
  background-size:cover,cover,1000px auto;
 }
@@ -1682,7 +1682,7 @@ body {
     linear-gradient(90deg,#eadfcbe3,#eadfcbfb 29%,#eadfcbef 58%,#eadfcbef),
     url('numero-escher-butterfly.webp'),
     url('numero-v3-tessellation.svg'),
-    url('numero-v3-paradox.svg'),
+    none,
     url('numero-escher-paper.svg');
   background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat;
   background-position:center,left center,right -110px center,right top,center;
@@ -1693,7 +1693,7 @@ body {
     linear-gradient(90deg,rgba(233,223,204,.18),rgba(233,223,204,.92) 24%,rgba(233,223,204,.98) 48%),
     url('numero-escher-karma.webp'),
     url('numero-v3-bionica.svg'),
-    url('numero-v3-paradox.svg'),
+    none,
     url('numero-escher-paper.svg');
   background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat;
   background-size:cover,360px auto,245px auto,390px auto,220px;
@@ -1713,7 +1713,7 @@ body {
     background-position:center,left center,right bottom,center;
   }
   #outputArea > .card:nth-child(4) {
-    background-image:linear-gradient(90deg,#e9dfcaec,#e9dfcaf8),url('numero-v3-bionica.svg'),url('numero-v3-paradox.svg');
+    background-image:linear-gradient(90deg,#e9dfcaec,#e9dfcaf8),url('numero-v3-bionica.svg'),none;
     background-size:cover,230px auto,260px auto;
     background-position:center,right bottom,right top;
   }
@@ -1732,7 +1732,7 @@ body {
   flex:0 0 218px;
   position:relative;
   gap:3px;
-  background-image:linear-gradient(150deg,#1c1a17db,#111213d9),url('numero-v3-paradox.svg');
+  background-image:linear-gradient(150deg,#1c1a17db,#111213d9),none;
   background-size:cover,430px auto;
   border-left:1px solid #b4936159;
 }
@@ -2646,7 +2646,7 @@ body {
     background-image:
       linear-gradient(180deg, rgba(16,17,19,.76), rgba(17,17,18,.91) 56%, rgba(17,17,18,.96)),
       url('numero-escher-lunar.webp'),
-      url('numero-v3-paradox.svg');
+      none;
     background-repeat:no-repeat,no-repeat,no-repeat;
     background-position:center, left -14px top, center bottom;
     background-size:cover, min(58vw,228px) auto, 155% auto;
@@ -2939,7 +2939,7 @@ body {
     background-image:
       linear-gradient(180deg, rgba(15,16,18,.76) 0%, rgba(16,16,18,.88) 49%, rgba(16,16,18,.97) 100%),
       url('numero-escher-lunar.webp'),
-      url('numero-v3-paradox.svg'),
+      none,
       url('numero-v62-continuity.svg');
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: center, left -8px top -2px, center center, center;
@@ -2991,7 +2991,7 @@ body {
     background-image:
       linear-gradient(180deg, rgba(17,17,18,0) 0%, rgba(17,17,18,.48) 10%, rgba(17,17,18,.76) 28%, rgba(17,17,18,.92) 100%),
       url('numero-v62-continuity.svg'),
-      url('numero-v3-paradox.svg');
+      none;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: center, center top, center center;
     background-size: cover, 100% 100%, 160% auto;
@@ -3551,5 +3551,81 @@ body {
   #outputArea > .today-widget .moon-desc {
     max-width: 31ch !important;
     margin-bottom: 0;
+  }
+}
+
+
+/* ========================================================================
+   ORACOOLIO NUMERO v6.2.12 — MOTIF AUDIT / CHAPTER-SPECIFIC ENGRAVINGS
+   All 17 legacy references to the all-purpose step/ramp motif were disabled
+   at their original declarations above. These rules curate the currently
+   active backgrounds by meaning. No numeric data or DOM is modified.
+   ======================================================================== */
+
+/* NAME — personality is represented by a mathematical rosette, not stairs. */
+#outputArea > .card:nth-child(3) .pinnacle-card:nth-child(2) {
+  background-image:
+    linear-gradient(130deg, rgba(28,27,25,.93), rgba(19,21,22,.94)),
+    url('numero-v6212-name-compass.svg');
+  background-size: cover, 280px auto;
+  background-position: center, right center;
+  background-repeat: no-repeat;
+}
+
+/* VIBRATIONAL CYCLES — one unobtrusive construction plane supports the
+   existing, different number-specific SVG illustrations (2, 4, etc.). */
+#outputArea > .card:nth-child(5) .pinnacle-card,
+#outputArea > .card:nth-child(5) .pinnacle-card:nth-child(even) {
+  background-image:
+    linear-gradient(138deg, rgba(245,234,210,.94), rgba(232,217,186,.95)),
+    url('numero-v6212-cycle-plate.svg'),
+    url('numero-escher-paper.svg');
+  background-position: center, center 53%, center;
+  background-size: cover, 105% auto, 200px;
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+/* NUMEROLOGICAL GRID — the already-approved Identity architectural study,
+   with a gentle wash so analytical figures and the empty-line note lead. */
+#outputArea > .card:nth-child(6) {
+  background-image:
+    linear-gradient(90deg, rgba(235,224,201,.96) 0%, rgba(235,224,201,.96) 40%, rgba(235,224,201,.83) 73%, rgba(235,224,201,.79) 100%),
+    url('numero-v613-form-right.webp'),
+    url('numero-escher-paper.svg');
+  background-size: cover, min(69%, 760px) auto, 220px;
+  background-position: center, right -6px top 115px, center;
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+/* PARTNER COMPATIBILITY — two overlapping compass circles. */
+#outputArea > .synastry-block {
+  background-image:
+    linear-gradient(90deg, rgba(236,224,201,.89), rgba(236,224,201,.93)),
+    url('numero-v6212-synastry-construction.svg'),
+    url('numero-escher-paper.svg');
+  background-position: center, right center, center;
+  background-size: cover, min(70%, 610px) auto, 220px;
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+@media (max-width: 730px) {
+  /* On narrow screens preserve the text priority and use only a faint edge. */
+  #outputArea > .card:nth-child(6) {
+    background-image:
+      linear-gradient(90deg, rgba(235,224,201,.95), rgba(235,224,201,.89)),
+      url('numero-v613-form-right.webp'),
+      url('numero-escher-paper.svg');
+    background-position: center, right -95px top 155px, center;
+    background-size: cover, 390px auto, 220px;
+    background-repeat: no-repeat, no-repeat, repeat;
+  }
+  #outputArea > .card:nth-child(5) .pinnacle-card,
+  #outputArea > .card:nth-child(5) .pinnacle-card:nth-child(even) {
+    background-size: cover, 120% auto, 220px;
+    background-position: center, center 50%, center;
+  }
+  #outputArea > .synastry-block {
+    background-size: cover, 370px auto, 220px;
+    background-position: center, right -90px center, center;
   }
 }
