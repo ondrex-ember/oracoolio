@@ -3751,3 +3751,144 @@ body {
     grid-column: 1 / -1 !important;
   }
 }
+
+
+/* ============================================================================
+   ORACOOLIO NUMERO v6.3 — EDITORIAL POLISH / FINAL DESIGN PASS
+   Existing illustrations, section structure and responsive layouts are kept.
+   Only visual finishing: rhythm, ink contrast, line wrapping and cycle labels.
+   No data, translation, HTML, JS, consent or telemetry changes.
+   ============================================================================ */
+
+/* The manuscript headings should keep one optical rhythm, even when the
+   translated title must occupy a second line. */
+#outputArea > .card > .result-section-title,
+#outputArea > .synastry-block > .result-section-title,
+.container > .card > .form-section-label {
+  text-wrap: balance;
+  line-height: 1.48;
+}
+
+/* Give the approved engravings room: body copy stays a live, legible layer. */
+#outputArea > .card:nth-child(2) .result-item-content p {
+  line-height: 1.62;
+}
+
+/* Karmic lessons: an even ink wash behind readings of different lengths. */
+#outputArea > .card:nth-child(4) > div[style*="border-left"] {
+  background: linear-gradient(105deg,
+    rgba(248,239,222,.97),
+    rgba(242,231,211,.965)) !important;
+  line-height: 1.57;
+}
+
+/* The small semantics under each cycle illustration are a proper caption,
+   not tiny free-floating labels. The symbol remains generated from its number. */
+#outputArea .num-cycles-atlas .pinnacle-card::after {
+  box-sizing: border-box;
+  min-height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-color: rgba(117,90,55,.31);
+  background: rgba(248,239,220,.65);
+  color: #654b2e;
+  letter-spacing: .045em;
+  line-height: 1.35;
+}
+
+/* An absent digit is analytical information, not disabled content. */
+#outputArea > .card:nth-child(6) .grid-number-box .missing-title {
+  color: #645640;
+}
+#outputArea > .card:nth-child(6) .grid-number-icon.missing {
+  color: #66594a;
+  border-color: rgba(132,104,67,.56);
+}
+#outputArea > .card:nth-child(6) .grid-number-box > div:last-child {
+  min-width: 0;
+}
+
+/* Focus is part of the finished visual system, not a default browser glow. */
+#numForm input[type="text"]:focus-visible,
+#numForm input[type="date"]:focus-visible,
+#numForm input[type="radio"]:focus-visible,
+#numForm button[type="submit"]:focus-visible,
+.num-header a:focus-visible,
+.num-header button:focus-visible {
+  outline: 2px solid #b88a43;
+  outline-offset: 3px;
+}
+
+/* Muted footer text must still be legible against the almost-black page. */
+#oracoolio-footer .footer-link {
+  color: #baa989;
+}
+#oracoolio-footer .footer-credit {
+  color: #968770;
+}
+
+@media (max-width: 730px) {
+  /* One measured spacing rhythm through the illuminated reading chapters. */
+  #outputArea > .card > .result-section-title,
+  #outputArea > .synastry-block > .result-section-title {
+    margin-bottom: 22px;
+  }
+
+  #outputArea > .card:nth-child(2) .result-item-flex {
+    gap: clamp(14px, 4vw, 22px);
+  }
+  #outputArea > .card:nth-child(2) .result-item-content {
+    min-width: 0;
+  }
+
+  /* A slightly clearer figurative passage at the top of the karmic scene;
+     the opaque lesson cards keep their original text contrast. */
+  #outputArea > .card:nth-child(4) {
+    background-image:
+      linear-gradient(180deg,
+        rgba(236,227,209,.68) 0%,
+        rgba(236,227,209,.86) 19%,
+        rgba(236,227,209,.96) 49%,
+        rgba(236,227,209,.985) 100%),
+      url('numero-v612-humanitas-karma.webp'),
+      url('numero-v61-karma-architecture.webp'),
+      url('numero-v612-thread-karma.svg'),
+      url('numero-escher-paper.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  }
+  #outputArea > .card:nth-child(4) > div[style*="border-left"] {
+    padding: 14px 17px !important;
+    margin-bottom: 14px !important;
+  }
+
+  #outputArea > .card:nth-child(6) .grid-number-box {
+    gap: 13px;
+  }
+  #outputArea > .card:nth-child(6) .grid-number-box .grid-number-icon {
+    flex: 0 0 auto;
+  }
+  #outputArea > .card:nth-child(6) .grid-number-box h4 {
+    line-height: 1.42;
+    overflow-wrap: break-word;
+  }
+  #outputArea > .card:nth-child(6) .grid-number-box p {
+    line-height: 1.52;
+  }
+}
+
+@media (max-width: 620px) {
+  #outputArea .num-cycles-atlas .pinnacle-card::after {
+    max-width: 100%;
+    margin-top: 13px;
+    padding: 4px 5px;
+    font-size: .57rem;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  /* Keep small ordinal captions out of the way of the living numerology. */
+  #outputArea > .card:nth-child(6) .grid-number-box h4 {
+    letter-spacing: .035em;
+  }
+}
