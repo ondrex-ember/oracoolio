@@ -981,7 +981,7 @@ const ichingTexts = {
         "nazev_en": "Bi / Holding Together (Union)",
         "rozsudek": "Soudržnost přináší štěstí. Zkoumej orákulum, abys zjistil, zda máš vznešenost, vytrvalost a sílu. Opozdilci potká neštěstí.",
         "rozsudek_en": "Holding together brings good fortune. Inquire of the oracle once again whether you possess sublimity, constancy, and perseverance. Those who come too late meet with misfortune.",
-        "obraz": "On the earth is water. The superior man fosters his relationships and maintains friendly ties with neighboring regions.",
+        "obraz": "Na zemi je voda. Ušlechtilý člověk pečuje o své vztahy a udržuje přátelské styky se sousedními kraji.",
         "obraz_en": "On the earth is water. The superior man fosters his relationships and maintains friendly ties with neighboring regions.",
         "klasika": "Pi naznačuje, že (za podmínek, které předpokládá) je štěstí. Ale ať (hlavní strana v něm zamýšlená) znovu přezkoumá sama sebe, (jako by) věštbou, zda je její ctnost veliká, nepřetržitá a pevná. Je-li tomu tak, nebude chyba. Ti, kdo nemají klid, k němu pak přijdou; a s těmi, kdo přijdou (příliš) pozdě, bude zle.",
         "klasika_en": "Pi indicates that (under the conditions which it supposes) there is good fortune. But let (the principal party intended in it) re-examine himself, (as if) by divination, whether his virtue be great, unintermitting, and firm. If it be so, there will be no error. Those who have not rest will then come to him; and with those who are (too) late in coming it will be ill.",
@@ -1116,31 +1116,535 @@ const ichingTexts = {
         "rozsudek": "Úspěch. Husté mraky, ale žádný déšť ze západu. Malými krůčky a jemným působením lze dosáhnout velkých věcí.",
         "rozsudek_en": "Success. Dense clouds but no rain from our western region. Small steps and gentle influence can achieve great things.",
         "obraz": "Vítr žene mraky po nebi. Ušlechtilý člověk zušlechťuje vnější vzhled a drobné ctnosti.",
-        "obraz_en": "The wind drives across heaven. The superior man refines the outward aspect of his nature and cultivates small virtues."
+        "obraz_en": "The wind drives across heaven. The superior man refines the outward aspect of his nature and cultivates small virtues.",
+        "klasika": "Siao Čchü naznačuje, že (za jeho podmínek) bude pokrok a úspěch. (Vidíme) hustá mračna, ale z našich hranic na západě nepřichází déšť.",
+        "klasika_en": "Hsiao Khu indicates that (under its conditions) there will be progress and success. (We see) dense clouds, but no rain coming from our borders in the west.",
+        "vyklad": [
+            "Vítr žene mraky po nebi, ale zatím je nedokáže proměnit v déšť. Hexagram popisuje situaci, kdy silný prvek drží na uzdě slabší, ale vytrvalý. Úspěch je v dohledu, jen ještě není čas na velké kroky. Prosazuje se jemností, ne silou.",
+            "Jedna slabá čára ve čtvrtém místě zadržuje pět silných. Vítr zahušťuje oblaka, ale protože je jen vzduch bez pevného těla, nevytváří velké ani trvalé účinky. Přesně tak působí malé prostředky: přátelské přesvědčování, drobné ohledy, trpělivé zdokonalování. Situace není nepříznivá, jen se zatím dá dělat příprava a ne velký zásah.",
+            "V práci se daří postupnému budování, malým zlepšením, vyjednávání a jemnému vlivu. Velké reformy ještě nejsou na pořadu. Ve vztazích vyhrává ohleduplnost a malé pozornosti, ne ultimáta. Potřebuješ pevné odhodlání uvnitř a ohebnost navenek.",
+            "Rizikem je netrpělivost: snaha prorazit silou tam, kde je odpor slabý, ale přesto účinný. Dalším je podceňování drobných věcí, které dohromady rozhodují. Hrozí i falešný pocit, že ‚to už se vyřešilo‘, ačkoli déšť ještě nepadá.",
+            "Rozvíjej se v malých krocích. Zdokonaluj, jak se prezentuješ, jak komunikuješ a jak plníš sliby. Připrav základ a počkej na okamžik, kdy se mraky roztrhnou. Dřív není nutné ani užitečné tlačit."
+        ],
+        "vyklad_en": [
+            "The wind drives clouds across the sky but cannot yet turn them to rain. The hexagram describes a situation where a strong element is held in check by a weaker but persistent one. Success is in sight, only it is not yet time for big moves. Progress comes through gentleness, not force.",
+            "One weak line in the fourth place restrains five strong ones. The wind thickens the clouds, but being only air without solid body it produces no great or lasting effect. Small means work exactly like that: friendly persuasion, minor considerations, patient refinement. The situation is not unfavourable; for now preparation is possible, not a major intervention.",
+            "At work, gradual building, small improvements, negotiation and gentle influence do well. Large reforms are not yet on the agenda. In relationships consideration and small attentions win over ultimatums. You need firm resolve inside and flexibility outside.",
+            "The risk is impatience: trying to break through by force where the resistance is weak but effective nonetheless. Another is underrating small things that together decide. There is also a false sense that it is already settled, although the rain has not yet fallen.",
+            "Develop in small steps. Refine how you present yourself, how you communicate and how you keep promises. Prepare the base and wait for the moment when the clouds break. Pushing sooner is neither necessary nor useful."
+        ],
+        "cary": {
+            "1": {
+                "klasika": "První čára, nepřerušená, ukazuje jeho předmět, jak se vrací a sleduje svou vlastní cestu. Jaké chyby by se měl dopustit? Bude štěstí.",
+                "klasika_en": "The first line, undivided, shows its subject returning and pursuing his own course. What mistake should he fall into? There will be good fortune.",
+                "vyklad": [
+                    "Vrať se na svou cestu. Silný člověk má sklon tlačit dopředu, ale narazí na překážku, a proto se vrací tam, kde je volný. Není na tom žádná chyba, naopak.",
+                    "V povaze silné bytosti je tlak vpřed a při něm se naráží na odpor. Správným řešením je vrátit se na cestu, která odpovídá tvé situaci a kde máš možnost postupovat i ustoupit. Je rozumné nic nevynucovat.",
+                    "V práci se vyplatí ustoupit k základní činnosti, k oboru, který ovládáš, a vybudovat odtud další krok. Ve vztazích jde o návrat k tomu, co je pro tebe přirozené, místo usilování o něco, co se nedaří.",
+                    "Rizikem je trvat na prvním plánu a utrácet energii o zeď. Opačným rizikem je vzdát se příliš brzo, místo aby ses vrátil a znovu zvážil cestu.",
+                    "Změň směr, než narazíš. Vrať se k vlastnímu rytmu a hledej cestu, kde nemusíš nic vynucovat. Ústup na vlastní cestu je správný krok."
+                ],
+                "vyklad_en": [
+                    "Return to your own way. A strong person tends to press forward but meets an obstacle, and so returns to where he is free. There is nothing wrong in it; quite the opposite.",
+                    "It lies in the nature of a strong being to press ahead, and in doing so it meets resistance. The right solution is to return to the course that suits your situation and where you may advance or retreat. It is reasonable to force nothing.",
+                    "At work it pays to step back to the core activity, the field you master, and build the next step from there. In relationships it is about returning to what is natural to you instead of pursuing what is not working.",
+                    "The risk is holding to the first plan and spending energy against a wall. The opposite risk is giving up too soon instead of returning and reconsidering the route.",
+                    "Change direction before you hit the wall. Return to your own rhythm and look for a route where you need not force anything. Withdrawing onto your own path is the right step."
+                ]
+            },
+            "2": {
+                "klasika": "Druhá čára, nepřerušená, ukazuje jeho předmět, jak se přitažlivostí (předchozí čáry) vrací (na správnou cestu). Bude štěstí.",
+                "klasika_en": "The second line, undivided, shows its subject, by the attraction (of the former line), returning (to the proper course). There will be good fortune.",
+                "vyklad": [
+                    "Nechávám se vtáhnout do návratu spolu s druhými. Rozumný člověk neriskuje osobní odmítnutí, ale ustoupí se svými podobně smýšlejícími.",
+                    "Chtěl bys jít dál, ale podle příkladu jiných vidíš, že cesta je zatarasená. Když tlak vpřed neladí s časem, rozvážný a rozhodný člověk se nevystavuje zbytečné ráně. Ustupuje se stejně smýšlejícími a tím nic neztrácí.",
+                    "V práci se spojuj s lidmi, kteří vidí stejné překážky, a stáhněte se společně na lepší pozici. Ve vztazích se vyplatí sdílet rozhodnutí ustoupit, aby nikdo nezůstal sám.",
+                    "Rizikem je pýcha, která brání přiznat, že se ustoupit má. Druhým rizikem je přidat se k ústupu bez vlastního úsudku, jen proto, že to dělají ostatní.",
+                    "Přidej se k těm, kdo se rozumně vracejí. Ušetři síly na dobu, kdy bude cesta volná. Společný ústup je často nejlepší ochrana."
+                ],
+                "vyklad_en": [
+                    "I let myself be drawn into returning along with others. A sensible person does not risk personal rebuff but retreats with like-minded people.",
+                    "You would like to press on, but from the example of others you see that the way is blocked. When the push forward does not match the time, a reasonable and resolute person does not expose himself to a needless blow. He retreats with those of like mind and loses nothing by it.",
+                    "At work join people who see the same obstacles and pull back together to a better position. In relationships it pays to share a decision to step back so that no one is left alone.",
+                    "The risk is pride that prevents admitting that withdrawal is called for. The second is joining a retreat without your own judgement, just because others do.",
+                    "Join those who are returning sensibly. Save strength for when the road is clear. A joint retreat is often the best protection."
+                ]
+            },
+            "3": {
+                "klasika": "Třetí čára, nepřerušená, vyvolává představu vozu, jehož řemen pod ním byl odstraněn, nebo manželů, kteří se na sebe dívají odvrácenýma očima.",
+                "klasika_en": "The third line, undivided, suggests the idea of a carriage, the strap beneath which has been removed, or of a husband and wife looking on each other with averted eyes.",
+                "vyklad": [
+                    "Z vozu vypadly loukotě. Snaha prorazit silou narazí na překážku, kterou jsi podcenil. Následuje hádka a ztráta důstojnosti.",
+                    "Pokoušíš se prosadit se přes překážku, která se zdá malá, ale ve skutečnosti má v dané situaci převahu. Vnější podmínky ti brání v postupu, jako chybějící loukotě zastaví vůz. Náznak osudu ještě nebereš vážně, a proto se objevují nepříjemné hádky, jaké znají páry v krizi. Dokonce i silný člověk nemůže vykonat správný vliv na okolí, pokud tlačí v nevhodnou chvíli.",
+                    "V práci jde o projekt tlačený silou přes odpor, který jsi nebral vážně, a následné třenice v týmu. Ve vztazích o spor, kde jedna strana nechce vidět důvody druhé.",
+                    "Rizikem je ztráta tváře a důvěry při veřejném neúspěchu. Dalším je opakování stejného úsilí v naději, že tentokrát to projde.",
+                    "Zastav se a prohlédni vůz, než pojedeš dál. Ověř, co skutečně drží tvůj postup, a oprav to. Ve sporech ustup a uznej, že ses unáhlil."
+                ],
+                "vyklad_en": [
+                    "The spokes burst out of the wheels. Trying to break through by force meets an obstacle you underestimated. Quarrels and loss of dignity follow.",
+                    "You try to push through an obstacle that looks small but in this situation actually holds the upper hand. External conditions hinder your advance, just as missing spokes stop a wagon. You do not yet take the hint of fate seriously, hence the annoying arguments of the kind known to couples in crisis. Even a strong person cannot exert the right influence on those around him if he pushes at the wrong time.",
+                    "At work this is a project pushed by force through resistance you did not take seriously, and the friction in the team that follows. In relationships it is a dispute where one side will not see the other's reasons.",
+                    "The risk is losing face and trust through public failure. Another is repeating the same effort in hope it will go through this time.",
+                    "Stop and inspect the wagon before you drive on. Check what actually holds your progress together and repair it. In disputes, step back and admit you were hasty."
+                ]
+            },
+            "4": {
+                "klasika": "Čtvrtá čára, přerušená, ukazuje jeho předmět, který je vybaven upřímností. Tím se odvrátí nebezpečí krveprolití a rozptýlí se (důvod) jeho obav. Nebude chyba.",
+                "klasika_en": "The fourth line, divided, shows its subject possessed of sincerity. The danger of bloodshed is thereby averted, and his (ground for) apprehension dismissed. There will be no mistake.",
+                "vyklad": [
+                    "Pravdivost přemůže strach. Stojíš v obtížné poradní roli vedle mocného, a upřímnost mu pomůže zadržet, aniž by došlo ke zlému.",
+                    "Být poradcem silného člověka a držet ho zpátky je riziko. Hrozí střet a následky. Síla nezištné pravdy je ale větší než všechny tyto překážky. Má takovou váhu, že cíl bude dosažen a nebezpečí i strach pominou.",
+                    "V práci jde o roli vedoucího, který musí upozornit nadřízeného na rizika, nebo odborníka, který říká nepříjemnou pravdu. Ve vztazích o taktní, ale pravdivou řeč tam, kde druhý má moc.",
+                    "Rizikem je vnější tlak, který tě svede k mlčení, nebo ke zbytečně ostrému tónu. Dalším je zájem, který přebije upřímnost.",
+                    "Mluv pravdivě, věcně a bez osobních cílů. Nabídni alternativu a důvody. Upřímnost bez zištnosti je největší ochrana tebe i druhých."
+                ],
+                "vyklad_en": [
+                    "Truthfulness conquers fear. You stand in the difficult advisory role beside a powerful person, and sincerity helps you restrain him without things going badly.",
+                    "Being counsellor to a strong person and holding him back is a risk. Clash and consequences threaten. But the power of disinterested truth is greater than all these obstacles. It carries such weight that the aim is reached and both danger and fear disappear.",
+                    "At work this is the role of a manager who must point out risks to a superior, or an expert who says an unwelcome truth. In relationships it is tactful but truthful speech where the other holds power.",
+                    "The risk is outside pressure that pushes you into silence, or into an unnecessarily sharp tone. Another is self-interest overriding sincerity.",
+                    "Speak truthfully, factually and without personal aims. Offer an alternative and reasons. Disinterested honesty is the greatest protection for you and for others."
+                ]
+            },
+            "5": {
+                "klasika": "Pátá čára, nepřerušená, ukazuje jeho předmět, který je vybaven upřímností a přitahuje druhé ke spojení s ním. Bohatý na zdroje využívá své sousedy (ve stejné věci jako on sám).",
+                "klasika_en": "The fifth line, undivided, shows its subject possessed of sincerity, and drawing others to unite with him. Rich in resources, he employs his neighbours (in the same cause with himself).",
+                "vyklad": [
+                    "Věrnost a důvěra vedou k bohatství sdíleném s okolím. Kdo je upřímně oddán a sdílí, získává nejen přátele, ale i zdroje.",
+                    "Oddanost vytváří pevná pouta, protože si partneři navzájem doplňují, co chybí. U slabšího se projevuje jako věrnost, u silnějšího jako spolehlivost. Z takového vzájemného posilování vzniká pravé bohatství, které je tím zřetelnější, že není sobecky hromaděno, ale sdíleno. Radost sdílená je radost zdvojená.",
+                    "V práci jde o věrné partnerství, dlouhodobou spolupráci a sdílení znalostí a zdrojů. Ve vztazích o loajalitu, která není kontrolou, ale vzájemnou oporou.",
+                    "Rizikem je jednostranná loajalita, kdy jedna strana dává a druhá bere. Dalším rizikem je izolace, kdy bohatství držíš jen pro sebe.",
+                    "Buď spolehlivý a buduj síť lidí, kteří se navzájem podporují. Sdílej zdroje i radost. Skutečné bohatství roste mezi lidmi."
+                ],
+                "vyklad_en": [
+                    "Loyalty and trust lead to wealth shared with those around you. Whoever is sincerely devoted and shares gains not only friends but resources.",
+                    "Loyalty creates firm bonds because partners complement each other. In the weaker it shows as devotion, in the stronger as trustworthiness. From such mutual reinforcement comes true wealth, all the more evident because it is not hoarded selfishly but shared. Pleasure shared is pleasure doubled.",
+                    "At work this is loyal partnership, long-term cooperation and sharing of knowledge and resources. In relationships it is loyalty that is not control but mutual support.",
+                    "The risk is one-sided loyalty where one side gives and the other takes. Another is isolation, where you keep wealth only for yourself.",
+                    "Be reliable and build a network of people who support one another. Share resources and joy. Real wealth grows between people."
+                ]
+            },
+            "6": {
+                "klasika": "Nejvyšší čára, nepřerušená, ukazuje, jak déšť spadl a (postup vpřed) je zastaven;—(tak) musíme ocenit plné nahromadění ctnosti (představované horním trigramem). Ale manželka (uplatňující zdrženlivost), ať je sebepevnější a správnější, je v nebezpečném postavení, (a jako) měsíc blížící se úplňku. Bude-li vznešený muž (za takových okolností) pokračovat ve svých opatřeních, bude zlo.",
+                "klasika_en": "The topmost line, undivided, shows how the rain has fallen, and the (onward progress) is stayed;—(so) must we value the full accumulation of the virtue (represented by the upper trigram). But a wife (exercising restraint), however firm and correct she may be, is in a position of peril, (and like) the moon approaching to the full. If the superior man prosecute his measures (in such circumstances), there will be evil.",
+                "vyklad": [
+                    "Déšť konečně padá a napětí povoluje. Úspěch je výsledkem dlouhého hromadění drobných vlivů. Nyní ale nesmíš jít dál a chlubit se. Měsíc je téměř plný.",
+                    "Vítr nahnal déšť a dosažený stav je pevný. K tomu došlo díky kumulaci malých účinků a úctě k vyššímu charakteru. Úspěch získaný krůček po krůčku však vyžaduje velkou opatrnost. Slabší prvek, který zvítězil, by se nikdy neměl vychloubat: to vede k nebezpečí. Tmavá síla v měsíci je nejsilnější, když je měsíc téměř plný. Je-li plný a stojí proti slunci, jeho ubývání je nevyhnutelné.",
+                    "V práci jde o dokončení dlouhého, drobného úsilí: dosažení stabilního postavení, uznání nebo smlouvy. Ve vztazích o klid po usmíření. Teď není čas na další tlak, ale na udržení toho, co je dosaženo.",
+                    "Rizikem je přehnaná sebejistota a snaha vytěžit z úspěchu víc, než unese. Dalším je vychloubání, které vyvolá odpor. Postup dál před časem vede k neštěstí.",
+                    "Spokoj se s dosaženým a nech to usadit. Neprosazuj další kroky, dokud se věci neustálí. Zůstaň klidný a skromný."
+                ],
+                "vyklad_en": [
+                    "The rain finally falls and the tension eases. Success is the result of a long accumulation of small influences. Now you must not go further and boast. The moon is nearly full.",
+                    "The wind has driven up the rain and a fixed standpoint has been reached. This came about through the accumulation of small effects and respect for a higher character. A success secured bit by bit, however, calls for great caution. The weaker element that has won the victory should never persist in vaunting it: that leads to danger. The dark power in the moon is strongest when the moon is almost full. When it is full and directly opposite the sun, its waning is inevitable.",
+                    "At work this is the end of a long, small-step effort: reaching a stable position, recognition or contract. In relationships it is the calm after reconciliation. This is not the time for more pressure but for maintaining what has been achieved.",
+                    "The risk is overconfidence and trying to extract from success more than it can bear. Another is boasting that provokes resistance. Pressing further before the time leads to misfortune.",
+                    "Be content with what has been achieved and let it settle. Do not push further steps until things stabilise. Stay calm and modest."
+                ]
+            }
+        }
     },
     "10": {
         "nazev": "Lü / Vykročení",
         "nazev_en": "Lü / Treading (Conduct)",
         "rozsudek": "Šlapeš tygrovi na ocas, ale on tě nekousne. Úspěch. Opatrnost, slušnost a správný přístup zaženou každé nebezpečí.",
         "rozsudek_en": "Treading upon the tail of the tiger — it does not bite. Success. Caution, courtesy, and the right approach ward off every danger.",
-        "obraz": "Heaven above, the lake below. The superior man discriminates between high and low and thereby fortifies the thinking of the people.",
-        "obraz_en": "Heaven above, the lake below. The superior man discriminates between high and low and thereby fortifies the thinking of the people."
+        "obraz": "Nahoře nebe, dole jezero. Ušlechtilý člověk rozlišuje mezi vysokým a nízkým a tím upevňuje smýšlení lidu.",
+        "obraz_en": "Heaven above, the lake below. The superior man discriminates between high and low and thereby fortifies the thinking of the people.",
+        "klasika": "(Lü vyvolává představu) toho, kdo šlape tygrovi na ocas, a ten ho nekousne. Bude pokrok a úspěch.",
+        "klasika_en": "(Li suggests the idea of) one treading on the tail of a tiger, which does not bite him. There will be progress and success.",
+        "vyklad": [
+            "Šlapeš tygrovi na ocas, a on tě nekousne. Hexagram učí správnému jednání ve vztahu k silnějším a obtížným lidem. Úspěch přichází díky slušnosti, zdvořilosti a dobré náladě, nikoli díky odvaze bez rozmyslu.",
+            "Nebe je nahoře a jezero dole, což ukazuje rozdíl vysokého a nízkého, na němž stojí společenské chování. Malé a vlídné vykračuje na velké a silné. Silný se nenaštve, protože se to děje bez drzosti a s úsměvem. Situace je ale opravdu obtížná, protože nejsilnější a nejslabší jsou si velmi blízko.",
+            "V práci jde o jednání s dominantním nadřízeným, náročným zákazníkem nebo silným konkurentem. Slušnost, jasná pravidla a klid prosazují víc než tlak. Ve vztazích se vyplatí takt a šetrnost tam, kde je druhý podrážděný.",
+            "Rizikem je arogance nebo naopak podlézavost. Obě porušují správnou míru. Nebezpečné je také podcenit, že tygr je tygr, i když dnes nekouše.",
+            "Chovej se slušně, jasně a klidně. Respektuj hierarchii a rozdíly v postavení, ale neztrácej důstojnost. Dobrá nálada a vtip otevírají cestu i tam, kde by tvrdost uzavřela dveře."
+        ],
+        "vyklad_en": [
+            "You tread on the tiger's tail, and it does not bite you. The hexagram teaches right conduct in relation to stronger and difficult people. Success comes through decorum, courtesy and good humour, not through courage without thought.",
+            "Heaven is above and the lake below, showing a difference of high and low on which social conduct rests. The small and cheerful treads on the large and strong. The strong one does not take offence, because it is done without presumption and with a smile. Yet the situation is genuinely difficult, since the strongest and the weakest stand very close.",
+            "At work this is dealing with a dominant superior, a demanding client or a strong competitor. Courtesy, clear rules and calm achieve more than pressure. In relationships tact and consideration pay off where the other is irritable.",
+            "The risk is arrogance or, conversely, servility. Both break the right measure. It is also dangerous to forget that a tiger is a tiger even if it does not bite today.",
+            "Behave politely, clearly and calmly. Respect hierarchy and differences of standing, but do not lose dignity. Good humour and wit open the way where hardness would close the door."
+        ],
+        "cary": {
+            "1": {
+                "klasika": "První čára, nepřerušená, ukazuje jeho předmět, jak kráčí svou obvyklou cestou. Půjde-li vpřed, nebude chyba.",
+                "klasika_en": "The first line, undivided, shows its subject treading his accustomed path. If he go forward, there will be no error.",
+                "vyklad": [
+                    "Prosté jednání a postup bez viny. Zatím nejsi vázán společenskými závazky a můžeš jít klidně za svým.",
+                    "Jsi na začátku a ve skromném postavení, ale máš vnitřní sílu, která zaručuje postup. Je-li člověk spokojen s jednoduchostí, může jít vpřed bez viny. Nespokojený s prostými poměry se stává neklidným a ctižádostivým a postupuje jen proto, aby unikl chudobě. Takový postup po dosažení cíle vede k pýše. Kdo naopak chce něco vykonat, zůstává prostý.",
+                    "V práci se vyplatí soustředit se na kvalitní řemeslo a nesnažit se předvádět. Ve vztazích je dobré nic nedokazovat a držet vlastní styl. Tvoje jednoduchost je síla.",
+                    "Rizikem je ctižádost bez smyslu, kdy usiluješ o postavení jen kvůli úniku z nízkého místa. Dalším rizikem je rozmařilost po prvním úspěchu.",
+                    "Dělej, co umíš, a drž se jednoduchého stylu. Postupuj, protože chceš něco vytvořit, ne protože chceš někam utéct. Tak postupuješ bez viny."
+                ],
+                "vyklad_en": [
+                    "Simple conduct and progress without blame. You are not yet bound by social obligations and can go quietly your own way.",
+                    "You are at the beginning and in a modest position, but you have inner strength that guarantees progress. If a person is content with simplicity, he may go forward without blame. One dissatisfied with modest circumstances grows restless and ambitious and advances only to escape poverty. Such progress, once the goal is reached, leads to arrogance. One who wants to accomplish something stays simple.",
+                    "At work it pays to concentrate on quality craft and not try to show off. In relationships it is good to prove nothing and keep your own style. Your simplicity is strength.",
+                    "The risk is ambition without purpose, striving for position merely to escape a low place. Another is extravagance after the first success.",
+                    "Do what you can and keep a simple style. Advance because you want to create something, not because you want to run from something. That is how you progress without blame."
+                ]
+            },
+            "2": {
+                "klasika": "Druhá čára, nepřerušená, ukazuje jeho předmět, jak kráčí cestou rovnou a snadnou;—tichý a osamělý muž, jemuž bude, bude-li pevný a správný, štěstí.",
+                "klasika_en": "The second line, undivided, shows its subject treading the path that is level and easy;—a quiet and solitary man, to whom, if he be firm and correct, there will be good fortune.",
+                "vyklad": [
+                    "Rovná cesta samotáře. Klidný člověk, který nic nežádá, prochází životem bez útoků.",
+                    "Čára zobrazuje osamělého mudrce, který se drží stranou ruchu světa, nic nehledá, nikoho o nic neprosí a jde po rovné cestě. Je spokojený a nevyzývá osud, proto zůstává prostý zápletek.",
+                    "V práci se hodí hluboká soustředěná práce bez politikaření. Ve vztazích je to čas klidu a nezávislosti, kdy nic nepotřebuješ dokazovat. Samota je tu zdroj, ne trest.",
+                    "Rizikem je uzavřenost, která přeroste v izolaci. Dalším rizikem je pocit nadřazenosti nad ostatními.",
+                    "Zachovej klid a nezávislost. Najdi si prostor pro soustředěnou práci a nic nehoň. Pevnost v prostém životě přináší štěstí."
+                ],
+                "vyklad_en": [
+                    "The level road of the solitary. A calm person who asks for nothing passes through life unassailed.",
+                    "The line depicts a lonely sage who keeps away from the bustle of the world, seeks nothing, asks nothing of anyone and travels along a level road. He is content and does not challenge fate, so he remains free of entanglements.",
+                    "At work deep focused work without office politics suits. In relationships it is a time of calm and independence when you need prove nothing. Solitude is a resource here, not a punishment.",
+                    "The risk is reserve that grows into isolation. Another is a feeling of superiority over others.",
+                    "Keep calm and independent. Find space for focused work and chase nothing. Firmness in simple living brings good fortune."
+                ]
+            },
+            "3": {
+                "klasika": "Třetí čára, přerušená, ukazuje jednookého (který si myslí, že) vidí; chromého (který si myslí, že) dobře chodí; toho, kdo šlape tygrovi na ocas a je kousnut. (To vše značí) neštěstí. Vidíme (pouhého) siláka, který hraje roli velkého vládce.",
+                "klasika_en": "The third line, divided, shows a one-eyed man (who thinks he) can see; a lame man (who thinks he) can walk well; one who treads on the tail of a tiger and is bitten. (All this indicates) ill fortune. We have a (mere) bravo acting the part of a great ruler.",
+                "vyklad": [
+                    "Přeceňování vlastních sil přivolá zranění. Jednooký vidí, ale málo, chromý chodí, ale nepostoupí. Přesto si troufá na tygra.",
+                    "Člověk s vadami, který se přesto pokládá za silného a vystavuje se nebezpečí, si říká o katastrofu. Podniká něco nad své síly. Takto bezhlavě se vrhat vpřed bez ohledu na vlastní dostatečnost je ospravedlnitelné jen u válečníka bojujícího za svého knížete.",
+                    "V práci jde o rozhodnutí vzít na sebe úkol nebo klienta, na který nemáš kapacitu ani zkušenost. Ve vztazích o odvahu, která se opírá jen o ego.",
+                    "Rizikem je sebeklam a ignorování vlastních nedostatků. Další riziko je předvádění síly před druhými, které přijde draho.",
+                    "Přiznej si své limity a doplň je spolupracovníky nebo přípravou. Nevstupuj do rizikové věci jen proto, abys něco dokázal. Bezpečná střízlivost je větší síla než ukázková odvaha."
+                ],
+                "vyklad_en": [
+                    "Overestimating your own strength invites injury. The one-eyed sees, but not enough; the lame walks, but cannot advance. Yet he dares the tiger.",
+                    "A person with defects who nonetheless considers himself strong and exposes himself to danger is inviting disaster. He undertakes something beyond his strength. Plunging ahead so recklessly, regardless of the adequacy of one's powers, can be justified only for a warrior fighting for his prince.",
+                    "At work this is deciding to take on a task or client for which you have neither capacity nor experience. In relationships it is courage that rests only on ego.",
+                    "The risk is self-deception and ignoring your own deficiencies. Another is showing strength before others, which comes at a price.",
+                    "Admit your limits and complement them with collaborators or preparation. Do not enter a risky matter just to prove something. Safe sobriety is a greater strength than showy courage."
+                ]
+            },
+            "4": {
+                "klasika": "Čtvrtá čára, nepřerušená, ukazuje jeho předmět, jak šlape tygrovi na ocas. Naplní se opatrnou obezřetností a nakonec bude štěstí.",
+                "klasika_en": "The fourth line, undivided, shows its subject treading on the tail of a tiger. He becomes full of apprehensive caution, and in the end there will be good fortune.",
+                "vyklad": [
+                    "Nebezpečný podnik s pevnou vnitřní silou a opatrným vnějším postojem. Obezřetnost vede nakonec k úspěchu.",
+                    "Čára se týká riskantního záměru, na který máš vnitřní sílu, ale ve vnější rovině postupuješ váhavě a opatrně. Na rozdíl od předchozí čáry, která je uvnitř slabá a navenek vyráží, zde je jistota konečného úspěchu: překonáš nebezpečí tím, že půjdeš vpřed.",
+                    "V práci jde o důležitý projekt s vysokými sázkami: pečlivé plánování, kontrola rizik a postupné kroky. Ve vztazích o obtížný rozhovor, který vedeš s citem a připraveností.",
+                    "Rizikem je zbytečné váhání, které úspěch zdrží. Opačným rizikem je ztráta opatrnosti, jakmile se objeví první úspěch.",
+                    "Jdi, ale s plným vědomím rizika. Příprava a pozornost jsou tvoje ochrana. Opatrnost není slabost, je to přesně to, co ti umožní dojít."
+                ],
+                "vyklad_en": [
+                    "A dangerous undertaking with firm inner strength and a cautious outer attitude. Circumspection leads in the end to success.",
+                    "The line concerns a risky venture for which you have the inner strength but proceed hesitantly and carefully on the outside. Unlike the previous line, which is weak within and presses forward outwardly, here there is certainty of final success: you overcome the danger by going forward.",
+                    "At work this is an important project with high stakes: careful planning, risk checks and gradual steps. In relationships it is a difficult conversation you conduct with sensitivity and preparation.",
+                    "The risk is needless hesitation that delays success. The opposite risk is dropping caution once the first success appears.",
+                    "Go, but with full awareness of the risk. Preparation and attention are your protection. Caution is not weakness; it is exactly what lets you arrive."
+                ]
+            },
+            "5": {
+                "klasika": "Pátá čára, nepřerušená, ukazuje rozhodný krok jeho předmětu. Ač je pevný a správný, bude nebezpečí.",
+                "klasika_en": "The fifth line, undivided, shows the resolute tread of its subject. Though he be firm and correct, there will be peril.",
+                "vyklad": [
+                    "Rozhodné jednání s vědomím nebezpečí. Pevnost je nutná, ale nesmí oslepit.",
+                    "Čára se týká toho, kdo rozhoduje o celku. Je třeba jednat rozhodně a zároveň zůstat vědom nebezpečí, které s takovou rozhodností souvisí, zvláště pokud v ní trváš. Jen vědomí nebezpečí činí úspěch možným.",
+                    "V práci jde o vedoucí roli a těžká rozhodnutí. Rozhoduj jasně, ale počítej se scénáři, kdy by se věc obrátila. Ve vztazích o důslednost, která si je vědoma dopadů na druhé.",
+                    "Rizikem je rozhodnost zpupná, která přestane vidět protiargumenty. Dalším rizikem je sebejistota, která oslepuje.",
+                    "Rozhodni se a jednej, ale nech si otevřenou zpětnou vazbu. Měj plán B a sleduj signály. Bdělost je cena za pevnost."
+                ],
+                "vyklad_en": [
+                    "Resolute conduct with awareness of danger. Firmness is needed, but it must not blind.",
+                    "The line concerns the one who decides for the whole. One must act resolutely and at the same time remain conscious of the danger connected with such resoluteness, especially if it is to be persisted in. Only awareness of the danger makes success possible.",
+                    "At work this is a leading role and hard decisions. Decide clearly but count on scenarios where things turn. In relationships it is consistency that is aware of its effect on others.",
+                    "The risk is arrogant resoluteness that stops seeing counter-arguments. Another is self-confidence that blinds.",
+                    "Decide and act, but keep feedback open. Have a plan B and watch the signals. Vigilance is the price of firmness."
+                ]
+            },
+            "6": {
+                "klasika": "Šestá čára, nepřerušená, nám říká, abychom pohlédli na (celou cestu), která byla ušlapána, a prozkoumali předzvěst, kterou dává. Bude-li úplná a bez selhání, bude veliké štěstí.",
+                "klasika_en": "The sixth line, undivided, tells us to look at (the whole course) that is trodden, and examine the presage which that gives. If it be complete and without failure, there will be great good fortune.",
+                "vyklad": [
+                    "Dílo je u konce. Ohlédni se na své jednání a podle následků pozná, co můžeš čekat. Pokud je cesta úplná a bez selhání, přijde velké štěstí.",
+                    "Nikdo sám sebe nezná. Teprve podle následků činů, podle plodů práce, může člověk posoudit, co od budoucnosti čekat. Pohled zpět na prošlou cestu je tu nejlepší věštbou.",
+                    "V práci jde o zpětné hodnocení projektu, roku nebo životní etapy. Ve vztazích o poctivé zhodnocení, jak se choval a co z toho vzešlo. Podívej se na výsledky, ne na záměry.",
+                    "Rizikem je vyhýbání se zpětné vazbě a obhajoba vlastního jednání. Dalším je přehlížení drobných selhání, která by příště narostla.",
+                    "Proveď bilanci a zapiš si, co fungovalo a co ne. Oprav, co lze. Dobré následky potvrzují cestu, špatné ti ukážou, kde ji změnit."
+                ],
+                "vyklad_en": [
+                    "The work is ended. Look back at your conduct and by its consequences learn what to expect. If the path is complete and without failure, great good fortune comes.",
+                    "No one knows himself. Only by the consequences of his actions, by the fruit of his labours, can a person judge what to expect. A look back at the path trodden is here the best oracle.",
+                    "At work this is a retrospective of a project, a year or a life stage. In relationships it is an honest assessment of how you behaved and what came of it. Look at results, not intentions.",
+                    "The risk is avoiding feedback and defending your own conduct. Another is overlooking small failures that would grow next time.",
+                    "Take stock and write down what worked and what did not. Fix what can be fixed. Good consequences confirm the path; bad ones show where to change it."
+                ]
+            }
+        }
     },
     "11": {
         "nazev": "Tchaj / Mír a harmonie",
         "nazev_en": "Tai / Peace",
         "rozsudek": "Malé odchází, velké přichází. Štěstí, úspěch. Síly nebe a země jsou v dokonalém spojení, vše rozkvétá.",
         "rozsudek_en": "The small departs, the great approaches. Good fortune and success. The forces of heaven and earth are in perfect union — all things flourish.",
-        "obraz": "Heaven and earth unite. The ruler divides and completes the course of heaven and earth and assists the people.",
-        "obraz_en": "Heaven and earth unite. The ruler divides and completes the course of heaven and earth and assists the people."
+        "obraz": "Nebe a země se spojují. Vládce rozděluje a dovršuje běh nebe a země a pomáhá lidu.",
+        "obraz_en": "Heaven and earth unite. The ruler divides and completes the course of heaven and earth and assists the people.",
+        "klasika": "V Tchaj (vidíme) malé odešlo a velké přišlo. (Značí to, že) bude štěstí, s pokrokem a úspěchem.",
+        "klasika_en": "In Thai (we see) the little gone and the great come. (It indicates that) there will be good fortune, with progress and success.",
+        "vyklad": [
+            "Nebe je pod zemí, a proto se jejich síly sbíhají v hluboké harmonii. Hexagram popisuje čas míru, růstu a vzájemné vstřícnosti. Malé a slabé odchází, velké a silné přichází, a to přináší štěstí a úspěch.",
+            "Nebe se skláněním dostalo pod zemi a země se pozvedla nad nebe, takže jejich vlivy se potkávají a všechno kvete. V lidském světě je to doba společenské souladnosti: ti nahoře projevují přízeň lidem dole a spory ustávají. Uvnitř, ve středu, je světlý princip, zvenčí tmavý: světlo má silný vliv a tma je poddajná, takže každý dostane, co mu náleží.",
+            "V práci se daří projekty, vyjednávání a spolupráce. Spojenci se sbíhají a vedení má důvěru týmu. Ve vztazích je čas upřímnosti, vřelosti a sbližování. Čas je vhodný pro zakládání a růst.",
+            "Rizikem je ochabnutí uprostřed pohody. V každém míru se skrývá nebezpečí pomalého uvolnění a přehlédnutí drobných trhlin. Dalším rizikem je zahálka a samolibost.",
+            "Využij příznivý čas k tomu, co dává smysl dlouhodobě. Postav základy, uzavři dohody a ukaž vstřícnost těm, kdo jsou níž. Neusni: pravidelně kontroluj, co se pomalu uvolňuje."
+        ],
+        "vyklad_en": [
+            "Heaven lies beneath earth, and so their forces meet in deep harmony. The hexagram describes a time of peace, growth and mutual accommodation. The small and weak go, the great and strong arrive, and this brings good fortune and success.",
+            "Heaven has lowered itself beneath earth and earth has risen above heaven, so their influences meet and everything blooms. In the human world it is a time of social harmony: those on high show favour to those below and feuds cease. Inside, at the centre, is the light principle, outside the dark: the light has a strong influence and the dark is submissive, so each receives its due.",
+            "At work projects, negotiations and cooperation succeed. Allies gather and leadership has the trust of the team. In relationships it is a time of sincerity, warmth and closeness. It is a good time for founding and growing.",
+            "The risk is slackening amid comfort. In every peace lurks the danger of gradual loosening and overlooked small cracks. Another is idleness and complacency.",
+            "Use the favourable time for what makes sense long term. Lay foundations, close agreements and show accommodation to those below you. Do not fall asleep: check regularly what is slowly loosening."
+        ],
+        "cary": {
+            "1": {
+                "klasika": "První čára, nepřerušená, vyvolává představu trávy vytržené, která s sebou přináší další stébla, s jejichž kořeny je spojena. Postup (ze strany jejího předmětu) bude šťastný.",
+                "klasika_en": "The first line, undivided, suggests the idea of grass pulled up, and bringing with it other stalks with whose roots it is connected. Advance (on the part of its subject) will be fortunate.",
+                "vyklad": [
+                    "Vytrhneš-li jedno stéblo, přijdou s ním další. Schopný člověk táhne s sebou podobně smýšlející. Pustit se do díla je správné.",
+                    "V dobách prosperity táhne každý schopný člověk povolaný do úřadu s sebou i druhé podobných vlastností, jako stébla spojená kořeny. Je to čas, kdy lze rozšířit vliv, a mysl schopného člověka se obrací k tomu, vyjít do života a něco vykonat.",
+                    "V práci se vyplatí vstoupit do nové role či projektu a vzít s sebou spolehlivé lidi. Ve vztazích jde o sdílené záměry a společné kroky. Tým roste z kořenů.",
+                    "Rizikem je vybírat lidi jen podle sympatií, ne podle schopností. Dalším rizikem je rozjet věc příliš velkou, než kolik unese základ.",
+                    "Jednej, přivez s sebou své lidi a rozděl role. Vzájemná opora je tvůj kapitál. Vstup do díla, dokud je čas příznivý."
+                ],
+                "vyklad_en": [
+                    "Pull up one stalk and others come with it. A capable person draws like-minded people along. Setting to work is right.",
+                    "In times of prosperity every able person called to an office draws along others of like quality, like stalks joined by roots. It is a time when influence can be widely extended, and the mind of the capable person turns to going out into life and accomplishing something.",
+                    "At work it pays to enter a new role or project and take reliable people with you. In relationships it is about shared intentions and joint steps. A team grows from roots.",
+                    "The risk is choosing people only by sympathy, not ability. Another is starting something bigger than the foundation can carry.",
+                    "Act, bring your people and share the roles. Mutual support is your capital. Enter the work while the time is favourable."
+                ]
+            },
+            "2": {
+                "klasika": "Druhá čára, nepřerušená, ukazuje někoho, kdo dokáže snášet nevzdělané, přejde Ho bez lodi, nezapomíná na vzdálené a nemá (sobecká) přátelství. Tak prokazuje, že jedná v souladu s během náležité Středu.",
+                "klasika_en": "The second line, undivided, shows one who can bear with the uncultivated, will cross the Ho without a boat, does not forget the distant, and has no (selfish) friendships. Thus does he prove himself acting in accordance with the course of the due Mean.",
+                "vyklad": [
+                    "Velikost duše znamená snášet nedokonalé lidi, riskovat tam, kde je třeba, nezapomínat na vzdálené a nepodlehnout klikám. Tak najdeš střední cestu.",
+                    "V dobách míru je nejdůležitější mít dost velkou duši, aby sis poradil s nedokonalými. V rukou velkého mistra není žádný materiál zbytečný. Tato velkorysost však není laxnost: právě v dobrých časech je třeba být připraven podstoupit i nebezpečný podnik, když je nutný. Nezanedbávat, co je daleko, a dbát na vše. A vyhnout se klikám a frakcím.",
+                    "V práci jde o vedení týmu, který není dokonalý, ale schopný. Neopomíjej vzdálené pobočky, dodavatele a dlouhodobé cíle. Ve vztazích nepěstuj uzavřené kroužky a každý ať dělá svou práci.",
+                    "Rizikem je laxnost, kdy tolerance přejde v nedbalost. Dalším rizikem je sklouznutí do skupinového zájmu a ztráta celkového pohledu.",
+                    "Buď velkorysý, ale důsledný. Podstup nutné riziko, nezapomeň na okraje a nepodlehni klikám. Střední cesta mezi laxností a tvrdostí je tvoje opora."
+                ],
+                "vyklad_en": [
+                    "Greatness of soul means bearing with imperfect people, risking where necessary, not forgetting the distant and not yielding to cliques. So you find the middle way.",
+                    "In times of peace it matters most to have a soul large enough to cope with the imperfect. In the hands of a great master no material is useless. This generosity, however, is not laxity: precisely in good times one must be ready to undertake even a dangerous venture when it is necessary. Do not neglect what is distant and attend to everything. And avoid cliques and factions.",
+                    "At work this is leading a team that is not perfect but capable. Do not neglect remote branches, suppliers and long-term goals. In relationships do not cultivate closed circles; let everyone do their part.",
+                    "The risk is laxity where tolerance slides into negligence. Another is sliding into group interest and losing the overall view.",
+                    "Be generous but consistent. Accept the necessary risk, do not forget the edges and do not yield to cliques. The middle path between laxity and hardness is your support."
+                ]
+            },
+            "3": {
+                "klasika": "Třetí čára, nepřerušená, ukazuje, že ačkoli neexistuje stav míru, který by nemohl být narušen, a žádný odchod (zlých lidí), aby se nevrátili, přesto bude-li člověk pevný a správný a uvědomí si trápení, která mohou vzniknout, nedopustí se chyby. Není důvod k smutku nad jistotou (takových opakujících se změn); a v tomto naladění se může (dlouho) užívat štěstí (přítomnosti).",
+                "klasika_en": "The third line, undivided, shows that, while there is no state of peace that is not liable to be disturbed, and no departure (of evil men) so that they shall not return, yet when one is firm and correct, as he realises the distresses that may arise, he will commit no error. There is no occasion for sadness at the certainty (of such recurring changes); and in this mood the happiness (of the present) may be (long) enjoyed.",
+                "vyklad": [
+                    "Žádná rovina není bez svahu a žádný odchod bez návratu. Dobrá doba nepotrvá věčně, ale ten, kdo si je vědom nebezpečí, zůstává bez chyby a může si užívat, co má.",
+                    "Všechno na zemi podléhá změně. Po rozkvětu následuje úpadek: je to věčný zákon. Zlo lze udržet na uzdě, ne trvale odstranit, vždy se vrací. Takové poznání by mohlo vést k melancholii, ale nemá: má jen bránit v iluzi, až přijde štěstí. Dokud je vnitřní povaha člověka silnější a bohatší než cokoli, co nabízí vnější štěstí, štěstí ho neopustí.",
+                    "V práci jde o to užívat dobré výsledky a zároveň tvořit rezervy, plánovat rizika a udržovat procesy. Ve vztazích o vděk za to, co je, bez strachu z toho, co přijde.",
+                    "Rizikem je ztráta bdělosti, protože se zdá, že dobré časy jsou trvalé. Opačným rizikem je lpění na strachu, který odebírá radost ze současnosti.",
+                    "Raduj se z toho, co máš, a zároveň se připrav. Vytvoř rezervy, ukliď rizika a drž pevnost. Vědomí proměnlivosti je ochrana, ne důvod ke smutku."
+                ],
+                "vyklad_en": [
+                    "No plain without a slope and no going without a return. A good time does not last forever, but whoever stays aware of the danger remains without error and can enjoy what he has.",
+                    "Everything on earth is subject to change. Prosperity is followed by decline: this is the eternal law. Evil can be held in check but not permanently abolished; it always returns. Such a conviction might induce melancholy, but it should not; it should only keep us from illusion when good fortune comes. As long as a man's inner nature remains stronger and richer than anything external fortune offers, fortune will not desert him.",
+                    "At work it means enjoying good results while building reserves, planning for risks and maintaining processes. In relationships it is gratitude for what is, without fear of what may come.",
+                    "The risk is losing vigilance because good times seem permanent. The opposite risk is clinging to fear, which takes away joy in the present.",
+                    "Enjoy what you have and prepare at the same time. Build reserves, tidy up risks and hold firm. Awareness of impermanence is protection, not a reason for sadness."
+                ]
+            },
+            "4": {
+                "klasika": "Čtvrtá čára, přerušená, ukazuje jeho předmět, jak sletuje (dolů);—nespoléhá na vlastní bohaté zdroje, ale svolává sousedy. (Všichni přicházejí) ne proto, že dostali varování, ale v upřímnosti (svých srdcí).",
+                "klasika_en": "The fourth line, divided, shows its subject fluttering (down);—not relying on his own rich resources, but calling in his neighbours. (They all come) not as having received warning, but in the sincerity (of their hearts).",
+                "vyklad": [
+                    "Lidé na vysokém místě se jednoduše a bez vychloubání sbližují s těmi pod sebou. Důvěra je upřímná, ne vynucená.",
+                    "V časech vzájemné důvěry se významní lidé blíží k prostým bez chlubení se bohatstvím. Nedělají to z donucení okolností, ale podle nejvnitřnějšího přesvědčení. Přiblížení je spontánní, protože vychází z vnitřní jistoty.",
+                    "V práci jde o vedení, které se neizoluje a chodí mezi lidi. Ve vztazích o přirozenou prostotu, kdy nikdo nehraje roli. Důvěra se tu rodí z toho, že nikdo nepoužívá moc k zastrašování.",
+                    "Rizikem je předstíraná skromnost, která druhé nepřesvědčí. Dalším rizikem je zneužití důvěry pro vlastní výhodu.",
+                    "Přistup k lidem jednoduše a bez ostentace. Neopírej se jen o své zdroje, zvi druhé ke spolupráci. Upřímnost buduje trvalou důvěru."
+                ],
+                "vyklad_en": [
+                    "People of high standing come close to those below simply and without boasting of wealth. The trust is sincere, not forced.",
+                    "In times of mutual confidence, people of high rank come into contact with the lowly without boasting of their wealth. They do so not under pressure of circumstances but from their innermost conviction. The approach is spontaneous, because it rests on inner certainty.",
+                    "At work this is leadership that does not isolate itself and walks among people. In relationships it is natural simplicity where nobody plays a role. Trust is born here from no one using power to intimidate.",
+                    "The risk is pretended modesty that convinces nobody. Another is abusing trust for your own advantage.",
+                    "Approach people simply and without ostentation. Do not rely only on your own resources; invite others to cooperate. Sincerity builds lasting trust."
+                ]
+            },
+            "5": {
+                "klasika": "Pátá čára, přerušená, nám připomíná (pravidlo krále) Ti-ji o sňatku jeho mladší sestry. Takovým postupem je štěstí a bude veliké štěstí.",
+                "klasika_en": "The fifth line, divided, reminds us of (king) Ti-yi's (rule about the) marriage of his younger sister. By such a course there is happiness and there will be great good fortune.",
+                "vyklad": [
+                    "Skutečně skromné spojení vysokého a nízkého přináší štěstí a požehnání. Moc se tu podřizuje vzájemnosti.",
+                    "Podle starého zvyku se princezny, i když ve vyšším postavení, musely podřídit svým manželům jako každá jiná žena. Čára ukazuje pokorné spojení vysokého a nízkého, kde ten, kdo má vyšší postavení, se dobrovolně uvolní z nároků na nadřazenost. Takové spojení je základem štěstí v dobách míru.",
+                    "V práci jde o vedoucího, který se otevírá spolupráci s týmem a využívá jeho kompetence. Ve vztazích o rovnoprávnost a respekt bez ohledu na rozdíl v postavení. Dobrá spolupráce vyžaduje, aby si každý nechal část statusu doma.",
+                    "Rizikem je tichá nadřazenost, která se skrývá za laskavostí. Dalším rizikem je pokora bez opory v hodnotě, která se změní v závislost.",
+                    "Spoj se s druhými v duchu rovnosti a ocenění. Nech dolu sestoupit autoritu tam, kde přináší užitek. Štěstí vzniká z takového vyvážení."
+                ],
+                "vyklad_en": [
+                    "A truly modest union of high and low brings happiness and blessing. Power here subordinates itself to mutuality.",
+                    "According to an old custom, princesses, though of higher rank, had to obey their husbands like any other wife. The line shows a humble union of high and low, in which the higher voluntarily sets aside claims to superiority. Such a union is the basis of happiness in times of peace.",
+                    "At work this is a leader who opens up to cooperation with the team and uses its competence. In relationships it is equality and respect regardless of difference in standing. Good cooperation requires everyone to leave some status at home.",
+                    "The risk is quiet superiority hidden behind kindness. Another is humility with no basis in worth, which turns into dependence.",
+                    "Join others in a spirit of equality and appreciation. Let authority descend where it brings benefit. Happiness arises from such balance."
+                ]
+            },
+            "6": {
+                "klasika": "Šestá čára, přerušená, nám ukazuje městskou zeď vrácenou do příkopu. Není čas použít vojsko. (Předmět čáry) může sice oznámit své příkazy obyvatelům svého města; ale ať je sebesprávnější a pevnější, bude mít příčinu k lítosti.",
+                "klasika_en": "The sixth line, divided, shows us the city wall returned into the moat. It is not the time to use the army. (The subject of the line) may, indeed, announce his orders to the people of his own city; but however correct and firm he may be, he will have cause for regret.",
+                "vyklad": [
+                    "Hradba padá zpět do příkopu a doba míru končí. Nebojuj násilím, drž se ve vlastním kruhu a přijmi změnu.",
+                    "Změna, na kterou hexagram upozorňoval, začala. Zeď města se zhroutila zpět do příkopu, z něhož byla vykopána. Je třeba přijmout osud a nepokoušet se ho odvrátit násilným odporem. Zbývá jedno: udržet se v těsném okruhu důvěrných lidí. Pokus bránit se zlému obvyklými prostředky by zhroucení jen prohloubil.",
+                    "V práci jde o konec dobré fáze: trh se mění, tým se rozpadá, projekt končí. Nebojuj o to, co už nelze udržet, soustřeď se na jádro. Ve vztazích přijmi, že něco skončilo, a pečuj o ty, kdo zůstávají.",
+                    "Rizikem je trvat na starých metodách a bránit něco, co už není obranitelné. Dalším rizikem je ponížení z urputného vzdoru.",
+                    "Přijmi změnu a stáhni se do jádra. Komunikuj uvnitř svého okruhu, zachraň to nejdůležitější a nespotřebovávej síly v marném boji. Přijetí je zde moudrost."
+                ],
+                "vyklad_en": [
+                    "The wall falls back into the moat and the time of peace ends. Do not fight with force, stay within your own circle and accept the change.",
+                    "The change alluded to in the hexagram has begun. The city wall has sunk back into the moat from which it was dug. We should submit to fate and not try to stave it off by violent resistance. One recourse is left: to hold our own within our intimate circle. Trying to resist the evil in the usual way would only make the collapse more complete.",
+                    "At work this is the end of a good phase: the market shifts, the team breaks up, the project ends. Do not fight for what can no longer be held; concentrate on the core. In relationships accept that something has ended and care for those who remain.",
+                    "The risk is insisting on old methods and defending what is no longer defensible. Another is humiliation from stubborn resistance.",
+                    "Accept the change and withdraw to the core. Communicate within your circle, save what matters most and do not spend strength in a pointless fight. Acceptance is wisdom here."
+                ]
+            }
+        }
     },
     "12": {
         "nazev": "Pchi / Stagnace",
         "nazev_en": "Pi / Standstill (Stagnation)",
         "rozsudek": "Zlí lidé nenesou prospěch ušlechtilému. Velké odchází, malé přichází. Čas stáhnout se do sebe a chránit svou hodnotu.",
         "rozsudek_en": "Evil people do not further the perseverance of the superior man. The great departs, the small approaches. Time to withdraw inward and protect your worth.",
-        "obraz": "Heaven and earth do not unite. The superior man falls back upon his inner worth in order to escape the difficulties.",
-        "obraz_en": "Heaven and earth do not unite. The superior man falls back upon his inner worth in order to escape the difficulties."
+        "obraz": "Nebe a země se nespojují. Ušlechtilý člověk se uchyluje ke své vnitřní hodnotě, aby unikl obtížím.",
+        "obraz_en": "Heaven and earth do not unite. The superior man falls back upon his inner worth in order to escape the difficulties.",
+        "klasika": "V Pchi chybí dobré porozumění mezi (různými třídami) lidí a jeho znamení je nepříznivé pro pevnou a správnou cestu vznešeného muže. Vidíme v něm velké odešlé a malé přišlé.",
+        "klasika_en": "In Phi there is the want of good understanding between the (different classes of) men, and its indication is unfavourable to the firm and correct course of the superior man. We see in it the great gone and the little come.",
+        "vyklad": [
+            "Nebe a země se nesetkávají. Nahoře se vzdaluje, dole se propadá, a mezi nimi není spojení. Je to čas stagnace, nedůvěry a úpadku. Správný člověk si nepřestává být věrný svým zásadám, i když jejich uplatnění je zablokováno.",
+            "Co je nahoře, nemá vztah k tomu, co je dole, a na zemi vládne zmatek. Slabost je uvnitř, tvrdost navenek. Cesta nevhodných lidí stoupá a cesta těch, kdo jsou povolání, klesá. Takový čas nelze vynutit ani urychlit. Ti, kdo mají zásady, se jich nevzdávají a stahují se do ústraní, dokud se vliv neotevře.",
+            "V práci se projevuje nefunkční komunikace, zablokované rozhodování a nedostatek podpory shora. Ve vztazích jde o ledové ticho a neochotu se vzájemně slyšet. Ne vše lze změnit, ale lze zachovat vlastní integritu.",
+            "Rizikem je přizpůsobení se nízkým standardům jen kvůli pohodlí. Dalším je hořkost, která z tebe udělá právě to, co kritizuješ. Hrozí také honba za pozicí za cenu vlastních zásad.",
+            "Stáhni se do své vnitřní hodnoty a uchovej principy. Nepřijímej lákavé nabídky, které by tě donutily slevit. Šetři síly a čekej, až se obrat přihlásí. Stagnace nepotrvá věčně."
+        ],
+        "vyklad_en": [
+            "Heaven and earth do not meet. Above, it withdraws; below, it sinks; between them there is no connection. It is a time of stagnation, distrust and decline. The right person does not cease to be faithful to his principles, even if their application is blocked.",
+            "What is above has no relation to what is below, and on earth confusion prevails. Weakness is within, harshness without. The way of unsuitable people ascends and the way of those called to lead declines. Such a time cannot be forced or hurried. Those with principles do not abandon them and withdraw into seclusion until influence opens.",
+            "At work it shows as broken communication, blocked decision-making and lack of support from above. In relationships it is icy silence and unwillingness to hear each other. Not everything can be changed, but your own integrity can be kept.",
+            "The risk is adapting to low standards just for comfort. Another is bitterness that makes you exactly what you criticise. The chase for position at the price of your principles also threatens.",
+            "Withdraw to your inner worth and preserve your principles. Do not accept tempting offers that would make you compromise. Save strength and wait until the turn announces itself. Stagnation does not last forever."
+        ],
+        "cary": {
+            "1": {
+                "klasika": "První čára, přerušená, vyvolává představu trávy vytržené, která s sebou přináší další stébla, s jejichž kořeny je spojena. S pevnou správností (ze strany jejího předmětu) bude štěstí a pokrok.",
+                "klasika_en": "The first line, divided, suggests the idea of grass pulled up, and bringing with it other stalks with whose roots it is connected. With firm correctness (on the part of its subject), there will be good fortune and progress.",
+                "vyklad": [
+                    "Stejný obraz jako v Míru, ale opačný smysl. Stahuješ se z veřejného života a bereš s sebou ty, kdo smýšlejí stejně. Uchováš svou hodnotu.",
+                    "V hexagramu Míru člověk táhne druhé na dráhu úřadu. Tady vede druhé do ústraní. Pokud se nedá uplatnit vliv, je stažení jediný způsob, jak se vyhnout ponížení. Úspěch v hlubším smyslu je možný, protože víš, jak chránit hodnotu své osobnosti.",
+                    "V práci jde o odchod z prostředí, které nesedí tvým hodnotám, a odnesení si s sebou těch, kdo smýšlejí podobně. Ve vztazích o stažení z toxické skupiny a výstavbu nové, zdravé.",
+                    "Rizikem je odejít v hněvu a zničit mosty. Dalším rizikem je pokračovat v prostředí, které tě poškozuje, jen proto, že se bojíš změny.",
+                    "Odejdi s hlavou vztyčenou. Vezmi s sebou, co je opravdu tvé: kvalitu, kolegy, hodnoty. Počkej na lepší dobu a drž se zásad."
+                ],
+                "vyklad_en": [
+                    "The same image as in Peace, but with opposite meaning. You withdraw from public life and take with you those who think alike. You preserve your worth.",
+                    "In the hexagram Peace a person draws others along onto an official career. Here he leads others into retirement. If it becomes impossible to make your influence count, withdrawal is the only way to spare yourself humiliation. Success in a higher sense is possible, because you know how to safeguard the value of your personality.",
+                    "At work this is leaving an environment that does not fit your values and taking with you those who think alike. In relationships it is withdrawing from a toxic group and building a new, healthy one.",
+                    "The risk is leaving in anger and burning bridges. Another is staying in an environment that harms you merely because you fear change.",
+                    "Leave with your head high. Take with you what is truly yours: quality, colleagues, values. Wait for a better time and hold your principles."
+                ]
+            },
+            "2": {
+                "klasika": "Druhá čára, přerušená, ukazuje jeho předmět trpělivého a poslušného. Malému člověku (který se tak chová) bude štěstí. Bude-li velký člověk (jednat) tak, jak to tíseň a překážka vyžadují, bude mít úspěch.",
+                "klasika_en": "The second line, divided, shows its subject patient and obedient. To the small man (comporting himself so) there will be good fortune. If the great man (comport himself) as the distress and obstruction require, he will have success.",
+                "vyklad": [
+                    "Druhým se stagnace vyplatí, protože se přizpůsobí. Člověk, který drží principy, snáší následky a tím chrání to, na čem záleží.",
+                    "Nižší lidé jsou ochotni se nadřízeným servilně podbízet a snesou i vyššího muže, kdyby jim pomohl ze zmatku. Jim to prospěje. Velký člověk ale klidně nese následky stagnace, nemíchá se do davu a nezaujímá místo, které mu nepatří. Ochotou osobně trpět zajišťuje, že jeho základní zásady uspějí.",
+                    "V práci se vyplatí vydržet nepříjemné období bez ztráty principů. Ve vztazích jde o vytrvalost a důstojné držení linie, i když nemá okamžitý efekt.",
+                    "Rizikem je přizpůsobit se příliš a ztratit sebe. Opačným rizikem je izolace, která se ukáže jako zbytečná.",
+                    "Snes nepohodlí, ale neustup od toho, na čem záleží. Nesnaž se zalíbit davu. Tvá trpělivost je investice."
+                ],
+                "vyklad_en": [
+                    "Stagnation pays off for others because they adapt. A person who holds to principles bears the consequences and so protects what matters.",
+                    "Lesser people are ready to flatter their superiors servilely and would also tolerate a superior man if he helped them out of confusion. This benefits them. The great man, however, calmly bears the consequences of the standstill, does not mingle with the crowd and does not take a place that is not his. By willingness to suffer personally he ensures that his fundamental principles prevail.",
+                    "At work it pays to endure an unpleasant period without losing principles. In relationships it is perseverance and dignified holding of the line even if it has no immediate effect.",
+                    "The risk is adapting so much that you lose yourself. The opposite risk is isolation that proves unnecessary.",
+                    "Bear the discomfort but do not give up what matters. Do not try to please the crowd. Your patience is an investment."
+                ]
+            },
+            "3": {
+                "klasika": "Třetí čára, přerušená, ukazuje jeho předmět, který se stydí za záměr skrytý (ve svém nitru).",
+                "klasika_en": "The third line, divided, shows its subject ashamed of the purpose folded (in his breast).",
+                "vyklad": [
+                    "Ti, kdo vystoupali nelegitimně, začínají cítit stud. Je to znamení obratu k lepšímu.",
+                    "Nižší lidé, kteří se dostali k moci neoprávněně, se na odpovědnost nepřipravili. V srdci se začínají stydět, i když to zatím nedávají najevo. Tím se situace obrací. Stud je první zárodek změny.",
+                    "V práci se projevuje u lidí, kteří získali pozici bez zásluh a začínají chápat, že na ni nestačí. Ve vztazích jde o chvíle, kdy se někdo začne stydět za to, co udělal. To je příležitost k pozitivní změně.",
+                    "Rizikem je zlomyslnost: nadále zakrývat a bránit zlé. Opačným rizikem je pomstychtivost vůči těm, kdo se stydí.",
+                    "Nechej druhým prostor pro přiznání a změnu. Pokud se stydíš ty, využij to a oprav, co je třeba. Stud je cesta zpět."
+                ],
+                "vyklad_en": [
+                    "Those who rose illegitimately begin to feel shame. It is a sign of a turn for the better.",
+                    "Lesser people who attained power unlawfully do not feel equal to the responsibility they have taken on. In their hearts they begin to be ashamed, though at first they do not show it. This turns the situation. Shame is the first seed of change.",
+                    "At work it appears in people who obtained a position without merit and begin to understand that they are not up to it. In relationships it is moments when someone starts to be ashamed of what he has done. That is an opening for positive change.",
+                    "The risk is malice: continuing to cover up and defend the bad. The opposite risk is vindictiveness toward those who feel shame.",
+                    "Give others room to admit and change. If you feel the shame, use it and correct what needs correcting. Shame is the way back."
+                ]
+            },
+            "4": {
+                "klasika": "Čtvrtá čára, nepřerušená, ukazuje jeho předmět, který jedná v souladu s nařízením (nebes) a nedopustí se chyby. Jeho druhové přijdou a podělí se o jeho štěstí.",
+                "klasika_en": "The fourth line, undivided, shows its subject acting in accordance with the ordination (of Heaven), and committing no error. His companions will come and share in his happiness.",
+                "vyklad": [
+                    "Čas stagnace se blíží obratu. Kdo je skutečně povolán ke změně, dostane podporu doby a jeho druhové se podělí o požehnání.",
+                    "Kdo chce obnovit řád, musí se cítit povolán k úkolu a mít potřebnou autoritu. Člověk, který se sám postaví za schopného vytvořit řád podle vlastního úsudku, se může dopustit chyb a skončit neúspěchem. Ale ten, kdo je skutečně k úkolu povolán, má příznivé okolnosti doby a všichni, kdo smýšlejí stejně, se podělí o jeho požehnání.",
+                    "V práci jde o převzetí vedení s mandátem a týmovou podporou. Ve vztazích o odpovědnost, která není nárokem, ale povoláním. Ověř si, že máš legitimaci, a jednej v jejím rámci.",
+                    "Rizikem je sebepovolání, tedy snaha řídit změnu bez oprávnění a bez opory. Dalším rizikem je váhání, když přijde vhodná chvíle.",
+                    "Počkej na oprávnění a jednej v souladu s ním. Opři se o ty, kdo smýšlejí podobně, a nes změnu společně. Správný čas a správný mandát jsou klíč."
+                ],
+                "vyklad_en": [
+                    "The time of standstill is nearing a turn. Whoever is truly called to change receives the support of the time, and his companions share the blessing.",
+                    "Whoever wishes to restore order must feel called to the task and have the necessary authority. A person who sets himself up as capable of creating order by his own judgement may make mistakes and fail. But one truly called to the task is favoured by the conditions of the time, and all of like mind share his blessing.",
+                    "At work this is taking over leadership with a mandate and team support. In relationships it is responsibility that is not a claim but a calling. Make sure you have legitimacy and act within it.",
+                    "The risk is self-appointment, trying to steer change without authorisation or support. Another is hesitation when the right moment comes.",
+                    "Wait for authorisation and act in accord with it. Lean on those of like mind and carry the change together. The right time and the right mandate are the key."
+                ]
+            },
+            "5": {
+                "klasika": "V páté čáře, nepřerušené, vidíme toho, kdo přivádí tíseň a překážku ke konci,—velkého muže a šťastného. (Ale ať řekne): ‚Můžeme zahynout! Můžeme zahynout!‘ (tak se stav věcí upevní, jako by byl) uvázán ke keři hustých morušovníků.",
+                "klasika_en": "In the fifth line, undivided, we see him who brings the distress and obstruction to a close,—the great man and fortunate. (But let him say), 'We may perish! We may perish!' (so shall the state of things become firm, as if) bound to a clump of bushy mulberry trees.",
+                "vyklad": [
+                    "Stagnace ustupuje a přichází správný člověk. Štěstí, ale právě přechodová doba vyžaduje největší opatrnost: ‚co když se to nepovede?‘",
+                    "Doba se mění a ten, kdo je schopen obnovit pořádek, dorazil. Přesto jsou právě období přechodu časem, kdy je třeba se bát a třást. Úspěch zaručuje jen nejvyšší opatrnost, která se neustále ptá: co když selžeme? Z pokáceného morušovníku vyrůstá z kořenů mnoho silných výhonků, a proto je uvázání k svazku výhonků obrazem toho, jak zajistit úspěch.",
+                    "V práci jde o fázi, kdy se věci obracejí k lepšímu: nový management, nová strategie, první výsledky. Zapojuj kontrolu rizik a záložní plány. Ve vztazích je to čas, kdy se po krizi obnovuje důvěra, a je třeba být opatrný.",
+                    "Rizikem je předčasná euforie a uvolnění. Dalším rizikem je ukvapené rozhodnutí, které by vrátilo problémy.",
+                    "Zajisti úspěch pečlivostí. Ptej se ‚co když se to nepovede?‘ a postav pojistky. Kdo nezapomíná na nebezpečí v bezpečí, bezpečí udrží."
+                ],
+                "vyklad_en": [
+                    "Stagnation is giving way and the right person arrives. Good fortune, but precisely the time of transition demands the greatest caution: what if it fails?",
+                    "The time changes and the one able to restore order has arrived. Yet times of transition are exactly those in which one must fear and tremble. Success is assured only through the greatest caution, which keeps asking: what if we fail? When a mulberry bush is cut down, many strong shoots sprout from the roots, so tying something to a cluster of shoots is an image of how to make success certain.",
+                    "At work this is a phase where things turn for the better: new management, new strategy, first results. Bring in risk control and backup plans. In relationships it is a time when trust is being rebuilt after a crisis, and care is needed.",
+                    "The risk is premature euphoria and relaxing. Another is a hasty decision that would bring the problems back.",
+                    "Secure success through thoroughness. Ask ‘what if it fails?’ and build safeguards. Whoever does not forget danger in safety keeps safety."
+                ]
+            },
+            "6": {
+                "klasika": "Šestá čára, nepřerušená, ukazuje svržení (a odstranění) stavu tísně a překážky. Předtím byl tento stav. Odtud bude radost.",
+                "klasika_en": "The sixth line, undivided, shows the overthrow (and removal of) the condition of distress and obstruction. Before this there was that condition. Hereafter there will be joy.",
+                "vyklad": [
+                    "Stagnace končí a po ní přichází štěstí. Konec však nepřichází sám od sebe: potřebuje člověka, který ho ukončí.",
+                    "Stagnace netrvá navždy, ale nepřestane sama. Rozdíl mezi stavem míru a stavem stagnace je v tom, že mír vyžaduje stálé úsilí, jinak se rozpadne, kdežto stagnace se nevrátí k míru bez úsilí. Je třeba tvůrčí postoj člověka, aby se svět uvedl do pořádku.",
+                    "V práci jde o převrat v neproduktivní situaci: restrukturalizace, nové vedení nebo změna přístupu. Ve vztazích o odvahu otevřít uzavřené téma a změnit dynamiku.",
+                    "Rizikem je čekat, že se to vyřeší samo. Dalším je přehnané slavení konce, které vrátí starý vzorec.",
+                    "Ukonči stagnaci aktivně. Udělej první krok, i když je malý. Až se zlomí led, upevni nový stav, aby se nevrátil."
+                ],
+                "vyklad_en": [
+                    "Stagnation ends and joy follows. The end does not come by itself, though: it needs a person who brings it about.",
+                    "Stagnation does not last forever, but it does not cease of its own accord. The difference between a state of peace and one of stagnation is that peace needs continuous effort or it decays, whereas stagnation does not return to peace without effort. A creative attitude on the part of the person is needed to put the world in order.",
+                    "At work this is an overturn of an unproductive situation: restructuring, new leadership or a change of approach. In relationships it takes the courage to open a closed subject and change the dynamic.",
+                    "The risk is waiting for it to resolve itself. Another is celebrating the end too much, bringing back the old pattern.",
+                    "End the stagnation actively. Take the first step, even if small. Once the ice breaks, secure the new state so that it does not return."
+                ]
+            }
+        }
     },
     "13": {
         "nazev": "Tchung Žen / Společenství lidí",
