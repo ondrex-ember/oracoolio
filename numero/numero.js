@@ -394,7 +394,10 @@ class NumerologyParser {
 // =========================================================
 // 3. RENDER LOGIKA A AUTO-UPDATE
 // =========================================================
-function calculateAndRender() {
+function calculateAndRender(opts) {
+    // scroll: true only on explicit form submit; live updates must never move the page
+    const scroll = !!(opts && opts.scroll);
+    const prevY = window.scrollY;
     const name = document.getElementById('fullName').value;
     const date = document.getElementById('birthDate').value;
     if(!date) return;
@@ -665,20 +668,42 @@ function calculateAndRender() {
 
     document.getElementById('outputArea').innerHTML = html;
     document.getElementById('results').style.display = 'block';
-    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (scroll) {
+        document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (window.scrollY !== prevY) {
+        // keep the viewport where the user is editing after the results DOM was rebuilt
+        window.scrollTo({ top: prevY, behavior: 'instant' });
+    }
 }
 
 document.getElementById('numForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    calculateAndRender();
+    calculateAndRender({ scroll: true });
 });
+
+// Live update: debounced for typing, skipped for half-typed dates (e.g. year 0002 while editing the year)
+function isPlausibleBirthDate(v) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v || '');
+    if (!m) return false;
+    const y = +m[1];
+    return y >= 1900 && y <= new Date().getFullYear();
+}
+
+let liveUpdateTimer = null;
+function liveUpdate() {
+    if (document.getElementById('results').style.display !== 'block') return;
+    if (!isPlausibleBirthDate(document.getElementById('birthDate').value)) return;
+    const pd = document.getElementById('partnerDate').value;
+    if (pd && !isPlausibleBirthDate(pd)) return;
+    calculateAndRender({ scroll: false });
+}
 
 const inputs = document.querySelectorAll('input[type=radio], input[type=date], input[type=text]');
 inputs.forEach(input => {
     input.addEventListener('input', () => {
-        if (document.getElementById('results').style.display === 'block') {
-            calculateAndRender();
-        }
+        clearTimeout(liveUpdateTimer);
+        if (input.type === 'radio') { liveUpdate(); return; }
+        liveUpdateTimer = setTimeout(liveUpdate, 300);
     });
 });
 
