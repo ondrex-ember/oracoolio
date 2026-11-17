@@ -19,6 +19,13 @@ const ICHING_STRINGS = {
     limitMsg:       'Dnešní konzultace již proběhla. Vraťte se zítra.',
     limitBadge:     'Dnes zbývá: 1 konzultace',
     limitBadgeDone: 'Konzultace využita',
+    advice:         'Doporučení:',
+    classic:        'Klasický text',
+    movingTitle:    'Pohyblivé čáry',
+    lineN:          n => `Čára ${n}`,
+    allLines:       'Všechny čáry se mění',
+    changesTo:      'Hexagram po proměně',
+    linesPending:   nums => `Pohyblivé čáry: ${nums.join(', ')}. Výklad čar se připravuje.`,
   },
   en: {
     instruction:    hod => hod < 6
@@ -33,6 +40,13 @@ const ICHING_STRINGS = {
     limitMsg:       'Today\'s consultation is done. Come back tomorrow.',
     limitBadge:     'Today: 1 consultation left',
     limitBadgeDone: 'Consultation used',
+    advice:         'Recommendation:',
+    classic:        'Classical text',
+    movingTitle:    'Changing lines',
+    lineN:          n => `Line ${n}`,
+    allLines:       'All lines are changing',
+    changesTo:      'Hexagram after the change',
+    linesPending:   nums => `Changing lines: ${nums.join(', ')}. Line readings coming soon.`,
   }
 };
 
@@ -61,6 +75,8 @@ function setLang(lang) {
   // Update toss button
   const btn = document.getElementById('toss-btn');
   if (btn && !btn.classList.contains('hidden')) btn.textContent = T('tossBtn');
+  // Překresli už zobrazený výklad ve zvoleném jazyce
+  if (hodCislo >= 6 && lastHexNumber !== null) renderReading();
 }
 
 // ── Daily limit ───────────────────────────
@@ -117,6 +133,101 @@ function pridejCaruHexagramu(hodnota) {
   builder.appendChild(div);
 }
 
+// ── Reading renderer ──────────────────────
+let lastHexNumber = null;
+
+// Jazyková varianta pole: key / key_en (fallback na CS)
+function pick(obj, key) {
+  if (!obj) return undefined;
+  return ICHING_LANG === 'en' ? (obj[key + '_en'] || obj[key]) : obj[key];
+}
+
+// 5 odstavců: souhrn, detaily, doporučení (poslední má štítek)
+function paragraphsHTML(arr) {
+  if (!Array.isArray(arr) || !arr.length) return '';
+  return arr.map((p, i) => {
+    const isLast = arr.length > 1 && i === arr.length - 1;
+    const cls = isLast ? ' class="hex-advice"' : (i === 0 ? ' class="hex-summary"' : '');
+    const label = isLast ? `<span class="hex-label">${T('advice')}</span> ` : '';
+    return `<p${cls}>${label}${p}</p>`;
+  }).join('');
+}
+
+function classicHTML(text) {
+  if (!text) return '';
+  return `<details class="hex-classic"><summary>${T('classic')}</summary><blockquote>${text}</blockquote></details>`;
+}
+
+// Čísla čar (1 = spodní), které se mění: staré yin (6) a staré yang (9)
+function movingLines() {
+  return hexagramVysledek.map((h, i) => (h === 6 || h === 9) ? i + 1 : 0).filter(Boolean);
+}
+
+// Hexagram po proměně čar (6 → yang, 9 → yin)
+function changedHexagramNumber() {
+  const bin = hexagramVysledek.map(h => (h === 7 || h === 6) ? '1' : '0').join('');
+  return ziskejCisloHexagramu(bin);
+}
+
+function renderReading() {
+  const resultTextEl = document.getElementById('iching-text-content');
+  const n = lastHexNumber;
+  if (!resultTextEl || n === null) return;
+
+  const data = typeof ichingTexts !== 'undefined' ? ichingTexts[n] : null;
+  if (!data) {
+    resultTextEl.innerHTML = `<p>${T('hexUnknown', n)}</p>`;
+    return;
+  }
+
+  let html = `
+    <div class="hex-result-header">
+      <span class="hex-number">${n}</span>
+      <h4>${pick(data, 'nazev')}</h4>
+    </div>
+    <div class="hex-result-body">
+      <p><span class="hex-label">${T('reading')}</span> ${pick(data, 'rozsudek')}</p>
+      <p class="hex-image"><span class="hex-label">${T('image')}</span> <em>${pick(data, 'obraz')}</em></p>
+    </div>`;
+
+  const vyklad = paragraphsHTML(pick(data, 'vyklad'));
+  if (vyklad) html += `<div class="hex-vyklad">${vyklad}</div>`;
+  html += classicHTML(pick(data, 'klasika'));
+
+  // Pohyblivé čáry
+  const moving = movingLines();
+  if (moving.length) {
+    html += `<div class="hex-moving"><h5 class="hex-section-title">${T('movingTitle')}</h5>`;
+    const cary = data.cary;
+    if (!cary) {
+      html += `<p class="hex-pending">${T('linesPending', moving)}</p>`;
+    } else {
+      moving.forEach(l => {
+        const c = cary[l];
+        if (!c) return;
+        html += `<div class="hex-line-reading"><h6>${T('lineN', l)}</h6>${classicHTML(pick(c, 'klasika'))}${paragraphsHTML(pick(c, 'vyklad'))}</div>`;
+      });
+      const all = cary[7];
+      const allSame = hexagramVysledek.every(v => v === 9) || hexagramVysledek.every(v => v === 6);
+      if (all && moving.length === 6 && allSame) {
+        html += `<div class="hex-line-reading"><h6>${T('allLines')}</h6>${classicHTML(pick(all, 'klasika'))}${paragraphsHTML(pick(all, 'vyklad'))}</div>`;
+      }
+    }
+    html += '</div>';
+
+    // Hexagram po proměně
+    const n2 = changedHexagramNumber();
+    const d2 = typeof ichingTexts !== 'undefined' ? ichingTexts[n2] : null;
+    if (d2) {
+      html += `<div class="hex-changes"><h5 class="hex-section-title">${T('changesTo')}</h5>
+        <div class="hex-result-header hex-result-header-small"><span class="hex-number">${n2}</span><h4>${pick(d2, 'nazev')}</h4></div>
+        <p>${pick(d2, 'rozsudek')}</p></div>`;
+    }
+  }
+
+  resultTextEl.innerHTML = html;
+}
+
 // ── Main toss logic ───────────────────────
 function tossCoins() {
   if (hodCislo >= 6) return;
@@ -155,29 +266,12 @@ function tossCoins() {
 
       const binaryString  = hexagramVysledek.map(h => (h === 7 || h === 9) ? '1' : '0').join('');
       const cisloHexagramu = ziskejCisloHexagramu(binaryString);
-      const dataHexagramu  = typeof ichingTexts !== 'undefined' ? ichingTexts[cisloHexagramu] : null;
 
       const resultContainer = document.getElementById('iching-reading-container');
-      const resultTextEl    = document.getElementById('iching-text-content');
       resultContainer.classList.remove('hidden');
 
-      if (dataHexagramu) {
-        const nazev    = ICHING_LANG === 'en' ? (dataHexagramu.nazev_en    || dataHexagramu.nazev)    : dataHexagramu.nazev;
-        const rozsudek = ICHING_LANG === 'en' ? (dataHexagramu.rozsudek_en || dataHexagramu.rozsudek) : dataHexagramu.rozsudek;
-        const obraz    = ICHING_LANG === 'en' ? (dataHexagramu.obraz_en    || dataHexagramu.obraz)    : dataHexagramu.obraz;
-        resultTextEl.innerHTML = `
-          <div class="hex-result-header">
-            <span class="hex-number">${cisloHexagramu}</span>
-            <h4>${nazev}</h4>
-          </div>
-          <div class="hex-result-body">
-            <p><span class="hex-label">${T('reading')}</span> ${rozsudek}</p>
-            <p class="hex-image"><span class="hex-label">${T('image')}</span> <em>${obraz}</em></p>
-          </div>
-        `;
-      } else {
-        resultTextEl.innerHTML = `<p>${T('hexUnknown', cisloHexagramu)}</p>`;
-      }
+      lastHexNumber = cisloHexagramu;
+      renderReading();
 
       // Mark daily limit used
       markDailyUsed();
@@ -197,6 +291,7 @@ function tossCoins() {
 function resetReading() {
   hodCislo = 0;
   hexagramVysledek = [];
+  lastHexNumber = null;
   document.getElementById('hexagram-builder').innerHTML = '';
   document.getElementById('iching-reading-container').classList.add('hidden');
   document.getElementById('iching-text-content').innerHTML = '';
