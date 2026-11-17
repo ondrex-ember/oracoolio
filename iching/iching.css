@@ -272,3 +272,46 @@ body {
   letter-spacing: 0.3em;
   margin: 32px 0;
 }
+
+/* ── Rozšířený výklad (v2): odstavce, klasický text, pohyblivé čáry ── */
+.hex-vyklad { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--ic-gold-faint); }
+.hex-vyklad p, .hex-line-reading p, .hex-changes p {
+  font-size: 1rem; line-height: 1.75;
+  color: var(--ic-text); margin: 0 0 14px;
+}
+.hex-vyklad p.hex-summary, .hex-line-reading p.hex-summary { color: var(--ic-gold); }
+.hex-vyklad p.hex-advice, .hex-line-reading p.hex-advice { color: var(--ic-text-dim); font-style: italic; }
+
+.hex-classic { margin: 4px 0 16px; }
+.hex-classic summary {
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem; letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ic-gold-dim);
+}
+.hex-classic summary:hover { color: var(--ic-gold); }
+.hex-classic blockquote {
+  margin: 10px 0 0; padding: 4px 0 4px 14px;
+  border-left: 2px solid var(--ic-gold-faint);
+  font-size: 0.95rem; line-height: 1.7;
+  color: var(--ic-text-dim); font-style: italic;
+}
+
+.hex-moving, .hex-changes { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--ic-gold-faint); }
+.hex-section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem; letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ic-gold); margin: 0 0 14px;
+}
+.hex-line-reading { margin-bottom: 20px; }
+.hex-line-reading h6 {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem; font-weight: 600;
+  color: var(--ic-gold); margin: 0 0 8px;
+}
+.hex-pending { color: var(--ic-text-dim); font-style: italic; }
+.hex-result-header-small { margin-bottom: 12px; padding-bottom: 10px; }
+.hex-result-header-small .hex-number { font-size: 1.6rem; }
+.hex-result-header-small h4 { font-size: 1.1rem; }
