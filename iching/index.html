@@ -35,6 +35,7 @@
   <meta name="theme-color" content="#06060f">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="iching.css">
+  <link rel="stylesheet" href="iching-throw.css">
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG6N9KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -79,11 +80,7 @@
   <div id="hexagram-builder"></div>
 
   <!-- COINS -->
-  <div class="coins-container">
-    <div class="coin" id="coin1"><img src="../assets/coin_yang.png" alt="Mince"></div>
-    <div class="coin" id="coin2"><img src="../assets/coin_yang.png" alt="Mince"></div>
-    <div class="coin" id="coin3"><img src="../assets/coin_yang.png" alt="Mince"></div>
-  </div>
+  <div id="coin-stage" aria-label="Tři mince pro hod I-Ťing"></div>
 
   <!-- TOSS BUTTON -->
   <button id="toss-btn" onclick="tossCoins()"
@@ -152,6 +149,7 @@
 <script src="../lang.js"></script>
 <script src="../consent.js"></script>
 <script src="iching-data.js"></script>
+<script src="iching-throw.js"></script>
 <script src="iching.js"></script>
 
 <style>

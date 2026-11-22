@@ -1,0 +1,108 @@
+/* iching-throw.css — Oracoolio I-Ching coin throw (scoped under .ict-stage) */
+.ict-stage {
+  --ict-cs: clamp(84px, 24vw, 168px);   /* coin size */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--ict-cs) * 0.32);
+  height: calc(var(--ict-cs) * 3);
+  overflow: visible;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.ict-slot {
+  position: relative;
+  width: var(--ict-cs);
+  height: var(--ict-cs);
+  perspective: 900px;
+  --th: calc(var(--ict-cs) * 0.034);      /* half coin thickness */
+}
+
+.ict-fly, .ict-tilt, .ict-body {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.ict-fly { will-change: transform; }
+.ict-body { will-change: transform; }
+
+.ict-face, .ict-edge {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+.ict-front { backface-visibility: hidden; transform: translateZ(calc(var(--th) * 1.1)); }
+.ict-back  { backface-visibility: hidden; transform: rotateY(180deg) translateZ(calc(var(--th) * 1.1)); }
+.ict-edge  {
+  transform: translateZ(calc(var(--th) * var(--k)));
+  filter: brightness(0.36) saturate(0.7);
+}
+
+/* contact shadow lying on the table (top-down view) */
+.ict-shadow {
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.55) 60%, rgba(0, 0, 0, 0) 74%);
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+/* impact / landing ring */
+.ict-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(225, 205, 170, 0.6);
+  opacity: 0;
+  pointer-events: none;
+}
+.ict-ring[data-kind="gold"] {
+  border-color: rgba(255, 214, 120, 0.9);
+  box-shadow: 0 0 18px 4px rgba(255, 200, 90, 0.45), inset 0 0 14px 2px rgba(255, 200, 90, 0.35);
+}
+
+.ict-spark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  border-radius: 50%;
+  background: #ffe3a1;
+  box-shadow: 0 0 8px 2px rgba(255, 200, 90, 0.8);
+  opacity: 0;
+  pointer-events: none;
+}
+.ict-spark[data-kind="dust"] {
+  background: #d9c9a6;
+  box-shadow: 0 0 5px 1px rgba(210, 190, 150, 0.55);
+  width: 4px; height: 4px; margin: -2px 0 0 -2px;
+}
+
+/* glow variant: energy orb in the middle of the stage */
+.ict-orb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--ict-cs) * 2.2);
+  height: calc(var(--ict-cs) * 2.2);
+  margin: calc(var(--ict-cs) * -1.1) 0 0 calc(var(--ict-cs) * -1.1);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 236, 170, 0.95) 0%, rgba(245, 190, 80, 0.5) 28%, rgba(245, 190, 80, 0) 68%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ict-fly, .ict-body { will-change: auto; }
+}

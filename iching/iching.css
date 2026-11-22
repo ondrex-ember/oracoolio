@@ -164,26 +164,12 @@ body {
   width: calc(50% - 8px);
 }
 
-/* ── Coins ── */
-.coins-container {
-  display: flex; justify-content: center;
-  gap: 20px; margin: 0 0 24px;
-  perspective: 800px;
+/* ── Coins (animace hodu: iching-throw.css / iching-throw.js) ── */
+#coin-stage {
+  --ict-cs: clamp(76px, 22vw, 116px);
+  height: calc(var(--ict-cs) * 2.7);
+  margin: 0 0 12px;
 }
-
-.coin {
-  width: 72px; height: 72px;
-  filter: drop-shadow(0 4px 10px rgba(201,168,76,0.25));
-  transition: filter 0.3s;
-}
-.coin img { width: 100%; height: 100%; object-fit: contain; }
-
-@keyframes tossAnimation {
-  0%   { transform: translateY(0) rotateX(0) rotateY(0) scale(1); }
-  50%  { transform: translateY(-140px) rotateX(1080deg) rotateY(720deg) scale(1.15); }
-  100% { transform: translateY(0) rotateX(2160deg) rotateY(1440deg) scale(1); }
-}
-.tossing { animation: tossAnimation 0.8s cubic-bezier(0.36,0.07,0.19,0.97) both; }
 
 /* ── Toss button ── */
 #toss-btn {

@@ -26,6 +26,7 @@ const ICHING_STRINGS = {
     allLines:       'Všechny čáry se mění',
     changesTo:      'Hexagram po proměně',
     linesPending:   nums => `Pohyblivé čáry: ${nums.join(', ')}. Výklad čar se připravuje.`,
+    coinsLabel:     'Tři mince pro hod I-Ťing',
   },
   en: {
     instruction:    hod => hod < 6
@@ -47,6 +48,7 @@ const ICHING_STRINGS = {
     allLines:       'All lines are changing',
     changesTo:      'Hexagram after the change',
     linesPending:   nums => `Changing lines: ${nums.join(', ')}. Line readings coming soon.`,
+    coinsLabel:     'Three coins for the I Ching toss',
   }
 };
 
@@ -72,6 +74,9 @@ function setLang(lang) {
   // Update dynamic instruction text
   const instr = document.getElementById('iching-instruction');
   if (instr) instr.textContent = T('instruction', hodCislo);
+  // Popisek mincí pro čtečky
+  const stage = document.getElementById('coin-stage');
+  if (stage) stage.setAttribute('aria-label', T('coinsLabel'));
   // Update toss button
   const btn = document.getElementById('toss-btn');
   if (btn && !btn.classList.contains('hidden')) btn.textContent = T('tossBtn');
@@ -229,62 +234,56 @@ function renderReading() {
 }
 
 // ── Main toss logic ───────────────────────
-function tossCoins() {
-  if (hodCislo >= 6) return;
+// Animaci a losování stran mincí řeší iching-throw.js (4 varianty hodu, střídané náhodně).
+// Hodnota hodu = součet tří mincí (yang = 3, yin = 2) → 6 / 7 / 8 / 9.
+let ict = null;            // instance IChingThrow
+let hideCoinsTimer = null; // odložené skrytí mincí po posledním hodu
+
+async function tossCoins() {
+  if (hodCislo >= 6 || !ict || ict.busy) return;
 
   const btn   = document.getElementById('toss-btn');
   const instr = document.getElementById('iching-instruction');
-  const coins = ['coin1','coin2','coin3'].map(id => document.getElementById(id));
 
   btn.disabled = true;
-  coins.forEach(coin => {
-    coin.classList.remove('tossing');
-    void coin.offsetWidth;
-    coin.classList.add('tossing');
-  });
+  const hod = await ict.throwCoins();
+  const hodnotaHodu = hod.sum;
 
-  setTimeout(() => {
-    let hodnotaHodu = 0;
-    coins.forEach(coin => {
-      const isYang = Math.random() > 0.5;
-      const img = coin.querySelector('img');
-      img.src = isYang ? '../assets/coin_yang.png' : '../assets/coin_yin.png';
-      hodnotaHodu += isYang ? 3 : 2;
-    });
+  hexagramVysledek.push(hodnotaHodu);
+  hodCislo++;
+  pridejCaruHexagramu(hodnotaHodu);
 
-    hexagramVysledek.push(hodnotaHodu);
-    hodCislo++;
-    pridejCaruHexagramu(hodnotaHodu);
+  if (hodCislo < 6) {
+    instr.textContent = T('instruction', hodCislo);
+    btn.disabled = false;
+  } else {
+    instr.textContent = T('instruction', 6);
+    btn.classList.add('hidden');
+    // Mince nech chvíli viditelné, ať je vidět poslední dopad
+    hideCoinsTimer = setTimeout(() => {
+      document.getElementById('coin-stage').classList.add('hidden');
+    }, 900);
 
-    if (hodCislo < 6) {
-      instr.textContent = T('instruction', hodCislo);
-      btn.disabled = false;
-    } else {
-      instr.textContent = T('instruction', 6);
-      btn.classList.add('hidden');
-      coins.forEach(c => c.classList.add('hidden'));
+    const binaryString  = hexagramVysledek.map(h => (h === 7 || h === 9) ? '1' : '0').join('');
+    const cisloHexagramu = ziskejCisloHexagramu(binaryString);
 
-      const binaryString  = hexagramVysledek.map(h => (h === 7 || h === 9) ? '1' : '0').join('');
-      const cisloHexagramu = ziskejCisloHexagramu(binaryString);
+    const resultContainer = document.getElementById('iching-reading-container');
+    resultContainer.classList.remove('hidden');
 
-      const resultContainer = document.getElementById('iching-reading-container');
-      resultContainer.classList.remove('hidden');
+    lastHexNumber = cisloHexagramu;
+    renderReading();
 
-      lastHexNumber = cisloHexagramu;
-      renderReading();
+    // Mark daily limit used
+    markDailyUsed();
+    updateBadge();
 
-      // Mark daily limit used
-      markDailyUsed();
-      updateBadge();
-
-      // Show new reading button
-      const newBtn = document.getElementById('new-reading-btn');
-      if (newBtn) {
-        newBtn.classList.remove('hidden');
-        newBtn.textContent = T('newReading');
-      }
+    // Show new reading button
+    const newBtn = document.getElementById('new-reading-btn');
+    if (newBtn) {
+      newBtn.classList.remove('hidden');
+      newBtn.textContent = T('newReading');
     }
-  }, 800);
+  }
 }
 
 // ── Reset ─────────────────────────────────
@@ -300,11 +299,9 @@ function resetReading() {
   btn.classList.remove('hidden');
   btn.disabled = false;
   btn.textContent = T('tossBtn');
-  ['coin1','coin2','coin3'].forEach(id => {
-    const c = document.getElementById(id);
-    c.classList.remove('hidden');
-    c.querySelector('img').src = '../assets/coin_yang.png';
-  });
+  clearTimeout(hideCoinsTimer);
+  document.getElementById('coin-stage').classList.remove('hidden');
+  if (ict) ict.reset();
   document.getElementById('new-reading-btn').classList.add('hidden');
 }
 
@@ -319,6 +316,9 @@ function updateBadge() {
 
 // ── Init ──────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+  // Mince: animace hodu (soubory v iching/coins/)
+  ict = IChingThrow.create(document.getElementById('coin-stage'), { coinPath: 'coins/' });
+
   // Načti uložený jazyk
   if (typeof getLang === 'function') setLang(getLang());
   updateBadge();
